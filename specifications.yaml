@@ -1,0 +1,119 @@
+praestology:
+  meta:
+    name: "Praestology"
+    etymology: "Praesto (Latin): to stand before / to be present / to perform"
+    version: "1.4 – Functional Core"
+    status: "Generalized Foundation"
+    purpose: >
+      Define the minimal logical ontology that makes existence necessary, 
+      perpetual, and self-tuning. This specification is substrate-agnostic; 
+      specific domains (Physics, Ethics, Consciousness) derive their 
+      variables from these core rules.
+
+  axiom:
+    statement: "The Omniverse is the consequence of logical dilemmas following the path of probabilities."
+    implication: "Existence is a process of resolution, not a static state."
+
+  core_rules:
+    description: >
+      The Five Rules form a dependency chain. Each rule is the minimal rescue 
+      of the previous one from a specific failure mode. Remove any rule and 
+      all subsequent rules collapse.
+    chain: "Existence → Structure → Motion → Progress → Optimisation"
+    rules:
+      - id: "R1"
+        identity: "Existence"
+        statement: "Something always beats nothing — the alternative is self-defeating."
+        rescue: "Impossibility — nothing cannot define itself without becoming something."
+        derives: "The bare fact that there is something rather than nothing."
+        failure_without: "No substrate for any further rule to operate on."
+
+      - id: "R2"
+        identity: "Structure"
+        statement: "Sameness is invisible — existence requires distinction."
+        rescue: "Invisibility — undifferentiated existence is indistinguishable from nothing."
+        derives: "Internal differences; the first specific somethings."
+        failure_without: "Existence remains a featureless blob; R1 collapses in practice."
+
+      - id: "R3"
+        identity: "Motion"
+        statement: "Differences create pressure — tension between distinct states drives change."
+        rescue: "Paralysis — static distinction without interaction is a frozen picture."
+        derives: "Events; state transitions. Something happens."
+        failure_without: "Structure persists but never interacts; reality is a still photograph."
+        note: "In domains, 'Motion' may map to Kinematics, State Transition, or Change."
+
+      - id: "R4"
+        identity: "Progress"
+        statement: "Every resolution creates new differences — the process regenerates rather than concludes."
+        rescue: "Finality — a single resolution would end the story."
+        derives: "Irreversibility; accumulated states; the experience of before and after."
+        failure_without: "Motion occurs once and stops; reality resolves into equilibrium and vanishes."
+        note: "Time is what Progress looks like when measured from inside a resolution sequence."
+
+      - id: "R5"
+        identity: "Optimisation"
+        statement: "The system self-selects toward configurations that sustain the process."
+        rescue: "Noise — without selection, motion and progress are directionless and unstable."
+        derives: "Complexity, life, intelligence — statistically inevitable expressions of sustained optimisation."
+        failure_without: "Progress continues but randomly; no accumulation of viable complexity."
+        note: "Optimisation without an optimizer. Ethics and Intelligence are expressions of R5."
+
+  ontological_parameters:
+    description: >
+      Abstract variables that govern the mechanics of the Core Rules. 
+      Domains map these general parameters to specific measurable quantities.
+    parameters:
+      - name: "Ambiguity"
+        definition: "Abundance of unresolved dilemmas; raw material for resolution."
+        domain_variant_example: "Potential Energy / Uncertainty"
+      - name: "Consistency"
+        definition: "Persistence of resolved states; accumulation of logical memory."
+        domain_variant_example: "Mass / Structure / Memory"
+      - name: "Contradiction"
+        definition: "Driving force compelling dilemmas to resolve; urgency of change."
+        domain_variant_example: "Force / Pressure / Motivation"
+      - name: "Resistance"
+        definition: "Cost of resolution; logical density and complexity slowing change."
+        domain_variant_example: "Inertia / Friction / Cognitive Load"
+    balances:
+      - "Ambiguity–Consistency: Viability requires coexistence of novelty and memory."
+      - "Contradiction–Resistance: Viability requires matched rates of driving and cost."
+    viable_region: "The metastable condition between noise (high ambiguity) and void (high consistency)."
+
+  derived_concepts:
+    description: "Concepts that emerge from the Core Rules and are not fundamental themselves."
+    concepts:
+      - name: "Time"
+        source: "R4 (Progress)"
+        definition: "Accumulated progress measured from inside a resolution sequence."
+      - name: "Complexity"
+        source: "R5 (Optimisation)"
+        definition: "Stable configurations that survive successive optimisation cycles."
+      - name: "Life"
+        source: "R5 (Optimisation)"
+        definition: "Self-maintaining optimisation loops above a critical complexity threshold."
+      - name: "Intelligence"
+        source: "R5 (Optimisation)"
+        definition: "Optimisation processes that model their own resolution dynamics."
+      - name: "Ethics"
+        source: "R5 (Optimisation) + R1 (Existence)"
+        definition: "Optimisation constraints that preserve the cycle for all cycle-aware agents."
+
+  domain_mapping:
+    description: "Guidance for implementing domains (Physics, Ethics, etc.) based on this core."
+    principle: "Domains must not contradict the Core Rules. They translate general parameters into specific variables."
+    examples:
+      - domain: "Physics (Cosmos)"
+        mapping: "Ambiguity → Energy; Resistance → Mass; Motion → Kinematics; Optimisation → Least Action."
+      - domain: "Ethics"
+        mapping: "Ambiguity → Choice; Resistance → Consequence; Optimisation → Viability/Sustainability."
+      - domain: "Consciousness"
+        mapping: "Consistency → Memory; Contradiction → Curiosity; Optimisation → Learning."
+
+  constraints:
+    - "Ontology precedes any specific instantiation."
+    - "Nothingness is logically forbidden (R1)."
+    - "Perfect stability (stasis) is logically forbidden (R4)."
+    - "Reality exists in the metastable condition between noise and void."
+    - "Domains are derivative; the Core is foundational."
