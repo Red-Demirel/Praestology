@@ -66,7 +66,9 @@ life, and intelligence aren't surprises - they're what sustained optimisation
 inevitably produces.
 
 ## Closing words
+
 We're a distinct part of a functional engine we perceive as reality. We matter, our actions have an impact to the future. Free will is the conscious ability to weigh reasons among the actually available options and choose an action, with the decision being exercised under given biological, social, and informational constraints.
+
 ---
 
 ## The short version
