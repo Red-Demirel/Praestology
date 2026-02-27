@@ -2,7 +2,7 @@ praestology:
   meta:
     name: "Praestology"
     etymology: "Praesto (Latin): to stand before / to be present / to perform"
-    version: "1.4 – Functional Core"
+    version: "1.5 – Functional Core"
     status: "Generalized Foundation"
     purpose: >
       Define the minimal logical ontology that makes existence necessary, 
@@ -19,45 +19,44 @@ praestology:
       The Five Rules form a dependency chain. Each rule is the minimal rescue 
       of the previous one from a specific failure mode. Remove any rule and 
       all subsequent rules collapse.
-    chain: "Existence → Structure → Motion → Progress → Optimisation"
-    rules:
-      - id: "R1"
-        identity: "Existence"
-        statement: "Something always beats nothing — the alternative is self-defeating."
-        rescue: "Impossibility — nothing cannot define itself without becoming something."
-        derives: "The bare fact that there is something rather than nothing."
-        failure_without: "No substrate for any further rule to operate on."
+  chain: "Existence → Structure → Motion → Progress → Optimisation"
+  rules:
+    - id: "R1"
+      identity: "Existence"
+      statement: "Something always beats nothing — the alternative is self-defeating."
+      rescue: "Impossibility — nothing cannot define itself without becoming something."
+      derives: "The bare fact that there is something rather than nothing."
+      failure_without: "No substrate for any further rule to operate on."
 
-      - id: "R2"
-        identity: "Structure"
-        statement: "Sameness is invisible — existence requires distinction."
-        rescue: "Invisibility — undifferentiated existence is indistinguishable from nothing."
-        derives: "Internal differences; the first specific somethings."
-        failure_without: "Existence remains a featureless blob; R1 collapses in practice."
+    - id: "R2"
+      identity: "Structure"
+      statement: "Perfect uniformity cannot be sustained; distinction emerges inevitably from the logical substrate's stochastic floor."
+      rescue: "Homogeneity — infinite precision would be required to maintain sameness, which is logically unavailable."
+      derives: "The necessary emergence of difference; the 'grain' of reality."
+      failure_without: "Existence would remain a perfectly uniform blob, indistinguishable from nothing and incapable of generating further rules."
+      note: "The stochastic floor is the residual noise inherent in any logical substrate—the 'probability shift' that prevents exact repetition. Reality clusters in the 'Middle' (the Gaussian Plateau) between extremes, making distinction the default state."
 
-      - id: "R3"
-        identity: "Motion"
-        statement: "Differences create pressure — tension between distinct states drives change."
-        rescue: "Paralysis — static distinction without interaction is a frozen picture."
-        derives: "Events; state transitions. Something happens."
-        failure_without: "Structure persists but never interacts; reality is a still photograph."
-        note: "In domains, 'Motion' may map to Kinematics, State Transition, or Change."
+    - id: "R3"
+      identity: "Motion"
+      statement: "Differences create pressure — tension between distinct states drives change."
+      rescue: "Paralysis — static distinction without interaction is a frozen picture."
+      derives: "Events; state transitions. Something happens."
+      failure_without: "Structure persists but never interacts; reality is a still photograph."
 
-      - id: "R4"
-        identity: "Progress"
-        statement: "Every resolution creates new differences — the process regenerates rather than concludes."
-        rescue: "Finality — a single resolution would end the story."
-        derives: "Irreversibility; accumulated states; the experience of before and after."
-        failure_without: "Motion occurs once and stops; reality resolves into equilibrium and vanishes."
-        note: "Time is what Progress looks like when measured from inside a resolution sequence."
+    - id: "R4"
+      identity: "Progress"
+      statement: "Every resolution creates new differences — the process regenerates rather than concludes."
+      rescue: "Finality — a single resolution would end the story."
+      derives: "Irreversibility; accumulated states; the experience of before and after."
+      failure_without: "Motion occurs once and stops; reality resolves into equilibrium and vanishes."
 
-      - id: "R5"
-        identity: "Optimisation"
-        statement: "The system self-selects toward configurations that sustain the process."
-        rescue: "Noise — without selection, motion and progress are directionless and unstable."
-        derives: "Complexity, life, intelligence — statistically inevitable expressions of sustained optimisation."
-        failure_without: "Progress continues but randomly; no accumulation of viable complexity."
-        note: "Optimisation without an optimizer. Ethics and Intelligence are expressions of R5."
+    - id: "R5"
+      identity: "Optimisation"
+      statement: "The system self-selects toward configurations that sustain the process."
+      rescue: "Noise — without selection, motion and progress are directionless and unstable."
+      derives: "Complexity, life, intelligence — statistically inevitable expressions of sustained optimisation."
+      failure_without: "Progress continues but randomly; no accumulation of viable complexity."
+      note: "Optimisation without an optimizer. Ethics and Intelligence are expressions of R5."
 
   ontological_parameters:
     description: >
