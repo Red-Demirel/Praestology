@@ -27,7 +27,7 @@ Praestology defines five dependent rules. Each rule is the **minimal rescue** of
 | Rule | Identity | Statement | Rescue Function |
 | :--- | :--- | :--- | :--- |
 | **R1** | **Existence** | Something always beats nothing. | Prevents **Impossibility** (Void). |
-| **R2** | **Structure** | **C2: Gradients** | **Differentiation.** Homogeneity collapses due to precision cost. Gradients emerge from the Stochastic Floor. |
+| **R2** | **Structure** | Gradients emerge from the Stochastic Floor. | Prevents ** Indifference/Homogeneity **  |
 | **R3** | **Motion** | Differences create pressure; tension drives change. | Prevents **Paralysis** (Frozen Picture). |
 | **R4** | **Progress** | Every resolution creates new differences; process regenerates. | Prevents **Finality** (Heat Death/Stasis). |
 | **R5** | **Optimisation** | The system self-selects toward configurations that sustain the process. | Prevents **Noise** (Directionless Chaos). |
