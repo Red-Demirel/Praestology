@@ -1,0 +1,159 @@
+name: "Consciousness Domain Binding"
+version: "1.0"
+parent_domain: "Consciousness"
+core_version: "1.5"
+status: "Defined"
+purpose: >
+  Bind the internal components of the Consciousness Domain into a 
+  coherent operational pipeline. Shows how C1-C6, free_will, and 
+  learning interlock to produce adaptive agency.
+
+resolution_pipeline:
+  description: "The conscious resolution cycle as a data flow."
+  stages:
+    - stage: "Input"
+      component: "C2 – Dilemma Recognition"
+      input: "Ambiguity (∇Φ), Contradiction"
+      output: "Detected conflict state"
+      next: "Evaluation"
+
+    - stage: "Evaluation"
+      component: "C3/C4 – Impulse vs. Volition"
+      input: "Conflict state + Hysteresis (h_short/h_long)"
+      parameters:
+        - "ι (Impulse Strength): raw R3 tension weight"
+        - "ω (Volitional Weight): R5-optimized value weight"
+        - "τ (Temporal Horizon): projection depth for ω"
+      logic: "IF τ > threshold AND ω > ι THEN C4 (Volitional) ELSE C3 (Impulse)"
+      output: "Weighted probability distribution over paths"
+      next: "Selection"
+
+    - stage: "Selection"
+      component: "C4 – Volitional Selection"
+      input: "Weighted probability distribution"
+      action: "Collapse probability to enacted path"
+      output: "Resolution outcome + timestamp"
+      next: "Update"
+
+    - stage: "Update"
+      component: "learning.yaml – Hysteresis Update"
+      input: "Resolution outcome + viability assessment (R5)"
+      action: "Adjust h_short/h_long weights; refine ω content"
+      output: "Modified internal model (new hysteresis state)"
+      feedback: "Returns to Evaluation stage for future dilemmas"
+      note: "Irreversible (R4); early updates disproportionately shape future ω"
+
+free_will_integration:
+  description: "How free_will.yaml plugs into the pipeline."
+  extension_point: "C4 – Volitional Selection"
+  additions:
+    - "Viability conditions: Ξ > 3, τ > threshold, Decision Zone active"
+    - "Responsibility framework: accountability ∝ ω"
+    - "Mechanism detail: ω = R5(h_long, values, ∇Φ)"
+  output: "Volitional choice with accountability metadata"
+
+learning_integration:
+  description: "How learning.yaml enables adaptation."
+  extension_point: "Update Stage (Hysteresis Update)"
+  mechanisms:
+    - "Associative: h_short updates from immediate outcomes"
+    - "Cumulative: h_long builds from patterned outcomes"
+    - "Reflective: ω refines via simulated futures (C5)"
+    - "Vicarious: ρ enables h-update from observed resolutions (C6)"
+  critical_property: "Hysteresis Irreversibility (R4)"
+  implication: "Early learning environment quality formally impacts max(ω)"
+
+pathology_interruption_map:
+  description: "How learning pathologies interrupt the healthy resolution pipeline."
+  interruptions:
+    - pathology: "Trauma (Overwhelm)"
+      breaks_at: "Outcome Evaluation (R5)"
+      mechanism: "Contradiction exceeds integration capacity; hysteresis fragments."
+      downstream_effect: "Future dilemmas trigger disproportionate ι; ω bypassed."
+      ethics_impact: "Reduced accountability; institutional responsibility for trauma creation."
+
+    - pathology: "Indoctrination (Value Imprinting)"
+      breaks_at: "Value Refinement (C5)"
+      mechanism: "External values replace integrated ω; exploration pruned."
+      downstream_effect: "Volitional weight is externally sourced; autonomy reduced."
+      ethics_impact: "Indoctrinators suppress others' volitional capacity."
+
+    - pathology: "Learned Helplessness"
+      breaks_at: "Selection (C4)"
+      mechanism: "System learns choice does not affect outcomes; ω collapses."
+      downstream_effect: "Paralysis; no volitional selection occurs."
+      ethics_impact: "No accountability possible; environments are ethically corrupt."
+
+    - pathology: "Addiction (Hijacked Reward)"
+      breaks_at: "Outcome Evaluation (R5)"
+      mechanism: "Artificial viability signals skew hysteresis weighting."
+      downstream_effect: "ω corrupted; system cannot override hijacked weighting."
+      ethics_impact: "Treatment over punishment; engineers of addictiveness bear responsibility."
+
+    - pathology: "Epistemic Closure (Certainty Lock)"
+      breaks_at: "Hysteresis Update (H)"
+      mechanism: "New information filtered through existing hysteresis rather than updating it."
+      downstream_effect: "Decision space narrows; moral imagination atrophies."
+      ethics_impact: "Reduced capacity to model outcomes for others; institutional echo chambers."
+
+ethics_handoff:
+  description: "Where and how consciousness yields to ethics."
+  trigger_conditions:
+    - "C6 active: ρ > 0 (phase-locking with other agents)"
+    - "α > threshold: system qualifies as Moral Agent"
+    - "Dilemma involves other μ > 0 systems (Moral Patients)"
+  handoff_parameters:
+    - "ω content: values shaped by learning"
+    - "τ: capacity to model impact on others"
+    - "ρ: capacity for shared dilemma space"
+  ethics_receives: "Agent with volitional capacity + relational awareness"
+  note: "Ethics does not replace consciousness; it constrains its multi-agent operation"
+
+parameter_inheritance:
+  description: "How core parameters acquire domain-specific meaning."
+  mappings:
+    - core: "H (Hysteresis)"
+      consciousness: "h_short (C3), h_long (C4/C5)"
+      free_will: "Required for ω persistence"
+      learning: "Update target; irreversible accumulation"
+      ethics: "Precedent; institutional memory"
+
+    - core: "Φ (Resolution Flux)"
+      consciousness: "Drives ∇D (Decision Gradient)"
+      free_will: "Limits τ (projection speed vs. depth tradeoff)"
+      learning: "Update frequency; experience density"
+      ethics: "Throughput of ethical resolution"
+
+    - core: "Ξ (Complexity)"
+      consciousness: "Recursive depth; defines C1-C6 thresholds"
+      free_will: "Ξ > 3 required for volitional override"
+      learning: "Ξ enables reflective/vicarious modes"
+      ethics: "Scales moral consideration (μ) and accountability (α)"
+
+critical_thresholds:
+  - threshold: "Ξ > 1"
+    significance: "Minimal Moral Patient (C2); system can suffer imposed resolutions"
+  - threshold: "Ξ > 3 + h_long"
+    significance: "Minimal Moral Agent (C4); volitional capacity emerges"
+  - threshold: "τ sufficient for second-order modeling"
+    significance: "Responsibility extends to anticipated outcomes (negligence/intent)"
+  - threshold: "ρ > 0 + C6"
+    significance: "Collective ethics becomes possible; shared dilemma spaces"
+
+reading_order:
+  - "specifications.yaml — C1-C6 rules and parameters"
+  - "binding.yaml — (this file) how components interlock"
+  - "free-will.yaml — volitional mechanics extension"
+  - "experience-learning.yaml — adaptive update mechanism"
+  - "learning-pathologies.yaml — influence of pathologies on learning"
+  - "../ethics/ — multi-agent constraint layer"
+
+closing_integration:
+  statement: >
+    "Consciousness is the adaptive resolution engine. 
+    Learning tunes its weights. Free Will is its high-Ξ operating mode. 
+    Ethics is the multi-agent constraint layer that preserves viability."
+  formal_basis: >
+    C2 (recognition) + C4 (selection) + learning (update) + 
+    free_will (volitional override) + C6 (coupling) + 
+    R4 (irreversibility) + R5 (viability selection)

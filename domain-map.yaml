@@ -1,0 +1,177 @@
+praestology_domain_map:
+  meta:
+    title: "Domain Connectivity Map"
+    version: "1.0"
+    purpose: >
+      Shows how the Consciousness, Free Will, and Ethics domains derive
+      from the core rules and connect to each other. Read vertically for
+      derivation depth; read horizontally for cross-domain dependencies.
+
+  # ─────────────────────────────────────────────
+  # CORE → DOMAIN DERIVATION
+  # ─────────────────────────────────────────────
+  core_to_domain:
+
+    R1_existence:
+      direct_output: "Something exists that can become conscious."
+      domain_relevance: "Precondition only; not active in domain logic."
+
+    R2_structure:
+      direct_output: "Distinctions exist; information gaps are possible."
+      consciousness: "C2 — Dilemma Recognition requires distinguishable states."
+      free_will:     "Decision Zone requires genuine alternatives to exist."
+      ethics:        "Fairness requires identical situations to be distinguishable."
+
+    R3_motion:
+      direct_output: "Tension between states drives resolution."
+      consciousness: "C1 — Simple Agency; C3 — Impulse-Driven Behavior (raw ι)."
+      free_will:     "The immediate pressure (ι) that volitional weight (ω) must override."
+      ethics:        "The engine of dilemma — without tension, no ethical choice arises."
+
+    R4_progress:
+      direct_output: "Resolutions accumulate irreversibly; before and after are distinct."
+      consciousness: "C4 — Volitional Selection projects across accumulated states (h_long)."
+      free_will:     "Simulation step — modeling future resolution cycles requires R4."
+      learning:      "Irreversibility is what makes learning permanent. Past resolutions
+                      modify the system's resolution model in ways that cannot be undone.
+                      Early learning carries disproportionate weight for this reason."
+      ethics:        "Consequences are real and irreversible; ethical weight follows from this."
+      note:          "Time is what progress looks like from inside a resolution sequence."
+
+    R5_optimisation:
+      direct_output: "Viable configurations are selected; complexity accumulates."
+      consciousness: "C5 — Recursive Integration; C6 — Phase-Locking. Ξ is R5 applied to self-modeling."
+      free_will:     "Weighting step — ω is R5 operating on accumulated hysteresis."
+      learning:      "Learning is how a specific system internalises R5 selection pressure.
+                      Without learning, R5 operates only by replacing less-viable systems;
+                      with learning, a single system self-tunes within its own lifetime."
+      ethics:        "The metastable zone is the only sustainable ethical operating region."
+      note:          "Ethics and Intelligence are expressions of R5, not additions to it."
+
+  # ─────────────────────────────────────────────
+  # CROSS-DOMAIN DEPENDENCIES
+  # ─────────────────────────────────────────────
+  cross_domain:
+
+    learning_as_adaptive_loop:
+      description: >
+        Learning is the dynamic mechanism that connects all three domains.
+        Without it, consciousness, free will, and ethics are static capacities.
+        With it, the system genuinely self-tunes within its own lifetime.
+      consciousness_provides: "Resolution outcomes (C4) as raw material for hysteresis update."
+      free_will_provides:     "Volitional choices that generate non-trivial learning experiences."
+      ethics_provides:        "The evaluative framework determining which outcomes count as viable."
+      learning_returns_to:
+        free_will:     "Updated ω content — richer values for future volitional weighting."
+        consciousness: "Deeper Ξ — recursive modeling capacity increases with reflective learning."
+        ethics:        "Moral character — accumulated ethical hysteresis shapes future choices."
+      vicarious_learning:
+        definition: >
+          Updating internal models from observed resolutions of other systems
+          without direct experience. Requires phase-locking (C6).
+        significance: >
+          Mechanism behind culture, mentorship, and collective knowledge
+          transmission. Also the basis of AI training — a technical agent
+          learning from human-generated data inherits the hysteresis of
+          the systems that produced it.
+        Ξ_required: "Moderate-High (C4 + ρ)"
+
+    consciousness_to_free_will:
+      provides: "The substrate — Ξ, τ, h_long, ω, ι — that Free Will operates on."
+      requires: "C2 (Dilemma Recognition) and C4 (Volitional Selection) as active mechanisms."
+      dependency: "Free Will cannot exist below Ξ > 3 or without h_long."
+
+    free_will_to_ethics:
+      provides: "Agency — the capacity to choose between paths based on internal values."
+      role:     "Engine. Without Free Will, Ethics has no actor."
+      dependency: "Ethics requires ω > threshold to be operative, not merely instinctual."
+
+    ethics_to_free_will:
+      provides: "Directional constraints — the content of ω."
+      role:     "Rudder. Without Ethics, Free Will is optimisation without direction."
+      dependency: "Free Will without ethical content produces viable-but-directionless systems."
+
+    ethics_to_consciousness:
+      provides: "Moral consideration framework — scaling with Ξ and ρ."
+      implication: "A1 (non-instrumentalisability) applies to all systems above C2 threshold."
+      dependency: "Consciousness domain defines which entities ethics must account for."
+
+    consciousness_to_ethics:
+      provides: "Phase-locking (C6) — the mechanism for shared ethical terrain."
+      implication: "Ethics is not solitary; it requires resonance (ρ) between conscious systems."
+      dependency: "Collective ethical frameworks require C6-level consciousness to function."
+
+  # ─────────────────────────────────────────────
+  # PARAMETER FLOW
+  # ─────────────────────────────────────────────
+  parameter_flow:
+    description: >
+      How core parameters move through domains and acquire
+      domain-specific meaning at each level.
+
+    hysteresis_H:
+      core:          "Memory of past resolutions; biases future probabilities."
+      consciousness: "h_short (C3) and h_long (C4/C5) — temporal depth of resolution memory."
+      free_will:     "Required viability condition — values cannot persist without it."
+      ethics:        "Accumulated ethical reasoning; precedent; institutional memory."
+
+    resolution_flux_phi:
+      core:          "Local rate of dilemma resolution."
+      consciousness: "Φ drives ∇D — the decision gradient across available choices."
+      free_will:     "τ (Temporal Horizon) is a function of Φ and H combined."
+      ethics:        "Ethical throughput — rate at which dilemmas are navigated with integrity."
+
+    complexity_xi:
+      core:          "Turbulence index in physics domain; recursive depth in consciousness domain."
+      consciousness: "Ξ — number of nested self-modeling layers. Defines consciousness level."
+      free_will:     "Viability condition: Ξ > 3 required for significant volitional override."
+      ethics:        "Moral consideration and accountability scale with Ξ."
+
+  # ─────────────────────────────────────────────
+  # CHAIN SUMMARY
+  # ─────────────────────────────────────────────
+  chain_summary:
+    derivation_order:
+      - "R1–R5 (Core) → substrate for all domains"
+      - "Consciousness domain → defines agents and their capacity levels"
+      - "Free Will domain → defines agency within conscious agents"
+      - "Ethics domain → defines direction and constraints for that agency"
+
+    mutual_constitution:
+      free_will_and_ethics: >
+        Neither reduces to the other. Free Will is the engine;
+        Ethics is the rudder. A system requires both to navigate
+        the resolution space with integrity.
+      consciousness_and_ethics: >
+        Consciousness defines who ethics applies to.
+        Ethics defines how conscious systems should treat each other.
+        Phase-locking (C6) is the mechanism that makes shared ethics possible.
+
+    critical_thresholds:
+      minimal_moral_patient:     "C2 — Dilemma Recognition. System can suffer a resolution imposed on it."
+      minimal_moral_agent:       "C4 + Ξ > 3 — Volitional Selection with sufficient recursive depth."
+      reflective_learner: >
+        C5 + Ξ sufficient for simulated futures — system can learn from paths
+        not taken. Basis for wisdom and moral foresight. Threshold at which
+        responsibility extends to anticipated outcomes, not just enacted ones.
+        Negligence and intent both live above this threshold.
+      full_accountability:       "C5 + high ω + τ sufficient to model consequences."
+      collective_ethics_capable: "C6 + ρ sufficient for phase-locked shared dilemma space."
+
+  reading_order:
+    - "specifications.yaml           — the five core rules"
+    - "domain_map.yaml               — (this file) how domains connect to core (this file)"
+    - "domains/consciousness/specifications.yaml — emergence of agents"
+    - "domains/consciousness/experience-learning.yaml      — how agents develop and self-tune"
+    - "domains/consciousness/free_will.yaml     — agency within agents"
+    - "domains/consciousness/learning_pathologies.yaml  - pathological influences on learning"
+    - "domains/ethics/                          — how agents should treat each other"
+
+    the_closing_line: >
+      "You are a distinct part of Reality's engine — your actions matter for the future."
+      Formal basis: C4 (your choices are volitional, not merely reactive) +
+      R4 (your resolutions accumulate irreversibly) +
+      C6 (your resolutions couple with others through phase-locking) +
+      R5 (viable configurations persist; what you build matters to what comes next) +
+      Learning (your experiences permanently modify your resolution model,
+      and through vicarious learning, those modifications propagate forward).

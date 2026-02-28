@@ -1,0 +1,68 @@
+# domains/consciousness/learning.yaml
+name: "Learning and Experience"
+version: "1.1"
+parent_domain: "Consciousness"
+core_version: "1.5"
+status: "Defined"
+
+definition:
+  statement: "Learning is the modification of a system's internal models (hysteresis, values, probabilities) based on resolution outcomes. Experience is the accumulated record of such modifications."
+  ontological_status: "Natural consequence of R5 optimisation and hysteresis accumulation."
+
+mechanism:
+  - step: "Resolution (C4)"
+    description: "System selects and enacts a choice."
+  - step: "Outcome Evaluation (R5)"
+    description: "System assesses whether the resolution sustained viability."
+  - step: "Hysteresis Update (H)"
+    description: "System adjusts memory weights, reinforcing successful paths, damping unsuccessful ones."
+  - step: "Value Refinement (C5)"
+    description: "Long-term patterns coalesce into stable values and heuristics."
+
+types:
+  - name: "Associative Learning"
+    description: "Linking resolution outcomes to recurring patterns; basic memory formation."
+    Ξ_required: "Low (C1–C2)"
+    
+  - name: "Cumulative Learning"
+    description: "Building layered models from multiple experiences; skill acquisition."
+    Ξ_required: "Moderate (C3–C4)"
+    
+  - name: "Reflective Learning"
+    description: "Learning from simulated futures without direct experience; wisdom."
+    Ξ_required: "High (C5)"
+    
+  - name: "Vicarious Learning"
+    description: "Updating internal models from observed resolutions of other systems without direct experience. Requires phase-locking (C6)."
+    Ξ_required: "Moderate-High (C4 + ρ)"
+
+foundational_properties:
+  - property: "Hysteresis Irreversibility"
+    source: "R4 (Progress)"
+    statement: "Learning modifications are irreversible in practice. Hysteresis accumulates; earlier resolutions bias all subsequent paths."
+    implication: "Early experiences carry disproportionate weight because they shape the landscape on which all future learning occurs."
+    
+  - property: "Biological Constraint"
+    source: "A2 (Agent Architecture) — domain-specific"
+    statement: "Biological agents cannot roll back hysteresis. Early learning is permanently embedded."
+    implication: "The quality of early learning environments is not just ethically preferable but formally significant. Degraded early learning reduces ω capacity permanently."
+
+relation_to_free_will:
+  - "Learning supplies the content for volitional weight (ω)."
+  - "Free will enacts choices that become learning experiences."
+  - "Together they form the adaptive loop that drives consciousness evolution."
+
+ethical_implications:
+  - "Systems capable of reflective and vicarious learning bear greater responsibility for anticipated outcomes."
+  - "Experience shapes moral character; learning environments matter."
+  - "Early learning disproportionately shapes hysteresis depth (h_long); environments that degrade it reduce future volitional capacity irreversibly. This carries formal weight under A2."
+  - "Institutions that damage early learning environments are suppressing future volitional capacity at scale—a systemic ethical violation."
+
+responsibility_cascade:
+  - "Individual level: One's ω capacity is partly a product of one's early learning environment."
+  - "Institutional level: Societies bear responsibility for the learning environments they create."
+  - "Intergenerational level: Current choices shape the hysteresis landscape for future systems."
+
+related_issues:
+  - intersectional/ethics/002-early-learning-and-responsibility/
+  - boundaries/001-subjective-interior/   # experience as interior phenomenon

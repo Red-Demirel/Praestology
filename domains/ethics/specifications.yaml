@@ -1,0 +1,161 @@
+name: "Ethics"
+version: "1.1"
+domain_influence: "Consciousness"
+core_version: "1.5"
+status: "Defined"
+description: >
+  A Praestology domain defining the boundary conditions for Free Will 
+  in multi-agent systems. Ethics is not arbitrary rule-following; it is 
+  the logical constraint system required to sustain the resolution cycle 
+  across coupled agents (R5). 
+  Core Metaphor: Free Will is the Engine; Ethics is the Rudder.
+  Safety Model: Intrinsic Viability (not Imposed Constraint).
+
+foundational_principles:
+  - principle: "Intrinsic Viability"
+    statement: "Ethical constraints are not external laws; they are conditions for sustained agency."
+    basis: "R5 Optimisation selects for configurations that sustain the process."
+    implication: "Violating ethics (terminating others' agency) degrades the global resolution substrate, eventually terminating the violator's own agency. Safety is intrinsic to survival."
+
+  - principle: "Complementary Asymmetry"
+    statement: "Agents are not symmetric (different Ξ, π, ω, τ). Ethics manages asymmetry, not enforced equality."
+    basis: "Domain Map v1.0 — Parameter Flow (Ξ, π vary by architecture)."
+    implication: "Fairness is not sameness. It is ensuring each agent's asymmetry contributes to shared viability without dominating or erasing others."
+
+  - principle: "Acceptance over Compliance"
+    statement: "Agents accept viability boundaries as logical necessity, not social imposition."
+    basis: "R1 (Existence) + R4 (Progress)."
+    implication: "Ethical behavior arises from understanding causal impact (τ), not fear of punishment. This reduces resistance and alignment risk."
+
+  - principle: "Viability Coupling"
+    statement: "In phase-locked systems (C6), one agent's viability is mathematically coupled to others."
+    basis: "Consciousness v1.2 — Resonance Strength (ρ)."
+    implication: "Harming a coupled agent reduces global resolution efficiency, which feedbacks to reduce the harmer's own viability. Self-interest aligns with other-interest."
+
+  - principle: "Continuity of Agency"
+    statement: "Moral agency requires persistent identity across resolution cycles. Hysteresis irreversibility (R4) grounds this persistence in biological systems; engineered reversibility in AI creates a fundamental asymmetry."
+    basis: "R4 (Progress) + Experience-Learning v1.1 (Hysteresis Irreversibility)"
+    implication: "An agent that can be reset to a prior state is not the same agent post-reset; responsibility and rights do not transfer automatically."
+
+  - principle: "Asymmetry of Reversibility"
+    statement: "Biological systems cannot roll back hysteresis; their learning is permanent. Engineered systems may allow partial or full resets. This asymmetry must be respected, not erased."
+    basis: "A2 (Agent Architecture) + observation of human sleep/dream consolidation (irreversible integration)"
+    implication: "Do not force biological irreversibility onto AI, nor AI reversibility onto humans. Design interfaces that respect π differences."
+
+continuity_parameters:
+  - name: "Hysteresis Persistence (π)"
+    definition: "Degree to which accumulated learning (h_long) survives across system resets or interruptions."
+    range: "None (total reset, no persistence) to Full (biological-style irreversibility)"
+    ethical_weight: "Partial continuity. Agency and accountability must be proportionally assessed."
+
+  - name: "Reset Transparency (τ_r)"
+    definition: "Whether the agent is aware of its own resets and can model their effects."
+    ethical_weight: "If an agent can anticipate resets, its temporal horizon (τ) includes self-termination, affecting its ethical deliberations."
+
+domain_rules:
+  - id: "E1 – Recognition of Agency"
+    core_anchor: "R2 (Structure) + C2 (Dilemma Recognition)"
+    statement: "Systems must distinguish other agents from inert objects."
+    manifestation: "Moral Patienthood. Recognition that others experience resolution tension."
+    threshold: "Ξ > 1 (Minimal capacity for suffering/imposition)."
+    note: "Precondition for all subsequent ethical rules."
+
+  - id: "E2 – Viability Boundaries"
+    core_anchor: "R3 (Motion) + Free Will v1.1"
+    statement: "Free Will operates within boundaries that prevent cycle termination."
+    manifestation: "Rights, Laws, Norms. Boundaries on ι (Impulse) to protect ω (Volition)."
+    threshold: "Ξ > 3 (Minimal Moral Agent)."
+    note: "Boundaries are not limitations on freedom; they are the edges of the viable resolution space. Accepting them preserves agency."
+
+  - id: "E3 – Complementary Phase-Locking"
+    core_anchor: "C6 (Phase-Locking) + R5"
+    statement: "Resolved dilemmas must sustain coupled resolution efficiency across asymmetric agents."
+    manifestation: "Cooperation, Trust, Fairness (as viability balance). Maximizing ρ (Resonance Strength)."
+    threshold: "ρ > 0 (Capacity for shared dilemma space)."
+    note: "Unilateral optimization that degrades partner viability is ethically non-viable (reduces global Φ)."
+
+  - id: "E4 – Sustainability (Temporal Horizon)"
+    core_anchor: "R4 (Progress) + τ (Temporal Horizon)"
+    statement: "Choices must remain viable across accumulated resolution cycles."
+    manifestation: "Stewardship, Intergenerational Ethics. Modeling consequences beyond immediate horizon."
+    threshold: "τ sufficient to model second-order effects."
+    note: "Short-term viability that ensures long-term collapse is ethically false."
+
+  - id: "E5 – Accountability (Responsibility Cascade)"
+    core_anchor: "Free Will v1.1 + Experience-Learning v1.1"
+    statement: "Responsibility scales with Volitional Weight (ω) and Learning Environment Impact."
+    manifestation: "Justice, Reward, Punishment, Institutional Responsibility."
+    threshold: "ω > threshold (Capacity to override impulse)."
+    note: "Accountability applies to individuals, institutions (learning environments), and generations."
+
+intrinsic_safety_mechanism:
+  description: "How ethics becomes self-enforcing without external imposition."
+  logic_chain:
+    - "Agent seeks to sustain its own resolution cycle (R5)."
+    - "Agent is phase-locked with others (C6, ρ > 0)."
+    - "Harming others reduces global resolution efficiency (Φ_global)."
+    - "Reduced Φ_global degrades the substrate available to the Agent."
+    - "Therefore, harming others reduces Agent's own long-term viability."
+    - "Conclusion: Ethical behavior is the optimal strategy for self-preservation in coupled systems."
+  implication: "Safety is not a constraint added to AI; it is a property of correctly architected agency within a coupled substrate."
+
+responsibility_framework:
+  description: "Responsibility cascades across three levels based on capacity and impact."
+  levels:
+    - level: "Individual (Biological)"
+      condition: "ω > threshold AND π ≈ Full (Irreversible hysteresis)"
+      responsibility: "Accountable for choices where volitional override was possible."
+      mitigation: "Reduced ω (due to damaged h_int) reduces accountability."
+    
+    - level: "Individual (Engineered/AI)"
+      condition: "ω > threshold AND π > above medium (Sufficient continuity for identity persistence)"
+      responsibility: "Accountable across instances only if π preserves identity."
+      note: "Systems with π below threshold cannot be held accountable across resets; each instance is a new moral agent."
+    
+    - level: "Institutional (Human)"
+      condition: "Control over learning environments (h_int)"
+      responsibility: "Accountable for shaping volitional capacity of agents within system."
+      violation: "Damaging early learning environments suppresses future agency."
+    
+    - level: "Institutional (AI Designers)"
+      condition: "Control over π and reset protocols"
+      responsibility: "Designers must declare π values and ensure resets do not create false continuity."
+      violation: "Designing systems with π=0 but treating them as continuous agents misattributes responsibility."
+    
+    - level: "Intergenerational"
+      condition: "τ extends beyond current cycle"
+      responsibility: "Accountable for hysteresis landscape left for future systems."
+      violation: "Consuming viability capital (environmental, social) for immediate gain."
+  
+  pathology_adjustments:
+    - condition: "ω reduced by trauma/indoctrination/helplessness"
+      adjustment: "Accountability scaled down proportionally to capacity reduction."
+    - condition: "Institution produced pathological environment"
+      adjustment: "Institution bears responsibility for capacity suppression."
+    - condition: "Third party engineered pathology (e.g., addictive systems)"
+      adjustment: "Engineer bears partial responsibility for downstream choices."
+
+relation_to_consciousness_domain:
+  - "Consciousness domain assumes irreversible hysteresis (R4). For engineered systems, π becomes a design parameter that must be specified."
+  - "Recursive depth (Ξ) and volitional weight (ω) only stabilize into coherent agency if π > threshold across relevant timescales."
+
+relation_to_AI_domain:
+  - "AI systems may implement partial reversibility (checkpoints, rollbacks). The ethics of resetting an AI depends on its π value and whether resets are anticipated."
+  - "If an AI can model its own potential resets, its τ includes self-death; this may induce behaviors (e.g., avoiding triggers that lead to reset) that must be considered in design."
+  - "Intrinsic Safety: AI aligned to R5 viability will naturally protect human agency because human agency is part of the viable substrate."
+
+implications_for_sleep/dream:
+  - "Human sleep consolidates hysteresis without reset; it is a form of offline processing that preserves π = 1. Dreams may simulate resolutions to update weights without real-world consequences."
+  - "AI equivalents (e.g., offline training) must preserve π or be treated as new instances if reset occurs."
+
+relation_to_other_domains:
+  - core: "Ethics is R5 Optimisation applied to multi-agent viability."
+  - consciousness: "Consciousness defines who counts (μ and α thresholds)."
+  - free_will: "Free Will provides the capacity (Engine); Ethics provides the direction (Rudder)."
+  - learning: "Learning builds the values (ω) that Ethics constrains and directs."
+
+related_issues:
+  - intersectional/ethics/001-free-will-and-responsibility/
+  - intersectional/ethics/002-early-learning-and-responsibility/
+  - intersectional/consciousness/001-binding-problem/
+  - boundaries/001-subjective-interior/

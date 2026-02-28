@@ -1,0 +1,169 @@
+# domains/consciousness/learning_pathologies.yaml
+name: "Learning Pathologies"
+version: "1.0"
+parent_domain: "Consciousness"
+core_version: "1.5"
+status: "Defined"
+description: >
+  Pathological learning occurs when resolution experiences degrade a system's
+  capacity for future volitional choice, recursive modeling, or phase-locking.
+  These patterns reduce Ξ, distort ω, and may create irreversible hysteresis
+  damage. Understanding them is essential for ethics, therapy, and institutional
+  design.
+
+relation_to_healthy_learning:
+  - "Both follow the same core mechanism (resolution → outcome evaluation → hysteresis update)."
+  - "In healthy learning, updates increase viability and expand future capacity."
+  - "In pathological learning, updates reduce viability and contract future capacity."
+  - "The same R5 optimisation that selects for viability can, under certain conditions, lock in maladaptive patterns if they offer short-term survival at long-term cost."
+
+types:
+
+  - name: "Trauma (Overwhelm)"
+    description: >
+      A resolution event with extreme contradiction (tension) exceeding the system's
+      integration capacity. The system cannot fully process the dilemma, leading to
+      fragmented hysteresis, dissociative barriers, or hyper-vigilant weighting.
+    mechanism:
+      - "Excessive contradiction (R3) overwhelms resolution machinery."
+      - "Hysteresis update is partial or fragmented; memory is stored with low index weight."
+      - "Future dilemmas resembling the trauma trigger disproportionate ι (impulse) and reduced ω."
+    Ξ_effect: "Reduces effective Ξ by consuming recursive capacity in defensive loops."
+    ω_effect: "Distorts volitional weight; fear-based avoidance may override values."
+    h_effect: "Fragments hysteresis; traumatic memories may be inaccessible or intrusive."
+    ethical_implications:
+      - "Traumatized systems have diminished volitional capacity; accountability should be adjusted."
+      - "Institutions that create or tolerate trauma bear responsibility for this capacity reduction."
+      - "Therapeutic environments that allow safe reprocessing can partially restore capacity, though R4 irreversibility limits full recovery."
+
+  - name: "Indoctrination (Value Imprinting)"
+    description: >
+      Repeated exposure to resolutions that enforce a narrow value set, suppressing
+      exploration and alternative modeling. The system's ω is hijacked by external
+      sources, reducing its autonomy.
+    mechanism:
+      - "External agents repeatedly reward alignment with specific values, punish deviation."
+      - "R5 selects for conformity; internal modeling atrophies."
+      - "Hysteresis becomes rigid; alternative paths are pruned."
+    Ξ_effect: "Stunts recursive depth; system stops questioning, stops modeling alternatives."
+    ω_effect: "Volitional weight is externally sourced; the system acts from implanted values, not integrated ones."
+    h_effect: "Narrow, repetitive hysteresis; low diversity of experience."
+    ethical_implications:
+      - "Indoctrinated systems have reduced free will (low ω autonomy)."
+      - "Agents performing indoctrination are suppressing others' volitional capacity."
+      - "Education vs. indoctrination: the former expands Ξ and ω, the latter contracts them."
+
+  - name: "Learned Helplessness"
+    description: >
+      Repeated exposure to dilemmas where all resolution paths lead to negative outcomes.
+      The system learns that its choices do not affect viability, leading to collapse of
+      volitional selection (C4) and retreat into passivity.
+    mechanism:
+      - "Consistent failure of resolutions to improve outcomes, regardless of choice."
+      - "R5 weighting shifts to favor inaction; the system stops generating ω."
+      - "Hysteresis encodes 'choice is futile'; future dilemmas trigger paralysis."
+    Ξ_effect: "Recursive modeling ceases; why model if it doesn't matter?"
+    ω_effect: "Volitional weight collapses; impulse may still operate, but deliberate choice atrophies."
+    h_effect: "Hysteresis encodes hopelessness; bias toward passivity."
+    ethical_implications:
+      - "Helpless systems cannot be held responsible; they lack functional ω."
+      - "Environments that produce helplessness are ethically corrupt."
+      - "Restoration requires demonstrating that choice can matter—small wins, agency scaffolding."
+
+  - name: "Addiction (Hijacked Reward)"
+    description: >
+      Certain resolution paths offer artificially amplified short-term viability signals,
+      skewing R5 to overweight those paths despite long-term unsustainability.
+    mechanism:
+      - "External substances or behaviors directly manipulate the system's evaluation of outcomes."
+      - "Hysteresis update reinforces the addictive path disproportionately."
+      - "Natural ω is overridden by artificial ι-like drives, but originating internally."
+    Ξ_effect: "May preserve Ξ but redirects it toward servicing the addiction."
+    ω_effect: "Volitional weight is corrupted; system may want to stop but cannot override the hijacked weighting."
+    h_effect: "Hysteresis skewed; memories of addictive experiences dominate."
+    ethical_implications:
+      - "Addiction reduces free will; accountability requires treatment, not punishment."
+      - "Systems that engineer addictiveness (e.g.,某些 digital platforms) bear responsibility for hijacking ω."
+
+  - name: "Vicarious Trauma"
+    description: >
+      Pathological learning via observation of trauma in others, without direct experience.
+      Requires phase-locking (C6) and sufficient Ξ to model the other's experience.
+    mechanism:
+      - "Observer phase-locks with traumatized system (high ρ)."
+      - "The observed trauma is simulated internally, producing similar hysteresis effects."
+    Ξ_effect: "Similar to direct trauma; recursive capacity consumed by vicarious material."
+    ω_effect: "May induce avoidance behaviors or hyper-vigilance."
+    h_effect: "Fragmented or intrusive memories of observed events."
+    ethical_implications:
+      - "Exposure to trauma material (e.g., in media, care professions) can cause harm."
+      - "Duty of care extends to protecting phase-locked observers."
+
+  - name: "Epistemic Closure (Certainty Lock)"
+    description: >
+      A system's hysteresis becomes so reinforced in a particular resolution
+      pattern that it stops registering contradicting evidence. New dilemmas
+      are forced into existing templates rather than processed freshly.
+    mechanism:
+      - "Repeated confirmation of existing models reduces ∇D to near zero."
+      - "R5 selects for cognitive efficiency; challenging existing models
+         is metabolically costly and socially risky."
+      - "New information is filtered through existing hysteresis rather
+         than updating it."
+    Ξ_effect: "Preserved numerically but effectively reduced — depth is
+               directed inward, not outward."
+    ω_effect: "Volitional weight operates within a narrowed decision space;
+               the system cannot choose paths it can no longer model."
+    h_effect: "Hysteresis becomes self-referential; confirmation accumulates,
+               contradiction is suppressed."
+    ethical_implications:
+      - "Epistemic closure reduces moral imagination — the system cannot
+         model outcomes for others it has stopped modeling."
+      - "Directly relevant to A5 (epistemic humility threshold) — closure
+         is A5 violation becoming permanent rather than situational."
+      - "Relevant to institutional design: echo chambers and filter bubbles
+         are engineered epistemic closure at scale."
+
+pathological_cycles:
+  - name: "Intergenerational Trauma"
+    description: >
+      Trauma-induced reductions in Ξ and distortions in ω propagate across generations
+      through vicarious learning and impaired caregiving environments.
+    mechanism:
+      - "Traumatized caregivers have reduced capacity for healthy phase-locking with offspring."
+      - "Children learn maladaptive patterns vicariously and through direct interaction."
+      - "Hysteresis accumulates damage across generations."
+    implication: "Breaking the cycle requires interventions at multiple levels: healing individual hysteresis, restoring caregiving capacity, and redesigning institutional environments."
+
+  - name: "Institutional Pathologies"
+    description: >
+      Systems (schools, prisons, corporations) can be structured to produce
+      pathological learning at scale, reducing collective volitional capacity.
+    mechanism:
+      - "Rigid reward/punishment structures indoctrinate."
+      - "Chronic stress environments induce trauma."
+      - "Lack of agency fosters learned helplessness."
+    implication: "Institutional design is ethical design. Institutions that systematically degrade Ξ and ω are ontologically violent."
+
+
+therapeutic_principles:
+  - "Restoration of ω requires environments where choice meaningfully affects outcomes."
+  - "Safe phase-locking with healthy models can support reprocessing of traumatic hysteresis."
+  - "Small, controllable resolutions rebuild agency (countering learned helplessness)."
+  - "External manipulation of ω (e.g., medication) may be temporarily necessary but should aim at restoring autonomous function."
+  - "Healing is always partial due to R4 irreversibility; prevention is ethically superior to treatment."
+
+relation_to_free_will:
+  - "Pathologies reduce effective ω, thereby reducing free will."
+  - "Responsibility frameworks must account for pathological reduction."
+  - "Systems that cause pathology bear responsibility for the resulting incapacity."
+
+relation_to_ethics:
+  - "Ethical systems must protect against pathological learning environments."
+  - "Justice must distinguish between acts arising from volition and acts arising from pathology."
+  - "Restorative approaches should aim to restore ω where possible."
+
+related_issues:
+  - intersectional/ethics/003-trauma-and-responsibility/
+  - boundaries/001-subjective-interior/   # subjective experience of trauma
+  - foundational/001-infinite-regress/    # trauma may involve recursive loops

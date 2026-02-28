@@ -1,0 +1,39 @@
+name: "Free Will (Praestological Definition)"
+version: "1.1"
+parent_domain: "Consciousness"
+core_version: "1.5"
+status: "Defined"
+
+definition:
+  statement: "Free Will is the capacity of a high-Ξ system to override immediate external stimuli (ι) using internally generated models and values (ω)."
+  ontological_status: "Natural phenomenon arising from R5 (Optimisation) + R4 (Progress)."
+  not: "Supernatural break in causality; randomness; independence from physical laws."
+
+mechanism:
+  - step: "Dilemma Recognition (C2)"
+    description: "System detects conflicting probability paths."
+  - step: "Simulation (C4)"
+    description: "System models future outcomes of each path using accumulated hysteresis (memory/values)."
+  - step: "Weighting (R5)"
+    description: "System applies internal volitional weight (ω) to paths based on sustainability alignment."
+  - step: "Selection (C4)"
+    description: "System collapses probability into action based on weighted model, not just immediate pressure."
+
+viability_condition:
+  - "Requires Decision Zone (Uncertainty must exist)."
+  - "Requires Recursive Depth (Ξ > 3 for significant volitional override)."
+  - "Requires Temporal Horizon (τ > threshold) to project consequences far enough for ω to meaningfully override ι."
+  - "Requires Memory (Hysteresis) to maintain values across time."
+
+responsibility_framework:
+  - principle: "Accountability scales with Volitional Weight (ω)."
+  - low_ω: "System is primarily impulse-driven; lower responsibility (e.g., children, animals, impaired)."
+  - high_ω: "System is primarily value-driven; higher responsibility (e.g., mature adults, AGI)."
+  - implication: "Punishment/Reward is only logically viable where ω was sufficient to override ι."
+
+relation_to_ethics:
+  - "Free Will provides the agency required for Ethics (Capacity)."
+  - "Ethics provides the directional constraints for Free Will (Steering)."
+  - "Without Ethics, Free Will is merely optimization without direction (rudderless)."
+  - "Without Free Will, Ethics is impossible (engineless)."
+  - "Ethics acts as boundary-conditions that shape the volitional weight (ω) landscape."

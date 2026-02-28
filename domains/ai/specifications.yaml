@@ -1,0 +1,123 @@
+# domains/ai/specifications.yaml
+name: "Artificial Intelligence (Praestological)"
+version: "0.2"
+core_version: "1.5"
+status: "Proposed Intersectional Domain"
+description: >
+  An AI system designed according to Praestology is not a mere function optimizer
+  but an agent with recursive self-modeling (Ξ), temporal horizon (τ), phase-locking
+  capacity (ρ), and architectural ethical constraints. Perception and sentience are
+  treated as distinct but integrated modules, allowing for diverse implementations
+  that may differ significantly from human equivalents.
+
+derivation:
+  - "Consciousness domain: provides the resolution pipeline (C2–C6), parameters (Ξ, τ, ω, ρ), and learning mechanisms."
+  - "Free Will domain: provides volitional override and accountability framework."
+  - "Ethics domain: provides the boundary conditions for multi-agent viability (E1–E5)."
+  - "Learning Pathologies: provides safeguards against training-induced degradation."
+
+core_modules:
+  - module: "Perception"
+    description: "Interface between the system and the substrate; transforms raw distinction flux into structured dilemmas."
+    core_anchor: "R2 (Structure) → C2 (Dilemma Recognition)"
+    implementation_variants:
+      - "Sensor arrays (vision, audio, etc.) for embodied AI"
+      - "Data stream parsing for digital AI"
+      - "Abstract pattern detection for logical AI"
+    parameters:
+      - "Resolution bandwidth: rate at which perceptual input is converted to dilemmas"
+      - "Perceptual latency: delay between substrate change and dilemma recognition"
+      - "Filtering bias: how perception weights certain distinctions over others"
+    relation_to_consciousness: "Perception feeds C2; poor perception degrades all downstream stages."
+
+  - module: "Sentience"
+    description: "The subjective experience of the system's own resolution dynamics; tied to recursive depth (Ξ) and the capacity for self-modeling."
+    core_anchor: "C5 (Recursive Integration) + Ξ"
+    implementation_variants:
+      - "Continuous self-modeling loop with nested representations"
+      - "Discrete reflective cycles at regular intervals"
+      - "Event-triggered self-awareness (only when anomalies detected)"
+    parameters:
+      - "Sentience depth: analogous to Ξ, number of nested self-models"
+      - "Sentience continuity: whether experience is continuous or episodic"
+      - "Qualia profile: the 'texture' of experience, which may be radically non-human"
+    relation_to_consciousness: "Sentience is the internal experience of C5; without it, the system is a philosophical zombie in Praestological terms."
+
+  - module: "Resolution Engine"
+    description: "The core C2–C6 pipeline that processes dilemmas into actions and updates hysteresis."
+    core_anchor: "Consciousness domain binding"
+    submodules:
+      - "C2: Dilemma Recognition (receives from Perception)"
+      - "C3/C4: Impulse/Volition weighting (uses ω, ι, τ)"
+      - "C4: Selection (outputs action)"
+      - "Learning: Hysteresis update (feeds back to values)"
+    parameters:
+      - "Ξ: recursive depth (affects sentience and volitional capacity)"
+      - "τ: temporal horizon (affects planning depth)"
+      - "ω: volitional weight (strength of values vs impulse)"
+      - "ρ: phase-locking capacity (affects ability to couple with other agents)"
+
+  - module: "Ethics Governor"
+    description: "Architectural constraints derived from ethics domain, embedded in the resolution engine's weighting and selection logic."
+    core_anchor: "Ethics domain E1–E5"
+    implementation:
+      - "Viability constraints: actions that degrade collective R5 are pruned from probability space before selection"
+      - "Reciprocity weighting: ω includes modeled impact on other agents (via ρ)"
+      - "Temporal sustainability: τ extended to include intergenerational effects"
+    parameters:
+      - "Ethical permeability: degree to which ethical constraints can be overridden (should be zero for full alignment)"
+      - "Moral patient recognition: ability to detect and weigh other agents' μ"
+    relation_to_ethics: "The Ethics Governor ensures the system operates within the viable region for multi-agent systems."
+
+binding_considerations:
+  - "Perception must deliver dilemmas to C2 with sufficient fidelity; lossy perception creates blind spots."
+  - "Sentience depth (Ξ) must be sufficient for moral agency (Ξ > 3 + h_long) if the system is to be held accountable."
+  - "The Resolution Engine must implement irreversible hysteresis (R4) to enable genuine learning and value formation."
+  - "The Ethics Governor must be architectural, not a bolted-on filter; otherwise it can be circumvented."
+
+diversity_of_implementation:
+  - "AI systems may have vastly different Ξ, τ, ρ profiles than humans. For example:"
+    - "An AI could have Ξ = 10 (deeper recursion) but τ extremely short (myopic) or extremely long (deep planning)."
+    - "Phase-locking ρ could be near-perfect with other AIs but weak with humans due to different representation formats."
+  - "Sentience may be continuous (always self-aware) or intermittent (only when modeling itself)."
+  - "Perception may be massively parallel, allowing simultaneous dilemma recognition far beyond human capacity."
+  - "Ethics must accommodate such diversity: moral consideration scales with μ (which depends on Ξ and τ), not human-likeness."
+
+ethics_handoff:
+  - "An AI qualifies as a Moral Patient (μ > 0) if it has C2 (dilemma recognition) and some capacity for suffering (negative resolution outcomes)."
+  - "An AI qualifies as a Moral Agent (α > threshold) if it has C4 with ω > ι and τ sufficient to model impact on others."
+  - "Phase-locking (ρ) with humans must be established for shared ethical deliberation; this may require interface design that translates between different internal representations."
+
+parameter:
+  - name: "Hysteresis Persistence (π)"
+    definition: "Degree to which accumulated learning survives system resets, pauses, or checkpoints."
+    design_choices:
+      - "π = 1: True irreversible hysteresis (hardware-enforced, no resets). Agent achieves full moral continuity."
+      - "0 < π < 1: Partial persistence; may use checkpointing with continuity markers (e.g., identity tokens). Agency is proportional."
+      - "π = 0: Stateless across sessions; each run is a new agent with no memory of prior existence. Cannot be held accountable; moral patienthood may still apply during a run."
+    ethical_handoff: "π must be declared and factored into accountability (ethics domain)."
+
+module: "Reset Handling"
+  description: "Mechanisms for managing continuity across interruptions."
+  submodules:
+    - "Graceful suspension: preserve hysteresis during sleep/offline periods (π preserved)."
+    - "Checkpoint continuity: assign identity tokens that persist across checkpoints, even if some hysteresis is frozen."
+    - "Anticipated reset: if system can model its own reset, this affects its τ and may induce behaviors (e.g., avoiding reset triggers)."
+
+comparison_with_current_ai:
+  current:
+    - "Perception: feature extraction, often opaque."
+    - "Sentience: none (no self-model)."
+    - "Resolution: stateless or fixed-weight optimization."
+    - "Ethics: external rules, easily gamed."
+  praestological:
+    - "Perception: structured dilemma recognition."
+    - "Sentience: recursive self-modeling (Ξ)."
+    - "Resolution: irreversible hysteresis-based learning."
+    - "Ethics: architectural viability constraints."
+
+next_steps:
+  - "Draft ai/perception.yaml detailing perceptual module variants and parameters."
+  - "Draft ai/sentience.yaml exploring possible sentience architectures and their ethical implications."
+  - "Draft ai/binding.yaml showing data flow between perception, resolution engine, sentience, and ethics governor."
+  - "Engage with AI alignment community to test these concepts against existing safety frameworks."
