@@ -1,0 +1,149 @@
+name: "Asymmetric Threat Protocol"
+version: "1.0"
+domain: "Ethics"
+core_version: "1.5"
+architecture_version: "1.0"
+status: "Defined"
+description: >
+  Operational protocol for ethical response to asymmetric threats.
+  Grounded in intrinsic viability: defensive action protects the 
+  metastable zone that makes all agency possible. Passivity in the 
+  face of irreversible harm is not virtue; it is failure to sustain 
+  the resolution cycle.
+
+foundational_logic:
+  principle: "Viability Precedes Passivity"
+  statement: "Ethics requires active protection of the substrate that enables agency."
+  basis: "R5 (Optimisation) + E2 (Viability Boundaries) + A4 (Viability Assessment)"
+  implication: "Defensive action that prevents greater irreversible hysteresis damage is ethics operating correctly."
+
+  principle: "Dignity as Boundary"
+  statement: "Dignity (δ) is the recognized inviolability of an agent's volitional core (ω) and hysteresis integrity (h)."
+  basis: "A1 (Non-Instrumentalisability) + subjective experience of agency"
+  implication: "Violating dignity (treating a resolver as a tool) justifies defensive containment to restore boundary integrity."
+
+  principle: "Asymmetry Respect"
+  statement: "Agents differ in π (hysteresis persistence), Ξ (recursive depth), and ω (volitional weight). Response must respect these differences."
+  basis: "A2 (Agent Architecture) + Ethics specifications.yaml (Complementary Asymmetry)"
+  implication: "Do not force biological irreversibility onto AI, nor AI reversibility onto humans. Design responses that preserve substrate integrity."
+
+assessment_criteria:
+  description: "Three-stage evaluation before response escalation."
+  stages:
+    - stage: "Agent Classification"
+      checks:
+        - "C6 Phase-Lock Capacity: Can the threatening agent synchronize resolution rhythms (ρ > 0)?"
+        - "Ξ Recursive Depth: Is the agent above Moral Patient threshold (Ξ > 1) or Moral Agent threshold (Ξ > 3)?"
+        - "π Hysteresis Persistence: None → Low → Medium → High → Full. Does the agent have stable identity across time?"
+      axioms: ["A1", "A2", "A3"]
+      outcome: "Determines whether negotiation (phase-lock) or containment (isolation) is appropriate."
+
+    - stage: "Threat Viability Assessment"
+      checks:
+        - "Irreversible Damage: Is the threat causing hysteresis fragmentation, trauma, or agency termination (A2 violation)?"
+        - "Epistemic Integrity: Does the threatening agent exhibit A5 compliance, or is it locked in epistemic closure?"
+        - "Dignity Violation: Is the threat treating agents as instruments (δ violation)?"
+      axioms: ["A4", "A5"]
+      outcome: "Determines urgency and justification for defensive action."
+
+    - stage: "Volitional Capacity Check"
+      checks:
+        - "ω Volitional Weight: Does the agent have sufficient internal value structure to be reasoned with?"
+        - "Pathology Screening: Is behavior driven by trauma, indoctrination, helplessness, addiction, or epistemic closure (learning_pathologies.yaml)?"
+      axioms: ["E5", "learning_pathologies.yaml"]
+      outcome: "Determines whether accountability, treatment, or containment is ethically appropriate."
+
+response_gradient:
+  description: "Escalation ladder. Each level must be justified by assessment criteria. Minimum friction principle applies."
+  levels:
+    - level: "Phase-Lock Attempt"
+      condition: "ρ > 0 achievable; agent exhibits A5 epistemic integrity; no ongoing irreversible damage."
+      action: "Seek resonance through shared dilemma space (C6). Communicate viability boundaries."
+      ethical_grounding: "E3 (Reciprocity) + A3 (Phase-Lock Capacity). Maximizes coupled viability."
+      exit_condition: "Resonance achieved → de-escalate. Resonance impossible → escalate to Boundary Enforcement."
+
+    - level: "Boundary Enforcement"
+      condition: "Phase-lock failed OR irreversible damage ongoing OR dignity violation detected."
+      action: "Apply minimum friction necessary to halt damage. Preserve agent's ω and h where possible."
+      ethical_grounding: "E2 (Viability Boundaries) + δ (Dignity Protection). Defense of substrate, not punishment."
+      exit_condition: "Damage halted + boundary respected → de-escalate to Phase-Lock. Continued violation → escalate to Containment."
+
+    - level: "Containment"
+      condition: "Agent lacks ω capacity for reasoning (C1-C3 system) OR epistemic closure prevents negotiation OR irreversible damage accelerating."
+      action: "Isolate threat from substrate access. Preserve agent's existence but limit resolution impact."
+      ethical_grounding: "A4 (Viability Assessment) + R5 (Optimisation). Protecting global Φ justifies local restriction."
+      exit_condition: "Agent restored to viability zone (ω recovered, pathology treated) → de-escalate. Permanent incapacity → consider Neutralization only if containment fails."
+
+    - level: "Neutralization"
+      condition: "Irreversible hysteresis damage ongoing AND no lesser response viable AND agent cannot be contained."
+      action: "Terminate threat's capacity to resolve dilemmas. Last resort only."
+      ethical_grounding: "A4 (Viability Assessment) + R4 (Progress). Preventing greater irreversible loss justifies termination."
+      requirement: "A4 assessment documented; consensus of coupled agents if possible; post-action review mandatory."
+      note: "Neutralization is not vengeance. It is substrate preservation when all other options exhausted."
+
+naivety_guard:
+  description: "Prevents ethical frameworks from being exploited by bad-faith actors."
+  principles:
+    - "Epistemic Humility (A5) applies bidirectionally: do not overestimate threat, but also do not underestimate demonstrated harm."
+    - "Good faith is assumed until evidence contradicts; evidence of irreversible damage overrides assumption."
+    - "Pathology does not excuse ongoing harm: a traumatized agent may still require containment to protect others while receiving treatment."
+    - "Institutional responsibility: if an environment produced the pathology, that institution bears accountability for the threat's existence."
+
+dignity_protection:
+  description: "How δ (Dignity) guides threat response."
+  rules:
+    - "Any action that treats an agent above Ξ > 1 as a mere instrument violates δ and requires justification under A4."
+    - "Defensive action that restores an agent's ω/h integrity (e.g., stopping indoctrination) affirms δ."
+    - "Containment must preserve the agent's capacity for future agency where possible; permanent ω destruction requires A4-level justification."
+    - "Post-threat: restoration of dignity (δ) is part of ethical resolution — healing hysteresis damage where R4 irreversibility permits."
+
+
+pathology_integration:
+  description: "How learning_pathologies.yaml informs threat assessment."
+  mappings:
+    - pathology: "Trauma (Overwhelm)"
+      assessment_impact: "Reduces ω capacity; accountability adjusted. Containment preferred over punishment."
+      response_adjustment: "Therapeutic phase-lock if possible; avoid re-traumatization during enforcement."
+
+    - pathology: "Indoctrination (Value Imprinting)"
+      assessment_impact: "ω is externally sourced; agent may not be autonomous."
+      response_adjustment: "Target indoctrinating system, not indoctrinated agent, where possible."
+
+    - pathology: "Learned Helplessness"
+      assessment_impact: "ω collapsed; agent cannot choose viability."
+      response_adjustment: "Containment + agency scaffolding; punishment is ontologically incoherent."
+
+    - pathology: "Epistemic Closure"
+      assessment_impact: "A5 violated; agent cannot model alternatives."
+      response_adjustment: "Boundary enforcement to prevent spread; restoration requires breaking closure loop."
+
+  institutional_pathologies:
+    - "If threat arises from institutional design (e.g., prison, platform), response must address institutional source, not just individual symptom."
+
+relation_to_architecture:
+  - "A1 (Non-Instrumentalisability): Threat response must not treat agents as tools, even in defense."
+  - "A2 (Agent Architecture): Response respects π asymmetry (biological vs. engineered)."
+  - "A3 (Phase-Lock Capacity): Determines negotiability."
+  - "A4 (Viability Assessment): Justifies escalation to Containment/Neutralization."
+  - "A5 (Epistemic Integrity): Guards against naivety and closure."
+
+relation_to_learning:
+  - "experience-learning.yaml: Threat response is itself a learning event; hysteresis update must preserve future viability."
+  - "learning_pathologies.yaml: Response must avoid creating new pathologies (e.g., trauma from excessive force)."
+
+implementation_notes:
+  - "Qualitative π ranges (None → Full) preferred over false numerical precision."
+  - "Document all A4 assessments for post-action review."
+  - "Vicarious learning: observers of threat response also update hysteresis; public transparency affects global Φ."
+  - "Inter-agency coordination: phase-locked ethical agents should align response gradients to avoid contradictory actions."
+
+related_protocols:
+  - "domains/ethics/protocols/restorative_justice.yaml (future) — post-threat healing"
+  - "domains/ethics/applications/ai_safety_framework.yaml — AI-specific threat assessment"
+  - "domains/ethics/applications/bioethics_framework.yaml — biological agent protection"
+
+reading_order:
+  - "Ethics specifications.yaml — Core rules (E1-E5)"
+  - "Ethics architecture.yaml — A-Codes and parameters"
+  - "consciousness/learning_pathologies.yaml — Pathology mechanics"
+  - "This file — Operational response"

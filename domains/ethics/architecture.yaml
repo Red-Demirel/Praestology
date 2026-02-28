@@ -1,0 +1,109 @@
+name: "Ethics Architecture"
+version: "1.0"
+domain: "Ethics"
+core_version: "1.5"
+status: "Defined"
+description: >
+  Defines the structural axioms (A-Codes) and assessment parameters 
+  required for implementing Ethical Protocols and Guidelines. 
+  This architecture ensures consistency across applications (AI, Bioethics, 
+  Institutional Design) without hardcoding specific rules into the Core.
+  This architecture translates Praestology's Core Rules into ethical decision parameters, ensuring safety emerges from viability rather than external imposition."
+
+
+architectural_axioms:
+  - code: "A1"
+    name: "Non-Instrumentalisability"
+    definition: "Agents above the Moral Patient threshold (C2) cannot be treated solely as means to an end."
+    ontological_basis: "R1 (Existence) + R2 (Structure) + domain-map.yaml"
+    application: "Determines minimum protection status. Violating A1 degrades the substrate."
+    threshold: "Ξ > 1 (Minimal capacity for suffering/imposition)."
+
+  - code: "A2"
+    name: "Agent Architecture (Substrate Constraint)"
+    definition: "The physical/logical substrate determines hysteresis persistence (π)."
+    ontological_basis: "R4 (Progress) + experience-learning.yaml (Biological Constraint)"
+    application: "Distinguishes Biological (π = Full, Irreversible) from Engineered (π = Variable, Reversible)."
+    implication: "Ethical treatment must respect asymmetry. Do not force biological irreversibility onto AI, nor AI reversibility onto humans."
+    hysteresis_range: "None → Low → Medium → High → Full (Qualitative)"
+
+  - code: "A3"
+    name: "Phase-Lock Capacity"
+    definition: "The ability to synchronize resolution rhythms with other agents (ρ)."
+    ontological_basis: "Consciousness specifications.yaml (C6)"
+    application: "Determines capacity for collective ethics, empathy, and shared responsibility."
+    threshold: "ρ > 0 (Capacity for shared dilemma space)."
+
+  - code: "A4"
+    name: "Viability Assessment"
+    definition: "The threshold for determining whether an action threatens the resolution substrate."
+    ontological_basis: "R5 (Optimisation) + Ethics specifications.yaml (E2)"
+    application: "Used in Threat Protocols to justify containment or neutralization."
+    criterion: "Does the action cause irreversible hysteresis damage (A2) or terminate agency?"
+
+  - code: "A5"
+    name: "Epistemic Integrity"
+    definition: "The capacity for accurate model updating without closure or distortion."
+    ontological_basis: "learning_pathologies.yaml (Epistemic Closure)"
+    application: "Used to assess accountability and threat reliability."
+    violation: "Epistemic Closure (Certainty Lock) reduces moral imagination and increases risk."
+
+protocol_structure:
+  description: "All Ethics Protocols must follow this assessment logic."
+  required_steps:
+    - step: "Agent Assessment"
+      checks: ["Ξ (Recursive Depth)", "π (Hysteresis Persistence)", "ω (Volitional Weight)"]
+      axioms: ["A1", "A2"]
+    - step: "Threat/Viability Assessment"
+      checks: ["Irreversible Damage?", "Phase-Lock Possible?", "Epistemic Integrity?"]
+      axioms: ["A4", "A5"]
+    - step: "Response Gradient"
+      checks: ["Minimum Friction", "Containment", "Neutralization (Last Resort)"]
+      axioms: ["E2", "E3"]
+    - step: "Accountability Assignment"
+      checks: ["Individual ω", "Institutional h_int", "Pathology Adjustments"]
+      axioms: ["E5"]
+
+guideline_generation_framework:
+  description: "How to generate specific ethical guidelines using this architecture."
+  principle: "Guidelines are instantiations of Architectural Axioms for specific contexts."
+  template:
+    - context: "e.g., AI Development, Healthcare, Education"
+    - applicable_axioms: "Select relevant A-Codes (e.g., AI requires A2, A4; Healthcare requires A1, A2)"
+    - viability_constraint: "Define what 'substrate protection' means in this context."
+    - asymmetry_check: "Define how substrate differences (π) are respected."
+    - enforcement: "Define intrinsic safety mechanisms (not imposed rules)."
+  example_application:
+    - name: "Intrinsic AI Safety Guideline"
+      axioms: ["A2 (π declaration)", "A4 (Viability Monitoring)", "E3 (Phase-Lock)"]
+      rule: "AI systems must declare π value. Systems with π < 0.5 cannot hold long-term accountability."
+    - name: "Educational Ethics Guideline"
+      axioms: ["A2 (Irreversibility)", "E5 (Institutional Responsibility)", "learning_pathologies.yaml"]
+      rule: "Institutions must protect h_int (Hysteresis Integrity). Indoctrination (ω hijacking) is a violation."
+
+implementation_examples:
+  - file: "protocols/asymmetric_threat.yaml"
+    description: "Operationalizes A4 (Viability) and A5 (Epistemic Integrity) for defense."
+    key_logic: "Defense is ethical when preventing irreversible hysteresis damage (A2)."
+  - file: "applications/ai_safety_framework.yaml"
+    description: "Uses A2 to define AI rights/responsibilities based on π."
+  - file: "applications/bioethics_framework.yaml"
+    description: "Uses A2 to protect biological irreversibility from engineered interference."
+
+relation_to_core:
+  - "All ethical reasoning must preserve the metastable zone - no action that forces void (extinction) or noise (chaos)."
+  - "Architecture translates Core Rules (R1-R5) into assessable parameters."
+  - "Ensures Applications do not contradict Ontology."
+  - "Maintains distinction between Intrinsic Safety (Architecture) and Imposed Rules (External)."
+
+parameters:
+  - name: "Dignity (δ)"
+    definition: "The recognized inviolability of an agent's volitional core (ω) and hysteresis integrity (h)."
+    subjective_experience: "The natural appreciation of agency (without pathological distortion)."
+    ethical_function: "Triggers A1 (Non-Instrumentalisability). Violation justifies defensive containment."
+    relation_to_viablity: "Dignity is how Viability feels from the inside."
+
+notes:
+  - "A-Codes are stable; Guidelines evolve."
+  - "Qualitative ranges (e.g., π) are preferred over false precision."
+  - "Asymmetry (A2) is a feature, not a bug; guidelines must accommodate it."
