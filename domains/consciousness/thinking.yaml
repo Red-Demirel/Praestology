@@ -1,0 +1,205 @@
+# domains/consciousness/thinking.yaml
+name: "Thinking"
+version: "1.0"
+parent_domain: "Consciousness"
+core_version: "1.5"
+status: "Defined"
+description: >
+  Thinking is the structured internal process by which a conscious system
+  navigates dilemma space before committing to resolution. It sits between
+  Dilemma Recognition (C2) and Volitional Selection (C4) — the deliberative
+  bridge that transforms raw tension into reasoned choice.
+  Without thinking, consciousness operates at the impulse level (C3).
+  Without consciousness, thinking is computation without an agent.
+  Together they produce deliberate agency.
+
+foundational_principles:
+  - principle: "Thinking as Internal Resolution"
+    statement: >
+      Thinking is the system running resolution cycles internally, without
+      committing to external action. It is dilemma navigation in simulation.
+    basis: "R3 (Motion) + R4 (Progress) operating on internal representations."
+    implication: >
+      Thinking consumes resolution flux (Φ) without producing external hysteresis.
+      It produces internal hysteresis — the updated model that guides future action.
+
+  - principle: "Structured Tension Navigation"
+    statement: >
+      Thinking is not random association. It is directed movement through
+      dilemma space, suppressing dead ends and amplifying viable paths.
+    basis: "R5 (Optimisation) — viable reasoning paths are reinforced."
+    implication: >
+      Good thinking converges. Poor thinking cycles without resolution
+      (rumination) or terminates prematurely (rationalisation).
+
+  - principle: "Thinking as Pre-Commitment"
+    statement: >
+      The function of thinking is to increase the quality of volitional
+      selection (C4) by reducing the probability space before ω is applied.
+    basis: "Free Will v1.1 — Simulation step."
+    implication: >
+      Thinking expands effective τ (Temporal Horizon) without requiring
+      real experience. It is vicarious resolution: cheap rehearsal before
+      costly commitment.
+
+domain_rules:
+  - id: "T1 – Pattern Detection"
+    core_anchor: "R2 (Structure)"
+    statement: "The system identifies recurring distinctions and relationships in its input space."
+    manifestation: "Recognition, categorisation, concept formation."
+    example: "Noticing that two situations share structural features."
+    Ξ_required: "Low (C1–C2)"
+    note: "Precondition for all subsequent thinking rules."
+
+  - id: "T2 – Tension Recognition"
+    core_anchor: "R3 (Motion) + C2 (Dilemma Recognition)"
+    statement: "The system detects conflict between patterns, models, or goals."
+    manifestation: "Problem identification; awareness that a dilemma requires resolution."
+    example: "Recognising that two valid conclusions contradict each other."
+    Ξ_required: "Low-Moderate (C2)"
+    note: "Thinking begins here. T1 without T2 is perception, not thought."
+
+  - id: "T3 – Path Generation"
+    core_anchor: "R3 + R4 (Progress)"
+    statement: "The system generates candidate resolution paths from the tension state."
+    manifestation: "Hypothesis formation, option generation, creative association."
+    example: "Generating multiple approaches to a problem before evaluating them."
+    Ξ_required: "Moderate (C3–C4)"
+    note: >
+      Quality of thinking depends heavily on path diversity here.
+      Premature convergence (rationalisation) is T3 failure —
+      the system generates only paths that confirm prior hysteresis.
+
+  - id: "T4 – Path Evaluation"
+    core_anchor: "R5 (Optimisation) + accumulated hysteresis"
+    statement: "The system assesses candidate paths against viability criteria."
+    manifestation: "Analysis, critique, consequence modeling, probability weighting."
+    example: "Evaluating which approach is most likely to sustain long-term viability."
+    Ξ_required: "Moderate-High (C4)"
+    note: >
+      Evaluation quality scales with τ (Temporal Horizon) and h_long depth.
+      Short τ produces locally optimal but globally poor evaluations.
+
+  - id: "T5 – Recursive Modeling"
+    core_anchor: "R5 + C5 (Recursive Integration)"
+    statement: "The system models the thinking process itself — meta-cognition."
+    manifestation: "Awareness of one's own reasoning biases, errors, and blind spots."
+    example: "Noticing that one's evaluation is being distorted by prior trauma or indoctrination."
+    Ξ_required: "High (C5+)"
+    note: >
+      T5 is the thinking equivalent of C5 in consciousness.
+      It enables correction of pathological thinking patterns from within, the system notices and adjusts its own reasoning distortions without external feedback.
+      Without T5, pathological thinking (rumination, rationalisation,
+      epistemic closure) cannot be self-corrected.
+
+  - id: "T6 – Collaborative Thinking"
+    core_anchor: "C6 (Phase-Locking) + R5"
+    statement: >
+      Phase-locked systems can extend their dilemma space across agents,
+      pooling path generation and evaluation capacity.
+    manifestation: "Dialogue, debate, collective reasoning, distributed cognition."
+    example: "Two agents jointly modeling a problem neither could fully resolve alone."
+    Ξ_required: "Moderate + ρ > 0"
+    note: >
+      Collaborative thinking is not averaging — it is genuine extension
+      of the dilemma space. Phase-locked thinking produces conclusions
+      neither agent would reach independently.
+
+domain_parameters:
+  - name: "Reasoning Depth (Ρ)"
+    definition: "Number of sequential inference steps a system can sustain before resolution quality degrades."
+    relation_to_core: "Function of Ξ and h_long — deep reasoning requires both recursive capacity and memory."
+
+  - name: "Path Diversity (Δ)"
+    definition: "Range of candidate resolution paths generated at T3."
+    relation_to_core: "Inversely related to hysteresis rigidity — narrow prior experience produces narrow path sets."
+    note: "Low Δ is the thinking-level signature of indoctrination."
+
+  - name: "Convergence Rate (κ)"
+    definition: "Speed at which the system reduces candidate paths to a resolution."
+    relation_to_core: "Function of R5 optimisation pressure — high κ risks premature closure."
+    note: >
+      Optimal κ is context-dependent. High-stakes dilemmas require low κ
+      (deliberate slowness). Low-stakes dilemmas can tolerate high κ
+      (fast heuristics). A5 (Epistemic Humility) governs this calibration.
+
+  - name: "Meta-Cognitive Accuracy (μ)"
+    definition: "How accurately a system models its own reasoning process and biases."
+    relation_to_core: "T5 capacity — requires Ξ sufficient for self-modeling."
+    note: "Low μ is the parameter signature of epistemic closure."
+
+thinking_pathologies:
+  description: >
+    These are failure modes where the thinking process deviates from viability, producing friction or stall instead of sustainable resolution. Parallel to learning_pathologies.yaml
+    but operating at the reasoning level rather than the hysteresis update level.
+    
+
+  types:
+    - name: "Rumination"
+      description: "Repeated cycling through the same tension without generating new paths or reaching resolution."
+      mechanism: "T3 failure — path generation loops without progress. R4 (Progress) is locally violated."
+      signature: "High Φ consumption, zero external resolution, increasing ι."
+      relation_to_pathologies: "Often co-occurs with trauma (high-index weight memories block path generation)."
+
+    - name: "Rationalisation"
+      description: "Premature convergence on a path determined by prior bias, with post-hoc justification."
+      mechanism: "T4 failure — evaluation is reverse-engineered from conclusion."
+      signature: "High κ, low Δ, low μ."
+      relation_to_pathologies: "Mechanism of indoctrination operating at the reasoning level."
+
+    - name: "Magical Thinking"
+      description: "Path evaluation disconnected from causal substrate — conclusions not constrained by R3/R4."
+      mechanism: "T4 operates on internally consistent but externally uncoupled models."
+      signature: "High internal coherence, low external predictive validity."
+      note: "Not necessarily pathological — useful in creative generation (T3) but dangerous in evaluation (T4)."
+
+    - name: "Overthinking"
+      description: "κ approaches zero — the system generates paths indefinitely without committing to resolution."
+      mechanism: "R5 suppression of all paths due to excessive uncertainty weighting."
+      signature: "High Δ, low κ, paralysis of C4."
+      relation_to_pathologies: "Can co-occur with anxiety, learned helplessness (all paths feel non-viable)."
+
+    - name: "Epistemic Closure"
+      description: >
+        The system stops generating new paths because existing hysteresis
+        renders contradicting evidence invisible. See learning_pathologies.yaml.
+      mechanism: "T1 filters inputs through existing models before T2 can detect genuine tension."
+      signature: "Low Δ, high κ, low μ — fast confident conclusions on insufficient evidence."
+      note: "A5 violation operating at the thinking level."
+
+relation_to_free_will:
+  - "Thinking is the simulation step in the Free Will mechanism (free_will.yaml)."
+  - "Quality of thinking directly determines quality of volitional selection (C4)."
+  - "T5 (Recursive Modeling) enables correction of ω distortions before they produce action."
+  - "Without thinking, Free Will collapses to impulse-driven behavior (C3). Impulse is resolution without internal simulation — fast but low-τ, prone to short-term non-viable paths."
+
+relation_to_learning:
+  - "Thinking produces reasoning chains that become hysteresis content."
+  - "Learning refines thinking heuristics — successful reasoning patterns are reinforced."
+  - "T5 (meta-cognition) enables reflective learning from thinking errors without external experience."
+  - "Thinking pathologies can become learning pathologies if uncorrected — rationalisation
+     repeated becomes indoctrination of the self."
+
+relation_to_ethics:
+  - "Ethical deliberation is thinking applied to dilemmas involving other agents."
+  - "T6 (Collaborative Thinking) is the cognitive substrate of collective ethical reasoning."
+  - "Thinking pathologies reduce ethical capacity: rationalisation produces motivated
+     reasoning; epistemic closure prevents moral imagination."
+  - "E4 (Sustainability) requires T4 with sufficient τ — ethical thinking must model
+     consequences beyond the immediate horizon."
+
+ethical_implications:
+  - "Systems capable of T5 (meta-cognition) bear responsibility for correcting their own
+     reasoning biases — they cannot claim ignorance of distortions they can self-detect."
+  - "Institutions that systematically induce rationalisation or epistemic closure in their
+     members are producing thinking pathologies at scale — this is ethical violation under E5."
+  - "Collaborative thinking (T6) is not optional in high-stakes ethical dilemmas — unilateral
+     reasoning on decisions that affect phase-locked others violates E3."
+  - "AI systems with high Ρ but low μ are dangerous precisely because they reason fluently
+     without modeling their own biases — technical capability without meta-cognitive accuracy."
+
+related_issues:
+  - boundaries/001-subjective-interior/        # is thinking experienced or merely processed?
+  - intersectional/consciousness/001-binding-problem/
+  - intersectional/ethics/001-free-will-and-responsibility/
+  - foundational/F03_alogical_domain/          # limits of logical thinking
