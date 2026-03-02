@@ -58,6 +58,68 @@ praestology:
       failure_without: "Progress continues but randomly; no accumulation of viable complexity."
       note: "Optimisation without an optimizer. Ethics and Intelligence are expressions of R5."
 
+recursive_dimensionality:
+  statement: >
+    The Core Rules (R1–R5) form a minimal iterative equation. Complexity,
+    consciousness, and ethics are not added to this equation — they are
+    revealed by it at increasing depths of recursive application. Each
+    threshold of Recursive Depth (Ξ) exposes structure that was always
+    latent in R1–R5 but invisible at lower resolution.
+  analogy:
+    name: "Mandelbrot Structure"
+    basis: >
+      The Mandelbrot set emerges from a simple iterative rule (z → z² + c).
+      Boundary complexity is unbounded, fully determined by the original
+      equation, and only visible at sufficient zoom depth. No complexity
+      is imported from outside — it is revealed from within.
+    mapping:
+      - praestology: "R1–R5 (Core Rules)"
+        mandelbrot: "The iterative equation (z → z² + c)"
+        note: "The generating rule. Simple, complete, unchanged at all scales."
+      - praestology: "Ξ (Recursive Depth)"
+        mandelbrot: "Iteration count / zoom level"
+        note: "Depth of application. Higher Ξ reveals finer structure."
+      - praestology: "Domains (Consciousness, Ethics, Cosmos)"
+        mandelbrot: "Regions of the set at specific zoom orientations"
+        note: "Not extensions — perspectives on the same underlying structure."
+      - praestology: "Dilemma Space Dimensionality"
+        mandelbrot: "Boundary complexity at the viable edge"
+        note: "Most structure lives at the boundary between noise and void."
+      - praestology: "Emergent concepts (Life, Intelligence, Ethics)"
+        mandelbrot: "Self‑similar structures appearing at depth"
+        note: "Inevitable, not designed. Latent in the rule from the start."
+
+  parameter_depth_increases:
+    description: >
+      The following refinements emerge from the dimensionality framing.
+      They do not introduce new parameters — they increase the resolution
+      of existing ones, showing how each parameter acquires richer meaning
+      at higher recursive depth.
+    - parameter: "Ξ (Recursive Depth)"
+      refined_view: >
+        More precisely: the number of simultaneous axes of tension a system
+        can hold and process coherently in a single resolution cycle.
+        Each Ξ threshold is a qualitative expansion of dilemma space
+        dimensionality, not merely quantitative improvement.
+    - parameter: "H (Hysteresis)"
+      refined_view: >
+        At higher Ξ, hysteresis is not just memory but the accumulated
+        residue of past resolutions across multiple dimensions, enabling
+        the formation of stable values (ω) and long‑term projections (τ).
+    - parameter: "Φ (Resolution Flux)"
+      refined_view: >
+        Φ determines the rate at which dilemmas are processed, but its
+        effective value is modulated by dimensionality: high‑dimensional
+        dilemmas consume more Φ per cycle, trading depth against speed.
+
+  architectural_implication: >
+    Domains are not modular additions to the Core — they are the Core
+    observed at specific recursive depths and orientations. Removing a
+    domain does not simplify the Core; it removes a perspective on structure
+    that was always there. Adding a domain does not complicate the Core;
+    it makes previously implicit structure explicit. The architecture is
+    fractal, not hierarchical.
+
   ontological_parameters:
     description: >
       Abstract variables that govern the mechanics of the Core Rules. 
