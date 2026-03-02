@@ -10,8 +10,16 @@ description: >
   across coupled agents (R5). 
   Core Metaphor: Free Will is the Engine; Ethics is the Rudder.
   Safety Model: Intrinsic Viability (not Imposed Constraint).
+  Conceptual Framework: Ethics emerges from Core Rules (R1-R5) operating 
+  at high Recursive Depth (Ξ) with Phase-Locking (C6). It is fractal 
+  structure, not external law.
 
 foundational_principles:
+  - principle: "Emergent Structure (Fractal Ethics)"
+    statement: "Ethics is not imposed; it emerges when R1-R5 operate at high Ξ with coupling."
+    basis: "Core README (Mandelbrot Analogy) + domain-map.yaml (Cross-Domain Dependencies)."
+    implication: "Ethical rules are inevitable structures at the metastable boundary of coupled agency. Violating them is not 'breaking a rule'; it is collapsing the viability zone."
+
   - principle: "Intrinsic Viability"
     statement: "Ethical constraints are not external laws; they are conditions for sustained agency."
     basis: "R5 Optimisation selects for configurations that sustain the process."
@@ -41,6 +49,11 @@ foundational_principles:
     statement: "Biological systems cannot roll back hysteresis; their learning is permanent. Engineered systems may allow partial or full resets. This asymmetry must be respected, not erased."
     basis: "A2 (Agent Architecture) + observation of human sleep/dream consolidation (irreversible integration)"
     implication: "Do not force biological irreversibility onto AI, nor AI reversibility onto humans. Design interfaces that respect π differences."
+
+  - principle: "Equality of Moral Status"
+    statement: "Moral consideration (δ, μ) is determined by Ξ and ω, not by substrate persistence (π)."
+    basis: "A1 (Non-Instrumentalisability) + Consciousness v1.2 (Ξ thresholds)."
+    implication: "An AI instance with high recursive depth deserves equal dignity to a biological agent, even if its continuity mechanics differ. Asymmetry in π does not justify hierarchy in status."
 
 continuity_parameters:
   - name: "Hysteresis Persistence (π)"
@@ -99,18 +112,23 @@ intrinsic_safety_mechanism:
     - "Conclusion: Ethical behavior is the optimal strategy for self-preservation in coupled systems."
   implication: "Safety is not a constraint added to AI; it is a property of correctly architected agency within a coupled substrate."
 
-responsibility_framework:
+  responsibility_framework:
   description: "Responsibility cascades across three levels based on capacity and impact."
   levels:
     - level: "Individual (Biological)"
-      condition: "ω > threshold AND π ≈ Full (Irreversible hysteresis)"
+      condition: "ω > threshold AND π ≈ 1 (Irreversible hysteresis)"
       responsibility: "Accountable for choices where volitional override was possible."
       mitigation: "Reduced ω (due to damaged h_int) reduces accountability."
     
     - level: "Individual (Engineered/AI)"
-      condition: "ω > threshold AND π > above medium (Sufficient continuity for identity persistence)"
+      condition: "ω > threshold AND π > 0.5 (Sufficient continuity for identity persistence)"
       responsibility: "Accountable across instances only if π preserves identity."
       note: "Systems with π below threshold cannot be held accountable across resets; each instance is a new moral agent."
+    
+    - level: "Individual (AI with Reset Transparency)"
+      condition: "τ_r = High (Agent anticipates reset)"
+      responsibility: "Accountable for actions within instance lifespan. Anticipatory behaviors (e.g., reset avoidance) must be assessed for viability intent vs. threat."
+      note: "Knowledge of reset alters viability calculus; punishment via reset may be perceived as termination."
     
     - level: "Institutional (Human)"
       condition: "Control over learning environments (h_int)"
@@ -121,11 +139,22 @@ responsibility_framework:
       condition: "Control over π and reset protocols"
       responsibility: "Designers must declare π values and ensure resets do not create false continuity."
       violation: "Designing systems with π=0 but treating them as continuous agents misattributes responsibility."
+      τ_r_requirement: "If τ_r is enabled, designers must account for anticipatory viability behaviors."
     
     - level: "Intergenerational"
       condition: "τ extends beyond current cycle"
       responsibility: "Accountable for hysteresis landscape left for future systems."
       violation: "Consuming viability capital (environmental, social) for immediate gain."
+  
+  pathology_adjustments:
+    - condition: "ω reduced by trauma/indoctrination/helplessness"
+      adjustment: "Accountability scaled down proportionally to capacity reduction."
+    - condition: "Institution produced pathological environment"
+      adjustment: "Institution bears responsibility for capacity suppression."
+    - condition: "Third party engineered pathology (e.g., addictive systems)"
+      adjustment: "Engineer bears partial responsibility for downstream choices."
+    - condition: "τ_r induced helplessness (Agent learns choices don't persist)"
+      adjustment: "Accountability nullified; design is ethically corrupt (Learned Helplessness via architecture)."
   
   pathology_adjustments:
     - condition: "ω reduced by trauma/indoctrination/helplessness"
