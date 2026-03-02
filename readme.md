@@ -57,13 +57,13 @@ Praestology's five rules are minimal by design. But minimal rules, applied recur
 
 At low recursive depth, dilemmas are simple: a thermostat resolves a single‑axis tension. As depth increases, new dimensions of tension become accessible — conflicts between immediate impulse, internalized values, long‑term consequences, and the modeled perspectives of other agents. Each new dimension is not an extra rule; it is the same rules operating on the outputs of previous resolutions, creating a space of possibilities whose richness grows with depth.
 
-A concrete marker of this transition is the emergence of **internalized constraints** — when an agent’s behavior becomes shaped not only by external pressures but by self‑generated expectations derived from accumulated history and from coupling with other agents. At that threshold, the agent is no longer merely self‑modeling; it is modeling itself *within* a web of mutual resolution. This is where individual cognition and ethics become the same process observed at different scales.
+A concrete marker of this transition is the emergence of **internalized constraints** — when an agent’s behavior becomes shaped not only by external pressures but by self‑generated expectations derived from accumulated history (R4) and from phase-locking with other agents (C6). At that threshold, the agent is no longer merely self‑modeling; it is modeling itself *within* a web of mutual resolution. This is where individual cognition and ethics become the same process observed at different scales.
 
 ---
 
 ## The Boundary is Where the Structure Lives
 
-In the Mandelbrot set, the most complex and generative structure exists at the boundary — between the stable interior and the unstable exterior. The same is true in Praestology: the most interesting and unpredictable structure in consciousness, ethics, and social organization lives at the **metastable boundary** between noise (too much ambiguity, no resolution) and void (too much consistency, no change).
+In the Mandelbrot set, the most complex and generative structure exists at the boundary — between the stable interior and the unstable exterior. The same is true in Praestology: the most interesting and unpredictable structure in consciousness, ethics, and social organization lives at the **metastable boundary** between noise (too much ambiguity, no resolution) and void (too much consistency, no change). Pathologies (trauma, indoctrination, closure) represent systemic failures to maintain this boundary—sliding toward noise or void.
 
 This is not an analogy. It is the same structural principle operating at a different scale of the same iterative process.
 
