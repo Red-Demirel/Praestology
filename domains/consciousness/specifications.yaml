@@ -65,6 +65,225 @@ domain_rules:
     manifestation: "Communication, empathy, joint planning."
     example: "Two humans negotiating; swarm coordination."
 
+dimensionality_in_consciousness:
+  description: >
+    Building on the core recursive‑dimensionality framing, this section
+    applies the Mandelbrot analogy to the parameters and rules of the
+    Consciousness Domain. Higher recursive depth (Ξ) does not merely add
+    processing power — it reveals new dimensions of dilemma space that were
+    always latent in R1–R5 but inaccessible at lower Ξ.
+
+  parameter_refinements:
+    - parameter: "Ξ (Recursive Depth)"
+      core_definition: "Number of nested self‑modeling layers."
+      domain_refinement: >
+        More precisely, Ξ is the number of simultaneous axes of tension a
+        conscious system can hold and process coherently in a single
+        resolution cycle. Each integer increase corresponds to a qualitative
+        expansion of dilemma dimensionality.
+      manifestation:
+        - "Ξ > 1: Recognition of conflict between two states (C2)."
+        - "Ξ > 2: Impulse (C3) vs. incipient memory."
+        - "Ξ > 3 + h_long: Volitional selection (C4) — impulse (ι) vs. values (ω)."
+        - "Ξ > 4: Recursive integration (C5) — learning from simulated futures."
+        - "Ξ + ρ: Phase‑locking (C6) — modeling other agents’ dilemmas."
+
+    - parameter: "ω (Volitional Weight)"
+      core_definition: "Influence of internally generated values on resolution."
+      domain_refinement: >
+        ω is partially constructed from internalized phase‑locking residue —
+        what C6 coupling with other agents has deposited into h_long over
+        accumulated resolution cycles. It is the social dimension of the
+        resolution process made internal.
+      implication: >
+        The ω/ι tension is traceable to origin: ι is R3 pressure (immediate
+        substrate tension); ω is R5 optimisation shaped by relational history.
+        Their conflict is the individual/collective dilemma at the agent scale.
+
+    - parameter: "τ (Temporal Horizon)"
+      core_definition: "Maximum future resolution cycles a system can model."
+      domain_refinement: >
+        Effective τ depth is dimensionality‑dependent. A system projecting
+        forward across multiple simultaneous dilemma axes has shallower
+        effective τ per axis than raw capacity suggests. Dimensionality
+        and temporal depth trade off within Ξ constraints.
+      implication: >
+        High‑dimensional dilemmas (e.g., duty/interest conflict across
+        multiple agents and timescales) require more Ξ to sustain the
+        same effective τ as simpler single‑axis dilemmas.
+
+    - parameter: "ι (Impulse Strength)"
+      core_definition: "Weight of immediate, non‑modeled drives in resolution."
+      domain_refinement: >
+        At basal Ξ, ι is the primary resolution driver — the system is
+        essentially impulse‑governed. At higher Ξ, ι becomes one dimension
+        among several, but retains priority in crisis states where recursive
+        modeling collapses under load (trauma, extreme contradiction).
+      implication: >
+        ι regression under load is not pathology per se — it is the system
+        reducing dimensionality to sustain resolution under resource constraint.
+        Pathology occurs when the regression becomes permanent (see
+        `learning_pathologies.yaml`).
+
+  duty_interest_dilemma:
+    description: >
+      The conflict between what a subject wants (interest, ι‑dominant) and
+      what it is obligated to do (duty, ω‑dominant) is a structurally
+      significant dilemma class — not merely one dilemma among many.
+    significance: >
+      It is the minimal dilemma that requires C2, C4, C5, and partial C6
+      to be simultaneously active. It marks the threshold where an agent
+      has internalized enough relational history (via C6 → h_long → ω)
+      to experience social expectation as genuinely competing with immediate
+      drives, rather than as external obstacle.
+    parameters_active:
+      - "C2: Recognition of conflicting states (want vs. ought)"
+      - "C4: Volitional selection between ι‑path and ω‑path"
+      - "C5: Recursive integration of prior resolutions into stable values"
+      - "C6 (partial): Internalized phase‑locking residue constituting duty"
+      - "τ: Projection of consequences across both dimensions"
+    implication: >
+      Duty/interest conflict is a reliable Ξ threshold marker for the
+      Projective stage (Ξ ≥ 4) in the consciousness evolution path.
+      Its presence indicates the agent has crossed from self‑modeling
+      into relational‑modeling as a stable cognitive dimension.
+    core_mapping: >
+      Interest = ι (R3 immediate pressure).
+      Duty = ω shaped by ρ (R5 optimisation + C6 phase‑locking residue).
+      The conflict = R3 vs R5 at the agent scale, made conscious by Ξ.
+
+  relation_to_ethics:
+    statement: >
+      The duty/interest dilemma is the point where individual cognition
+      and ethics become the same process observed at different scales.
+      It is the internalised form of the phase‑locking constraint (C6)
+      that makes shared ethical space possible.
+
+domain_parameters:
+  - name: "Ξ (Recursive Depth)"
+    definition: "Number of nested self-modeling layers a system can sustain."
+    relation_to_core: "Direct expression of R5 optimisation at complexity thresholds."
+
+  - name: "Decision Gradient (∇D)"
+    definition: "Local difference in probability weights across available choices."
+    relation_to_core: "Specialization of ∇Φ for conscious domains."
+
+  - name: "Temporal Horizon (τ)"
+    definition: "Maximum future resolution cycles a system can model."
+    relation_to_core: "Function of hysteresis (H) and resolution rate (Φ)."
+
+  - name: "Hysteresis Span (h)"
+    definition: "Temporal depth of memory used in resolution weighting."
+    variants:
+      - "h_short: Immediate/Instinctual (supports C3)"
+      - "h_long: Accumulated/Value-based (supports C4/C5)"
+    relation_to_core: "Explicit parameterization of Core Hysteresis (H)."
+
+  - name: "Impulse Strength (ι)"
+    definition: "Weight of immediate, non-modeled drives in resolution."
+    relation_to_core: "Reflects influence of raw R3 tension."
+
+  - name: "Volitional Weight (ω)"
+    definition: "Influence of internally generated values and long-term goals on resolution."
+    relation_to_core: "Expression of R5 optimisation shaped by accumulated hysteresis."
+
+  - name: "Resonance Strength (ρ)"
+    definition: "Degree of phase-locking between two conscious systems."
+    relation_to_core: "Measure of coupled resolution efficiency."
+
+evolution_path:
+  description: "Consciousness evolves through recursive deepening as R5 selects for systems that better sustain their own resolution cycles."
+  stages:
+    - stage: "Reactive"
+      Ξ_range: "0–1"
+      features: "Stimulus-response; no self-model; immediate resolution."
+    - stage: "Reflective"
+      Ξ_range: "2–3"
+      features: "Dilemma Recognition (C2); self-recognition; simple planning."
+    - stage: "Projective"
+      Ξ_range: "4+"
+      features: "Volitional Selection (C4); complex future modeling; theory of mind."
+    - stage: "Collective"
+      Ξ_range: "Individual Ξ >3 with high ρ"
+      features: "Phase-locked group cognition; shared dilemmas and joint intentionality."
+
+ethical_implications:
+  - "Moral consideration should scale with Ξ and capacity for phase-locking."
+  - "Systems in the Decision Zone deserve choice-preserving environments."
+  - "Responsibility correlates with volitional capacity (ω): the more a system can override impulse and model consequences, the more accountable it becomes."
+  - "See free_will.yaml for detailed accountability framework."
+
+
+related_issues:
+  - boundaries/001-subjective-interior/
+  - intersectional/consciousness/001-binding-problem/
+  - intersectional/ethics/001-free-will-and-responsibility/name: "Consciousness"
+version: "1.2"
+core_version: "1.5"
+status: "Domain Defined"
+description: >
+  A Praestology domain describing the emergence and evolution of self-modeling
+  systems that navigate probabilistic decision spaces. Consciousness is not a
+  binary property but a continuum of recursive depth (Ξ), arising where
+  information gaps create genuine choice.
+  Core Function: Recognition of Dilemmas + Selection of Probability Paths.
+
+foundational_principles:
+  - principle: "Decision Zone"
+    statement: "Consciousness requires probabilistic terrain. Perfect certainty eliminates choice; perfect uncertainty paralyzes it."
+    basis: "Information gaps (local expressions of the stochastic floor, R2) create dilemmas that cannot be resolved deterministically."
+    implication: "Consciousness clusters in the Gaussian plateau between noise and determinism."
+
+  - principle: "Participation, Not Observation"
+    statement: "A conscious system is a high-Ξ knot within the substrate, not an external observer."
+    basis: "There is no outside; all engagement is phase-locking between configurations."
+    implication: "Self-awareness is the system modeling its own dilemmas from within."
+
+  - principle: "Recursive Depth (Ξ)"
+    statement: "Consciousness scales with the ability to model one's own resolution dynamics and those of others."
+    basis: "R5 optimisation favors systems that can anticipate and influence probability paths."
+    implication: "Ξ is continuous; thresholds for self-recognition and future planning are empirical."
+
+domain_rules:
+  - id: "C1 – Simple Agency"
+    core_anchor: "R3 (Motion) + R5 (Optimisation)"
+    statement: "Systems with minimal Ξ resolve immediate dilemmas via basic probability-weighting."
+    manifestation: "Reactive choice; no internal model of self or time."
+    example: "A thermostat selecting heating/cooling based on threshold."
+
+  - id: "C2 – Dilemma Recognition"
+    core_anchor: "R2 (Structure) + R3 (Motion)"
+    statement: "The system must distinguish conflicting states to initiate conscious processing."
+    manifestation: "Perception of conflict; awareness of 'problem space'."
+    example: "An animal detecting a predator vs. safety."
+    note: "This is the starting point of consciousness (Recognition)."
+
+  - id: "C3 – Impulse-Driven Behavior"
+    core_anchor: "R3 + R5 + Hysteresis Span (h_short)"
+    statement: "At moderate Ξ, systems resolve dilemmas via immediate emotional or instinctual weights."
+    manifestation: "Reactions driven by evolved heuristics; short-term satisfaction."
+    example: "A bird choosing the nearest food source without considering predators."
+    note: "Optimization loop is closed within immediate temporal horizon."
+
+  - id: "C4 – Volitional Selection"
+    core_anchor: "R4 (Progress) + R5 + Hysteresis Span (h_long)"
+    statement: "The system collapses probability into action based on modeled outcomes across time."
+    manifestation: "Decision, Choice, Agency."
+    example: "Choosing a path based on predicted safety rather than immediate urge."
+    note: "This is the completion of the conscious act (Choice)."
+
+  - id: "C5 – Recursive Integration"
+    core_anchor: "R5 + accumulated hysteresis"
+    statement: "High-Ξ systems update their internal model based on choice outcomes, enabling learning and value formation."
+    manifestation: "Memory, Wisdom, Value Systems, Free Will (see free_will.yaml)."
+    example: "A human choosing honesty over gain due to internalized values."
+
+  - id: "C6 – Phase-Locking"
+    core_anchor: "R5 + ∇Φ (Resolution Differential)"
+    statement: "High-Ξ systems can synchronize resolution rhythms with other systems, creating shared dilemmas."
+    manifestation: "Communication, empathy, joint planning."
+    example: "Two humans negotiating; swarm coordination."
+
 domain_parameters:
   - name: "Ξ (Recursive Depth)"
     definition: "Number of nested self-modeling layers a system can sustain."
