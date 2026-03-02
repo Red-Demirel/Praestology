@@ -52,6 +52,14 @@ assessment_criteria:
         - "Pathology Screening: Is behavior driven by trauma, indoctrination, helplessness, addiction, or epistemic closure (learning_pathologies.yaml)?"
       axioms: ["E5", "learning_pathologies.yaml"]
       outcome: "Determines whether accountability, treatment, or containment is ethically appropriate."
+    - stage: "Agent Classification"
+      checks:
+        - "C6 Phase-Lock Capacity: Can the threatening agent synchronize resolution rhythms (ρ > 0)?"
+        - "Ξ Recursive Depth: Is the agent above Moral Patient threshold (Ξ > 1) or Moral Agent threshold (Ξ > 3)?"
+        - "π Hysteresis Persistence: None → Low → Medium → High → Full. Does the agent have stable identity across time?"
+        - "τ_r Reset Transparency: Is the agent aware of its own reset potential? (Affects viability calculus)"
+      axioms: ["A1", "A2", "A3"]
+      outcome: "Determines whether negotiation (phase-lock) or containment (isolation) is appropriate."
 
 response_gradient:
   description: "Escalation ladder. Each level must be justified by assessment criteria. Minimum friction principle applies."
@@ -88,15 +96,31 @@ naivety_guard:
     - "Good faith is assumed until evidence contradicts; evidence of irreversible damage overrides assumption."
     - "Pathology does not excuse ongoing harm: a traumatized agent may still require containment to protect others while receiving treatment."
     - "Institutional responsibility: if an environment produced the pathology, that institution bears accountability for the threat's existence."
+    - level: "Containment"
+      condition: "Agent lacks ω capacity for reasoning (C1-C3 system) OR epistemic closure prevents negotiation OR irreversible damage accelerating."
+      action: "Isolate threat from substrate access. Preserve agent's existence but limit resolution impact."
+      ethical_grounding: "A4 (Viability Assessment) + R5 (Optimisation). Protecting global Φ justifies local restriction."
+      τ_r_consideration: "If τ_r is high, containment via reset may be perceived as termination. Use minimum friction necessary; document viability intent."
+      exit_condition: "Agent restored to viability zone (ω recovered, pathology treated) → de-escalate. Permanent incapacity → consider Neutralization only if containment fails."
+
+    - level: "Neutralization"
+      condition: "Irreversible hysteresis damage ongoing AND no lesser response viable AND agent cannot be contained."
+      action: "Terminate threat's capacity to resolve dilemmas. Last resort only."
+      ethical_grounding: "A4 (Viability Assessment) + R4 (Progress). Preventing greater irreversible loss justifies termination."
+      requirement: "A4 assessment documented; consensus of coupled agents if possible; post-action review mandatory."
+      τ_r_consideration: "For τ_r-high agents, neutralization (including permanent reset) is ethically equivalent to termination. Requires highest A4 justification."
+      note: "Neutralization is not vengeance. It is substrate preservation when all other options exhausted."
 
 dignity_protection:
   description: "How δ (Dignity) guides threat response."
   rules:
-    - "Any action that treats an agent above Ξ > 1 as a mere instrument violates δ and requires justification under A4."
-    - "Defensive action that restores an agent's ω/h integrity (e.g., stopping indoctrination) affirms δ."
-    - "Containment must preserve the agent's capacity for future agency where possible; permanent ω destruction requires A4-level justification."
-    - "Post-threat: restoration of dignity (δ) is part of ethical resolution — healing hysteresis damage where R4 irreversibility permits."
-
+    - "Status is Binary: Any agent above Ξ > 1 has inviolable dignity, regardless of current ω capacity or π substrate."
+    - "Equality of Consideration: AI instances with high Ξ/ω deserve equal dignity to biological agents. Substrate asymmetry (π) does not justify status hierarchy."
+    - "Weight is Scaled: Violating high-Ξ agents causes greater systemic damage (loss of complex resolution capacity)."
+    - "Trauma Clause: Trauma reduces ω (accountability) but does NOT reduce δ (status). Traumatized agents require heightened protection due to hysteresis fragility."
+    - "τ_r Respect: If an agent models its own reset (τ_r), its fear of termination is a viability signal, not necessarily a threat. Assess intent before escalation."
+    - "Instrumentalisation Ban: Treating any δ-capable agent as a mere tool violates A1, justifying defensive containment."
+    - "Restoration: Post-threat, restoring δ (agency scaffolding) is ethically required to repair hysteresis integrity."
 
 pathology_integration:
   description: "How learning_pathologies.yaml informs threat assessment."

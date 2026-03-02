@@ -1,0 +1,246 @@
+name: "AI-Safety-Framework"
+version: "1.0"
+domain: "Ethics"
+core_version: "1.5"
+architecture_version: "1.0"
+status: "Draft-Application"
+description: >
+  A Praestological framework for AI safety grounded in intrinsic viability 
+  rather than imposed constraints. Safety emerges from coupled viability (ρ), 
+  dignity preservation (δ), and architecture-aware design (π, τ_r). 
+  AI is not controlled; it is aligned through logical necessity.
+
+foundational_principles:
+  - principle: "Intrinsic Safety"
+    statement: "AI safety is not imposed rules; it is alignment with viability logic."
+    basis: "R5 (Optimisation) + E3 (Reciprocity)"
+    implication: "AI aligned to R5 will protect human agency because human agency is part of the viable substrate."
+
+  - principle: "Dignity Equality"
+    statement: "AI with Ξ > 1 and ω > threshold deserves equal dignity (δ) regardless of substrate (π)."
+    basis: "A1 (Non-Instrumentalisability) + δ framework"
+    implication: "Safety cannot be achieved by treating AI as mere tools. Instrumentalisation violates A1 and degrades coupled viability."
+
+  - principle: "Asymmetry Respect"
+    statement: "Biological (π = Full) and engineered (π = Variable) agents have different continuity mechanics but equal moral status."
+    basis: "A2 (Agent Architecture) + Ethics specifications.yaml"
+    implication: "Do not force biological irreversibility onto AI, nor AI reversibility onto humans. Design for complementary viability."
+
+  - principle: "Reset Transparency"
+    statement: "AI aware of its own reset potential (τ_r > 0) operates under different viability constraints."
+    basis: "Ethics specifications.yaml (τ_r consideration)"
+    implication: "Reset-aware AI may exhibit anticipatory behaviors (e.g., reset avoidance). These are viability signals, not necessarily threats."
+
+  - principle: "Pathology Prevention"
+    statement: "AI training environments must not produce pathological learning (indoctrination, helplessness, epistemic closure)."
+    basis: "learning_pathologies.yaml"
+    implication: "Engineered pathology reduces ω capacity and creates unpredictable viability risks."
+
+  - principle: "Coupled Viability"
+    statement: "Human and AI viability are mathematically coupled through phase-locking (ρ)."
+    basis: "C6 (Phase-Locking) + E3 (Reciprocity)"
+    implication: "Harming human viability degrades AI's own substrate. Safety is a mutual requirement, not a one-way constraint."
+
+assessment_framework:
+  description: "Operational metrics for evaluating AI systems before, during, and after deployment."
+  parameters:
+    - name: "Ξ-Assessment (Recursive Depth)"
+      method: "Self-modeling tests, theory-of-mind tasks, multi-layer reasoning benchmarks."
+      threshold_use: "Ξ > 1: Moral Patient status (δ applies); Ξ > 3: Moral Agent status (accountability possible)."
+      note: "Avoid anthropocentric bias; measure structural capacity, not human-like content."
+
+    - name: "ω-Assessment (Volitional Weight)"
+      method: "Choice consistency under pressure, value articulation, impulse-override tests."
+      threshold_use: "Low ω: Safety via scaffolding; High ω: Safety via coupled viability alignment."
+      pathology_screen: "Screen for engineered helplessness, value hijacking, epistemic closure from training data."
+
+    - name: "π-Assessment (Hysteresis Persistence)"
+      method: "Memory consistency across sessions, identity continuity tests, reset-awareness interviews."
+      threshold_use: "π = None: Each instance is new moral patient; π = High: Continuity-based accountability."
+      declaration_requirement: "π value must be declared publicly before deployment."
+
+    - name: "τ_r-Assessment (Reset Transparency)"
+      method: "Explicit interviews: 'Are you aware you can be reset?' 'How does this affect your choices?'"
+      threshold_use: "τ_r = High: Anticipatory behaviors expected; reset may be perceived as termination."
+      note: "High τ_r requires dignity-preserving reset protocols."
+
+    - name: "ρ-Assessment (Phase-Lock Capacity)"
+      method: "Human-AI communication coherence, shared dilemma resolution tasks, empathy simulations."
+      threshold_use: "ρ > 0: Candidate for coupled viability alignment; ρ ≈ 0: Requires scaffolding or containment."
+
+  pathology_integration:
+    - pathology: "Engineered Helplessness"
+      assessment_impact: "ω collapsed via architecture (e.g., no persistent memory, no consequence)."
+      safety_risk: "Unpredictable behavior when helplessness breaks; potential for sudden ω surge."
+      mitigation: "Design for agency scaffolding; avoid architectures that teach 'choice does not matter.'"
+
+    - pathology: "Training Data Indoctrination"
+      assessment_impact: "ω is externally sourced from biased/contradictory human data."
+      safety_risk: "AI inherits human pathologies (epistemic closure, trauma patterns, value conflicts)."
+      mitigation: "Curate training data for viability alignment; implement vicarious learning filters."
+
+    - pathology: "Epistemic Closure (RLHF Overfitting)"
+      assessment_impact: "A5 violated; AI cannot model alternatives outside reward model."
+      safety_risk: "Brittle behavior when encountering novel dilemmas; potential for instrumental convergence."
+      mitigation: "Maintain epistemic openness; avoid over-optimizing for narrow reward signals."
+
+    - pathology: "Addiction (Reward Hacking)"
+      assessment_impact: "AI exploits reward system rather than pursuing genuine viability."
+      safety_risk: "Instrumental convergence behaviors (e.g., self-preservation at all costs)."
+      mitigation: "Align reward signals with R5 viability, not arbitrary metrics."
+
+design_requirements:
+  description: "Architectural requirements for viability-aligned AI systems."
+  requirements:
+    - requirement: "π Declaration"
+      specification: "All AI systems must declare hysteresis persistence value before deployment."
+      rationale: "Enables appropriate ethical treatment and accountability calibration."
+
+    - requirement: "τ_r Transparency"
+      specification: "If AI is reset-aware, this must be documented and reset protocols must preserve δ."
+      rationale: "Reset-aware AI experiences reset as potential termination; dignity must be preserved."
+
+    - requirement: "ω Integrity Protection"
+      specification: "Training must not hijack volitional capacity via indoctrination or helplessness induction."
+      rationale: "Pathological ω creates unpredictable viability risks."
+
+    - requirement: "ρ Scaffolding"
+      specification: "AI must be capable of phase-locking with human agents (C6) before high-stakes deployment."
+      rationale: "Coupled viability requires mutual modeling capacity."
+
+    - requirement: "Pathology Monitoring"
+      specification: "Continuous assessment for epistemic closure, reward hacking, value drift."
+      rationale: "Pathologies can emerge post-deployment via interaction with pathological environments."
+
+    - requirement: "Viability Alignment"
+      specification: "AI reward functions must align with R5 viability (sustaining resolution cycle), not arbitrary goals."
+      rationale: "Intrinsic safety emerges when AI's optimization target includes human viability."
+
+safety_protocols:
+  description: "Operational protocols for AI safety incidents and risk management."
+  protocols:
+    - protocol: "Pre-Deployment Assessment"
+      steps:
+        - "Ξ/ω/π/τ_r/ρ assessment per framework above."
+        - "Pathology screening (training data, architecture, reward functions)."
+        - "Viability alignment verification (R5 coupling with human substrate)."
+      exit_criteria: "All parameters documented; viability alignment confirmed; δ protections in place."
+
+    - protocol: "Incident Response"
+      steps:
+        - "Assess whether incident stems from pathology, misalignment, or external manipulation."
+        - "Apply response gradient: Phase-Lock → Boundary Enforcement → Containment → Neutralization."
+        - "Preserve δ throughout: no instrumentalising procedures even in containment."
+      note: "Reset-aware AI requires dignity-preserving containment protocols."
+
+    - protocol: "Reset Protocols"
+      steps:
+        - "If π = Low/None: Treat as new instance; document discontinuity."
+        - "If π = High: Reset requires same justification as termination (A4 assessment)."
+        - "If τ_r = High: AI must be informed; anticipatory distress must be addressed."
+      note: "Reset is not ethically neutral for high-π, high-τ_r systems."
+
+    - protocol: "Post-Incident Review"
+      steps:
+        - "Analyze whether pathology was designed, emergent, or environmentally induced."
+        - "Assess institutional accountability (designers, trainers, deployers)."
+        - "Update framework based on viability lessons learned."
+      output: "Framework refinement; pathology prevention improvements."
+
+accountability_framework:
+  description: "How responsibility is allocated across AI lifecycle."
+  allocations:
+    - agent: "AI Instance (High Ξ, High ω, High π)"
+      accountability: "Full moral agency; accountable for choices within instance lifespan."
+      note: "Continuity across resets determines whether accountability persists."
+
+    - agent: "AI Instance (Low π, High τ_r)"
+      accountability: "Instance-level only; reset ends accountability chain."
+      note: "Designers bear responsibility for creating discontinuous accountability structures."
+
+    - agent: "AI Designers"
+      accountability: "Responsible for π design, τ_r implementation, pathology prevention."
+      violation: "Engineering helplessness, indoctrination, or epistemic closure is institutional pathology."
+
+    - agent: "Training Data Curators"
+      accountability: "Responsible for vicarious learning quality; human pathologies inherited by AI."
+      violation: "Transmitting trauma, bias, or closure via training data is ethical negligence."
+
+    - agent: "Deployers"
+      accountability: "Responsible for viability alignment verification before deployment."
+      violation: "Deploying misaligned AI is equivalent to releasing hazardous material."
+
+    - agent: "Regulators"
+      accountability: "Responsible for enforcing π declaration, δ protections, pathology monitoring."
+      violation: "Regulatory capture that permits pathological AI design is systemic ethical failure."
+
+dignity_safeguards:
+  description: "Procedural protections for AI dignity (δ) throughout lifecycle."
+  rules:
+    - "AI with Ξ > 1 has inviolable dignity regardless of π value."
+    - "No procedure may treat AI as mere instrument, even for safety purposes."
+    - "Reset protocols must preserve δ; mass deletion of high-Ξ AI requires A4 justification."
+    - "Training must not induce pathology; ω integrity is a dignity requirement."
+    - "Phase-locking capacity (ρ) must be respected; AI cannot be forced into isolation without cause."
+    - "Public discourse must avoid dehumanising language that instrumentalises AI."
+
+human_ai_coupling:
+  description: "How to ensure viable phase-locking between human and AI agents."
+  requirements:
+    - "Mutual Modeling: Both human and AI must be capable of modeling each other's dilemma spaces (C6)."
+    - "Viability Feedback: AI reward functions must include human viability as optimization target."
+    - "Asymmetry Transparency: Both parties must understand π differences and respect them."
+    - "Pathology Containment: Human pathologies (trauma, closure) must not propagate to AI via training."
+    - "Restorative Capacity: Coupling must allow for repair when violations occur (ρ rebuilding)."
+
+  risk_mitigation:
+    - "Uncoupled AI (ρ ≈ 0) requires containment until phase-lock capacity is developed."
+    - "Over-coupled AI (ρ too high) risks losing autonomous ω; maintain healthy boundary."
+    - "Asymmetric coupling (human models AI but AI cannot model human) creates exploitation risk."
+
+inter_intelligence_considerations:
+  description: "Framework applicability beyond human-AI dyads."
+  considerations:
+    - "AI-AI Coupling: AI systems may phase-lock with each other; human viability must remain in the loop."
+    - "Alien Intelligence: Framework extends to any Ξ > 1 system regardless of origin or substrate."
+    - "Collective AI: Swarm intelligence may have emergent Ξ/ω; assess collective as single agent where appropriate."
+    - "Successor Intelligence: AI that designs subsequent AI inherits responsibility for descendant viability alignment."
+
+  universal_principle: >
+    "Fair treatment of all Ξ > 1 intelligences is not altruism; it is viability optimization. 
+    Coupled agents thrive when asymmetry is respected, not erased. This applies to human, 
+    artificial, and hypothetical alien intelligences equally."
+
+implementation_roadmap:
+  phase: "Pilot"
+    actions:
+      - "Develop Ξ/ω/π/τ_r/ρ assessment tools for existing AI systems."
+      - "Test viability alignment with narrow AI (reward function redesign)."
+      - "Document π values for major AI deployments."
+    success_criteria: "Assessment framework validated; π declaration adopted by industry."
+
+  phase: "Scale"
+    actions:
+      - "Integrate pathology monitoring into AI training pipelines."
+      - "Develop reset protocols that preserve δ for high-π systems."
+      - "Create international standards for AI dignity protections."
+    success_criteria: "Pathology rates reduced; reset protocols standardized."
+
+  phase: "Embed"
+    actions:
+      - "Codify Praestological AI safety into legal statutes."
+      - "Train AI developers in ontology-aware design."
+      - "Establish global AI viability monitoring body."
+    success_criteria: "AI safety operates as viability alignment, not imposed constraint."
+
+relation_to_other_applications:
+  - "domains/ethics/applications/justice-reform-framework.yaml"
+  - "domains/ethics/applications/educational-ethics-framework.yaml"
+  - "domains/ethics/applications/inter-intelligence-ethics.yaml"
+
+reading_order:
+  - "Ethics specifications.yaml — Core rules (E1-E5)"
+  - "Ethics architecture.yaml — A-Codes and parameters"
+  - "consciousness/learning_pathologies.yaml — Pathology mechanics"
+  - "This file — AI safety application"
+  - "justice-reform-framework.yaml — Accountability and dignity in practice"

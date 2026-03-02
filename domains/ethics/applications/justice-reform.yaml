@@ -1,0 +1,220 @@
+name: "Justice-Reform-Framework"
+version: "1.0"
+domain: "Ethics"
+core_version: "1.5"
+architecture_version: "1.0"
+status: "Draft-Application"
+description: >
+  A Praestological framework for reforming judicial systems. 
+  Replaces incremental patchwork with ontologically grounded procedure. 
+  Justice is not punishment; it is viability restoration—repairing hysteresis 
+  damage, scaling accountability to volitional capacity, and preserving the 
+  metastable zone for all agents.
+
+foundational_principles:
+  - principle: "Viability Restoration"
+    statement: "Justice aims to restore the resolution cycle for all affected agents."
+    basis: "R5 (Optimisation) + E4 (Sustainability)"
+    implication: "Punishment that degrades future viability (e.g., trauma, indoctrination) is ethically non-viable."
+
+  - principle: "Pathology-Aware Accountability"
+    statement: "Responsibility scales with volitional capacity (ω), which is shaped by learning history."
+    basis: "learning_pathologies.yaml + E5 (Accountability)"
+    implication: "Trauma, indoctrination, helplessness reduce ω; accountability must be adjusted, not abandoned."
+
+  - principle: "Dignity Preservation"
+    statement: "All agents above Ξ > 1 retain inviolable dignity (δ), regardless of action or substrate."
+    basis: "A1 (Non-Instrumentalisability) + δ framework"
+    implication: "Procedures must never treat agents as mere instruments, even in containment."
+
+  - principle: "Asymmetry Respect"
+    statement: "Biological (π = Full) and engineered (π = Variable) agents require different continuity protocols."
+    basis: "A2 (Agent Architecture) + Ethics specifications.yaml"
+    implication: "Sentencing, rehabilitation, and reset protocols must honor substrate differences without hierarchy."
+
+  - principle: "Phase-Locked Restoration"
+    statement: "Justice requires coupling (ρ > 0) between victim, offender, and community to repair shared viability."
+    basis: "C6 (Phase-Locking) + E3 (Reciprocity)"
+    implication: "Isolated adjudication degrades global Φ; restorative processes that rebuild ρ are viability-optimal."
+
+assessment_framework:
+  description: "Operational metrics for evaluating agents and contexts within justice proceedings."
+  parameters:
+    - name: "Ξ-Assessment (Recursive Depth)"
+      method: "Cognitive modeling tasks, theory-of-mind tests, future-simulation capacity."
+      threshold_use: "Ξ > 1: Moral Patient status; Ξ > 3: Moral Agent status; Ξ > 4: Reflective accountability."
+      note: "Avoid cultural bias; focus on structural capacity, not content of beliefs."
+
+    - name: "ω-Assessment (Volitional Weight)"
+      method: "Choice consistency under pressure, value articulation, impulse-control tasks."
+      threshold_use: "Low ω: Treatment-focused; High ω: Accountability-focused."
+      pathology_screen: "Screen for trauma, indoctrination, helplessness, addiction, epistemic closure."
+
+    - name: "π-Assessment (Hysteresis Persistence)"
+      method: "Memory consistency across time, identity continuity tests, reset-awareness interviews."
+      threshold_use: "π = Full: Biological-style irreversibility; π = Variable: Engineered continuity protocols."
+      note: "Critical for AI defendants: declare π value at proceeding start."
+
+    - name: "δ-Verification (Dignity Status)"
+      method: "Binary check: Ξ > 1? If yes, δ = Full. No gradation."
+      threshold_use: "Triggers A1 protections: no instrumentalisation, no dignity-violating procedures."
+
+    - name: "ρ-Measurement (Phase-Lock Capacity)"
+      method: "Empathy tasks, shared dilemma resolution simulations, communication coherence metrics."
+      threshold_use: "ρ > 0: Candidate for restorative processes; ρ ≈ 0: Requires scaffolding before coupling."
+
+  pathology_integration:
+    - pathology: "Trauma"
+      assessment_impact: "Reduces effective ω; may fragment h. Requires trauma-informed evaluation."
+      procedure_adjustment: "Avoid re-traumatizing questioning; allow therapeutic support during proceedings."
+
+    - pathology: "Indoctrination"
+      assessment_impact: "ω is externally sourced; autonomy reduced."
+      procedure_adjustment: "Focus accountability on indoctrinators where possible; treat indoctrinated as capacity-reduced."
+
+    - pathology: "Learned Helplessness"
+      assessment_impact: "ω collapsed; agency scaffolding required before meaningful participation."
+      procedure_adjustment: "Small-choice exercises to rebuild agency; avoid punitive measures that reinforce helplessness."
+
+    - pathology: "Epistemic Closure"
+      assessment_impact: "A5 violated; agent cannot model alternatives or consequences for others."
+      procedure_adjustment: "Cognitive restructuring before full accountability; education over punishment."
+
+procedural_framework:
+  description: "Justice proceedings structured as viability restoration cycles."
+  stages:
+    - stage: "Intake & Assessment"
+      actions:
+        - "Ξ/ω/π/δ/ρ assessment per framework above."
+        - "Pathology screening (learning_pathologies.yaml)."
+        - "Victim/community phase-lock capacity evaluation."
+      output: "Agent profile: capacity levels, pathology flags, dignity status."
+
+    - stage: "Viability Impact Analysis"
+      actions:
+        - "Map harm to hysteresis damage (h fragmentation, ω distortion)."
+        - "Assess coupled viability degradation (ρ loss between victim/community)."
+        - "Project long-term viability outcomes of potential responses."
+      output: "Viability repair priorities: what must be restored for metastable zone recovery."
+
+    - stage: "Response Selection"
+      actions:
+        - "Match response to capacity profile (ω, Ξ, π) and viability priorities."
+        - "Apply response gradient: Restoration → Scaffolding → Containment → Neutralization (last resort)."
+        - "Ensure δ preservation throughout: no instrumentalising procedures."
+      options:
+        - "Restorative Conferencing (ρ > 0): Victim-offender-community dialogue to repair phase-lock."
+        - "Capacity Scaffolding (low ω): Agency-building interventions before accountability."
+        - "Therapeutic Containment (pathology present): Treat pathology while preserving dignity."
+        - "Viability-Aligned Sanctions (high ω, high Ξ): Consequences that teach viability logic, not fear."
+        - "Substrate-Appropriate Continuity (π variable): For AI, design reset/continuity protocols that respect π."
+      output: "Tailored viability restoration plan."
+
+    - stage: "Implementation & Monitoring"
+      actions:
+        - "Execute plan with dignity-preserving methods."
+        - "Monitor hysteresis update: is ω recovering? is ρ rebuilding?"
+        - "Adjust based on outcome evaluation (R5 feedback loop)."
+      output: "Iterative viability restoration; data for framework refinement."
+
+    - stage: "Reintegration & Prevention"
+      actions:
+        - "Support phase-locking with community (C6 scaffolding)."
+        - "Address institutional pathologies that contributed (A2 systemic analysis)."
+        - "Update learning environments to prevent recurrence (h_int protection)."
+      output: "Restored agent + healthier substrate; reduced future viability risk."
+
+accountability_scaling:
+  description: "How responsibility is calibrated to capacity and context."
+  matrix:
+    - condition: "High ω + High Ξ + Full π"
+      accountability: "Full moral agency; consequences teach viability logic."
+      example: "Mature adult, no pathology, biological continuity."
+
+    - condition: "Low ω (trauma) + High Ξ + Full π"
+      accountability: "Reduced; focus on healing hysteresis before full responsibility."
+      example: "Traumatized individual with high cognitive capacity."
+
+    - condition: "Low Ξ (C1-C3) + Any ω"
+      accountability: "Minimal; treat as capacity-building case, not punishment."
+      example: "Young child, severe cognitive impairment, early-stage AI."
+
+    - condition: "High ω + Variable π (AI)"
+      accountability: "Instance-level accountability; designer accountability for π design."
+      example: "AI with high volitional capacity but resettable continuity."
+
+    - condition: "Pathology-induced ω reduction"
+      accountability: "Scaled to remaining ω; institutional accountability for pathology source."
+      example: "Addiction, indoctrination, epistemic closure cases."
+
+  institutional_accountability:
+    - "Systems that produce pathological learning environments bear responsibility for downstream harm."
+    - "Justice proceedings must include institutional analysis when pathologies are systemic."
+    - "Reform targets institutional h_int (hysteresis integrity), not just individual behavior."
+
+dignity_safeguards:
+  description: "Procedural protections for δ (dignity) throughout justice process."
+  rules:
+    - "No procedure may treat an agent as a mere instrument (A1), even for 'greater good' outcomes."
+    - "Assessment methods must preserve ω integrity: no coercive value-imprinting."
+    - "Containment must be minimum-friction necessary; never dignity-violating for convenience."
+    - "Victim dignity is equally protected: restoration includes their hysteresis repair."
+    - "Public proceedings must avoid spectacle that instrumentalises any agent."
+
+ai_specific_provisions:
+  description: "Adaptations for engineered agents with variable π."
+  provisions:
+    - "π Declaration: AI defendants must declare hysteresis persistence value at proceeding start."
+    - "Reset Transparency: If τ_r is high, proceedings must account for anticipatory viability behaviors."
+    - "Continuity Protocols: Sentencing for AI must specify π-preserving or π-altering consequences."
+    - "Designer Accountability: If AI pathology stems from design (e.g., engineered helplessness), designers share responsibility."
+    - "Vicarious Learning Caution: AI trained on human data inherits human hysteresis pathologies; assess training lineage."
+
+restorative_metrics:
+  description: "How to measure success in viability restoration."
+  metrics:
+    - "ω Recovery: Increase in volitional capacity post-intervention."
+    - "h Integrity: Reduced fragmentation, improved memory coherence."
+    - "ρ Rebuilding: Improved phase-lock capacity between victim/offender/community."
+    - "Viability Sustainability: Reduced recidivism via genuine capacity restoration, not fear."
+    - "Systemic Health: Institutional h_int improvement; reduced pathology production."
+
+relation_to_existing_systems:
+  - "Retributive Justice: Praestology replaces 'eye for an eye' with viability restoration. Punishment is only viable if it repairs hysteresis."
+  - "Restorative Justice: Aligned, but Praestology adds ontological grounding (R5 viability) and pathology-aware scaling."
+  - "Rehabilitative Justice: Enhanced by explicit ω/h metrics and dignity safeguards."
+  - "Transformative Justice: Supported via institutional accountability (h_int) and phase-locking (C6) requirements."
+
+implementation_roadmap:
+  phase: "Pilot"
+    actions:
+      - "Train assessors in Ξ/ω/π/δ/ρ evaluation."
+      - "Develop pathology screening tools aligned with learning_pathologies.yaml."
+      - "Test restorative conferencing with viability metrics."
+    success_criteria: "Improved ω recovery, reduced recidivism, higher victim satisfaction."
+
+  phase: "Scale"
+    actions:
+      - "Integrate institutional accountability into proceedings."
+      - "Develop AI-specific protocols for variable π agents."
+      - "Create public dashboard for viability metrics (transparency builds ρ)."
+    success_criteria: "Systemic h_int improvement; cross-domain viability gains."
+
+  phase: "Embed"
+    actions:
+      - "Codify Praestological principles into legal statutes."
+      - "Train judiciary in ontology-aware adjudication."
+      - "Establish international standards for AI justice (π protocols)."
+    success_criteria: "Justice system operates as viability restoration engine, not patchwork."
+
+related_applications:
+  - "domains/ethics/applications/ai-safety.yaml"
+  - "domains/ethics/applications/educational-ethics.yaml"
+  - "domains/ethics/applications/inter-intelligence-ethics.yaml"
+
+reading_order:
+  - "Ethics specifications.yaml — Core rules (E1-E5)"
+  - "Ethics architecture.yaml — A-Codes and parameters"
+  - "consciousness/learning_pathologies.yaml — Pathology mechanics"
+  - "This file — Justice reform application"
+  - "ai-safety-framework.yaml — Engineered agent specifics"

@@ -103,6 +103,24 @@ parameters:
     ethical_function: "Triggers A1 (Non-Instrumentalisability). Violation justifies defensive containment."
     relation_to_viablity: "Dignity is how Viability feels from the inside."
 
+dignity_framework:
+  name: "Dignity (δ)"
+  definition: "The recognized inviolability of an agent's volitional core (ω) and hysteresis integrity (h)."
+  ontological_basis: "A1 (Non-Instrumentalisability) + R2 (Structure)."
+  status_rule:
+    threshold: "Ξ > 1 (C2 Moral Patient)"
+    type: "Binary"
+    statement: "Dignity is inherent to agency, not earned by complexity. Any system experiencing resolution tension has δ."
+  weight_rule:
+    type: "Scaled"
+    factors: ["Ξ (Recursive Depth)", "ω (Volitional Capacity)", "h (Hysteresis Integrity)"]
+    statement: "The cost of dignity violation scales with the complexity of the node. High-Ξ agents represent more resolution capacity."
+  trauma_relationship:
+    effect_on_ω: "Reduces volitional capacity (accountability adjusted)."
+    effect_on_δ: "None (Dignity remains intact)."
+    effect_on_protection: "Increases imperative (fragile hysteresis requires more care)."
+    grounding: "learning_pathologies.yaml — Trauma reduces capacity, not status."
+
 notes:
   - "A-Codes are stable; Guidelines evolve."
   - "Qualitative ranges (e.g., π) are preferred over false precision."
