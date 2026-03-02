@@ -10,6 +10,24 @@ The Consciousness domain describes how self-modeling systems emerge from the cor
 
 **Core Function:** Recognition of Dilemmas + Selection of Probability Paths
 
+## Recursive Depth and the Mandelbrot Analogy
+
+As explained in the core README, minimal rules (R1–R5) generate unbounded complexity through recursive iteration—just as the Mandelbrot set emerges from a single equation. In the consciousness domain, this principle is observed directly through **Recursive Depth (Ξ)** .
+
+At low Ξ, dilemmas are simple: a thermostat (C1) resolves a single-axis tension. As Ξ increases, new dimensions of tension become accessible:
+
+- **Ξ > 1** enables Dilemma Recognition (C2): the agent perceives conflicting states.
+- **Ξ > 2** introduces impulse (C3) and the beginnings of memory.
+- **Ξ > 3** with accumulated hysteresis (h_long) allows Volitional Selection (C4): the agent weighs immediate drive (ι) against internalized values (ω).
+- **Ξ > 4** supports Recursive Integration (C5): the agent refines values based on outcomes and simulates futures.
+- **Ξ sufficient + phase-locking (C6)** enables modeling of other agents’ dilemmas, creating shared ethical space.
+
+A concrete marker of dimensional shift is the **duty/interest conflict**—the tension between what the agent *wants* (ι) and what it *ought* to do (ω). This conflict is only possible once the agent has accumulated enough relational history (through C6) to experience social expectation as an internal dimension, not merely an external obstacle.
+
+The **metastable boundary**—between noise (too much ambiguity) and void (too much consistency)—is where consciousness operates. The Decision Zone (where choice matters) is precisely this boundary. Here, recursive depth reveals ever‑richer structure, from simple reactivity to moral agency.
+
+Thus, the consciousness domain is not an addition to the Core; it is what the Core looks like when viewed through sufficient recursive depth. For further detail, see the domain specifications (`specification.yaml`, `free_will.yaml`, `learning.yaml`).
+
 ## Domain Components
 
 | File | Purpose |
@@ -43,6 +61,7 @@ Input (C2) → Evaluation (C3/C4) → Selection (C4) → Update (Learning) → (
 - **Free Will:** Integrated at C4; provides ω and accountability framework
 - **Learning:** Integrated at Update stage; provides hysteresis modification
 - **Ethics:** Handoff via C6 + α threshold; ethics receives agents with ω, τ, ρ
+
 
 ## Pathological Interruptions
 
