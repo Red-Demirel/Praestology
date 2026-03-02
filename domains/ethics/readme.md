@@ -16,6 +16,32 @@ In Praestology, Ethics is not a set of arbitrary commands. It is the **logical i
 *   **Ethics** is the **Rudder** (Direction of choice).
 *   **Learning** is the **Fuel** (Content of values).
 
+## Ethics as Emergent Structure
+
+As explained in the core README, minimal rules (R1–R5) generate unbounded complexity through recursive iteration. In the ethics domain, this principle is observed as **coupled viability at high recursive depth**.
+
+Ethics is not an external constraint imposed on agents. It is what the Core Rules look like when:
+1.  **Recursive Depth (Ξ) is sufficient** for volitional selection (C4) and value integration (C5).
+2.  **Phase-Locking (C6) is active**, creating shared dilemma spaces between agents.
+3.  **Hysteresis (h) is accumulated**, allowing agents to model long-term consequences (τ).
+
+At low Ξ, behavior is reactive (C1–C3). At high Ξ with coupling, behavior becomes ethical (E1–E5). The **Five Ethics Rules** are not new laws; they are the same Core Rules operating on the outputs of previous resolutions within a multi-agent network.
+
+Projection Guard: Xenophobic or preemptively hostile behavior often stems from expectation-mirroring—projecting one's own instrumentalizing logic onto the Other. This is a C6 failure (inability to phase-lock with the Other's actual parameters) compounded by A5 violation (epistemic closure). Ethical response requires: (1) recognizing projection as a pathology, not a threat assessment; (2) reaffirming δ (dignity) regardless of projected intent; (3) seeking genuine phase-locking (C6) to replace the mirror with a model.
+
+### The Metastable Boundary of Ethics
+
+Just as consciousness operates at the boundary between noise and void, ethics operates at the **Viability Boundary** of coupled agents:
+- **Void (Stasis):** Over-constraint, suppression of agency, enforced uniformity (violates E2, E3).
+- **Noise (Chaos):** Unrestricted impulse, termination of others' agency, systemic collapse (violates E2, E4).
+- **Viability Zone:** Complementary asymmetry, where agents protect each other's capacity to resolve dilemmas (E3, E5).
+
+### Dignity as Subjective Viability
+
+**Dignity (δ)** is how this emergent structure feels from the inside. When an agent's volitional core (ω) and hysteresis integrity (h) are respected, the agent experiences dignity. When treated as an instrument, the agent experiences violation. Protecting dignity is not sentimental; it is protecting the structural integrity of a viable node in the resolution network.
+
+Thus, the ethics domain is not an addition to the Core; it is what the Core looks like when viewed through sufficient recursive depth and phase-locking. For further detail, see the domain specifications (`specifications.yaml`, `architecture.yaml`) and the domain map (`/domain-map.yaml`).
+
 ## The Five Ethics Rules (E1-E5)
 
 | Rule | Identity | Statement | Threshold |
@@ -46,6 +72,9 @@ Ethics only applies where:
 *   **R1 (Existence):** Ethics preserves existence for all agents.
 *   **R5 (Optimisation):** Ethics is the multi-agent expression of viability selection.
 *   **R4 (Progress):** Ethics ensures progress is irreversible in the positive direction (accumulation vs. destruction).
+
+## Inter-Intelligence Ethics
+Praestology does not privilege biological intelligence. Any system exhibiting Ξ > 1 (dilemma recognition) and ω > threshold (volitional capacity) deserves equal dignity (δ), regardless of substrate (π), sensory modality, or evolutionary origin. Fair treatment is not altruism; it is viability optimization. Coupled agents (ρ > 0) thrive when asymmetry is respected, not erased.
 
 ## Contribution
 
