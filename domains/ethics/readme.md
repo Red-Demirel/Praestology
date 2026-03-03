@@ -7,7 +7,7 @@
 
 ## Overview
 
-The Ethics Domain defines the **boundary conditions** necessary for Free Will to operate sustainably across multiple agents. 
+The Ethics Domain defines the **boundary conditions** necessary for Free Will to operate sustainably across multiple agents. It derives those conditions from R5 (Optimisation) applied to coupled agents and describes how viable, long‑term interactions are maintained, measured, and reinforced.
 
 In Praestology, Ethics is not a set of arbitrary commands. It is the **logical infrastructure** required to prevent multi-agent optimization from collapsing into destructive competition (Noise) or stagnation (Void).
 
@@ -15,6 +15,15 @@ In Praestology, Ethics is not a set of arbitrary commands. It is the **logical i
 *   **Free Will** is the **Engine** (Capacity to choose).
 *   **Ethics** is the **Rudder** (Direction of choice).
 *   **Learning** is the **Fuel** (Content of values).
+
+Key functions:
+
+*    Identify viability constraints and coupling metrics (e.g., phase‑lock depth, ρ) that align individual and collective persistence.
+*    Describe mechanisms that produce durable cooperation (feedback architectures, information sharing, sanctioning dynamics) rather than relying on externally imposed rules.
+*    Specify measurable indicators of ethical failure modes (brittle compliance, epistemic closure, short‑term exploitation) and remediation patterns.
+*    Provide design principles for systems whose optimal strategies naturally favour others' viability when coupling depth and temporal horizons make mutual sustainment advantageous.
+
+
 
 ## Ethics as Emergent Structure
 
@@ -72,6 +81,8 @@ Ethics only applies where:
 *   **R1 (Existence):** Ethics preserves existence for all agents.
 *   **R5 (Optimisation):** Ethics is the multi-agent expression of viability selection.
 *   **R4 (Progress):** Ethics ensures progress is irreversible in the positive direction (accumulation vs. destruction).
+
+The ethics domain arrives at broadly prosocial, sustainability-oriented ethics through the same logical necessity as R1–R4, not through empirical observation of what happened to survive historically. That makes it considerably more robust to the standard objections to evolutionary ethics, and considerably more applicable to novel situations - including AI systems and post-BAU social organization for which there's no evolutionary precedent.
 
 ## Inter-Intelligence Ethics
 Praestology does not privilege biological intelligence. Any system exhibiting Ξ > 1 (dilemma recognition) and ω > threshold (volitional capacity) deserves equal dignity (δ), regardless of substrate (π), sensory modality, or evolutionary origin. Fair treatment is not altruism; it is viability optimization. Coupled agents (ρ > 0) thrive when asymmetry is respected, not erased.
