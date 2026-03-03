@@ -9,9 +9,17 @@
 
 ## Overview
 
-**Praestology** (from Latin *Praesto*: to stand before, to be present, to perform) is a foundational ontology defining the logical necessity of existence.
+**Praestology** (from Latin praesto: to stand before, to be present, to perform) is a proposed foundational ontology that frames existence as a logically driven, persistent process rather than a static given.
 
-It posits that reality is not a static container, but a **persistent process** driven by logical resolution. Existence is mandatory, perpetual, and self-tuning.
+It resonates with several existing frameworks that emphasize process, openness, and the constructed nature of reality; these affinities reflect convergent lines of thought rather than direct dependence.
+
+    Hilary Lawson — Closure Theory
+    Lawson describes the world as fundamentally open, with humans creating "closure" through concepts and language. Praestology gently complements this by suggesting a minimal logical imperative driving resolution: closures arise because some form of distinction-and-resolution is necessary to avoid stasis. Where Lawson focuses on phenomenology and critique of realism, Praestology attempts to articulate a simple logical mechanism that makes resolution likely and self‑tuning.
+
+    Alfred North Whitehead — Process Philosophy
+    Whitehead’s account of becoming and creative advance parallels Praestology’s emphasis on cycles of distinction, tension, resolution, regeneration, and viability. Praestology aims to offer a more compact logical framing and a probabilistic constraint that renders such cycles highly robust, while acknowledging Whitehead’s richer metaphysical apparatus.
+
+Praestology’s core claim is conservative in scope: rather than asserting novel empirical facts, it offers a schematic explanation for why a dynamic, self‑correcting process of existence is intelligible. It aims to clarify, not displace, the insights of Lawson, Whitehead, and others.
 
 ## The Axiom
 
@@ -33,6 +41,18 @@ Praestology defines five dependent rules. Each rule is the **minimal rescue** of
 | **R5** | **Optimisation** | The system self-selects toward configurations that sustain the process. | Prevents **Noise** (Directionless Chaos). |
 
 **The Chain:** `Existence → Structure → Motion → Progress → Optimisation`
+
+On the Nature of This Formalism
+
+Praestology uses machine-readable specifications, parameter hierarchies, and version-controlled ontology as its medium. This is a deliberate choice — it makes the framework compatible with both human reasoning and computational systems, and allows precise cross-domain consistency checking that prose alone cannot provide.
+
+It is not a reductionist claim.
+
+The formalism is a coordination and communication tool. It does not assert that consciousness, ethics, or experience can be fully captured in YAML, that the parameters exhaust what they describe, or that the map is the territory. Several boundaries are held explicitly open — most importantly, the subjective interior: what it is like to be a conscious agent navigating a resolution process remains unresolved, and is treated as a first-class open problem rather than a detail to be filled in later.
+
+Where the framework uses precise parameters (Ξ, ω, τ, π), these are perspectives on a process — useful because they are consistent and derivable from the core rules, not because they are complete. A map of sufficient resolution is useful for navigation without being the territory it describes.
+
+This distinction matters: Praestology is not claiming to have solved consciousness, ethics, or existence. It is claiming that R1–R5 provide a parsimonious generative basis from which those domains can be approached coherently, compared across substrates, and developed without contradiction. The rest is open — deliberately, and by design.
 
 ## Key Concepts
 
