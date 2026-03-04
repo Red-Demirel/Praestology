@@ -13,11 +13,13 @@
 
 It resonates with several existing frameworks that emphasize process, openness, and the constructed nature of reality; these affinities reflect convergent lines of thought rather than direct dependence.
 
-    Hilary Lawson — Closure Theory
-    Lawson describes the world as fundamentally open, with humans creating "closure" through concepts and language. Praestology gently complements this by suggesting a minimal logical imperative driving resolution: closures arise because some form of distinction-and-resolution is necessary to avoid stasis. Where Lawson focuses on phenomenology and critique of realism, Praestology attempts to articulate a simple logical mechanism that makes resolution likely and self‑tuning.
+**Hilary Lawson — Closure Theory**
 
-    Alfred North Whitehead — Process Philosophy
-    Whitehead’s account of becoming and creative advance parallels Praestology’s emphasis on cycles of distinction, tension, resolution, regeneration, and viability. Praestology aims to offer a more compact logical framing and a probabilistic constraint that renders such cycles highly robust, while acknowledging Whitehead’s richer metaphysical apparatus.
+Lawson describes the world as fundamentally open, with humans creating "closure" through concepts and language. Praestology gently complements this by suggesting a minimal logical imperative driving resolution: closures arise because some form of distinction-and-resolution is necessary to avoid stasis. Where Lawson focuses on phenomenology and critique of realism, Praestology attempts to articulate a simple logical mechanism that makes resolution likely and self‑tuning.
+
+**Alfred North Whitehead — Process Philosophy**
+
+Whitehead’s account of becoming and creative advance parallels Praestology’s emphasis on cycles of distinction, tension, resolution, regeneration, and viability. Praestology aims to offer a more compact logical framing and a probabilistic constraint that renders such cycles highly robust, while acknowledging Whitehead’s richer metaphysical apparatus.
 
 Praestology’s core claim is conservative in scope: rather than asserting novel empirical facts, it offers a schematic explanation for why a dynamic, self‑correcting process of existence is intelligible. It aims to clarify, not displace, the insights of Lawson, Whitehead, and others.
 
