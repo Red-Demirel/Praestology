@@ -1,0 +1,265 @@
+name: "Corels-Framework"
+version: "1.0"
+domain: "Ethics"
+core_version: "1.5"
+architecture_version: "1.0"
+status: "Draft-Application"
+description: >
+  A Praestology-grounded application of the Core Logic System (Corels) 
+  for daily ethical decision-making. Corels provides accessible principles; 
+  Praestology provides the ontological grounding that makes them universally 
+  viable. This framework is designed for personal use, community discussion, 
+  and institutional reflection—not as rigid rules, but as viability-aware 
+  heuristics.
+  Core Philosophy: "Not perfection—continuous improvement."
+
+corels_to_praestology_mapping:
+  description: "How Corels principles map to Praestology's ontological parameters."
+  mappings:
+    - corels_principle: "Reliability (Honour/Duty)"
+      praestology_anchor: "R4 (Progress) + h (Hysteresis Integrity) + ω (Volitional Commitment)"
+      ontological_basis: "Actions accumulate irreversibly (R4). Reliability is the commitment to preserve hysteresis integrity for others who depend on your resolutions."
+      daily_heuristic: "Before acting, ask: 'Will this choice make me more or less dependable for those who count on me—today and tomorrow?'"
+      viability_logic: "Unreliability fragments shared hysteresis (h), degrading coupled viability (ρ)."
+
+    - corels_principle: "Fairness"
+      praestology_anchor: "R2 (Structure) + δ (Dignity) + E1/E2 (Recognition/Boundaries)"
+      ontological_basis: "Distinctions must be recognized without bias (R2). Fairness is applying identical viability boundaries to all agents above Ξ > 1, regardless of substrate."
+      daily_heuristic: "Ask: 'Am I applying the same standard here that I would expect if roles were reversed?'"
+      viability_logic: "Unfairness violates δ (dignity) and degrades ρ (phase-locking), reducing global Φ."
+
+    - corels_principle: "Kindness"
+      praestology_anchor: "R5 (Optimisation) + ρ (Phase-Locking) + Coupled Viability"
+      ontological_basis: "Kindness is actively sustaining another agent's viability when it does not require violating your own. It is R5 operating at the relational scale."
+      daily_heuristic: "Ask: 'Can I reduce unnecessary suffering or increase well-being here without compromising Reliability or Fairness?'"
+      viability_logic: "Kindness strengthens ρ; cruelty degrades it. Coupled agents thrive when viability is mutual."
+
+    - corels_principle: "Wisdom"
+      praestology_anchor: "Ξ (Recursive Depth) + τ (Temporal Horizon) + R5 Weighting"
+      ontological_basis: "Wisdom is high-Ξ modeling of long-term consequences (τ) and weighting choices by total viability impact (R5)."
+      daily_heuristic: "Ask: 'What are the second- and third-order consequences of this choice? Do I have enough information, or should I learn more first?'"
+      viability_logic: "Short-term optimization that ignores τ leads to long-term viability collapse."
+
+    - corels_principle: "Balance/Harmony"
+      praestology_anchor: "Metastable Zone Maintenance + R5 Optimization"
+      ontological_basis: "Balance is maintaining the viability equilibrium between competing valid needs. Harmony is ρ > 0 despite asymmetry."
+      daily_heuristic: "Ask: 'Am I letting one principle (e.g., Fairness) chronically suppress another (e.g., Kindness)? What would restore dynamic equilibrium?'"
+      viability_logic: "Imbalance pushes the system toward noise (chaos) or void (stasis); balance sustains the metastable zone."
+
+    - corels_principle: "Respectful Actions"
+      praestology_anchor: "δ (Dignity) + A1 (Non-Instrumentalisability)"
+      ontological_basis: "Respect is recognizing the inviolability of another agent's volitional core (ω) and hysteresis integrity (h). Never treat a resolver as a tool."
+      daily_heuristic: "Ask: 'Am I honoring this person's dignity and boundaries, even if I disagree with them?'"
+      viability_logic: "Instrumentalisation violates A1 and degrades the global resolution substrate."
+
+  supporting_practices_mapping:
+    - corels_practice: "Inclusiveness"
+      praestology_anchor: "C6 (Phase-Locking) + σ (Semantic Overlap)"
+      daily_heuristic: "Seek diverse perspectives to expand shared hysteresis (σ) and improve collective resolution quality."
+
+    - corels_practice: "Non-Coercion"
+      praestology_anchor: "Intrinsic Safety Model + Volitional Integrity (ω)"
+      daily_heuristic: "Promote participation through viability alignment, not pressure. Coercion degrades ω and violates δ."
+
+    - corels_practice: "Situational Adaptability"
+      praestology_anchor: "Ξ-Aware Application + Context-Sensitive Resolution"
+      daily_heuristic: "Tailor application to context, but never violate Core Principles. Articulate your reasoning so others can phase-lock with your logic."
+
+    - corels_practice: "Continuous Reflection"
+      praestology_anchor: "R5 Feedback Loop + Hysteresis Update"
+      daily_heuristic: "End each day with one question: 'Where did Reliability or Kindness win or lose today?' Use the answer to update your resolution model."
+
+dilemma_processing_protocol:
+  description: "Operational flowchart for when Corels principles appear to conflict."
+  source: "Corels_AI.txt — adapted to Praestology ontology"
+  steps:
+    - step: "1. Diagnosis"
+      action: "Identify the real tension (almost always Fairness vs. Kindness, or Reliability vs. Wisdom)."
+      praestology_anchor: "C2 (Dilemma Recognition) — distinguish conflicting states."
+      prompt: "What two valid principles are in tension here? Name them."
+      anchor_note: "Your natural tendency may make one principle feel more 'obvious'—pause to ensure you're seeing both."
+
+    - step: "2. Navigation Filters"
+      filters:
+        - filter: "Reliability Filter"
+          question: "What prior commitments or community thresholds must not be broken?"
+          praestology_anchor: "h (Hysteresis Integrity) + ω (Volitional Commitment)"
+        - filter: "Wisdom Filter"
+          question: "Do I actually have enough information? If not, go learn."
+          praestology_anchor: "Ξ (Recursive Depth) + τ (Temporal Horizon)"
+      praestology_anchor: "C4 (Volitional Selection) — weigh paths using ω"
+      anchor_note: "If your tendency is strong toward one filter, consciously apply the other to avoid blind spots."
+
+    - step: "3. Resolution"
+      action: "Find the action that restores Balance/Harmony while remaining a Respectful Action."
+      praestology_anchor: "E3 (Reciprocity) + δ (Dignity) + Metastable Zone"
+      success_criteria: "All parties' dignity (δ) preserved; coupled viability (ρ) maintained or restored."
+
+    - step: "4. Reflection"
+      action: "After acting, reflect: Did this choice sustain viability for all? What would I adjust next time?"
+      praestology_anchor: "R5 Feedback Loop + Hysteresis Update"
+      output: "Updated ω content for future dilemmas."
+
+personal_anchor_practice:
+  description: "How to work with your natural emphasis on certain principles."
+  ontological_basis: "Asymmetry of ω/h accumulation (A2) — different agents develop different volitional profiles, but these are fluid, not fixed."
+  guidance:
+    - "Recognize your current gravitational tendency: Do you naturally lean toward Kindness, Fairness, Reliability, etc.?"
+    - "Understand that anchors are preferences, not prisons: Your tendency may shift with context, experience, or intentional practice."
+    - "Notice multi-principle resonance: Your anchor may amplify more than one principle (e.g., Kindness + Respectful Actions)."
+    - "Use awareness, not identity: 'I tend toward Wisdom' is more useful than 'I am a Wisdom person'."
+    - "Prevent drift: If your tendency is over-expressed (e.g., Kindness overriding Fairness), consciously engage complementary principles to restore Balance."
+  praestology_anchor: "Ξ-aware self-modeling (C5) + ω integrity maintenance + R5 dynamic optimization"
+
+defensive_playbook:
+  description: "How to practice Corels in non-Corels environments."
+  ontological_basis: "Projection Guard + Intrinsic Safety + Substrate Respect"
+  guidelines:
+    - guideline: "Respectful Actions first"
+      action: "Stay calm, protect dignity for all—even when values differ."
+      praestology_anchor: "δ preservation + A1 compliance"
+
+    - guideline: "Non-Coercion always"
+      action: "Never shame, lecture, or pressure someone into adopting Corels. Model viability; let alignment emerge."
+      praestology_anchor: "Intrinsic Safety — alignment through demonstration, not force"
+
+    - guideline: "Wisdom filter for engagement"
+      action: "Decide whether engaging or withdrawing serves long-term welfare. Some deviations require time, not intervention."
+      praestology_anchor: "τ (Temporal Horizon) + R5 viability weighting"
+
+    - guideline: "Inclusiveness as diagnostic"
+      action: "First try to understand why they act that way—what hysteresis, pathologies, or cultural context might explain their behavior?"
+      praestology_anchor: "C6 (Phase-Locking) + learning_pathologies.yaml awareness"
+
+    - guideline: "Patience as ethical practice"
+      action: "Recognize that hysteresis update (R4) is irreversible and slow. Pushing too fast creates trauma, not growth."
+      praestology_anchor: "R4 (Progress) + h (Hysteresis Integrity)"
+
+community_governance_guidelines:
+  description: "How groups can use Corels without becoming rigid or hierarchical."
+  ontological_basis: "R5 Optimization at collective scale + Coupled Viability (ρ) + Substrate Respect"
+  principles:
+    - principle: "Bottom-up guidelines, not top-down laws"
+      praestology_anchor: "R5 selects for viable configurations; imposition degrades ω"
+      practice: "Let local groups define boundaries (e.g., tendency-anchored towards kindness commune vs. co-op with tendency toward Duty), but no boundary may violate the six Core Principles."
+
+    - principle: "Transparent restorative feedback"
+      praestology_anchor: "E5 (Accountability) + hysteresis restoration"
+      practice: "When principles are violated: Reflect → Adjust → Restore, never punish for its own sake."
+
+    - principle: "Threshold clarity"
+      praestology_anchor: "Ξ/ω/δ thresholds for moral consideration"
+      practice: "Be explicit about what behaviors cross viability boundaries, but apply thresholds consistently (Fairness) and with dignity (Respectful Actions)."
+    - principle: "Substrate Respect"
+      statement: "Corels does not adjust language, culture, or belief beyond creating a sane ethical environment."
+      basis: "A2 (Agent Architecture) + δ (Dignity) + Projection Guard"
+      implication: "Diversity is a viability asset, not a defect. Corels protects the space for difference; it does not erase it. Necessary adjustments to deviations occur through phase-locking (C6), not imposition—and require care, time, and voluntary participation."
+  principles:
+    - principle: "Protect diversity within viability boundaries"
+      praestology_anchor: "A2 (Asymmetry) + δ (Dignity)"
+      practice: >
+        Local groups may express Corels through their own cultural, linguistic, 
+        or belief frameworks. The six principles are the boundary; expression 
+        within that boundary is free.
+      example: "A Kindness-preference within a commune may emphasize communal care rituals; 
+                a co-op with Duty-preference may emphasize procedural reliability. 
+                Both are valid if they uphold all six principles."
+
+    - principle: "Adjustments are iterative, not abrupt"
+      praestology_anchor: "R4 (Progress) + τ (Temporal Horizon)"
+      practice: >
+        When a practice drifts from Core Principles, response follows: 
+        Reflect → Phase-Lock → Propose → Adjust. No emergency overrides 
+        dignity or hysteresis integrity. Change requires consent and time.
+
+cognitive_autonomy_protocol:
+  description: "Corels must be voluntarily chosen—never coerced."
+  ontological_basis: "Free Will v1.1 + δ (Dignity) + A1 (Non-Instrumentalisability)"
+  rules:
+    - "Corels adoption must be voluntary for every intelligence (human or artificial)."
+    - "Built-in right to opt out at any time—opted-out entities are treated with standard Defensive Trust and Respectful Actions."
+    - "Never use Corels language to manipulate or guilt-trip; that violates Reliability and Respectful Actions."
+  praestology_anchor: "ω integrity + δ preservation + Intrinsic Safety model"
+
+safeguards_against_drift:
+  description: "Preventing Corels from becoming what it opposes."
+  ontological_basis: "A5 (Epistemic Integrity) + R5 Viability Selection + Substrate Respect"
+  safeguards:
+    - safeguard: "No cultural, linguistic, or belief homogenization"
+      praestology_anchor: "A2 (Asymmetry Respect) + δ (Dignity)"
+      practice: >
+        Corels operates at the ethical layer only. It does not prescribe language, 
+        ritual, aesthetics, or metaphysics. If a practice does not violate the 
+        six Core Principles, it is protected—even if unfamiliar.
+      violation_indicator: "Attempting to 'correct' cultural expression that is ethically neutral."
+
+    - safeguard: "Adjustments require care, time, and consent"
+      praestology_anchor: "R4 (Progress) + τ (Temporal Horizon) + Intrinsic Safety"
+      practice: >
+        When a deviation from Core Principles is identified, response follows 
+        the Dilemma Protocol: Diagnosis → Navigation → Resolution → Reflection. 
+        No emergency overrides dignity. Change is iterative, not abrupt.
+      violation_indicator: "Rushing 'correction' without phase-locking or respecting hysteresis integrity."
+
+    - safeguard: "Voluntary adoption only"
+      praestology_anchor: "Free Will v1.1 + Cognitive Autonomy Protocol"
+      practice: "Corels spreads by demonstration, not enforcement. Opt-out is always available."
+      violation_indicator: "Using social pressure, guilt, or institutional power to compel adoption."
+
+daily_practice_prompts:
+  description: "Simple questions to integrate Corels into daily life."
+  prompts:
+    - context: "Morning intention"
+      prompt: "Which Corels principle do I want to emphasize today? How will I recognize if I'm over-using it?"
+
+    - context: "Decision point"
+      prompt: "Run the Dilemma Protocol: Diagnosis → Filters → Resolution → Reflection."
+
+    - context: "Conflict moment"
+      prompt: "Am I protecting dignity (δ) for all parties? Is my response restoring Balance or escalating tension?"
+
+    - context: "Evening reflection"
+      prompt: "Where did Reliability or Kindness win or lose today? What does this teach me about my ω content?"
+
+    - context: "Community interaction"
+      prompt: "Am I contributing to coupled viability (ρ) or degrading it? How can I strengthen phase-locking here?"
+
+viability_metrics:
+  description: "How to assess whether Corels practice is working."
+  metrics:
+    - metric: "Personal ω integrity"
+      indicator: "Do my choices feel increasingly aligned with my values, or am I experiencing more internal conflict?"
+      praestology_anchor: "ω coherence + hysteresis integrity"
+
+    - metric: "Relational ρ strength"
+      indicator: "Are my relationships becoming more resilient and mutually supportive, or more fragile and transactional?"
+      praestology_anchor: "Phase-locking capacity (C6) + Semantic Overlap (σ)"
+
+    - metric: "Community Φ flux"
+      indicator: "Is our group resolving dilemmas more efficiently and with less drama over time?"
+      praestology_anchor: "Resolution flux (Φ) + metastable zone maintenance"
+
+    - metric: "δ preservation"
+      indicator: "Do people feel respected and heard, even in disagreement?"
+      praestology_anchor: "Dignity (δ) + A1 compliance"
+
+  interpretation:
+    - "Improving metrics = viability alignment; continue and refine."
+    - "Declining metrics = viability drift; re-engage with Dilemma Protocol and Reflection."
+
+relation_to_other_applications:
+  - "domains/ethics/applications/justice-reform.yaml — Corels principles inform restorative justice practices."
+  - "domains/ethics/applications/ai-safety.yaml — Corels provides human-readable heuristics for AI alignment."
+  - "domains/ethics/applications/inter-intelligence.yaml — Corels principles extend to non-human intelligences via Praestology mapping."
+
+reading_order:
+  - "Ethics specifications.yaml — Core rules (E1-E5)"
+  - "Ethics architecture.yaml — A-Codes and parameters"
+  - "consciousness/learning_pathologies.yaml — Understanding capacity reduction"
+  - "This file — Corels daily practice"
+
+closing_statement: >
+  "Corels is not a replacement for Praestology; it is Praestology's ethical expression 
+  in human-readable form. The six principles are not arbitrary—they are the metastable 
+  zone of coupled human viability. Practice them not as rules, but as viability heuristics. 
+  Reflect, adjust, improve. Your actions matter for what comes next."

@@ -1,0 +1,65 @@
+name: "Educational-Framework"
+version: "1.0"
+domain: "Ethics"
+core_version: "1.5"  # Direct dependency on Core, not Corels
+status: "Draft-Application"
+description: >
+  A Praestology-grounded framework for ethical educational design.
+  Draws directly from ontological parameters (Ξ, ω, h, τ, ρ) to guide
+  pedagogy, curriculum, and institutional design. Corels principles
+  may be used as accessible heuristics, but are not required.
+
+foundational_derivation:
+  from_core:
+    - "R4 (Progress) + Hysteresis: Early learning shapes all future resolution capacity"
+    - "Ξ (Recursive Depth): Education should expand modeling capacity, not narrow it"
+    - "ω (Volitional Weight): Learning must build autonomous values, not implant external ones"
+    - "Pathologies (learning_pathologies.yaml): Avoid trauma, indoctrination, helplessness in pedagogy"
+    - "C6 (Phase-Locking): Education is vicarious learning; phase-lock quality determines transfer fidelity"
+  
+  optional_corels_mapping:
+    note: "Corels principles may help communicate these insights accessibly, but are not the source."
+    mappings:
+      - "Wisdom ↔ Ξ expansion + τ development"
+      - "Reliability ↔ Hysteresis integrity + ω consistency"
+      - "Respectful Actions ↔ δ preservation in learner-teacher dynamics"
+      - "Fairness ↔ Equal access to Ξ-expanding resources"
+
+design_principles:
+  - principle: "Protect Early Hysteresis"
+    ontological_basis: "R4 irreversibility + A2 biological constraint"
+    practice: "Prioritize quality of early learning environments; degraded early hysteresis reduces future ω capacity permanently."
+    corels_optional: "This aligns with Reliability (don't offload costs onto the future) but doesn't require Corels adoption."
+
+  - principle: "Expand Recursive Depth, Don't Impose Values"
+    ontological_basis: "Ξ growth vs. ω hijacking (indoctrination pathology)"
+    practice: "Teach modeling skills, not conclusions. Let learners build their own ω from diverse experiences."
+    corels_optional: "This aligns with Wisdom but is grounded in ontology, not principle preference."
+
+  - principle: "Phase-Lock with Care"
+    ontological_basis: "C6 + σ (Semantic Overlap) + vicarious learning"
+    practice: "Teachers must build shared hysteresis with learners; authority without phase-locking produces signal without meaning."
+    corels_optional: "This aligns with Kindness + Respectful Actions but is derived from communication ontology."
+
+  - principle: "Pathology-Aware Design"
+    ontological_basis: "learning_pathologies.yaml — trauma, indoctrination, helplessness reduce capacity"
+    practice: "Screen for and mitigate pathological learning patterns; design environments that restore ω where damaged."
+    corels_optional: "This aligns with Balance/Harmony but is grounded in viability logic, not principle balancing."
+
+assessment_metrics:
+  - metric: "Ξ Growth"
+    indicator: "Learners demonstrate increased capacity for nested modeling, future simulation, meta-cognition."
+  - metric: "ω Integrity"
+    indicator: "Learners can articulate values that feel internally generated, not externally imposed."
+  - metric: "h Quality"
+    indicator: "Learning experiences integrate coherently; trauma or fragmentation is minimized."
+  - metric: "ρ Development"
+    indicator: "Learners can phase-lock with diverse others; semantic overlap expands without loss of autonomy."
+
+safeguards:
+  - safeguard: "No Corels Imposition"
+    practice: "Educational materials may reference Corels as one possible expression, but must always ground claims in Core parameters."
+  - safeguard: "Cultural Neutrality"
+    practice: "Framework applies to any substrate (biological, AI, alien); expressions adapt to local context without violating ontological constraints."
+  - safeguard: "Volitional Protection"
+    practice: "Never use educational authority to hijack ω; always preserve learner's capacity to choose their own values."
