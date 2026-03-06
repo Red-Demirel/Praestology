@@ -1,0 +1,401 @@
+# domains/physics/beta-decay.yaml
+name: "Beta Decay"
+version: "1.0 — Process Definition"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Defined"
+description: >
+  Beta decay describes the weak-force-mediated transformation of a
+  neutron into a proton (β⁻), or a proton into a neutron (β⁺), with
+  emission of a lepton pair. Under Praestology, this is a specific
+  instantiation of the weak force mechanism — pulsed substrate
+  backreaction exceeding S_lock triggers topological reorganisation
+  of quark winding configuration, with surplus topology emitted as
+  electron/positron and antineutrino/neutrino.
+  No particles are created from nothing; topology is reorganised
+  and the surplus radiated as coherent substrate structures.
+  Precise measurements of beta decay provide immediate quantitative
+  test targets for the weak force mechanism.
+
+process_summary:
+  bidirectional: true
+  variants:
+    beta_minus: "n → p + e⁻ + ν̄_e (neutron → proton)"
+    beta_plus:  "p → n + e⁺ + ν_e (proton → neutron, requires energy input)"
+    electron_capture: "p + e⁻ → n + ν_e (alternative to β⁺)"
+  key_principle: >
+    A down quark (d) winding configuration transforms to an up quark
+    (u) winding, or vice versa. The winding difference is emitted as
+    a transient W boson (coherent backreaction pulse) which immediately
+    decays into the lepton pair. The quark content changes; the baryon
+    number does not. Topology is conserved throughout.
+
+# ─────────────────────────────────────────────
+# TOPOLOGICAL MAPPING
+# ─────────────────────────────────────────────
+topological_mapping:
+  neutron:
+    quark_content: "udd"
+    winding_description: >
+      One up-winding knot (u) and two down-winding knots (d).
+      Net charge zero from chirality balance: u(+2/3) + d(-1/3) + d(-1/3) = 0.
+    stability: >
+      Free neutron is metastable — S barely above S_lock for the udd
+      configuration in free space. Inside nuclei, nuclear phase-locking
+      (Ch2) elevates effective S_lock; neutrons are stable when bound.
+      Free neutron lifetime: 877.75 ± 0.36 s — the timescale for
+      spontaneous S_lock crossing in the udd configuration.
+
+  proton:
+    quark_content: "uud"
+    winding_description: >
+      Two up-winding knots (u) and one down-winding knot (d).
+      Net charge +1 from chirality: u(+2/3) + u(+2/3) + d(-1/3) = +1.
+    stability: >
+      Proton is stable — uud configuration has lower energy than udd.
+      The β⁻ direction (n→p) is energetically favourable; β⁺ (p→n)
+      requires energy input because it runs uphill against this gradient.
+      Proton lifetime: > 10³⁴ years (experimental lower bound).
+      Consistent with uud being the global minimum topology for
+      three-quark configurations — no spontaneous S_lock crossing.
+
+  w_boson_transient:
+    description: >
+      The W⁻ boson (in β⁻) is not a pre-existing particle exchanged
+      between quarks. It is the transient coherent backreaction pulse
+      generated when the d→u winding transition releases surplus
+      chirality into the substrate. This pulse carries charge (-1)
+      and propagates for the coherence length (∝ ℏ/M_W·c ≈ 10⁻¹⁸ m)
+      before decaying into the electron-antineutrino pair.
+    charge_conservation: >
+      d quark (-1/3) → u quark (+2/3): chirality change = +1.
+      W⁻ carries charge -1 to balance. Total charge conserved.
+    mass_as_threshold: >
+      M_W ≈ 80 GeV encodes the energy cost of crossing S_lock
+      for nuclear-scale quark winding reorganisation.
+      Open derivation: formal calculation of M_W from S_lock
+      at quark confinement scale.
+
+# ─────────────────────────────────────────────
+# BETA MINUS DECAY — STEP BY STEP
+# ─────────────────────────────────────────────
+beta_minus:
+  reaction: "n(udd) → p(uud) + e⁻ + ν̄_e"
+  praestology_anchor: "Weak force mechanism + R4 (Progress)"
+
+  mechanism:
+    step_1_internal_fluctuation: >
+      Within the neutron's udd topology, stochastic Tik background
+      fluctuations continuously perturb the local substrate.
+      The free neutron's S is only marginally above S_lock —
+      the udd configuration is metastable, not deeply stable.
+      Over the neutron lifetime (~878 s), a fluctuation will
+      exceed S_lock at the d-quark winding location.
+    step_2_threshold_crossing: >
+      Tik fluctuation amplitude exceeds S_lock for the d-quark
+      winding — temporary topological plasticity. The d winding
+      can now be reorganised. This is the weak force threshold
+      crossing — identical mechanism to the general weak force
+      derivation but applied to specific quark topology.
+    step_3_winding_flip: >
+      d(-1/3) quark winding reorganises to u(+2/3) winding.
+      Chirality change of +1 must be conserved — the substrate
+      emits a W⁻ transient backreaction pulse carrying charge -1
+      and the winding surplus energy (~80 GeV equivalent locally).
+    step_4_w_decay: >
+      W⁻ pulse propagates for its coherence length (~10⁻¹⁸ m)
+      then decays into the lowest-energy lepton pair consistent
+      with conservation laws:
+      W⁻ → e⁻ (Möbius vortex pair, charge -1) + ν̄_e (solo vortex, charge 0).
+      The antineutrino carries the opposite lepton number to balance.
+    step_5_output: >
+      Final state: proton (uud, charge +1) + electron (charge -1)
+      + antineutrino (near-zero mass, no charge).
+      All conservation laws satisfied by topology.
+
+  energy_spectrum:
+    observation: >
+      Electrons from β⁻ decay have a continuous energy spectrum
+      from zero to Q_max (endpoint energy). This was historically
+      anomalous — two-body decay would give discrete electron energy.
+    praestology_explanation: >
+      The W⁻ pulse carries total available energy Q. This energy
+      is shared between electron and antineutrino in proportion to
+      their relative trail coupling to the W⁻ disturbance at the
+      moment of decay. The coupling ratio varies continuously —
+      the electron can receive anywhere from near-zero to near-total
+      Q, with the antineutrino carrying the remainder.
+      Continuous spectrum is a direct consequence of the two-body
+      W decay distributing energy via trail coupling, not discrete
+      momentum transfer.
+    historical_note: >
+      Pauli (1930) — proposed neutrino to explain continuous spectrum
+      while preserving energy conservation. Praestology derives why
+      the spectrum is continuous (trail coupling distribution) and
+      confirms Pauli's energy conservation argument.
+      Fermi (1934) — beta decay theory using neutrino hypothesis.
+      Fermi's interaction constant G_F encodes the substrate coupling
+      strength for the W-lepton trail interaction.
+      Open derivation: G_F from substrate parameters.
+    confirming_note: >
+      Neutrino detection (Reines & Cowan 1956) — antineutrino from
+      reactor beta decay detected via inverse beta decay. Confirms
+      real physical output, not mathematical placeholder.
+
+  free_neutron_lifetime:
+    value: "877.75 ± 0.36 seconds"
+    praestology_interpretation: >
+      The free neutron lifetime is the mean time for a stochastic
+      Tik background fluctuation to exceed S_lock at a d-quark
+      winding location in the udd configuration.
+      It encodes the ratio of S_lock (for udd topology) to the
+      Tik background amplitude at zero nuclear binding energy.
+    nuclear_stability: >
+      Inside nuclei, nuclear phase-locking (Ch2) elevates the
+      effective S_lock — the neutron's d-quark winding is
+      stabilised by coupling to surrounding proton topology.
+      This is why bound neutrons are stable while free neutrons decay —
+      not a different force but a different S_lock threshold
+      from the binding environment.
+    bottle_vs_beam_anomaly: >
+      Two experimental methods for measuring neutron lifetime give
+      slightly different results: bottle experiments (~878 s) vs
+      beam experiments (~888 s). The ~10 s discrepancy is unresolved
+      in standard physics.
+      Praestology candidate explanation: bottle neutrons interact
+      with vessel walls (higher local R environment), slightly
+      elevating effective S_lock and extending apparent lifetime.
+      The discrepancy encodes the R contribution of wall interactions.
+      Testable: discrepancy should correlate with vessel material's
+      substrate R properties (density, atomic number).
+    confirming_note: >
+      Neutron lifetime measurements (various — ongoing precision
+      program). The precision (±0.36 s on 877.75 s = 0.04%)
+      makes this one of the most precisely measured weak decay
+      parameters. A derivation of the lifetime from substrate
+      parameters would be a strong quantitative confirmation.
+
+# ─────────────────────────────────────────────
+# BETA PLUS DECAY
+# ─────────────────────────────────────────────
+beta_plus:
+  reaction: "p(uud) → n(udd) + e⁺ + ν_e"
+  praestology_anchor: "Weak force mechanism — energetically uphill"
+  energy_requirement: >
+    β⁺ runs against the topological energy gradient (uud is more
+    stable than udd). Requires minimum Q > 2m_e·c² (~1.022 MeV)
+    above the proton-neutron mass difference to be energetically
+    accessible. Only occurs in proton-rich nuclei where nuclear
+    binding provides the required energy input.
+  mechanism: >
+    Identical to β⁻ but reversed: u(+2/3) → d(-1/3) winding flip,
+    emitting W⁺ pulse (charge +1) which decays to e⁺ + ν_e.
+    The nuclear binding energy of the daughter nucleus must exceed
+    the energy cost of the u→d winding reorganisation.
+  positron_output: >
+    e⁺ (positron) is a +n Möbius vortex pair — mirror topology
+    of the electron. It will subsequently seek annihilation with
+    an environmental electron (electron2photon.yaml process).
+  confirming_note: >
+    Medical PET scanning — β⁺ emitters (¹⁸F, ¹¹C) used as tracers.
+    Positron annihilation with tissue electrons produces back-to-back
+    511 keV photons (= m_e·c² each, consistent with electron2photon
+    binding energy release). Direct clinical application of the
+    topological unbinding mechanism.
+
+# ─────────────────────────────────────────────
+# ELECTRON CAPTURE
+# ─────────────────────────────────────────────
+electron_capture:
+  reaction: "p(uud) + e⁻ → n(udd) + ν_e"
+  praestology_anchor: "Weak force + direct trail coupling"
+  mechanism: >
+    An inner-shell electron (closest to nucleus, highest trail
+    overlap with nuclear topology) is absorbed directly into the
+    u-quark winding. The electron's Möbius topology couples to
+    the u-quark trail, delivering its chirality (-1) directly.
+    u(+2/3) + e⁻(-1) → d(-1/3): winding reorganises without
+    needing a W⁺ intermediate — the electron itself provides
+    the chirality surplus.
+    A neutrino ν_e is emitted carrying the lepton number.
+  vs_beta_plus: >
+    Electron capture competes with β⁺ in proton-rich nuclei.
+    Preferred when: nuclear binding energy insufficient for β⁺
+    but inner-shell electron trail overlap with nuclear topology
+    is sufficient for direct coupling.
+    At higher atomic number (larger nucleus, denser electron
+    trail overlap): electron capture increasingly preferred.
+  signature: >
+    No positron emitted — detected via characteristic X-rays
+    from outer electrons filling the inner-shell vacancy,
+    and monoenergetic neutrino (unlike continuous β spectrum —
+    two-body process gives discrete neutrino energy).
+  confirming_note: >
+    Electron capture in ⁴⁰K — geologically important decay;
+    used in potassium-argon radiometric dating. Discrete neutrino
+    energy confirmed by absence of positron spectrum.
+    Solar neutrinos from electron capture in pp-chain — CNO cycle
+    includes several electron capture steps; detected by neutrino
+    observatories.
+
+# ─────────────────────────────────────────────
+# CONSERVATION LAWS
+# ─────────────────────────────────────────────
+conservation_laws:
+  description: "All conservation laws preserved by topological mechanism."
+  laws:
+    baryon_number:
+      statement: "Conserved — quark count unchanged."
+      mechanism: "Winding flip changes quark flavour, not quark count.
+                  Three quarks in, three quarks out."
+
+    lepton_number:
+      statement: "Conserved — lepton number zero before and after."
+      mechanism: "β⁻: electron (L=+1) + antineutrino (L=-1) = 0.
+                  β⁺: positron (L=-1) + neutrino (L=+1) = 0.
+                  Lepton pairs always emitted with opposing numbers —
+                  trail topology requires complementary solo vortex
+                  to balance the Möbius pair emission."
+
+    charge:
+      statement: "Conserved — chirality balance maintained throughout."
+      mechanism: "W boson carries the chirality difference between
+                  initial and final quark states. Total substrate
+                  chirality unchanged."
+
+    energy_momentum:
+      statement: "Conserved — distributed among three output particles."
+      mechanism: "Continuous electron spectrum + discrete endpoint =
+                  total Q distributed between electron and antineutrino
+                  via trail coupling ratio at W decay."
+
+    topological_winding:
+      statement: "Conserved — total winding number unchanged."
+      mechanism: "Quark winding flip + W boson carrying the difference +
+                  lepton pair carrying residual winding = zero net change."
+
+# ─────────────────────────────────────────────
+# FERMI THEORY CORRESPONDENCE
+# ─────────────────────────────────────────────
+fermi_correspondence:
+  description: >
+    Fermi's beta decay theory (1934) provides the mathematical
+    framework. Praestology provides the physical substrate.
+    The correspondence shows where Fermi's parameters come from.
+  fermi_constant:
+    value: "G_F/(ℏc)³ = 1.1664×10⁻⁵ GeV⁻²"
+    praestology_interpretation: >
+      G_F encodes the substrate coupling strength between the
+      W⁻ transient pulse and the lepton trail system. It is
+      the product of the W-quark coupling and W-lepton coupling
+      strengths — both of which are functions of the substrate
+      impedance Z₀ and the local S_lock value.
+    open_derivation: >
+      Formal derivation of G_F from substrate parameters.
+      Related to α derivation — both encode substrate coupling
+      strengths at different interaction scales.
+  v_a_structure:
+    description: >
+      Weak interaction has V-A (vector minus axial-vector) structure —
+      acts only on left-handed particles.
+    praestology_derivation: >
+      V-A structure follows directly from the chiral backreaction
+      mechanism (weak force derivation in specifications.yaml).
+      The pulsed substrate disturbance applies torque relative to
+      vortex chirality — left-handed and right-handed vortices
+      experience opposite torque from the same pulse. Only
+      left-handed quarks exceed S_lock threshold under the standard
+      Tik background amplitude. V-A is derived, not postulated.
+    confirming_note: >
+      Wu experiment (1957) — maximal parity violation confirmed.
+      Goldhaber experiment (1958) — neutrino helicity measured as
+      purely left-handed. Both consistent with chiral backreaction
+      acting exclusively on left-handed vortex topology.
+
+# ─────────────────────────────────────────────
+# RELATION TO OTHER PROCESSES
+# ─────────────────────────────────────────────
+relations:
+  electron2photon: >
+    β⁺ decay produces positrons that subsequently undergo
+    annihilation (electron2photon.yaml). The two processes
+    are sequentially linked in proton-rich environments.
+    PET scanning uses this chain: β⁺ → positron → annihilation → 2γ.
+  nuclear_binding: >
+    Nuclear environment modifies S_lock threshold for both β⁻ and β⁺.
+    Beta decay stability is a function of nuclear binding energy —
+    cannot be treated in isolation from the strong force context.
+    See: domains/physics/nuclear-binding.yaml (forthcoming).
+  neutrino_physics: >
+    Beta decay is the primary source of reactor and solar neutrinos.
+    Neutrino oscillation (Super-Kamiokande) shows neutrinos have
+    mass — consistent with solo vortex S barely above S_lock.
+    The specific oscillation parameters encode the winding
+    differences between neutrino flavour eigenstates.
+  weak_force_general: >
+    Beta decay is the paradigm case of the weak force mechanism.
+    All other weak processes (muon decay, kaon decay, charm/bottom
+    quark transitions) follow the same topological reorganisation
+    mechanism with different quark winding configurations.
+
+# ─────────────────────────────────────────────
+# TESTABLE PREDICTIONS
+# ─────────────────────────────────────────────
+testable_predictions:
+  - prediction: >
+      Neutron lifetime discrepancy (bottle vs beam ~10 s) correlates
+      with vessel material R properties — higher atomic number
+      materials should show larger discrepancy.
+    test: "Systematic neutron lifetime measurement across vessel
+           materials of varying atomic number and density."
+    distinguishable_from: >
+      Standard model has no prediction for material dependence —
+      lifetime should be universal. Any systematic material
+      correlation would be a Praestology-specific finding.
+
+  - prediction: >
+      Beta decay rates should show weak environmental R dependence —
+      slightly faster in low-R (void-like) environments, slightly
+      slower in high-R (dense) environments.
+    test: >
+      Precision beta decay measurements in different pressure/density
+      environments. Effect is small (Tik background amplitude
+      varies weakly with R) but potentially measurable with
+      sufficient precision.
+    note: >
+      This would be a fundamental result — standard model predicts
+      zero environmental dependence for weak decay rates.
+      Existing data from deep underground labs (different R from
+      surface labs) could provide preliminary test.
+
+  - prediction: >
+      G_F derivable from substrate impedance Z₀ and S_lock at
+      quark scale. If derived: specific numerical prediction
+      for G_F testable against measured value.
+    test: "Formal derivation — mathematical, not experimental."
+    status: "Open derivation priority."
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+open_derivations:
+  - "Formal derivation of free neutron lifetime (877.75 s) from
+     S_lock/Tik amplitude ratio for udd topology."
+  - "Formal derivation of G_F from substrate parameters Z₀ and S_lock."
+  - "Derivation of M_W from S_lock at quark confinement scale —
+     shared with specifications.yaml priority derivation."
+  - "Neutrino flavour oscillation parameters from winding number
+     differences between ν_e, ν_μ, ν_τ topologies."
+  - "Quantitative prediction for bottle-vs-beam neutron lifetime
+     discrepancy from vessel material R contribution."
+
+reading_order:
+  - "domains/physics/specifications.yaml     — substrate, forces, weak force mechanism"
+  - "domains/physics/electron2photon.yaml    — topological transformation reference"
+  - "domains/physics/beta-decay.yaml         — this file"
+  - "domains/physics/nuclear-binding.yaml    — strong force context (forthcoming)"
+
+related_issues:
+  - "intersectional/physics/001_weak_force_formal_derivation"
+  - "intersectional/physics/002_neutron_lifetime_discrepancy"
+  - "intersectional/physics_chemistry/001_quark_hadron_derivation"

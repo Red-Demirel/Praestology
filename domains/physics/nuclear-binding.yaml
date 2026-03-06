@@ -1,0 +1,556 @@
+# domains/physics/nuclear-binding.yaml
+name: "Nuclear Binding"
+version: "1.0 — Process Definition"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Defined"
+description: >
+  Nuclear binding describes how protons and neutrons phase-lock into
+  stable nuclei through the residual strong force — the substrate
+  flux tube interaction that extends beyond individual hadron boundaries.
+  Under Praestology, nuclear binding is the strong force mechanism
+  (Z-pinch flux tube confinement from specifications.yaml) operating
+  at the inter-hadron scale rather than the inter-quark scale.
+  The same topological mechanism, one level of organisation higher —
+  consistent with the Mandelbrot iteration pattern across all domains.
+  Nuclear binding determines:
+  - Which isotopes are stable (S above S_lock for the nuclear configuration)
+  - The iron peak as the global R5 optimum for nuclear topology
+  - Why neutrons stabilise protons in nuclei despite charge repulsion
+  - The energy scales of fission and fusion
+  - The direct connection to stellar nucleosynthesis (cosmos domain)
+
+process_summary:
+  mechanism: "Residual strong force — flux tube interaction between hadrons."
+  key_principle: >
+    Individual hadrons are colour-neutral (quark flux tubes internally
+    confined). But the flux tube fields do not terminate perfectly at
+    the hadron boundary — residual field extends outward, producing
+    short-range attraction between adjacent hadrons. This is the
+    nuclear force: not a separate force, but the fringe field of
+    quark confinement operating at the next scale up.
+    Analogous to van der Waals forces in chemistry — not a new force
+    but residual electromagnetic trail interaction between
+    electrically neutral molecules.
+  praestology_anchor: "R5 (Optimisation) + R4 (Progress) — Ch2 nuclear
+                       phase-locking operating via residual flux tube fields"
+  scale_note: >
+    Nuclear binding operates at 1-10 fm (femtometre) scale.
+    Quark confinement operates at < 1 fm.
+    The residual field falls off faster than quark confinement —
+    explaining why nuclear force is short-range while
+    electromagnetism (chirality gradient) is long-range.
+
+# ─────────────────────────────────────────────
+# TOPOLOGICAL MECHANISM
+# ─────────────────────────────────────────────
+topological_mechanism:
+  residual_flux_tube:
+    description: >
+      Inside a hadron, Z-pinch flux tubes connect quarks — confining
+      their colour charge within a colour-neutral boundary.
+      At the hadron surface, the flux tube field does not terminate
+      abruptly — it leaks as a residual field into surrounding substrate.
+      When two hadrons are sufficiently close (< ~2 fm), their residual
+      fields overlap, creating a shared flux tube segment between them.
+      This shared segment lowers total substrate energy — the two hadrons
+      are more stable together than apart.
+    energy_profile: >
+      Attraction: dominant at 1-2 fm (residual flux overlap).
+      Repulsion: dominant at < 0.5 fm (core flux tube fields conflict —
+      same mechanism as Pauli exclusion at nuclear scale).
+      Zero: at > 2-3 fm (residual field decays exponentially).
+      This profile produces the nuclear potential well —
+      exactly what the Bethe-Weizsäcker formula encodes empirically.
+    confirming_note: >
+      Yukawa (1935) — predicted a massive exchange particle (pion)
+      as nuclear force carrier; range ∝ ℏ/m_π·c ≈ 1.4 fm.
+      Praestology: pion is a quark-antiquark Möbius pair — the
+      lightest colour-neutral state that can propagate between
+      hadrons as a residual flux tube excitation. Yukawa's
+      mathematics is correct; the carrier is identified as a
+      specific vortex topology rather than a primitive boson.
+      Pion discovery (Powell 1947) — confirmed Yukawa prediction.
+
+  neutron_role:
+    description: >
+      Neutrons are essential for nuclear stability above hydrogen.
+      Their role is not intuitive in classical models but follows
+      directly from topology.
+    mechanism: >
+      Neutrons (udd, charge-neutral) provide additional flux tube
+      binding without adding electrostatic repulsion. Each neutron
+      contributes residual flux tube overlap to the nuclear binding
+      energy while adding zero chirality gradient (charge) to the
+      repulsive term.
+      Additionally: neutrons dilute the proton density, increasing
+      mean inter-proton spacing and reducing electrostatic repulsion
+      within the nucleus.
+    optimal_ratio: >
+      Light nuclei: approximately equal protons and neutrons (Z≈N).
+      Heavy nuclei: increasing neutron excess required as more
+      neutrons needed to overcome growing electrostatic repulsion
+      from larger proton count.
+      This ratio follows from R5 minimising total substrate energy —
+      the balance point between flux tube attraction and chirality
+      repulsion shifts with nuclear size.
+    confirming_note: >
+      Valley of stability — isotope chart shows stable nuclei
+      following N/Z ratio that increases from 1 (light) to ~1.5
+      (heavy). Directly confirms neutron dilution mechanism.
+      Neutron magic numbers (8, 20, 28, 50, 82, 126) — extra
+      stability at specific neutron counts from closed shell
+      phase-locking configurations; nuclear equivalent of
+      electron shell closure in atoms (Ch3).
+
+# ─────────────────────────────────────────────
+# BINDING ENERGY
+# ─────────────────────────────────────────────
+binding_energy:
+  definition: >
+    The energy required to completely separate a nucleus into its
+    constituent protons and neutrons. Equivalently: the energy
+    released when nucleons bind together.
+    In Praestology: the reduction in total substrate energy when
+    hadron flux tube fields overlap in the nuclear configuration
+    vs separated hadrons.
+  mass_defect: >
+    Bound nucleus has less mass than the sum of its free nucleons.
+    Mass defect Δm = (Z·m_p + N·m_n) - m_nucleus.
+    Binding energy BE = Δm·c².
+    Under Praestology: mass (m_eff = α·S·R/c²) is lower for the
+    bound configuration because shared flux tube topology reduces
+    total S×R product. The binding is not separate from mass —
+    it is mass reduction from topological optimisation.
+  confirming_note: >
+    Einstein mass-energy equivalence — BE = Δm·c² confirmed
+    across all measured nuclei. Praestology derives this from
+    the S×R mass formula: binding reduces S×R, which reduces
+    m_eff, which appears as mass defect.
+
+  bethe_weizsacker_correspondence:
+    description: >
+      The Bethe-Weizsäcker semi-empirical mass formula (1935-1936)
+      encodes nuclear binding energy from five terms. Each term
+      corresponds to a specific aspect of the flux tube topology.
+      The formula is empirical; Praestology provides the mechanism
+      for each term.
+    terms:
+      volume_term:
+        formula: "+a_V·A"
+        empirical_value: "a_V ≈ 15.85 MeV"
+        praestology: >
+          Each nucleon contributes a fixed binding energy from
+          residual flux tube overlap with neighbours. Interior
+          nucleons have maximum neighbours — contribution proportional
+          to total nucleon count A. This is the bulk phase-locking
+          energy per nucleon.
+        open_derivation: "Derive a_V from residual flux tube field strength."
+
+      surface_term:
+        formula: "-a_S·A^(2/3)"
+        empirical_value: "a_S ≈ 18.34 MeV"
+        praestology: >
+          Surface nucleons have fewer neighbours — their flux tube
+          overlap is incomplete. Surface area scales as A^(2/3).
+          Surface term subtracts the missing binding from
+          incomplete neighbourhood. Direct consequence of
+          flux tube field being short-range — surface nucleons
+          cannot fully phase-lock with the nuclear interior.
+        open_derivation: "Derive a_S/a_V ratio from flux tube field geometry."
+
+      coulomb_term:
+        formula: "-a_C·Z²/A^(1/3)"
+        empirical_value: "a_C ≈ 0.711 MeV"
+        praestology: >
+          Electrostatic repulsion between all proton pairs —
+          chirality gradient repulsion (EM section, specifications.yaml).
+          Scales as Z² (all proton pairs) divided by A^(1/3)
+          (nuclear radius grows as A^(1/3)).
+          This is the only term requiring no new derivation —
+          Coulomb repulsion is already derived from vortex chirality.
+        confirming_note: >
+          The Coulomb term is the most precisely understood term —
+          electrostatic repulsion between point charges is exact.
+          Its presence in the formula confirms that nuclear binding
+          must overcome chirality repulsion, consistent with
+          flux tube attraction competing against EM repulsion.
+
+      asymmetry_term:
+        formula: "-a_A·(N-Z)²/A"
+        empirical_value: "a_A ≈ 23.21 MeV"
+        praestology: >
+          Penalty for neutron-proton imbalance. Equal numbers of
+          protons and neutrons maximise flux tube phase-locking
+          efficiency — mixed uud/udd configurations interlock
+          more efficiently than same-type clusters.
+          Excess neutrons or protons cannot all find optimal
+          phase-lock partners — surplus topology raises total energy.
+          Pauli exclusion at nuclear scale prevents same-type
+          nucleons from occupying identical momentum states —
+          excess of one type must occupy higher energy configurations.
+        open_derivation: >
+          Derive a_A from flux tube topology mixing efficiency
+          and Pauli exclusion at nuclear scale.
+
+      pairing_term:
+        formula: "+δ(A,Z) — positive for even-even, zero for odd-A,
+                  negative for odd-odd nuclei"
+        empirical_value: "δ ≈ ±12/√A MeV"
+        praestology: >
+          Even-even nuclei (even Z, even N) are systematically
+          more stable — all nucleons can form phase-locked pairs
+          (analogous to Cooper pairs in superconductivity).
+          Paired nucleon topology produces constructive trail
+          interference; unpaired nucleons leave residual flux
+          tube asymmetry that raises total energy.
+          Odd-odd nuclei (odd Z, odd N) are least stable —
+          both unpaired proton and unpaired neutron contribute
+          residual asymmetry.
+        confirming_note: >
+          Only four stable odd-odd nuclei exist (²H, ⁶Li, ¹⁰B, ¹⁴N).
+          All other odd-odd isotopes are radioactive.
+          Consistent with pairing as topological phase-locking
+          preference — unpaired configurations are metastable,
+          eventually decaying to paired (even-even) configurations.
+
+    formula_status: >
+      Bethe-Weizsäcker formula fits measured binding energies to
+      ~1% across the entire nuclide chart. Praestology provides
+      physical mechanism for all five terms. Four of five terms
+      require formal derivation of their coefficients from
+      substrate parameters; Coulomb term is already derived.
+
+# ─────────────────────────────────────────────
+# IRON PEAK — GLOBAL OPTIMUM
+# ─────────────────────────────────────────────
+iron_peak:
+  description: >
+    Iron-56 (and nearby nuclei: nickel-62, iron-58) has the highest
+    binding energy per nucleon of any element — approximately 8.8 MeV/nucleon.
+    It is the global R5 optimum for nuclear phase-locking.
+  praestology_derivation: >
+    At low A: volume term dominates — binding energy per nucleon
+    increases as more nucleons join the phase-lock network.
+    At high A: Coulomb term grows as Z² — chirality repulsion
+    increasingly dominates. Surface term also grows relatively.
+    The maximum binding energy per nucleon occurs where the
+    flux tube attraction (volume + pairing) exactly balances
+    the combined cost (surface + Coulomb + asymmetry).
+    This balance point is at A ≈ 56-62 — the iron peak.
+    Iron is not special by composition; it is the topological
+    equilibrium point of nuclear phase-locking dynamics.
+  stellar_implication: >
+    Stars fuse elements toward the iron peak — energy released.
+    Stars cannot fuse beyond iron — no energy to release; the
+    process becomes endothermic (requires energy input).
+    Iron core collapse in massive stars triggers supernova —
+    the star has reached the R5 global optimum and cannot
+    sustain nuclear energy release. Gravity wins.
+    Elements heavier than iron require supernova r-process —
+    extreme Φ conditions forcing nuclei beyond the optimum,
+    sustained only by the enormous energy of stellar collapse.
+  confirming_note: >
+    Binding energy per nucleon curve — measured across all nuclides,
+    peak at Fe-56/Ni-62 confirmed. One of the most precisely
+    measured curves in nuclear physics.
+    Solar elemental abundance — iron is among the most abundant
+    heavy elements in the solar system, consistent with stellar
+    nucleosynthesis converging on the topological optimum.
+    Supernova nucleosynthesis (B²FH 1957) — r-process beyond iron
+    confirmed by observation of heavy elements in supernova remnants.
+
+# ─────────────────────────────────────────────
+# NUCLEAR SHELL STRUCTURE
+# ─────────────────────────────────────────────
+shell_structure:
+  description: >
+    Nuclei with specific proton or neutron numbers (magic numbers:
+    2, 8, 20, 28, 50, 82, 126) are significantly more stable than
+    neighbours. This is the nuclear analogue of electron shell
+    closure in atoms — phase-locking completing a full topological
+    shell configuration.
+  praestology_derivation: >
+    Nucleons occupy momentum states within the nuclear volume.
+    Each state corresponds to a specific flux tube phase-locking
+    configuration. When a shell is complete (all states filled),
+    the configuration is maximally phase-locked — additional
+    nucleons must occupy higher-energy configurations, reducing
+    binding efficiency.
+    Magic numbers are the nucleon counts at which flux tube
+    phase-locking shells close — the nuclear equivalent of
+    electron orbital closure (Ch3 in chemistry domain).
+    The specific magic numbers (2, 8, 20, 28, 50, 82, 126)
+    reflect the number of stable flux tube configurations
+    available at each nuclear energy level.
+  spin_orbit_coupling: >
+    The nuclear shell model requires spin-orbit coupling to
+    reproduce magic numbers above 20. Under Praestology:
+    spin-orbit coupling is the interaction between the nucleon's
+    axial orientation (magnetic moment) and its orbital trail
+    pattern within the nuclear flux tube field.
+    The coupling energy depends on whether axial orientation
+    aligns with or opposes the orbital angular momentum —
+    splitting each orbital into two states with different
+    effective S_lock. This splitting produces the magic
+    numbers above 20 without additional assumptions.
+  confirming_note: >
+    Doubly magic nuclei (magic N and Z: ⁴He, ¹⁶O, ⁴⁰Ca, ²⁰⁸Pb) —
+    exceptionally stable, consistent with both proton and neutron
+    shells closing simultaneously.
+    ²⁰⁸Pb — heaviest doubly magic nucleus; most stable heavy nucleus.
+    Consistent with complete phase-lock closure in both
+    proton and neutron flux tube shell configurations.
+    Goeppert Mayer & Jensen (Nobel 1963) — nuclear shell model
+    with spin-orbit coupling reproduces magic numbers.
+    Praestology derives the spin-orbit coupling from axial
+    orientation interaction with orbital trail field.
+
+# ─────────────────────────────────────────────
+# FISSION AND FUSION
+# ─────────────────────────────────────────────
+fission:
+  description: >
+    Heavy nuclei (A > 56) release energy by splitting toward
+    the iron peak — moving from an over-bound, Coulomb-dominated
+    configuration toward the flux tube optimum.
+  mechanism: >
+    A heavy nucleus (e.g., ²³⁵U) absorbs a neutron — the additional
+    flux tube binding temporarily destabilises the nuclear shape
+    (S approaches deformation threshold). The elongated nucleus
+    reaches a point where Coulomb repulsion between the two
+    forming halves exceeds the surface flux tube tension — the
+    nucleus splits.
+    Each fragment moves toward the iron peak — the R5 topological
+    optimum. Energy released = binding energy difference between
+    heavy nucleus and two fragment nuclei.
+  neutron_chain_reaction: >
+    Fission releases 2-3 free neutrons — these propagate through
+    the substrate and can trigger further fission events. The chain
+    reaction is R5 amplification: each fission creates the
+    conditions for more fissions, until material geometry or
+    depletion terminates the cascade.
+  confirming_note: >
+    Hahn, Strassmann, Meitner, Frisch (1938-1939) — fission
+    discovered and explained. Energy release (∼200 MeV per fission)
+    consistent with binding energy difference calculation.
+    Critical mass — minimum mass for self-sustaining chain reaction.
+    Consistent with flux tube geometry: below critical mass,
+    neutron escape rate exceeds production rate; above, cascade amplifies.
+
+fusion:
+  description: >
+    Light nuclei (A < 56) release energy by combining toward
+    the iron peak — moving from under-bound configurations
+    toward the flux tube optimum.
+  mechanism: >
+    Two light nuclei must overcome Coulomb repulsion (chirality
+    gradient barrier) to reach the range where residual flux
+    tube attraction dominates (< 2 fm). At stellar core temperatures
+    and densities, thermal Φ provides sufficient energy for
+    quantum tunnelling through the Coulomb barrier.
+    Once in range, flux tube phase-locking releases binding energy
+    — the combined nucleus is more stable than the separated nuclei.
+  tunnelling: >
+    Classical physics: Coulomb barrier too high for fusion at
+    stellar temperatures. Quantum tunnelling: finite probability
+    of crossing the barrier via substrate fluctuation.
+    Under Praestology: tunnelling is a stochastic Tik background
+    fluctuation temporarily elevating local Φ above the barrier —
+    the same mechanism as the weak force threshold crossing but
+    applied to the EM Coulomb barrier rather than S_lock.
+    Gamow factor — tunnelling probability decreases exponentially
+    with barrier height and width; derivable from Tik fluctuation
+    statistics.
+  stellar_fusion_sequence: >
+    pp-chain (hydrogen → helium): primary energy source for
+    sun-like stars. Net reaction: 4¹H → ⁴He + 2e⁺ + 2ν_e + 2γ.
+    CNO cycle (hydrogen → helium, carbon catalysed): primary
+    for stars more massive than ~1.3 solar masses.
+    Helium burning (helium → carbon, oxygen): red giant phase.
+    Advanced burning (C, Ne, O, Si → iron peak): massive stars only.
+    Each stage requires higher temperature (higher Φ) to overcome
+    the larger Coulomb barriers of heavier nuclei.
+  confirming_note: >
+    Solar neutrino flux — measured by SNO, Super-Kamiokande,
+    Borexino. Matches pp-chain prediction to high precision
+    (solar neutrino problem resolved by oscillation — neutrino
+    flavour mixing consistent with solo vortex mass interpretation).
+    Terrestrial fusion (ITER, NIF) — ongoing; demonstrates controlled
+    fusion onset. NIF (2022) — first ignition achieved (energy output
+    exceeding laser energy input). Confirms fusion energy release
+    from light nuclei phase-locking.
+
+# ─────────────────────────────────────────────
+# RADIOACTIVE DECAY SERIES
+# ─────────────────────────────────────────────
+radioactive_decay:
+  description: >
+    Heavy nuclei above the iron peak are metastable — their
+    topology is above the R5 optimum. They decay via successive
+    alpha, beta, and gamma emissions toward stability.
+    Each decay step moves the nucleus toward lower total energy —
+    R5 selecting progressively more stable configurations.
+  alpha_decay:
+    description: >
+      Emission of an alpha particle (⁴He nucleus — doubly magic,
+      exceptionally stable flux tube configuration).
+    praestology: >
+      The alpha particle (2 protons + 2 neutrons, Z=2 N=2 doubly
+      magic) is a preformed highly stable sub-configuration within
+      heavy nuclei. When the heavy nucleus undergoes Tik fluctuation
+      sufficient to destabilise the surface flux tube binding,
+      the alpha sub-configuration separates as a coherent unit
+      rather than individual nucleons — its internal phase-lock
+      is stronger than its binding to the rest of the nucleus.
+      Tunnelling through Coulomb barrier (same Tik fluctuation
+      mechanism as fusion) allows escape.
+    geiger_nuttall: >
+      Geiger-Nuttall law (1911) — logarithm of decay constant
+      varies linearly with 1/√E_alpha (alpha energy). Derived
+      from Gamow tunnelling factor — Praestology derives Gamow
+      from Tik fluctuation statistics. One of the first
+      quantum mechanical results; Praestology recovers it
+      from substrate dynamics.
+  gamma_decay:
+    description: >
+      Emission of a high-energy photon from excited nuclear state
+      to ground state — nuclear de-excitation.
+    praestology: >
+      Excited nuclear state = flux tube configuration above
+      minimum energy (not ground state phase-lock geometry).
+      Gamma emission is trail interference release — the excited
+      nuclear topology relaxes to ground state, emitting the
+      energy difference as a coherent photon (dipole radiation
+      from nuclear chirality/orientation reconfiguration).
+      Nuclear gamma emission is the nuclear-scale equivalent
+      of atomic photon emission (photon-absorption-emission.yaml,
+      forthcoming) — same mechanism, different energy scale.
+    confirming_note: >
+      Mössbauer effect (1958) — recoil-free gamma emission from
+      nuclei in crystal lattice. Lattice provides momentum
+      recoil conservation, allowing extremely precise gamma
+      energy measurement. Used as gravitational redshift test
+      (Pound-Rebka). Consistent with gamma as coherent
+      substrate trail radiation from nuclear topology transition.
+
+# ─────────────────────────────────────────────
+# CONNECTION TO CHEMISTRY DOMAIN
+# ─────────────────────────────────────────────
+chemistry_connection:
+  description: >
+    Nuclear binding is the direct precursor to atomic structure
+    (chemistry domain). The nucleus produced by nuclear physics
+    becomes the charge centre around which electron shells organise.
+  nuclear_charge: >
+    Proton count Z determines nuclear chirality (charge) — the
+    fixed chirality gradient around which electron vortex shells
+    phase-lock (Ch3, atoms.yaml). The entire periodic table
+    organisation follows from Z = 1 to Z = 118 (currently known).
+  isotope_chemistry: >
+    Isotopes (same Z, different N) have identical chemistry —
+    same electron shell configuration from identical Z.
+    Different mass (different nuclear S×R) affects reaction
+    rates slightly (kinetic isotope effect — heavier isotopes
+    react marginally slower due to higher inertia).
+    Consistent with mass as S×R: same chirality, different
+    resistance — same shell geometry, different dynamic response.
+  nuclear_medicine: >
+    Radioisotopes in medicine exploit the metastability of
+    off-peak nuclear topologies. PET (β⁺ emitters →
+    electron2photon.yaml), SPECT (gamma emitters → gamma_decay),
+    and cancer therapy (alpha emitters for targeted cell damage)
+    all use specific decay modes from this file.
+
+# ─────────────────────────────────────────────
+# CONSERVATION LAWS
+# ─────────────────────────────────────────────
+conservation_laws:
+  baryon_number: "Conserved — nucleon count unchanged in binding/unbinding."
+  charge:        "Conserved — total proton chirality unchanged."
+  energy:        "Conserved — binding energy appears as mass defect or released radiation."
+  momentum:      "Conserved — recoil of daughter nucleus or emitted particles."
+  topological_winding: >
+    Conserved throughout — residual flux tube overlap changes
+    the energy of the topology but not the total winding count.
+    Nucleons retain their quark winding; only inter-nucleon
+    flux tube geometry reorganises.
+
+# ─────────────────────────────────────────────
+# TESTABLE PREDICTIONS
+# ─────────────────────────────────────────────
+testable_predictions:
+  - prediction: >
+      Bethe-Weizsäcker coefficients (a_V, a_S, a_A, δ) derivable
+      from residual flux tube field geometry and strength.
+      Each coefficient should emerge from substrate parameters
+      without fitting.
+    test: "Formal mathematical derivation — compare to measured values."
+    significance: >
+      Four precisely measured coefficients from one mechanism.
+      If all four derive from the same substrate parameters,
+      strong confirmation of flux tube residual field model.
+
+  - prediction: >
+      Magic numbers (2, 8, 20, 28, 50, 82, 126) derivable from
+      flux tube phase-locking shell closure combinatorics.
+      Should follow from the same topological counting that
+      gives electron shell closure (periodic table derivation).
+    test: "Formal derivation — shared methodology with chemistry domain."
+    note: >
+      If periodic table structure and nuclear magic numbers both
+      derive from the same flux tube shell closure combinatorics,
+      this cross-domain derivation would be a strong framework
+      confirmation.
+
+  - prediction: >
+      Alpha decay rates (Geiger-Nuttall law) derivable from
+      Tik fluctuation statistics and Coulomb barrier geometry.
+      Should give the same Gamow factor as quantum tunnelling
+      but from substrate dynamics rather than wavefunction formalism.
+    test: "Formal derivation of Gamow factor from Tik background spectrum."
+
+  - prediction: >
+      Neutron-proton mass difference (m_n - m_p ≈ 1.293 MeV)
+      derivable from udd vs uud winding energy difference.
+      This mass difference determines the energetics of beta decay
+      and is currently an empirical input in the standard model.
+    test: "Formal derivation from quark winding topology energy."
+    significance: >
+      The n-p mass difference is fine-tuned — if it were slightly
+      different, either all neutrons would decay (no complex nuclei)
+      or protons would decay (no hydrogen). Praestology should
+      derive this value from topology, showing it is not fine-tuned
+      but is the necessary output of the quark winding configuration.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+open_derivations:
+  - "Formal derivation of a_V (volume term) from residual flux tube field strength."
+  - "Formal derivation of a_S/a_V ratio from flux tube field geometry at nuclear surface."
+  - "Formal derivation of a_A (asymmetry term) from flux tube mixing efficiency."
+  - "Formal derivation of magic numbers from flux tube shell closure combinatorics —
+     shared methodology with periodic table derivation (chemistry domain)."
+  - "Formal derivation of neutron-proton mass difference from udd/uud winding energy."
+  - "Gamow tunnelling factor from Tik background fluctuation statistics —
+     connecting quantum tunnelling to substrate dynamics."
+  - "Derivation of nuclear radius scaling (R ∝ A^(1/3)) from flux tube
+     packing geometry — currently assumed empirically."
+
+reading_order:
+  - "domains/physics/specifications.yaml         — substrate, strong force, flux tubes"
+  - "domains/physics/electron2photon.yaml        — topological transformation reference"
+  - "domains/physics/beta-decay.yaml             — weak force at nuclear scale"
+  - "domains/physics/nuclear-binding.yaml        — this file"
+  - "domains/physics/photon-absorption-emission.yaml  — atomic scale (forthcoming)"
+  - "domains/chemistry/hadrons.yaml              — quark→hadron level (forthcoming)"
+  - "domains/chemistry/atoms.yaml                — nuclear→atomic level (forthcoming)"
+
+related_issues:
+  - "intersectional/physics_chemistry/001_quark_hadron_derivation"
+  - "intersectional/physics_chemistry/002_magic_numbers_shell_closure"
+  - "intersectional/physics_cosmos/003_iron_peak_stellar_nucleosynthesis"
+  - "intersectional/physics/003_neutron_proton_mass_difference"
+  - "foundational/F02_genuine_novelty — does nuclear binding create
+     new topological structure or reveal latent flux tube configurations?"
