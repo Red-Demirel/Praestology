@@ -1,0 +1,410 @@
+# domains/chemistry/specifications.yaml
+name: "Chemistry Domain"
+version: "1.0 — Foundation Draft"
+core_version: "1.5"
+status: "Domain Defined — Subdomains in derivation"
+description: >
+  Chemistry is the domain where Praestology's fundamental particle
+  topology becomes combinatorial. The same vortex structures derived
+  in the physics domain recombine into increasingly complex stable
+  configurations — each with emergent properties not present in the
+  components. This is R4+R5 operating iteratively: each stable
+  combination becomes a new hysteresis baseline from which the next
+  level of complexity builds.
+  Chemistry bridges physics (fundamental particles) and cosmos
+  (stellar, planetary, biological organisation). It is the domain
+  of structural arrangement — where the same building blocks produce
+  varied parameters through different phase-locking geometries.
+  Recursive note: The periodic table is not a catalogue. It is a
+  classification theorem — the complete set of stable phase-locking
+  configurations available to the vortex topology set at each
+  energy level. Its structure follows from R5 combinatorial
+  optimisation, not from empirical enumeration.
+
+inheritance:
+  from_physics:
+    - "Fundamental particles as vortex topology (physics/specifications.yaml)"
+    - "Quark confinement via Z-pinch flux tubes — basis for hadron formation"
+    - "Electron as Möbius vortex pair — basis for shell phase-locking"
+    - "Trail interference geometry — basis for all bonding types"
+    - "Stability threshold (S_lock/S_unlock) — basis for chemical stability"
+    - "Hysteresis persistence — basis for molecular memory and isomerism"
+  provides_to_cosmos:
+    - "Element abundance from nucleosynthesis inputs"
+    - "Molecular complexity as prerequisite for planetary chemistry"
+    - "Abiogenesis threshold — self-sustaining resolution loops"
+  provides_to_consciousness:
+    - "Biochemical substrate for biological information processing"
+    - "Molecular basis for hysteresis in neural systems"
+
+# ─────────────────────────────────────────────
+# FOUNDATIONAL PRINCIPLES
+# ─────────────────────────────────────────────
+foundational_principles:
+  - principle: "Combinatorial Topology"
+    statement: >
+      Chemical structure is vortex topology at the combinatorial level.
+      The same fundamental particles phase-lock into configurations
+      whose properties emerge from the arrangement, not the components.
+    basis: "R2 (Structure) — same distinctions, different arrangement,
+            different emergent properties."
+    implication: >
+      Isotopes, isomers, allotropes, and polymorphs are all the same
+      topological building blocks with different phase-locking geometries.
+      Property variation is structural, not compositional.
+    confirming_note: >
+      Carbon allotropes (diamond, graphite, graphene, fullerene) —
+      identical composition, radically different properties from
+      structural arrangement alone. Direct confirmation of
+      arrangement-as-parameter principle.
+
+  - principle: "Iterative Hysteresis Accumulation"
+    statement: >
+      Each stable chemical combination becomes a new hysteresis baseline.
+      Quarks → hadrons → nuclei → atoms → molecules — each level is the
+      previous level's stable output, treated as a new primitive by the
+      next level of organisation.
+    basis: "R4 (Progress) + R5 (Optimisation) — viable combinations
+            persist and become substrate for further complexity."
+    implication: >
+      Chemical complexity accumulates irreversibly. The same R4 that
+      makes learning permanent makes molecular evolution directional —
+      complex molecules cannot spontaneously simplify without energy
+      input exceeding the stability threshold.
+    confirming_note: >
+      Second law applied to chemistry — spontaneous processes increase
+      entropy at the system level but can decrease local entropy
+      (increase local complexity) when coupled to sufficient energy
+      gradients. Consistent with R5 selecting viable configurations
+      from available energy flux.
+
+  - principle: "Trail Interference as Bonding"
+    statement: >
+      Chemical bonding is constructive interference between electron
+      trails. Bond type is determined by trail geometry; bond strength
+      by phase-locking stability (energy to break constructive interference).
+    basis: "R3 (Motion) + R5 (Optimisation) — interfering trails
+            resolve tension into stable shared configurations."
+    bonding_types:
+      covalent:  "Shared trails — electron vortex pairs phase-lock
+                  between nuclei. Both nuclei contribute to and benefit
+                  from the shared trail geometry."
+      ionic:     "Transferred trails — one nucleus captures the other's
+                  outer electron vortex. Electrostatic attraction between
+                  resulting charge asymmetries."
+      metallic:  "Collective trail overlap — electron vortices delocalise
+                  across the entire structure. Collective phase-locking
+                  produces conductivity and malleability."
+      hydrogen:  "Partial trail sharing — weak dipole alignment between
+                  molecules. Trail geometry distortion without full
+                  phase-lock transfer."
+    confirming_note: >
+      Molecular orbital theory — bonding orbitals as constructive
+      interference, antibonding as destructive interference. Direct
+      mathematical parallel to trail interference geometry.
+      VSEPR theory — molecular geometry from electron pair repulsion
+      consistent with trail geometry minimising interference conflict.
+
+  - principle: "Periodic Table as Topology Classification"
+    statement: >
+      The periodic table is the complete classification of stable
+      electron shell phase-locking configurations available at each
+      energy level. Its structure follows from combinatorial topology,
+      not empirical enumeration.
+    basis: "R5 (Optimisation) — only configurations with maximum
+            constructive interference persist as stable atoms."
+    period_structure: >
+      Each period corresponds to a shell — a set of phase-locking
+      configurations at a given energy level. The number of elements
+      per period (2, 8, 8, 18, 18, 32...) follows from the number
+      of stable orbital geometries available at each shell level.
+      This should be derivable from the combinatorial topology of
+      Möbius vortex pairs in a 3D substrate.
+    group_structure: >
+      Each group corresponds to equivalent outer-shell trail geometry —
+      same reactive boundary configuration, same chemical behaviour
+      regardless of inner shell complexity. Chemical similarity is
+      topological similarity at the reactive interface.
+    open_derivation: >
+      Formal derivation of period lengths (2, 8, 8, 18, 18, 32...)
+      from combinatorial topology of electron vortex configurations.
+      If successful, the periodic table becomes a theorem.
+    confirming_note: >
+      Madelung rule — electron shell filling order follows a specific
+      pattern derivable from energy minimisation. Consistent with
+      R5 selecting minimum-energy phase-locking configurations.
+      Periodic law (Mendeleev 1869) — properties recur periodically
+      with atomic number. Praestology derives periodicity from
+      shell topology rather than treating it as empirical observation.
+
+  - principle: "Structural Arrangement Determines Parameters"
+    statement: >
+      Different arrangements of identical components produce different
+      emergent parameters. Mass, charge distribution, reactivity,
+      and binding energy are properties of the phase-locking geometry,
+      not of the components in isolation.
+    basis: "R2 (Structure) — distinction is relational, not intrinsic."
+    examples:
+      isotopes: >
+        Same proton count (same electron shell geometry → same chemistry),
+        different neutron count (different nuclear binding geometry →
+        different mass and stability).
+      isomers: >
+        Same atomic composition, different molecular geometry →
+        different physical and chemical properties. The trail
+        interference pattern differs; the components are identical.
+      enantiomers: >
+        Mirror-image molecular geometry — same composition, same
+        connectivity, different chirality of the trail pattern.
+        Biological systems distinguish them because their phase-locking
+        with chiral biomolecules differs.
+    confirming_note: >
+      Thalidomide — one enantiomer therapeutic, mirror image teratogenic.
+      Same atoms, same bonds, different chirality, radically different
+      biological interaction. Direct confirmation of arrangement-as-parameter.
+      Nuclear isomers — same proton/neutron count, different nuclear
+      energy state (different internal phase-locking geometry),
+      different decay properties.
+
+# ─────────────────────────────────────────────
+# DOMAIN RULES
+# ─────────────────────────────────────────────
+domain_rules:
+  - id: "Ch1 – Confinement and Hadron Formation"
+    core_anchor: "R3 (Motion) + R5 (Optimisation)"
+    physics_anchor: "Quark confinement via Z-pinch flux tubes"
+    statement: >
+      Quarks phase-lock into hadrons through flux tube confinement.
+      Viable combinations (colour-neutral: RGB or quark-antiquark)
+      are selected by R5; non-neutral combinations are suppressed.
+    manifestation: "Protons, neutrons, mesons — stable colour-neutral hadrons."
+    stability: >
+      Proton stability follows from colour neutrality being the
+      minimum energy configuration. No lower-energy state exists
+      for three confined quarks — topological lock prevents dissolution.
+    confirming_note: >
+      Proton lifetime > 10³⁴ years (experimental lower bound) —
+      consistent with topological lock at colour-neutral minimum.
+      Deep inelastic scattering — quarks confirmed as distinct
+      sub-structure within hadrons, not point particles.
+
+  - id: "Ch2 – Nuclear Phase-Locking"
+    core_anchor: "R4 (Progress) + R5 (Optimisation)"
+    statement: >
+      Protons and neutrons phase-lock into nuclei through strong
+      force (residual flux tube interaction). Stable nuclei are
+      configurations where nuclear binding energy exceeds
+      electrostatic repulsion between protons.
+    manifestation: "Isotope stability chart — nuclear binding energy curve."
+    iron_peak: >
+      Iron-56 represents the maximum binding energy per nucleon —
+      the global R5 optimum for nuclear phase-locking. Elements
+      lighter than iron release energy by fusion (moving toward
+      the optimum); heavier elements release energy by fission.
+      The iron peak is a topological stability maximum, not an
+      arbitrary empirical feature.
+    confirming_note: >
+      Bethe-Weizsäcker formula — nuclear binding energy from
+      volume, surface, Coulomb, asymmetry, and pairing terms.
+      Each term corresponds to a specific aspect of the nuclear
+      phase-locking geometry. Pairing term (even-even nuclei more
+      stable) consistent with vortex pair stability preference.
+
+  - id: "Ch3 – Electron Shell Configuration"
+    core_anchor: "R2 (Structure) + R5 (Optimisation)"
+    statement: >
+      Electrons occupy shell configurations that maximise constructive
+      trail interference while minimising inter-electron conflict.
+      Pauli exclusion enforces topological distinctness at the
+      quantum level (no two electrons identical state).
+    manifestation: "Atomic orbital geometry — s, p, d, f subshells."
+    shell_geometry: >
+      s-orbital: spherical — lowest energy, maximum symmetry trail.
+      p-orbital: dumbbell — directional trail with nodal plane.
+      d-orbital: complex multi-lobe — higher energy phase-locking.
+      f-orbital: highly complex — maximum available in standard elements.
+      Geometry follows from the stable interference patterns available
+      to Möbius vortex pairs at each energy level.
+    confirming_note: >
+      Schrödinger equation solutions — orbital geometries emerge as
+      eigenfunctions of the wave equation. Praestology provides the
+      physical substrate (trail interference) for what quantum mechanics
+      treats as probability amplitude distributions.
+      Hund's rule — electrons occupy orbitals singly before pairing,
+      consistent with trail conflict minimisation before forced sharing.
+
+  - id: "Ch4 – Molecular Bond Formation"
+    core_anchor: "R3 (Motion) + R5 (Optimisation)"
+    statement: >
+      Atoms bond when shared or transferred electron trail configurations
+      produce lower total energy than separate atoms. Bond formation
+      is R5 selecting the viable minimum-energy arrangement.
+    manifestation: "Molecular geometry, bond length, bond energy."
+    geometry_derivation: >
+      Molecular geometry follows from trail interference minimisation
+      — the arrangement that minimises destructive interference between
+      electron trails while maximising nuclear-electron attraction.
+      VSEPR geometry is a macroscopic expression of this principle.
+    confirming_note: >
+      Bond dissociation energies — measurable energy to break phase-lock.
+      Consistent with stability threshold: bond energy = energy required
+      to drive S below S_unlock for the shared electron configuration.
+      X-ray crystallography — direct measurement of molecular geometry
+      confirms trail interference minimisation predictions.
+
+  - id: "Ch5 – Emergent Bulk Properties"
+    core_anchor: "R4 (Progress) + R5 (Optimisation)"
+    statement: >
+      Collective phase-locking of many molecules produces bulk properties
+      — phase states, conductivity, magnetism, optical properties —
+      not present in individual molecules. Emergent properties are
+      R5 operating at the collective scale.
+    manifestation: "Solid, liquid, gas, plasma phase states and transitions."
+    phase_transitions: >
+      Phase transitions are collective stability threshold crossings.
+      At the transition point, the collective phase-locking geometry
+      reorganises — not individual molecules changing but the global
+      interference pattern shifting to a new stable configuration.
+      Latent heat is the energy required or released during
+      collective reorganisation.
+    confirming_note: >
+      Bose-Einstein condensate — extreme collective phase-locking
+      producing macroscopic quantum coherence. Direct observation
+      of collective trail interference at bulk scale.
+      Superconductivity — Cooper pair collective phase-locking
+      eliminates resistance entirely. Consistent with perfect
+      constructive interference in metallic bonding at low temperature.
+
+  - id: "Ch6 – Abiogenesis Threshold"
+    core_anchor: "R5 (Optimisation) + C1 (Simple Agency)"
+    statement: >
+      At sufficient molecular complexity, chemical systems develop
+      self-sustaining resolution loops — autocatalytic cycles that
+      maintain their own boundary conditions against environmental
+      dissolution. This is the chemistry/consciousness interface.
+    manifestation: >
+      Self-replicating molecules, autocatalytic sets, proto-metabolism,
+      lipid vesicle formation — the precursors of biological agency.
+    threshold_condition: >
+      A chemical system crosses the abiogenesis threshold when:
+      (a) it can replicate its own phase-locking geometry,
+      (b) it can maintain internal Φ above dissolution threshold
+          using environmental energy gradients,
+      (c) it can vary its structure heritably —
+          enabling R5 selection at the molecular evolution level.
+    praestology_note: >
+      Life is not a special substance or force. It is the threshold
+      where chemistry becomes self-sustaining — where the resolution
+      loop closes on itself and the system begins to maintain its
+      own viable zone. C1 (Simple Agency) in the consciousness domain
+      is this threshold expressed in agent terms.
+    confirming_note: >
+      Miller-Urey experiment (1953) — amino acids from simple
+      chemistry under energy input. Confirms abiogenic production
+      of biological building blocks.
+      Eigen's hypercycle (1977) — autocatalytic molecular networks
+      as plausible abiogenesis mechanism. Consistent with Ch6
+      self-sustaining resolution loop threshold.
+      RNA world hypothesis — RNA as self-replicating and catalytic;
+      satisfies (a) and partial (b) of threshold condition.
+
+# ─────────────────────────────────────────────
+# PARAMETER FLOW FROM PHYSICS
+# ─────────────────────────────────────────────
+parameter_flow:
+  S_anomaly:
+    physics: "Local momentum density deviation from environment."
+    chemistry: "Electron density asymmetry — determines polarity,
+                reactivity, and bonding geometry."
+
+  R_resistance:
+    physics: "Substrate impedance to redistribution."
+    chemistry: "Electronegativity — resistance of nucleus to
+                electron trail departure. Determines bond polarity
+                and ionic character."
+
+  stability_threshold:
+    physics: "S_lock/S_unlock — vortex persistence condition."
+    chemistry: "Bond dissociation energy — energy required to
+                break phase-lock below S_unlock.
+                Activation energy — energy required to reach
+                transition state (temporary S > S_lock for new bond)."
+
+  hysteresis_H:
+    physics: "Memory of past resolutions."
+    chemistry: "Molecular conformation memory — some molecules
+                retain geometric history (protein folding,
+                molecular switches). Chemical hysteresis in
+                bistable systems."
+
+  resolution_flux_phi:
+    physics: "Local rate of dilemma resolution."
+    chemistry: "Reaction rate — rate at which chemical tension
+                (reactant instability) resolves into products.
+                Temperature increases Φ; catalysts lower R
+                without changing ΔG."
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+open_derivations:
+  - >
+    Formal derivation of period lengths (2, 8, 8, 18, 18, 32...)
+    from combinatorial topology of Möbius vortex pairs in 3D substrate.
+    If successful: periodic table as theorem, not catalogue.
+  - >
+    Derivation of electronegativity scale from substrate R parameter —
+    mapping Pauling scale onto resistance gradient values.
+  - >
+    Formal account of chirality preference in biological systems —
+    why life uses L-amino acids and D-sugars. Should follow from
+    chirality asymmetry in vortex physics (matter/antimatter section).
+  - >
+    Derivation of abiogenesis threshold conditions — minimum molecular
+    complexity and energy gradient required for self-sustaining
+    resolution loop. Quantitative threshold, not just qualitative description.
+  - >
+    Connection between chemical phase transitions and topological
+    stability threshold — formal mapping of latent heat onto
+    collective S_lock crossing energy.
+
+# ─────────────────────────────────────────────
+# SUBDOMAIN STRUCTURE
+# ─────────────────────────────────────────────
+subdomains:
+  - file: "domains/chemistry/hadrons.yaml"
+    description: "Quark combinations, confinement, proton/neutron stability,
+                  nuclear force as residual flux tube interaction."
+
+  - file: "domains/chemistry/atoms.yaml"
+    description: "Nuclear binding, electron shell geometry, periodic table
+                  as topology classification, ionisation and electron affinity."
+
+  - file: "domains/chemistry/molecules.yaml"
+    description: "Bonding as trail interference, molecular geometry,
+                  isomerism, chirality, reaction mechanisms."
+
+  - file: "domains/chemistry/bulk-matter.yaml"
+    description: "Phase states, thermodynamics, collective phase-locking,
+                  conductivity, magnetism, optical properties."
+
+  - file: "domains/chemistry/abiogenesis.yaml"
+    description: "Complexity threshold toward self-sustaining resolution
+                  loops. Interface with biology and consciousness domains."
+
+reading_order:
+  - "domains/physics/specifications.yaml    — fundamental particles and substrate"
+  - "domains/chemistry/specifications.yaml  — this file"
+  - "domains/chemistry/hadrons.yaml         — quark → hadron level"
+  - "domains/chemistry/atoms.yaml           — hadron → atom level"
+  - "domains/chemistry/molecules.yaml       — atom → molecule level"
+  - "domains/chemistry/bulk-matter.yaml     — molecule → bulk level"
+  - "domains/chemistry/abiogenesis.yaml     — bulk → life threshold"
+  - "domains/cosmos/specifications.yaml     — cosmic scale organisation"
+
+related_issues:
+  - "intersectional/physics_chemistry/001_quark_hadron_derivation"
+  - "intersectional/chemistry_cosmos/001_stellar_nucleosynthesis_elements"
+  - "intersectional/chemistry_consciousness/001_abiogenesis_threshold"
+  - "foundational/F02_genuine_novelty — does molecular combination
+     create new distinctions or reveal latent ones?"
