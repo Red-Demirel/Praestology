@@ -101,7 +101,8 @@ This repository is divided into **Core** and **Domains**.
 
 *   **`/specification.yaml`**: The machine-readable ontological core (v1.4).
 *   **`/domains/`**: Application layers that map the Core Rules to specific fields.
-    *   `domains/cosmos`: Physics instantiation (Space, Time, Energy).
+    *   `domains/physics`: Physics instantiation (Space, Time, Energy).
+    *   `domains/cosmos`: Cosmos includes space, planets, stars, galaxies, black holes etc.
     *   `domains/ethics`: Viability and Agency frameworks.
     *   `domains/consciousness`: Emergent perceptiveness and intelligence.
 
