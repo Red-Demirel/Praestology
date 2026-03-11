@@ -1,0 +1,814 @@
+# domains/physics/quantum-foundation.yaml
+name: "Quantum Foundation"
+version: "1.0"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Conceptual derivations complete — formal mathematics open"
+description: >
+  This file establishes the R1-R5 foundation for quantum mechanics.
+  Quantum mechanics is extraordinarily precise as a computational
+  framework but its foundations have been contested for a century.
+  Nineteen or more competing interpretations exist because the
+  formalism underdetermines the ontology — physicists compute
+  correctly while disagreeing completely about what the formalism
+  describes.
+  Praestology resolves this: the R1-R5 substrate dynamics provide
+  the physical ontology that QM's formalism correctly describes.
+  QM is not wrong — it is a complete computational framework for
+  substrate commitment dynamics at the quantum scale. What it
+  lacks is the physical picture beneath the mathematics.
+  Relationship to QM: supersedes at the foundational level;
+  compatible at the computational level. The Schrödinger equation,
+  Born rule, uncertainty principle, and entanglement correlations
+  remain correct. Their physical basis is now identified.
+  This is the same relationship Praestology has with GR:
+  the mathematics survives; the ontological foundation is replaced.
+  Confidence assessment: high for conceptual derivations —
+  the correspondences are internal consistency results, not
+  speculative mappings. Each QM primitive maps onto framework
+  concepts already established independently. Open: formal
+  mathematical derivations of Born rule, ℏ from Tik spectrum,
+  and Schrödinger equation from substrate wave equation.
+
+relation_to_foundations_yaml: >
+  This file builds directly on domains/physics/foundations.yaml.
+  Pillar 4 (potential/commitment ratio) provides the measurement
+  bridge. Pillar 5 (commitment stress backreaction) provides the
+  classical limit. Pillar 6 (quantum tunnelling) is already one
+  QM result derived. This file extends the derivation to the
+  full quantum mechanical framework.
+
+# ─────────────────────────────────────────────
+# THE CORE REFRAMING
+# ─────────────────────────────────────────────
+core_reframing:
+  statement: >
+    Quantum mechanics describes the behaviour of systems where
+    Tik fluctuation amplitude is non-negligible relative to the
+    total commitment density. This is the quantum regime.
+    Classical mechanics describes systems where commitment density
+    is so high that Tik fluctuations are negligible. This is
+    the classical regime.
+    The quantum/classical boundary is not a fundamental divide —
+    it is a continuous ratio that crosses the observational
+    threshold at atomic and molecular scales.
+  quantum_regime: >
+    Tik amplitude / commitment density >> 0.
+    Substrate fluctuations materially affect which resolution
+    events occur. Outcomes are probabilistic because Tik
+    fluctuations are stochastic. Superposition is real because
+    R3 tension genuinely holds multiple configurations
+    simultaneously before R5 selection. Interference is real
+    because phase relationships between unresolved paths
+    affect selection probabilities.
+  classical_regime: >
+    Tik amplitude / commitment density ≈ 0.
+    Substrate fluctuations are negligible relative to committed
+    state. Outcomes are effectively deterministic because
+    the committed state overwhelmingly dominates Tik noise.
+    Newtonian mechanics is the correct description in this limit.
+  continuous_transition: >
+    As commitment density decreases (smaller objects, lower
+    temperature, better isolation from environmental commitment
+    coupling), the ratio increases and quantum behaviour becomes
+    observable. No sharp boundary — a continuous crossover.
+    Confirmed by quantum coherence experiments: C₆₀ fullerenes
+    (1999), molecules of ~2000 atoms (2019) showing interference.
+    The limit is not size but commitment density relative to
+    Tik fluctuation amplitude. Isolation reduces environmental
+    commitment coupling, extending quantum behaviour to
+    larger scales.
+
+# ─────────────────────────────────────────────
+# QM PRIMITIVES — R1-R5 DERIVATIONS
+# ─────────────────────────────────────────────
+qm_primitives:
+
+  wavefunction:
+    qm_statement: >
+      The wavefunction ψ encodes the complete state of a quantum
+      system. Its squared modulus |ψ|² gives the probability
+      distribution of measurement outcomes.
+    praestology_derivation: >
+      ψ is the mathematical representation of the substrate's
+      unresolved tension landscape — the full probability
+      amplitude distribution over all configurations that R3
+      tension currently holds simultaneously before R5 selection.
+      It is not a physical wave propagating through space.
+      It is the resolution landscape: which configurations exist
+      as viable unresolved states, and with what amplitude.
+      |ψ|² is the R5 viability weighting of each configuration —
+      the probability that R5 selects a given configuration when
+      a resolution event occurs. The squared modulus arises
+      because interference terms (phase relationships between
+      simultaneously held configurations) contribute
+      quadratically to selection probability. See Born rule.
+    wavefunction_reality: >
+      The long debate over whether the wavefunction is "real"
+      or merely a calculational tool (psi-ontic vs psi-epistemic)
+      dissolves. The wavefunction is real as a description of
+      the substrate's unresolved tension landscape — it describes
+      a genuine physical state of the substrate. It is not
+      a complete description of any individual particle's
+      trajectory — no such trajectory exists before commitment.
+      It is epistemic about future outcomes (R5 hasn't selected)
+      and ontic about current substrate state (R3 tension is real).
+      Both camps are partially right; neither is complete.
+
+  superposition:
+    qm_statement: >
+      A quantum system can exist in a superposition of multiple
+      states simultaneously until measured.
+    praestology_derivation: >
+      Superposition is unresolved R3 tension holding multiple
+      configurations simultaneously. R3 is the tension between
+      states that drives resolution. Before R5 selection occurs,
+      the tension is genuinely distributed across multiple
+      configurations — not an epistemic limitation but an
+      ontological state of the substrate.
+      The system is not in one state and we don't know which —
+      it is in all compatible states simultaneously because
+      the substrate commitment has not yet differentiated them.
+      R4 has not yet accumulated the resolution that would
+      distinguish the configurations. The superposition is real.
+    schrodingers_cat: >
+      The cat is not simultaneously alive and dead in any
+      meaningful sense — the macroscopic commitment density
+      of a cat is so high that Tik fluctuations cannot maintain
+      genuine superposition at that scale. Decoherence (substrate
+      commitment coupling with environment) collapses the
+      superposition to classical probability within femtoseconds.
+      The thought experiment reveals the quantum/classical
+      boundary question, which Praestology answers via the
+      Tik/commitment ratio: cats are firmly in the classical
+      regime. The paradox dissolves.
+
+  measurement_problem:
+    qm_statement: >
+      When a quantum system is measured, the wavefunction
+      "collapses" from superposition to a definite state.
+      What causes collapse? When does it occur? Does the
+      observer play a special role? Unsolved for 100 years.
+    praestology_derivation: >
+      There is no collapse. There is only R5 selection.
+      When a quantum system interacts with another system
+      in a way that forces commitment — that creates an
+      irreversible R4 resolution event — the unresolved
+      R3 tension is resolved into a definite commitment.
+      This is not a special physical process; it is R5
+      operating as it always does. The reason it appears
+      discontinuous is that superposition (distributed R3
+      tension) and commitment (definite R4 accumulation)
+      are genuinely different substrate states — the
+      transition between them is physically real but not
+      mysterious.
+    observer_role: >
+      No special role for consciousness or observers.
+      "Measurement" is any interaction that forces
+      irreversible commitment — that crosses S_lock
+      for the interacting systems. A particle hitting
+      a detector forces commitment because the detector's
+      high commitment density couples with the particle's
+      unresolved tension and selects a configuration.
+      The detector doesn't need to be conscious; it needs
+      to have sufficient commitment density to force
+      the resolution event. This is why macroscopic
+      detectors always produce definite outcomes — their
+      commitment density is far above the threshold
+      for forcing resolution in quantum systems.
+    which_interpretation_survives: >
+      None of the 19+ interpretations survive intact —
+      all were attempts to explain collapse ontology
+      within a framework that lacked the physical picture.
+      Elements of each that correctly identified aspects
+      of the substrate dynamics are preserved:
+      Copenhagen: correct that there is no hidden trajectory
+        before measurement — incorrect that "measurement"
+        requires special status.
+      Many-Worlds: correct that the wavefunction is real
+        and all branches exist as substrate states —
+        incorrect that all branches persist after R5 selection.
+        R4 is irreversible; unselected branches do not persist.
+      Pilot Wave: correct that particles have definite
+        positions guided by a wave — incorrect identification
+        of the wave as a separate entity. The pilot wave
+        is the substrate tension landscape; the particle
+        is the vortex topology.
+      QBism: correct that the wavefunction encodes an
+        agent's information about outcomes — incorrect
+        that this exhausts its meaning. The tension landscape
+        is real, not merely epistemic.
+
+  born_rule:
+    qm_statement: >
+      The probability of a measurement outcome is |ψ|² —
+      the squared modulus of the wavefunction amplitude.
+      Currently postulated. Gleason's theorem shows it is
+      the unique consistent probability assignment on a
+      Hilbert space but provides no physical derivation.
+    praestology_derivation:
+      mechanism: >
+        Probability of R5 selecting configuration j =
+        viability weight of j in the current substrate state.
+        Viability weight is quadratic in amplitude because
+        interference terms between simultaneously held
+        configurations contribute to and from selection
+        probability via cross-terms.
+        The attraction score from quantum-cognition.yaml
+        (biology→consciousness interface) has the same
+        mathematical structure — this is the Mandelbrot
+        pattern: R5 viability weighting produces |ψ|²
+        at quantum scale and QDT interference at cognitive
+        scale via identical mathematics.
+      formal_derivation_path: >
+        A_j = |ψ_j|² + ∑_{i≠j} ψ_i*ψ_j · cos(φ_j - φ_i)
+        In the absence of interference (orthogonal states):
+        A_j = |ψ_j|² — Born rule recovered directly.
+        With interference: modified probabilities from
+        cross-terms — explains quantum interference
+        experiments (double slit, Mach-Zehnder).
+        Full derivation requires showing that R5 viability
+        maximisation over the substrate tension landscape
+        uniquely produces this weighting — open formal
+        derivation, but mechanism identified.
+      significance: >
+        The Born rule has been postulated for 100 years.
+        A derivation from R5 viability weighting would be
+        a foundational result — the most fundamental
+        equation in quantum mechanics derived rather than
+        assumed.
+    status: "Mechanism identified. Formal derivation open — priority 1."
+
+  uncertainty_principle:
+    qm_statement: >
+      ΔxΔp ≥ ℏ/2 — position and momentum cannot both be
+      precisely determined simultaneously. Derived in QM
+      from the wave nature of quantum states and the
+      Fourier relationship between position and momentum
+      representations.
+    praestology_derivation: >
+      Position and momentum are not two properties of the
+      same thing — they are properties of two different
+      aspects of the vortex topology.
+      Position: property of the engine — the active
+      resolution front of the vortex. Localised by
+      definition — the engine is where the vortex
+      currently is.
+      Momentum: property of the trail — the accumulated
+      commitment pattern behind the engine encoding the
+      vortex's history of substrate traversal. Distributed
+      by definition — the trail extends behind the engine
+      and encodes direction and rate of traversal.
+      Measuring position precisely requires interacting
+      with the engine directly — which necessarily
+      disturbs the trail commitment structure that encodes
+      momentum. The interaction commits new resolution
+      events in the trail, disrupting its momentum encoding.
+      Measuring momentum requires sampling the trail —
+      which gives no precise information about the engine's
+      current location.
+      The uncertainty is not epistemological (we disturb
+      what we measure in an avoidable way) nor ontological
+      vagueness (the system doesn't have precise values).
+      It is structural: position and momentum are
+      properties of different physical aspects of the
+      same vortex that cannot be simultaneously collapsed
+      to point values because they are genuinely different
+      things — engine and trail.
+    hbar_derivation: >
+      ℏ encodes the minimum substrate action quantum —
+      the smallest Tik fluctuation that constitutes a
+      resolution event. The uncertainty relation
+      ΔxΔp ≥ ℏ/2 is a statement about substrate grain
+      size: the engine cannot be localised more precisely
+      than the substrate grain, and the trail cannot
+      encode momentum more precisely than one quantum
+      of substrate action.
+      Open derivation: ℏ from Tik background spectrum
+      and substrate grain size. This is the Twitch→Planck
+      connection referenced in specifications.yaml.
+    energy_time_uncertainty: >
+      ΔEΔt ≥ ℏ/2 — energy and time cannot both be
+      precisely determined simultaneously.
+      Under R1-R5: ΔE is uncertainty in Φ differential
+      (energy as Φ bookkeeping, pillar 3). Δt is
+      uncertainty in process counter increment (time
+      as R4 accumulation index, pillar 2).
+      A resolution event that occurs over a very short
+      process-counter interval (small Δt) involves a
+      large Φ differential commitment (large ΔE) —
+      sharp events are energetically broad. A very
+      precise Φ differential requires an extended
+      resolution process — sharp energy requires long time.
+      The relation is a statement about the substrate's
+      minimum resolution event: you cannot commit a
+      precise Φ differential instantaneously because
+      commitment requires a finite process-counter interval.
+
+  entanglement:
+    qm_statement: >
+      Two particles can be entangled such that measuring
+      one instantly affects the state of the other,
+      regardless of separation. Bell's theorem proves
+      no local hidden variable theory can explain the
+      correlations. Mechanism unknown.
+    praestology_derivation: >
+      Entanglement is phase-locking (ρ) established in
+      the substrate commitment structure at the moment
+      of interaction.
+      When two vortex topologies interact, their commitment
+      patterns couple — their trails become phase-locked
+      in the substrate p(r,t) field. This coupling is
+      encoded in the substrate as a non-separable commitment
+      structure: the two vortices no longer have independent
+      commitment patterns but share a coupled one.
+      Subsequent measurement of either vortex samples
+      the coupled commitment structure, which is why
+      results are correlated. The correlation is already
+      in the substrate — it doesn't need to travel
+      anywhere when measurement occurs.
+    bell_theorem_compatibility: >
+      Bell's theorem: no local hidden variable theory
+      can reproduce quantum correlations. Specifically,
+      no theory where each particle carries its own
+      separate information can explain the results.
+      Praestology is compatible: the phase-locked
+      commitment structure is not a hidden variable
+      in the particle — it is a property of the substrate
+      field between and around both particles. The
+      information is not carried by either particle
+      individually but is encoded in the substrate
+      commitment geometry — inherently non-separable.
+      This is not a local hidden variable theory.
+      The substrate commitment field is non-local in
+      exactly the sense Bell's theorem requires —
+      the correlating structure cannot be decomposed
+      into local properties of each particle.
+    no_ftl_signalling: >
+      Despite non-local correlations, no information
+      travels faster than c_local. The commitment
+      structure was established at interaction —
+      it doesn't travel when measurement occurs.
+      Each measurement locally reads out its portion
+      of the shared commitment pattern. The results
+      are correlated because the pattern was coupled,
+      not because a signal passed between them.
+      The impossibility of FTL signalling follows from
+      R5: you cannot choose which outcome R5 selects,
+      only that a selection occurs. The remote party
+      cannot know which outcome occurred here until
+      told by classical (sub-c) communication.
+    epr_dissolved: >
+      Einstein-Podolsky-Rosen paradox: quantum mechanics
+      appears to require "spooky action at a distance"
+      or incompleteness. Under Praestology: neither.
+      The commitment structure is local to the substrate
+      (no action at a distance — the coupling is already
+      there). The theory is complete — ψ describes the
+      full substrate tension landscape, not a particle's
+      hidden properties. EPR assumed particles carry
+      individual properties; they carry coupled substrate
+      commitment. The paradox was in the assumption.
+
+  quantisation:
+    qm_statement: >
+      Energy levels in atoms and other quantum systems
+      are discrete. Only specific values are allowed.
+      Derived in QM from boundary conditions on the
+      Schrödinger equation. The reason for discreteness
+      has no deeper explanation.
+    praestology_derivation: >
+      Discrete energy levels are discrete stable
+      phase-lock configurations — the set of vortex
+      commitment geometries that simultaneously satisfy
+      R5 stability in the nuclear commitment field.
+      Continuous energy values between these configurations
+      cannot maintain phase-lock — the vortex topology
+      cannot sustain stable commitment at intermediate
+      winding numbers. It decays immediately to the
+      nearest stable configuration, emitting the
+      Φ differential as a photon (trail reconfiguration —
+      photon-absorption-emission.yaml).
+      Quantisation is not imposed by boundary conditions
+      as a mathematical requirement — it is the physical
+      consequence of R5 selecting only topologically
+      stable phase-lock configurations. The Schrödinger
+      equation's discrete eigenvalues enumerate these
+      stable configurations. The mathematics is correct;
+      the reason it produces discrete eigenvalues is now
+      physical: only discrete winding topologies are R5-stable.
+    zero_point_energy: >
+      The lowest energy state (ground state) still has
+      nonzero energy — zero-point energy. QM derives
+      this from the uncertainty principle: confining
+      a particle to a small region requires nonzero
+      momentum uncertainty, hence nonzero kinetic energy.
+      Under R1-R5: zero-point energy is the Tik
+      background floor — the minimum substrate fluctuation
+      that exists even at T=0. A confined vortex topology
+      cannot reduce its Tik fluctuation amplitude below
+      the substrate grain minimum. The zero-point energy
+      is the commitment cost of the minimum stable
+      confinement configuration at the Tik floor.
+      Both derivations are correct expressions of the
+      same physical fact at different descriptive levels.
+
+  wave_particle_duality:
+    qm_statement: >
+      Quantum entities exhibit both wave-like and
+      particle-like behaviour depending on the experiment.
+      This is presented as a fundamental paradox or
+      complementarity — the entity is neither purely
+      wave nor purely particle.
+    praestology_derivation: >
+      Not a paradox. Not complementarity. Two aspects
+      of the same vortex topology, measured differently.
+      Particle aspect: the engine — the localised active
+      resolution front of the vortex. When interactions
+      force commitment at a point (detector click,
+      ionisation track), the engine aspect is sampled.
+      Wave aspect: the trail — the distributed commitment
+      pattern of the vortex's substrate traversal history.
+      When interactions sample the phase structure of
+      the traversal (interference experiments), the
+      trail aspect is sampled.
+      The double-slit experiment: the vortex engine
+      passes through one slit (localised — particle).
+      The trail commitment pattern extends through
+      both slits (distributed — wave). The interference
+      pattern on the detector is the trail's phase
+      structure being sampled, not the engine being
+      in two places simultaneously.
+      Which-path measurement: sampling the trail to
+      determine which slit destroys the interference
+      pattern because the measurement commits the
+      trail's phase structure, eliminating the
+      phase relationship between the two paths.
+      The duality is resolved: engine = particle aspect,
+      trail = wave aspect, one vortex topology.
+    confirming_note: >
+      Delayed-choice experiments (Wheeler) — the
+      apparent paradox that the "choice" of wave or
+      particle behaviour seems to reach back in time.
+      Under Praestology: the trail commitment structure
+      was always distributed across both paths. The
+      delayed choice determines which aspect of the
+      vortex the final measurement samples — engine
+      or trail. No retrocausality required; no paradox.
+
+  schrodinger_equation:
+    qm_statement: >
+      iℏ ∂ψ/∂t = Ĥψ — the fundamental equation of
+      quantum mechanics governing wavefunction evolution.
+      Currently postulated from classical analogy
+      (Hamilton-Jacobi equation) and consistency requirements.
+    praestology_derivation:
+      correspondence: >
+        The Schrödinger equation should be derivable
+        from the substrate wave equation:
+        ∂²p/∂t² = c²·∇²p - γ·∂p/∂t
+        applied to the quantum regime where Tik
+        fluctuations are non-negligible.
+        In the quantum regime, the substrate wave equation
+        for the vortex tension landscape reduces to
+        the Schrödinger equation in the appropriate
+        limit — the non-relativistic, low-energy limit
+        where the second time derivative is negligible
+        compared to the first.
+        The imaginary unit i arises from the phase
+        rotation of the tension landscape — the same
+        phase structure that produces interference.
+        ℏ appears as the substrate action quantum
+        (Tik floor, minimum resolution event).
+        Ĥ is the commitment density operator —
+        the mapping from current substrate state to
+        Φ differential distribution.
+      formal_derivation_path: >
+        Start from substrate wave equation p(r,t).
+        Apply vortex topology ansatz for the quantum
+        regime (Tik amplitude non-negligible).
+        Take non-relativistic limit (v << c_local).
+        Recover Schrödinger equation with ℏ identified
+        as substrate action quantum and Ĥ identified
+        as commitment density operator.
+        Identified path via Zhloshchastiev Stochastic
+        Vacuum Theory (SVT): the Schrödinger equation
+        emerges as the deterministic envelope equation
+        for a stochastic substrate process in the
+        long-wavelength limit. Mapping to Praestology:
+          SVT stochastic vacuum    → Tik background
+          SVT correlation length   → substrate grain ξ
+          SVT diffusion coefficient → substrate R at quantum scale
+          SVT envelope equation    → Schrödinger equation
+                                     for tension landscape ψ
+        The imaginary unit i appears from the phase of
+        the stochastic fluctuation field — not postulated.
+        This reduces the derivation from scratch to a
+        translation of SVT into Praestology notation.
+        Status: path identified via SVT — translation
+        work remaining rather than full derivation.
+        Reference: Zhloshchastiev, K.G. — Stochastic
+        vacuum models and quantum mechanics.
+      dirac_equation: >
+        The relativistic extension (Dirac equation)
+        should follow from the same substrate wave
+        equation without taking the non-relativistic
+        limit — retaining both time derivatives.
+        The Dirac equation's spinor structure encodes
+        the Möbius 720° topology of the electron vortex —
+        spin-1/2 from topology (already derived in
+        specifications.yaml). The Dirac equation
+        is the full relativistic substrate wave equation
+        for Möbius vortex configurations.
+        Open derivation — priority 2.
+    status: >
+      SVT path identified — translation to Praestology notation
+      remaining rather than full derivation from scratch.
+      Priority 2 for formal completion.
+
+# ─────────────────────────────────────────────
+# QFT CORRESPONDENCE
+# ─────────────────────────────────────────────
+qft_correspondence:
+  statement: >
+    Quantum Field Theory treats particles as excitations
+    of underlying fields — the electron field, photon field,
+    quark fields, and so on. This is very close to the
+    Praestology picture but stops short: QFT doesn't explain
+    what the fields are, why they have the structure they do,
+    or why there are multiple independent fields.
+  praestology_unification: >
+    There is one substrate field p(r,t).
+    All QFT particle fields are classification labels for
+    stable vortex topology classes of this single field:
+    Electron field:  Möbius 720° vortex configurations
+    Positron field:  Möbius 720° opposite chirality
+    Photon field:    Dipole vortex pair configurations
+    Neutrino field:  Solo vortex configurations
+    Quark fields:    Higher-winding knot configurations
+    Higgs field:     p_env modulation modes
+    The multi-field structure of QFT is a topology
+    classification system, not a set of independent
+    ontological primitives. One substrate; many topology classes.
+  renormalisation: >
+    QFT calculations produce divergent integrals that must
+    be regularised and renormalised — a mathematically
+    consistent but physically opaque procedure. Feynman
+    called it "a dippy process" and "hocus pocus."
+    The divergences arise from treating the substrate
+    as a continuum field with no ultraviolet cutoff —
+    summing contributions from arbitrarily short
+    wavelengths (arbitrarily high energies).
+    The substrate has a physical ultraviolet cutoff at
+    the Planck scale — the substrate grain size sets
+    the minimum length below which the continuum
+    approximation breaks down.
+    All integrals are therefore finite. Renormalisation
+    is not a mathematical trick — it is an approximation
+    procedure that correctly removes the unphysical
+    contributions from scales below the Planck cutoff.
+    The procedure works because the cutoff is physical;
+    the procedure is opaque because the physical cutoff
+    was not recognised as such.
+  virtual_particles: >
+    QFT's virtual particles — intermediate states in
+    Feynman diagrams that violate energy conservation
+    within the Heisenberg uncertainty window — are
+    Tik fluctuations in the substrate tension landscape.
+    They are real substrate fluctuations that influence
+    the resolution process but do not themselves
+    constitute committed resolution events. They are
+    "virtual" in the sense that they are unresolved
+    R3 tension states that contribute to the resolution
+    probability amplitude without themselves crossing S_lock.
+    The Casimir effect — measurable force from virtual
+    particles between conducting plates — confirms that
+    Tik fluctuations are physically real and have
+    measurable consequences. Already noted in foundations.yaml.
+  gauge_symmetry: >
+    QFT's gauge symmetries (U(1) for EM, SU(2) for weak,
+    SU(3) for strong) are constraints on the mathematical
+    description — transformations that leave physics unchanged.
+    Under Praestology: gauge symmetries are topological
+    symmetries of the vortex configurations.
+    U(1): phase rotation symmetry of the vortex winding —
+      rotating the phase of a Möbius vortex leaves its
+      physical properties unchanged. Already derived in
+      specifications.yaml.
+    SU(2): rotation symmetry of the weak isospin — the
+      two-component structure of the electroweak doublet
+      reflects the two chirality states of the vortex
+      backreaction at the S_lock threshold.
+    SU(3): colour symmetry of quark configurations —
+      the three colour charges reflect the three
+      circulation plane orientations of higher-winding
+      vortex knots. Open formal derivation.
+    The gauge symmetries are not fundamental — they are
+    consequences of vortex topology symmetries. The
+    standard model's gauge group SU(3)×SU(2)×U(1) is
+    the symmetry group of the stable vortex topology
+    classification system.
+
+# ─────────────────────────────────────────────
+# PROBLEMS THAT DISSOLVE
+# ─────────────────────────────────────────────
+problems_dissolved:
+  measurement_problem:
+    status: "Dissolved"
+    resolution: >
+      No collapse. R5 selection when interaction forces
+      commitment. No observer required. No special physical
+      process to find. The measurement problem was generated
+      by treating the wavefunction as a physical wave that
+      must somehow collapse — it is a tension landscape
+      that resolves. The problem dissolves with the reframing.
+
+  born_rule_origin:
+    status: "Mechanism identified — formal derivation open"
+    resolution: >
+      R5 viability weighting produces |ψ|² as the selection
+      probability. Quadratic form from interference cross-terms.
+      Derivable rather than postulated.
+
+  wave_particle_duality:
+    status: "Dissolved"
+    resolution: >
+      Engine (particle aspect) and trail (wave aspect) are
+      two properties of one vortex topology. Not paradox;
+      not complementarity. Two measurement modes sampling
+      different physical aspects of the same entity.
+
+  uncertainty_principle_origin:
+    status: "Dissolved"
+    resolution: >
+      Engine/trail structural distinction. Position and
+      momentum are properties of different physical aspects
+      of the vortex — cannot be simultaneously collapsed
+      because they are genuinely different things.
+
+  entanglement_mechanism:
+    status: "Dissolved"
+    resolution: >
+      Phase-locking ρ in substrate commitment structure.
+      Non-local correlations from non-separable commitment
+      pattern. Bell-compatible — not a local hidden variable.
+      No spooky action — the coupling is already in the substrate.
+
+  quantisation_origin:
+    status: "Dissolved"
+    resolution: >
+      R5-stable phase-lock configurations are discrete.
+      Continuous intermediate values are topologically
+      unstable and decay immediately. Discreteness is
+      physical, not a mathematical boundary condition artefact.
+
+  quantum_classical_boundary:
+    status: "Dissolved"
+    resolution: >
+      Continuous ratio of Tik amplitude to commitment density.
+      No fundamental boundary — a crossover. Macroscopic
+      objects are classical because their commitment density
+      renders Tik fluctuations negligible, not because
+      of a separate physical law.
+
+  epr_paradox:
+    status: "Dissolved"
+    resolution: >
+      Particles carry coupled substrate commitment, not
+      individual hidden properties. EPR's assumption
+      of particle-local properties was incorrect.
+      No incompleteness; no spooky action.
+
+  renormalisation_opacity:
+    status: "Resolved"
+    resolution: >
+      Physical ultraviolet cutoff at substrate grain scale.
+      Renormalisation correctly removes contributions from
+      below the physical cutoff. The procedure is physically
+      grounded rather than mathematically imposed.
+
+  interpretation_proliferation:
+    status: "Resolved"
+    resolution: >
+      Nineteen-plus interpretations existed because the
+      formalism underdetermined the ontology. R1-R5 provides
+      the ontology. One interpretation: substrate commitment
+      dynamics. Elements of each existing interpretation
+      that correctly identified aspects of the substrate
+      dynamics are preserved; the remainder drops away.
+
+  vacuum_energy_divergence:
+    status: "Resolved — already in foundations.yaml"
+    resolution: >
+      Finite Tik background floor from substrate grain cutoff.
+      Worst prediction in physics resolved by identifying
+      the physical ultraviolet cutoff that QFT's continuum
+      approximation omits.
+
+# ─────────────────────────────────────────────
+# PROBLEMS THAT REMAIN OPEN
+# ─────────────────────────────────────────────
+problems_remaining:
+  born_rule_formal:
+    description: >
+      Formal mathematical derivation of |ψ|² from R5
+      viability weighting. Mechanism identified; proof not yet
+      constructed. Highest priority formal derivation in
+      this file.
+    approach: >
+      Show that R5 maximisation over the substrate tension
+      landscape with interference cross-terms uniquely
+      produces the Born probability rule. Likely requires
+      measure theory on the Hilbert space of substrate
+      configurations — connecting to Gleason's theorem
+      from the substrate side rather than the Hilbert
+      space side.
+
+  schrodinger_from_substrate:
+    description: >
+      Formal derivation of Schrödinger equation from
+      substrate wave equation in non-relativistic limit.
+      Correspondence identified; derivation not yet complete.
+    approach: >
+      Apply vortex topology ansatz to substrate wave equation.
+      Take non-relativistic limit carefully. Identify ℏ
+      as substrate action quantum from Tik floor. Recover
+      Schrödinger equation with Ĥ as commitment density operator.
+
+  hbar_from_tik:
+    description: >
+      ℏ from Tik background spectrum and substrate grain size.
+      The Twitch→Planck connection — the minimum substrate
+      action quantum from the stochastic fluctuation floor.
+    approach: >
+      Model Tik as stochastic process with grain size λ_P
+      (Planck length). The minimum action quantum is the
+      energy-time product of a single Tik event at the
+      grain scale. This should yield ℏ from substrate
+      parameters without empirical input.
+
+  dirac_from_substrate:
+    description: >
+      Formal derivation of Dirac equation from substrate
+      wave equation for Möbius vortex configurations.
+      The spinor structure from 720° topology is already
+      identified — the full relativistic equation remains.
+
+  su3_from_topology:
+    description: >
+      Formal derivation of SU(3) colour symmetry from
+      three circulation plane orientations of higher-winding
+      vortex knots. Already identified as open in
+      specifications.yaml.
+
+# ─────────────────────────────────────────────
+# REVISED CONFIDENCE ASSESSMENT
+# ─────────────────────────────────────────────
+confidence_revision:
+  statement: >
+    The quantum foundation derivations revise the physics
+    domain confidence assessment upward for the conceptual
+    layer. The previous assessment (~55% overall) was
+    weighted by incomplete formal mathematics. The conceptual
+    layer is in better shape than that score implied.
+  conceptual_layer: >
+    High confidence (~80%). The QM primitive correspondences
+    are internal consistency results — each QM concept maps
+    onto framework concepts established independently for
+    other reasons. Superposition as R3 tension was not
+    invented to explain QM; it is what R3 is. The fact
+    that it correctly maps onto QM superposition is a
+    consistency confirmation, not a new claim.
+  formal_layer: >
+    Moderate confidence (~55%). Born rule, Schrödinger
+    equation, ℏ derivations are open. These are solvable
+    — the paths are identified — but unsolved. The formal
+    layer drives the overall domain score down from the
+    conceptual confidence level.
+  revised_overall: >
+    Physics domain: ~65% (revised from ~55%).
+    The quantum foundation closes several conceptual gaps
+    that were previously unaddressed, raising the floor.
+    The formal derivations remain the primary uncertainty.
+
+reading_order:
+  - "domains/physics/foundations.yaml              -- four pillars first"
+  - "domains/physics/specifications.yaml           -- substrate dynamics"
+  - "domains/physics/quantum-foundation.yaml       -- this file"
+  - "domains/physics/photon-absorption-emission.yaml -- quantisation applied"
+  - "domains/physics/electron2photon.yaml          -- entanglement applied"
+  - "domains/physics/beta-decay.yaml               -- measurement applied"
+
+related_issues:
+  - "foundational/F09_born_rule_from_r5_viability_weighting"
+  - "foundational/F10_schrodinger_from_substrate_wave_equation"
+  - "foundational/F11_hbar_from_tik_spectrum"
+  - "foundational/F12_interpretation_dissolution"
+  - "intersectional/physics/016_dirac_from_mobius_substrate_wave"
+  - "intersectional/physics/017_su3_from_circulation_plane_topology"
+  - "intersectional/physics/018_gauge_symmetry_from_vortex_topology"
+  - "intersectional/physics/019_virtual_particles_as_tik_fluctuations"
+  - "intersectional/physics_consciousness/001_born_rule_qdt_mandelbrot"
+  - "intersectional/physics_consciousness/002_entanglement_rho_correspondence"
+  - "intersectional/physics/027_schrodinger_from_svt_translation"
+  - "foundational/F15_zhloshchastiev_svt_praestology_mapping"

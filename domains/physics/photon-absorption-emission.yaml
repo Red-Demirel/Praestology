@@ -1,0 +1,644 @@
+# domains/physics/photon-absorption-emission.yaml
+name: "Photon Absorption and Emission"
+version: "1.0 — Process Definition"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Defined"
+description: >
+  Photon absorption and emission describes the exchange of energy
+  between electrons and the substrate via coherent trail interference
+  pulses. Under Praestology, atomic spectral transitions are
+  topological reconfigurations of electron shell phase-locking
+  geometry — electrons moving between stable constructive
+  interference configurations, with photons as the substrate
+  disturbances carrying the energy difference.
+  The hydrogen atom is the primary derivation target: the simplest
+  system (one proton, one electron) where the full Praestology
+  mechanism can be developed without multi-body complexity.
+  The Rydberg constant — known to 12 significant figures, the
+  most precisely measured constant in physics — is the quantitative
+  confirmation target. Deriving it from substrate parameters
+  rather than fitting it empirically would be among the strongest
+  confirmations available to the framework.
+
+process_summary:
+  mechanism: >
+    Electron shell transitions are phase-lock reconfigurations.
+    The electron's Möbius vortex pair shifts between stable
+    constructive interference geometries around the nuclear
+    chirality gradient. Each stable geometry corresponds to a
+    specific total substrate energy. The energy difference between
+    two geometries is emitted or absorbed as a coherent photon —
+    a dipole vortex backreaction pulse at the corresponding frequency.
+  key_principle: >
+    Spectral lines are discrete because stable electron shell
+    geometries are discrete — only specific constructive interference
+    configurations are topologically viable. The spectrum is a
+    map of the available stable topologies around a given nucleus.
+    Continuous spectra (blackbody) arise from thermal Tik background
+    excitation across many transition energies simultaneously.
+  praestology_anchor: >
+    R2 (Structure) + R3 (Motion) + R5 (Optimisation) —
+    discrete stable shell geometries selected by R5;
+    transitions driven by R3 tension between configurations;
+    photon as R3 operating at the EM field level.
+
+# ─────────────────────────────────────────────
+# HYDROGEN ATOM — DERIVATION TARGET
+# ─────────────────────────────────────────────
+hydrogen_atom:
+  description: >
+    Hydrogen: one proton (uud, charge +1 chirality gradient)
+    and one electron (Möbius vortex pair, charge -1).
+    The electron phase-locks around the proton's chirality
+    gradient in discrete stable interference geometries —
+    the orbitals. Each orbital corresponds to a specific
+    trail interference pattern with a specific total energy.
+  why_hydrogen_first: >
+    No multi-body complexity. The proton chirality gradient
+    is the only external field. The electron's stable
+    geometries are determined by one parameter: the principal
+    quantum number n, which counts the number of constructive
+    interference nodes in the trail pattern.
+    Once the hydrogen derivation is complete, multi-electron
+    atoms add screening and exchange interactions — but the
+    foundation is the single-electron case.
+
+  orbital_geometry:
+    ground_state_n1: >
+      Lowest energy configuration — electron trail forms a
+      single spherical constructive interference shell around
+      the proton. No nodes in the radial trail pattern.
+      Maximum phase-lock with the proton chirality gradient —
+      the electron's Möbius topology is as close to the
+      attractive centre as stability threshold permits.
+      The Bohr radius a₀ is the characteristic scale of this
+      configuration — the radius at which the electron's
+      centripetal phase-lock balances the proton's chirality
+      attraction.
+    excited_states_n2_plus: >
+      Higher energy configurations — additional constructive
+      interference nodes in the trail pattern. Each node
+      represents one additional half-cycle of the electron's
+      orbital trail. The electron is further from the proton
+      on average; weaker phase-lock; higher total energy.
+      n = principal quantum number = number of trail
+      interference nodes + 1. Discrete because only integer
+      node counts produce stable constructive interference.
+    angular_momentum: >
+      Sub-shell structure (s, p, d, f) corresponds to angular
+      distribution of trail interference nodes. s-orbital:
+      all nodes radial — spherical trail. p-orbital: one
+      angular node — dumbbell trail. d-orbital: two angular
+      nodes — cloverleaf trail. Each sub-shell geometry is a
+      distinct stable trail topology with specific symmetry.
+
+  bohr_radius_derivation:
+    definition: >
+      a₀ = the characteristic radius of the n=1 hydrogen orbital —
+      the equilibrium distance where electron phase-lock energy
+      balances proton chirality attraction.
+    standard_value: "a₀ = 5.29177×10⁻¹¹ m"
+    praestology_approach: >
+      At radius r, the electron's orbital phase-lock produces
+      centripetal acceleration balanced by the proton's chirality
+      gradient (Coulomb attraction = EM chirality coupling from
+      specifications.yaml). The stable orbit condition requires
+      the electron trail to close on itself with constructive
+      interference — integer number of wavelengths in circumference.
+      This is the de Broglie condition: 2πr = n·λ_electron,
+      where λ_electron = h/p (trail wavelength from momentum).
+      Combining orbital balance with trail closure condition:
+      a₀ = ℏ²/(m_e·e²·k_e) — where k_e is the Coulomb constant,
+      derivable from substrate chirality coupling strength.
+    substrate_parameters: >
+      a₀ contains: ℏ (substrate action quantum — from Twitch/Planck
+      connection), m_e (electron mass = S×R for Möbius topology),
+      e (elementary charge = unit chirality winding number),
+      k_e (Coulomb coupling = chirality gradient strength from EM section).
+      All four are derivable from substrate parameters in principle.
+      Bohr radius is a derived quantity, not a fundamental constant.
+    confirming_note: >
+      de Broglie (1924) — electron wavelength λ = h/p; predicts
+      electron diffraction. Confirmed by Davisson-Germer (1927).
+      Directly confirms trail wavelength interpretation —
+      the electron's trail has a measurable wavelength consistent
+      with its momentum. This is the engine/trail distinction
+      (observational_interface in specifications.yaml) confirmed
+      at atomic scale.
+
+# ─────────────────────────────────────────────
+# RYDBERG CONSTANT — PRIMARY DERIVATION TARGET
+# ─────────────────────────────────────────────
+rydberg_constant:
+  definition: >
+    The Rydberg constant R∞ appears in the formula for all
+    hydrogen spectral line frequencies:
+    1/λ = R∞·(1/n₁² - 1/n₂²)
+    where n₁ and n₂ are the principal quantum numbers of the
+    lower and upper states.
+  standard_value: "R∞ = 10,973,731.568160 m⁻¹ (known to 12 significant figures)"
+  standard_derivation: >
+    In quantum mechanics: R∞ = m_e·e⁴/(8ε₀²·h³·c)
+    = α²·m_e·c/(2h)
+    where α is the fine structure constant.
+    All quantities are empirical inputs in the standard model.
+  why_12_figures_matters: >
+    R∞ is the most precisely known constant in physics (relative uncertainty ~10⁻¹²). 
+    Matching it numerically from substrate parameters would be among the strongest possible quantitative confirmations.
+
+  praestology_derivation_path:
+    step_1_energy_levels: >
+      Hydrogen energy levels: E_n = -m_e·e⁴/(8ε₀²·h²·n²)
+      = -13.6 eV / n²
+      In Praestology: E_n is the total substrate energy of
+      the electron phase-lock configuration at node number n.
+      The 1/n² scaling follows from the trail closure condition:
+      at principal quantum number n, the trail circumference
+      is n wavelengths, so the orbital radius scales as n²·a₀,
+      and the chirality gradient attraction scales as 1/r²,
+      giving total energy ∝ -1/n².
+    step_2_transition_energy: >
+      Transition from n₂ → n₁ releases energy:
+      ΔE = E_n1 - E_n2 = 13.6 eV · (1/n₁² - 1/n₂²)
+      This energy is emitted as a single photon with
+      frequency ν = ΔE/h — the trail interference pulse
+      frequency corresponding to the energy difference.
+    step_3_rydberg_emergence: >
+      Converting to wavelength (λ = c/ν):
+      1/λ = ΔE/(h·c) = (m_e·e⁴)/(8ε₀²·h³·c) · (1/n₁² - 1/n₂²)
+      The prefactor is R∞. It contains only:
+      - m_e: electron mass (S×R for Möbius topology)
+      - e: elementary charge (unit chirality winding)
+      - ε₀: vacuum permittivity (substrate chirality response)
+      - h: Planck constant (substrate action quantum)
+      - c: Φ_max (substrate maximum resolution flux)
+      All five are in principle derivable from substrate parameters.
+    step_4_substrate_expression: >
+      R∞ = α² · m_e·c / (2h)
+      where α ≈ 1/137 is the fine structure constant —
+      the substrate chirality coupling strength (EM section,
+      specifications.yaml, open derivation).
+      If α is derived from substrate impedance Z₀,
+      and m_e is derived from Möbius topology S×R,
+      and c is derived as Φ_max,
+      then R∞ follows from substrate parameters entirely.
+      R∞ is the end point of the chain; its precise value
+      encodes the product of all substrate coupling strengths
+      at the atomic scale.
+    precision_significance: >
+      R∞ is known to 12 significant figures — 10,973,731.568160 m⁻¹.
+      A substrate derivation must reproduce this value to the
+      same precision to constitute confirmation. This is the
+      most demanding quantitative test the framework faces.
+      Partial derivation (correct order of magnitude, correct
+      functional form) is still significant; full numerical
+      reproduction would be decisive.
+    open_derivation: >
+      Full derivation of R∞ from substrate parameters requires:
+      (1) α from Z₀ (EM open derivation — highest priority)
+      (2) m_e from Möbius topology S×R (specifications open derivation)
+      (3) c as Φ_max (specifications open derivation)
+      R∞ derivation is the convergence point of three independent
+      open derivations. If all three are completed, R∞ follows
+      automatically and provides the quantitative confirmation.
+
+  spectral_series:
+    lyman_series:
+      transitions: "n ≥ 2 → n = 1"
+      wavelength_range: "91-122 nm (ultraviolet)"
+      praestology: >
+        Transitions to ground state — most energetic series.
+        n=1 is the tightest phase-lock configuration;
+        all higher states releasing to it emit UV photons.
+      confirming_note: >
+        Lyman (1906) — discovered UV hydrogen series.
+        Lyman-alpha (121.6 nm, n=2→1) — most prominent UV line;
+        used as cosmological probe (Lyman-alpha forest in
+        quasar spectra — maps hydrogen distribution along
+        line of sight). Direct connection to cosmos domain.
+
+    balmer_series:
+      transitions: "n ≥ 3 → n = 2"
+      wavelength_range: "365-656 nm (visible)"
+      praestology: >
+        Transitions to n=2 — visible series. H-alpha (656 nm,
+        red) gives hydrogen nebulae their characteristic colour.
+        First spectral series discovered empirically (Balmer 1885)
+        — before quantum mechanics provided an explanation.
+      confirming_note: >
+        Balmer formula (1885) — empirical fit 1/λ = R·(1/4 - 1/n²)
+        predating quantum mechanics by 20 years. Praestology
+        derives what Balmer observed empirically — the trail
+        closure condition produces exactly Balmer's formula.
+        H-alpha absorption in stellar spectra — temperature
+        classification of stars by Balmer line strength.
+
+    paschen_brackett_pfund:
+      transitions: "n ≥ 4,5,6 → n = 3,4,5 (infrared series)"
+      praestology: >
+        Lower energy transitions — longer wavelengths.
+        Same mechanism; decreasing photon energy as transitions
+        occur between higher orbital configurations with
+        smaller energy differences.
+      confirming_note: >
+        All series confirmed experimentally. The single formula
+        (Rydberg) covers all series with one constant — consistent
+        with one mechanism (trail closure reconfigurations) at all scales.
+
+# ─────────────────────────────────────────────
+# EMISSION AND ABSORPTION MECHANISMS
+# ─────────────────────────────────────────────
+emission:
+  spontaneous:
+    description: >
+      Excited electron in upper orbital n₂ spontaneously decays
+      to lower orbital n₁, emitting a photon.
+    praestology_mechanism: >
+      Upper orbital is metastable — S is above S_lock for
+      that configuration but below the S that would cause
+      complete dissolution. The stochastic Tik background
+      perturbs the electron trail; when perturbation amplitude
+      sufficient, trail reconfigures to lower-energy geometry.
+      Energy difference emitted as coherent dipole backreaction
+      pulse — photon — at frequency ν = ΔE/h.
+    lifetime: >
+      Excited state lifetime is the mean time for a Tik
+      fluctuation to trigger trail reconfiguration.
+      Typical atomic excited states: ~10⁻⁸ s (10 nanoseconds).
+      Metastable states (forbidden transitions): 10⁻³ s to seconds —
+      transitions where the trail reconfiguration requires
+      simultaneous angular momentum change that the Tik
+      background rarely provides.
+    confirming_note: >
+      Einstein A coefficient (1917) — spontaneous emission rate.
+      Praestology: A encodes the Tik background coupling strength
+      to the specific orbital transition geometry. Selection rules
+      (Δl = ±1, Δm = 0,±1) follow from angular momentum conservation
+      in trail reconfiguration — not separate postulates.
+
+  stimulated:
+    description: >
+      Incoming photon with frequency matching transition energy
+      triggers emission of a second identical photon — the basis
+      of laser action.
+    praestology_mechanism: >
+      Incoming photon trail (dipole EM wave) resonantly couples
+      to the excited electron's orbital trail at the transition
+      frequency. The resonant coupling drives trail reconfiguration
+      coherently — the emitted photon has identical frequency,
+      phase, and direction to the stimulating photon.
+      The electron's trail interference pattern locks onto
+      the incoming photon's trail pattern — C6-level phase-locking
+      at the photon-electron scale.
+    laser_implication: >
+      Population inversion (more electrons in upper than lower
+      state) + stimulated emission + optical feedback = laser.
+      Coherent light from coherent trail phase-locking.
+      Laser coherence is macroscopic Möbius vortex synchronisation
+      via stimulated trail coupling — the EM equivalent of
+      BEC coherence in matter.
+    confirming_note: >
+      Einstein B coefficient (1917) — predicted stimulated emission
+      decades before laser demonstration (Maiman 1960).
+      Laser operation confirms resonant trail coupling as
+      coherent emission mechanism. Laser coherence length —
+      directly measures the phase-locking persistence of
+      stimulated emission; longer coherence = stronger
+      trail coupling.
+
+absorption:
+  description: >
+    Photon absorbed by electron in lower orbital n₁, exciting
+    it to upper orbital n₂ — reverse of emission.
+  praestology_mechanism: >
+    Incoming photon trail resonantly couples to the electron's
+    orbital trail at the transition frequency. Trail coupling
+    transfers photon energy to the electron's orbital configuration —
+    electron reconfigures from n₁ geometry to n₂ geometry.
+    Photon is absorbed — its trail energy is incorporated into
+    the new orbital phase-lock configuration.
+    Resonance condition: photon frequency must exactly match
+    ΔE/h for the transition. Off-resonance photons pass through
+    without coupling — no absorption.
+  photoelectric_effect: >
+    If photon energy exceeds ionisation energy (binding energy
+    of the outermost electron), the electron is completely
+    liberated from the nuclear chirality gradient — the phase-lock
+    is broken entirely. The electron carries away the surplus
+    energy as kinetic energy.
+    Einstein (1905) — photoelectric effect explained by photon
+    quanta. Under Praestology: photon as discrete dipole pulse
+    (not continuous wave) delivers energy in a single trail
+    coupling event. Threshold frequency corresponds to minimum
+    photon energy required to break the outermost electron's
+    phase-lock S_lock.
+  confirming_note: >
+    Fraunhofer absorption lines (1814) — dark lines in solar
+    spectrum from photon absorption by solar atmosphere atoms.
+    Each element's absorption lines are its topological
+    fingerprint — the set of trail reconfiguration energies
+    available to its electron configurations. Stellar spectroscopy
+    uses these fingerprints to identify elemental composition.
+    Same lines in absorption and emission (Kirchhoff's law) —
+    follows directly: same phase-lock transitions, same energy
+    differences, regardless of direction.
+
+  why_hydrogen_first: >
+    Single electron + single proton = minimal vortex complexity. 
+    All spectral features derive from one parameter (n = trail node count). 
+    Multi-electron atoms add screening/exchange — but hydrogen is the foundation.
+
+# ─────────────────────────────────────────────
+# SELECTION RULES
+# ─────────────────────────────────────────────
+selection_rules:
+  description: >
+    Not all transitions between orbitals are equally probable.
+    Selection rules specify which transitions are allowed
+    (high probability) and which are forbidden (very low probability).
+    In standard QM: selection rules from matrix element calculation.
+    In Praestology: selection rules from trail angular momentum
+    conservation in the reconfiguration event.
+  delta_l_rule:
+    rule: "Δl = ±1 (angular momentum quantum number must change by 1)"
+    praestology: >
+      The emitted/absorbed photon carries one unit of angular
+      momentum (spin-1 boson in standard model — dipole vortex
+      pair with one unit of axial orientation).
+      Trail reconfiguration must conserve total angular momentum:
+      orbital trail angular momentum change must equal photon
+      angular momentum. A single-photon event can only transfer
+      one unit — forcing Δl = ±1.
+      Forbidden transitions (Δl = 0, ±2) require multi-photon
+      events or magnetic/quadrupole coupling — much lower
+      probability, hence long-lived metastable states.
+  delta_m_rule:
+    rule: "Δm = 0, ±1 (magnetic quantum number)"
+    praestology: >
+      Projection of angular momentum onto quantisation axis.
+      Photon axial orientation has three projections (+1, 0, -1)
+      corresponding to left circular, linear, and right circular
+      polarisation. Absorption/emission of each polarisation
+      type changes m by the corresponding amount.
+  spin_rule:
+    rule: "Δs = 0 (spin cannot change in electric dipole transition)"
+    praestology: >
+      Electric dipole transitions couple to the orbital trail,
+      not to the Möbius topology (chirality/spin). Spin flip
+      requires magnetic dipole coupling — much weaker, gives
+      much longer transition lifetimes (metastable states,
+      phosphorescence, hyperfine transitions).
+  confirming_note: >
+    Forbidden line astronomy — nebula emission includes
+    'forbidden' transitions (long lifetime metastable states)
+    visible because nebular density is too low for collisional
+    de-excitation before spontaneous emission. Selection rules
+    confirmed by astronomical line identification.
+    Hyperfine 21 cm hydrogen line — spin-flip transition
+    (Δs = 1, magnetic dipole). Lifetime ~10⁷ years;
+    only observable in cold, diffuse interstellar hydrogen.
+    Used to map galactic hydrogen distribution. Confirms
+    spin-flip as separate (very weak) coupling mechanism.
+
+# ─────────────────────────────────────────────
+# MULTI-ELECTRON ATOMS
+# ─────────────────────────────────────────────
+multi_electron:
+  description: >
+    Beyond hydrogen, additional electrons add complexity —
+    electron-electron trail interactions (screening and exchange)
+    modify the effective chirality gradient seen by each electron.
+  screening: >
+    Inner shell electrons partially cancel the nuclear chirality
+    gradient for outer shell electrons — the outer electron
+    sees an effective charge Z_eff < Z. Screening reduces the
+    binding energy of outer electrons relative to pure Coulomb.
+    In Praestology: inner electron trail patterns partially
+    overlap with the nuclear chirality gradient, reducing the
+    net gradient available to outer electron phase-locking.
+  exchange_interaction: >
+    Electrons with same spin (parallel Möbius axial orientation)
+    cannot occupy the same orbital (Pauli exclusion) —
+    their trail patterns would conflict. This forces electrons
+    into different orbitals, affecting total energy.
+    Exchange energy is the energy difference between configurations
+    with parallel and antiparallel spin — direct measure of
+    trail conflict between same-orientation Möbius pairs.
+  hund_rules: >
+    (1) Maximum spin multiplicity: electrons prefer parallel
+        spins in degenerate orbitals — minimises trail conflict
+        by keeping same-spin electrons spatially separated.
+    (2) Maximum angular momentum: for given spin multiplicity,
+        maximum orbital angular momentum — maximises phase-lock
+        with nuclear chirality gradient.
+    Both rules follow from R5 selecting minimum energy
+    configurations — no additional postulates needed.
+  confirming_note: >
+    Helium spectrum — two independent series (orthohelium,
+    parahelium) from parallel/antiparallel electron spins.
+    Exchange energy directly measured from splitting between
+    series. Consistent with trail conflict (exchange) energy
+    between paired Möbius vortices.
+    Periodic table chemical behaviour — entirely determined
+    by outer electron configuration from these rules.
+    Same topological mechanism from single electron to
+    all 118 known elements.
+
+# ─────────────────────────────────────────────
+# BLACKBODY RADIATION
+# ─────────────────────────────────────────────
+blackbody_radiation:
+  description: >
+    Thermal emission from matter at temperature T — continuous
+    spectrum peaking at wavelength λ_max ∝ 1/T (Wien's law).
+  praestology_mechanism: >
+    Thermal Tik background at temperature T excites electrons
+    across many transition frequencies simultaneously. Each
+    de-excitation emits a photon at the corresponding frequency.
+    The statistical distribution of Tik background amplitudes
+    (Planck distribution) determines the spectral shape.
+    Blackbody spectrum is the Tik background spectrum filtered
+    through the available atomic transitions — for a dense
+    blackbody, all frequencies are available and the spectrum
+    approaches the pure Tik background distribution.
+  planck_distribution: >
+    B(ν,T) = (2hν³/c²) · 1/(e^(hν/kT) - 1)
+    In Praestology: the 1/(e^(hν/kT) - 1) factor is the
+    Bose-Einstein distribution for photons (integer spin —
+    bosonic stage of structural emergence). Multiple photons
+    can occupy the same trail mode — no Pauli exclusion.
+    The Planck factor hν/kT encodes the ratio of photon
+    trail energy to thermal Tik background energy.
+  ultraviolet_catastrophe_resolution: >
+    Classical physics predicts infinite energy at short wavelengths
+    (Rayleigh-Jeans law diverges). Planck (1900) resolved this
+    by quantising energy — heuristically, without physical basis.
+    Praestology resolves it physically: photons are discrete
+    dipole vortex pairs. Below the Planck scale grain size,
+    no further subdivision is possible. The spectrum is
+    cut off at high frequency by substrate grain size —
+    not by mathematical quantisation but by the physical
+    minimum of vortex topology.
+  confirming_note: >
+    CMB spectrum — most perfect blackbody spectrum ever measured
+    (COBE 1990, Planck satellite). Temperature 2.725 K.
+    Consistent with thermal Tik background from early universe
+    cooling to current temperature. CMB is the Tik background
+    spectrum made visible — direct observation of the substrate's
+    thermal state.
+    Stefan-Boltzmann law (total power ∝ T⁴) — derivable from
+    integrating Planck distribution; confirms statistical
+    structure of Tik background spectrum.
+
+# ─────────────────────────────────────────────
+# CONSERVATION LAWS
+# ─────────────────────────────────────────────
+conservation_laws:
+  energy: >
+    Photon energy exactly equals transition energy difference.
+    ΔE = hν — substrate energy conservation from trail
+    reconfiguration to photon emission.
+  momentum: >
+    Photon carries momentum p = hν/c = h/λ.
+    Atom recoils with equal and opposite momentum.
+    In dense media (Mössbauer effect) — crystal lattice
+    absorbs recoil collectively; recoil-free emission possible.
+  angular_momentum: >
+    Photon carries ±ℏ angular momentum (circular polarisation)
+    or 0 (linear polarisation). Orbital angular momentum
+    changes by corresponding amount — selection rules enforce
+    this conservation exactly.
+  topological_winding: >
+    Electron Möbius topology unchanged by photon emission —
+    same winding number in different orbital geometry.
+    Photon trail carries the orbital reconfiguration energy,
+    not the Möbius topology itself.
+
+# ─────────────────────────────────────────────
+# CONNECTION TO OTHER DOMAINS
+# ─────────────────────────────────────────────
+domain_connections:
+  chemistry: >
+    Atomic spectroscopy directly maps onto electron shell
+    configurations (chemistry/atoms.yaml). Spectral lines are
+    the experimental fingerprint of the shell topology.
+    Molecular spectroscopy (rotational, vibrational, electronic)
+    extends the same mechanism to molecular bond trail geometries —
+    bond lengths and angles directly measurable from spectra.
+  cosmos: >
+    Stellar spectroscopy — elemental composition from absorption
+    lines (Fraunhofer lines). Temperature from blackbody peak.
+    Velocity from Doppler shift of spectral lines.
+    Lyman-alpha forest — hydrogen absorption in quasar spectra
+    maps large-scale structure distribution.
+    21 cm line — galactic hydrogen mapping from hyperfine
+    spin-flip transition.
+  communication: >
+    Lasers as coherent photon sources depend entirely on
+    stimulated emission (trail phase-locking). Optical fibre
+    communication, quantum cryptography, and precision
+    measurement all build on the trail coupling mechanism.
+    Spectroscopy as information transmission — atomic spectra
+    are the universe's most precise barcodes, readable across
+    cosmological distances.
+
+# ─────────────────────────────────────────────
+# TESTABLE PREDICTIONS
+# ─────────────────────────────────────────────
+testable_predictions:
+  - prediction: >
+      Rydberg constant R∞ derivable from substrate parameters:
+      α (chirality coupling), m_e (Möbius mass), c (Φ_max).
+      Derivation must reproduce 10,973,731.568160 m⁻¹ to
+      match experimental precision.
+    test: "Formal mathematical derivation — convergence of
+           three independent open derivations."
+    significance: >
+      Most precisely measured constant in physics. Correct
+      derivation to 12 significant figures would be decisive
+      quantitative confirmation of the substrate model.
+
+  - prediction: >
+      Fine structure (spectral line splitting from spin-orbit
+      coupling) derivable from Möbius axial orientation
+      interaction with orbital trail field.
+      Fine structure constant α appears in fine structure
+      splitting — directly testing the α derivation.
+    test: "Hydrogen fine structure calculation from Möbius
+           topology geometry. Compare to measured splitting."
+
+  - prediction: >
+      Lamb shift (small deviation from Dirac prediction for
+      hydrogen energy levels) derivable from stochastic
+      Tik background interaction with electron trail.
+      Lamb shift is currently explained by QED vacuum
+      fluctuations — Praestology maps vacuum fluctuations
+      onto Tik background.
+    test: "Lamb shift calculation from Tik background spectrum
+           coupling to Möbius orbital geometry."
+    note: >
+      Lamb shift (1947) — measured to high precision;
+      triggered development of QED. Praestology should
+      reproduce it from Tik background statistics without
+      requiring renormalisation — a significant claim.
+
+  - prediction: >
+      Photon emission lifetime (Einstein A coefficient) for
+      each transition derivable from Tik background coupling
+      strength to specific trail reconfiguration geometry.
+    test: "A coefficient derivation for hydrogen transitions.
+           Compare to measured lifetimes (known to high precision)."
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+open_derivations:
+  priority_1:
+    - >
+      Full derivation of R∞ from substrate parameters —
+      convergence point of α, m_e, and c derivations.
+      Most demanding quantitative test of the framework.
+    - >
+      Fine structure constant α from substrate impedance Z₀ —
+      prerequisite for R∞ and multiple other derivations.
+      Highest priority open derivation across entire physics domain.
+
+  priority_2:
+    - >
+      Lamb shift from Tik background spectrum — tests whether
+      QED renormalisation is replaceable by substrate dynamics.
+    - >
+      Einstein A and B coefficients from Tik background
+      coupling geometry — transition lifetime derivation.
+    - >
+      Selection rules formally derived from trail angular
+      momentum conservation — currently stated as mechanism,
+      requires mathematical proof.
+
+  priority_3:
+    - >
+      Multi-electron screening function Z_eff(n,l) from
+      trail overlap geometry — would allow spectral prediction
+      for all elements, not just hydrogen.
+    - >
+      Molecular spectroscopy connection — extend orbital
+      trail geometry to bond trail geometry for molecular
+      vibrational and rotational spectra.
+
+reading_order:
+  - "domains/physics/specifications.yaml              — substrate, EM phenomena"
+  - "domains/physics/electron2photon.yaml             — pair production/annihilation"
+  - "domains/physics/beta-decay.yaml                  — weak force reference"
+  - "domains/physics/nuclear-binding.yaml             — nuclear scale reference"
+  - "domains/physics/photon-absorption-emission.yaml  — this file"
+  - "domains/chemistry/atoms.yaml                     — atomic structure (forthcoming)"
+  - "domains/chemistry/molecules.yaml                 — molecular spectra (forthcoming)"
+
+related_issues:
+  - "intersectional/physics/004_rydberg_derivation — convergence target"
+  - "intersectional/physics/005_lamb_shift_tik_background"
+  - "intersectional/physics_chemistry/003_molecular_spectroscopy"
+  - "intersectional/physics_cosmos/004_lyman_alpha_cosmology"
+  - "foundational/F01_axiom_circularity — does substrate derivation
+     of R∞ presuppose the atomic structure it derives?"

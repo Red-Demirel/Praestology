@@ -1,0 +1,1266 @@
+# domains/physics/foundations.yaml
+name: "Physics Domain — Ontological Foundations"
+version: "1.0"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Defined"
+description: >
+  This file states the three foundational ontological commitments
+  of the Praestology physics domain explicitly. These commitments
+  are not assumptions imported from outside the framework —
+  each is derived from R1-R5 and each replaces a concept from
+  the standard model or GR that functions as an unexplained
+  primitive or implicit substance.
+  The three commitments are:
+  (1) Mass as inertia-effect — not an intrinsic property
+  (2) Space-time replacement by QHD and optics — not a container
+  (3) Energy as Φ bookkeeping — not a substance
+  These are the strongest conceptual claims in the physics domain.
+  The quantitative derivations (α, M_W, R∞) build on these
+  foundations. The foundations themselves are derivable from
+  R1-R5 without measurement — they are structural consequences
+  of the framework's ontology.
+  Purpose of this file: make these commitments explicit so that
+  (a) the physics process files can reference them cleanly,
+  (b) falsification conditions are unambiguous, and
+  (c) the departure from standard model ontology is stated
+      rather than implied.
+
+relation_to_standard_model: >
+  The standard model and GR are not wrong — their mathematics
+  correctly describes observations to extraordinary precision.
+  Praestology's claim is that their ontological foundations
+  are incomplete: they correctly describe what observers see
+  but mistake observational coordinate systems and bookkeeping
+  quantities for fundamental ontological primitives.
+  SR and GR: correct as observational frameworks; incomplete
+  as ontologies. The Lorentz transformation describes what
+  light-based observers see; it is not a fundamental symmetry
+  of reality.
+  QED/QCD/electroweak: correct as effective theories; their
+  gauge fields and force primitives are derived from substrate
+  topology rather than assumed as given.
+  The relationship is the same as Praestology has with Maxwell
+  and GR throughout: the mathematics is right; the ontological
+  foundation is new.
+
+# ─────────────────────────────────────────────
+# COMMITMENT 1: MASS AS INERTIA-EFFECT
+# ─────────────────────────────────────────────
+mass_as_inertia_effect:
+  statement: >
+    Mass is not an intrinsic property of particles.
+    Mass is the dynamic resistance of a self-sustaining vortex
+    topology to changes in its trajectory through the substrate.
+    It is an effect — the substrate's backreaction to forced
+    vortex acceleration — not a substance the particle possesses.
+  what_this_replaces: >
+    Standard model: mass is either an unexplained intrinsic
+    property (pre-Higgs) or acquired via interaction with the
+    Higgs field (post-Higgs). In both cases, mass is treated
+    as a quantity a particle has. The Higgs mechanism explains
+    how particles acquire mass but not what mass fundamentally is.
+    Praestology: mass is what inertia feels like from the outside.
+    The Higgs field is the p_env modulation that sets the effective
+    substrate resistance — correctly identified by the standard
+    model, differently interpreted.
+
+  derivation:
+    from_r3_r5: >
+      R3 (Motion): a vortex topology propagates through the substrate
+      by continuous self-sustaining resolution — the engine/trail
+      mechanism. The vortex does not travel through empty space;
+      it continuously re-establishes itself in the substrate ahead
+      while its trail disperses behind.
+      R5 (Optimisation): the substrate selects the minimum resistance
+      trajectory. Any deviation from this trajectory requires work
+      against the substrate's resolution dynamics.
+    inertia_mechanism: >
+      When an external force attempts to change a vortex's trajectory,
+      it must redirect the substrate's resolution dynamics that sustain
+      the vortex. The substrate resists this redirection — not because
+      of a property the vortex possesses but because redirecting a
+      self-sustaining resolution process requires energy input against
+      the existing momentum density field p(r,t).
+      This resistance is inertia. Its magnitude is mass.
+      m_eff = α · S · R / c²
+      where S is the local anomaly (vortex complexity),
+      R is the substrate resistance at the vortex location,
+      c² = Φ_max² is the maximum substrate resolution rate squared,
+      α is the substrate coupling constant.
+      Mass scales with vortex complexity (S) and local resistance (R)
+      — more complex topology, harder to redirect; denser substrate
+      region, more resistance to traverse.
+    zero_mass_derivation: >
+      Photon (dipole vortex pair, coherent S cancellation):
+      S_net ≈ 0 → m_eff ≈ 0.
+      Not a coincidence or a postulate. The photon has zero mass
+      because its topology produces coherent anomaly cancellation —
+      nothing to resist redirection because the vortex pair's
+      opposing circulations cancel in the substrate.
+      This is derived, not assumed.
+    higgs_correspondence: >
+      Higgs field = p_env (environmental momentum density) modulation.
+      In the high-Φ early universe, p_env is near-uniform and low —
+      W/Z bosons propagate with near-zero effective mass (electroweak
+      unification regime). As the universe cools (Φ decreases), p_env
+      settles to its current value — electroweak symmetry breaking.
+      The specific p_env value determines M_W and M_Z via the S_lock
+      threshold for quark winding reorganisation (beta-decay.yaml).
+      The Higgs mechanism is correct; its physical interpretation is
+      p_env settling, not a separate scalar field acquiring a
+      vacuum expectation value as an unexplained given.
+    mach_principle: >
+      Mach's principle: inertia of a body arises from its interaction
+      with all other matter in the universe. Long considered
+      philosophically compelling but never formally incorporated
+      into GR (Einstein tried and partially succeeded with frame-dragging).
+      Praestology realises Mach's principle: the substrate p(r,t) field
+      is the integrated effect of all matter distributions on the
+      local momentum density. Inertia is resistance from the substrate,
+      which encodes the global matter distribution. Mach is derived,
+      not postulated.
+
+  consequences:
+    - >
+      Variable inertia: in regions of different substrate R (near
+      massive objects, in voids), effective mass is slightly different.
+      This is a small effect but in principle measurable — inertial
+      mass should show weak environmental dependence not predicted
+      by the standard model.
+    - >
+      Neutrino mass: solo vortex with minimal winding, S barely above
+      S_lock. m_ν is small but nonzero because S > 0. The specific
+      values (m_ν < 0.12 eV from cosmological constraints) encode
+      the minimum stable winding S_lock value — derivable in principle.
+    - >
+      Graviton not required: gravity is substrate geometry (R gradient
+      curvature), not particle exchange. The graviton is a mathematical
+      artefact of attempting to quantise a geometric effect. No graviton
+      detection is expected because there is no graviton — gravity is
+      not a force in the particle-exchange sense.
+  confirming_note: >
+    Equivalence principle (inertial mass = gravitational mass) —
+    in Praestology these are the same quantity: both are the
+    substrate resistance of the vortex topology. No coincidence;
+    no fine-tuning. Identity follows from derivation.
+    Higgs boson discovery (CERN 2012) — confirms the Higgs field
+    existence. Praestology interprets it as p_env modulation
+    confirmed experimentally. The boson is the quantised excitation
+    of the p_env field — the Tik pulse of the Higgs substrate mode.
+    Pioneer anomaly — slight unexplained acceleration of Pioneer
+    spacecraft. Consistent with weak substrate R dependence of
+    effective inertia at large distances from the solar system's
+    mass concentration. Partially resolved by thermal recoil
+    explanation but residual uncertainty remains.
+
+  standard_model_open_question_dissolved: >
+    "Why do particles have the masses they do?" — currently
+    unanswered in the standard model (mass values are empirical
+    inputs, not derived). Praestology's answer: mass values
+    encode vortex topology complexity (S) and local substrate
+    resistance (R). Deriving specific mass values requires
+    completing the knot/topology classification (open derivation
+    in specifications.yaml) — but the mechanism is identified.
+
+# ─────────────────────────────────────────────
+# COMMITMENT 2: SPACE-TIME REPLACEMENT BY QHD AND OPTICS
+# ─────────────────────────────────────────────
+spacetime_replacement:
+  statement: >
+    Spacetime is not a fundamental container within which physics
+    occurs. It is an observational description — the coordinate
+    system that light-based observers construct from their
+    measurements. The underlying reality is a 3D momentum-density
+    substrate p(r,t) evolving under a process counter (R4).
+    Space and time are ontologically distinct: space is topological
+    (3D from R5 stability), time is processual (R4 accumulation
+    index). The symmetric 4D Minkowski manifold treats them as
+    equivalent dimensions — mathematically useful, ontologically
+    misleading.
+  what_this_replaces: >
+    GR: spacetime is a 4D pseudo-Riemannian manifold that curves
+    in response to mass-energy. Spacetime is the fundamental
+    arena; matter and geometry are coupled.
+    SR: spacetime is a 4D symmetric manifold with Lorentz symmetry.
+    Space and time mix under boosts — they are the same kind of
+    thing differing only by a sign in the metric.
+    Both treat spacetime as ontologically primary. Both produce
+    singularities (where the manifold breaks down) and cannot
+    explain the arrow of time (the manifold is time-symmetric).
+    Praestology: the 4D manifold is a derived coordinate system
+    valid for light-based observers, not the fundamental reality.
+
+  qhd_substrate:
+    description: >
+      Quantum Hydrodynamics (QHD) of the Praesto substrate:
+      the momentum-density field p(r,t) evolving under the
+      wave equation ∂²p/∂t² = c²·∇²p - γ·∂p/∂t.
+      This is a 3D field with a process counter t.
+      The substrate is not in spacetime — spacetime is derived
+      from how observers using light signals measure the substrate.
+    three_dimensions: >
+      Spatial dimensionality = 3 is derived from R5 topological
+      stability. In fewer than 3 dimensions, stable vortex knots
+      cannot form (topology is too simple). In more than 3
+      dimensions, vortex structures are unstable (Derrick's
+      theorem: soliton stability requires specific dimensionality).
+      3D is the unique dimensionality that permits stable
+      self-sustaining vortex topologies — the structures that
+      constitute matter. Spatial dimensionality is R5-selected,
+      not assumed.
+      Open derivation: formal proof that 3D is the unique
+      R5-stable dimensionality for Möbius vortex topology.
+    time_as_process_counter: >
+      Time (t in the wave equation) is the R4 accumulation index —
+      the count of irreversible resolution events. It is not a
+      dimension in the geometric sense. It has:
+      - Direction: R4 is irreversible — past and future are
+        ontologically distinct. The arrow of time is not a
+        statistical or thermodynamic phenomenon; it is built
+        into R4 at the foundational level.
+      - No spatial mixing: time cannot be rotated into space
+        because they are different categories — accumulation
+        index vs topological extension.
+      - No time travel: R4 irreversibility makes backward
+        traversal of the process counter impossible. Not a
+        consequence of entropy; a consequence of ontology.
+    sr_correspondence: >
+      Special Relativity works because light-based observers
+      constructing coordinate systems from signal exchange
+      will necessarily produce Lorentz-symmetric coordinates.
+      The Lorentz transformation describes the relationship
+      between coordinate systems built from light signals
+      propagating at Φ_max through a uniform substrate.
+      It is correct as a coordinate transformation.
+      It is not a fundamental symmetry of reality —
+      it is what reality looks like to light-based observers.
+      The distinction matters when asking about regions where
+      light-based observation breaks down (near S_lock thresholds,
+      at topological caps/black holes).
+    gr_correspondence: >
+      General Relativity works because the R gradient field of
+      the substrate, when described in terms of light-signal
+      coordinate systems, produces the metric tensor of GR.
+      The Einstein field equations are the correct description
+      of how matter (S×R distributions) curves the effective
+      coordinate geometry seen by light-based observers.
+      GR is the optics of the substrate, not the substrate itself.
+      Singularities arise in GR because the coordinate system
+      breaks down at topological caps — not because reality
+      becomes singular. The substrate has no singularities
+      (open non-compact manifold, topological validation in
+      specifications.yaml).
+
+  optics_as_observational_bridge:
+    description: >
+      Light (photon = dipole vortex pair at Φ_max) is the
+      universal observational tool. All human and instrumental
+      observation of physics is ultimately mediated by
+      electromagnetic interaction — by photons. This means
+      all our coordinate systems, all our distance and time
+      measurements, are constructed from light propagation
+      through the R gradient substrate.
+      What we call spacetime geometry is the geometry of
+      light propagation through the substrate — not the
+      substrate geometry directly. The two differ wherever
+      the substrate has significant R gradients (near
+      massive objects, at high energy densities).
+    gravitational_lensing: >
+      Light bends around massive objects because R gradient
+      refracts photon trajectories (rule_5_refraction).
+      We interpret this as spacetime curvature because we
+      use light to construct our coordinate systems — the
+      coordinate system curves with the light.
+      The substrate is not curved; the light path is refracted;
+      the coordinates built from refracted light appear curved.
+      GR correctly describes the coordinate curvature.
+      Praestology identifies what causes it.
+    time_dilation: >
+      Clocks run slower in high-R regions (near massive objects)
+      because the local resolution flux Φ is lower — fewer
+      resolution events per unit process-counter increment.
+      A clock is a physical process counting its own resolution
+      cycles. In high-R substrate, each cycle takes longer.
+      This is not spacetime geometry stretching — it is
+      substrate resistance slowing physical processes.
+      The effect is real and precisely measured (GPS corrections,
+      Pound-Rebka). The mechanism is substrate resistance,
+      not geometric time dilation.
+    void_time_dilation_prediction: >
+      In cosmic voids (low-R substrate), clocks run faster —
+      higher local Φ, more resolution events per process-counter
+      increment. This is the Praestology-specific prediction
+      (cosmos domain, density-transition redshift).
+      Standard GR predicts no systematic void/filament clock
+      rate difference. Measurable via pulsar timing comparison
+      between void and filament environments.
+
+  consequences:
+    - >
+      No singularities in nature: topological caps (black holes)
+      are boundaries, not points of infinite density. The
+      substrate cannot collapse to a point — R5 topological
+      stability prevents it. GR singularities are coordinate
+      artefacts.
+    - >
+      Arrow of time is fundamental: R4 irreversibility is
+      ontological, not statistical. The second law of
+      thermodynamics is a consequence of R4, not the source
+      of time's direction.
+    - >
+      No time travel: process counter cannot run backward.
+      Not a practical limitation — an ontological one.
+    - >
+      No wormholes: require topological connections between
+      spatially separated substrate regions. The open
+      non-compact manifold topology forbids this — there
+      is no second sheet to connect to.
+    - >
+      Quantum gravity dissolves as a problem: the problem
+      arises from attempting to quantise spacetime geometry.
+      But spacetime is an observational coordinate system,
+      not a fundamental field. The substrate is already
+      a quantum field (p(r,t) with Tik fluctuations).
+      Quantising the coordinate system is unnecessary —
+      the underlying field is already quantum mechanical.
+  confirming_note: >
+    Shapiro delay — light slows near massive objects.
+    Confirmed to high precision. Consistent with Φ reduction
+    in high-R substrate slowing photon traversal rate.
+    Frame-dragging (Gravity Probe B) — rotating mass drags
+    the local substrate p(r,t) field. Consistent with
+    momentum density advection from rotating vortex
+    topology of the Earth.
+    Black hole event horizon (Event Horizon Telescope 2019)
+    — photon sphere and shadow consistent with extreme R
+    gradient at topological cap boundary. No singularity
+    observable or required.
+
+  standard_model_open_question_dissolved: >
+    "Why is there an arrow of time when physics laws are
+    time-symmetric?" — dissolved. The laws appear time-symmetric
+    because they describe coordinate relationships, and the
+    coordinate system is symmetric. The process counter R4
+    is not symmetric — it is the ontological source of
+    temporal direction below the coordinate description.
+    "What happens inside a black hole?" — the substrate
+    topology continues; the coordinate system breaks down.
+    The interior is not a singularity; it is a region where
+    light-based coordinates cease to be constructable.
+
+# ─────────────────────────────────────────────
+# COMMITMENT 3: ENERGY AS Φ BOOKKEEPING
+# ─────────────────────────────────────────────
+energy_as_phi_bookkeeping:
+  statement: >
+    Energy is not a substance or a fundamental quantity.
+    Energy is the bookkeeping of Φ (resolution flux) differentials
+    — the accounting system that tracks how substrate resolution
+    capacity is distributed and redistributed across interactions.
+    Conservation of energy is a theorem derivable from R1 + R4,
+    not an axiom. "Where does the energy come from?" questions
+    are requests for Φ differential accounting, not questions
+    about a substance being moved or created.
+  what_this_replaces: >
+    Standard physics: energy is the primary conserved quantity.
+    Everything is energy or converts into energy. Kinetic energy,
+    potential energy, mass-energy, electromagnetic energy,
+    thermal energy — all are forms of the same substance.
+    The question "what is energy?" has no answer in the standard
+    model beyond "it is what is conserved." Energy is defined
+    by its conservation law, not by what it is.
+    This is bookkeeping elevated to ontology — a useful accounting
+    tool treated as a fundamental substance.
+    Praestology: energy is the name for Φ differential accounting.
+    The accounting is real and conserved. The substance is not.
+
+  derivation:
+    conservation_as_theorem: >
+      R1 (Existence): the substrate exists and is not created
+      or destroyed — total substrate content is conserved.
+      R4 (Progress): resolutions accumulate irreversibly —
+      the process counter advances but substrate content
+      redistributes rather than disappears.
+      These two rules together entail conservation of total
+      Φ differential across all resolution events.
+      What we call energy conservation is R1 + R4 expressed
+      in the language of light-based observers using their
+      coordinate systems.
+      Energy conservation is derived, not assumed.
+    kinetic_energy: >
+      A vortex moving through the substrate at velocity v
+      has a momentum density trail of amplitude ∝ v.
+      The rate of resolution events in the trail scales as v².
+      Kinetic energy KE = ½mv² is the bookkeeping of the
+      excess Φ flux in the moving vortex's trail relative
+      to rest. The ½ factor comes from the geometry of
+      the momentum density distribution in the trail —
+      open derivation.
+    potential_energy: >
+      A sustained Φ differential in the substrate —
+      a region of elevated or depressed resolution flux
+      relative to surroundings — is potential energy.
+      Gravitational potential: substrate R gradient maintaining
+      a persistent Φ differential between height levels.
+      Chemical potential: molecular phase-lock configurations
+      storing excess Φ in bond topology (chemistry domain).
+      The potential is not stored in a field as a substance —
+      it is a differential in the substrate's resolution state.
+    mass_energy: >
+      E = mc² is the statement that vortex topology (mass)
+      and substrate resolution flux (energy) are interconvertible.
+      m = α·S·R/c² → E = mc² = α·S·R.
+      The vortex topology encodes a specific S×R product.
+      When the topology dissolves (annihilation), the S×R
+      product is released as Φ flux — photons carrying
+      the equivalent resolution capacity.
+      E = mc² is not a mysterious equivalence of two
+      different substances. It is the statement that
+      topological complexity (S×R) and resolution flux (Φ)
+      are two expressions of the same substrate quantity.
+    photon_energy: >
+      Photon energy E = hν.
+      In Praestology: ν is the trail interference frequency
+      of the dipole vortex pair — the rate of the dipole's
+      phase oscillation. h is the minimum substrate action
+      quantum (Twitch/Planck connection).
+      E = hν is the statement that photon Φ flux scales
+      with trail oscillation frequency. Higher frequency =
+      faster oscillation = more resolution events per
+      process-counter increment = more Φ carried.
+      Photon energy is not a substance — it is a resolution
+      flux rate.
+    thermal_energy: >
+      Temperature is the mean Tik background amplitude —
+      the statistical distribution of stochastic substrate
+      fluctuations. Thermal energy is the aggregate Φ
+      of the Tik background at a given temperature.
+      Heat transfer is Tik background amplitude equilibration
+      between regions — substrate fluctuation spectrum
+      homogenising across a boundary.
+      Absolute zero (T=0) is the state where Tik background
+      amplitude reaches its minimum — the zero-point fluctuation
+      floor set by the substrate grain size. Not the absence
+      of Φ but the minimum Φ consistent with substrate existence.
+
+  consequences:
+    - >
+      "Where does the energy come from?" dissolves as a question
+      about substance. The correct question is always: "what is
+      the Φ differential and how does it redistribute?" Every
+      apparent energy source is a Φ differential maintained by
+      substrate topology (mass), R gradients (potential), or
+      Tik background (thermal).
+    - >
+      Dark energy alternative: the accelerating cosmic expansion
+      currently attributed to a cosmological constant (Λ —
+      vacuum energy density) may follow from global substrate
+      Φ redistribution as structure formation proceeds. If
+      structure formation reduces mean substrate R globally,
+      Φ increases in voids — producing apparent acceleration
+      without a separate energy component. Λ may be Φ
+      bookkeeping artefact, not a substance.
+    - >
+      Vacuum energy problem: QFT predicts vacuum energy density
+      ~10¹²⁰ times larger than observed (worst prediction in
+      physics). In Praestology: vacuum energy is the Tik
+      background zero-point floor — finite, set by substrate
+      grain size, not divergent. The divergence arises from
+      treating the vacuum as a continuum field summed to
+      infinite frequencies. The substrate has a physical
+      ultraviolet cutoff at the Planck scale — the sum
+      is finite. The vacuum energy problem dissolves.
+    - >
+      Perpetual motion remains impossible: R1 + R4 conservation
+      — total Φ differential cannot be increased by
+      redistribution alone. You cannot extract more resolution
+      capacity from a system than is stored in its Φ differentials.
+      Thermodynamic laws are consequences of R1-R4, not axioms.
+  confirming_note: >
+    Noether's theorem (1915) — every continuous symmetry of
+    a physical system corresponds to a conservation law.
+    Energy conservation corresponds to time-translation symmetry.
+    In Praestology: time-translation symmetry is the statement
+    that the process counter advances uniformly — R4 operates
+    at a constant rate in uniform substrate. Noether's theorem
+    is confirmed; its substrate is identified.
+    Casimir effect — measurable force from vacuum fluctuations.
+    Confirms Tik background as physical, not mathematical.
+    Zero-point energy is real substrate floor, not divergent sum.
+    E=mc² (Cockcroft & Walton 1932, nuclear reactions) —
+    mass-energy conversion confirmed. Praestology derives the
+    equivalence from S×R topology; the conversion is
+    topological dissolution/formation, not substance transformation.
+
+  standard_model_open_question_dissolved: >
+    "What is energy?" — answered: bookkeeping of Φ differentials.
+    "Why is energy conserved?" — derived from R1 + R4, not assumed.
+    "What is the vacuum energy?" — finite Tik background floor,
+    not divergent continuum sum. Worst prediction in physics
+    resolved by identifying the physical ultraviolet cutoff.
+
+# ─────────────────────────────────────────────
+# COMMITMENT 4: POTENTIAL/COMMITMENT RATIO
+# The mechanism connecting ontological commitments
+# to observable measurement.
+# ─────────────────────────────────────────────
+potential_commitment_ratio:
+  statement: >
+    All environmental measurements of time, speed, and trajectory
+    are measurements of the local potential/commitment ratio —
+    the ratio of unresolved substrate tension (R3 potential)
+    to accumulated resolution density (R4 commitment) at the
+    measurement location.
+    The three ontological commitments state what things are.
+    The potential/commitment ratio states how they behave and
+    why measurement produces the results it does.
+    Without this fourth pillar, the first three commitments
+    are ontological claims without an observational bridge.
+    With it, all relativistic measurement effects are derived
+    consequences rather than asserted correspondences.
+  core_anchor: "R3 (Motion/Tension) + R4 (Progress/Commitment)"
+  what_this_provides: >
+    R3 is the unresolved tension in the substrate — potential
+    not yet committed. R4 is the accumulated resolution —
+    commitment already locked in. Their ratio at any location
+    determines the rate at which new resolution events can
+    occur there, and therefore what any physical process
+    operating at that location will measure.
+    High commitment density (high R4 accumulation, high R) =
+    less free potential available = slower local resolution rate
+    = slower clocks, reduced Φ_max, increased refraction.
+    Low commitment density (low R, void-like substrate) =
+    more free potential available = faster local resolution rate
+    = faster clocks, higher local Φ_max, reduced refraction.
+
+  time_measurement:
+    statement: >
+      Clock rate = rate of local resolution events = local free
+      potential available for new commitments.
+    gravitational_time_dilation: >
+      Near a massive object, the substrate carries high
+      accumulated commitment density (R4 from all surrounding
+      mass topology). This reduces the free potential available
+      for new resolution events. Clocks run slower — not because
+      spacetime geometry stretches, but because less unresolved
+      tension is available to drive new resolution cycles.
+      The effect is real, precisely measured, and directly
+      applied in GPS corrections (clocks on satellites run
+      faster — lower commitment density at altitude).
+    velocity_time_dilation: >
+      A moving vortex commits potential into its own trail —
+      the trail is R4 accumulation from the vortex's passage.
+      From the vortex's perspective, it is continuously
+      depleting local free potential by committing it into
+      trail structure. Less free potential available locally
+      = slower internal resolution rate = time dilation.
+      Same mechanism as gravitational dilation; different
+      source of commitment density increase.
+    unification: >
+      Gravitational and velocity time dilation are currently
+      unified mathematically in GR but treated as geometrically
+      distinct effects (curved spacetime vs flat spacetime
+      with relative motion). Praestology unifies them
+      physically: both reduce local free potential, both slow
+      local resolution rate. One mechanism; two sources of
+      commitment density increase.
+    confirming_note: >
+      Hafele-Keating experiment (1971) — atomic clocks flown
+      around the world showed both gravitational and velocity
+      time dilation simultaneously, consistent with combined
+      commitment density effects.
+      GPS corrections — satellites require both gravitational
+      (+45 μs/day) and velocity (-7 μs/day) corrections.
+      Net +38 μs/day matches prediction precisely.
+      Confirms that both effects are real, simultaneous,
+      and additive — consistent with a single underlying
+      mechanism (free potential reduction) with two sources.
+
+  speed_of_light_as_local_phi_max:
+    statement: >
+      The speed of light c is not a universal constant imposed
+      on reality — it is the local maximum rate of potential
+      commitment in the substrate. It is Φ_max evaluated at
+      the local substrate state. In uniform low-R substrate
+      (cosmic void) it approaches the global maximum. In
+      high-R substrate it is reduced.
+    local_variability: >
+      c_local = Φ_max · (1 - R_local/R_max)
+      In high-R regions (near massive objects), c_local < c_vacuum.
+      This is not a violation of SR — SR assumes uniform substrate.
+      It is the substrate state dependence of the commitment rate.
+      Observable as: Shapiro delay (light slows near the Sun),
+      gravitational lensing (light path curves in R gradient),
+      and in principle as void speed-of-light excess (not yet
+      measured with sufficient precision).
+    c_as_substrate_property: >
+      The constancy of c in vacuum is not a mysterious fundamental
+      fact requiring explanation — it follows from the substrate
+      being approximately uniform at the scales where SR was
+      developed and tested. c is constant where the substrate
+      is uniform. It varies where the substrate varies.
+      The apparent mystery dissolves: c is not a law imposed
+      on reality but a property of the medium, like the speed
+      of sound in a uniform material.
+    nothing_exceeds_c: >
+      No information or vortex topology can propagate faster
+      than the local commitment rate because propagation
+      is commitment — the vortex re-establishes itself in
+      the substrate ahead by committing new resolution events.
+      Exceeding c_local would require committing potential
+      faster than the substrate can resolve it — which is
+      the definition of exceeding the substrate's maximum
+      resolution rate. Impossible not as a law but as a
+      logical consequence of what propagation is.
+    confirming_note: >
+      Shapiro delay (1964, confirmed 1979 via Viking landers) —
+      radar signals passing near the Sun are delayed by
+      ~250 μs. Direct measurement of reduced c_local in
+      high-R substrate. Consistent with commitment rate
+      reduction near massive objects.
+      Vacuum birefringence (IXPE 2022) — polarisation-dependent
+      light propagation near neutron star. Consistent with
+      extreme R gradient modifying local substrate state
+      differently for different photon orientations.
+
+  refraction_as_universal_mechanism:
+    statement: >
+      Any gradient in the potential/commitment ratio refracts
+      propagating resolution events — bending their trajectories
+      toward regions of higher commitment density (lower free
+      potential, lower c_local). This is one mechanism
+      operating at all scales.
+    optical_refraction: >
+      Light entering glass from air — substrate R increases
+      at the material boundary (higher atomic density =
+      higher commitment density). c_local decreases.
+      The wavefront slows on the entering side first, bending
+      the trajectory toward the normal. Snell's law is derived
+      from the commitment density gradient at the boundary,
+      not from an independent optical law.
+      Refractive index n = c_vacuum/c_local = Φ_max/Φ_local —
+      directly encodes the local potential/commitment ratio.
+    gravitational_lensing: >
+      Light passing near a massive object — substrate R
+      increases toward the mass (higher commitment density).
+      c_local decreases on the mass-proximal side of the
+      beam first, bending the trajectory toward the mass.
+      Einstein ring, gravitational lensing of galaxies, and
+      quasar microlensing are all the same refraction
+      mechanism at gravitational scale.
+      General relativity's geodesic equation and Praestology's
+      refraction formula are mathematically equivalent —
+      different descriptions of the same commitment density
+      gradient effect.
+    density_transition_redshift: >
+      Light crossing a substrate density boundary (e.g.,
+      galaxy halo edge, cosmic void boundary) — commitment
+      density changes abruptly. The photon's trail frequency
+      (energy) adjusts to the new local Φ_max.
+      This produces a redshift or blueshift at density
+      transitions independent of Doppler or gravitational
+      effects — the Praestology-specific prediction
+      (cosmos domain, testable against existing quasar data).
+    unified_optics_gr: >
+      Optics and GR lensing are currently treated as
+      completely separate phenomena — one is material
+      physics, the other is spacetime geometry. Praestology
+      unifies them as the same commitment density gradient
+      refraction at different scales. The refractive index
+      of a material and the gravitational lensing angle
+      of a galaxy are both measurements of local
+      potential/commitment ratio gradients.
+      This unification is a genuine improvement over the
+      standard model, not merely a restatement.
+    confirming_note: >
+      Eddington (1919) — gravitational lensing of starlight
+      by the Sun confirmed GR. Under Praestology: confirmed
+      refraction by solar commitment density gradient.
+      Equivalent prediction; different mechanism identified.
+      Strong gravitational lensing (Einstein rings) — multiple
+      images of background quasars from galaxy cluster lensing.
+      Lensing mass calculated from ring geometry consistently
+      exceeds visible mass — dark matter contribution from
+      commitment density of substrate wake component.
+      Total internal reflection in optics — when c_local
+      gradient is steep enough, all trajectories are refracted
+      back. Analogous to event horizon: when commitment
+      density gradient exceeds the maximum potential flux,
+      no resolution events propagate outward.
+
+  event_horizon_as_saturation:
+    statement: >
+      The event horizon is not a special geometric surface
+      where spacetime topology changes. It is the radius at
+      which the local commitment saturation equals the maximum
+      inward potential flux rate — the point where the substrate
+      is so commitment-dense that no new resolution events
+      can propagate outward against the inward commitment gradient.
+    mechanism: >
+      Inside the Schwarzschild radius, the commitment density
+      gradient (dR/dr) is so steep that the local c_local
+      approaches zero faster than distance decreases.
+      The potential/commitment ratio drops to the point where
+      outward-propagating resolution events cannot accumulate
+      enough free potential to escape the inward commitment flow.
+      This is a dynamic saturation threshold, not a topological
+      boundary. The substrate continues — it does not end at
+      the horizon. The topology inside is extreme but not singular.
+    information_paradox_dissolved: >
+      The black hole information paradox arises in standard
+      physics because information appears to be destroyed when
+      matter crosses the event horizon — violating quantum
+      mechanical unitarity.
+      In Praestology: information is not destroyed. It is
+      commitment-encoded in the black hole's vortex topology
+      (the extreme S×R configuration of the collapsed matter).
+      The commitment structure persists — R4 is irreversible,
+      so no resolution is lost. The information is inaccessible
+      (cannot propagate outward against the saturation gradient)
+      but not destroyed.
+      Hawking radiation = stochastic Tik background fluctuations
+      at the saturation boundary. The commitment saturation
+      creates a sharp potential/commitment gradient at the
+      horizon — Tik fluctuations at this boundary can exceed
+      the local threshold, producing vortex-antivortex pairs
+      where one falls inward (adding to commitment) and one
+      escapes outward (Hawking radiation).
+      The Hawking temperature T_H ∝ 1/M follows from the
+      boundary gradient steepness — smaller black holes have
+      steeper gradients, higher Tik fluctuation rates, higher
+      temperature. Derived from commitment saturation geometry,
+      not from semiclassical QFT as a patch.
+    no_firewall: >
+      The firewall paradox (high-energy radiation at the horizon
+      from quantum information requirements) does not arise —
+      it is a consequence of forcing quantum mechanics onto a
+      geometric boundary that doesn't physically exist as such.
+      The saturation threshold is smooth — infalling observers
+      cross it without encountering a physical barrier.
+      The substrate becomes increasingly commitment-saturated
+      but does not develop a discontinuity at the horizon.
+    interior_topology: >
+      Inside the event horizon, the substrate is in extreme
+      high-R, high-S configuration — maximum commitment density.
+      The vortex topology of the collapsed matter persists
+      in this extreme form. No singularity: R5 topological
+      stability prevents complete collapse (topological cap
+      from specifications.yaml). The centre is a maximum-
+      commitment topological structure, not a point of
+      infinite density.
+      Open derivation: the exact interior topology —
+      what stable configuration does extreme S×R approach?
+      Candidate: topological equivalent of the Planck-scale
+      vortex structure, a maximum-winding knot configuration.
+    confirming_note: >
+      Hawking radiation (theoretical, 1974) — not yet directly
+      observed (too faint for stellar-mass black holes) but
+      consistent with Tik fluctuation mechanism at saturation
+      boundary. Predicted temperature T_H = ℏc³/(8πGMk_B)
+      should be derivable from commitment saturation gradient
+      geometry — open derivation.
+      Black hole merger gravitational waves (LIGO 2015) —
+      ringdown waveform consistent with topological cap
+      boundary oscillations rather than singularity dynamics.
+      No evidence of singularity-driven behaviour in merger
+      data. Consistent with interior as extreme but finite
+      topology.
+      Penrose singularity theorems — prove singularities
+      are inevitable given GR assumptions. Those assumptions
+      include spacetime as a continuous 4D manifold.
+      Praestology replaces the manifold with the substrate —
+      the theorem's premises do not apply; the conclusion
+      does not follow.
+
+  unified_consequences:
+    statement: >
+      The potential/commitment ratio, as the fourth foundational
+      pillar, unifies a set of phenomena currently treated as
+      separate in the standard model and GR.
+    unifications:
+      - "Gravitational and velocity time dilation — one mechanism"
+      - "Optical refraction and gravitational lensing — one mechanism"
+      - "Event horizon and total internal reflection — one mechanism"
+      - "Hawking radiation and Tik background fluctuations — one mechanism"
+      - "Shapiro delay and refractive index — one quantity (c_local)"
+    falsification_condition: >
+      If the potential/commitment ratio were shown to be
+      insufficient to account for any of the unified phenomena —
+      if, for example, gravitational and velocity time dilation
+      were shown to have genuinely different mechanisms that
+      cannot be reduced to a single commitment density effect —
+      this pillar fails. Current evidence supports unification
+      in all cases.
+
+
+# ─────────────────────────────────────────────
+# COMMITMENT STRESS AND BACKREACTION
+# Structure as primary commitment; forces as
+# differential backreaction regimes.
+# ─────────────────────────────────────────────
+commitment_stress_backreaction:
+  statement: >
+    The topological commitment that enforces impenetrability
+    creates persistent stress on the Praesto substrate.
+    The medium's natural backreaction opposes any change
+    to that committed state. Impenetrability, gravity, and
+    inertia are not separate forces but different regimes
+    of the same substrate backreaction to topological
+    commitment density.
+  core_anchor: "R3 (Tension) + R4 (Commitment) + R5 (Optimisation)"
+
+  structure_as_primary_commitment:
+    statement: >
+      When vortex topology exists in a region, it commits
+      the local substrate — the S×R product locks accumulated
+      resolution into the structure. This is the ontologically
+      primary effect, prior to any force description.
+      The commitment density from atomic and molecular topology
+      raises local R above the phase-lock threshold for
+      additional topology. Incoming structures cannot establish
+      new phase-lock in that region — not because the substrate
+      is fully committed but because existing commitment density
+      exceeds S_lock for additional vortex formation.
+    impenetrability_precision: >
+      Solidity is a threshold condition, not a binary state.
+      The wall's atomic topology commits the substrate to a
+      density that disallows other atoms or molecules from
+      getting in between — insufficient free potential
+      differential to support additional phase-locking
+      in that region. Materials differ in hardness because
+      their commitment geometry raises R to different levels
+      with different spatial profiles.
+    layers:
+      primary: >
+        Structural commitment density exceeds phase-lock
+        threshold for incoming topology. This is why you
+        cannot pass your hand through a wall — not a force
+        effect but a commitment occupancy condition.
+      em_approach: >
+        Chiral commitment pattern of electron shells creates
+        destructive interference on approach — felt as
+        repulsive force. This is what physical contact
+        feels like: the EM differential of the commitment
+        gradient at close range.
+      pauli_floor: >
+        Same-spin topology cannot share commitment region —
+        hard floor beneath the EM gradient. Not a separate
+        quantum rule; a direct consequence of what commitment
+        means: two topologies cannot commit the same substrate
+        simultaneously with identical winding configuration.
+
+  gravitational_effect:
+    statement: >
+      Cumulative stress from many committed structures
+      generates a smooth Φ gradient extending through
+      the substrate. Rule 5 refraction bends paths toward
+      higher commitment stress (higher R, lower Φ) —
+      perceived as gravitational attraction.
+    direction_confirmed: >
+      Refraction is toward higher R, lower Φ, higher
+      commitment density. Paths bend toward the stress
+      source — toward mass concentrations. Consistent
+      with all gravitational observations: objects fall
+      toward mass, light bends toward the Sun, orbits
+      curve around massive bodies.
+    smooth_gradient: >
+      Unlike the sharp threshold of impenetrability,
+      the gravitational commitment gradient is smooth
+      and extends to large distances because it is the
+      cumulative effect of all S×R topology in a region,
+      not a local threshold condition. The gradient falls
+      off with distance as commitment density decreases —
+      producing the 1/r² profile of Newtonian gravity
+      as the leading term.
+
+  inertial_effect:
+    statement: >
+      Acceleration requires a structure to release its
+      current commitment footprint and establish a new
+      one in the substrate ahead. The substrate resists
+      this rapid rearrangement via hysteresis (H) and
+      elevated R, manifesting as inertia (m_eff = α·S·R).
+    commitment_footprint: >
+      A vortex topology at rest has established a stable
+      commitment pattern in the local substrate — its
+      trail and engine configuration are phase-locked
+      with the surrounding p(r,t) field. Changing velocity
+      requires dissolving this commitment pattern and
+      re-establishing it in a new configuration.
+      The substrate's hysteresis resists this dissolution —
+      R4 accumulation is not easily reversed. The resistance
+      to footprint rearrangement is inertia.
+    equivalence_principle_derived: >
+      Inertial mass and gravitational mass are identical
+      because they are both expressions of the same
+      commitment stress backreaction — not a coincidence
+      requiring the equivalence principle as a postulate.
+      Gravitational effect: commitment density gradient
+      from surrounding mass refracts the structure's path.
+      Inertial effect: commitment footprint rearrangement
+      resistance opposes acceleration.
+      Both scale with S×R — the topology's commitment
+      magnitude. Identity is derived, not assumed.
+
+  mond_connection:
+    statement: >
+      At very low accelerations (galactic scale, a << a₀),
+      the commitment footprint rearrangement operates in
+      a quasi-static regime where the nonlinear backreaction
+      response becomes relevant. This may be the physical
+      origin of the MOND phenomenological threshold a₀.
+    mechanism: >
+      In the linear regime (normal accelerations): backreaction
+      is proportional to acceleration — standard Newtonian
+      inertia. In the quasi-static regime (very low acceleration,
+      very gradual footprint rearrangement): the substrate
+      backreaction transitions to a different scaling —
+      the commitment stress gradient dominates over the
+      rearrangement rate. This produces the MOND-like
+      modification of effective gravity at low accelerations.
+    significance: >
+      MOND fits galaxy rotation curves better than standard
+      dark matter models at low acceleration but has no
+      derivation from first principles in the standard model
+      — it is purely phenomenological. Praestology offers
+      a derivation path: a₀ encodes the crossover between
+      linear and nonlinear commitment stress backreaction
+      regimes. Open derivation: formal calculation of a₀
+      from substrate parameters.
+    confirming_note: >
+      McGaugh et al. (2016) — radial acceleration relation:
+      observed centripetal acceleration in galaxies correlates
+      tightly with baryonic matter distribution, with MOND-like
+      behaviour below a₀ ≈ 1.2×10⁻¹⁰ m/s².
+      Consistent with commitment stress backreaction regime
+      transition at low acceleration scales.
+
+  regime_structure:
+    description: >
+      Same commitment stress backreaction mechanism; four
+      regimes separated by scale and rate of commitment change.
+    regimes:
+      impenetrability: >
+        Atomic scale. Steep commitment gradient.
+        Threshold enforcement — incoming topology blocked.
+        Regime: high commitment density differential,
+        static or quasi-static.
+      inertia: >
+        Object scale. Commitment footprint rearrangement.
+        Resistance to acceleration — dynamic regime.
+        Scales linearly with S×R at normal accelerations.
+      gravity: >
+        Gravitational scale. Smooth cumulative gradient.
+        Path refraction toward higher commitment density.
+        1/r² leading term from distributed S×R topology.
+      mond_regime: >
+        Galactic scale. Very low acceleration.
+        Nonlinear backreaction response.
+        Regime transition at a₀ — open derivation.
+    mandelbrot_within_physics: >
+      This is the Mandelbrot pattern operating within
+      the physics domain itself — not just across domains
+      but within a single mechanism producing qualitatively
+      different observable effects at different scales.
+      The same R1-R5 iteration; the same commitment stress
+      backreaction; four regimes distinguished by the
+      rate and scale of commitment change.
+
+  testable_implication:
+    statement: >
+      In regions of reduced p_env (lower baseline commitment
+      density — cosmic voids), both effective gravitational
+      strength and inertial mass should show subtle correlated
+      reductions. The same R profile shift affects both via
+      the same backreaction mechanism.
+    significance: >
+      Standard physics predicts no environmental dependence
+      for either gravitational strength or inertial mass —
+      both are treated as universal constants. Any measured
+      variation would be Praestology-specific. A correlated
+      variation in both — with the correlation predicted
+      by the commitment density profile — would be strong
+      confirmation of the unified backreaction mechanism.
+    test: >
+      Precision measurements of G (gravitational constant)
+      and inertial mass standards in different gravitational
+      environments — deep space probes vs Earth surface vs
+      near massive objects. Current precision may be
+      insufficient; next-generation space experiments
+      (MICROSCOPE successor, STEP) could reach required
+      sensitivity.
+    falsification: >
+      If gravitational strength and inertial mass vary
+      independently — one changing without the other —
+      the unification fails. If neither varies in low p_env
+      environments at the predicted level, the commitment
+      stress mechanism requires revision.
+
+# ─────────────────────────────────────────────
+# QUANTUM TUNNELLING FROM IMPENETRABILITY
+# Derived consequence of commitment threshold
+# mechanics — not a separate quantum postulate.
+# ─────────────────────────────────────────────
+quantum_tunnelling:
+  statement: >
+    Quantum tunnelling is not a separate quantum mechanical
+    phenomenon requiring wavefunction formalism. It is a
+    direct consequence of the commitment threshold mechanics
+    that produce impenetrability — the same mechanism,
+    operating at low probability for thick or high barriers.
+  core_anchor: "R3 (Tik fluctuation) + R4 (commitment threshold)"
+
+  derivation_from_impenetrability:
+    mechanism: >
+      A barrier is a region where commitment density exceeds
+      S_lock for incoming topology — impenetrability condition.
+      The Tik stochastic background continuously fluctuates
+      the local commitment density. A rare, coherent Tik
+      fluctuation can temporarily depress the commitment
+      density below S_lock across the full barrier width —
+      creating a transient low-R corridor through which
+      the topology can thread without crossing the threshold.
+      The fluctuation must be coherent across the barrier
+      width L simultaneously — each additional substrate
+      slice requires the fluctuation to maintain phase
+      coherence, multiplying the improbability.
+    temperature_link: >
+      Identical mechanism to melting and boiling, but at
+      much lower probability for thicker or higher barriers.
+      Melting: thermal Tik amplitude routinely exceeds
+      threshold — happens everywhere, constantly, above T_melt.
+      Tunnelling: requires rare large-amplitude coherent
+      fluctuation across barrier width — low probability
+      per unit time but nonzero at any temperature,
+      including T ≈ 0 (zero-point Tik floor).
+      The crossover temperature where thermal Tik amplitude
+      becomes comparable to the zero-point floor predicts
+      the temperature at which tunnelling rate transitions
+      from temperature-independent to thermally enhanced —
+      observed in enzyme catalysis kinetics.
+
+  probability:
+    expression: >
+      P(tunnel) ∝ exp(−κ · L · √(ΔC))
+      where L = barrier width,
+            ΔC = commitment density excess above S_lock
+                 (barrier height in commitment units),
+            κ = substrate coupling constant for Tik
+                fluctuation coherence across commitment barrier.
+    notation_note: >
+      κ is distinct from the fine structure constant α —
+      different substrate coupling at different interaction
+      scale. κ encodes the coherence length of Tik
+      fluctuations relative to commitment barrier geometry.
+      Open derivation: κ from Tik background spectrum
+      and substrate grain size.
+    gamow_correspondence: >
+      This expression is the Gamow factor — currently derived
+      in quantum mechanics from wavefunction evanescence in
+      a classically forbidden region. The mathematical form
+      is identical. The physical mechanism is different:
+      wavefunction evanescence is the QM description of what
+      the Tik fluctuation coherence condition produces.
+      The Gamow factor is derived from commitment threshold
+      mechanics, not postulated from wavefunction formalism.
+
+  implications:
+    alpha_decay: >
+      Nuclear binding energy creates a commitment barrier
+      (Coulomb + nuclear flux tube topology). Alpha particle
+      (doubly magic, preformed sub-configuration) tunnels
+      through this barrier when Tik fluctuation depresses
+      commitment below S_lock across the barrier width.
+      Geiger-Nuttall law — logarithm of decay rate scales
+      linearly with 1/√E_alpha — derived from the Gamow
+      factor applied to Coulomb commitment barrier geometry.
+      Previously an open derivation (nuclear-binding.yaml) —
+      now closed conceptually.
+    stm_imaging: >
+      Scanning Tunnelling Microscope — electrons tunnel
+      through vacuum gap between tip and surface.
+      Vacuum gap commitment density is set by the electrode
+      topology's fringe fields. Sub-Angstrom tip-surface
+      distance sensitivity follows from exponential
+      dependence on L — exponential tunnelling probability
+      with gap width makes STM atomically precise.
+    field_emission: >
+      External electric field tilts the commitment density
+      profile — reduces effective barrier width on the
+      emission side. Fowler-Nordheim emission: tunnelling
+      rate increases exponentially with field strength
+      because field reduces L in the probability expression.
+      Same mechanism; external field modifying barrier geometry.
+    enzyme_catalysis: >
+      Proton and hydrogen tunnelling through molecular
+      commitment barriers — confirmed quantum effect in
+      biology (cellular.yaml, quantum-cognition.yaml).
+      Temperature-independent kinetics below crossover T
+      confirms zero-point Tik floor as the base tunnelling
+      rate, with thermal Tik amplitude providing enhancement
+      above crossover.
+    nuclear_fusion: >
+      Coulomb barrier between light nuclei — tunnelling
+      through commitment barrier at stellar temperatures
+      (nuclear-binding.yaml). The Gamow peak (narrow energy
+      range where tunnelling probability and Maxwell-Boltzmann
+      distribution product is maximum) is the stellar fusion
+      rate determinant. Derivable from commitment barrier
+      geometry and Tik background spectrum at stellar temperature.
+    josephson_junction: >
+      Cooper pair tunnelling through insulating barrier
+      between superconductors. Superconducting commitment
+      structure (phase-locked Cooper pairs) on both sides;
+      thin normal-state barrier between. AC Josephson effect
+      — oscillating tunnelling current at frequency
+      ν = 2eV/h — encodes the commitment density differential
+      between the two superconductors directly.
+
+  unification_with_thermal_effects:
+    statement: >
+      Tunnelling and thermal phase transitions (melting,
+      boiling, chemical reactions) are the same commitment
+      threshold crossing mechanism at different probability
+      regimes. This unification is not available in
+      standard physics, where quantum tunnelling and
+      thermal activation are treated as distinct phenomena
+      (though both contribute to reaction rates in the
+      Arrhenius/WKB hybrid treatment).
+    reaction_rates: >
+      Chemical reaction rate = commitment threshold crossing
+      rate for molecular topology rearrangement.
+      High T: thermal Tik amplitude routinely exceeds threshold
+      — classical Arrhenius regime.
+      Low T: zero-point Tik floor provides base crossing rate
+      — quantum tunnelling regime.
+      Crossover: both contribute — standard WKB + Arrhenius
+      combination. Praestology derives both regimes and the
+      crossover from one mechanism.
+    confirming_note: >
+      Bell (1980) — tunnelling corrections to reaction rate
+      theory. Quantum tunnelling contributes to H-transfer
+      reactions even at room temperature. Consistent with
+      Tik floor providing base commitment crossing rate
+      at all temperatures.
+      Klinman & Kohen — enzyme tunnelling confirmed
+      (cellular.yaml). Temperature-independent kinetics
+      below crossover directly confirms Tik floor mechanism.
+
+  falsification_condition: >
+    If quantum tunnelling were shown to require wavefunction
+    coherence in a sense that cannot be reduced to
+    stochastic substrate fluctuation — if, for example,
+    interference effects in tunnelling required non-local
+    phase relationships incompatible with local Tik
+    fluctuation statistics — the tunnelling derivation
+    requires revision. Current evidence is consistent
+    with local stochastic fluctuation as the mechanism.
+
+# ─────────────────────────────────────────────
+# UNIFIED STATEMENT
+# ─────────────────────────────────────────────
+unified_statement:
+  process_ontology: >
+    All three commitments are expressions of a single shift:
+    from substance ontology to process ontology.
+    Substance ontology: the world is made of things that have
+    properties (mass, energy, spacetime position).
+    Process ontology: the world is made of processes that
+    produce effects (inertia, Φ flux, topological extension).
+    Mass is not a thing — it is an effect of process resistance.
+    Spacetime is not a container — it is a description of
+    process relationships as seen by light-based observers.
+    Energy is not a substance — it is a bookkeeping of
+    process rates.
+    This shift is not new in philosophy (Whitehead, Heraclitus)
+    but has not previously been formally derived from a minimal
+    rule set and mapped onto the full physics domain.
+    Praestology provides that derivation.
+  mandelbrot_consistency: >
+    All three commitments are consistent with the Mandelbrot
+    pattern across domains. If mass, spacetime, and energy
+    were substances, they would need to be introduced as
+    new primitives at the physics domain level — breaking
+    the derivation chain from R1-R5.
+    As process effects, they follow from the same rules
+    that generate consciousness, ethics, and communication
+    at higher domains. The same R1-R5 iteration producing
+    mass-as-inertia at the physics scale produces agency
+    as emergent viability at the consciousness scale.
+    The framework is internally consistent because it does
+    not introduce substance primitives at any level.
+  six_pillars_summary:
+    pillar_1: "Mass as inertia-effect — substrate backreaction; not intrinsic property."
+    pillar_2: "Spacetime replaced by QHD + optics — process counter + coordinate description."
+    pillar_3: "Energy as Φ bookkeeping — conservation derived from R1+R4; not substance."
+    pillar_4: "Potential/commitment ratio — the observational bridge; all measurement effects derived."
+    pillar_5: "Commitment stress backreaction — impenetrability, gravity, and inertia as
+               one mechanism at different regimes. Equivalence principle derived."
+    pillar_6: "Quantum tunnelling from impenetrability — Gamow factor derived from Tik
+               fluctuation statistics; unified with thermal phase transitions."
+    relationship: >
+      Pillars 1-3 state what things are (ontology).
+      Pillar 4 states how they behave and why measurement
+      produces the results it does (mechanism).
+      Pillar 5 unifies the force/inertia/gravity triad under
+      one backreaction mechanism with four scale regimes.
+      Pillar 6 closes the quantum threshold mechanics loop —
+      the same commitment threshold that produces solidity
+      produces tunnelling as its statistical tail.
+      Together they form a closed foundation: no phenomenon
+      in the physics domain requires an additional primitive.
+  falsification_conditions: >
+    All four pillars are falsifiable:
+    (1) Mass as inertia-effect: equivalence principle violation,
+        or Higgs mechanism inconsistent with p_env modulation.
+    (2) Spacetime replacement: genuine singularity confirmed
+        inside a black hole, or spatial dimensionality
+        shown to be other than 3.
+    (3) Energy as Φ bookkeeping: energy conservation violated,
+        or vacuum energy divergence confirmed as physical
+        rather than continuum approximation artefact.
+    (4) Potential/commitment ratio: gravitational and velocity
+        time dilation shown to have genuinely distinct mechanisms
+        irreducible to commitment density; or optical refraction
+        and gravitational lensing shown to require separate
+        explanations at the foundational level.
+    (5) Commitment stress backreaction: gravitational strength
+        and inertial mass shown to vary independently in low
+        p_env environments; or MOND regime shown to require
+        a mechanism incompatible with nonlinear backreaction
+        at low acceleration.
+    (6) Quantum tunnelling: tunnelling shown to require
+        non-local wavefunction coherence incompatible with
+        local Tik fluctuation statistics.
+    None of these falsification conditions have been met.
+    Current experimental evidence is consistent with all six.
+
+reading_order:
+  - "domains/physics/foundations.yaml              -- this file first"
+  - "domains/physics/specifications.yaml           -- substrate dynamics"
+  - "domains/physics/electron2photon.yaml          -- process files build on foundations"
+  - "domains/physics/beta-decay.yaml"
+  - "domains/physics/nuclear-binding.yaml"
+  - "domains/physics/photon-absorption-emission.yaml"
+
+related_issues:
+  - "foundational/F03_process_vs_substance_ontology"
+  - "foundational/F04_lorentz_symmetry_as_observational_artefact"
+  - "foundational/F05_vacuum_energy_tik_floor"
+  - "foundational/F06_potential_commitment_as_measurement_bridge"
+  - "intersectional/physics/006_3d_dimensionality_formal_proof"
+  - "intersectional/physics/007_kinetic_energy_half_factor_derivation"
+  - "intersectional/physics/008_dark_energy_phi_redistribution"
+  - "intersectional/physics/009_hawking_temperature_from_saturation_gradient"
+  - "intersectional/physics/010_refractive_index_as_phi_ratio"
+  - "intersectional/physics/011_event_horizon_interior_topology"
+  - "intersectional/physics_cosmos/005_cosmological_constant_as_phi_artefact"
+  - "intersectional/physics_cosmos/006_void_speed_of_light_measurement"
+  - "foundational/F07_commitment_stress_backreaction_unification"
+  - "foundational/F08_equivalence_principle_derived"
+  - "intersectional/physics/012_mond_a0_from_backreaction_regime_transition"
+  - "intersectional/physics/013_gamow_factor_from_tik_fluctuation_statistics"
+  - "intersectional/physics/014_tunnelling_thermal_unification"
+  - "intersectional/physics/015_correlated_G_inertia_variation_low_p_env"
+  - "intersectional/physics_biology/004_enzyme_tunnelling_crossover_temperature"
