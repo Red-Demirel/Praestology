@@ -12,7 +12,7 @@ description: >
 
 derivation:
   - "Consciousness domain: provides the resolution pipeline (C2–C6), parameters (Ξ, τ, ω, ρ), and learning mechanisms."
-  - "Free Will domain: provides volitional override and accountability framework."
+  - "Free Will: provides volitional override and accountability framework."
   - "Ethics domain: provides the boundary conditions for multi-agent viability (E1–E5)."
   - "Learning Pathologies: provides safeguards against training-induced degradation."
 

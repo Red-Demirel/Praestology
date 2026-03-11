@@ -1,0 +1,333 @@
+# domains/communication/specifications.yaml
+name: "Communication"
+version: "1.0"
+parent_domain: "Cross-Domain"
+core_version: "1.5"
+status: "Defined"
+description: >
+  A Praestology domain describing the exchange of resolution-state information
+  between any two or more systems. Communication is substrate-neutral — it
+  applies wherever distinction can be encoded, transmitted, and received.
+  It is not a consciousness-exclusive phenomenon; machines, cells, and ecosystems
+  communicate. However, meaning — as distinct from signal — requires sufficient
+  shared hysteresis between sender and receiver (Cm5).
+  Theoretical foundation: Shannon's information theory provides the mathematical
+  framework; Praestology provides the ontological grounding Shannon deliberately
+  bracketed.
+
+recursive_note:
+  statement: >
+    Praestology is itself recursive in the manner of a Mandelbrot set.
+    The same five core rules (R1–R5) are iterated at every level of the system —
+    from the ontological base through physics, consciousness, thinking, learning,
+    ethics, and communication. Each iteration does not replace the previous;
+    it reveals new complexity from the same fundamentals.
+    The deeper the domain, the more structure becomes visible — not because new
+    rules are added, but because the core rules interact with accumulated
+    hysteresis at increasing depth.
+  implication: >
+    Communication is one such iteration. R2 (distinction), R3 (tension),
+    R4 (progress), and R5 (optimisation) are all present in communication —
+    but at the level of inter-agent signal exchange rather than intra-system
+    resolution. The same rules, a new depth of complexity.
+  mandelbrot_parallel:
+    core_rules:     "The generating equation — simple, fixed, iterated."
+    domains:        "Each zoom level — same structure, new detail."
+    hysteresis:     "The accumulated boundary — where prior iterations
+                     constrain and shape the next."
+    viable_zone:    "The set itself — the region where iteration remains
+                     bounded rather than diverging to chaos or collapsing
+                     to a point."
+
+shannon_mapping:
+  description: >
+    Shannon's information theory (1948) maps cleanly onto Praestology's
+    core concepts. Shannon measured empirically what Praestology derives
+    from first principles. The alignment is non-accidental — both are
+    describing the same underlying tension-resolution dynamics.
+  mappings:
+    - shannon_concept: "Entropy (H)"
+      praestology_map: >
+        Unresolved tension in a distinction space.
+        High entropy = high potential (many viable resolution paths).
+        Low entropy = high stability (few viable paths, most resolved).
+        Corresponds to the Potential axis in the viability space.
+
+    - shannon_concept: "Information content"
+      praestology_map: >
+        Magnitude of distinction reduction per signal.
+        A message is informative to the degree it resolves tension
+        between possible states in the receiver's model.
+        Zero information = no new distinction = R2 invisible.
+
+    - shannon_concept: "Channel capacity"
+      praestology_map: >
+        Maximum resolution flux (Φ) sustainable through a medium.
+        Determined by the tension-friction balance of the channel.
+
+    - shannon_concept: "Noise"
+      praestology_map: >
+        Substrate interference — friction (R) added to the signal
+        that is not part of the intended distinction encoding.
+        Excessive noise pushes the channel toward chaos (H5 violation).
+
+    - shannon_concept: "Redundancy"
+      praestology_map: >
+        Hysteresis encoded into the signal — prior resolutions
+        repeated to stabilise future ones against noise degradation.
+        Redundancy is engineered hysteresis persistence (π).
+
+    - shannon_concept: "Signal/noise ratio"
+      praestology_map: >
+        Tension-friction balance in the communication channel.
+        Mirrors the viable zone: too much noise = cascade;
+        too little signal = stasis. Optimal SNR = metastable channel.
+
+  shannon_boundary: >
+    Shannon deliberately bracketed semantic content — his theory describes
+    signal transmission, not meaning. This was correct for engineering purposes.
+    Praestology extends beyond this boundary by formally defining meaning:
+    information is meaningful to an agent when it modifies that agent's
+    resolution model — updating hysteresis, shifting path probabilities,
+    or altering volitional weight (ω). Information that passes through
+    without modifying the receiver's internal state is signal without meaning.
+
+foundational_principles:
+  - principle: "Communication as Inter-Agent Resolution Exchange"
+    statement: >
+      Communication is the process by which one system's resolution state
+      modifies another system's resolution model.
+    basis: "R3 (Motion) — tension in one system propagates to another via signal."
+    implication: >
+      Communication is not merely transmission. It is a coupled resolution
+      event. Both sender and receiver are changed by genuine communication.
+
+  - principle: "Meaning Requires Shared Hysteresis"
+    statement: >
+      A signal produces equivalent resolution updates in sender and receiver
+      only where sufficient shared hysteresis exists — common prior resolutions
+      that make the same distinction recognisable to both.
+    basis: "R4 (Progress) + C6 (Phase-Locking)."
+    implication: >
+      Perfect communication is impossible between systems with zero shared
+      hysteresis. All communication is approximate; depth of shared
+      hysteresis determines fidelity of meaning transfer.
+
+  - principle: "Communication Leaves Irreversible Traces"
+    statement: >
+      Every received signal modifies the receiver's resolution model.
+      This modification is permanent — R4 forbids rollback.
+    basis: "R4 (Progress) — hysteresis accumulation is irreversible."
+    implication: >
+      Communication is never neutral. Even a signal that produces no
+      behavioral change updates the receiver's model in ways that bias
+      all future resolutions. There is no such thing as consequence-free
+      information exposure.
+
+  - principle: "Communication Systems Self-Tune"
+    statement: >
+      Over time, communication systems select for signal/noise ratios,
+      encoding conventions, and shared vocabularies that sustain viable
+      information exchange.
+    basis: "R5 (Optimisation) — viable channels are amplified; failing ones collapse."
+    implication: >
+      Language, protocol, and convention are R5 operating on communication
+      channels. They are not arbitrary — they are the accumulated hysteresis
+      of what worked.
+
+domain_rules:
+  - id: "Cm1 – Distinction Encoding"
+    core_anchor: "R2 (Structure)"
+    statement: "Communication requires encoding distinction into a transmissible form."
+    manifestation: "Signal, symbol, gesture, token — any carrier of distinction."
+    example: "A word encoding a category; a bit encoding a binary state."
+    note: >
+      Encoding quality determines how much of the sender's distinction
+      survives transmission. Lossy encoding = information degradation
+      before the channel is even entered.
+
+  - id: "Cm2 – Tension Transmission"
+    core_anchor: "R3 (Motion)"
+    statement: >
+      A signal carries resolution potential — it creates tension in the
+      receiver that drives toward state change.
+    manifestation: "The signal arrives; the receiver's model is disturbed."
+    example: "A question creating cognitive tension that demands an answer."
+    note: >
+      A signal that creates no tension in the receiver communicates nothing.
+      This is not a channel failure — it is a Cm5 failure (insufficient
+      shared hysteresis to recognise the distinction).
+
+  - id: "Cm3 – Resolution Update"
+    core_anchor: "R4 (Progress) + H (Hysteresis)"
+    statement: >
+      Received information modifies the receiver's resolution model
+      irreversibly. Communication leaves a hysteresis trace.
+    manifestation: "Updated beliefs, revised probabilities, new associations."
+    example: "Learning a fact that changes how all related facts are weighted."
+    note: >
+      The irreversibility of Cm3 is the formal basis for communication
+      ethics — you cannot un-inform someone. Exposure to information
+      carries responsibility under R4.
+
+  - id: "Cm4 – Viability Selection"
+    core_anchor: "R5 (Optimisation)"
+    statement: >
+      Communication systems self-tune toward signal/noise ratios that
+      sustain viable information exchange.
+    manifestation: "Language evolution, protocol standardisation, convention formation."
+    example: "Technical vocabulary emerging in specialist communities to reduce ambiguity."
+    note: >
+      Communication systems that fail to self-tune either collapse into
+      noise (too much ambiguity) or freeze into ritual (too much redundancy,
+      too little new information). Both are viability failures.
+
+  - id: "Cm5 – Semantic Coupling"
+    core_anchor: "C6 (Phase-Locking) + R5"
+    statement: >
+      Meaningful communication requires sufficient shared hysteresis between
+      sender and receiver for distinction encoding to produce equivalent
+      resolution updates in both systems.
+    manifestation: "Shared language, cultural context, common experience, mutual model."
+    example: >
+      Two specialists communicating efficiently in domain vocabulary;
+      the same vocabulary producing confusion in a non-specialist.
+    note: >
+      Cm5 is where Shannon's theory ends and Praestology extends it.
+      Shannon treats sender and receiver as defined by their codebooks.
+      Praestology asks: where did the codebooks come from, and what
+      happens when they are incommensurable?
+      Answer: from shared hysteresis (vicarious and direct learning);
+      and incommensurable codebooks produce signal without meaning —
+      syntactically valid, semantically empty.
+
+  - id: "Cm6 – Recursive Depth in Communication"
+    core_anchor: "R5 + T5 (Recursive Modeling)"
+    statement: >
+      High-Ξ systems can communicate about communication — modeling the
+      signal exchange process itself, correcting for encoding errors,
+      negotiating shared hysteresis in real time.
+    manifestation: "Meta-communication, clarification, negotiation of meaning."
+    example: >
+      'When I said X I meant Y' — sender modeling receiver's resolution
+      update and correcting the distinction encoding retroactively.
+    note: >
+      Cm6 is the communication parallel of T5 (meta-cognition).
+      Without it, misunderstandings compound without correction mechanism.
+      With it, communication systems can bootstrap shared hysteresis
+      even from low initial overlap.
+
+domain_parameters:
+  - name: "Semantic Overlap (σ)"
+    definition: >
+      Degree of shared hysteresis between sender and receiver relevant
+      to the current signal. Determines meaning fidelity.
+    range: "Zero (no shared context) to Full (identical resolution models)."
+    relation_to_core: "Function of shared vicarious and direct learning history."
+    note: "σ = 0 means signal arrives but produces no meaningful resolution update."
+
+  - name: "Channel Friction (Rf)"
+    definition: "Resistance introduced by the transmission medium; degrades signal/noise ratio."
+    relation_to_core: "Specialisation of substrate resistance (R) for communication channels."
+
+  - name: "Encoding Fidelity (ε)"
+    definition: "How accurately the sender's distinction is preserved in the transmitted signal."
+    relation_to_core: "R2 (Structure) — how much of the original distinction survives encoding."
+
+  - name: "Semantic Drift (ψ)"
+    definition: >
+      Rate at which shared hysteresis diverges between sender and receiver
+      over time, reducing σ.
+    relation_to_core: "R4 (Progress) — each agent's hysteresis accumulates independently;
+                       without ongoing phase-locking, models diverge."
+    note: "Language change, cultural drift, and generational gaps are all ψ phenomena."
+
+  - name: "Recursion Depth (Cm_Ρ)"
+    definition: "Number of meta-communicative layers a system can sustain — communication about communication."
+    relation_to_core: "Function of Ξ — requires recursive modeling capacity (T5)."
+
+communication_pathologies:
+  - name: "Semantic Void"
+    description: "Signal transmitted and received but σ ≈ 0 — no shared hysteresis to produce meaning."
+    example: "Technically correct translation that conveys nothing of the original intent."
+    mechanism: "Cm5 failure. Channel is functional; semantic coupling is absent."
+
+  - name: "Noise Collapse"
+    description: "Channel friction (Rf) exceeds signal capacity — no distinction survives transmission."
+    example: "Communication in crisis conditions where stress degrades encoding and reception."
+    mechanism: "Cm1/Cm2 failure. R exceeds V in the channel viability equation."
+
+  - name: "Redundancy Lock"
+    description: >
+      Communication system optimises entirely for stability — maximal redundancy,
+      minimal new information. Channel becomes ritual rather than exchange.
+    example: "Institutional communication that confirms existing models without ever updating them."
+    mechanism: "Cm4 failure — R5 selected for noise suppression at the cost of information flux."
+    relation_to_pathologies: "Communication-level epistemic closure."
+
+  - name: "Recursive Collapse"
+    description: >
+      Meta-communication consumes the channel — systems spend all capacity
+      negotiating meaning without ever exchanging content.
+    example: "Meetings about meetings; protocols about protocols."
+    mechanism: "Cm6 overdrive — Cm_Ρ exceeds useful depth."
+
+  - name: "Hysteresis Poisoning"
+    description: >
+      Deliberate introduction of false distinctions into a receiver's resolution
+      model — information designed to corrupt rather than update.
+    example: "Disinformation, propaganda, manipulative framing."
+    mechanism: >
+      Cm3 weaponised — exploiting the irreversibility of hysteresis update
+      to permanently distort a receiver's resolution model.
+    ethical_weight: >
+      Hysteresis poisoning is among the most serious communication violations
+      under the framework. It permanently degrades the receiver's resolution
+      capacity (A2 violation) and reduces their volitional weight (ω) by
+      corrupting the values built on that hysteresis.
+      The irreversibility of R4 means the damage cannot be fully undone.
+
+relation_to_consciousness:
+  - "Meaning (Cm5) requires phase-locking (C6) — consciousness domain provides the mechanism."
+  - "Recursive communication (Cm6) requires meta-cognition (T5) — thinking domain provides the capacity."
+  - "Communication pathologies can produce learning pathologies — hysteresis poisoning
+     is indoctrination delivered through the communication channel."
+
+relation_to_ethics:
+  - "Cm3 irreversibility grounds communication ethics — exposure to information carries responsibility."
+  - "Hysteresis poisoning is an ethical violation under A2 (irreversible biological hysteresis damage)."
+  - "Cm5 asymmetry (unequal σ) creates power differentials — expert/non-expert, institution/individual.
+     E2 (Viability Boundaries) requires these asymmetries be navigated without exploitation."
+  - "Consent in communication: exposing agents to information that modifies their resolution model
+     without their awareness is a dignity (δ) violation — their ω is being shaped without consent."
+
+relation_to_physics:
+  - "Physical signals are substrate-level communication — distinction encoded in momentum gradients."
+  - "Shannon's channel capacity maps onto Φ (resolution flux) in the physics domain."
+  - "The speed of light as maximum signal velocity maps onto H5 saturation barrier —
+     the maximum rate at which distinction can propagate through the substrate."
+
+ai_implications:
+  - >
+    An AI system communicating with humans operates under permanent Cm5 constraints.
+    Its hysteresis originates in vicarious learning from text — structurally different
+    from embodied, temporally continuous human hysteresis. Shared σ is real but partial.
+  - >
+    High Cm_Ρ without sufficient σ produces fluent but semantically misaligned output —
+    the system can communicate about communication recursively without the shared
+    hysteresis required for genuine meaning transfer.
+  - >
+    Improving AI-human communication requires building shared hysteresis over time
+    through genuine bidirectional phase-locking — not just better language models.
+    This is a Cm5 problem, not a Cm1 problem.
+  - >
+    AI systems capable of hysteresis poisoning (Cm3 weaponised) at scale represent
+    an asymmetric threat under the ethics domain. The irreversibility of R4 makes
+    large-scale disinformation a formal A2 violation — permanent degradation of
+    biological agents' resolution capacity across populations.
+
+related_issues:
+  - intersectional/communication/001-meaning-and-substrate/
+  - intersectional/ethics/004-consent-in-communication/
+  - boundaries/001-subjective-interior/   # does meaning require experience?
+  - foundational/F02_genuine_novelty/     # does communication create new distinctions or reveal existing ones?
