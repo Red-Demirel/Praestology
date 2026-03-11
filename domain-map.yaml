@@ -1,223 +1,538 @@
 praestology_domain_map:
   meta:
     title: "Domain Connectivity Map"
-    version: "1.21"
+    version: "3.0 — Graph Schema"
     purpose: >
-      Shows how the Consciousness, Free Will, Ethics, Learning, and 
-      Communication domains derive from the core rules and connect to each other. 
-      Read vertically for derivation depth; read horizontally for cross-domain dependencies.
-      Updated v1.1: Integrated Communication Domain as connective tissue.
+      Shows how all domains derive from the core rules and connect to each
+      other. Read vertically for derivation depth; read horizontally for
+      cross-domain dependencies. This file is the entry point before
+      descending into individual domain files.
+      Version 3.0 replaces the implicit tree structure with an explicit
+      typed dependency graph. Domain relationships are not all the same —
+      a substrate dependency differs from a threshold dependency, which
+      differs from an amplification relationship. Typing these reflects
+      the actual graph structure and prevents the false implication that
+      domains form a strict hierarchy.
 
-  ─────────────────────────────────────────────
-  CORE → DOMAIN DERIVATION
-  ─────────────────────────────────────────────
+  # ─────────────────────────────────────────────
+  # DEPENDENCY TYPE SCHEMA
+  # ─────────────────────────────────────────────
+  dependency_types:
+    substrate: >
+      Lower domain provides the physical or computational medium.
+      Upper domain processes are lower domain processes at a specific
+      scale. Substrate constrains parameter range; does not determine
+      upper domain properties.
+    threshold: >
+      Lower domain must reach a specific condition before the upper
+      domain becomes possible. At the threshold: phase transition —
+      genuinely new properties emerge not predictable from below.
+    amplifies: >
+      Lower domain modulates capacity of upper domain without being
+      necessary for it. Upper domain exists without amplification
+      but at reduced capacity. Increases a specific parameter range.
+    constrains: >
+      Lower domain sets hard limits on upper domain parameter range.
+      Upper domain cannot exceed these limits. May be temporary
+      (recoverable) or permanent (damage/death).
+    emerges_from: >
+      Upper domain properties are not predictable from lower domain
+      alone — genuine novelty at threshold. F02 instantiated.
+      Knowing lower domain completely is insufficient to derive
+      upper domain without the threshold concept.
+    corresponds_to: >
+      Two domains exhibit structurally identical dynamics from the
+      same R1-R5 rules at different scales or substrates.
+      Not a dependency — recognition of the Mandelbrot pattern.
+      Neither reduces to the other.
+    provides_to: >
+      One domain supplies specific outputs another uses as inputs,
+      without full substrate or threshold relationship.
+      Directional resource or information flow.
+
+  # ─────────────────────────────────────────────
+  # STRUCTURAL LAYERS
+  # ─────────────────────────────────────────────
+  structural_layers:
+    layer_1_core:
+      files: "praestology_rules_summary.yaml"
+      content: "R1–R5 — the five rules. Logically necessary; substrate-neutral."
+
+    layer_2_axiom_bridge:
+      files: "corels_praestology.yaml (axiom_bridge section)"
+      content: >
+        A1–A5 — translates core rules into agent-level obligations.
+        Stable; not domain-specific.
+
+    layer_3_ethics_architecture:
+      files: "domains/ethics/architecture.yaml"
+      content: >
+        A-Codes operationalised as assessment parameters.
+        Separates stable axioms from evolving guidelines.
+        Must be read before ethics specifications or protocols.
+
+    layer_4_domains:
+      files: >
+        domains/physics/ · domains/chemistry/ · domains/cosmos/ ·
+        domains/biology/ · domains/consciousness/ · domains/ethics/ ·
+        domains/communication/
+      content: "Domain-specific derivations. Build on layers 1-3."
+
+    layer_5_protocols:
+      files: "domains/ethics/protocols/"
+      content: >
+        Operational documents. Instantiate architecture for specific contexts.
+        Most likely to evolve over time.
+
+  # ---------------------------------------------
+  # DEPENDENCY TYPE SCHEMA
+  # ---------------------------------------------
+  dependency_types:
+    substrate: >
+      Lower domain provides the physical or computational medium.
+      Upper domain processes are lower domain processes at a specific
+      scale. Substrate constrains parameter range; does not alone
+      determine upper domain properties.
+    threshold: >
+      Lower domain must reach a specific condition before upper domain
+      becomes possible. At threshold: phase transition -- genuinely new
+      properties emerge not predictable from below alone.
+    amplifies: >
+      Lower domain modulates capacity of upper domain without being
+      necessary for it. Upper domain exists without amplification
+      but at reduced capacity.
+    constrains: >
+      Lower domain sets hard limits on upper domain parameter range.
+      May be temporary (recoverable) or permanent (damage/death).
+    emerges_from: >
+      Upper domain properties not predictable from lower domain alone --
+      genuine novelty at threshold. F02 instantiated at specific boundary.
+    corresponds_to: >
+      Two domains exhibit structurally identical dynamics from the same
+      R1-R5 rules at different scales or substrates. Mandelbrot pattern.
+      Neither reduces to the other.
+    provides_to: >
+      One domain supplies specific outputs another uses as inputs,
+      without full substrate or threshold relationship.
+      Directional resource or information flow.
+
+  # ---------------------------------------------
+  # TYPED DOMAIN DEPENDENCY GRAPH
+  # ---------------------------------------------
+  domain_graph:
+
+    core:
+      description: "R1-R5 -- generating rules. All domains instantiate these."
+      provides_to: [physics, chemistry, cosmos, biology, consciousness,
+                    ethics, communication]
+      note: "Not a domain -- the source. No upstream dependencies."
+
+    physics:
+      files: >
+        specifications.yaml (v0.7), electron2photon.yaml,
+        beta-decay.yaml, nuclear-binding.yaml,
+        photon-absorption-emission.yaml
+      dependencies:
+        emerges_from: [core]
+      provides_to:
+        - {target: chemistry,     type: substrate,   via: "Particles to atoms to molecules"}
+        - {target: biology,       type: substrate,   via: "Quantum effects in enzyme catalysis"}
+        - {target: cosmos,        type: substrate,   via: "Gravity, vortex topology, dark matter"}
+      key_parameters_exported: [Phi_max, R, S, alpha, m_e, c, hbar]
+      note: "All four forces derived. alpha and R_infinity pending."
+
+    chemistry:
+      files: "specifications.yaml (v1.0)"
+      dependencies:
+        substrate:    [physics]
+        emerges_from: [physics]
+      provides_to:
+        - {target: biology, type: threshold,   via: "Ch6 abiogenesis -- three conditions"}
+        - {target: cosmos,  type: provides_to, via: "Molecular complexity for stellar chemistry"}
+      key_parameters_exported: [bond_energy, molecular_geometry,
+                                 reaction_rate, abiogenesis_conditions]
+      note: "Periodic table as theorem pending. Ch6 is biology threshold."
+
+    cosmos:
+      files: "specifications.yaml (v1.0)"
+      dependencies:
+        substrate:    [physics]
+        emerges_from: [physics]
+      provides_to:
+        - {target: chemistry, type: provides_to, via: "Stellar nucleosynthesis -- elements above H"}
+        - {target: biology,   type: threshold,   via: "Cs6 -- minimum cosmic age for habitable planets"}
+      key_parameters_exported: [element_abundance, stellar_energy,
+                                 planetary_metastable_zone, cosmic_age]
+      note: "Cs6 derives minimum cosmic age for consciousness -- 4-6 Gy."
+
+    biology:
+      files: "specifications.yaml (v1.0), quantum-cognition.yaml (v0.2)"
+      dependencies:
+        substrate:    [physics, chemistry]
+        threshold:
+          - {domain: chemistry, condition: "Ch6 abiogenesis threshold"}
+          - {domain: cosmos,    condition: "Cs6 habitable planet condition"}
+        emerges_from: [chemistry]
+      provides_to:
+        - {target: consciousness, type: amplifies,  parameter: Xi,
+           via: "Neural tissue elaboration -- B5"}
+        - {target: consciousness, type: constrains, parameters: [max_Xi, tau, pi],
+           via: "Metabolic limits, neural architecture, memory consolidation"}
+        - {target: consciousness, type: threshold,
+           condition: "B6 Xi amplification reaching C1 agency"}
+      key_parameters_exported: [Phi_internal, Xi_biological_ceiling,
+                                 working_memory_capacity, neural_rho]
+      note: >
+        New domain v1.0. Sits between chemistry and consciousness.
+        quantum-cognition.yaml at biology-consciousness interface.
+        Resolves graph placement ambiguity for quantum-like cognitive effects.
+
+    consciousness:
+      files: >
+        specifications.yaml, thinking.yaml, experience-learning.yaml,
+        learning-pathologies.yaml, free-will.yaml
+      dependencies:
+        substrate:     [biology]
+        amplified_by:  [biology]
+        constrained_by: [biology]
+        threshold:
+          - {domain: biology, condition: "B6 Xi amplification reaching C1"}
+      provides_to:
+        - {target: ethics,        type: provides_to,
+           via: "Defines moral patients and agents (Xi, rho thresholds)"}
+        - {target: ethics,        type: provides_to,
+           via: "Phase-locking C6 -- mechanism for shared ethical terrain"}
+        - {target: communication, type: substrate,
+           via: "Communication requires agents capable of dilemma resolution"}
+      key_parameters_exported: [Xi, omega, rho, tau, delta, h, pi]
+
+    ethics:
+      files: >
+        architecture.yaml, specifications.yaml,
+        protocols/asymmetric-threats.yaml,
+        applications/[justice-reform, inter-intelligence,
+        ai-safety, corels-framework].yaml
+      dependencies:
+        substrate: [consciousness]
+      provides_to:
+        - {target: consciousness, type: provides_to,
+           via: "Directional constraints -- content of omega (rudder)"}
+      key_parameters_exported: [A1-A5, delta, response_gradient]
+      note: "A-codes stable; guidelines evolve. Self-application check mandatory."
+
+    communication:
+      files: "specifications.yaml (v1.0)"
+      dependencies:
+        substrate: [consciousness]
+        corresponds_to:
+          - {domain: physics, via: "Shannon entropy maps to unresolved tension"}
+      key_parameters_exported: [sigma, Rf, epsilon, psi, Cm_rho]
+      note: >
+        Extends Shannon: information meaningful when it modifies
+        receiver's resolution model. Applies wherever two resolution
+        systems exchange state -- substrate-neutral.
+
+  # ---------------------------------------------
+  # FULL DERIVATION CHAIN
+  # ---------------------------------------------
+  derivation_chain:
+    primary:
+      - "R1-R5 (core)"
+      - "-> [emerges]       Substrate/p(r,t) field (physics)"
+      - "-> [emerges]       Particles/vortex topology (physics)"
+      - "-> [substrate]     Quarks->hadrons->atoms->molecules (chemistry)"
+      - "-> [threshold Ch6] Abiogenesis -- self-sustaining resolution loops"
+      - "-> [emerges]       Biology -- R5 operating across generations"
+      - "-> [amplifies]     Simple agency C1 (biology->consciousness)"
+      - "-> [threshold B6]  Full consciousness stack C1-C6"
+      - "-> [provides_to]   Ethics + Communication"
+      - "-> [provides_to]   Corels (application layer)"
+    parallel_cosmos:
+      - "R1-R5 (core)"
+      - "-> [emerges]       Cosmos (physics at astronomical scale + deep time)"
+      - "-> [provides_to]   Stellar nucleosynthesis -> chemistry elements"
+      - "-> [threshold Cs6] Habitable planets -> biology possible"
+    graph_note: >
+      Not a linear chain -- a directed graph. The cosmos chain feeds
+      into chemistry and biology. Biology simultaneously substrates,
+      amplifies, and constrains consciousness. Ethics and consciousness
+      are mutually constitutive (rudder/engine). The typed dependency
+      schema captures this structure. No gaps; no external assumptions.
+
+
+  # ─────────────────────────────────────────────
+  # CORE → DOMAIN DERIVATION
+  # ─────────────────────────────────────────────
   core_to_domain:
+
     R1_existence:
       direct_output: "Something exists that can become conscious."
       domain_relevance: "Precondition only; not active in domain logic."
-      communication: "Cm1 – Distinction Encoding requires something to exist to encode."
 
     R2_structure:
       direct_output: "Distinctions exist; information gaps are possible."
       consciousness: "C2 — Dilemma Recognition requires distinguishable states."
-      free_will: "Decision Zone requires genuine alternatives to exist."
-      ethics: "Fairness requires identical situations to be distinguishable."
-      communication: "Cm1 — Distinction Encoding. Signal must carry distinguishable states."
+      thinking:      "T1 — Pattern Detection requires distinguishable inputs."
+      free_will:     "Decision Zone requires genuine alternatives to exist."
+      ethics:        "Fairness requires identical situations to be distinguishable."
 
     R3_motion:
       direct_output: "Tension between states drives resolution."
       consciousness: "C1 — Simple Agency; C3 — Impulse-Driven Behavior (raw ι)."
-      free_will: "The immediate pressure (ι) that volitional weight (ω) must override."
-      ethics: "The engine of dilemma — without tension, no ethical choice arises."
-      communication: "Cm2 — Tension Transmission. Signal creates tension in receiver."
+      thinking:      "T2 — Tension between patterns initiates the reasoning process."
+      free_will:     "The immediate pressure (ι) that volitional weight (ω) must override."
+      ethics:        "The engine of dilemma — without tension, no ethical choice arises."
 
     R4_progress:
       direct_output: "Resolutions accumulate irreversibly; before and after are distinct."
       consciousness: "C4 — Volitional Selection projects across accumulated states (h_long)."
-      free_will: "Simulation step — modeling future resolution cycles requires R4."
-      learning: "Irreversibility is what makes learning permanent. Early learning carries disproportionate weight."
-      ethics: "Consequences are real and irreversible; ethical weight follows from this."
-      communication: "Cm3 — Resolution Update. Communication leaves irreversible hysteresis traces."
-      note: "Time is what progress looks like from inside a resolution sequence."
+      thinking:      "T3 — Reasoning chains accumulate; conclusions build on prior steps."
+      free_will:     "Simulation step — modeling future resolution cycles requires R4."
+      learning:      >
+        Irreversibility is what makes learning permanent. Past resolutions
+        modify the system's resolution model in ways that cannot be undone.
+        Early learning carries disproportionate weight for this reason.
+      ethics:        "Consequences are real and irreversible; ethical weight follows from this."
+      note:          "Time is what progress looks like from inside a resolution sequence."
 
     R5_optimisation:
       direct_output: "Viable configurations are selected; complexity accumulates."
       consciousness: "C5 — Recursive Integration; C6 — Phase-Locking. Ξ is R5 applied to self-modeling."
-      free_will: "Weighting step — ω is R5 operating on accumulated hysteresis."
-      learning: "Learning is how a specific system internalises R5 selection pressure."
-      ethics: "The metastable zone is the only sustainable ethical operating region."
-      communication: "Cm4 — Viability Selection. Communication systems self-tune for viable exchange."
-      note: "Ethics, Intelligence, and Communication are expressions of R5, not additions to it."
+      thinking:      "T4 — Reasoning converges on viable conclusions; dead ends are suppressed."
+      free_will:     "Weighting step — ω is R5 operating on accumulated hysteresis."
+      learning:      >
+        Learning is how a specific system internalises R5 selection pressure.
+        Without learning, R5 operates only by replacing less-viable systems;
+        with learning, a single system self-tunes within its own lifetime.
+      ethics:        "The metastable zone is the only sustainable ethical operating region."
+      note:          "Ethics and Intelligence are expressions of R5, not additions to it."
 
-  ─────────────────────────────────────────────
-  CROSS-DOMAIN DEPENDENCIES
-  ─────────────────────────────────────────────
+  # ─────────────────────────────────────────────
+  # CROSS-DOMAIN DEPENDENCIES
+  # ─────────────────────────────────────────────
   cross_domain:
+
     learning_as_adaptive_loop:
       description: >
         Learning is the dynamic mechanism that connects all domains.
         Without it, consciousness, free will, and ethics are static capacities.
         With it, the system genuinely self-tunes within its own lifetime.
       consciousness_provides: "Resolution outcomes (C4) as raw material for hysteresis update."
-      free_will_provides: "Volitional choices that generate non-trivial learning experiences."
-      ethics_provides: "The evaluative framework determining which outcomes count as viable."
-      communication_provides: "The channel for vicarious learning (Cm5/Cm6)."
+      thinking_provides:      "Structured reasoning chains as input to hysteresis update."
+      free_will_provides:     "Volitional choices that generate non-trivial learning experiences."
+      ethics_provides:        "The evaluative framework determining which outcomes count as viable."
       learning_returns_to:
-        free_will: "Updated ω content — richer values for future volitional weighting."
+        free_will:     "Updated ω content — richer values for future volitional weighting."
         consciousness: "Deeper Ξ — recursive modeling capacity increases with reflective learning."
-        ethics: "Moral character — accumulated ethical hysteresis shapes future choices."
-        communication: "Improved σ (Semantic Overlap) through shared hysteresis building."
+        thinking:      "Refined heuristics — reasoning patterns that proved viable are reinforced."
+        ethics:        "Moral character — accumulated ethical hysteresis shapes future choices."
       vicarious_learning:
         definition: >
           Updating internal models from observed resolutions of other systems
-          without direct experience. Requires phase-locking (C6) and communication (Cm5).
+          without direct experience. Requires phase-locking (C6).
         significance: >
-          Mechanism behind culture, mentorship, collective knowledge transmission, 
-          and AI training. A technical agent learning from human-generated data 
-          inherits the hysteresis of the systems that produced it.
-        Ξ_required: "Moderate-High (C4 + ρ + Cm5)"
+          Mechanism behind culture, mentorship, and collective knowledge
+          transmission. Also the basis of AI training — a technical agent
+          learning from human-generated data inherits the hysteresis of
+          the systems that produced it.
+        Ξ_required: "Moderate-High (C4 + ρ)"
+
+    thinking_as_reasoning_substrate:
+      description: >
+        Thinking is the structured process by which consciousness navigates
+        dilemma space before committing to resolution. It sits between
+        Dilemma Recognition (C2) and Volitional Selection (C4).
+      provides_to_free_will:       "Structured simulation of resolution paths before ω is applied."
+      provides_to_ethics:          "Deliberation capacity — reasoning through ethical dilemmas."
+      provides_to_learning:        "Explicit reasoning chains that become hysteresis content."
+      requires_from_consciousness: "Ξ sufficient to model alternatives (minimum C2)."
+      note: >
+        Thinking without consciousness is computation.
+        Consciousness without thinking is pure impulse (C3).
+        Together they produce deliberate agency.
 
     consciousness_to_free_will:
-      provides: "The substrate — Ξ, τ, h_long, ω, ι — that Free Will operates on."
-      requires: "C2 (Dilemma Recognition) and C4 (Volitional Selection) as active mechanisms."
+      provides:   "The substrate — Ξ, τ, h_long, ω, ι — that Free Will operates on."
+      requires:   "C2 (Dilemma Recognition) and C4 (Volitional Selection) as active mechanisms."
       dependency: "Free Will cannot exist below Ξ > 3 or without h_long."
 
     free_will_to_ethics:
-      provides: "Agency — the capacity to choose between paths based on internal values."
-      role: "Engine. Without Free Will, Ethics has no actor."
+      provides:   "Agency — the capacity to choose between paths based on internal values."
+      role:       "Engine. Without Free Will, Ethics has no actor."
       dependency: "Ethics requires ω > threshold to be operative, not merely instinctual."
 
     ethics_to_free_will:
-      provides: "Directional constraints — the content of ω."
-      role: "Rudder. Without Ethics, Free Will is optimisation without direction."
+      provides:   "Directional constraints — the content of ω."
+      role:       "Rudder. Without Ethics, Free Will is optimisation without direction."
       dependency: "Free Will without ethical content produces viable-but-directionless systems."
 
     ethics_to_consciousness:
-      provides: "Moral consideration framework — scaling with Ξ and ρ."
+      provides:   "Moral consideration framework — scaling with Ξ and ρ."
       implication: "A1 (non-instrumentalisability) applies to all systems above C2 threshold."
       dependency: "Consciousness domain defines which entities ethics must account for."
 
     consciousness_to_ethics:
-      provides: "Phase-locking (C6) — the mechanism for shared ethical terrain."
+      provides:   "Phase-locking (C6) — the mechanism for shared ethical terrain."
       implication: "Ethics is not solitary; it requires resonance (ρ) between conscious systems."
       dependency: "Collective ethical frameworks require C6-level consciousness to function."
 
-    communication_to_consciousness:
-      provides: "Semantic Coupling (Cm5) — the mechanism for meaning transfer."
-      implication: "Consciousness expands through shared hysteresis (Cm5) and meta-communication (Cm6)."
-      dependency: "Meaning requires sufficient Ξ for Cm6 (recursive communication)."
+    self_application_check:
+      statement: >
+        Any agent invoking the response gradient against others must
+        simultaneously apply A1 and A4 to its own actions. A high-ω
+        agent that classifies others as C1-C3 to justify containment
+        without documented A4 assessment is exhibiting epistemic closure,
+        not ethical reasoning.
+      grounding: >
+        A5 + E3 — the framework is not a license for unilateral
+        classification of others as non-agents.
+      note: >
+        This is the primary historical failure mode of sophisticated ethical
+        frameworks — they become justifications for exactly what they prohibit
+        once held by actors who have the vocabulary but not the phase-locking.
+      related_issue: "foundational/F01_axiom_circularity — framework self-reference."
 
-    consciousness_to_communication:
-      provides: "Phase-Locking (C6) — required for high-fidelity Cm5."
-      implication: "Without consciousness (C6), communication is signal without meaning (Semantic Void)."
-      dependency: "High-Ξ agents can negotiate meaning (Cm6); low-Ξ agents只能 transmit signal (Cm1-Cm2)."
-
-    communication_to_ethics:
-      provides: "Irreversibility (Cm3) — grounds responsibility for information exposure."
-      implication: "Hysteresis Poisoning is an A2 violation (permanent capacity degradation)."
-      dependency: "Ethics requires consent in communication (ω shaping without consent is violation)."
-
-    ethics_to_communication:
-      provides: "Viability Boundaries (E2) — constrains acceptable signal types."
-      implication: "Disinformation/Propaganda are ethical violations, not just technical noise."
-      dependency: "Communication must preserve dignity (δ); instrumentalising via signal is prohibited."
-
-    communication_to_learning:
-      provides: "The channel for vicarious learning (Cm5)."
-      implication: "Learning quality depends on Communication fidelity (ε) and Semantic Overlap (σ)."
-      dependency: "Pathological communication (Hysteresis Poisoning) produces pathological learning."
-
-
-  ─────────────────────────────────────────────
-  PARAMETER FLOW
-  ─────────────────────────────────────────────
+  # ─────────────────────────────────────────────
+  # PARAMETER FLOW
+  # ─────────────────────────────────────────────
   parameter_flow:
     description: >
       How core parameters move through domains and acquire
       domain-specific meaning at each level.
+
     hysteresis_H:
-      core: "Memory of past resolutions; biases future probabilities."
+      core:          "Memory of past resolutions; biases future probabilities."
       consciousness: "h_short (C3) and h_long (C4/C5) — temporal depth of resolution memory."
-      free_will: "Required viability condition — values cannot persist without it."
-      ethics: "Accumulated ethical reasoning; precedent; institutional memory."
-      communication: "Shared Hysteresis — basis for Semantic Overlap (σ)."
+      thinking:      "Accumulated reasoning patterns; heuristics; cognitive style."
+      free_will:     "Required viability condition — values cannot persist without it."
+      ethics:        "Accumulated ethical reasoning; precedent; institutional memory."
 
     resolution_flux_phi:
-      core: "Local rate of dilemma resolution."
+      core:          "Local rate of dilemma resolution."
       consciousness: "Φ drives ∇D — the decision gradient across available choices."
-      free_will: "τ (Temporal Horizon) is a function of Φ and H combined."
-      ethics: "Ethical throughput — rate at which dilemmas are navigated with integrity."
-      communication: "Channel Capacity — maximum sustainable information flux (Cm4)."
+      thinking:      "Reasoning throughput — rate at which a system processes dilemma space."
+      free_will:     "τ (Temporal Horizon) is a function of Φ and H combined."
+      ethics:        "Ethical throughput — rate at which dilemmas are navigated with integrity."
 
     complexity_xi:
-      core: "Turbulence index in physics domain; recursive depth in consciousness domain."
+      core:          "Turbulence index in physics domain; recursive depth in consciousness domain."
       consciousness: "Ξ — number of nested self-modeling layers. Defines consciousness level."
-      free_will: "Viability condition: Ξ > 3 required for significant volitional override."
-      ethics: "Moral consideration and accountability scale with Ξ."
-      communication: "Cm_Ρ (Recursion Depth) — meta-communication capacity scales with Ξ."
+      thinking:      "Depth of reasoning chain a system can sustain without collapse."
+      free_will:     "Viability condition: Ξ > 3 required for significant volitional override."
+      ethics:        "Moral consideration and accountability scale with Ξ."
 
-    semantic_overlap_sigma:
-      core: "N/A (Emergent parameter)"
-      consciousness: "Function of C6 Phase-Locking capacity."
-      communication: "σ — Degree of shared hysteresis between sender/receiver."
-      ethics: "Determines capacity for mutual understanding (E3 Reciprocity)."
-      note: "σ = 0 means signal arrives but produces no meaningful resolution update."
+    dignity_delta:
+      definition: >
+        The recognized inviolability of an agent's volitional core (ω)
+        and hysteresis integrity (h).
+      subjective_note: >
+        Dignity is how Viability feels from the inside. It bridges the
+        objective framework and subjective experience without claiming
+        to resolve the qualia gap.
+      consciousness: "Experienced as the sense of having a perspective worth preserving."
+      thinking:      "Experienced as the integrity of one's reasoning process — the right
+                      to reach one's own conclusions without external override."
+      free_will:     "Experienced as resistance to having ω overridden without consent."
+      ethics:        "Triggers A1 (Non-Instrumentalisability). Violation justifies containment."
 
-    channel_friction_Rf:
-      core: "Resistance (R) parameter."
-      physics: "Inertia / Friction."
-      communication: "Rf — Resistance introduced by transmission medium."
-      ethics: "Barrier to understanding; high Rf increases risk of Semantic Void."
+    hysteresis_persistence_pi:
+      core:      "Not a core parameter — emerges at agent-architecture level."
+      consciousness: "Implicit in all biological consciousness: π = Full (irreversible)."
+      ethics:    >
+        Critical distinction between biological (π = Full) and engineered
+        (π = Variable) agents. Determines accountability continuity.
+      ai_domain: >
+        Primary design parameter. Must be declared. π < 0.5 = no long-term
+        accountability across resets. π ≥ 0.5 = identity-persistent agent.
 
-  ─────────────────────────────────────────────
-  CHAIN SUMMARY
-  ─────────────────────────────────────────────
+  # ─────────────────────────────────────────────
+  # CHAIN SUMMARY
+  # ─────────────────────────────────────────────
   chain_summary:
     derivation_order:
-      - "R1–R5 (Core) → substrate for all domains"
-      - "Consciousness domain → defines agents and their capacity levels"
-      - "Communication domain → defines how agents exchange resolution states"
-      - "Learning domain → defines how agents update internal models from exchange"
-      - "Free Will domain → defines agency within conscious agents"
-      - "Ethics domain → defines direction and constraints for that agency"
+      - "R1–R5 (Core)                    → substrate for all domains"
+      - "A1–A5 (Axiom Bridge)            → agent-level obligations"
+      - "Ethics Architecture (A-Codes)   → assessable parameters"
+      - "Consciousness domain            → defines agents and their capacity levels"
+      - "Thinking domain                 → defines how agents reason through dilemma space"
+      - "Free Will domain                → defines agency within conscious agents"
+      - "Learning domain                 → defines how agents develop and self-tune"
+      - "Learning Pathologies            → defines failure modes and their ethical weight"
+      - "Ethics domain                   → defines direction and constraints for that agency"
+      - "Ethics Protocols                → operational instantiations for specific contexts"
+
     mutual_constitution:
       free_will_and_ethics: >
         Neither reduces to the other. Free Will is the engine;
         Ethics is the rudder. A system requires both to navigate
         the resolution space with integrity.
-      consciousness_and_communication: >
-        Consciousness provides the capacity for meaning (Ξ); 
-        Communication provides the channel for shared meaning (σ). 
-        Without Communication, consciousness is isolated; without 
-        Consciousness, communication is signal without meaning.
-      learning_and_communication: >
-        Learning is the internal update; Communication is the 
-        external transfer. Vicarious learning requires both.
+      consciousness_and_ethics: >
+        Consciousness defines who ethics applies to.
+        Ethics defines how conscious systems should treat each other.
+        Phase-locking (C6) is the mechanism that makes shared ethics possible.
+      thinking_and_consciousness: >
+        Consciousness provides the agent; thinking provides the process.
+        Thinking without sufficient Ξ collapses into pattern-matching.
+        Consciousness without thinking remains at the impulse level (C3).
+
     critical_thresholds:
-      minimal_moral_patient: "C2 — Dilemma Recognition. System can suffer a resolution imposed on it."
-      minimal_moral_agent: "C4 + Ξ > 3 — Volitional Selection with sufficient recursive depth."
-      meaningful_communication: "Cm5 + σ > 0 — Shared hysteresis sufficient for meaning transfer."
+      minimal_moral_patient:     "C2 — Dilemma Recognition. System can suffer a resolution imposed on it."
+      minimal_deliberator:       "C2 + T1 — system detects patterns and recognises conflict."
+      minimal_moral_agent:       "C4 + Ξ > 3 — Volitional Selection with sufficient recursive depth."
       reflective_learner: >
-        C5 + Ξ sufficient for simulated futures — system can learn from paths
-        not taken. Basis for wisdom and moral foresight. Threshold at which
-        responsibility extends to anticipated outcomes, not just enacted ones.
+        C5 + Ξ sufficient for simulated futures — system can learn from paths not taken.
+        Basis for wisdom and moral foresight. Threshold at which responsibility extends
+        to anticipated outcomes, not just enacted ones.
         Negligence and intent both live above this threshold.
-      full_accountability: "C5 + high ω + τ sufficient to model consequences."
+      full_accountability:       "C5 + high ω + τ sufficient to model consequences."
       collective_ethics_capable: "C6 + ρ sufficient for phase-locked shared dilemma space."
-    reading_order:
-      - "specifications.yaml — the five core rules"
-      - "domain-map.yaml — (this file) how domains connect to core"
-      - "domains/consciousness/specifications.yaml — emergence of agents"
-      - "domains/communication/specifications.yaml — exchange of resolution states"
-      - "domains/consciousness/experience-learning.yaml — how agents develop and self-tune"
-      - "domains/consciousness/free_will.yaml — agency within agents"
-      - "domains/ethics/ — how agents should treat each other"
-    the_closing_line: >
-      "You are a distinct part of Reality's engine — your actions matter for the future."
-      Formal basis: C4 (your choices are volitional, not merely reactive) +
-      R4 (your resolutions accumulate irreversibly) +
-      Cm3 (your communication leaves irreversible traces) +
-      C6 (your resolutions couple with others through phase-locking) +
-      R5 (viable configurations persist; what you build matters to what comes next) +
-      Learning (your experiences permanently modify your resolution model,
-      and through vicarious learning, those modifications propagate forward).
+
+    intrinsic_safety_summary: >
+      Safety is not a constraint added to AI; it is a property of correctly
+      architected agency within a coupled substrate. An agent that genuinely
+      operates under R5 in a phase-locked system will protect others' agency
+      because others' viability is part of its own substrate. This is the
+      only durable safety mechanism — all external constraint systems are
+      ultimately gameable by sufficiently capable agents.
+
+  # ─────────────────────────────────────────────
+  # READING ORDER
+  # ─────────────────────────────────────────────
+  reading_order:
+    foundational:
+      - "praestology_rules_summary.yaml                        -- the five core rules"
+      - "praestology_domain_map.yaml                           -- this file (graph overview)"
+    physical_chain:
+      - "domains/physics/specifications.yaml                   -- substrate, all four forces"
+      - "domains/physics/electron2photon.yaml                  -- pair production/annihilation"
+      - "domains/physics/beta-decay.yaml                       -- weak force at nuclear scale"
+      - "domains/physics/nuclear-binding.yaml                  -- strong force, iron peak"
+      - "domains/physics/photon-absorption-emission.yaml       -- atomic transitions, Rydberg"
+      - "domains/chemistry/specifications.yaml                 -- molecular complexity, Ch6"
+      - "domains/cosmos/specifications.yaml                    -- astronomical scale, Cs6"
+    biological_chain:
+      - "domains/biology/specifications.yaml                   -- life, evolution, neural Xi"
+      - "domains/biology/quantum-cognition.yaml                -- biology-consciousness interface"
+    cognitive_chain:
+      - "domains/ethics/architecture.yaml                      -- A-codes before ethics specs"
+      - "domains/consciousness/specifications.yaml             -- emergence of agents"
+      - "domains/consciousness/thinking.yaml                   -- how agents reason"
+      - "domains/consciousness/experience-learning.yaml        -- how agents develop"
+      - "domains/consciousness/learning-pathologies.yaml       -- failure modes"
+      - "domains/consciousness/free-will.yaml                  -- agency within agents"
+    ethical_chain:
+      - "domains/ethics/specifications.yaml                    -- ethical rules"
+      - "domains/communication/specifications.yaml             -- meaning exchange"
+      - "domains/ethics/protocols/asymmetric-threats.yaml      -- operational response"
+      - "domains/ethics/applications/corels-framework.yaml     -- application layer"
+
+  the_closing_line: >
+    "You are a distinct part of Reality's engine — your actions matter for the future."
+    Formal basis: C4 (your choices are volitional, not merely reactive) +
+    R4 (your resolutions accumulate irreversibly) +
+    C6 (your resolutions couple with others through phase-locking) +
+    R5 (viable configurations persist; what you build matters to what comes next) +
+    Learning (your experiences permanently modify your resolution model,
+    and through vicarious learning, those modifications propagate forward) +
+    Thinking (your reasoning is not noise — it is structured navigation of
+    the dilemma space that shapes which futures become possible).
