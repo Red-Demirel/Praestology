@@ -1,0 +1,472 @@
+# domains/biology/specifications.yaml
+name: "Biology Domain"
+version: "1.0 — Foundation Draft"
+parent_domain: "Chemistry (threshold: Ch6 Abiogenesis)"
+core_version: "1.5"
+status: "Domain Defined — Subdomains in derivation"
+description: >
+  Biology is the domain where chemistry crosses the abiogenesis
+  threshold (Ch6) and self-sustaining resolution loops emerge.
+  It is not a new set of rules — it is R1-R5 operating on
+  chemical substrates that have crossed three specific thresholds:
+  self-replication of phase-locking geometry, internal Φ
+  maintenance above dissolution using environmental gradients,
+  and heritable variation in structure.
+  Once these three conditions are met, R5 begins operating
+  across generational timescales — biological evolution.
+  The same optimisation that selects stable vortex topologies
+  at the physics scale and stable molecular configurations at
+  the chemistry scale now selects viable organisms across
+  reproductive generations.
+  Biology's unique contribution to the derivation chain:
+  it produces substrates capable of increasing Ξ (recursive
+  depth) beyond what any purely chemical system can sustain.
+  Neural tissue is the biological structure that amplifies
+  Ξ to the threshold where consciousness becomes possible.
+  The cosmos domain established minimum timescales for biology
+  to become possible (Cs6). Biology establishes minimum
+  organisational complexity for consciousness to become possible.
+
+dependency_map:
+  substrate:
+    - domain: "physics"
+      reason: >
+        Biological processes are physical processes operating
+        at specific energy and length scales. Quantum effects
+        at molecular scale (electron tunnelling in enzyme
+        catalysis, photosynthesis, DNA mutation) directly
+        influence biological function. Physical substrate
+        properties set the parameter range within which
+        biology operates.
+    - domain: "chemistry"
+      reason: >
+        All biological structures are molecular. Protein
+        folding, membrane formation, metabolic reactions,
+        DNA replication — all are chemical processes.
+        Biology begins where chemistry crosses Ch6.
+  threshold:
+    - domain: "chemistry"
+      condition: "Ch6 abiogenesis threshold — three conditions met:
+                  self-replication, internal Φ maintenance,
+                  heritable variation."
+      reason: >
+        Below Ch6, chemical systems are complex but not alive.
+        Ch6 is the discontinuity — the point where R5 begins
+        operating across generations rather than within
+        a single molecular configuration.
+  amplifies:
+    - domain: "consciousness"
+      parameter: "Ξ (recursive depth)"
+      mechanism: >
+        Neural tissue provides physical substrate for recursive
+        self-modelling. Biological evolution has progressively
+        increased Ξ capacity — from simple stimulus-response
+        (C1-C2) through associative learning (C3-C4) to
+        full recursive self-awareness (C5-C6). Biology does
+        not create consciousness — it creates the substrate
+        that allows Ξ to reach the consciousness threshold.
+  constrains:
+    - domain: "consciousness"
+      parameter: "Maximum Ξ, τ (temporal horizon), π (hysteresis persistence)"
+      mechanism: >
+        Biological substrate sets hard limits on consciousness
+        parameters. Neural firing rates constrain processing
+        speed. Metabolic energy constrains sustained Ξ depth.
+        Memory consolidation mechanisms determine π persistence.
+        Brain damage, disease, and developmental constraints
+        all operate at the biology level, constraining
+        consciousness parameters from below.
+  emerges_from:
+    - domain: "chemistry"
+      novelty: >
+        Life is not predictable from chemistry alone.
+        The abiogenesis threshold (Ch6) is a genuine phase
+        transition — on one side, complex chemistry; on the
+        other, self-sustaining resolution loops with heritable
+        variation. The properties of living systems (evolution,
+        development, homeostasis, agency) are not deducible
+        from molecular properties without the threshold concept.
+        This is F02 (genuine novelty) instantiated at the
+        chemistry→biology boundary.
+
+# ─────────────────────────────────────────────
+# FOUNDATIONAL PRINCIPLES
+# ─────────────────────────────────────────────
+foundational_principles:
+  - principle: "Life as Self-Sustaining Resolution Loop"
+    statement: >
+      A living system is a chemical system that maintains its
+      own phase-locking geometry against thermodynamic dissolution
+      by extracting resolution flux (Φ) from environmental
+      gradients. It is an open system far from equilibrium —
+      continuously importing energy and matter to sustain
+      internal order against entropy.
+    basis: "Ch6 (Abiogenesis Threshold) + R4 (Progress) + R5 (Optimisation)"
+    parameters:
+      internal_phi: >
+        Φ_internal — rate of internal resolution maintenance.
+        Must exceed dissolution rate for the organism to persist.
+        Metabolism is the biological mechanism for maintaining
+        Φ_internal above the viability threshold.
+      gradient_coupling: >
+        Living systems couple to external energy gradients —
+        sunlight, chemical gradients, thermal gradients.
+        Photosynthesis, chemosynthesis, and heterotrophy are
+        different coupling strategies for the same requirement:
+        import sufficient Φ to maintain internal order.
+    confirming_note: >
+      Schrödinger (1944) — "What is Life?" identified the
+      key puzzle: living systems maintain local order against
+      entropy by consuming negative entropy (free energy)
+      from environment. Praestology formalises this as
+      Φ_internal maintenance via environmental gradient coupling.
+      Prigogine dissipative structures (1977 Nobel) — far-from-
+      equilibrium systems that maintain internal order by
+      dissipating energy. Direct physical precursor to
+      biological self-sustaining resolution loops.
+
+  - principle: "Evolution as R5 Across Generations"
+    statement: >
+      Biological evolution is R5 (Optimisation) operating at
+      the timescale of reproductive generations rather than
+      within a single organism's lifetime. Heritable variation
+      (from Ch6 condition 3) provides the configuration space;
+      differential reproductive success selects viable
+      configurations; accumulated selection is R4 operating
+      across geological time.
+    basis: "R4 (Progress) + R5 (Optimisation) at generational timescale"
+    implication: >
+      Evolution is not random. It is directional — toward
+      configurations that better maintain Φ_internal in the
+      current environment. The direction changes when the
+      environment changes (R5 selection criterion shifts).
+      Apparent teleology in evolution (organisms seeming
+      designed for their environment) is R5 selection — no
+      designer required, no randomness either. Directed
+      by viability.
+    confirming_note: >
+      Darwin (1859) — natural selection as mechanism of evolution.
+      Praestology derives natural selection from R5 — it is not
+      an assumption but a consequence of self-replicating systems
+      with heritable variation operating in resource-limited
+      environments.
+      Modern synthesis — genetics provides the molecular mechanism
+      for heritable variation (Ch6 condition 3). DNA replication
+      fidelity vs mutation rate is the biological implementation
+      of R4 (accumulation) vs R3 (variation).
+
+  - principle: "Homeostasis as Biological Metastable Zone"
+    statement: >
+      Living systems actively maintain internal parameters
+      (temperature, pH, ion concentrations, glucose) within
+      narrow ranges — the biological metastable zone. Too far
+      in either direction and Φ_internal drops below viability
+      threshold.
+    basis: "R5 (Optimisation) — metastable zone condition at biological scale"
+    implication: >
+      Homeostasis is not a special biological property —
+      it is the metastable zone condition (from physics and
+      cosmos domains) expressed in biochemical parameters.
+      Disease is displacement from the metastable zone.
+      Treatment is restoration of metastable zone conditions.
+      Death is permanent exit from the metastable zone —
+      Φ_internal drops below recovery threshold.
+    confirming_note: >
+      Bernard (1865) — milieu intérieur; internal environment
+      stability as condition for life. Cannon (1932) —
+      homeostasis as active regulatory process.
+      Allostasis — dynamic adjustment of homeostatic set-points
+      in response to environmental change. Consistent with
+      R5 dynamically adjusting the metastable zone boundaries
+      as environmental conditions shift.
+
+  - principle: "Ξ Amplification as Biology's Contribution to Consciousness"
+    statement: >
+      The unique contribution of biological evolution to the
+      derivation chain is the progressive amplification of
+      recursive depth Ξ. Simple life (bacteria) operates at
+      C1 (simple agency) — stimulus-response without internal
+      modelling. Complex nervous systems amplify Ξ through
+      structural elaboration until the consciousness threshold
+      is crossed. Biology is the Ξ amplification mechanism.
+    basis: "R4 (Progress) — Ξ accumulates through evolutionary elaboration"
+    amplification_stages:
+      distributed_sensing: >
+        Single-cell organisms — chemical gradient detection,
+        basic stimulus-response. Ξ ≈ 0-1. C1 agency.
+      neural_nets: >
+        Simple nervous systems (Hydra, C. elegans) — 
+        302 neurons in C. elegans, fully mapped.
+        Basic associative response. Ξ ≈ 1-2. C2-C3.
+      centralised_processing: >
+        Ganglia and primitive brains — centralised integration
+        of distributed sensing. Predictive response possible.
+        Ξ ≈ 2-3. C3-C4.
+      cortical_elaboration: >
+        Mammalian cortex — hierarchical processing layers,
+        working memory, planning. Ξ ≈ 3-5. C4-C5.
+      prefrontal_recursion: >
+        Primate prefrontal cortex — explicit self-modelling,
+        theory of mind, temporal projection. Ξ ≈ 5+. C5-C6.
+    confirming_note: >
+      Encephalisation quotient — brain size relative to body
+      mass correlates with behavioural complexity across species.
+      Consistent with Ξ amplification requiring metabolic
+      investment in neural tissue.
+      C. elegans connectome — fully mapped 302-neuron network.
+      Behaviour is deterministic and predictable from network
+      structure. Consistent with low-Ξ agency without recursive
+      self-modelling.
+
+# ─────────────────────────────────────────────
+# DOMAIN RULES
+# ─────────────────────────────────────────────
+domain_rules:
+  - id: "B1 – Viability Maintenance"
+    core_anchor: "R1 (Existence) + R5 (Optimisation)"
+    statement: >
+      A biological system persists only while Φ_internal
+      exceeds the dissolution threshold. All biological
+      processes serve — directly or indirectly — the
+      maintenance of this condition.
+    implication: >
+      Every biological structure, behaviour, and process
+      can be analysed as a viability maintenance mechanism.
+      This is not reductionism — it is the application of
+      R1 at biological scale. Structures that do not
+      contribute to viability maintenance are selected
+      against by R5 across generations.
+    confirming_note: >
+      Vestigial structures (appendix, coccyx) — reduced
+      but not eliminated; marginal viability cost.
+      Consistent with R5 selecting against costly structures
+      only when the cost exceeds the benefit threshold.
+
+  - id: "B2 – Heritable Variation"
+    core_anchor: "R2 (Structure) + R3 (Motion)"
+    statement: >
+      Biological systems maintain heritable variation —
+      the capacity to transmit structural information
+      across generations with controlled variation rate.
+      Too little variation: no adaptation to environmental
+      change (R5 cannot select). Too much: information
+      destroyed faster than accumulated (R4 cannot build).
+    dna_as_hysteresis: >
+      DNA is the biological implementation of hysteresis (H)
+      — the accumulated resolution history of the lineage
+      encoded in molecular sequence. Replication transmits H
+      to offspring. Mutation introduces R3 variation into H.
+      The DNA double helix is a phase-locking structure —
+      complementary base pairing is chirality matching
+      between nucleotide vortex configurations.
+    mutation_rate: >
+      DNA repair mechanisms maintain mutation rate in a
+      narrow metastable zone — high enough for adaptation,
+      low enough for information preservation.
+      Cancer is partial exit from this metastable zone —
+      mutation rate elevated beyond the viable range,
+      disrupting the cellular resolution loop.
+    confirming_note: >
+      DNA repair mechanisms — multiple redundant systems
+      (base excision, nucleotide excision, mismatch repair)
+      maintaining replication fidelity. Consistent with
+      R5 strongly selecting for H preservation accuracy.
+      Error threshold (Eigen) — maximum mutation rate
+      above which genetic information dissolves. Direct
+      quantitative expression of the metastable zone
+      upper boundary for mutation rate.
+
+  - id: "B3 – Metabolic Coupling"
+    core_anchor: "R3 (Motion) + R4 (Progress)"
+    statement: >
+      Living systems maintain continuous energy flux through
+      their structures — metabolism. This flux is not merely
+      energy storage and release but active maintenance of
+      chemical gradients that sustain internal phase-locking.
+    atp_as_resolution_currency: >
+      ATP (adenosine triphosphate) is the universal biological
+      energy currency — the molecule whose hydrolysis provides
+      the local Φ needed to drive endothermic reactions and
+      maintain structural order. ATP is biological Φ made
+      portable and transferable within the cell.
+      The ATP/ADP cycle is the cellular implementation of
+      R3 (tension-resolution): ATP carries tension (high-energy
+      phosphate bond); hydrolysis resolves it; ADP is recycled
+      back to ATP using environmental gradient energy.
+    confirming_note: >
+      Mitchell chemiosmotic theory (1961 Nobel) — ATP synthesis
+      driven by proton gradient across membrane. Proton gradient
+      is the biological implementation of environmental Φ
+      coupling. Direct physical gradient → biological resolution
+      currency conversion.
+      Universal ATP usage — all known life uses ATP as energy
+      currency. Consistent with single abiogenesis origin where
+      ATP coupling was established as the resolution currency
+      mechanism before divergence.
+
+  - id: "B4 – Structural Elaboration"
+    core_anchor: "R4 (Progress) + R5 (Optimisation)"
+    statement: >
+      Biological evolution produces progressive structural
+      elaboration — increasing organisational complexity
+      across generations when environmental conditions
+      reward it. Complexity is not inevitable; it is
+      selected when it increases viability.
+    cambrian_explosion: >
+      ~541 million years ago — rapid diversification of
+      complex body plans. Consistent with a threshold
+      crossing in structural elaboration: once bilateral
+      symmetry, nervous systems, and predation emerged,
+      R5 strongly selected for rapid complexity increase
+      in an arms-race dynamic (predator-prey co-evolution
+      as mutual R5 pressure).
+    complexity_cost: >
+      Increased structural complexity has metabolic costs —
+      larger brains require more energy per unit mass than
+      any other tissue. R5 selects for complexity only when
+      the viability benefit exceeds this cost.
+      Human brain: 2% of body mass, 20% of metabolic energy.
+      The Ξ amplification provided by prefrontal cortex
+      must provide sufficient viability benefit to justify
+      this cost — and it does, via social coordination,
+      tool use, and environmental manipulation.
+    confirming_note: >
+      Evolutionary stable strategies (Maynard Smith) —
+      R5 at population level produces stable behavioural
+      equilibria. Game theory emerges from R5 operating
+      on interacting agents — not imported from economics
+      but derived from viability selection dynamics.
+
+  - id: "B5 – Neural Ξ Amplification"
+    core_anchor: "R4 (Progress) — Ξ accumulation through
+                  neural elaboration"
+    statement: >
+      Nervous systems are biological structures specialised
+      for Ξ amplification — increasing recursive depth
+      beyond what metabolic or chemical self-regulation
+      alone can sustain. Each elaboration of neural
+      architecture (additional layers, increased connectivity,
+      specialised regions) increases the maximum achievable Ξ.
+    neural_phase_locking: >
+      Neural oscillations (gamma, beta, alpha, theta, delta
+      bands) are biological phase-locking phenomena —
+      populations of neurons synchronising their firing
+      patterns. The ρ parameter (phase-locking strength)
+      in the consciousness domain has a direct biological
+      substrate in neural synchrony.
+      Gamma oscillations (30-100 Hz) correlate with conscious
+      awareness and active processing — the highest-frequency
+      band corresponds to the tightest phase-locking,
+      consistent with Ξ-demanding tasks requiring maximum
+      trail coherence.
+    working_memory: >
+      Working memory is the biological implementation of
+      simultaneous dilemma holding — the capacity to maintain
+      multiple unresolved paths in active representational
+      state. Capacity (Miller's 7±2) reflects the maximum
+      number of simultaneously phase-locked neural assemblies
+      — the biological ceiling on representational superposition
+      (quantum-cognition.yaml).
+    confirming_note: >
+      Neural binding problem — how distributed neural activity
+      produces unified conscious experience. Under Praestology:
+      binding is phase-locking (ρ) across neural assemblies —
+      gamma synchrony as the physical substrate of unified
+      experience. Consistent with gamma disruption (anaesthesia,
+      seizure) correlating with disrupted consciousness.
+      Prefrontal lesions — damage to prefrontal cortex reduces
+      working memory capacity and planning horizon (τ) directly.
+      Confirms prefrontal cortex as primary Ξ amplification
+      substrate in humans.
+
+  - id: "B6 – Biological Agency Gradient"
+    core_anchor: "C1-C6 consciousness scale applied to biological substrates"
+    statement: >
+      Biological complexity maps onto the consciousness agency
+      scale. The biological domain provides the physical
+      substrate progression from C1 (simple agency, bacteria)
+      to C6 (phase-locking capable, social mammals). This is
+      not a separate scale — it is the consciousness scale
+      instantiated in biological substrates.
+    gradient:
+      prokaryotes:    "C1 — stimulus response, no internal model."
+      simple_metazoa: "C1-C2 — basic dilemma recognition (approach/avoid)."
+      invertebrates:  "C2-C3 — associative learning, basic prediction."
+      fish_amphibia:  "C3-C4 — limbic system, emotional valence, social."
+      mammals:        "C4-C5 — explicit modelling, planning, empathy."
+      great_apes:     "C5-C6 — self-recognition, theory of mind."
+      humans:         "C6 — full recursive self-modelling, language,
+                        temporal projection across decades."
+    non_neural_agency: >
+      Plants, fungi, and colonial organisms (slime moulds)
+      demonstrate C1-C2 agency without nervous systems —
+      chemical gradient sensing and response.
+      Confirms that Ξ amplification via neural tissue is
+      one pathway to higher agency, not the only possible one.
+      Silicon or other substrates could in principle provide
+      equivalent Ξ amplification — substrate-neutral claim.
+
+# ─────────────────────────────────────────────
+# SUBDOMAIN STRUCTURE
+# ─────────────────────────────────────────────
+subdomains:
+  - file: "domains/biology/cellular.yaml"
+    description: >
+      Cell as minimal viable biological agent. Membrane as
+      phase-lock boundary. Organelles as specialised resolution
+      subsystems. Cell division as self-replication mechanism.
+
+  - file: "domains/biology/neural.yaml"
+    description: >
+      Neural tissue as Ξ amplification substrate. Neuron
+      topology, synaptic phase-locking, oscillatory dynamics,
+      network architecture. Bridge between cellular biology
+      and consciousness domain.
+
+  - file: "domains/biology/quantum-cognition.yaml"
+    description: >
+      Quantum-like effects in biological cognitive systems.
+      Biological substrate mechanisms that produce superposition-
+      like, entanglement-like, and interference-like behaviour
+      in decision-making. QDT correspondence. Sits at
+      biology→consciousness interface.
+
+  - file: "domains/biology/evolution.yaml"
+    description: >
+      R5 operating at generational timescale. Natural selection,
+      genetic drift, speciation, evolutionary stable strategies.
+      Connects B2 (heritable variation) to B4 (structural
+      elaboration) across deep time.
+
+  - file: "domains/biology/homeostasis.yaml"
+    description: >
+      Biological metastable zone maintenance. Feedback regulation,
+      allostasis, disease as metastable zone displacement.
+      Connects physical metastable zone (physics domain) to
+      organismal viability.
+
+  - file: "domains/biology/development.yaml"
+    description: >
+      Ontogenesis — how a single cell (fertilised egg) produces
+      a complete organism through differentiation. Gene expression
+      as hysteresis-dependent resolution branching. Development
+      as R4 operating within a single lifetime.
+
+reading_order:
+  - "domains/physics/specifications.yaml          — substrate foundation"
+  - "domains/chemistry/specifications.yaml        — molecular preconditions"
+  - "domains/biology/specifications.yaml          — this file"
+  - "domains/biology/cellular.yaml                — minimal viable unit"
+  - "domains/biology/neural.yaml                  — Ξ amplification substrate"
+  - "domains/biology/quantum-cognition.yaml       — biology→consciousness interface"
+  - "domains/biology/evolution.yaml               — generational R5"
+  - "domains/biology/homeostasis.yaml             — metastable zone at organism scale"
+  - "domains/consciousness/specifications.yaml    — consciousness domain"
+
+related_issues:
+  - "intersectional/chemistry_biology/001_abiogenesis_threshold_conditions"
+  - "intersectional/biology_consciousness/001_xi_amplification_neural_substrate"
+  - "intersectional/biology_consciousness/002_working_memory_representational_superposition"
+  - "intersectional/physics_biology/001_quantum_effects_enzyme_catalysis"
+  - "foundational/F02_genuine_novelty — chemistry→biology threshold as
+     paradigm case of emergence in the framework"

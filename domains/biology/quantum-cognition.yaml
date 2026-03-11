@@ -1,0 +1,500 @@
+# domains/biology/quantum-cognition.yaml
+name: "Quantum Cognition"
+version: "0.2 — Biology Domain Integration"
+parent_domain: "Biology (biology→consciousness interface)"
+core_version: "1.5"
+status: "Conceptual mapping complete — formal derivations pending"
+description: >
+  Quantum cognition describes the emergence of quantum-like
+  behavioural effects in biological cognitive systems —
+  superposition-like parallel path holding, entanglement-like
+  correlated judgments, and interference effects in decision
+  sequences — without requiring physical quantum processes
+  in the brain.
+  These effects are not quantum mechanics applied to cognition.
+  They are consequences of sufficiently deep recursive dilemma
+  resolution (high Ξ) operating on a biological substrate
+  that enables parallel representational state maintenance.
+  The quantum formalism (Hilbert space, probability amplitudes,
+  interference terms) is an effective mathematical description
+  of high-Ξ dilemma navigation — accurate because the
+  mathematics of superposition and the mathematics of parallel
+  weighted path evaluation are structurally identical.
+  Position in framework:
+  Physics derives physical quantum effects from substrate topology.
+  Biology provides the substrate for Ξ amplification.
+  This file sits at the biology→consciousness interface:
+  asking which biological mechanisms enable quantum-like
+  cognitive effects, and what Ξ threshold they require.
+
+dependency_map:
+  substrate:
+    - domain: "biology/neural"
+      reason: >
+        Quantum-like cognitive effects require neural substrate
+        capable of maintaining multiple simultaneous representational
+        states (working memory — B5). Without sufficient neural
+        architecture, Ξ cannot reach the threshold for parallel
+        path holding.
+    - domain: "biology/cellular"
+      reason: >
+        Cellular-level quantum effects (enzyme tunnelling,
+        photosynthetic coherence, possibly membrane dynamics)
+        may amplify effective Ξ beyond what classical neural
+        computation alone provides. This is the contested
+        biological quantum question — flagged as open.
+  threshold:
+    - domain: "biology"
+      condition: >
+        Ξ ≥ 3 (Path Generation — T3 in thinking domain) required
+        for genuine representational superposition. Below this
+        threshold, apparent multi-path behaviour is sequential
+        stimulus-response, not parallel holding.
+      reason: >
+        C2 (Dilemma Recognition) is insufficient — recognising
+        a dilemma does not require holding paths simultaneously.
+        T3 (Path Generation, thinking domain) is the first
+        point where multiple paths are explicitly represented
+        in parallel. T3 requires Ξ ≥ 3 in the consciousness
+        specification. This is the minimum threshold for
+        quantum-like cognitive effects.
+  amplifies:
+    - domain: "consciousness"
+      parameter: "Effective representational superposition capacity"
+      mechanism: >
+        Biological quantum effects (if confirmed) would increase
+        the number of simultaneously maintainable path representations
+        beyond the classical neural ceiling (Miller's 7±2).
+        This would amplify the interference term magnitude in
+        QDT — stronger quantum-like decision violations in
+        systems with active biological quantum enhancement.
+  corresponds_to:
+    - domain: "physics"
+      correspondence: >
+        Physical quantum superposition = substrate vortex in
+        multiple configuration states before S_lock crossing.
+        Cognitive superposition = dilemma paths held in parallel
+        before R5 resolution. Same mathematical structure;
+        different physical substrate; different scale.
+        The correspondence is not metaphor — it reflects the
+        Mandelbrot pattern: R1-R5 producing structurally
+        identical dynamics at different scales.
+
+# ─────────────────────────────────────────────
+# QUANTUM-LIKE EFFECTS
+# ─────────────────────────────────────────────
+quantum_like_effects:
+  superposition:
+    physical_quantum: >
+      Substrate vortex in multiple configuration states
+      simultaneously before S_lock threshold crossing.
+      Wavefunction = probability amplitude over configuration space.
+    cognitive_analogue: >
+      Multiple unresolved dilemma paths held in parallel
+      representational state. Each path has a viability
+      weight w_i and a contextual phase φ_i encoding
+      alignment with current hysteresis state.
+    biological_substrate: >
+      Working memory (B5) — neural assemblies maintaining
+      active representational states simultaneously.
+      Capacity ceiling: Miller's 7±2 items = maximum
+      simultaneously maintained path representations
+      in biological neural substrate.
+    ξ_threshold: >
+      Ξ ≥ 3 (T3, Path Generation). Below this: sequential
+      evaluation only. At and above: genuine parallel holding
+      with interference between paths.
+    confirming_note: >
+      Quantum cognition experiments (Busemeyer & Bruza 2012) —
+      human judgments show order effects, conjunction fallacies,
+      and other violations of classical probability theory
+      consistent with superposition-like parallel path evaluation.
+      These effects are not explained by classical Bayesian
+      models. Praestology: they arise from interference between
+      simultaneously held dilemma paths — not physical quantum
+      mechanics but structurally equivalent mathematics.
+
+  entanglement:
+    physical_quantum: >
+      Phase-locked vortex pairs with non-separable states —
+      measurement of one constrains the other regardless of
+      spatial separation. ρ > 0 at substrate level.
+    cognitive_analogue: >
+      Phase-locking (ρ) between coupled agents or between
+      dilemma models within a single agent. Shared viability
+      constraints create non-separable judgments — resolving
+      one dilemma constrains available resolutions for coupled
+      dilemmas.
+    biological_substrate: >
+      Neural binding — phase-locked neural assemblies across
+      brain regions (gamma synchrony). Cross-regional coupling
+      creates non-separable processing: activity in one region
+      constrains activity in coupled regions.
+      Social entanglement — shared hysteresis between individuals
+      in high-ρ relationships (family, team, culture). Judgment
+      in one domain systematically influences judgment in
+      coupled domains.
+    ξ_threshold: >
+      Ξ ≥ 2 (C5, Phase-locking with other agents) for social
+      entanglement. Ξ ≥ 4 for intra-agent dilemma entanglement
+      (recognising that resolution of one dilemma constrains
+      another requires explicit model of the constraint).
+    confirming_note: >
+      Cognitive dissonance — holding two contradictory beliefs
+      creates psychological tension (high ρ between conflicting
+      dilemma models). Resolution of one constrains the other —
+      entanglement-like coupling within a single agent.
+      Festinger (1957) — dissonance reduction as R5 operating
+      on entangled belief states.
+      Social influence — group judgment convergence consistent
+      with inter-agent phase-locking. Asch conformity
+      experiments: individual judgment pulled toward group
+      consensus = ρ coupling overriding individual R5 selection.
+
+  interference:
+    physical_quantum: >
+      Probability amplitudes add before squaring — cross-terms
+      (interference terms) modify outcome probabilities.
+      Constructive and destructive interference from phase
+      relationships between superposed states.
+    cognitive_analogue: >
+      Viability weights of parallel paths interact before
+      R5 selection — cross-terms from phase relationships
+      between simultaneously held paths modify final
+      selection probabilities.
+    biological_substrate: >
+      Order effects in judgment — the sequence in which
+      information is presented modifies the final judgment
+      even when total information is identical. The hysteresis
+      state (φ_i) from earlier information modifies the
+      interference pattern for later information.
+      Framing effects — same objective situation presented
+      differently produces different judgments. Framing
+      modifies φ_i (contextual phase) without changing w_i
+      (viability weight), altering interference terms.
+    formal_derivation:
+      representational_superposition: >
+        Multiple viable dilemma paths held in parallel
+        with viability weights w_i ≥ 0, ∑w_i = 1.
+      contextual_phase: >
+        φ_i ∈ [0, 2π) — encoding alignment of path i
+        with current hysteresis state H and environmental
+        framing. Arises from accumulated resolution history,
+        not from arbitrary assignment.
+      attraction_score: >
+        A_j = w_j + ∑_{i≠j} w_i · cos(φ_j - φ_i)
+        The cross-terms are the interference contribution —
+        identical in form to QDT interference terms.
+      resolution: >
+        Select argmax_j A_j (R5 viability maximisation
+        over interference-modified attraction scores).
+      key_result: >
+        Reproduces QDT interference without physical quanta.
+        Phase φ_i arises from hysteresis (H) and dilemma
+        coupling — both are defined parameters in the
+        framework. The interference term magnitude scales
+        with path coupling strength — stronger ρ between
+        paths produces larger interference effects.
+    confirming_note: >
+      Conjunction fallacy (Tversky & Kahneman 1983) — "Linda
+      problem": subjects rate P(bank teller AND feminist) >
+      P(bank teller). Classical probability violation.
+      QDT explanation: interference between "feminist" and
+      "bank teller" paths raises the conjunction attraction
+      score above the single path score.
+      Praestology: same result from φ alignment between
+      paths — "feminist" framing sets H such that
+      cos(φ_feminist - φ_bank_teller) > 0, raising A_conjunction.
+      Question order effects (Wang & Busemeyer 2013) —
+      answering question A before B changes answer to B
+      vs answering B first. Classical probability: should
+      be independent. QDT: measurement collapses superposition,
+      changing subsequent state. Praestology: first resolution
+      updates H (R4), modifying φ_i for subsequent paths —
+      same result, physical mechanism identified.
+
+  decoherence:
+    physical_quantum: >
+      Interaction with environment destroys phase relationships
+      between superposed states — interference terms decay.
+      Quantum → classical transition as environment coupling
+      grows.
+    cognitive_analogue: >
+      Viability-driven pruning (R5) eliminates non-viable
+      paths from representational superposition. Interference
+      terms decay as paths are eliminated. "Collapse" is
+      the point where one path dominates — A_j >> A_{i≠j}.
+    biological_substrate: >
+      Decision fatigue — extended deliberation degrades
+      interference pattern maintenance as metabolic cost
+      of sustained parallel path holding accumulates.
+      Consistent with working memory energy cost: glucose
+      depletion reduces effective simultaneous path count,
+      accelerating decoherence toward default responses.
+      Sleep as decoherence recovery — memory consolidation
+      during sleep selectively strengthens high-ρ path
+      connections and prunes low-ρ ones. Sleep restores
+      the φ calibration for subsequent interference processing.
+    confirming_note: >
+      Decision fatigue (Baumeister) — decision quality
+      degrades after extended decision-making. Consistent
+      with metabolic decoherence: glucose depletion reduces
+      working memory capacity, forcing earlier R5 collapse.
+      Ego depletion — self-control resource depletion.
+      Same mechanism: sustained Ξ-demanding processing
+      depletes the biological substrate for interference
+      maintenance.
+
+# ─────────────────────────────────────────────
+# BIOLOGICAL QUANTUM EFFECTS — OPEN QUESTION
+# ─────────────────────────────────────────────
+biological_quantum_effects:
+  status: "Open — experimental evidence ambiguous"
+  description: >
+    A separate question from quantum-like cognitive effects:
+    whether actual physical quantum coherence in biological
+    tissue amplifies cognitive Ξ beyond classical limits.
+    This is the Penrose-Hameroff (Orch OR) territory —
+    and the question Praestology deliberately does not require
+    to answer for quantum-like cognitive effects to hold.
+    But it remains a legitimate open question for the
+    biology domain.
+
+  enzyme_tunnelling:
+    status: "Confirmed"
+    description: >
+      Proton and electron quantum tunnelling in enzyme catalysis
+      — reaction rates exceed classical predictions.
+      Tunnelling is the same Tik fluctuation mechanism from
+      the physics domain (beta-decay.yaml, fusion in nuclear-
+      binding.yaml) operating at molecular scale.
+    biological_significance: >
+      Tunnelling increases enzyme efficiency — metabolic
+      reactions faster than classical chemistry permits.
+      This amplifies Φ_internal: the same molecular machinery
+      delivers more resolution flux per unit time.
+      Indirect Ξ amplification: higher Φ_internal supports
+      higher metabolic cost of neural tissue, enabling
+      larger and more active neural networks.
+    confirming_note: >
+      Klinman & Kohen (2013) — direct evidence of tunnelling
+      in enzyme-catalysed hydrogen transfer reactions.
+      Temperature-independent kinetics at low T — classical
+      Arrhenius would predict continued decrease; tunnelling
+      provides a floor. Confirmed substrate-mediated quantum
+      effect in biological systems.
+
+  photosynthesis_coherence:
+    status: "Observed, interpretation contested"
+    description: >
+      Quantum coherence in photosynthetic energy transfer —
+      excitation energy traverses the light-harvesting complex
+      via coherent superposition of multiple pathways
+      simultaneously, finding the most efficient route.
+    biological_significance: >
+      Near-unity energy transfer efficiency (~95%) in
+      photosynthesis may depend on quantum coherence.
+      If confirmed: biological systems exploit physical
+      quantum superposition for energy harvesting —
+      Ch6 abiogenesis systems coupling directly to
+      substrate quantum dynamics.
+    praestology_interpretation: >
+      Photosynthetic coherence is physical quantum superposition
+      (substrate vortex multi-path) operating within the
+      molecular topology of the light-harvesting complex.
+      Not cognitive superposition — but demonstrates that
+      biological structures can exploit and maintain
+      physical quantum coherence at room temperature,
+      which was previously considered impossible.
+    current_status: >
+      Fleming et al. (2007) — initial observation of long-lived
+      coherence in FMO complex. Subsequent debate: whether
+      coherence is quantum mechanical or classical vibrational.
+      Cao et al. (2020) review — consensus shifting toward
+      quantum-classical hybrid; coherence real but its
+      functional role remains uncertain.
+    confirming_note: >
+      If photosynthetic quantum coherence is functionally
+      significant, it confirms that biology actively exploits
+      physical quantum dynamics from the physics domain —
+      not just passively operating within quantum constraints
+      but using quantum superposition as a computational resource.
+
+  neural_quantum_coherence:
+    status: "Unconfirmed — Orch OR hypothesis"
+    description: >
+      Penrose-Hameroff Orchestrated Objective Reduction —
+      quantum coherence in microtubules produces consciousness
+      via quantum gravity-mediated wavefunction collapse.
+    praestology_assessment: >
+      Not required: quantum-like cognitive effects follow
+      from recursive dilemma resolution alone (this file's
+      main content). Orch OR makes strong additional claims
+      (quantum gravity in microtubules) that are not supported
+      by current evidence.
+      Not excluded: if microtubule quantum coherence were
+      confirmed, it would map onto B5 (neural Ξ amplification)
+      as an additional amplification mechanism — increasing
+      effective working memory capacity beyond classical limits.
+      But the cognitive effects described here do not depend on it.
+    current_status: >
+      Tegmark (2000) — calculated decoherence time for neural
+      quantum states: ~10⁻¹³ s, far shorter than neural
+      firing timescales (~10⁻³ s). Quantum coherence in
+      neural tissue appears non-functional at cognitive timescales.
+      Counter-argument (Hameroff) — topological protection in
+      microtubule geometry may extend coherence times.
+      Unresolved. Praestology flags as open without commitment.
+
+# ─────────────────────────────────────────────
+# QDT CORRESPONDENCE
+# ─────────────────────────────────────────────
+qdt_correspondence:
+  description: >
+    Quantum Decision Theory (QDT) models human decisions using
+    quantum probability formalism to explain violations of
+    classical Expected Utility Theory (EUT). Praestology
+    provides the physical mechanism for QDT's mathematical
+    structure without requiring physical quantum processes.
+  friction_resolved: >
+    QDT uses quantum formalism metaphorically — risking
+    misuse of quantum terms or implying physical quantum
+    cognition without evidence. Praestology resolves this:
+    QDT formalism is appropriate not because cognition is
+    quantum mechanical but because high-Ξ dilemma resolution
+    is structurally identical to quantum probability.
+    QDT is an effective psychological description of
+    T3-T5 thinking domain operations in biological substrates.
+  mappings:
+    superposition_in_qdt:
+      qdt: "Options held in superposition until decision."
+      praestology: "Representational paths held in parallel
+                    (T3-T4) with viability weights w_i and
+                    contextual phases φ_i before R5 resolution."
+    interference_in_qdt:
+      qdt: "Interference terms explain order/context effects."
+      praestology: "Cross-terms in attraction score A_j from
+                    phase relationships between coupled paths.
+                    φ_i arises from hysteresis H — formally derived."
+    entanglement_in_qdt:
+      qdt: "Correlated judgments across decision domains."
+      praestology: "Phase-locking (ρ) between coupled dilemma
+                    models — shared viability constraints create
+                    non-separable preferences."
+    collapse_in_qdt:
+      qdt: "Decision as measurement-like wavefunction collapse."
+      praestology: "R5 viability selection collapsing representational
+                    superposition. Irreversible via R4 — updates H,
+                    modifying subsequent interference patterns."
+  advantage: >
+    Substrate-neutral: applies to any system with sufficient Ξ —
+    biological, artificial, or other. QDT currently applies only
+    to human cognition because it was developed empirically.
+    Praestology extends it: any high-Ξ system should show
+    quantum-like decision violations, with magnitude scaling
+    with Ξ depth and path coupling strength ρ.
+
+# ─────────────────────────────────────────────
+# TESTABLE PREDICTIONS
+# ─────────────────────────────────────────────
+testable_predictions:
+  - prediction: >
+      Quantum-like decision violations (conjunction fallacy,
+      order effects, preference reversals) scale with
+      measurable proxies for Ξ depth across species and
+      developmental stages.
+    test: >
+      Cross-species comparison of QDT violation magnitude
+      against encephalisation quotient (EQ) or prefrontal
+      cortex volume ratio. Human > great ape > monkey >
+      corvid > fish should show decreasing violation magnitude.
+    distinguishable_from: >
+      Classical cognitive models predict violations from
+      heuristics and biases — no systematic scaling with
+      neural complexity predicted. Scaling would be
+      Praestology-specific.
+
+  - prediction: >
+      AI systems with larger context windows (proxy for
+      simultaneous path holding capacity) show stronger
+      quantum-like decision violations than systems with
+      smaller context windows, even with identical training.
+    test: >
+      QDT battery administered to language models of varying
+      context window size. Interference term magnitude
+      should correlate with context window depth.
+    note: >
+      This prediction is testable today with existing AI
+      systems. It requires no new experimental infrastructure.
+
+  - prediction: >
+      Decision fatigue (decoherence) reduces QDT violation
+      magnitude in proportion to measurable working memory
+      depletion — not just decision quality but specifically
+      the interference term structure.
+    test: >
+      QDT battery before and after sustained decision-making.
+      Measure interference terms specifically (not just
+      accuracy). Prediction: interference terms decay while
+      classical probability violations from heuristics
+      may increase (as System 2 depletes, System 1 dominates).
+
+  - prediction: >
+      Formal derivation of QDT interference terms from
+      viability weights (ω/ι) and phase-locking (ρ) should
+      reproduce measured interference magnitudes without
+      free parameters.
+    test: "Mathematical derivation — compare to Busemeyer & Bruza data."
+    status: "Open derivation — highest priority for this file."
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+open_derivations:
+  priority_1:
+    - >
+      Formal derivation of QDT interference term magnitude
+      from ω/ι (viability weights) and ρ (path coupling) —
+      producing the attraction formula A_j with no free
+      parameters. Compare to measured human QDT data.
+    - >
+      Ξ threshold for quantum-like effects — formal derivation
+      of minimum Ξ required for each effect type (superposition,
+      entanglement, interference). Currently stated as Ξ ≥ 3
+      for superposition; requires proof from thinking domain
+      structure.
+
+  priority_2:
+    - >
+      Working memory capacity (Miller 7±2) derivation from
+      maximum simultaneously phase-locked neural assemblies
+      in biological substrate — connecting B5 ceiling to
+      representational superposition limit.
+    - >
+      Decoherence timescale derivation from metabolic cost
+      of sustained parallel path holding — predicting
+      decision fatigue onset from neural energy parameters.
+
+  priority_3:
+    - >
+      Biological quantum coherence (photosynthesis, enzyme
+      tunnelling) contribution to effective Ξ amplification —
+      if coherence is functionally significant, quantify
+      the Ξ increase it provides.
+
+reading_order:
+  - "domains/physics/specifications.yaml          — physical quantum effects"
+  - "domains/biology/specifications.yaml          — biology domain foundation"
+  - "domains/biology/neural.yaml                  — neural substrate (forthcoming)"
+  - "domains/biology/quantum-cognition.yaml        — this file"
+  - "domains/consciousness/specifications.yaml    — consciousness domain"
+  - "domains/consciousness/thinking.yaml          — T3-T5 path operations"
+
+related_issues:
+  - "intersectional/biology_consciousness/002_working_memory_representational_superposition"
+  - "intersectional/physics_biology/001_quantum_effects_enzyme_catalysis"
+  - "intersectional/physics_biology/002_photosynthesis_coherence_functional_role"
+  - "intersectional/biology_consciousness/003_qdt_interference_formal_derivation"
+  - "foundational/F02_genuine_novelty — does quantum-like cognition
+     represent genuine emergence or is it fully reducible to
+     Ξ depth and path coupling parameters?"
