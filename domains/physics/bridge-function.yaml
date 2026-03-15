@@ -1,0 +1,736 @@
+# domains/physics/bridge-function.yaml
+name: "Bridge Function — η = φ/φ_max"
+version: "1.0"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Defined — φ_max derivation from n_sat open"
+description: >
+  This file defines the single explicit bridge function
+  connecting the Praesto substrate's primary description
+  (potential field φ(r,t)) to every observable physical
+  quantity. The bridge function is:
+    η(r,t) = φ(r,t) / φ_max
+  where φ_max is the maximum free potential — the vacuum
+  state approached asymptotically in the complete absence
+  of committed structure.
+  η is a dimensionless scalar field: η ∈ (0, 1].
+    η = 1:  pure vacuum, maximum free potential
+    η → 0:  event horizon approach, maximum commitment
+  Every observable physical quantity is a function of η
+  or its gradient ∇η at a specific location and scale.
+  Every measurement in physics is an η measurement.
+  Central identifications:
+    θ(r,t) = η          GP order parameter IS normalised potential
+    ψ(r,t) = η          quantum wavefunction IS normalised potential
+    |ψ|²   = η²         Born probability IS squared potential ratio
+  These are not analogies. The GP order parameter, the
+  quantum wavefunction, and the normalised potential field
+  are the same mathematical object at the same ontological
+  level — the potential field amplitude normalised to its
+  vacuum maximum. This closes the formal connection between
+  quantum mechanics and the substrate potential field.
+  Reading note: this file should be read after
+  substrate-potential.yaml (primary framing) and before
+  all process files (specifications.yaml, quantum-foundation.yaml,
+  alpha-rydberg-z0.yaml). It is the central reference from
+  which all physical derivations proceed.
+
+position_in_framework: >
+  R1-R5 (core rules)
+    → substrate as potential field φ(r,t)    [substrate-potential.yaml]
+    → η = φ/φ_max                            [THIS FILE — bridge]
+    → all observable quantities from η       [THIS FILE]
+    → GP saturating nonlinearity for η       [commitment-response-function.yaml]
+    → constant derivations from η structure  [alpha-rydberg-z0.yaml]
+    → QM primitives reframed via ψ = η       [quantum-foundation.yaml]
+    → momentum density p = ρ_s·∇φ           [specifications.yaml]
+
+# ─────────────────────────────────────────────
+# CANONICAL NOTATION REFERENCE
+# Single authoritative definition of all state
+# variables and constitutive relations.
+# All physics files derive from these definitions.
+# ─────────────────────────────────────────────
+substrate_state:
+  title: "Unified Local State Variable — Canonical Notation"
+  note: >
+    This block is the authoritative notation reference
+    for the Praestology physics domain. All process files
+    (specifications.yaml, quantum-foundation.yaml, etc.)
+    use these definitions. The _eff suffix signals that
+    these are effective local values — departures from
+    the vacuum baseline — not modifications to the
+    fundamental constants themselves. c remains the
+    global vacuum maximum; c_eff = c·η is the effective
+    propagation speed in the local substrate state.
+  definitions:
+    eta:    "η(r,t) = φ(r,t) / φ_max    # normalised potential field"
+    domain: "0 < η ≤ 1"
+    eta_1:  "η = 1  : pure vacuum, maximal free potential, zero commitment"
+    eta_0:  "η → 0  : saturation limit / horizon approach, maximal commitment"
+  dual_variables:
+    theta:  "θ(r,t) = η(r,t)             # normalised GP order parameter"
+    psi:    "ψ(r,t) = η(r,t)             # quantum wavefunction (same object)"
+    C:      "C(r,t) = 1 - η(r,t)         # local commitment fraction"
+  constitutive_relations:
+    R_eff:      "R_eff(r,t) = R₀ / η(r,t)      # substrate resistance to reconfiguration"
+    Z_eff:      "Z_eff(r,t) = Z₀ / η(r,t)      # local EM impedance"
+    n_eff:      "n_eff(r,t) = 1 / η(r,t)        # effective refractive index"
+    c_eff:      "c_eff(r,t) = c · η(r,t)        # effective propagation speed vs vacuum"
+    Lambda_upd: "Λ_update(r,t) = Λ₀ · η(r,t)   # local process/update throughput"
+    tau_upd:    "τ_update(r,t) = τ₀ / η(r,t)   # local update interval"
+  notation_rationale:
+    c_eff_not_c_local: >
+      c_eff is used throughout — not c_local. c_local
+      risks the misreading that the fundamental constant
+      c varies locally. c is the global vacuum maximum,
+      fixed. c_eff = c·η is the effective propagation
+      speed in the local substrate state — a state-
+      dependent quantity, not a modified constant.
+      Same logic applies to Z_eff, R_eff, n_eff: the
+      fundamental vacuum values (Z₀, R₀, n=1) are fixed;
+      the effective local values depart from them as η
+      departs from 1.
+  interpretation: >
+    Lower η means less free substrate capacity and higher
+    topological commitment. All major gravitational-like
+    effects — time dilation, refraction, inertia, horizon
+    behaviour — emerge from reduced local process throughput
+    (lower Λ_update, longer τ_update) and increased
+    propagation cost (higher Z_eff, lower c_eff). They are
+    not separate mechanisms; they are derived manifestations
+    of the single local state variable η.
+
+# ─────────────────────────────────────────────
+# THE BRIDGE FUNCTION
+# ─────────────────────────────────────────────
+bridge_function:
+  definition:
+    formula:    "η(r,t) = φ(r,t) / φ_max"
+    domain:     "η ∈ (0, 1] — never exactly zero; never exceeds one"
+    primary:    "φ(r,t) — the substrate potential field"
+    normaliser: "φ_max — maximum free potential in vacuum"
+  boundary_conditions:
+    upper: >
+      η = 1 — pure vacuum. No committed structure.
+      Maximum free potential. Maximum decoherence rate.
+      Minimum impedance (Z₀). Approached asymptotically
+      in deep cosmic voids far from all matter.
+      Never exactly reached in a universe containing
+      committed structure — the Tik background always
+      maintains a small residual commitment below φ_max.
+    lower: >
+      η → 0 — event horizon approach. Maximum local
+      commitment density. Minimum free potential.
+      Impedance Z_eff → ∞ for outward propagation.
+      Never exactly reached — the saturating GP nonlinearity
+      and finite substrate resistance ensure η remains
+      positive at all finite r. No singularities;
+      no true zero potential.
+  why_dimensionless: >
+    η is a ratio of two potential field values — the
+    same physical quantity at different locations.
+    All units cancel. η is a pure geometric ratio —
+    how much of the maximum possible free potential
+    is locally available. This is why all physical
+    constants derivable from η are themselves
+    dimensionless ratios (α, n) or acquire dimensions
+    only through φ_max and ξ (the two dimensional
+    substrate parameters).
+
+# ─────────────────────────────────────────────
+# OBSERVABLE QUANTITIES FROM η
+# ─────────────────────────────────────────────
+observable_derivations:
+  statement: >
+    Every observable physical quantity is derived from η
+    or its spatial and temporal gradients. No additional
+    bridge functions are required. The derivations below
+    are exact in the limit of uniform substrate; corrections
+    from GP nonlinearity and Tik background are treated
+    in commitment-response-function.yaml.
+
+  field_quantities:
+    commitment_density:
+      formula:  "C(r,t) = 1 - η(r,t)"
+      meaning:  "Fraction of maximum potential that has been committed."
+      limits:   "C = 0 in vacuum; C → 1 at event horizon."
+      relation: "High C = near mass; Low C = void."
+
+    substrate_resistance:
+      formula:  "R(r,t) = R₀ / η(r,t)"
+      meaning:  "Local resistance to potential field propagation."
+      limits:   "R = R₀ in vacuum; R → ∞ at event horizon."
+      relation: "R is the wave equation damping parameter in specifications.yaml."
+
+    local_impedance:
+      formula:  "Z(r,t) = Z₀ / η(r,t)"
+      meaning:  "Local substrate impedance to EM propagation."
+      limits:   "Z = Z₀ in vacuum; Z → ∞ at event horizon."
+      relation: "Z₀ = μ₀c is the vacuum floor. Z/Z₀ = 1/η."
+      confirming: >
+        In a material with refractive index n:
+        Z_material = n·Z₀ → n = Z_material/Z₀ = 1/η_material.
+        The refractive index IS 1/η — the inverse normalised
+        potential. High refractive index = low local η =
+        more commitment density in the material.
+
+    refractive_index:
+      formula:  "n(r,t) = 1 / η(r,t) = φ_max / φ(r,t)"
+      meaning:  "Ratio of vacuum propagation speed to local speed."
+      limits:   "n = 1 in vacuum; n → ∞ at event horizon."
+      relation: >
+        Snell's law n₁sinθ₁ = n₂sinθ₂ becomes:
+        sinθ₁/η₁ = sinθ₂/η₂ — refraction is the
+        trajectory adjustment at an η boundary.
+        Gravitational lensing: continuous ∇η from
+        mass commitment density — same refraction,
+        no discontinuity. Snell's law and gravitational
+        lensing are the same equation.
+
+    effective_propagation_speed:
+      formula:  "c_eff(r,t) = c · η(r,t)"
+      meaning:  "Effective propagation speed in local substrate state."
+      limits:   "c_eff = c at η=1 (vacuum); c_eff → 0 as η → 0 (horizon)."
+      note: >
+        c is the global vacuum maximum — a fixed substrate
+        property. c_eff is the state-dependent effective speed
+        in the local η field. The distinction matters: c does
+        not change; the substrate state changes, and c_eff
+        reflects that state.
+      relation: >
+        Shapiro delay: signal travels at c_eff = c·η near mass →
+        excess travel time = ∫(c - c_eff)/c · dl/c
+        = ∫(1 - η)dl/c = direct η path integral.
+
+    decoherence_rate:
+      formula:  "Γ(r,t) = Γ_max · η(r,t)"
+      meaning:  "Local rate of 'now' — resolution events per process-counter unit."
+      limits:   "Γ = Γ_max in vacuum; Γ → 0 at horizon."
+      relation: >
+        Γ is the local clock rate — the rate at which
+        any physical process operates. Gravitational
+        time dilation: clock near mass runs at
+        Γ_low = Γ_max·η_low < Γ_max·η_high = Γ_high.
+        Ratio of clock rates = ratio of η values.
+        GPS correction: η_satellite > η_surface →
+        satellite clock runs faster by η_satellite/η_surface.
+
+    momentum_density:
+      formula:  "p(r,t) = ρ_s · ∇φ = ρ_s · φ_max · ∇η"
+      meaning:  "Substrate momentum density — the dynamical field of specifications.yaml."
+      relation: >
+        p is derived from φ via the gradient.
+        The substrate wave equation ∂²p/∂t² = c²∇²p - γ∂p/∂t
+        is the wave equation for ∇η (up to factors of ρ_s·φ_max).
+        Momentum density is the potential field current —
+        the flow of η through the substrate.
+
+  quantum_quantities:
+    wavefunction_identification:
+      formula:  "ψ(r,t) = η(r,t) = φ(r,t)/φ_max"
+      statement: >
+        The quantum mechanical wavefunction IS the
+        normalised potential field amplitude. This is
+        not an analogy or a correspondence — it is
+        an identification. The same mathematical object
+        (η) describes the substrate potential at every
+        location and is the wavefunction that QM uses
+        to compute probabilities.
+      implications:
+        wavefunction_reality: >
+          The long-standing debate over whether the
+          wavefunction is real (ontic) or merely
+          epistemic is resolved: η is the real potential
+          field at each location. The wavefunction is
+          real as a potential field description; it is
+          epistemic about future committed outcomes
+          because commitment (R5 selection) has not
+          yet occurred. Both camps were right about
+          different aspects of the same object.
+        superposition: >
+          Quantum superposition is the potential field
+          η holding multiple configuration amplitudes
+          simultaneously before commitment. The field
+          genuinely has these amplitudes — superposition
+          is the real state of the potential field, not
+          a description of our ignorance.
+        collapse: >
+          Wavefunction collapse is η → step function
+          as local commitment occurs — the potential
+          field commits to a specific configuration
+          via R5 selection. Not a physical process
+          requiring a mechanism; a description of
+          what happens when R4 accumulation occurs.
+          The 'collapse' is the potential becoming
+          commitment. No observer required; no special
+          collapse dynamics. The field resolves.
+
+    born_rule_derivation:
+      statement: >
+        The Born rule P(outcome j) = |ψ_j|² = η_j²
+        is derived from R5 viability weighting of the
+        potential field amplitudes.
+      derivation_path: >
+        A resolution event at location r requires
+        free potential φ(r) to proceed. The probability
+        of the event occurring there scales with the
+        available free potential — η(r).
+        But the resolution event also requires the
+        potential to sustain the phase coherence of
+        the commitment — a second factor of η.
+        The combined probability: P ∝ η · η = η².
+        The first η: potential available for the event.
+        The second η: potential available to sustain
+        the committed state against Tik perturbation.
+        P = η² = |ψ|² — the Born rule.
+      interference_terms: >
+        When multiple paths contribute to the same
+        outcome, the η amplitudes add before squaring:
+        P_j = |Σ_i η_i · exp(iφ_i)|²
+             = Σ_i η_i² + Σ_{i≠j} η_i·η_j·cos(φ_i - φ_j)
+        The cross-terms are the interference contribution —
+        constructive when phases align (φ_i ≈ φ_j),
+        destructive when opposed. The double-slit
+        interference pattern is the spatial map of
+        these cross-terms from the two path amplitudes.
+      significance: >
+        The Born rule has been postulated for 100 years.
+        The derivation from R5 viability weighting of
+        η² removes it from the list of QM postulates.
+        It follows from: potential field is real (η),
+        probability scales with available potential
+        squared (two factors of η for event and
+        coherence maintenance), R5 selects the
+        outcome. No additional assumptions.
+
+    uncertainty_principle:
+      formula:  "ΔxΔp ≥ ħ/2"
+      from_eta: >
+        Position is the location of peak η — where
+        the potential field has its maximum amplitude
+        for the vortex configuration. This is the
+        engine location in engine/trail terms.
+        Momentum is the gradient of η — ∇η encodes
+        the direction and rate of potential field
+        flow, which is the vortex's trajectory
+        information. This is the trail structure.
+        Measuring position precisely requires sampling
+        η at a point — which requires interacting
+        with the peak, disturbing the gradient (trail).
+        Measuring momentum requires sampling ∇η —
+        which averages over position information.
+        ΔxΔp ≥ ħ/2 is the statement that η and ∇η
+        cannot be simultaneously sharp — a fundamental
+        property of any field: you cannot know both
+        the field value and its gradient precisely
+        at the same point. Uncertainty is not about
+        measurement disturbance; it is about what
+        a field is.
+      hbar_connection: >
+        ħ sets the minimum product ΔxΔp — the quantum
+        of action below which the η field cannot be
+        resolved. This is the substrate grain ξ
+        translated into action units:
+        ħ = ρ_s · φ_max · ξ³ / τ_Planck
+        (substrate density × maximum potential ×
+        grain volume / Planck time)
+        Open derivation: this formula should yield
+        ħ ≈ 1.054571817 × 10⁻³⁴ J·s from substrate
+        parameters without empirical input.
+
+    quantisation:
+      from_eta: >
+        Stable quantum states are η configurations
+        that satisfy integer phase closure — the
+        potential field returns to the same amplitude
+        after one complete circuit of the vortex topology.
+        Non-integer closure: η accumulates a phase
+        mismatch each cycle → destructive interference
+        → unstable → decays to nearest integer closure.
+        Energy eigenvalues are the η field amplitudes
+        at integer closure configurations — discrete
+        because closure is discrete (integer winding
+        numbers). Quantisation is topology of the
+        η field, not a separate postulate.
+
+  gravitational_quantities:
+    gravitational_potential:
+      formula:  "Φ_grav(r) = c²·(η(r) - 1) ≈ -GM/r for weak fields"
+      meaning:  "Standard gravitational potential expressed in η."
+      relation: >
+        In weak fields (η ≈ 1, small commitment density):
+        η(r) ≈ 1 - GM/(rc²) → Φ_grav = c²(η-1) ≈ -GM/r.
+        The Newtonian gravitational potential is the
+        first-order departure of η from unity.
+        General relativistic corrections are higher-order
+        terms in (1-η) — the GP nonlinearity becomes
+        relevant as η departs significantly from 1.
+
+    time_dilation:
+      formula:  "dτ/dt = η(r) = √(1 - 2GM/rc²) for weak fields"
+      meaning:  "Proper time rate at location r relative to vacuum."
+      derivation: >
+        Clock rate = decoherence rate Γ(r) = Γ_max·η(r).
+        Proper time interval dτ = η·dt where dt is
+        coordinate time (vacuum rate).
+        In weak fields: η ≈ 1 - GM/rc² →
+        dτ/dt ≈ 1 - GM/rc² — standard GR weak-field result.
+        Full GR Schwarzschild metric: dτ/dt = √(1 - r_s/r) = √η
+        shows η = 1 - r_s/r for the Schwarzschild case —
+        connecting the metric component directly to η.
+      schwarzschild_connection: >
+        The Schwarzschild metric g_tt = -(1 - r_s/r) = -η²
+        in the time-time component. The metric IS η² —
+        the squared normalised potential field.
+        GR's metric tensor is the η² field of the
+        substrate potential. This is not an approximation —
+        it is exact for the spherically symmetric case.
+        GR is the η² description of the potential field
+        geometry as seen by light-based observers.
+
+    shapiro_delay:
+      formula:  "Δt = (1/c)·∫_path (1/η - 1) dl ≈ (1/c)·∫ (1-η) dl"
+      meaning:  "Path-integrated η deficit — direct impedance measurement."
+      derivation: >
+        Signal travels at c_eff = c·η along path.
+        Vacuum travel time: t₀ = L/c.
+        Actual travel time: t = ∫dl/c_eff = ∫dl/(c·η).
+        Delay: Δt = ∫dl/c·(1/η - 1) ≈ ∫(1-η)dl/c
+        for η ≈ 1 (weak field).
+        Δt is the integral of the η deficit along the path —
+        a direct measurement of the potential field
+        depression caused by the nearby mass.
+
+    gravitational_lensing:
+      formula:  "δ = -∫ ∇_⊥(ln η) dl = ∫ ∇_⊥(1-η)/η dl"
+      meaning:  "Deflection angle from transverse η gradient."
+      derivation: >
+        Light follows the path of constant phase — Fermat's
+        principle. In an η field, the phase velocity is
+        c·η — slower where η is lower. The wavefront
+        turns toward lower η (toward mass) because the
+        mass-proximal side of the beam has lower η and
+        slower phase velocity.
+        Deflection angle δ = ∫∇_⊥(ln η)dl — the
+        transverse gradient of the log-potential along
+        the path. For weak fields: ∇_⊥(ln η) ≈ -∇_⊥(1-η)
+        → Einstein's formula δ = 4GM/rc² recovered.
+        Factor of 2 over Newtonian: GR has both spatial
+        and temporal η contributions; Newtonian only
+        temporal. η captures both.
+
+  thermodynamic_quantities:
+    hawking_temperature:
+      formula:  "T_H = (ħ·c/2πk_B) · |∇η|_horizon"
+      meaning:  "GP pressure leakage rate at η gradient steepness."
+      derivation: >
+        At the event horizon, η → 0 and |∇η| reaches
+        maximum steepness. The GP structural pressure
+        (g·|θ|²) divided by the outward impedance
+        (Z₀/η → ∞) gives the leakage flux. The thermal
+        spectrum of the leakage has temperature:
+        T_H ∝ |∇η|_horizon = |∇φ|_horizon/φ_max
+        For Schwarzschild: |∇η|_horizon = 1/(2r_s) →
+        T_H = ħc/(4πk_B·r_s) = ħc³/(8πGMk_B) —
+        standard Hawking result recovered from η gradient.
+      information: >
+        The outgoing radiation carries the phase structure
+        of the η field at the horizon — encoding the
+        interior commitment topology. Information is
+        preserved in the η field phase; it is not
+        destroyed at the horizon. The information paradox
+        is dissolved: η is continuous across the horizon;
+        its phase structure propagates outward as
+        Hawking radiation.
+
+    unruh_temperature:
+      formula:  "T_U = (ħ·a/2πc·k_B)"
+      from_eta: >
+        An accelerating observer experiences a locally
+        elevated commitment density — the acceleration
+        reduces local η below the vacuum value.
+        The locally reduced η means the observer is
+        in a region of non-vacuum η — and sees the
+        Tik background as a thermal bath with temperature
+        proportional to the η reduction rate, which
+        scales with acceleration a.
+        Unruh and Hawking are the same η effect:
+        Hawking: η → 0 from extreme mass commitment.
+        Unruh: η reduced from acceleration-induced commitment.
+        Same physics; different source of η depletion.
+
+# ─────────────────────────────────────────────
+# THE COMPLETE MEASUREMENT TABLE
+# ─────────────────────────────────────────────
+complete_measurement_table:
+  statement: >
+    Every row is a measurement of η or its derivatives.
+    The rightmost column shows what each measurement
+    was identified as before Praestology. The framework's
+    contribution: the unified physical interpretation.
+  table:
+    - quantity:    "Refractive index n_eff"
+      formula:     "n_eff = 1/η = Z_eff/Z₀"
+      measures:    "Local η value via propagation speed ratio"
+      known_since: "Snell ~1621"
+      was_called:  "Material optical property"
+
+    - quantity:    "Vacuum impedance Z₀"
+      formula:     "Z₀ = μ₀c"
+      measures:    "Global impedance floor (η=1 baseline)"
+      known_since: "Maxwell 1865"
+      was_called:  "Defined electromagnetic constant"
+
+    - quantity:    "Inertial mass"
+      formula:     "m = Z_inertia/c²"
+      measures:    "Global ∫(1-η)ρ d³r — Machian integral"
+      known_since: "Newton 1687"
+      was_called:  "Intrinsic property of matter"
+
+    - quantity:    "Gravitational potential"
+      formula:     "Φ_grav = c²(η-1)"
+      measures:    "Local η departure from unity"
+      known_since: "Newton 1687"
+      was_called:  "Gravitational field"
+
+    - quantity:    "Time dilation"
+      formula:     "dτ/dt = η"
+      measures:    "Local η value (decoherence rate ratio)"
+      known_since: "Einstein 1905/1915"
+      was_called:  "Spacetime geometry effect"
+
+    - quantity:    "Shapiro delay"
+      formula:     "Δt = ∫(1-η)dl/c"
+      measures:    "Path-integrated (1-η) — η deficit"
+      known_since: "Shapiro 1964"
+      was_called:  "GR prediction / spacetime curvature"
+
+    - quantity:    "Gravitational redshift"
+      formula:     "Δν/ν = Δη"
+      measures:    "η difference between emission and reception"
+      known_since: "Einstein 1907 / Pound-Rebka 1959"
+      was_called:  "Gravitational frequency shift"
+
+    - quantity:    "Gravitational lensing"
+      formula:     "δ = ∫∇_⊥(ln η)dl"
+      measures:    "Transverse ∇η along light path"
+      known_since: "Einstein 1915 / Eddington 1919"
+      was_called:  "Spacetime curvature effect"
+
+    - quantity:    "Event horizon"
+      formula:     "η_outward → 0"
+      measures:    "Surface of η → 0 for outward propagation"
+      known_since: "Schwarzschild 1916"
+      was_called:  "Spacetime causal boundary"
+
+    - quantity:    "Hawking temperature"
+      formula:     "T_H ∝ |∇η|_horizon"
+      measures:    "η gradient steepness at horizon"
+      known_since: "Hawking 1974"
+      was_called:  "Semiclassical QFT effect"
+
+    - quantity:    "Wavefunction |ψ|²"
+      formula:     "|ψ|² = η²"
+      measures:    "Squared local η — Born probability"
+      known_since: "Born 1926"
+      was_called:  "Probability amplitude (postulated)"
+
+    - quantity:    "Quantum interference"
+      formula:     "P = |Ση_i·exp(iφ_i)|²"
+      measures:    "η amplitude superposition with phase"
+      known_since: "Young 1801 / de Broglie 1924"
+      was_called:  "Wave-particle duality"
+
+    - quantity:    "Fine structure constant α"
+      formula:     "α = δφ_field/360° per rotation"
+      measures:    "GP field closure imperfection rate in η"
+      known_since: "Sommerfeld 1916"
+      was_called:  "Mysterious dimensionless constant"
+
+    - quantity:    "MOND threshold a₀"
+      formula:     "a₀ ← d²η/dr² = 0 inflection"
+      measures:    "η inflection point of GP nonlinearity"
+      known_since: "Milgrom 1983 (phenomenological)"
+      was_called:  "Empirical acceleration scale"
+
+# ─────────────────────────────────────────────
+# QUANTUM GRAVITY FROM η
+# ─────────────────────────────────────────────
+quantum_gravity_from_eta:
+  statement: >
+    The bridge function η = φ/φ_max makes the quantum
+    gravity unification explicit rather than structural.
+    Quantum mechanics and gravity are not two theories
+    describing different phenomena — they are two limiting
+    regimes of the η field dynamics.
+  regimes:
+    quantum_regime:
+      condition: "η ≈ 1, Tik amplitude non-negligible"
+      description: >
+        Near-vacuum, low commitment density. The η field
+        fluctuates significantly from Tik background.
+        The GP equation reduces to Schrödinger equation.
+        Quantum interference, tunnelling, entanglement
+        are η superposition and phase effects.
+        Gravity negligible: η ≈ 1 everywhere → ∇η ≈ 0
+        → no significant lensing or time dilation.
+    gravitational_regime:
+      condition: "η varies significantly, Tik negligible"
+      description: >
+        Significant commitment density from mass.
+        η departs from 1 in structured ways from ∇η.
+        Tik fluctuations negligible relative to η gradients.
+        GR is the correct description of η field geometry
+        as measured by light-based (η-sampling) observers.
+        Quantum effects negligible: η variations smooth
+        → no significant quantum interference.
+    planck_regime:
+      condition: "η → 0, ξ → ξ_min"
+      description: >
+        Both Tik fluctuations and η gradients are large.
+        Neither limit applies — must use full saturating
+        GP equation. This is not a new physics regime;
+        it is the GP equation at extreme parameters.
+        The saturating nonlinearity prevents η = 0.
+        The Planck scale is where ξ(r) → ξ_min —
+        the GP healing length at maximum commitment density.
+        No singularity; no breakdown; same η field at
+        extreme values.
+  unification_statement: >
+    The single equation:
+    iħ ∂η/∂t = [-ħ²/(2m_eff)·∇²
+                 + V_ext/φ_max
+                 + g·η²/(1/φ_max + η²/n_sat·φ_max)
+                 - μ_local/φ_max] η
+    describes all three regimes continuously.
+    Quantum mechanics: linearised limit of this equation
+    (low commitment density, η ≈ 1, g·η² negligible).
+    Newtonian gravity: time-independent limit with small
+    (1-η) (weak field, GP nonlinearity negligible).
+    GR: full geometric structure of η² field as seen
+    by light-based observers (η varies significantly).
+    Quantum gravity: full nonlinear equation at extreme η.
+    One equation. All regimes. No seam. No separate
+    quantisation of geometry. The quantum gravity problem
+    does not arise because there was never a geometric
+    arena separate from the field — there is only η.
+
+# ─────────────────────────────────────────────
+# φ_max AND n_sat — THE OPEN LINK
+# ─────────────────────────────────────────────
+phi_max_derivation:
+  statement: >
+    The bridge function requires φ_max — the maximum
+    free potential — to be derived from substrate
+    parameters. This is the remaining open link
+    between the bridge function and the constant
+    derivations in alpha-rydberg-z0.yaml.
+  connection_to_n_sat: >
+    n_sat (saturation density in commitment-response-function.yaml)
+    and φ_max are the same parameter from different sides:
+    n_sat = ρ_s · φ_max² / ħ²  [in natural substrate units]
+    Once n_sat is derived from the vortex stability
+    equations (the topological capacity per grain volume ξ³),
+    φ_max follows directly. This single derivation
+    closes both the GP equation and the bridge function.
+  connection_to_constants: >
+    From the bridge function and the constant derivations:
+    Z₀ = Z₀/η|_{η=1} = Z₀  [trivially, at vacuum]
+    c = c·η|_{η=1} = c      [trivially, at vacuum]
+    ħ = ρ_s·φ_max·ξ³/τ_P   [from grain volume and φ_max]
+    α = δφ_gp per rotation  [from GP closure imperfection]
+    G = c²·ξ²/p_env·κα      [from gradient coupling at η≈1]
+    All six constants in alpha-rydberg-z0.yaml are
+    functions of φ_max, ξ, and the vortex stability ratios.
+    φ_max is the last shared parameter requiring derivation.
+  open_derivation: >
+    Derive φ_max from the substrate's topological capacity:
+    φ_max = ħ·√(n_sat/ρ_s)
+    where n_sat = maximum stable winding configurations
+    per grain volume ξ³. This requires solving the
+    vortex stability equations to count the maximum
+    number of distinct stable topologies that can
+    coexist in one substrate grain — the topological
+    capacity of the Praesto field.
+    Priority: same as n_sat derivation in
+    commitment-response-function.yaml — priority 1,
+    prerequisite for numerical closure of all constants.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+open_derivations:
+  priority_1:
+    - >
+      φ_max from vortex stability topological capacity —
+      prerequisite for all numerical constant values.
+      Equivalently: n_sat from maximum stable winding
+      configurations per ξ³. Same derivation, two expressions.
+    - >
+      Formal proof that Schwarzschild metric g_tt = -η²
+      exactly — showing GR metric IS the squared normalised
+      potential field for spherically symmetric commitment
+      density. This would formally establish GR as the
+      η² description of the potential field geometry.
+    - >
+      Born rule formal derivation — show that R5 viability
+      weighting of the η field gives P = η² uniquely.
+      Connect to Gleason's theorem from the substrate side.
+
+  priority_2:
+    - >
+      ħ from ρ_s·φ_max·ξ³/τ_Planck — verify this formula
+      yields ħ ≈ 1.054571817 × 10⁻³⁴ J·s from substrate
+      parameters without empirical input.
+    - >
+      Shapiro delay formula verification — show that
+      Δt = ∫(1-η)dl/c recovers the standard GR Shapiro
+      delay to all post-Newtonian orders.
+    - >
+      Interference term derivation — show that η amplitude
+      superposition P = |Ση_i·exp(iφ_i)|² produces QDT
+      interference effects (biology/quantum-cognition.yaml)
+      as the same mathematical structure at cognitive scale.
+      Closes the Mandelbrot cross-domain confirmation.
+
+  priority_3:
+    - >
+      MOND threshold as η inflection point — show that
+      d²η/dr² = 0 occurs at the acceleration scale
+      a₀ ≈ 1.2×10⁻¹⁰ m/s² from substrate parameters.
+    - >
+      Unruh-Hawking unification — show formally that
+      T_U = ħa/(2πck_B) and T_H = ħc|∇η|/(2πk_B)
+      are the same formula with a = c·|∇η|_horizon —
+      confirming Unruh and Hawking as η gradient effects.
+    - >
+      Inertial anisotropy magnitude — compute ΔZ_inertia
+      from Jupiter's contribution to Earth's η field.
+      Predict the anisotropy tensor at Earth's location
+      from the solar system mass distribution.
+
+reading_order:
+  - "domains/physics/substrate-potential.yaml           -- potential field primary framing"
+  - "domains/physics/bridge-function.yaml               -- this file"
+  - "domains/physics/commitment-response-function.yaml  -- GP saturating nonlinearity"
+  - "domains/physics/foundations.yaml                   -- six pillars"
+  - "domains/physics/specifications.yaml                -- momentum density formulation"
+  - "domains/physics/quantum-foundation.yaml            -- QM primitives via ψ=η"
+  - "domains/physics/alpha-rydberg-z0.yaml              -- constants from η structure"
+
+related_issues:
+  - "foundational/F36_eta_as_universal_bridge_function"
+  - "foundational/F37_wavefunction_identification_psi_equals_eta"
+  - "foundational/F38_born_rule_from_eta_squared_viability"
+  - "foundational/F39_gr_metric_as_eta_squared_field"
+  - "foundational/F40_phi_max_from_topological_capacity"
+  - "foundational/F41_quantum_gravity_as_eta_field_all_regimes"
+  - "intersectional/physics/053_schwarzschild_metric_eta_squared_proof"
+  - "intersectional/physics/054_shapiro_delay_eta_integral_verification"
+  - "intersectional/physics/055_born_rule_gleason_from_substrate"
+  - "intersectional/physics/056_hbar_from_phi_max_xi_formula"
+  - "intersectional/physics/057_unruh_hawking_same_eta_gradient"
+  - "intersectional/physics/058_mond_as_eta_inflection_derivation"
+  - "intersectional/physics_biology/005_interference_term_qdt_mandelbrot"
+  - "intersectional/physics_consciousness/004_superposition_eta_field_multiple_values"
