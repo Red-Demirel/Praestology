@@ -135,7 +135,7 @@ Praestology does not solve problems by adding new mechanisms. It dissolves them 
 | **Hierarchy problem** | G is tiny because ξ²/p_env is geometrically tiny—scale separation is structural, not fine‑tuned. |
 | **Dark matter** | Three components (wakes, solo‑vortices, backreaction), all from the same substrate. No new particle. |
 | **Matter asymmetry** | Not symmetric production + residual. Pool dynamics select stable configurations from the start. |
-| **Problem of time in QM** | t is cycle counter, not dimension. Pauli theorem is correct—t is not a state property. |
+| **Problem of time in QM** | time as we know it is cycle counter, not dimension. Pauli theorem is correct—t is not a state property. |
 | **Vacuum energy divergence** | Physical UV cutoff at substrate grain. The 10¹²⁰ divergence is continuum artefact. |
 | **Is–ought gap** | Ought is R5 applied to coupled agents. Value is viability, internalized. |
 | **Free will vs determinism** | Free will is high‑Ξ override capacity, not acausal magic. Compatible with R1–R5. |
