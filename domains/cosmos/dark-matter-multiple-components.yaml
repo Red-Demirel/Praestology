@@ -1,0 +1,65 @@
+dark_matter_multi_component:
+  version: "1.0 – Multi-Regime Substrate Effects"
+  parent_domain: "Cosmos"
+  core_dependency: "Praestology v1.4 + commitment_stress_backreaction"
+  status: "Defined"
+  description: >
+    The "dark matter" phenomenology is not explained by a single undetected particle.
+    It arises from several natural, scale-dependent responses of the substrate to
+    topological commitment stress — wakes, phonons, solo-vortices, magnetic backreaction,
+    and environmental variations — all without introducing new fields or particles.
+
+  primary_contributors:
+    - name: "Substrate wakes & phonons"
+      description: >
+        Coherent long-range perturbations in p_env created by orbiting/rotating
+        committed structures. These add effective impedance elevation and Φ
+        gradients → extra refraction interpreted as gravitational pull.
+      scale: "Galactic halos, rotation curves, cosmic web filaments"
+      confidence: "Very high — direct analogue to acoustic peaks in CMB"
+
+    - name: "Solo-vortices & collective topological charge/impedance"
+      description: >
+        Minimal n_eff ≈ 1/2 topological excitations that do not fully pair or knot.
+        Weak EM coupling but persistent local R elevation and Φ gradients.
+        In large numbers they form a diffuse, collisionless component that
+        adds gravitational refraction on galactic/cluster scales.
+      scale: "Galactic halos, small-scale structure anomalies (core-cusp, diversity)"
+      confidence: "High — explains why direct detection keeps failing"
+
+    - name: "Magnetic/strain backreaction from black holes & large structures"
+      description: >
+        Black holes (high-S saturation knots) induce long-range chiral strain
+        fields and magnetic-like alignment of vortices → additional Φ gradients
+        and impedance elevation beyond static mass contribution.
+      scale: "Cluster lensing, void dynamics, large-scale apparent acceleration"
+      confidence: "High — consistent with observed cluster behavior"
+
+  minor_contributions:
+    - name: "Transient vortex pairs"
+      description: "Short-lived +n/-n pairs that add temporary R elevation before annihilating."
+      scale: "Small-scale, short-term effects"
+    - name: "High-Φ dissipation trails"
+      description: "Long-range memory of past high-energy events (e.g., early-universe transitions)."
+      scale: "Cosmic voids, large-scale structure"
+    - name: "Environmental p_env variations"
+      description: "Local substrate density modulates all above effects (stronger in voids, weaker in cores)."
+      scale: "All scales"
+
+  no_new_particle_needed:
+    statement: >
+      All components are collective substrate responses to topological stress.
+      No undetected exotic particles, no new fields, no fine-tuning of a dark sector.
+
+  testable_predictions:
+    - "Stronger 'dark matter' effects in low-p_env regions (voids) vs. high-density cores."
+    - "Environmental variation of effective G/inertia correlated with local R profile."
+    - "Cluster lensing excess partially explained by black-hole magnetic/strain backreaction."
+    - "No direct detection signals in WIMP/axion searches — only indirect gravitational refraction."
+
+  confidence_summary: >
+    The multi-component picture is more robust than a single-particle hypothesis:
+    each piece is independently required for other phenomena (vortices for particles,
+    wakes for gravity, magnetic backreaction for EM). Together they explain flat
+    rotation curves, lensing, halo structure, and small-scale anomalies without
+    introducing new undetected entities.
