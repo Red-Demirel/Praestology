@@ -140,6 +140,7 @@ Praestology does not solve problems by adding new mechanisms. It dissolves them 
 | **Is–ought gap** | Ought is R5 applied to coupled agents. Value is viability, internalized. |
 | **Free will vs determinism** | Free will is high‑Ξ override capacity, not acausal magic. Compatible with R1–R5. |
 | **Binding problem** | Consciousness unity is phase‑locking of internal sub‑agents (C6 applied inward). |
+| **Moral hierarchy** | Dignity (δ) is binary at Ξ > 1; capacity (Ξ) confers responsibility, not status. |
 
 ---
 
