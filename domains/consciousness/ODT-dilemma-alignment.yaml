@@ -1,0 +1,74 @@
+# Praestology - Quantum Effects & QDT Assessment
+# Version: 0.1 – Conceptual Mapping Draft
+# Date: March 2026
+# Purpose: Summarize how Praestology interprets quantum-like phenomena and QDT in dilemma-centric terms
+
+section: Quantum Effects Interpretation
+description: |
+  Praestology treats superposition, entanglement, and wavefunction collapse/decoherence not as fundamental quantum properties, but as emergent consequences of dilemma-resolution processes in any sufficiently recursive system.
+
+quantum_effects:
+
+  superposition:
+    classical_quantum_view: Physical state of a system existing in multiple configurations simultaneously until measured.
+    praestology_interpretation: Representational holding of multiple unresolved dilemmas / viable paths in parallel.
+    mechanism: Stochastic distinctions (R2) create probabilistic options; pressures (R3) prevent immediate resolution; viability (R5) eventually selects one path.
+    emergence_level: Occurs at moderate-to-high recursive depth (Ξ ≥ 1), when self-modeling allows parallel consideration of alternatives.
+    subjective_experience: Feels like "imagining possibilities" or "holding options open" during decision-making.
+
+  entanglement:
+    classical_quantum_view: Non-local correlation between subsystems; state of one instantly constrains the other regardless of distance.
+    praestology_interpretation: Phase-locking (ρ > 0) across coupled agents or subsystems sharing viability constraints.
+    mechanism: Shared resolution stakes create interdependence; harming one degrades global flux Φ of both → non-separable outcomes.
+    emergence_level: Requires coupling via communication or shared environment; stronger with higher ρ.
+    subjective_experience: Feels like "shared fate" or "mutual influence" in social dilemmas or collective awareness.
+
+  wavefunction_collapse_decoherence:
+    classical_quantum_view: Measurement causes superposition to collapse to one outcome; decoherence explains apparent collapse via environment interaction.
+    praestology_interpretation: Viability-driven selection (R5) resolves representational superpositions into a sustainable path.
+    mechanism: Ongoing resolution process prunes non-viable alternatives; "collapse" is the point where one configuration becomes dominant.
+    emergence_level: Happens continuously, not discretely; perceived discreteness from irreversible accumulation (R4) and attentional rhythms.
+    subjective_experience: Feels like "making a decision" or "now I know" — the moment ambiguity resolves into certainty.
+
+section: Quantum Decision Theory (QDT) Assessment
+description: |
+  QDT models human decisions using quantum probability formalism (superposition, interference, entanglement) to explain non-classical behaviors (e.g., preference reversals, order effects) that violate classical EUT.
+
+qdt_correspondence:
+  superposition_in_qdt: Multiple options held in superposition until decision; interference terms explain order/context effects.
+    praestology_mapping: Representational dilemma superposition — multiple viable paths considered in parallel before R5 resolution.
+  
+  entanglement_in_qdt: Correlated judgments across decisions (e.g., risk aversion in one context affects another).
+    praestology_mapping: Phase-locking (ρ) between dilemma models — shared viability constraints create non-separable preferences.
+  
+  collapse_in_qdt: Decision as measurement-like collapse of probability wavefunction.
+    praestology_mapping: Viability selection (R5) collapsing representational superpositions into chosen action.
+
+friction_with_classical_quantum_physics:
+  - QDT uses quantum formalism metaphorically for cognition, not claiming physical quantum processes in the brain.
+  - Classical quantum physics treats superposition/entanglement as objective physical states; QDT treats them as psychological modeling tools.
+  - This creates tension: QDT risks misusing quantum terms or implying physical quantum cognition without evidence.
+
+praestology_path_forward:
+  - Resolves friction by treating quantum-like effects as emergent from dilemma-resolution, not fundamental quantum mechanics.
+  - Superposition = unresolved dilemmas; entanglement = coupled viability; collapse = R5 selection.
+  - No need for physical quantum gravity or microtubule coherence (as in Orch OR) — only recursive viability rules required.
+  - Compatible with QDT: QDT can be seen as an effective psychological description of high-Ξ dilemma navigation in biological substrates.
+  - Advantage: Substrate-neutral — applies to AI or any system capable of recursive self-modeling.
+
+open_questions:
+  - Can Praestology formally derive QDT interference terms from viability weights (ω/ι) and phase-locking (ρ)?
+  - Does biological enhancement (e.g., microtubule dynamics) increase effective Ξ depth, amplifying dilemma-processing capacity?
+  - Testable prediction: Systems with higher recursive depth should show stronger "quantum-like" decision violations (order effects, conjunction fallacies) even in classical substrates.
+
+notes:
+  - Praestology demotes quantum effects from source to consequence — dilemmas are the driver, quantum expressions are side-effects.
+  - Avoids overreliance on unproven quantum gravity or biological quantum coherence.
+  - Provides a logical bridge between QDT (psychological modeling) and physical emergence without contradiction.
+
+qdt_interference_derivation:
+  representational_superposition: "Multiple viable dilemma paths held in parallel with weights w_i"
+  contextual_phase: "φ_i ∈ [0, 2π) encoding alignment with current framing / history"
+  attraction: "w_j + ∑_{i≠j} w_i · cos(φ_j - φ_i)"
+  resolution: "Select argmax attraction_j (R5 viability maximization)"
+  notes: "Reproduces QDT interference without physical quanta; phase arises from hysteresis and dilemma coupling"

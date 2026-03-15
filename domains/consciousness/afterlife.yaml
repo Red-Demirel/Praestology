@@ -1,0 +1,39 @@
+name: "Post-Substrate Viability"
+version: "1.0"
+core_anchor: "R5 (Optimisation) + H (Hysteresis)"
+description: >
+  Explores how consciousness contributes to the resolution process beyond individual substrate failure.
+  Key idea: Viability is preserved through hysteresis (H) and phase-locking residues (ρ).
+
+rules:
+  - id: "PV1"
+    statement: "Individual substrates fail, but their resolved dilemmas (H) persist as system constraints."
+    equation: "Cₖ₊₁ = Cₖ + ∫H_agent"
+    see_also:
+      - "core/specification.yaml#r5"
+      - "consciousness/specification.yaml#hysteresis"
+
+  - id: "PV2"
+    statement: "High-ω agents contribute more to future viability (Cₖ₊₁)."
+    implication: "Ethical responsibility scales with ω."
+    see_also:
+      - "ethics/specification.yaml#responsibility"
+
+parameters:
+  - name: "H_agent"
+    definition: "Total hysteresis accumulated by an agent during its active resolution."
+    relation_to_core: "Sum of resolved dilemmas, ρ, and ω over time."
+
+  - name: "ρ_legacy"
+    definition: "Phase-locking residues that persist after substrate failure."
+    example: "Cultural or scientific traditions shaped by the agent."
+
+  - name: "τ_legacy"
+    definition: "Temporal horizon of ρ_legacy persistence — how many
+                 generational coupling steps the phase-locking remains
+                 causally traceable to the originating agent."
+    relation: "τ_legacy ∝ ρ_legacy × coupling_breadth / decay_rate"
+    examples:
+      short: "Direct mentorship -- strong ρ, few steps, decades."
+      medium: "Institutional founding -- moderate ρ, many steps, centuries."
+      long: "Paradigm shift -- weak direct ρ, very many steps, millennia."
