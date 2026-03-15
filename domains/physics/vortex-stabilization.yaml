@@ -1,0 +1,1125 @@
+# domains/physics/vortex-stabilization.yaml
+name: "Vortex Pair Stabilization"
+version: "1.1 — Environmental Dynamics Integration"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Defined — binding energy numerical derivation open"
+description: >
+  This file establishes how vortex pairs form from Tik
+  fluctuations and why they persist. It is the formation
+  and persistence mechanism that the particle-specific
+  files (electron2photon.yaml, beta-decay.yaml, etc.)
+  presuppose but do not derive.
+  The central claim: a topological vortex is not a frozen
+  static object. It is a dynamic equilibrium sustained by
+  the substrate's ongoing motion. Topological protection
+  prevents discontinuous unwinding; the Tik background
+  and environmental dynamics together prevent continuous
+  diffusive unwinding. Without ongoing substrate dynamics,
+  vortices would gradually unwind through diffusion —
+  particles would dissolve.
+  Three stabilisation contributions are distinguished:
+  (1) Tik zero-point floor — always present, sets minimum
+      counter-torque, independent of environment.
+  (2) Thermal Tik — temperature-dependent amplitude above
+      the zero-point floor. U-shaped lifetime curve.
+  (3) Environmental dynamics — structured, coherent, or
+      turbulent substrate motion from bulk flows, acoustic
+      modes, nearby structural dynamics. Can refresh the
+      vortex pool by supplying phase-coherent potential
+      beyond what stochastic Tik alone provides.
+  Reading position: specifications.yaml describes what
+  vortices are topologically. This file describes how
+  they form and why they persist. Particle process files
+  (electron2photon.yaml, beta-decay.yaml, etc.) build
+  on both.
+
+historical_lineage: >
+  William Kingdon Clifford (1870-1879): matter as stable
+  twists and knots in a continuous medium — topological
+  defects that resist untwisting due to medium properties.
+  Lord Kelvin (1867): vortex atoms — atoms as knotted
+  vortices in the ether. Both abandoned when Michelson-
+  Morley ruled out the mechanical ether. The Praestology
+  substrate is not the mechanical ether — it is a GP
+  quantum potential field. But the topological vortex
+  ontology Clifford and Kelvin were reaching for was
+  correct. They had the right structure; the wrong
+  substrate model. The present file is the formal
+  completion of what they began.
+
+dependency_map:
+  requires:
+    - "domains/physics/specifications.yaml          -- vortex topology, Tik, S_lock"
+    - "domains/physics/foundations.yaml             -- commitment stress, impenetrability"
+    - "domains/physics/bridge-function.yaml         -- η, c_eff, τ_update, cycle count"
+    - "domains/physics/commitment-response-function.yaml -- GP saturating nonlinearity"
+  provides_to:
+    - target: "domains/physics/electron2photon.yaml"
+      via: "Formation and persistence of Möbius vortex (electron) and dipole pair (photon)"
+    - target: "domains/physics/beta-decay.yaml"
+      via: "Stability conditions for quark winding; decay as dynamic equilibrium failure"
+    - target: "domains/physics/nuclear-binding.yaml"
+      via: "Residual inter-vortex binding from shared stabilisation environment"
+    - target: "domains/biology/quantum-cognition.yaml"
+      via: "Environmental resonance contribution to enzyme tunnelling rates"
+    - target: "domains/biology/cellular.yaml"
+      via: "Cellular environment as active vortex stabilisation medium"
+
+# ─────────────────────────────────────────────
+# FORMATION MECHANISM
+# ─────────────────────────────────────────────
+formation_mechanism:
+  statement: >
+    Tik fluctuations continuously perturb the η field.
+    A single Tik event is transient — it creates a local
+    phase disturbance that disperses in τ_decay ∝ 1/(D·∇²ω).
+    When two opposite-circulation Tik events occur in
+    sufficient proximity, they can phase-lock into a
+    vortex-antivortex dipole pair — mutually stabilising
+    through shared backreaction and topological constraint.
+    Once phase-locked, the pair becomes a coherent
+    excitation that propagates or orbits until external
+    stress or saturation breaks the lock.
+  required_conditions:
+    opposite_circulation: >
+      One +n and one -n winding event. Near-perfect
+      strain cancellation in the η field between the pair.
+      The pair's combined anomaly S_net ≈ 0 — consistent
+      with the photon (dipole pair, coherent S cancellation,
+      zero effective mass). For the electron (Möbius 720°),
+      the pair is asymmetric — one chirality dominates,
+      leaving a net S > 0 and net chirality (charge).
+    phase_lock_proximity: >
+      The two events must occur within the coherence
+      length ξ_coh — the scale over which Tik fluctuations
+      maintain phase correlation. If the events are too
+      far apart, they cannot phase-lock before dispersing.
+      ξ_coh > ξ (substrate grain size) is the formation
+      condition. In higher-η environments (voids): ξ_coh
+      is larger — easier pair formation. In lower-η
+      environments (dense matter): ξ_coh is smaller —
+      pair formation requires higher local fluctuation
+      amplitude. This is why particle pair production
+      requires high energy density — you need sufficient
+      Tik amplitude and coherence length in a dense
+      substrate region.
+    s_lock_not_exceeded: >
+      The local η must not drop below S_lock during
+      formation — if commitment density is too high,
+      there is insufficient free potential for the new
+      pair to establish phase coherence. S_lock is the
+      threshold below which new stable topology cannot
+      form. This is why pair production has an energy
+      threshold (2m_eff c² minimum) — below this, the
+      local η depletion from the formation event would
+      cross S_lock before phase-lock is achieved.
+    ongoing_tik: >
+      The Tik background must be present at formation
+      to prevent immediate diffusive unwinding of the
+      nascent pair before it achieves stable phase-lock.
+      Formation and initial stabilisation occur simultaneously
+      — the pair is not formed first and then stabilised,
+      but continuously maintained by the same Tik
+      background that nucleated it.
+
+  photon_vs_electron_formation:
+    photon: >
+      Symmetric dipole pair: +n and -n with equal winding.
+      S_net ≈ 0 → zero mass. Perfect strain cancellation
+      → propagates at c_eff = c (maximum η propagation rate).
+      Forms readily from any Tik event pair — lowest
+      energy formation threshold. Unstable if one partner
+      is disturbed: immediate annihilation (pair recombination)
+      releasing the stored circulation as field energy.
+    electron: >
+      Asymmetric Möbius pair: the 720° non-orientable
+      topology breaks the perfect +n/-n symmetry.
+      S_net > 0 → nonzero mass. Net chirality → charge.
+      Higher formation threshold than photon — requires
+      a Tik event of sufficient amplitude to initiate
+      the 720° twist rather than a simple 360° dipole.
+      More stable once formed: the Möbius topology is
+      harder to unwind than a simple dipole because
+      unwinding requires crossing the non-orientable
+      surface — a topological barrier, not just an
+      energy barrier.
+    confirming_note: >
+      Electron-positron pair production threshold:
+      2m_e c² ≈ 1.022 MeV. Below this: insufficient
+      η depletion to nucleate the Möbius topology.
+      Photon pair production: two photons → e⁺e⁻.
+      The photons provide the Tik-like coherent phase
+      disturbance that nucleates the Möbius pair —
+      stimulated formation (environmental dynamics)
+      rather than spontaneous Tik nucleation.
+
+# ─────────────────────────────────────────────
+# PERSISTENCE MECHANISM
+# ─────────────────────────────────────────────
+persistence_mechanism:
+  statement: >
+    A formed vortex pair persists through dynamic
+    equilibrium — not static topology. Two mechanisms
+    work against persistence; three work for it.
+  against_persistence:
+    diffusive_unwinding: >
+      The vortex's phase coherence gradually erodes
+      through diffusion in the η field. The unwinding
+      rate is:
+      τ_decay ∝ 1/(D · ∇²ω)
+      where D is the diffusion coefficient (related to
+      substrate viscosity — R_eff at the vortex scale)
+      and ∇²ω is the vorticity curvature (how tightly
+      the winding is localised). More tightly wound
+      (smaller core) → higher ∇²ω → faster diffusive
+      unwinding. The substrate grain ξ provides a
+      natural lower bound on the core size — below ξ,
+      the continuum approximation breaks down and the
+      discrete topology takes over.
+    topological_tunnelling: >
+      Even topologically protected windings can unwind
+      via Tik-induced tunnelling through the topological
+      barrier — the same mechanism as quantum tunnelling
+      through a commitment barrier (foundations.yaml
+      pillar 6). For stable particles, this rate is
+      extremely low — the topological barrier is large
+      relative to the Tik fluctuation amplitude. For
+      unstable particles (excited states, resonances),
+      the barrier is smaller and τ_decay is short.
+
+  for_persistence:
+    tik_zero_point_floor:
+      description: "Always present. Sets minimum counter-torque."
+      mechanism: >
+        The Tik background at T=0 (zero-point floor)
+        continuously provides stochastic phase disturbances
+        that counter diffusive unwinding. The counter-torque
+        has zero mean (isotropic, no preferred direction)
+        but nonzero variance — it prevents the phase
+        coherence from monotonically decaying.
+        The zero-point floor is ħ: the minimum action
+        quantum per cycle. This is the minimum Tik
+        amplitude that a vortex in any environment
+        always has access to. It sets the lower bound
+        on stability — a vortex in perfect vacuum at
+        T=0 is still stabilised by the zero-point floor.
+      connection_to_hbar: >
+        ħ = minimum counter-torque per cycle. The electron's
+        stability (lifetime > 10²⁸ years) reflects that
+        the zero-point Tik floor is sufficient to maintain
+        the Möbius topology against diffusive unwinding
+        indefinitely at the current cosmic η level.
+      environment_independence: >
+        The zero-point floor is η-independent at leading
+        order — it is the substrate's intrinsic granularity,
+        not a function of the committed state. Vortices
+        in voids and vortices near mass both have the
+        same zero-point counter-torque. Environmental
+        differences affect the thermal and structural
+        contributions, not the zero-point floor.
+
+    thermal_tik:
+      description: "Temperature-dependent amplitude above zero-point floor."
+      mechanism: >
+        At T > 0, the Tik background amplitude increases
+        above the zero-point floor. This provides additional
+        counter-torque — potentially stabilising vortices
+        that would unwind at T=0 in the absence of the
+        zero-point floor alone.
+      u_shaped_lifetime_curve: >
+        Vortex pair lifetime as a function of Tik amplitude:
+        Too little (T→0, near zero-point floor):
+          Counter-torque at minimum. Vortices stabilised
+          by zero-point floor alone — long lifetime.
+        Optimal amplitude (T_optimal):
+          Counter-torque matches diffusive unwinding rate.
+          Maximum lifetime for thermally-assisted pairs.
+        Too much (T >> T_optimal):
+          Tik fluctuations exceed S_lock → chaotic disruption
+          → accelerated unwinding → short lifetime.
+        The crossover from stabilising to destabilising
+        is the same S_lock threshold that sets the pair
+        formation condition — above S_lock, the Tik
+        amplitude is sufficient to continuously disrupt
+        the phase-lock rather than refresh it.
+      testable_prediction: >
+        In analog systems (BECs, superfluids, optical
+        vortex arrays), vortex pair lifetime vs
+        fluctuation amplitude should show the U-shaped
+        curve: increasing lifetime at low amplitude
+        (additional counter-torque), peak at optimal,
+        decreasing at high amplitude (chaotic disruption).
+        The peak location (T_optimal) encodes S_lock
+        in the analog system — measuring T_optimal
+        gives a direct measurement of the effective
+        S_lock for that system.
+        This is testable now with existing BEC infrastructure.
+
+    environmental_dynamics:
+      description: >
+        Structured substrate motion from bulk flows,
+        acoustic modes, turbulent cascades, nearby
+        structural dynamics. Distinct from stochastic
+        Tik in being correlated, directional, and
+        potentially coherent.
+      mechanism: >
+        Environmental dynamics supply phase-coherent
+        potential to the vortex pair — refreshing the
+        phase coherence faster than diffusion can erode
+        it. Unlike Tik (zero mean, isotropic), environmental
+        dynamics carry structured phase information.
+        The analogy: spontaneous emission (Tik) vs
+        stimulated emission (environmental dynamics).
+        The stimulated contribution can exceed the
+        spontaneous one if the environmental mode is
+        resonant with the vortex's own phase structure.
+      resonance_condition: >
+        Environmental dynamics refresh the vortex most
+        efficiently when resonant with the vortex's
+        own phase rotation rate:
+        ω_env ≈ n · ω_vortex   (n = 1, 2, 3... integer)
+        The same integer phase closure condition
+        (Δθ = 2πn) from the formation mechanism —
+        now applied to the environmental coupling.
+        Off-resonance environmental motion contributes
+        as background noise (contributes to thermal Tik).
+        On-resonance: coherent refreshing — the environment
+        is actively sustaining the vortex, not just
+        providing random counter-torque.
+      pool_refreshing: >
+        Environmental dynamics do not just stabilise
+        existing vortices — they can nucleate new pairs
+        by providing the initial phase-coherent perturbation
+        that Tik alone might not supply with sufficient
+        coherence. Bulk substrate flows, gravitational
+        waves (large-scale η commitment density waves),
+        thermal gradients driving convective η motion —
+        all provide structured phase perturbations that
+        seed new vortex pair nucleation.
+        The vortex pool (total number of stable pairs
+        in a region) is maintained by the balance of:
+          Nucleation rate (Tik + environmental dynamics)
+          Decay rate (diffusive unwinding + S_lock disruption)
+        Higher environmental dynamics → higher nucleation
+        rate → larger equilibrium pool.
+      structural_motion_examples:
+        molecular_vibration: >
+          In condensed matter: molecular vibrations (phonons)
+          provide structured oscillatory substrate motion.
+          Phonon modes resonant with electron vortex
+          frequency enhance electron stability and reduce
+          resistivity (superconductivity as extreme case —
+          Cooper pair formation stabilised by phonon modes
+          at exactly the resonance condition).
+          Phonon-mediated electron coupling in BCS
+          superconductivity is the textbook case of
+          environmental dynamics (phonons) stabilising
+          vortex pairs (Cooper pairs) via resonance.
+        gravitational_waves: >
+          Passing gravitational waves are large-scale
+          η commitment density oscillations — periodic
+          modulation of the substrate's free potential.
+          They provide a coherent environmental dynamic
+          at the GW frequency. For vortices whose natural
+          frequency is commensurate with GW frequency,
+          there is resonant refreshing. For others,
+          the GW is off-resonance and contributes only
+          to the background Tik effective amplitude.
+          This predicts a small GW-induced change in
+          decay rates of unstable particles during GW
+          passage — below current detection threshold
+          but in principle measurable.
+        turbulent_cascade: >
+          In the early universe (high commitment density
+          fluctuations, strong η gradients): turbulent
+          vortex cascades from large-scale structure
+          formation provide enormous environmental
+          dynamics — much larger than the Tik floor.
+          The vortex pair nucleation rate in the early
+          universe was dominated by environmental dynamics,
+          not Tik. This may be relevant to the matter/
+          antimatter asymmetry: if turbulent cascade
+          dynamics preferentially seed one chirality
+          in the presence of large-scale η gradients
+          (early universe commitment density waves),
+          a net chirality preference emerges without
+          requiring a separate CP-violation mechanism.
+          Open derivation: asymmetry from η gradient
+          chirality preference in turbulent nucleation.
+        biological_environment: >
+          The cellular environment is not quiet:
+          thermal fluctuations, mechanical stress from
+          neighbouring cells, acoustic modes in the
+          cytoplasm, electromagnetic fields from membrane
+          potentials — all provide environmental dynamics
+          that contribute to vortex stability and pool
+          refreshing. Enzyme active sites are structured
+          to maintain resonance between the active site's
+          vibrational modes and the tunnelling vortex
+          pair frequency — this is the physical basis
+          of enzyme catalytic specificity beyond simple
+          geometric lock-and-key. See quantum-cognition.yaml
+          and cellular.yaml for biological implications.
+
+# ─────────────────────────────────────────────
+# KEY EQUATIONS
+# ─────────────────────────────────────────────
+key_equations:
+  phase_lock_condition:
+    formula: "Δθ = 2π·n  (n ∈ ℤ)"
+    description: >
+      Stable vortex closure requires integer multiple of
+      2π phase winding. Non-integer: destructive self-
+      interference → unstable → decays to nearest integer.
+      This is quantisation of circulation — derived from
+      the topology of the η field phase, not postulated.
+    reference: "Standard vortex quantisation in superfluids (GP equation)"
+    praestology_connection: >
+      The same condition as angular momentum quantisation
+      L = nħ in atomic physics — both are integer phase
+      closure requirements for the η field. Atomic
+      quantisation and vortex quantisation are the same
+      condition at different scales.
+
+  binding_energy:
+    formula: "E_bind ≈ Γ²/(8π·ρ_s) × log(Λ/ξ)"
+    description: >
+      Logarithmic stability margin for a vortex-antivortex
+      pair separated by distance Λ in a substrate of
+      density ρ_s, with circulation quantum Γ and grain
+      size ξ.
+    parameters:
+      Gamma: >
+        Γ = 2πħ/m_eff — minimum circulation quantum.
+        The smallest coherent winding action. Encodes ħ
+        directly — the binding energy scales as ħ².
+      rho_s: >
+        ρ_s = local substrate density = 1 - η in
+        normalised units. Higher commitment density
+        (lower η) → lower ρ_s for free potential →
+        lower binding energy → less stable pair.
+        Explains why pair production requires high
+        local energy density: sufficient free ρ_s
+        needed for E_bind > 0.
+      Lambda: >
+        Λ = infrared cutoff = orbital scale or
+        separation between pairs in a dense system.
+        In atoms: Λ ≈ a₀ (Bohr radius).
+        In free space: Λ ≈ Compton wavelength.
+      xi: >
+        ξ = substrate grain size (healing length).
+        The ultraviolet cutoff — the vortex core
+        cannot be smaller than ξ.
+    log_factor_connection: >
+      The logarithm log(Λ/ξ) appears here and in the
+      Lamb shift derivation (alpha-rydberg-z0.yaml):
+      ΔE_L ∝ α⁵·m_eff·c²·(ξ/a₀)²·log(a₀/ξ)
+      This is not coincidental — both are measuring
+      the same substrate scale hierarchy: the ratio
+      of the physical operating scale (orbital size,
+      pair separation) to the substrate grain. The
+      Lamb shift and the vortex binding energy are
+      sampling the same log(Λ/ξ) factor from different
+      experimental contexts. This is an internal
+      cross-domain confirmation: if the log factor
+      is correctly identified in one context, it
+      must appear consistently in the other.
+    reference: >
+      Kelvin circulation theorem + superfluid vortex
+      pair energy (Kosterlitz-Thouless form).
+      Kosterlitz-Thouless transition (2016 Nobel):
+      the phase transition driven by vortex pair
+      binding/unbinding in 2D superfluids. The same
+      logarithmic binding energy determines whether
+      pairs remain bound (ordered phase) or unbind
+      (disordered phase). The KT transition is the
+      macroscopic expression of the vortex pair
+      stability condition — confirming the binding
+      energy formula at the collective level.
+
+  decay_time:
+    formula: "τ_decay ∝ 1/(D·∇²ω)"
+    description: >
+      Diffusion-driven unwinding rate. D is the substrate
+      diffusion coefficient (related to R_eff at vortex
+      scale); ∇²ω is the vorticity curvature (winding
+      tightness). Tighter winding → faster diffusive
+      unwinding without counter-torque.
+    stabilisation_condition: >
+      Stability requires: counter-torque rate > τ_decay⁻¹
+      Counter-torque rate = Tik floor rate + thermal Tik
+      rate + environmental dynamics resonant contribution.
+      When the total counter-torque rate exceeds the
+      diffusive unwinding rate, the vortex pair is stable
+      at dynamic equilibrium.
+    reference: >
+      Vortex filament dynamics (Biot-Savart law).
+      Hess-Fairbank effect in superfluids — persistent
+      currents maintained indefinitely by the same
+      dynamic equilibrium: counter-torque (quantum
+      pressure) balancing diffusive dissipation.
+
+  resonance_condition:
+    formula: "ω_env = n·ω_vortex  (n ∈ ℤ⁺)"
+    description: >
+      Environmental dynamics refresh the vortex most
+      efficiently when resonant with the vortex's own
+      phase rotation rate. Off-resonance: noise contribution
+      only. On-resonance: coherent refreshing.
+    stability_enhancement: >
+      At resonance, the effective counter-torque rate
+      is enhanced by the coherent environmental contribution:
+      τ_decay_eff = τ_decay × (1 + α_env·Q_res)
+      where α_env is the environmental coupling strength
+      and Q_res is the resonance quality factor.
+      High Q_res (sharp resonance) + strong α_env:
+      dramatic stability enhancement. This is the
+      Cooper pair case in superconductors — phonon
+      resonance with electron pairs produces essentially
+      infinite τ_decay_eff (zero resistance).
+    implication: >
+      Superconductivity is the extreme case of environmental
+      resonance stabilisation — phonon modes resonantly
+      matched to Cooper pair vortex frequency produce
+      complete counter-torque compensation of diffusive
+      unwinding. The BCS transition temperature T_c
+      is the temperature at which thermal Tik begins
+      to disrupt the phonon resonance — above T_c,
+      thermal noise pushes the system off resonance.
+
+# ─────────────────────────────────────────────
+# DYNAMIC EQUILIBRIUM — THE UNIFIED PICTURE
+# ─────────────────────────────────────────────
+dynamic_equilibrium:
+  statement: >
+    A vortex pair is not a static topological object.
+    It is a pattern sustained by the ongoing balance
+    between diffusive unwinding and counter-torque from
+    three sources. The particle is the equilibrium;
+    the substrate dynamics are the condition for the
+    equilibrium's existence.
+  why_particles_can_decay: >
+    If stabilisation requires ongoing dynamics, why
+    don't all particles decay immediately when the
+    dynamics fluctuate? Because topological protection
+    (S_lock barrier) provides a discrete energy threshold
+    — the vortex cannot unwind continuously. It can only
+    unwind in discrete topological steps, each requiring
+    a fluctuation large enough to cross S_lock. For
+    stable particles (electron, proton), S_lock is large
+    relative to the Tik amplitude — spontaneous decay
+    is exponentially suppressed. For unstable particles
+    (muon, pion, W/Z), S_lock is smaller — the Tik
+    background has significant probability of crossing
+    it within the particle's lifetime.
+  why_particles_can_tunnel: >
+    Tunnelling is the Tik background temporarily providing
+    sufficient amplitude to cross the topological barrier
+    — the same mechanism as decay, but through a barrier
+    rather than over it. The dynamic nature of the vortex
+    (sustained by ongoing Tik) is what makes tunnelling
+    possible: a truly static vortex with no substrate
+    dynamics would be permanently topologically protected.
+    The Tik background that stabilises the vortex also
+    enables its tunnelling — the same fluctuation source
+    does both, at different probability amplitudes.
+  why_particles_can_entangle: >
+    Phase-locking between two vortex pairs — entanglement
+    — is stabilised by the same dynamic equilibrium.
+    Once two vortex pairs are phase-locked (ρ > 0 in
+    the η field), the environmental dynamics that refresh
+    one pair's phase coherence also refresh the coupled
+    pair's phase coherence — they share the stabilisation.
+    Entanglement persists because the coupled dynamic
+    equilibrium is more stable than two independent
+    equilibria: the pairs mutually provide counter-torque
+    for each other in addition to receiving Tik and
+    environmental contributions.
+  stability_hierarchy: >
+    From most to least stable — determined by S_lock
+    relative to Tik amplitude and topological barrier height:
+    Proton:     S_lock >> Tik → lifetime > 10³⁴ years
+    Electron:   S_lock >> Tik (different topology) → stable
+    Neutron:    S_lock marginally above Tik → 877s free lifetime
+    Muon:       S_lock < Tik → 2.2 μs lifetime
+    Pion:       S_lock << Tik → 26 ns lifetime
+    W/Z bosons: Transient backreaction pulses → < 10⁻²⁵ s
+    The hierarchy is not arbitrary — it reflects the
+    topological complexity of each particle's winding
+    relative to the substrate's Tik amplitude. Open
+    derivation: formal calculation of S_lock for each
+    topology from the vortex stability equations.
+
+# ─────────────────────────────────────────────
+# COSMOLOGICAL POOL POPULATION
+# No matter/antimatter problem — pool dynamics
+# directly produce the observed particle ratios.
+# ─────────────────────────────────────────────
+cosmological_pool_population:
+  statement: >
+    The standard model's matter/antimatter asymmetry
+    problem is dissolved — it was the wrong question,
+    generated by assuming symmetric pair production
+    followed by near-total annihilation leaving a
+    small residual. Praestology requires none of this.
+    The correct question is: in the high-Φ cosmogenesis
+    state (Cs1 — maximum free potential), which vortex
+    configurations are stable enough to persist in the
+    Tik background at that η level and commit to R4?
+    The answer is determined entirely by stability
+    conditions. No symmetric production. No annihilation
+    residual. No CP violation required as a separate mechanism.
+  pool_population_process:
+    step_1_cosmogenesis: >
+      Cs1: maximum Φ, minimum commitment, high and
+      approximately isotropic Tik amplitude. The pool
+      is empty — no committed vortex topology yet.
+      R4 accumulation begins.
+    step_2_dipole_formation: >
+      The first stable configurations to populate the
+      pool are dipole pairs (photon-like): symmetric
+      +n/-n winding, S_net ≈ 0, lowest formation
+      threshold, most energetically accessible from
+      a Tik fluctuation pair. These form readily and
+      abundantly — most Tik event pairs that achieve
+      phase-lock produce dipole configurations.
+    step_3_mobius_formation: >
+      Möbius windings (electron-like) have a higher
+      formation threshold — the 720° asymmetric twist
+      requires a larger Tik amplitude or specific
+      gradient alignment to initiate. They form less
+      frequently than dipole pairs. But once formed,
+      they are more topologically protected — the
+      non-orientable Möbius surface is harder to unwind
+      than a simple dipole. They accumulate in the pool
+      at a lower rate but with greater permanence.
+    step_4_pool_equilibrium: >
+      The pool reaches a dynamic equilibrium where:
+        Nucleation rate (Tik + environmental dynamics)
+        = Decay rate (diffusive unwinding + S_lock disruption)
+      The equilibrium composition reflects the formation
+      probability ratio: many more dipole-type (photon-like)
+      than Möbius-type (electron-like) configurations.
+      The photon-to-baryon ratio (~10¹⁰) is the natural
+      output of this pool equilibrium — not a mystery
+      requiring CP violation but the ratio of dipole
+      formation probability to Möbius formation probability
+      at the cosmogenesis η level.
+  photon_to_baryon_ratio: >
+    η_γ/η_B ≈ 10¹⁰ (one baryon per 10¹⁰ photons) encodes:
+      Numerator:   dipole pair formation probability per Tik event
+      Denominator: Möbius winding formation probability per Tik event
+    The ratio is large because:
+    (1) Dipole formation requires two nearby opposite
+        Tik events phase-locking — achievable with modest
+        amplitude fluctuations.
+    (2) Möbius formation requires the additional 720°
+        twist initiation — needs either a larger amplitude
+        event or a specific gradient alignment in the
+        environmental dynamics.
+    (3) Once formed, Möbius windings are more stable —
+        they accumulate without the rapid turnover
+        of dipole pairs. But their formation rate is
+        far lower, so the equilibrium pool is dominated
+        by dipole-type configurations.
+    Open derivation: compute the ratio from the
+    formation probability equations for dipole vs
+    Möbius topology in the cosmogenesis η environment.
+    Expected to yield ~10¹⁰ from the formation threshold
+    difference without additional parameters.
+  chirality_selection: >
+    The predominance of one chirality (matter over
+    antimatter in standard model terms) is not from
+    CP violation acting on symmetric production — it
+    is from the environmental dynamics of cosmogenesis
+    providing a preferred gradient direction. The first
+    Möbius windings to form in the dominant gradient
+    direction establish the chirality of the pool.
+    Subsequent Möbius formations are more likely to
+    match the dominant chirality (resonance condition
+    ω_env = n·ω_vortex favours the already-established
+    chirality). The asymmetry is self-reinforcing from
+    the first Möbius formation, not a residual from
+    cancellation. No separate CP violation mechanism;
+    no symmetric production; no fine-tuning of a
+    small asymmetry parameter.
+  standard_model_dissolution: >
+    The matter/antimatter problem was generated by:
+    (1) Assuming particle production is always symmetric
+        (pair production as the only mechanism).
+    (2) Therefore requiring CP violation to break the
+        symmetry after the fact.
+    (3) Finding that available CP violation is insufficient
+        by orders of magnitude.
+    Praestology dissolves all three steps: production
+    is not symmetric (pool dynamics select for stability,
+    not for symmetric pairs); no CP violation is needed
+    as a separate mechanism; the photon-to-baryon ratio
+    is the natural pool equilibrium composition.
+    The standard model's baryogenesis problem is an
+    artefact of the wrong production model.
+
+
+# ─────────────────────────────────────────────
+# CHIRALITY ASYMMETRY AND INTERNAL ORIENTATION
+# The pool is not purely dominant-chirality.
+# Composite particles require internal anti-
+# orientation vortices for stable configurations.
+# ─────────────────────────────────────────────
+chirality_asymmetry:
+  statement: >
+    The vortex pool is not purely dominant-chirality.
+    Composite particles (protons, neutrons, nuclei)
+    necessarily incorporate minority-orientation vortices
+    as structural components — the internal anti-orientation
+    windings that provide strain cancellation making the
+    composite stable. Our world already contains
+    anti-vortices; they are bound within the dominant
+    structures, not present as free antiparticles.
+    Viability asymmetry between matter and antimatter
+    arises not from internal structure (which is
+    mirror-symmetric) but from interaction with the
+    ambient substrate — which carries the accumulated
+    chirality history of the dominant pool.
+
+  internal_orientation_in_composites:
+    statement: >
+      Within composite vortex topologies (baryons, mesons,
+      nuclei), the constituent windings have specific
+      relative orientations that together produce the
+      stable net configuration. These relative orientations
+      necessarily include both aligned and anti-aligned
+      windings with respect to the dominant chirality.
+      The anti-aligned components are not antiparticles —
+      they are structural anti-orientation vortices whose
+      presence is required for the composite's stability.
+    proton_structure: >
+      Proton (uud): two up-winding and one down-winding
+      quark topology. The up and down quarks differ in
+      their winding orientation within the higher-winding
+      knot structure — not in global chirality but in
+      the relative phase of their winding within the
+      composite. The down quark provides a strain
+      cancellation role: its orientation partially
+      counters the strain from the two up windings,
+      producing a near-optimal three-body stable
+      configuration. The proton's extraordinary stability
+      (lifetime > 10³⁴ years) reflects this near-optimal
+      internal strain balance. The down quark is an
+      internal anti-orientation vortex — structurally
+      necessary, not incidental.
+    neutron_structure: >
+      Neutron (udd): one up-winding and two down-winding
+      quarks. The reversed ratio (two down, one up)
+      produces a slightly less optimal internal strain
+      balance than the proton. Free neutron lifetime
+      877.75s reflects this marginal imbalance —
+      the configuration is stable when bound in a nucleus
+      (nuclear environment provides external environmental
+      dynamics that compensate the internal imbalance)
+      but decays when isolated (S_lock marginally above
+      Tik amplitude without the nuclear stabilisation).
+      The bottle-vs-beam discrepancy (beta-decay.yaml)
+      may encode the sensitivity of this marginal
+      stability to environmental dynamics — the vessel
+      material's R_eff modifies the local stabilisation
+      environment, slightly changing the effective S_lock.
+    mesons: >
+      Mesons (quark-antiquark pairs) are the clearest
+      case of bound dominant-chirality + anti-orientation
+      vortex configurations. A pion (uū or dd̄) contains
+      one dominant-chirality winding and one explicit
+      anti-orientation winding in direct phase-lock.
+      The meson is a bound vortex pair — the same
+      structure as the photon (dipole pair) but at the
+      quark winding scale rather than the photon's
+      dipole scale. Mesons are unstable because the
+      anti-orientation component is not deeply buried
+      within a larger composite — it is directly coupled
+      to the dominant winding and can recombine.
+      Meson lifetime encodes the binding energy between
+      the dominant and anti-orientation windings at the
+      quark scale — the same E_bind ∝ log(Λ/ξ) formula
+      at a different Λ (quark confinement scale vs
+      atomic orbital scale).
+    implication_for_pool: >
+      The pool therefore contains:
+        Free dominant-chirality Möbius windings: electrons
+        Free anti-orientation Möbius windings: positrons
+          (rare — less supported by environmental dynamics)
+        Dipole pairs: photons (abundant — lowest threshold)
+        Composite configurations with internal anti-
+          orientation components: protons, neutrons, nuclei
+          (the anti-orientation vortices are bound, not free)
+      "Antimatter" in the standard sense (free antiparticles)
+      is rare because the anti-orientation windings are
+      predominantly incorporated into stable composite
+      structures rather than existing freely. The positron
+      is the free version of what in most matter is a
+      bound internal component. This is why free
+      antiparticles are rare — not because they were
+      produced and annihilated, but because the pool
+      dynamics incorporate anti-orientation windings
+      into bound composites preferentially over leaving
+      them free.
+
+  viability_asymmetry:
+    statement: >
+      Dominant-chirality particles and opposite-chirality
+      particles (antiparticles in standard sense) have
+      identical internal structure — the topology is
+      mirror-symmetric. The viability difference arises
+      from their interaction with the ambient substrate,
+      which carries the accumulated commitment of
+      13.8 billion cycles of dominant-chirality pool
+      dynamics. The substrate is not chirality-neutral;
+      it has a history (R4).
+    dominant_chirality_advantage:
+      environmental_resonance: >
+        The dominant-chirality vortex propagates through
+        a substrate shaped by previous dominant-chirality
+        topology. The environmental dynamics (turbulent
+        flows, acoustic modes, nearby structural motion)
+        are predominantly resonant with the dominant
+        chirality — ω_env ≈ n·ω_vortex is more easily
+        satisfied for dominant-chirality particles.
+        Slightly better stability, slightly longer
+        effective lifetime in marginally stable configurations.
+      formation_threshold: >
+        In the current substrate state, forming a new
+        dominant-chirality Möbius winding has a slightly
+        lower threshold than forming an anti-orientation
+        winding — the existing pool provides resonant
+        scaffolding that marginally assists dominant-
+        chirality nucleation. This asymmetry is tiny
+        but nonzero at the current cosmic η level.
+      alpha_local_difference: >
+        The GP field closure imperfection (α) is slightly
+        different for dominant vs minority chirality
+        vortices in the current substrate — the closure
+        imperfection accumulates faster for a winding
+        propagating against the grain of the established
+        commitment structure. Dominant chirality: α_eff
+        slightly smaller (more coherent closure).
+        Minority chirality: α_eff slightly larger
+        (less coherent closure in the ambient field).
+        Effect magnitude: tiny — far below current
+        measurement precision for stable particles.
+        Potentially detectable in marginally stable
+        systems (kaons, muons) at next-generation precision.
+    cpt_relationship: >
+      CPT as a mathematical theorem about the laws of
+      physics (R1-R5) remains valid — the rules are
+      chirality-neutral. What changes is the claim
+      that the vacuum state is chirality-neutral.
+      The vacuum in Praestology is the current η field
+      state — the GP field at cosmic average commitment
+      density — which carries accumulated dominant-
+      chirality commitment from R4 history.
+      CPT symmetry holds for the laws; it does not
+      hold for the vacuum state. Observed CPT violations
+      (if confirmed beyond current limits) would be
+      vacuum-state effects, not law violations.
+      This is a precise, falsifiable distinction:
+      CPT violation should scale with the local
+      dominant-chirality commitment density — larger
+      in denser regions (more accumulated history),
+      smaller in voids (less accumulated history).
+
+  vortex_orientation_table:
+    description: >
+      Vortex orientations in the pool — dominant (D),
+      anti-orientation (A), and composite (D+A).
+    configurations:
+      - name:        "Photon"
+        structure:   "D+A dipole pair (S_net=0)"
+        chirality:   "Neutral — equal D and A winding"
+        status:      "Free — abundant in pool"
+        stability:   "Stable until interaction forces recombination"
+
+      - name:        "Electron"
+        structure:   "D Möbius 720° (S_net>0)"
+        chirality:   "Dominant — aligned with pool history"
+        status:      "Free — stable"
+        stability:   "Extremely high — large S_lock, resonant environment"
+
+      - name:        "Positron"
+        structure:   "A Möbius 720° (S_net>0, opposite chirality)"
+        chirality:   "Minority — against pool history"
+        status:      "Free — stable in isolation, rare"
+        stability:   "Same as electron internally; slightly less
+                      environmental resonance support"
+
+      - name:        "Proton"
+        structure:   "D+D+A (uud — two dominant, one anti-orientation)"
+        chirality:   "Net dominant — majority D winding"
+        status:      "Free — extremely stable composite"
+        stability:   "Near-optimal internal strain cancellation
+                      from D+D+A combination"
+
+      - name:        "Neutron"
+        structure:   "D+A+A (udd — one dominant, two anti-orientation)"
+        chirality:   "Net anti-orientation majority"
+        status:      "Free — marginally stable; stable when bound"
+        stability:   "Marginal free stability from D+A+A imbalance;
+                      nuclear binding provides external stabilisation"
+
+      - name:        "Antiproton"
+        structure:   "A+A+D (ūūd̄ — mirror of proton)"
+        chirality:   "Net anti-orientation — minority in pool"
+        status:      "Free — stable in isolation"
+        stability:   "Same internal stability as proton; slightly
+                      less environmental resonance from minority
+                      chirality in current substrate"
+
+      - name:        "Pion (π⁺)"
+        structure:   "D+A (ud̄ — one dominant, one anti-orientation)"
+        chirality:   "Neutral net — bound D+A pair at quark scale"
+        status:      "Free — unstable (26 ns)"
+        stability:   "Low — bound anti-orientation directly
+                      coupled to dominant; easy recombination"
+
+      - name:        "Nucleus (e.g. He-4)"
+        structure:   "2p + 2n = 6D + 6A internally (net 2D excess)"
+        chirality:   "Net dominant — from proton excess"
+        status:      "Bound — stable"
+        stability:   "Enhanced by nuclear binding (mutual environmental
+                      dynamics between nucleons refreshing each other's
+                      vortex pools)"
+
+  testable_predictions:
+    positronium_asymmetry: >
+      Positronium (e⁺e⁻ bound state) is a pure D+A
+      pair at the lepton scale — the direct analogue
+      of the meson at the quark scale.
+      Para-positronium (antiparallel spins, 125.142 ps):
+      the D and A windings are in the strain-cancelling
+      orientation — photon-like. Ortho-positronium
+      (parallel spins, 142 ns): the D and A windings
+      are in the partially misaligned orientation.
+      Prediction: formation of para-Ps vs ortho-Ps
+      is not exactly equal probability — the dominant-
+      chirality environment very slightly favours the
+      orientation where the D winding is the active
+      partner. A tiny asymmetry in para-Ps vs ortho-Ps
+      formation ratio between e⁺e⁻ → Ps and ē⁺ē⁻ → P̄s
+      (if such could be prepared) would directly test
+      this. Currently below measurement precision;
+      would require next-generation positronium
+      spectroscopy.
+    kaon_lifetime_environment: >
+      K⁰-K̄⁰ lifetime asymmetry (already measured —
+      CP violation in the kaon system) should show
+      environment dependence: slightly larger asymmetry
+      in denser environments (more accumulated chirality
+      history in substrate), slightly smaller in voids.
+      Standard model: CP violation is fixed by CKM
+      matrix — no environmental dependence.
+      Praestology: the asymmetry is substrate-state
+      dependent — should correlate with local η level.
+      Test: kaon system measurements at different
+      gravitational potentials or in different
+      cosmic environments.
+    neutron_bottle_beam: >
+      The existing bottle-vs-beam neutron lifetime
+      discrepancy (~9s between methods) may encode
+      the sensitivity of the marginally stable D+A+A
+      (udd) configuration to environmental dynamics.
+      Praestology prediction: the discrepancy should
+      correlate with vessel material R_eff — already
+      stated in beta-decay.yaml. Now with the
+      orientation picture: the vessel material's
+      committed vortex topology (its own D/A composition)
+      modifies the local environmental dynamics for
+      the neutron's D+A+A configuration. Materials
+      with higher anti-orientation content in their
+      committed topology should show shorter neutron
+      lifetimes in bottle measurements.
+    free_antiproton_stability: >
+      Antiproton lifetime in different environments —
+      does it match proton lifetime exactly or show
+      a tiny systematic difference correlated with
+      local substrate commitment density? Current
+      antiproton lifetime measurements are limited
+      by annihilation with ambient matter rather than
+      intrinsic decay. In a sufficiently isolated
+      environment (deep space, far from matter), the
+      antiproton's slightly reduced environmental
+      resonance support might manifest as a marginally
+      shorter effective coherence time — not annihilation
+      but slightly faster phase decoherence. Below
+      current measurement sensitivity but predicted
+      to be nonzero.
+    nuclear_binding_chirality: >
+      Nuclear binding energy should show a tiny
+      asymmetry between nuclei and antinuclei of
+      the same composition — antinuclei (confirmed
+      in heavy-ion collisions: anti-helium-4 detected
+      by ALICE 2011) should have marginally lower
+      binding energy than their matter counterparts
+      due to reduced environmental resonance support
+      for the anti-orientation majority winding
+      composition. The difference is expected at
+      the 10⁻¹⁰ level — far below current precision
+      but establishes the prediction.
+
+  open_derivations:
+    - >
+      Formal calculation of D/A composition for each
+      stable baryon and nucleus — derive the internal
+      orientation table from the vortex stability
+      equations. Verify that near-optimal D+D+A (uud)
+      gives maximum lifetime at the proton configuration.
+    - >
+      Environmental resonance asymmetry magnitude —
+      compute the difference in effective α_local between
+      dominant and minority chirality particles in the
+      current cosmic substrate state. Expected to be
+      at the (η_B/η_γ) ~ 10⁻¹⁰ level.
+    - >
+      Neutron D+A+A stability from nuclear environment
+      contribution — formal calculation of how the
+      nuclear potential (neighbouring proton vortex
+      field) provides the external environmental dynamics
+      that stabilise the neutron's marginal D+A+A balance.
+      Should reproduce the ~2.6 MeV binding energy
+      per nucleon contribution from this mechanism.
+
+# ─────────────────────────────────────────────
+# MODERN ANALOGUES AND CONFIRMATION
+# ─────────────────────────────────────────────
+modern_analogues:
+  bec_superfluids: >
+    Spontaneous vortex-antivortex pair nucleation from
+    fluctuations in BECs and superfluid helium-4 is the
+    direct physical analogue. Kosterlitz-Thouless
+    transition (KT) — vortex pair binding/unbinding
+    as the order parameter — uses the same logarithmic
+    binding energy E_bind ∝ log(Λ/ξ). KT transition
+    confirmed in 2D BECs (Hadzibabic et al. 2006),
+    superfluid helium films, and Josephson junction
+    arrays. The KT transition is the collective
+    manifestation of the vortex pair stability condition
+    confirmed at the macroscopic level.
+  nonlinear_optics: >
+    Optical vortex dipoles in nonlinear media — soliton/
+    vortex dipole formation from small perturbations.
+    Optical vortices obey the same formation conditions
+    (opposite topological charge, phase-lock proximity)
+    and the same U-shaped lifetime vs amplitude curve
+    has been observed in nonlinear optical systems.
+    Confirms the formation mechanism at the photonic scale.
+  superconductivity: >
+    BCS Cooper pairs stabilised by phonon resonance
+    (environmental dynamics at exact resonance condition)
+    — the extreme case of environmental stabilisation.
+    The BCS gap energy 2Δ is the binding energy E_bind
+    for the resonantly-stabilised Cooper pair. T_c is
+    the temperature at which thermal Tik disrupts
+    the phonon resonance. Josephson effect: Cooper
+    pair tunnelling through an insulating barrier —
+    same Tik-fluctuation tunnelling mechanism from
+    foundations.yaml pillar 6, at the vortex pair level.
+  confirming_note: >
+    Abrikosov vortex lattice in Type II superconductors —
+    stable array of quantised magnetic vortices in a
+    superconducting matrix. The lattice is the ground
+    state of the GP equation for the superconducting
+    order parameter (η field) in an external magnetic
+    field. Each vortex carries one flux quantum Φ₀ = h/2e
+    — the minimum circulation Γ = 2πħ/m_Cooper.
+    The Abrikosov lattice is the direct observation of
+    quantised vortices in a macroscopic GP field.
+    Praestology: what we see in the superconductor is
+    the same structure as particle formation — quantised
+    η field vortices stabilised by the dynamic equilibrium
+    of Tik counter-torque and topological protection —
+    at a scale where we can observe it directly.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+open_derivations:
+  priority_1:
+    - >
+      S_lock for each stable particle topology (electron,
+      proton, neutron) from the vortex stability equations.
+      Predict particle lifetimes from S_lock/Tik ratio.
+      Verify neutron free lifetime (877.75s) from S_lock
+      at the d-quark winding — already flagged in
+      beta-decay.yaml as the bottle-vs-beam test.
+    - >
+      Coherence length ξ_coh from Tik background spectrum.
+      Verify ξ_coh > ξ as the pair formation condition.
+      Predict pair production threshold energy from ξ_coh
+      at the relevant commitment density.
+
+  priority_2:
+    - >
+      U-shaped lifetime curve: compute T_optimal from
+      S_lock and diffusion coefficient D. Predict the
+      peak lifetime temperature for BEC analog systems.
+      Compare to existing BEC vortex lifetime data.
+    - >
+      Environmental resonance enhancement factor:
+      α_env·Q_res for phonon-electron coupling in
+      superconductors. Verify BCS gap Δ from the
+      resonantly-enhanced binding energy formula.
+    - >
+      Photon-to-baryon ratio (~10¹⁰) from dipole vs
+      Möbius formation probability ratio at cosmogenesis
+      η level. No CP violation required — derive from
+      formation threshold difference between symmetric
+      dipole pair and asymmetric 720° Möbius winding.
+
+  priority_3:
+    - >
+      GW-induced decay rate modification: compute
+      the change in unstable particle decay rates
+      during a gravitational wave passage.
+      Predict magnitude — likely below current detector
+      sensitivity but establishes the effect.
+    - >
+      Biological enzyme resonance condition: identify
+      which vibrational modes of specific enzyme active
+      sites satisfy ω_env = n·ω_vortex for the
+      tunnelling vortex pair. Predict enhanced tunnelling
+      rates for resonant enzymes vs off-resonant controls.
+
+reading_order:
+  - "domains/physics/specifications.yaml              -- vortex topology foundation"
+  - "domains/physics/bridge-function.yaml             -- η field and cycle count"
+  - "domains/physics/vortex-stabilization.yaml        -- this file"
+  - "domains/physics/electron2photon.yaml             -- Möbius and dipole pair specifics"
+  - "domains/physics/commitment-response-function.yaml -- GP nonlinearity and saturation"
+  - "domains/physics/alpha-rydberg-z0.yaml            -- constants from stability structure"
+  - "domains/biology/cellular.yaml                    -- biological environmental dynamics"
+  - "domains/biology/quantum-cognition.yaml           -- enzyme tunnelling resonance"
+
+related_issues:
+  - "foundational/F46_vortex_as_dynamic_equilibrium_not_static_object"
+  - "foundational/F47_three_stabilisation_contributions"
+  - "foundational/F48_clifford_kelvin_lineage_completion"
+  - "intersectional/physics/062_s_lock_particle_lifetime_hierarchy"
+  - "intersectional/physics/063_log_factor_lamb_shift_binding_energy_same"
+  - "intersectional/physics/064_u_shaped_lifetime_bec_test"
+  - "intersectional/physics/065_kt_transition_as_collective_stability"
+  - "intersectional/physics/066_cooper_pairs_environmental_resonance"
+  - "intersectional/physics/067_gw_induced_decay_rate_modification"
+  - "intersectional/physics/068_baryon_asymmetry_turbulent_gp_nucleation"
+  - "intersectional/physics_biology/006_enzyme_resonance_condition"
+  - "intersectional/physics_biology/007_biological_environment_vortex_pool"
+  - "intersectional/physics_cosmos/013_cosmological_pool_population_cs1"
+  - "intersectional/physics_cosmos/014_photon_baryon_ratio_from_formation_threshold"
+  - "intersectional/physics_cosmos/015_chirality_selection_from_gradient_dynamics"
+  - "foundational/F49_matter_antimatter_problem_dissolved_wrong_question"
+  - "foundational/F50_anti_orientation_vortices_bound_in_composites"
+  - "foundational/F51_pool_contains_mixed_chirality_composites"
+  - "intersectional/physics/069_proton_stability_optimal_dda_strain_balance"
+  - "intersectional/physics/070_neutron_marginal_daa_nuclear_stabilisation"
+  - "intersectional/physics/071_meson_as_bound_da_pair_quark_scale"
+  - "intersectional/physics/072_positronium_da_pair_lepton_scale"
+  - "intersectional/physics/073_cpt_vacuum_state_not_law_violation"
+  - "intersectional/physics/074_kaon_asymmetry_environment_dependence"
+  - "intersectional/physics/075_antinuclei_binding_energy_asymmetry"""
