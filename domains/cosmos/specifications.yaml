@@ -1,5 +1,712 @@
 # domains/cosmos/specifications.yaml
 name: "Cosmos Domain"
+version: "1.1 — Dark Matter Decomposition"
+core_version: "1.5"
+status: "Domain Defined — Subdomains in derivation"
+description: >
+  Cosmos is the domain where Praestology's physics and chemistry
+  operate at astronomical scale and across deep time. It describes
+  how the substrate's fundamental dynamics — vortex topology,
+  resolution flux, resistance gradients — organise into stars,
+  galaxies, large-scale structure, and planetary systems when
+  iterated across 13.8 billion years of accumulated hysteresis.
+  Cosmos is not a separate set of rules. It is R1-R5 at the
+  largest observable scales — the same generating equation,
+  a new depth of complexity. The Mandelbrot pattern appears
+  here as cosmic web filaments, galaxy morphology, and stellar
+  lifecycle — all expressions of the metastable zone at
+  progressively larger scales.
+  Central insight: Habitable conditions are not fine-tuned by
+  design or anthropic coincidence. They are R5 selection operating
+  at planetary scale — the metastable zone expressed in
+  astronomical parameters. The Goldilocks problem dissolves.
+
+inheritance:
+  from_physics:
+    - "Substrate dynamics — R gradient curvature as gravity"
+    - "Dark matter — three-component substrate decomposition (wakes/phonons,
+       solo-vortices, BH strain fields) — no single particle species"
+    - "Density-transition redshift — large-scale structure tool"
+    - "Topological validation — open non-compact manifold"
+    - "Tik background — stochastic substrate energy floor"
+    - "Phasic resolution — local energy release mechanism"
+    - "Parameter economy — Φ_max, R, S as cosmological variables"
+  from_chemistry:
+    - "Element abundance from nucleosynthesis"
+    - "Molecular complexity as planetary chemistry prerequisite"
+    - "Abiogenesis threshold — self-sustaining resolution loops"
+  provides_to_chemistry:
+    - "Stellar nucleosynthesis — production of elements above hydrogen"
+    - "Energy gradients — stellar radiation driving planetary chemistry"
+    - "Timescales — multiple stellar generations required for
+       sufficient heavy element abundance for complex chemistry"
+  provides_to_consciousness:
+    - "Minimum cosmic age derivation for consciousness-capable planets"
+    - "Planetary metastable zone as prerequisite for biological agency"
+
+# ─────────────────────────────────────────────
+# FOUNDATIONAL PRINCIPLES
+# ─────────────────────────────────────────────
+foundational_principles:
+  - principle: "Cosmos as Accumulated Hysteresis"
+    statement: >
+      The observable universe is 13.8 billion years of R4 accumulation.
+      Every structure — galaxy, star, planet, molecule — is a stable
+      resolution state selected by R5 from the available configuration
+      space. What we observe is the viable residue of an immense
+      filtering process.
+    basis: "R4 (Progress) + R5 (Optimisation)"
+    implication: >
+      Cosmic structure is not random. It is the output of R5 operating
+      on the initial high-Φ substrate state over deep time. The cosmic
+      web, galaxy morphology, and stellar populations are all predictable
+      in broad structure from the framework's dynamics — not in detail,
+      but in type and statistical distribution.
+    confirming_note: >
+      Large-scale structure surveys (SDSS, 2dF, Euclid) — cosmic web
+      of filaments and voids consistent with R5 selection producing
+      maximum constructive interference at large scale.
+      CMB power spectrum — initial fluctuation pattern consistent
+      with substrate resolution dynamics from the high-Φ origin state.
+
+  - principle: "Metastable Zone at Every Scale"
+    statement: >
+      The metastable zone — the viable region between chaos and stasis —
+      appears at every scale in the cosmos. Stellar habitable zones,
+      galactic habitable regions, and cosmic habitability windows are
+      all expressions of the same zone at different scales.
+    basis: "R5 (Optimisation) — viable configurations between noise
+            and void boundaries."
+    implication: >
+      Habitability is not a special coincidence. It is the metastable
+      zone condition applied to planetary and stellar parameters.
+      R5 selects for configurations in this zone; configurations
+      outside it dissolve (too chaotic) or stagnate (too stable
+      for chemistry to proceed).
+    confirming_note: >
+      Stellar habitable zone — liquid water range consistent with
+      metastable zone between ice (stasis) and steam (chaos).
+      Galactic habitable zone (Lineweaver et al. 2004) — region
+      of sufficient metallicity but below supernova rate threshold;
+      directly maps onto metastable zone condition at galactic scale.
+
+  - principle: "Stellar Nucleosynthesis as Complexity Accumulation"
+    statement: >
+      Stars are substrate regions of extreme Φ — high resolution flux
+      sustained by gravitational compression. Under these conditions,
+      nuclear phase-locking (Ch2) produces progressively heavier
+      elements. Supernovae distribute this complexity into the
+      interstellar medium. Each stellar generation increases the
+      available complexity ceiling for subsequent chemistry.
+    basis: "R4 (Progress) — complexity accumulates across stellar generations."
+    implication: >
+      The periodic table was not available at the Big Bang. Heavy
+      elements required multiple stellar generations to produce.
+      This creates a minimum cosmic age for complex chemistry —
+      and therefore for life and consciousness.
+    confirming_note: >
+      Stellar spectroscopy — element abundance follows nucleosynthesis
+      predictions (Burbidge, Burbidge, Fowler, Hoyle 1957 — B²FH paper).
+      Population I/II/III stars — successive generations with increasing
+      metallicity confirm iterative complexity accumulation.
+      'We are stardust' — Carl Sagan's observation is a direct
+      statement of R4 operating through stellar cycles.
+
+  - principle: "Cosmogenesis as High-Φ Origin State"
+    statement: >
+      The Big Bang is not a singularity at t=0. It is a region of
+      extremely high Φ (maximum resolution flux) from which the
+      current low-Φ, high-hysteresis state has accumulated via R4.
+      No absolute beginning; no t=0 point; no initial singularity.
+    basis: "Topological validation — open non-compact manifold.
+            R4 (Progress) — process counter, not coordinate axis."
+    implication: >
+      Cosmology's initial conditions problem dissolves. There are
+      no 'initial conditions' in the sense of a first moment —
+      only a high-Φ state from which the current state is the
+      accumulated resolution. The question 'what came before the
+      Big Bang' is malformed; it asks for a time coordinate prior
+      to the process that generates time.
+    confirming_note: >
+      CMB isotropy — near-uniform temperature across causally
+      disconnected regions. Consistent with high-Φ origin state
+      where all regions were in resolution contact before
+      expansion reduced Φ below communication threshold.
+      Inflationary cosmology addresses the same isotropy problem
+      via exponential expansion; Praestology addresses it via
+      high-Φ initial contact — a simpler mechanism without
+      requiring a separate inflaton field.
+
+  - principle: "Gravity as Substrate Geometry at Cosmic Scale"
+    statement: >
+      At cosmic scale, gravity (R gradient curvature from physics
+      domain) produces the large-scale structure — filaments,
+      voids, galaxy clusters — through the same mechanism that
+      produces planetary orbits and stellar systems. No new
+      physics required; scale changes, mechanism is identical.
+    basis: "rule_5_refraction from physics/specifications.yaml"
+    dark_matter_note: >
+      "Dark matter" is not a single entity — it is a label applied
+      to several distinct substrate phenomena that were progressively
+      attributed to one variable as anomalies accumulated. This is
+      the same methodological error as the ether: one postulated
+      entity loaded with increasingly contradictory required properties
+      to explain each new observation. The 50-year direct detection
+      null result (LUX, XENON, PandaX, LZ) is not a failure —
+      it is confirmation that the phenomenology has no particle source.
+      The searches were looking for the wrong thing.
+    dark_matter_decomposition:
+      component_1_wakes_phonons:
+        fraction: "~60-80% of dark matter phenomenology"
+        confidence: "Primary — most confident"
+        mechanism: >
+          Large-scale coherent perturbations in the eta field
+          from orbiting/rotating committed structures (stars,
+          galaxies, black holes). Propagate as phonon-like modes
+          adding effective R elevation that refracts paths —
+          extra gravitational pull without extra baryons.
+        explains: >
+          Flat rotation curves, bullet-cluster lensing offset,
+          cosmic-web filament structure. The phonon modes are
+          collisionless — they pass through each other during
+          cluster collisions, explaining the bullet cluster
+          without requiring exotic particles.
+        direct_detection: >
+          Not detectable as nuclear recoils — field effect,
+          not particle. Would produce correlated signals in
+          precision gravimeters and atom interferometers at
+          the orbital frequency of nearby mass concentrations.
+      component_2_solo_vortices:
+        fraction: "~10-30%, dominant in galaxy halos"
+        confidence: "Significant, especially intermediate scales"
+        mechanism: >
+          Minimal topological excitations (n_eff ~ 1/2 or
+          fractional windings) that never fully pair or knot.
+          Weak EM coupling (no strong dipole) but persistent
+          local R elevation and Phi gradients. In large numbers
+          form a diffuse collisionless fluid adding gravitational
+          refraction without visible light or strong interactions.
+        explains: >
+          Dark matter halo profiles around galaxies. Core-cusp
+          problem resolution: solo-vortex quantum pressure
+          (GP kinetic term) prevents central density cusp —
+          produces flat cores with minimum radius set by
+          effective de Broglie wavelength of the solo-vortex
+          fluid. Halo profile diversity from distribution of
+          solo-vortex winding numbers (n_eff distribution)
+          in different formation environments.
+        direct_detection: >
+          Weak EM coupling — would not produce strong nuclear
+          recoils. Possible signature in precision atomic
+          spectroscopy: solo-vortex passing through atomic
+          cloud would produce a transient R elevation —
+          measurable as a brief shift in atomic transition
+          frequencies. Stochastic signal, not single events.
+      component_3_bh_strain_magnetic:
+        fraction: "~5-10%, important at cluster and void scales"
+        confidence: "Important on large scales"
+        mechanism: >
+          Black holes as high-S saturation knots induce long-range
+          substrate strain fields and magnetic-like backreaction
+          (chiral vortex alignment from BH angular momentum).
+          These fields add extra Phi gradients and R elevation
+          beyond the static mass contribution. In voids,
+          residual strain fields from distant black holes
+          modify apparent acceleration — apparent repulsive
+          effects that may contribute to dark energy phenomenology.
+        explains: >
+          Enhanced cluster lensing beyond baryonic mass.
+          Void underdensity effects. AGN jet alignment with
+          large-scale structure (chiral vortex alignment from
+          BH spin propagating through substrate strain field).
+      minor_contributions:
+        transient_pairs: >
+          Short-lived +n/-n vortex pairs add temporary R elevation
+          before annihilating. Contributes to stochastic
+          gravitational background.
+        dissipation_trails: >
+          Long-range memory of past high-energy events
+          (early-universe phase transitions, major mergers).
+          Contributes to large-scale structure non-Gaussianity.
+        p_env_variation: >
+          Local substrate density modulates all above effects.
+          Stronger dark-matter-like behaviour in low-p_env
+          voids where solo-vortex pool is less confined.
+    confirming_note: >
+      Galaxy rotation curves (Rubin et al. 1970s) — flat curves
+      consistent with substrate wake + solo-vortex components.
+      Bullet Cluster (2006) — lensing mass separated from
+      baryonic gas during collision; consistent with collisionless
+      wakes and solo-vortices passing through undisturbed.
+      Core-cusp problem (observed flat galaxy cores vs CDM
+      predicted cusps) — resolved by solo-vortex quantum pressure.
+      Direct detection null result (LUX, XENON, PandaX, LZ,
+      50 years, many orders of magnitude sensitivity improvement)
+      — predicted by Praestology: no particle, therefore no
+      nuclear recoil signal. Null result is confirming, not
+      embarrassing.
+
+# ─────────────────────────────────────────────
+# DOMAIN RULES
+# ─────────────────────────────────────────────
+domain_rules:
+  - id: "Cs1 – Cosmogenesis"
+    core_anchor: "R1-R5 — all rules operating from high-Φ initial state"
+    statement: >
+      The cosmos originates from a state of maximum resolution flux
+      (Φ_max globally) with minimum accumulated hysteresis. R4 begins
+      accumulating from this state; R5 selects viable configurations;
+      the current universe is the accumulated output.
+    key_events:
+      quark_epoch: >
+        Φ sufficient for quark confinement (Ch1). Hadron formation.
+        Pool dynamics establish dominant chirality from first
+        Mobius winding formations in the cosmogenesis eta gradient.
+        No symmetric production + CP-violation residual required.
+        Photon-to-baryon ratio (~10^10) is formation probability
+        ratio: dipole pairs (photon-like) vastly outnumber Mobius
+        windings (electron-like) at cosmogenesis eta level.
+        Anti-orientation vortices incorporated into composites
+        (proton D+D+A, neutron D+A+A) — antimatter scarcity is
+        pool composition, not annihilation residual.
+      nucleosynthesis_epoch: >
+        Φ drops to nuclear phase-locking range (Ch2). Hydrogen,
+        helium, lithium nuclei form. Ratio locked in by expansion
+        cooling — substrate R5 optimum at prevailing Φ.
+      recombination: >
+        Φ drops below electron capture threshold. Atoms form (Ch3).
+        Substrate becomes transparent to photons — CMB released.
+        This photon background is the Tik substrate made visible.
+      structure_formation: >
+        Substrate wakes/phonons seed density fluctuations. Gravity amplifies them. Cosmic web emerges
+        as R5 selects maximum constructive interference at large scale.
+    confirming_note: >
+      BBN predictions — helium abundance ~25% by mass matches
+      nucleosynthesis calculations precisely. One of the most
+      accurate predictions in physics; consistent with Ch2
+      nuclear phase-locking at prevailing Φ during that epoch.
+      CMB power spectrum (Planck satellite) — acoustic oscillations
+      in early substrate consistent with resolution dynamics
+      in the high-Φ origin state.
+
+  - id: "Cs2 – Large-Scale Structure"
+    core_anchor: "R3 (Motion) + R5 (Optimisation) at cosmic scale"
+    statement: >
+      The cosmic web — filaments, nodes, voids — is R5 operating
+      on the substrate at the largest scales. Matter accumulates
+      where resolution flux is highest; voids form where substrate
+      expansion has reduced Φ below structure-formation threshold.
+    filaments: >
+      High-R corridors where substrate wake has accumulated
+      sufficient density for continuous star formation. Matter
+      flows along filaments toward nodes (galaxy clusters)
+      following R gradient trajectories (rule_5_refraction).
+    voids: >
+      Low-R regions where substrate expansion outpaced structure
+      formation. Φ is higher in voids (lower R) — clocks run
+      slightly faster in voids than in filaments (void time dilation
+      prediction from physics domain).
+    confirming_note: >
+      SDSS cosmic web mapping — filament/void structure matches
+      N-body simulation predictions. Scale-free structure consistent
+      with R5 operating identically at all scales.
+      Void galaxy properties — void galaxies systematically
+      bluer, less massive, more star-forming than filament galaxies;
+      consistent with higher Φ (more resolution flux available)
+      in void environments.
+
+  - id: "Cs3 – Galaxy Formation and Evolution"
+    core_anchor: "R4 (Progress) + R5 (Optimisation) + dark matter composite"
+    statement: >
+      Galaxies are stable large-scale phase-locking structures —
+      sustained by the interplay of gravitational R gradients,
+      substrate wake, magnetic tension, and rotation dynamics.
+      Their morphology is the R5-selected configuration for
+      their specific angular momentum and mass history.
+    morphology: >
+      Spiral galaxies — rotating substrate phase-lock with
+      magnetic tension from SMBH spin maintaining coherent
+      disk structure. Spiral arms are resonant density waves
+      (collective Tik patterns at galactic scale).
+      Elliptical galaxies — merger-disrupted rotation; loss of
+      coherent disk phase-lock; R5 selects triaxial stability.
+      Dwarf irregulars — insufficient mass for coherent phase-lock;
+      resolution dynamics dominate over rotational organisation.
+    smbh_role: >
+      Supermassive black holes are topological saturation caps
+      at galactic centres (physics domain). Their spin generates
+      the magnetic field that provides component_2a (magnetic
+      tension) of the dark matter composite stack. SMBH and
+      galaxy co-evolve because both are expressions of the same
+      substrate phase-locking at different scales.
+    confirming_note: >
+      M-sigma relation — SMBH mass correlates with galaxy bulge
+      velocity dispersion. Direct evidence of SMBH-galaxy
+      co-evolution consistent with coupled phase-locking.
+      Tully-Fisher relation — galaxy luminosity scales with
+      rotation velocity to the fourth power. Emerges naturally
+      from substrate wake scaling in the dark matter model.
+
+  - id: "Cs4 – Stellar Formation and Lifecycle"
+    core_anchor: "R3 (Motion) + R4 (Progress) + Ch2 (Nuclear Phase-Locking)"
+    statement: >
+      Stars form where substrate density exceeds the gravitational
+      phase-lock threshold. They are sustained nuclear resolution
+      engines — maintaining extreme local Φ through continuous
+      fusion (Ch2) until fuel is exhausted. Stellar death
+      distributes accumulated complexity (heavy elements) into
+      the interstellar medium for the next generation.
+    formation: >
+      Molecular cloud collapse when R gradient inward exceeds
+      thermal pressure outward. Protostar forms at density
+      maximum. Nuclear ignition when core Φ reaches fusion
+      threshold — Ch2 activates, halting collapse.
+    main_sequence: >
+      Hydrostatic equilibrium — gravitational compression
+      balanced by radiation pressure from nuclear resolution flux.
+      Duration determined by fuel mass and fusion rate. More
+      massive stars burn faster at higher Φ; less massive stars
+      burn slowly for tens of billions of years.
+    lifecycle_by_mass:
+      low_mass: >
+        Red dwarf → extended main sequence (> 10¹⁰ years) →
+        white dwarf. Insufficient Φ for heavy element synthesis
+        beyond helium. Long-lived but chemically limited.
+      solar_mass: >
+        Main sequence → red giant (shell fusion) → planetary
+        nebula → white dwarf. Carbon and oxygen produced.
+        Primary source of CNO elements for biology.
+      high_mass: >
+        Accelerated fusion through full nuclear sequence to iron
+        (Ch2 iron peak = fusion energy limit). Iron core collapse
+        → supernova → neutron star or black hole. Primary source
+        of elements heavier than iron via r-process nucleosynthesis.
+    confirming_note: >
+      Hertzsprung-Russell diagram — stellar populations follow
+      predicted mass-luminosity-temperature relations. Main
+      sequence as R5 equilibrium locus confirmed observationally.
+      Type Ia supernova standard candles — consistent luminosity
+      from white dwarf Chandrasekhar limit (1.4 solar masses);
+      topological maximum for electron degeneracy pressure.
+      Neutron star observations (pulsars) — confirm neutron
+      degeneracy pressure as next topological stability level
+      above white dwarf.
+
+  - id: "Cs5 – Planetary System Formation"
+    core_anchor: "R5 (Optimisation) + Ch3-Ch5 (Atomic/Molecular Chemistry)"
+    statement: >
+      Planetary systems form from stellar accretion disk remnants —
+      the substrate material not incorporated into the star during
+      formation. R5 selects stable orbital configurations; chemistry
+      determines planet composition as a function of distance
+      from the stellar energy source.
+    disk_differentiation: >
+      Temperature gradient from star outward determines which
+      compounds can condense. Rocky planets form in high-Φ
+      inner regions (high temperature — only refractory compounds
+      stable). Gas/ice giants form in low-Φ outer regions
+      (low temperature — volatiles condense).
+      This differentiation is Ch5 bulk-matter phase transitions
+      operating at planetary scale.
+    orbital_stability: >
+      Stable orbits are resonant configurations — phase-locked
+      orbital periods minimise gravitational interference.
+      Kirkwood gaps in asteroid belt, orbital resonances of
+      Jupiter's moons — R5 selecting constructive interference
+      configurations at orbital scale.
+    habitability_condition: >
+      A planet is in the metastable zone when:
+      (a) Surface Φ sufficient for liquid water (not frozen/boiled)
+      (b) Atmospheric R sufficient to moderate temperature variation
+      (c) Geological activity maintaining chemical gradient flux
+          (tectonic/volcanic Φ input to surface chemistry)
+      (d) Magnetic field providing substrate shielding from
+          stellar wind R perturbation
+      All four conditions are metastable zone expressions at
+      planetary scale. None is fine-tuned; all follow from
+      R5 selecting viable configurations.
+    confirming_note: >
+      Exoplanet surveys (Kepler, TESS) — planet occurrence rates
+      and size distributions consistent with accretion disk
+      differentiation model. Rocky planets common in inner
+      systems; gas giants common in outer systems.
+      Grand Tack model — Jupiter's early migration shaped inner
+      solar system; consistent with orbital resonance phase-locking
+      determining final stable configuration.
+
+  - id: "Cs6 – Consciousness Threshold Derivation"
+    core_anchor: "R4 (Progress) + Ch6 (Abiogenesis) + C1 (Simple Agency)"
+    statement: >
+      Consciousness-capable planets require a minimum cosmic age —
+      a chain of threshold conditions that cannot be shortcut.
+      This is not anthropic reasoning; it is a straightforward
+      derivation from domain threshold conditions.
+    threshold_chain:
+      step_1: >
+        First stellar generation produces only H, He, Li.
+        Insufficient chemistry for biology. Duration: ~10⁸ years.
+      step_2: >
+        First supernovae distribute CNO elements. Second stellar
+        generation possible. Still insufficient heavy element
+        abundance for complex organic chemistry.
+      step_3: >
+        Multiple stellar generations required for sufficient
+        metallicity (Z > Z_threshold) for rocky planet formation
+        with complex chemistry substrate. Duration: ~10⁹ years.
+      step_4: >
+        Rocky planet in stellar metastable zone forms with
+        sufficient heavy element abundance (Ch5 conditions).
+        Geochemical gradient flux initiates (Cs5 condition c).
+      step_5: >
+        Prebiotic chemistry accumulates toward abiogenesis
+        threshold (Ch6). Duration: 10⁸ - 10⁹ years depending
+        on local conditions. Not guaranteed — R5 selects but
+        does not compel.
+      step_6: >
+        Biological evolution from C1 (simple agency) through
+        increasing Ξ toward C5-C6 (consciousness, phase-locking).
+        Duration: 10⁸ - 10⁹ years minimum.
+    minimum_cosmic_age: >
+      Summing conservative estimates: ~4-6 billion years minimum
+      before consciousness-capable life is possible anywhere.
+      Earth at 4.5 Gy with life at ~3.8 Gy and consciousness
+      emerging within the past ~10⁶ years is at the early end
+      of the viable window. We are not special; we are early.
+    implication: >
+      The cosmos domain formally closes the loop from substrate
+      physics to conscious agent. No gap in the derivation chain;
+      no external assumption imported. Physics → Chemistry →
+      Cosmos → Biology → Consciousness is a continuous chain
+      of threshold conditions, all grounded in R1-R5.
+    confirming_note: >
+      Lineweaver (2001) — age distribution of Earth-like planets
+      peaks ~6 Gy after Big Bang; most such planets are older
+      than Earth, consistent with early-end placement.
+      Drake equation — Praestology replaces phenomenological
+      parameters with derivable threshold conditions, converting
+      an estimate into a calculation.
+
+# ─────────────────────────────────────────────
+# PARAMETER FLOW FROM PHYSICS
+# ─────────────────────────────────────────────
+parameter_flow:
+  resolution_flux_phi:
+    physics:  "Local rate of dilemma resolution."
+    cosmos:   "Determines stellar luminosity, nuclear reaction rate,
+               expansion rate of universe, clock rate in voids vs filaments."
+
+  R_resistance:
+    physics:  "Substrate impedance to redistribution."
+    cosmos:   "Gravitational potential depth. High R = deep well =
+               slow clocks = high stellar density. Low R = void =
+               fast clocks = diffuse structure."
+
+  S_anomaly:
+    physics:  "Local momentum density deviation."
+    cosmos:   "Mass-energy distribution. Galaxy mass = integrated S×R
+               over the structure including dark matter components."
+
+  hysteresis_H:
+    physics:  "Memory of past resolutions."
+    cosmos:   "Cosmic chemical enrichment history. Each stellar
+               generation adds to the accumulated element inventory.
+               Galaxy morphology carries history of merger events."
+
+  dark_matter_composite:
+    physics: >
+      Three-component substrate decomposition:
+      (1) Substrate wakes/phonons (~60-80%, primary),
+      (2) Solo-vortices with fractional winding (~10-30%, halos),
+      (3) BH strain/magnetic backreaction (~5-10%, clusters/voids).
+      No single particle species. Collisionless by construction.
+      Null detection result (LUX, XENON, PandaX, LZ) is confirming.
+    cosmos: >
+      Each component has distinct spatial distribution:
+      Wakes: trace committed structure closely.
+      Solo-vortices: diffuse halo extending beyond baryons,
+        quantum pressure resolves core-cusp problem.
+      BH strain: long-range, correlates with AGN distribution.
+      Combined: explains rotation curves, halo profiles,
+      cluster lensing, bullet cluster, core-cusp, halo diversity.
+
+# ─────────────────────────────────────────────
+# CROSS-DOMAIN PREDICTIONS
+# Novel predictions from cosmic-scale application
+# of the framework.
+# ─────────────────────────────────────────────
+cross_domain_predictions:
+  - prediction: "Void time dilation"
+    mechanism: "Higher Φ in voids (lower R) → faster clocks"
+    test: "Pulsar timing comparison: void pulsars vs filament pulsars"
+    distinguishable_from: "ΛCDM — predicts no systematic void/filament
+                           clock rate difference"
+
+  - prediction: "Consciousness age distribution"
+    mechanism: "Cs6 threshold chain sets minimum age; distribution
+                peaks ~6-8 Gy after Big Bang"
+    test: "Technosignature searches should find more signals from
+           older stellar populations than younger"
+    note: "First derivable prediction about SETI target selection
+           from a fundamental framework"
+
+  - prediction: "Galactic magnetic field — rotation curve correlation"
+    mechanism: "Component_2a (magnetic tension) contributes ~1.5-2.5×
+                visible mass; should correlate with B field measurements"
+    test: "Cross-correlation of Faraday rotation maps with
+           rotation curve amplitudes across galaxy sample"
+
+  - prediction: "CMB non-Gaussianity signature"
+    mechanism: "Initial substrate fluctuations follow Kolmogorov
+                turbulence spectrum rather than Gaussian"
+    test: "Higher-order CMB statistics — bispectrum and trispectrum
+           measurements from future surveys (CMB-S4, LiteBIRD)"
+
+  - prediction: "Density-transition redshift at galaxy boundaries"
+    mechanism: "Dark matter halo boundary sharpness correlates with
+                anomalous redshift of background sources"
+    test: "Statistical analysis of quasar spectra behind galaxy
+           clusters as function of projected halo boundary crossing"
+
+
+  - prediction: "Bullet cluster post-collision lensing asymmetry"
+    mechanism: >
+      Substrate wakes have a relaxation timescale set by the
+      substrate phonon decay rate. During a cluster collision,
+      the wake from the pre-collision approach does not disappear
+      instantly — it persists with amplitude decaying as
+      tau_wake ~ 1/(D * nabla^2 omega). The two post-collision
+      mass concentrations should show a slight asymmetry in their
+      lensing mass maps encoding this wake relaxation timescale.
+    test: >
+      Reanalysis of existing Chandra/Hubble bullet cluster
+      lensing data for asymmetry between the two post-collision
+      sub-clusters. Standard CDM predicts symmetric post-collision
+      lensing (collisionless particles simply separate). Praestology
+      predicts slight asymmetry from wake persistence — detectable
+      in existing data with sufficient precision reanalysis.
+      No new observations required.
+    distinguishable_from: >
+      CDM: symmetric lensing, no wake relaxation signature.
+      Praestology: asymmetry correlated with collision velocity
+      and time since closest approach — wake amplitude decays
+      predictably.
+
+  - prediction: "Solo-vortex spectroscopic signature"
+    mechanism: >
+      A solo-vortex passing through an atomic cloud produces
+      a transient R elevation — brief shift in atomic transition
+      frequencies proportional to the solo-vortex winding number
+      and proximity. In large numbers, this produces a stochastic
+      background of frequency fluctuations in precision atomic
+      spectroscopy.
+    test: >
+      Statistical analysis of frequency noise in optical atomic
+      clocks and lattice spectroscopy experiments. The noise
+      spectrum should show a characteristic solo-vortex signature:
+      frequency fluctuations with power spectral density encoding
+      the local solo-vortex flux and velocity distribution.
+      Distinguished from vibration and environmental noise by
+      correlation structure across spatially separated clocks.
+    distinguishable_from: >
+      Standard dark matter: no spectroscopic signature expected
+      for WIMPs or axions at atomic clock precision. Praestology:
+      specific stochastic signal from substrate R fluctuations.
+
+  - prediction: "Direct detection null result is confirming"
+    mechanism: >
+      Substrate wakes, phonons, and solo-vortices are field effects
+      and fractional-winding topological excitations — not particles
+      with strong nuclear cross-sections. They do not produce nuclear
+      recoils in underground detectors. BH strain fields are
+      macroscopic. None of the three dark matter components produce
+      the signal that WIMP dark matter searches target.
+    test: "Already confirmed — 50 years, many orders of magnitude
+           sensitivity improvement, zero signal. LUX, XENON, PandaX,
+           LZ, CDMS, CRESST, DAMA (contested), DEAP — all null."
+    distinguishable_from: >
+      Standard dark matter: null result is a problem requiring
+      explanation (maybe WIMPs have very low cross-section,
+      maybe there is no WIMP, maybe dark matter is something else).
+      Praestology: null result was predicted from the start.
+      It is confirming, not embarrassing. The searches have
+      definitively ruled out the wrong model.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+open_derivations:
+  - >
+    Formal derivation of Hubble constant H₀ from substrate
+    expansion dynamics — current tension between early and
+    late universe H₀ measurements may resolve via density-transition
+    redshift systematic correction.
+  - >
+    Photon-to-baryon ratio (~10^10) from dipole vs Mobius
+    formation probability ratio at cosmogenesis eta level.
+    No CP violation required -- derive from formation threshold
+    difference. See vortex-stabilization.yaml.
+  - >
+    Minimum abiogenesis timescale from Ch6 threshold conditions —
+    converting the qualitative threshold into a quantitative
+    probability distribution as function of planetary conditions.
+  - >
+    Dark energy alternative — current accelerating expansion
+    attributed to cosmological constant (Λ). Under Praestology:
+    acceleration may follow from substrate R decreasing globally
+    as structure formation proceeds, increasing global Φ.
+    Requires formal treatment.
+  - >
+    Formal derivation of stellar mass function (IMF) from
+    substrate phase-lock threshold conditions — why stars
+    form preferentially at certain mass ranges.
+
+# ─────────────────────────────────────────────
+# SUBDOMAIN STRUCTURE
+# ─────────────────────────────────────────────
+subdomains:
+  - file: "domains/cosmos/cosmogenesis.yaml"
+    description: "High-Φ origin state, expansion dynamics, epoch
+                  sequence, matter/antimatter asymmetry, CMB."
+
+  - file: "domains/cosmos/large-scale-structure.yaml"
+    description: "Cosmic web, filaments, voids, dark matter distribution,
+                  density-transition redshift application."
+
+  - file: "domains/cosmos/galaxies.yaml"
+    description: "Formation, morphology, rotation curves, SMBH co-evolution,
+                  dark matter composite stack application."
+
+  - file: "domains/cosmos/stellar.yaml"
+    description: "Star formation, main sequence, lifecycle by mass,
+                  nucleosynthesis as complexity accumulation."
+
+  - file: "domains/cosmos/planetary.yaml"
+    description: "System formation, disk differentiation, orbital stability,
+                  habitability as metastable zone condition."
+
+  - file: "domains/cosmos/habitability.yaml"
+    description: "Full threshold chain from cosmic age to consciousness
+                  capability. Cs6 developed in detail."
+
+reading_order:
+  - "domains/physics/specifications.yaml          — substrate and particles"
+  - "domains/chemistry/specifications.yaml        — molecular complexity"
+  - "domains/cosmos/specifications.yaml           — this file"
+  - "domains/cosmos/cosmogenesis.yaml             — origin state"
+  - "domains/cosmos/large-scale-structure.yaml    — cosmic web"
+  - "domains/cosmos/galaxies.yaml                 — galactic scale"
+  - "domains/cosmos/stellar.yaml                  — stellar scale"
+  - "domains/cosmos/planetary.yaml                — planetary scale"
+  - "domains/cosmos/habitability.yaml             — consciousness threshold"
+
+related_issues:
+  - "intersectional/physics_cosmos/001_dark_energy_alternative"
+  - "intersectional/physics_cosmos/002_hubble_tension_resolution"
+  - "intersectional/chemistry_cosmos/001_stellar_nucleosynthesis_elements"
+  - "intersectional/cosmos_consciousness/001_minimum_cosmic_age"
+  - "foundational/F02_genuine_novelty — does cosmic structure
+     create new distinctions or reveal latent ones in the substrate?"# domains/cosmos/specifications.yaml
+name: "Cosmos Domain"
 version: "1.0 — Foundation Draft"
 core_version: "1.5"
 status: "Domain Defined — Subdomains in derivation"
