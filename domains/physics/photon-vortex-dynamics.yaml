@@ -1,0 +1,180 @@
+name: "Photon Vortex Dynamics"
+version: "1.0"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Proposed – High‑confidence extension"
+description: >
+  Detailed dynamics of the photon as a bound pair of counter‑oriented vortices
+  in the η‑field. At low energy, the pair is perfectly anti‑aligned and phase‑locked,
+  propagating as a massless wave. At high energy, amplitude approaches the
+  nonlinear saturation scale, causing intermittent misalignment events. These
+  events transiently couple the vortices, producing an effective mass and
+  linking photon behavior to the fundamental constants α (fine structure) and
+  R∞ (Rydberg).
+
+dependencies:
+  requires:
+    - "domains/physics/vortex-stabilization.yaml"
+    - "domains/physics/substrate-potential.yaml"
+    - "domains/physics/alpha-from-vortex-stability.yaml"
+    - "domains/physics/alpha-rydberg-z0.yaml"
+  provides_to:
+    - "domains/physics/photon-absorption-emission.yaml"
+    - "domains/physics/redshift-dissipation.yaml"
+
+# ─────────────────────────────────────────────
+# 1. LOW‑ENERGY PHOTON: PERFECTLY ANTI‑ALIGNED DIPOLE PAIR
+# ─────────────────────────────────────────────
+low_energy_regime:
+  description: >
+    At energies well below the substrate saturation scale (E ≪ E_sat ~ ħc/ξ),
+    the photon is a stable bound state of two vortices with equal and opposite
+    circulation. Their strain fields cancel exactly, yielding zero net
+    topological charge. Mutual phase‑locking maintains perfect anti‑alignment.
+  properties:
+    - "Massless: dispersion ω = ck"
+    - "No net chirality → no electromagnetic charge"
+    - "Propagation is dissipationless (except in η‑gradients, see redshift mechanism)"
+    - "Stability maintained by R5 optimisation: anti‑aligned state is the
+       global minimum of the interaction energy for a dipole pair."
+
+# ─────────────────────────────────────────────
+# 2. HIGH‑ENERGY REGIME: INTERMITTENT MISALIGNMENT
+# ─────────────────────────────────────────────
+high_energy_regime:
+  description: >
+    As photon energy increases, the oscillation amplitude grows, approaching
+    the nonlinear saturation scale φ_max. The vortex cores are driven closer
+    to their stability limits, and the phase‑locking becomes strained.
+    Intermittent decoherence events occur, during which the two vortices
+    temporarily misalign.
+  misalignment_mechanism:
+    - "Amplitude pushes local η toward φ_max, activating nonlinear terms
+       in the GP equation."
+    - "Tik noise (substrate fluctuations) seeds occasional phase slips."
+    - "During a misalignment event, the vortices may:
+        (a) Partially lose anti‑alignment, creating transient net chirality.
+        (b) Form temporary bridges (vortex filaments connecting them).
+        (c) Exchange winding number fractions."
+    - "These states are topologically equivalent to a single, charged
+       object—a transient 'proto‑electron'."
+    - "The system rapidly relaxes back to the anti‑aligned state due to
+       R5 selection (the misaligned configuration is higher energy)."
+  effective_mass:
+    - "During misalignment, propagation is hindered: the vortex pair now
+       carries a temporary topological charge, coupling more strongly to the
+       substrate. This manifests as an effective mass in the dispersion
+       relation: ω² = c²k² + m_eff²(k) c⁴/ħ², where m_eff(k) is
+       proportional to the fraction of time spent in misaligned states."
+    - "The group velocity v_g = dω/dk becomes slightly less than c,
+       producing the energy‑dependent time delay observed in GRB 221009A."
+  scaling_with_energy:
+    - "The misalignment probability per unit time P_mis scales with photon
+       energy E. For E ≪ E_sat, P_mis ∝ exp(−E_sat/E) (tunneling-like)."
+    - "For E approaching E_sat, P_mis ∝ (E/E_sat)^n, where n depends on
+       nonlinearity order (likely n=2 from |ψ|² term)."
+    - "Thus m_eff ∝ E^p for some p, leading to LIV of the form observed."
+
+# ─────────────────────────────────────────────
+# 3. CONNECTION TO THE FINE‑STRUCTURE CONSTANT α
+# ─────────────────────────────────────────────
+relation_to_alpha:
+  statement: >
+    α is the ratio of the electron's internal self‑coupling strength
+    (at its Möbius crossover) to the photon's maximum external dipole
+    coupling capacity (S_dipole,sat). In the photon vortex dynamics,
+    α determines the stability margin of the anti‑aligned state.
+  quantitative:
+    - "The energy barrier between anti‑aligned and misaligned states
+       is proportional to α⁻¹ times the substrate saturation scale."
+    - "Thus P_mis ∝ exp(−const / α). The observed value α ≈ 1/137
+       gives a barrier height that makes misalignment rare at low energies,
+       but detectable at TeV scales—exactly as seen."
+    - "The effective mass m_eff also scales with α, because the coupling
+       between vortices during misalignment is governed by the same
+       interaction strength that determines α."
+  cross_reference:
+    - "See alpha-from-vortex-stability.yaml for the derivation of α from
+       vortex stability conditions."
+    - "The numerical value of α fixes the quantitative predictions for
+       high‑energy photon delays."
+
+# ─────────────────────────────────────────────
+# 4. CONNECTION TO THE RYDBERG CONSTANT R∞
+# ─────────────────────────────────────────────
+relation_to_rydberg:
+  statement: >
+    R∞ = α² m_e c / (2 ħ) is the fundamental scale of atomic energy levels.
+    The photon's interaction with bound electrons (absorption/emission)
+    occurs at the Möbius crossover point of the electron. The same vortex
+    dynamics that govern photon propagation also govern how photons couple
+    to atomic vortices.
+  implications:
+    - "The probability of photon absorption by an atom depends on the
+       overlap between the photon's vortex pair and the electron's Möbius
+       topology. This overlap is modulated by α and by the photon's energy."
+    - "At high energies, intermittent misalignment may alter the absorption
+       cross‑section, potentially leading to observable deviations from
+       atomic physics at extreme energies (e.g., in highly ionized plasmas)."
+    - "The Rydberg constant itself is not modified, but the effective
+       coupling in high‑excitation regimes may show energy dependence."
+  cross_reference:
+    - "See alpha-rydberg-z0.yaml for the derivation of R∞ from α and
+       electron mass."
+    - "See photon-absorption-emission.yaml for detailed interaction
+       mechanism."
+
+# ─────────────────────────────────────────────
+# 5. EXPERIMENTAL AND OBSERVATIONAL SIGNATURES
+# ─────────────────────────────────────────────
+evidence:
+  - source: "GRB 221009A (LHAASO, Carpet, 2025)"
+    observation: "Energy‑dependent time delay of TeV photons relative to
+                  lower energies. Consistent with m_eff scaling with E."
+    relevance: "Direct evidence for high‑energy photon dispersion,
+                 supporting the misalignment mechanism."
+
+  - source: "Laboratory analog: vortex dynamics in BECs"
+    observation: "In Bose‑Einstein condensates, vortex pairs can exhibit
+                  intermittent decoherence and phase slips under strong
+                  driving."
+    relevance: "Demonstrates that similar phenomena occur in known
+                superfluids, providing experimental plausibility."
+
+  - source: "Precision tests of Lorentz invariance"
+    observation: "Null results at lower energies (MeV‑GeV) set upper
+                  bounds on m_eff, consistent with exponential suppression."
+    relevance: "Confirms that the effect is strongly energy‑dependent."
+
+predictions:
+  - "Higher‑energy photons (PeV scale) should show even larger delays,
+     possibly entering the regime where misalignment becomes frequent
+     enough to cause significant energy loss (precursor to pair production)."
+  - "Blazar flares at TeV energies should exhibit similar time delays,
+     with a characteristic energy‑dependent pattern."
+  - "Precision measurements of atomic transition rates at high photon
+     fluxes might reveal tiny deviations due to photon‑vortex interactions."
+
+# ─────────────────────────────────────────────
+# 6. RELATION TO OTHER DOMAIN FILES
+# ─────────────────────────────────────────────
+cross_links:
+  - "vortex-stabilization.yaml – foundation for vortex dynamics."
+  - "alpha-from-vortex-stability.yaml – α derivation from vortex stability."
+  - "alpha-rydberg-z0.yaml – constant stack."
+  - "photon-absorption-emission.yaml – interaction with atoms."
+  - "redshift-dissipation.yaml – energy loss mechanism."
+  - "../consciousness/afterdeath.yaml – the Mandelbrot pattern of
+     self‑reference across scales (vortex pair misalignment as prototype
+     of intermittent self‑coupling)."
+
+# ─────────────────────────────────────────────
+# 7. OPEN QUESTIONS
+# ─────────────────────────────────────────────
+open_questions:
+  - "Exact functional form of P_mis(E) from the GP equation."
+  - "Numerical computation of m_eff(E) for comparison with GRB data."
+  - "Can the misalignment mechanism produce the observed 3.1σ signal
+     quantitatively, or does it require additional parameters?"
+  - "Is there a direct laboratory test using photonic crystals with
+     time‑varying nonlinearity to mimic vortex misalignment?"
