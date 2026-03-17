@@ -1,0 +1,128 @@
+name: "Redshift as Substrate Effect – Time‑Refraction in the η‑Field"
+version: "1.0"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Proposed – High‑confidence extension, awaiting numerical verification"
+description: >
+  Redshift of electromagnetic waves arises from dissipative loss as photons
+  traverse regions of varying commitment density (η‑gradients). The mechanism
+  is analogous to time‑refraction in time‑varying media: a temporally changing
+  refractive index alters frequency while conserving wavevector, producing a
+  redshift without scattering. In Praestology, the η‑field acts as such a medium,
+  and our location in a large‑scale underdense region (e.g., the Bootes void)
+  introduces a systematic gradient that has been misinterpreted as cosmic expansion.
+
+mechanism:
+  - "A photon is a propagating dipole vortex pair in the η‑field. Its frequency
+     ω is determined by the local η and the saturation scale φ_max."
+  - "As the photon moves through regions where η changes (dη/dt along its
+     worldline), it experiences a continuous series of temporal interfaces."
+  - "At each interface, the wavevector k is conserved (due to spatial
+     uniformity of the change), but ω adjusts to satisfy the local dispersion
+     relation. The energy difference is exchanged with the substrate's
+     commitment field (η)."
+  - "The cumulative fractional frequency shift over a path is proportional
+     to the integrated logarithmic gradient of η: Δω/ω ∝ ∫ (∇η·dl)/η."
+  - "Because k is conserved, there is no scattering—the photon's direction
+     and phase coherence remain intact, preserving image sharpness."
+
+experimental_analogs:
+  - name: "Time‑refraction in time‑varying media"
+    description: >
+      Experiments with rapidly changing refractive indices (e.g., moving
+      dielectric boundaries, photo‑induced plasma formation, or modulated
+      photonic crystals) show frequency shifts without scattering. The
+      governing principles are:
+        - Temporal interfaces conserve wavevector (k) but not frequency (ω).
+        - Energy exchange is with the medium or controller.
+        - Spatially uniform temporal changes suppress scattering into new
+          directions; only the frequency spectrum is altered.
+    references:
+      - "Mendonça, J. T. (2001). Theory of photon acceleration."
+      - "Shvartsburg, A. B. (2005). Time‑domain optics of ultrashort waveforms."
+      - "Reeves, J. et al. (2022). Time‑refraction and time‑reflection in
+         temporally modulated metamaterials."
+
+  - name: "Parametric coupling and Floquet analysis"
+    description: >
+      Periodic time variation of the medium leads to parametric amplification
+      or frequency conversion, again without momentum transfer. This is well
+      understood in the context of photonic time crystals and quantum optics.
+    references:
+      - "Engheta, N. (2021). Four‑dimensional optics using time‑varying media."
+
+implications_for_cosmology:
+  - "No expansion of space is required to explain cosmological redshift. The
+     universe is eternal; redshift is a local, path‑dependent effect of the
+     η‑field dynamics."
+  - "The Hubble relation (redshift ∝ distance) emerges because more distant
+     photons traverse a greater integrated η‑gradient, not because of an
+     expanding metric."
+  - "Our location in a large‑scale underdense region (e.g., the Bootes void)
+     introduces a systematic bias: we observe most galaxies through a net
+     gradient from higher‑density regions into our low‑η void. This mimics an
+     isotropic expansion. The Hubble constant measured locally would differ
+     from that measured in other voids or clusters—a testable prediction."
+  - "We think the cosmic microwave background (CMB) is not a relic of a hot Big Bang,
+     but the integrated effect of substrate fluctuations and dissipation
+     across infinite time, plus the intrinsic noise floor of the η‑field.
+     Its uniformity reflects the substrate's equilibrium, and its anisotropies
+     trace large‑scale variations in commitment density. The CMB dipole may
+     be partly due to our motion relative to the average η gradient, not
+     solely a Doppler effect."
+
+predictions:
+  - "Redshift should correlate with the integrated column density of committed
+     matter (e.g., galaxy clusters, filaments) along the line of sight, not
+     solely with distance. Objects behind high‑density structures should show
+     slightly higher redshifts at the same nominal distance."
+  - "The Hubble diagram (redshift vs. luminosity distance) will exhibit
+     scatter that correlates with large‑scale structure, exceeding the
+     predictions of ΛCDM."
+  - "Measurements of the Hubble constant from different directions (e.g.,
+     using standard candles in different parts of the sky) will show
+     systematic variations, reflecting the anisotropic η‑gradient field."
+  - "Laboratory experiments with precisely controlled η‑gradients (e.g.,
+     using time‑varying refractive index profiles) can directly measure the
+     dissipation coefficient and verify the predicted scaling with dη/dt."
+  - "The CMB angular power spectrum can be reinterpreted as a projection of
+     the η‑field's two‑point correlation function; its acoustic peaks would
+     correspond to characteristic scales in the substrate's coherence length,
+     not to sound horizons in a primordial plasma."
+
+falsification_criteria:
+  - "If high‑precision redshift surveys show no correlation with intervening
+     large‑scale structure beyond ΛCDM expectations, the path‑dependent
+     mechanism is falsified."
+  - "If laboratory time‑refraction experiments definitively rule out frequency
+     shift without scattering under conditions analogous to cosmological
+     η‑gradients, the analogy fails."
+  - "If the CMB is conclusively shown to have a thermal spectrum with a
+     blackbody temperature that varies in a way incompatible with a static
+     substrate (e.g., if spectral distortions require a hot early universe),
+     the reinterpretation would be contradicted."
+
+relation_to_other_domain_files:
+  - "vortex-stabilization.yaml – provides the vortex model of photons."
+  - "substrate-potential.yaml – defines η and its dynamics."
+  - "alpha-from-vortex-stability.yaml – the constant that sets coupling scales."
+  - "cosmos/specifications.yaml – overarching cosmic framework."
+
+references:
+  - "Mendonça, J. T. (2001). Theory of photon acceleration. IoP Publishing."
+  - "Shvartsburg, A. B. (2005). Time‑domain optics of ultrashort waveforms.
+     Physics‑Uspekhi, 48(8), 797."
+  - "Reeves, J., et al. (2022). Time‑refraction and time‑reflection in
+     temporally modulated metamaterials. Physical Review B, 105, 045422."
+  - "Engheta, N. (2021). Four‑dimensional optics using time‑varying media.
+     Science, 373(6555), eabj2059."
+
+notes:
+  - "This mechanism does not require an expanding universe; it is compatible
+     with an eternal, self‑sustaining resolution process (R1–R5)."
+  - "The Bootes void or similar underdense region as our local environment
+     is an intriguing possibility, but the mechanism does not depend on it—
+     it only requires that η varies along photon paths."
+  - "Numerical simulations of photon propagation through realistic η‑fields
+     (derived from large‑scale structure simulations) are needed to quantify
+     the expected redshift distribution and compare with observations."
