@@ -56,7 +56,7 @@ dependency_map:
     - "domains/physics/commitment-response-function.yaml -- GP saturating nonlinearity"
   provides_to:
     - target: "domains/physics/electron2photon.yaml"
-      via: "Formation and persistence of Möbius vortex (electron) and dipole pair (photon)"
+      via: "Formation and persistence of Möbius vortex (electron) and dipolar-capacitative pair (photon)"
     - target: "domains/physics/beta-decay.yaml"
       via: "Stability conditions for quark winding; decay as dynamic equilibrium failure"
     - target: "domains/physics/nuclear-binding.yaml"
@@ -125,25 +125,29 @@ formation_mechanism:
 
   photon_vs_electron_formation:
     photon: >
-      Symmetric dipole pair: +n and -n with equal winding.
-      S_net ≈ 0 → zero mass. Perfect strain cancellation
-      → propagates at c_eff = c (maximum η propagation rate).
-      Forms readily from any Tik event pair — lowest
-      energy formation threshold. Unstable if one partner
-      is disturbed: immediate annihilation (pair recombination)
-      releasing the stored circulation as field energy.
+      Dipolar-capacitative mode: symmetric +n/-n winding
+      with equal amplitude. S_net ≈ 0 → zero mass. Perfect
+      external strain cancellation → propagates at c_eff = c.
+      No self-coupling — pure phase carrier. Forms readily
+      from any Tik event pair — lowest energy formation
+      threshold. Unstable if one partner is disturbed:
+      immediate recombination releasing the stored phase
+      as field energy. Capacitative: loads and releases
+      phase completely; no residual after emission.
     electron: >
-      Asymmetric Möbius pair: the 720° non-orientable
-      topology breaks the perfect +n/-n symmetry.
-      S_net > 0 → nonzero mass. Net chirality → charge.
-      Higher formation threshold than photon — requires
-      a Tik event of sufficient amplitude to initiate
-      the 720° twist rather than a simple 360° dipole.
-      More stable once formed: the Möbius topology is
-      harder to unwind than a simple dipole because
+      Self-integral mode: the 720° non-orientable Möbius
+      topology introduces internal self-coupling at the
+      crossover point. S_net > 0 → nonzero mass (self-
+      topological burden S_burden > 0). Net chirality →
+      charge. Higher formation threshold than photon —
+      requires sufficient Tik amplitude to initiate the
+      720° self-integral twist rather than the simpler
+      360° capacitative dipole. More stable once formed:
+      the Möbius topology is harder to unwind because
       unwinding requires crossing the non-orientable
-      surface — a topological barrier, not just an
-      energy barrier.
+      surface — a topological barrier. The self-coupling
+      at the crossover actively maintains the topology
+      by integrating its own phase history.
     confirming_note: >
       Electron-positron pair production threshold:
       2m_e c² ≈ 1.022 MeV. Below this: insufficient
@@ -578,7 +582,7 @@ cosmological_pool_population:
       R4 accumulation begins.
     step_2_dipole_formation: >
       The first stable configurations to populate the
-      pool are dipole pairs (photon-like): symmetric
+      pool are dipolar-capacitative pairs (photon-like): symmetric
       +n/-n winding, S_net ≈ 0, lowest formation
       threshold, most energetically accessible from
       a Tik fluctuation pair. These form readily and
@@ -732,7 +736,7 @@ chirality_asymmetry:
       one dominant-chirality winding and one explicit
       anti-orientation winding in direct phase-lock.
       The meson is a bound vortex pair — the same
-      structure as the photon (dipole pair) but at the
+      structure as the photon (dipolar-capacitative pair) but at the
       quark winding scale rather than the photon's
       dipole scale. Mesons are unstable because the
       anti-orientation component is not deeply buried
@@ -875,7 +879,7 @@ chirality_asymmetry:
 
       - name:        "Pion (π⁺)"
         structure:   "D+A (ud̄ — one dominant, one anti-orientation)"
-        chirality:   "Neutral net — bound D+A pair at quark scale"
+        chirality:   "Neutral net — bound dipolar-capacitative pair at quark scale"
         status:      "Free — unstable (26 ns)"
         stability:   "Low — bound anti-orientation directly
                       coupled to dominant; easy recombination"
