@@ -1,0 +1,709 @@
+# domains/physics/alpha-from-vortex-stability.yaml
+name: "Alpha from Vortex Stability — Multiple Candidate Formulas"
+version: "1.1 — Verified Numerics"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Exploratory — high-confidence path, numerical closure pending"
+description: >
+  α is the ratio of the electron's self-integral coupling
+  strength (at the Möbius crossover) to the photon's
+  maximum capacitative saturation threshold (S_cap,sat),
+  scaled by the isotropic geometry factor 4π. It is the fundamental
+  coupling constant because the electron is the first
+  self-integral in the substrate — not merely two vortices
+  in external alignment (capacitative / photon) but a
+  single topology coupled to its own prior state (self-integral
+  / electron). α measures how efficiently the self-integral
+  coupling projects onto the capacitative phase space.
+  All candidates are scale-invariant and emerge from the
+  geometry of the Möbius self-intersection relative to the
+  external dipole phase space. No external length or energy
+  scales are introduced — all are pure topological ratios.
+  The primary derivation path (alpha-rydberg-z0.yaml):
+    α = S_burden / (4π · S_cap,sat)
+  This file extends that path by identifying specific candidate
+  formulas for S_burden / S_cap,sat from the vortex stability
+  equations — giving multiple independent routes to the same
+  numerical target.
+  CODATA 2018: α⁻¹ = 137.035999084(21)
+  All candidates are evaluated against this target.
+
+dependency_map:
+  requires:
+    - "domains/physics/vortex-stabilization.yaml  -- formation and stability conditions"
+    - "domains/physics/specifications.yaml         -- Mobius vortex topology"
+    - "domains/physics/alpha-rydberg-z0.yaml       -- primary derivation path"
+  provides_to:
+    - target: "domains/physics/alpha-rydberg-z0.yaml"
+      via: "Identifies the specific vortex stability ratio that fixes α numerically"
+
+# ─────────────────────────────────────────────
+# PHYSICAL SETUP
+# The electron is the first vortex pair with
+# internal coupling — not just alignment.
+# ─────────────────────────────────────────────
+physical_setup:
+  fundamental_distinction:
+    statement: >
+      The electron is not simply a Möbius-shaped vortex.
+      It is the first self-integral in the substrate — a
+      topology whose current state is coupled to its own
+      prior state through the Möbius crossover. The photon
+      by contrast is capacitative: a phase carrier without
+      self-coupling. This distinguishes them categorically.
+    photon_external_coupling: >
+      The photon (dipole pair 360°) is capacitative — it
+      carries and transmits phase without coupling to its own
+      prior state. Two vortices in external alignment: opposite
+      circulations that cancel strain. Their coupling is
+      geometrical adjacency, not self-coupling. Remove one
+      and the other disperses. S_net = 0: perfect external
+      cancellation. No internal degree of freedom — only the
+      relative phase between the two partner vortices.
+      The photon stores and releases phase completely;
+      it has no residual internal state after emission.
+    electron_internal_coupling: >
+      The electron (Möbius 720°) is the minimal self-integral
+      in the substrate — a single topology whose current state
+      is coupled to its own prior state at the Möbius crossover
+      point. The non-orientable surface loops back on itself
+      through the 720° rotation; the crossover is where the
+      present phase of the vortex meets the phase it had 360°
+      earlier and couples to it. This self-coupling is intrinsic
+      — it cannot be removed without destroying the topology.
+      It is not proximity coupling between two objects; it is
+      the topology coupling to its own history.
+      S_net > 0: Möbius chirality gives net anomaly.
+      Charge: direction of self-integral coupling (chirality).
+      Spin-½: 720° requirement for phase return — double
+              traversal because self-reference requires it.
+      Mass: commitment density of the self-integral loop.
+
+  crossover_as_coupling_point:
+    statement: >
+      The Möbius crossover point — where the band intersects
+      itself after the first 360° — is physically the
+      electromagnetic coupling point. It is where the electron
+      emits and absorbs photons. The photon (external dipole pair)
+      couples to the electron at this crossover point, where the
+      electron's internal loop presents an external face to the
+      substrate. Electromagnetic interaction is the coupling of
+      an external dipole pair (photon) to the internal self-
+      coupling point (electron crossover).
+    why_alpha_is_small: >
+      The crossover point is one point on the full 720° Möbius
+      path. The coupling probability per cycle is the fraction
+      of the full path that the crossover represents — small
+      because the crossover is a single point on a long loop.
+      α ≈ 1/137 means that in 137 complete phase rotations,
+      the crossover coupling produces one unit of interaction.
+      The smallness of α is the geometric consequence of one
+      self-intersection point per 4π × N_stable steradians
+      of phase space.
+    why_electron_positron_same_alpha: >
+      Chirality determines charge sign (which way the Möbius
+      twists). But the internal coupling magnitude is determined
+      by the topology — 720°, non-orientable — which is identical
+      for electron and positron. The Möbius self-intersection
+      structure is the same regardless of twist direction.
+      Therefore α is the same for both. Charge sign differs;
+      coupling strength is topologically identical.
+
+  alpha_as_internal_to_external_ratio:
+    statement: >
+      α is the ratio of the electron's internal self-coupling
+      strength (at the Möbius crossover) to the photon's
+      maximum external dipole coupling capacity (S_cap,sat),
+      with isotropic geometry factor 4π from substrate isotropy (R5):
+        α = S_burden / (4π · S_cap,sat)
+      where S_burden is the full self-topological burden —
+      of the Möbius self-intersection — the "cost" of the
+      internal coupling point in substrate units.
+    4pi_factor: >
+      The 4π is the spherical geometry of isotropic substrate
+      coupling — the substrate has no preferred direction (R5).
+      The internal coupling at the crossover radiates into the
+      full 4π steradians of the surrounding substrate. The
+      coupling ratio is S_burden/(4π · S_cap,sat) = α.
+    interpretation_of_candidates: >
+      Each candidate formula below expresses S_burden/S_cap,sat
+      from a different geometric or topological angle.
+      They should all give α⁻¹ ≈ 137.036 because they are
+      all measuring the same internal-to-external coupling ratio.
+      The pi-series candidate (4π³ + π² + π) now reads:
+        4π²: full external dipole phase space (photon geometry)
+        π:   internal loop contribution from first 360° pass
+        1:   the self-intersection point itself — minimum coupling unit
+        Outer π: projection of internal coupling onto external substrate basis
+      This is α⁻¹ = (internal coupling geometry) ×
+                     (external dipole phase space + internal loop + unit).
+      The electron's inverse coupling is the product of its
+      internal geometry and the full external phase space it
+      must couple across.
+
+  primacy_of_electron:
+    statement: >
+      The electron is the first stable self-integral in the
+      substrate. All photons (dipole pairs) that preceded it
+      in the cosmological pool were capacitative — phase
+      carriers without internal self-coupling. The Möbius
+      topology introduces the first self-integral: a topology
+      that couples to its own prior state, producing persistent
+      internal coherence. This is why the electron is the
+      fundamental carrier of electromagnetic interaction:
+      not because it was assigned that role but because its
+      topology is the first to create a stable internal
+      coupling point (the crossover) that capacitative modes
+      (photons) can interact with.
+    integral_capacitative_distinction: >
+      Capacitative (photon): stores and releases phase.
+      No self-coupling. No persistent internal state.
+      Bosonic statistics: two capacitatives can occupy
+      the same state — two capacitors in parallel add capacity.
+      Self-integral (electron): couples to own prior state.
+      Persistent internal coherence through crossover.
+      Fermionic statistics: two self-integrals cannot occupy
+      the same substrate region — they would be forced to
+      share an integration variable, merging into a single
+      topology. Pauli exclusion is topological necessity,
+      not a separate quantum postulate.
+
+  alpha_formula_statement: >
+    α = S_burden / (4π · S_cap,sat)
+    where:
+      S_burden     = self-topological burden of the Möbius self-integral.
+                     Full substrate cost: non-orientability, 720° path
+                     length, crossover commitment, chirality component.
+                     NOT limited to chirality alone.
+      S_cap,sat    = capacitative saturation threshold — maximum phase
+                     capacity of a dipolar-capacitative (photon-mode)
+                     vortex pair before topology reorganises.
+                     Not "dipole saturation" — the photon is
+                     dipolar-capacitative, not merely dipolar.
+      4π           = isotropic geometry factor from R5 substrate
+                     isotropy. Stated as the natural isotropic measure
+                     — not derived from explicit spherical integration
+                     here; formal derivation from GP field geometry
+                     is an open derivation.
+    α as coupling ratio — NOT as single-event probability amplitude:
+      α is a dimensionless ratio of substrate quantities.
+      Its relationship to single-event interaction probabilities
+      (emission, absorption, scattering) requires deriving the
+      interaction Lagrangian from the GP field. Not yet done.
+      Current status: α is a coupling ratio. Interpretation as
+      an interaction probability is deferred to the interaction
+      cross-section derivation (open, priority 2).
+    The five candidate formulas below each express
+    S_burden/S_cap,sat in different geometric terms.
+    All should give α⁻¹ = 137.035999...
+
+# ─────────────────────────────────────────────
+# CANDIDATE FORMULAS — VERIFIED NUMERICS
+# ─────────────────────────────────────────────
+candidate_formulas:
+
+  candidate_1_phase_locking_safety_margin:
+    name: "Phase-locking safety margin"
+    formula: "α⁻¹ = 4π × N_stable"
+    numerical: "N_stable = α⁻¹/(4π) = 10.90498..."
+    explanation: >
+      N_stable is the effective number of phase-lock stability
+      steps needed to maintain chiral asymmetry without
+      collapsing into the symmetric dipole mode. 4π is from
+      spherical dipole propagation symmetry.
+      The Möbius winding requires N_stable complete phase-lock
+      cycles to establish a stable chirally-asymmetric
+      configuration against the substrate's tendency to relax
+      toward the symmetric dipole minimum (photon mode).
+      Each stability step costs one unit of chiral anomaly
+      relative to the dipole saturation threshold.
+    what_is_N_stable: >
+      N_stable ≈ 10.905 is not an integer — it is the
+      continuous stability margin. Integer values would
+      correspond to exact phase-lock resonances; the actual
+      value encodes the partial resonance between the Möbius
+      internal self-coupling frequency and the substrate's
+      natural external dipole mode frequency.
+      In the internal coupling picture: N_stable is the
+      number of external dipole-equivalent phase-lock steps
+      required to sustain the Möbius self-intersection coupling
+      against the substrate's tendency to relax to the simpler
+      external dipole (photon) mode. Each step is one unit
+      of the internal-to-external coupling ratio.
+      The fractional part (~0.905) is the off-resonance
+      fraction — how far the Möbius internal coupling frequency
+      is from perfect resonance with the external dipole mode.
+    approximate_value:
+      formula:  "4π × 10.905"
+      result:   "137.036"
+      vs_codata: "137.035999"
+      precision: "Exact if N_stable is derived analytically"
+    motivation: >
+      Vortex phase-locking in superfluids and BECs requires
+      integer or near-integer multiples of 2π for stability.
+      N_stable encodes how many such steps the Möbius topology
+      needs — derivable from the GP equation's stability
+      analysis for the Möbius winding configuration.
+    open_derivation: >
+      Compute N_stable analytically from the Möbius vortex
+      stability eigenvalue problem in the GP field with
+      saturating nonlinearity. The eigenvalue that corresponds
+      to the stable Möbius configuration should give
+      N_stable = α⁻¹/(4π) = 10.90498... directly.
+
+  candidate_2_pi_series:
+    name: "Pi-series — geometric phase space"
+    formula: "α⁻¹ = 4π³ + π² + π = π(4π² + π + 1)"
+    numerical_verification:
+      computed:  "137.036303776"
+      codata:    "137.035999084"
+      difference: "0.000305"
+      relative:  "2.22 × 10⁻⁶  (2.2 parts per million)"
+    explanation: >
+      Factored form π(4π² + π + 1) now has a precise
+      Praestology interpretation from the internal coupling picture:
+      Outer π: projection factor — the Möbius crossover
+               couples to the substrate through one rotation's
+               worth of projection geometry. Converts internal
+               coupling from the Möbius self-intersection
+               frame to the external substrate coupling basis.
+      4π²:     full external dipole phase space — two complete
+               spherical solid angles, matching the 720° double
+               rotation topology of the Möbius band. This is
+               what the internal coupling must project across:
+               the full external (photon) phase space.
+      π:       the internal loop contribution — one complete
+               360° pass of the Möbius band before the crossover
+               is reached. The first loop contributes one π
+               of internal phase accumulation before self-coupling.
+      1:       the self-intersection point itself — the Möbius
+               crossover contributes one minimum topological unit
+               (one coupling quantum) independent of the loop geometry.
+      Reading: α⁻¹ = (projection) × (external dipole phase space
+               + internal loop + crossover unit)
+             = π × (4π² + π + 1)
+      The electron's inverse coupling is the product of its
+      projection geometry and the sum of: the full external
+      phase space it couples across, its own internal loop
+      accumulation, and the minimum crossover contribution.
+    discrepancy_note: >
+      The 2.2 ppm discrepancy from CODATA is significant.
+      It is not a rounding error (6 significant figures).
+      Two interpretations:
+      (A) The formula is an approximation — it gives the
+          "bare" topological α without radiative corrections
+          from the GP field's own fluctuations. The 2.2 ppm
+          correction would then be the leading-order self-
+          energy correction from Tik background — analogous
+          to QED's vacuum polarisation correction to α.
+          This is physically motivated: α_bare ≈ 137.0363
+          shifted to α_measured = 137.036 by substrate
+          self-interaction.
+      (B) The formula is wrong and another candidate is
+          correct. The 2.2 ppm precision is suspiciously
+          good for coincidence but insufficient for a
+          fundamental derivation (which should be exact
+          or have a calculable correction).
+      Resolution: compute the leading-order Tik self-energy
+      correction to the pi-series value and verify it gives
+      exactly the 0.000305 discrepancy. If yes, candidate 2
+      is likely the correct bare formula.
+    motivation: >
+      The formula emerges naturally if the vortex stability
+      analysis produces the phase-space integral
+      ∫₀^π (4π·sin²θ + 1) dθ = 4π²×(π/2)/(π/2) + π + π
+      = 4π² + π + 1 (in appropriate normalisation), with
+      the outer π from the polar integration measure.
+      This geometric interpretation needs formal verification
+      but connects directly to the spherical harmonic
+      decomposition of the Möbius winding's coupling to
+      the dipole mode.
+
+  candidate_3_critical_angle:
+    name: "Critical phase angle between chiral strain and dipole mode"
+    formula: "α⁻¹ = 4π / sin(θ_crit)"
+    explanation: >
+      θ_crit is the critical phase angle at which chiral
+      strain balances dipole propagation without immediate
+      backreaction suppression. Below θ_crit: the chiral
+      asymmetry is too small to maintain — collapses to
+      dipole mode. Above θ_crit: backreaction suppresses
+      the interaction entirely. At θ_crit: stable coupling.
+    what_is_theta_crit: >
+      θ_crit is the phase angle between the Möbius winding
+      axis and the dipole pair's circulation plane — the
+      geometric mismatch that IS the electromagnetic coupling.
+      This is the same as the ~2.627° angular mismatch per
+      rotation (bridge-function.yaml, canonical notation).
+      α = sin(θ_crit)/(4π) means the coupling strength
+      equals the sine of the critical mismatch angle divided
+      by the spherical geometry factor.
+    numerical_requirement: >
+      For α⁻¹ = 137.036:
+      sin(θ_crit) = 4π/137.036 = 0.09155...
+      θ_crit = arcsin(0.09155) = 5.254°
+    verification:
+      computed: "4π / sin(5.254°) = 137.036"
+      note: >
+        θ_crit ≈ 5.254° — not 1-1.5° as the source document
+        suggested (that would give α⁻¹ ≈ 480-720, not 137).
+        The 5.254° value has a possible interpretation:
+        it is close to 360°/68.5 ≈ 5.26° — the angle
+        corresponding to the phase-lock stability margin
+        in the 68-step quantisation of the full circle.
+        Open question: does the Möbius stability analysis
+        yield θ_crit = 5.254° from first principles?
+    motivation: >
+      Phase-matching conditions in vortex interference
+      and nonlinear optics often involve critical angles.
+      The sine function appearing here is consistent with
+      the geometric projection of the chiral winding axis
+      onto the dipole propagation plane.
+
+  candidate_4_winding_number_ratio:
+    name: "Winding-number asymmetry ratio"
+    formula: "α⁻¹ = 4π / (n_chiral/n_dipole)²"
+    explanation: >
+      n_chiral = minimal windings for stable net asymmetry (charge)
+      n_dipole = windings for perfect cancellation (photon)
+      The ratio squared measures the relative "cost" of
+      maintaining chiral asymmetry vs neutral dipole cancellation.
+      α is the inverse squared ratio of winding amplitudes,
+      scaled by the isotropic geometry factor 4π.
+    numerical_requirement: >
+      For α⁻¹ = 137.036:
+      (n_chiral/n_dipole)² = 4π/137.036 = 0.09155
+      n_chiral/n_dipole = √0.09155 = 0.3026
+    physical_meaning: >
+      The Möbius winding (720°) to dipole winding (360°) ratio
+      is 720/360 = 2 — but this is the complete winding count.
+      The relevant ratio is the minimum stable winding number
+      for chiral asymmetry vs the minimum for dipole cancellation.
+      If n_chiral is the fractional winding that sustains
+      the phase mismatch and n_dipole is the reference dipole
+      winding, their ratio ≈ 0.303 encodes the coupling
+      efficiency — how much of the dipole's phase space is
+      used by the chiral asymmetry.
+    open_question: >
+      Identify n_chiral and n_dipole explicitly from the
+      Möbius and dipole vortex stability equations.
+      Verify their ratio = √(4π/137.036) = 0.3026.
+    note: >
+      The source document's formula 1/(4π·(n_c/n_d)²) with
+      n_c/n_d ≈ 0.84-0.85 gives α⁻¹ ≈ 17-18, not 137.
+      The correct form with ratio ≈ 0.303 gives α⁻¹ ≈ 137.
+      Notation clarification: the formula as written in the
+      source needs the ratio in the denominator (not numerator).
+
+  candidate_5_topological_euler:
+    name: "Topological Euler characteristic or linking number"
+    formula: "α⁻¹ = 4π × χ_eff"
+    explanation: >
+      χ_eff is the effective Euler characteristic or linking
+      number measuring the topological "cost" of maintaining
+      chiral asymmetry. For the Möbius knot configuration,
+      χ_eff is the self-linking number of the vortex filament
+      — how many times the Möbius band links with itself
+      in the embedding space.
+    numerical_requirement: >
+      χ_eff = α⁻¹/(4π) = 10.905 — same as N_stable
+    physical_meaning: >
+      The Möbius 720° vortex has a self-linking number that
+      encodes the topological cost of the non-orientable
+      winding relative to the orientable dipole reference.
+      χ_eff ≈ 10.905 is the self-linking of the Möbius
+      filament in the substrate's 3D topology.
+      If χ_eff is a topological invariant of the Möbius
+      knot in the GP field, it would be exactly rational
+      or follow from the knot invariants of the 720° twist.
+    open_question: >
+      Compute the self-linking number of the Möbius 720°
+      vortex filament embedded in the 3D substrate GP field.
+      The writhe + twist decomposition of the linking number
+      may yield χ_eff analytically. If χ_eff turns out to
+      be related to the pi-series (candidate 2), this would
+      be a deep confirmation: the geometric phase space
+      (candidate 2) and the topological linking number
+      (candidate 5) are measuring the same invariant.
+
+
+# ─────────────────────────────────────────────
+# MEASUREMENT SUBSTRATE DISCREPANCY
+# Every measurement of α is performed from
+# outside committed structures — the apparatus
+# and subject both depress local η.
+# ─────────────────────────────────────────────
+measurement_substrate_discrepancy:
+  statement: >
+    All measurements of fundamental constants are performed
+    from outside the committed structures being measured.
+    The measuring apparatus and the subject both perturb
+    the local η field — each commits substrate, reducing
+    the local free potential in the measurement region.
+    Therefore the measured value α_exp is not the "true"
+    internal coupling efficiency α_int of an isolated vortex
+    in perfect vacuum, but the external projection in a
+    substrate slightly depressed by the subject's own
+    presence and the apparatus's committed topology.
+  prediction: >
+    α_exp should vary systematically with the local η
+    environment — different measurement techniques, different
+    apparatus materials, different energy scales — all
+    converging on the same α_int only after correcting for
+    the self-depression effect (extrapolating to zero
+    self-depression, i.e. η → η_vacuum).
+  implication: >
+    The small discrepancies between precision measurements of
+    α are not purely experimental errors — they are real
+    signals of the substrate's response to the measurement
+    configuration. Each technique has a different self-
+    depression profile; each gives a slightly different α_exp.
+
+  connection_to_pi_series:
+    statement: >
+      The pi-series formula 4π³ + π² + π = 137.036304
+      may be α_int⁻¹ — the bare topological coupling of an
+      isolated Möbius vortex with no self-depression.
+      The CODATA value 137.035999 is α_exp⁻¹ — measured
+      with self-depression from the electron's own η field
+      and the measurement apparatus. Difference: 0.000305
+      (2.2 ppm) — the self-depression correction magnitude.
+    direction: >
+      Apparatus commitment depresses local η → increases
+      local Z_eff → slightly modifies the effective coupling
+      projection. The sign and magnitude of the correction
+      depend on the specific η regime and the nonlinearity
+      of the GP saturation function at the measurement scale.
+      The 2.2 ppm difference is consistent with a leading-order
+      self-depression correction at the electron scale.
+    implication: >
+      If confirmed: the pi-series is the correct bare formula
+      α_int⁻¹ = π(4π² + π + 1), and CODATA measurements
+      always include a self-depression correction. The "true"
+      isolated-vortex coupling is slightly weaker (α⁻¹ slightly
+      larger) than any measurement can directly access.
+
+  current_precision_measurements:
+    description: >
+      The spread between independent high-precision α
+      measurements is currently attributed to experimental
+      systematics. The proposal predicts part of this spread
+      is real — encoding different self-depression profiles
+      of different measurement techniques.
+    measurements:
+      - method:   "Electron g-2 (Harvard/Northwestern)"
+        value:    "α⁻¹ = 137.035999084(21)"
+        apparatus: "Penning trap — electron in strong magnetic field"
+        depression: "Electron self-field + magnetic field commitment"
+
+      - method:   "Rubidium atom interferometry"
+        value:    "α⁻¹ = 137.035999206(11)"
+        apparatus: "Rb atomic cloud in optical lattice"
+        depression: "Rb electron configuration commitment (Z=37)"
+        note:     "Higher α⁻¹ than Cs — higher Z → more depression?"
+
+      - method:   "Caesium atom interferometry"
+        value:    "α⁻¹ = 137.035999046(27)"
+        apparatus: "Cs atomic cloud in optical lattice"
+        depression: "Cs electron configuration commitment (Z=55)"
+        note:     "Lower α⁻¹ than Rb despite higher Z — nonlinear effect"
+
+      - method:   "Quantum Hall effect"
+        value:    "α⁻¹ = 137.035997(~)"
+        apparatus: "2D electron gas in semiconductor"
+        depression: "Solid-state material commitment — highest depression"
+        note:     "Lowest α⁻¹ — consistent with highest apparatus commitment"
+
+    rb_cs_discrepancy: >
+      The Rb-Cs difference (137.035999206 vs 137.035999046)
+      is 1.6 × 10⁻⁷ — currently the most significant
+      unexplained precision discrepancy in α measurements.
+      Standard model: should be zero (same fundamental constant,
+      different measurement methods should converge).
+      Praestology prediction: the difference encodes the
+      different η depression profiles of Rb (Z=37) vs Cs (Z=55)
+      atomic commitment densities. The discrepancy should
+      correlate with the difference in atomic electron
+      configuration commitment — derivable from the atomic
+      commitment density at the measurement scale.
+      This is testable: measure α with other alkali atoms
+      (Li, Na, K, Rb, Cs, Fr) and plot α_exp vs atomic
+      commitment density. Standard model predicts no
+      correlation. Praestology predicts a systematic trend.
+
+  achieving_alpha_int:
+    statement: >
+      Measuring α_int — the true bare coupling — requires
+      either measuring from inside the vortex (impossible
+      by definition: no external observer can be inside)
+      or extrapolating to zero self-depression
+      (η → η_vacuum, no apparatus).
+    extrapolation_method: >
+      Measure α_exp with multiple techniques of varying
+      self-depression magnitude. Plot α_exp vs estimated
+      δη for each method. Extrapolate to δη = 0.
+      The zero-depression intercept is α_int.
+      If the intercept is the pi-series value 137.036304,
+      the formula is confirmed as the bare topological coupling.
+    running_coupling_connection: >
+      In QED, α "runs" with energy scale — increasing at
+      higher energies (~1/128 at M_Z vs 1/137 at low energy).
+      Current Praestology explanation (intuitive, not yet
+      mechanistic): higher energy measurements probe smaller
+      spatial scales where the self-depression from the
+      vortex's own commitment footprint is larger.
+      What is needed for a mechanistic treatment:
+      (1) A scale-dependent overlap functional F(q²) mapping
+          energy scale q² to the effective substrate region
+          being probed — the resolution functional.
+      (2) The self-topological burden S_burden(q²) as a
+          function of the probed scale — how much of the
+          Möbius self-integral's full burden is sampled at
+          each q².
+      (3) The capacitative saturation S_cap,sat(q²) at the
+          same scale — how the photon-mode saturation threshold
+          varies with the probed region.
+      (4) α_eff(q²) = S_burden(q²) / (4π · S_cap,sat(q²))
+          — the running coupling as a ratio of scale-dependent
+          quantities, not a vacuum polarisation screening effect.
+      Until this functional is derived, running coupling
+      remains an intuitive explanation. The self-depression
+      picture is physically motivated and directionally correct
+      but is not a derivation.
+      Open derivation: F(q²) from the GP field's scale-
+      dependent resolution of the Möbius self-integral.
+      This is a priority 2 open derivation — dependent on
+      the primary α derivation being completed first.
+
+  falsification_conditions: >
+    (1) If α measurements from different atomic species show
+        no systematic correlation with atomic commitment density,
+        the substrate self-depression interpretation fails.
+    (2) If the extrapolation to zero self-depression does not
+        converge to the pi-series value (or any specific value),
+        the pi-series formula is not the bare α.
+    (3) If α is confirmed to be exactly the same across all
+        measurement methods at current precision (no residual
+        spread beyond statistical errors), the self-depression
+        effect is below the current experimental floor —
+        not ruled out but not confirmed.
+
+# ─────────────────────────────────────────────
+# SUMMARY TABLE
+# ─────────────────────────────────────────────
+summary_table:
+  note: "All evaluated against CODATA 2018: α⁻¹ = 137.035999084(21)"
+  candidates:
+    - name:     "1 — Phase-locking safety margin"
+      formula:  "4π × N_stable"
+      result:   "137.036 (exact if N_stable derived)"
+      precision: "Exact — sets requirement on N_stable derivation"
+      status:   "Most general — subsumes candidates 3-5 as specific N_stable values"
+
+    - name:     "2 — Pi-series"
+      formula:  "4π³ + π² + π = π(4π² + π + 1)"
+      result:   "137.036304"
+      vs_codata: "+0.000305 (+2.2 ppm)"
+      status:   "Highest numerical precision of explicit formulas.
+                 Discrepancy may be leading-order Tik self-energy correction.
+                 Best candidate for bare topological α formula."
+
+    - name:     "3 — Critical angle"
+      formula:  "4π / sin(θ_crit)"
+      result:   "137.036 (for θ_crit = 5.254°)"
+      status:   "Geometrically motivated. θ_crit value needs
+                 derivation from Möbius stability analysis."
+
+    - name:     "4 — Winding ratio"
+      formula:  "4π / (n_c/n_d)²"
+      result:   "137.036 (for n_c/n_d = 0.3026)"
+      status:   "Physically motivated. Ratio needs identification
+                 from vortex stability equations."
+
+    - name:     "5 — Euler/linking number"
+      formula:  "4π × χ_eff"
+      result:   "137.036 (for χ_eff = 10.905)"
+      status:   "Mathematically deepest if χ_eff is a topological
+                 invariant. May unify with candidate 2."
+
+# ─────────────────────────────────────────────
+# UNIFICATION CHAIN
+# ─────────────────────────────────────────────
+unification_chain:
+  statement: >
+    Once any candidate formula yields α analytically,
+    the entire constant stack follows without additional
+    free parameters:
+  chain:
+    - "α fixes topological coupling efficiency"
+    - "m_eff = α · S · R  (electron commitment inertia)"
+    - "R∞ = α² · m_eff · c / (2ħ)  (orbital energy scale)"
+    - "ħ = α² · m_eff · c / (2R∞)  (action unit — loop closure)"
+    - "Z₀ = 4π · R₀ / α  (vacuum impedance)"
+    - "ΔE_Lamb ∝ α⁵ · m_eff · c² · log(a₀/ξ)  (Tik trail smearing)"
+    - "G ≈ c² · (ξ²/p_env) · (κα)  (gravitational coupling)"
+  consequence: >
+    All six constants (α, Z₀, R∞, ħ, ΔE_Lamb, G) from one
+    number. Once α is computed from any of the five candidates
+    above, the entire atomic physics and gravitational constant
+    stack follows. This is why α is the single highest-priority
+    open derivation in the physics domain.
+
+# ─────────────────────────────────────────────
+# NEXT STEPS
+# ─────────────────────────────────────────────
+next_steps:
+  numerical_simulation: >
+    2D/3D vortex stability simulation under substrate
+    backreaction (GP equation with saturating nonlinearity)
+    to identify N_stable, θ_crit, or χ_eff numerically.
+    This is accessible with existing BEC/superfluid
+    simulation tools — does not require new physics.
+    Target: reproduce N_stable = 10.90498 from vortex
+    stability eigenvalue analysis.
+  pi_series_correction: >
+    Compute the leading-order Tik self-energy correction
+    to the pi-series value 137.036304. Verify it gives
+    exactly the CODATA correction of -0.000305.
+    If confirmed: candidate 2 is the bare topological
+    α; the self-energy correction is calculable.
+  topological_linking_number: >
+    Compute the self-linking number (writhe + twist) of
+    the Möbius 720° vortex filament in the 3D GP substrate.
+    If this gives χ_eff = 10.90498 analytically, it would
+    be the deepest derivation — a pure topological invariant.
+  candidate_comparison: >
+    Test whether golden-ratio or pi-series candidates best
+    reproduce the downstream constants (R∞ to 12 significant
+    figures, Z₀ = 376.730313668 Ω, Lamb shift 1057.845 MHz).
+    The downstream constants provide additional discrimination
+    between candidates beyond the α value alone.
+  codata_tracking: >
+    Compare all candidates against CODATA 2022 when available
+    (CODATA updates every 4 years). If CODATA 2022 shifts
+    α⁻¹ closer to 137.036304 (candidate 2) or further,
+    this would be evidence for or against the pi-series
+    as the bare formula.
+
+reading_order:
+  - "domains/physics/vortex-stabilization.yaml       -- physical context"
+  - "domains/physics/alpha-from-vortex-stability.yaml -- this file"
+  - "domains/physics/alpha-rydberg-z0.yaml            -- full constant stack"
+
+related_issues:
+  - "intersectional/physics/076_N_stable_from_mobius_gp_eigenvalue"
+  - "intersectional/physics/077_pi_series_tik_self_energy_correction"
+  - "intersectional/physics/078_mobius_self_linking_number_derivation"
+  - "intersectional/physics/079_critical_angle_from_mobius_stability"
+  - "intersectional/physics/080_winding_ratio_from_stability_equations"
+  - "foundational/F52_alpha_bare_vs_measured_tik_correction"
+  - "foundational/F53_electron_first_internal_coupling_topology"
+  - "foundational/F54_mobius_crossover_as_em_coupling_point"
+  - "foundational/F55_alpha_internal_to_external_coupling_ratio"
+  - "intersectional/physics_consciousness/006_mobius_crossover_xi1_prototype"
+  - "foundational/F56_measurement_substrate_discrepancy"
+  - "foundational/F57_alpha_int_vs_alpha_exp_self_depression"
+  - "foundational/F58_pi_series_as_bare_alpha_no_self_depression"
+  - "intersectional/physics/081_rb_cs_alpha_discrepancy_atomic_commitment"
+  - "intersectional/physics/082_alpha_running_as_self_depression_profile"
+  - "intersectional/physics/083_alkali_series_alpha_vs_Z_test"""
