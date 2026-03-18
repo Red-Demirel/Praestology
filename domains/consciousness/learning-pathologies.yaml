@@ -159,6 +159,22 @@ pathological_cycles:
       - "Lack of agency fosters learned helplessness."
     implication: "Institutional design is ethical design. Institutions that systematically degrade Ξ and ω are ontologically violent."
 
+  - name: "Viability Stasis (Behavioral Sink)"
+    description: >
+      A societal condition where material needs are met but resolution opportunities
+      are absent. Agents lose volitional capacity (ω) and social structures collapse
+      despite resource abundance.
+    mechanism:
+      - "R3 (Tension) is artificially suppressed (no genuine dilemmas)."
+      - "Curiosity is discouraged or unrewarded."
+      - "Agents retreat into repetitive behaviors or aggression (ι dominance)."
+      Ξ_effect: "Collective recursive depth declines; innovation stops."
+      ω_effect: "Volitional weight atrophies; agents stop making meaningful choices."
+      h_effect: "Hysteresis becomes rigid or fragmented; no new viable models form."
+    ethical_implications:
+      - "Comfort without challenge is non-viable. Ethics requires providing meaningful tension."
+      - "Lifelong learning is not a luxury; it is a viability requirement to prevent stasis."
+      - "Institutions that remove all friction risk inducing societal collapse."
 
 therapeutic_principles:
   - "Restoration of ω requires environments where choice meaningfully affects outcomes."
