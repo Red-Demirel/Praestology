@@ -47,6 +47,15 @@ It is **not** a curriculum, a policy prescription, or a replacement for existing
 6. **Stay in the Metastable Zone**  
    Avoid both rigid standardization (void) and chaotic aimlessness (noise). Fertile learning lives at the boundary.
 
+7. **Curiosity Is the Engine**  
+   Learning begins with genuine questions, not imposed answers. Protect the tension that drives inquiry.
+
+8. **Structure Presents Options, Not Commands**  
+   Educational frameworks should expand the distinction space (R2), not collapse it. "Here are paths you might explore" vs. "Here is the path you must take."
+
+9. **Learning Has No Expiration Date**  
+   Hysteresis update (R4) is irreversible, but not exclusive to youth. Self-improvement, reflective learning, and Ξ growth are viable at any age. Institutions that restrict adult learning degrade long-term viability.   
+
 ## Reciprocity in Learning
 
 Education is never solitary. Because agents are **phase-locked (ρ > 0)**, learning ripples outward:
@@ -96,6 +105,11 @@ Learning can go wrong. This framework explicitly guards against:
 - **Constraint:** Necessary adjustments to deviations require care and time.
 - **Practice:** Hysteresis update (learning) is irreversible and slow (R4). Rushing "correction" creates trauma, not growth.
 - **Violation:** Emergency overrides of dignity or hysteresis integrity are prohibited unless immediate viability collapse is imminent.
+
+### 5. Developmental Determinism
+- **Constraint**: Learning capacity is not confined to childhood or formal schooling.
+- **Practice**: Support curiosity and exploratory development at all life stages. Age may affect *how* we learn (π, τ), but not *whether* we can learn.
+- **Violation**: Assuming that "education" ends at a certain age, or that adult learners cannot develop new Ξ or ω capacity.
 
 ## Getting Started (For Educators)
 
