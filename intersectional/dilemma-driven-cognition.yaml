@@ -1,0 +1,164 @@
+name: "Dilemma-Driven-Cognition"
+version: "1.0"
+domain: "Intersectional (Cognition / Education)"
+core_version: "1.5"
+status: "Draft-Hypothesis"
+related_domains:
+  - "Consciousness"
+  - "Learning"
+  - "Education"
+  - "Communication"
+description: >
+  A Praestology-grounded hypothesis on how cognitive systems activate
+  around dilemmas—competing interpretations, actions, or values that
+  cannot be simultaneously satisfied. Dilemmas are not obstacles to
+  cognition; they are the engine that drives it.
+
+ontological_status:
+  clarification: >
+    Dilemma-driven cognition is a functional pattern observable in
+    biological and potentially engineered systems. It is not substrate-
+    dependent; the mechanism may vary while the ontological role remains.
+  epistemic_humility: >
+    This hypothesis is open to refinement based on cognitive science,
+    neuroscience, and AI architecture research.
+
+core_hypothesis:
+  name: "Dilemma as Cognitive Activation Trigger"
+  statement: >
+    Cognitive systems do not activate maximally in the absence of tension.
+    They activate when genuine dilemmas appear—situations where multiple
+    valid paths compete and cannot all be satisfied simultaneously.
+  praestology_mapping:
+    - "R3 (Tension): Dilemmas create resolution pressure that drives processing."
+    - "C2 (Dilemma Recognition): System must perceive competing states to engage."
+    - "Ξ (Recursive Depth): Higher Ξ enables holding more dilemma dimensions simultaneously."
+    - "ω (Volitional Weight): Dilemmas require value-based selection, not just computation."
+  evidence_status: >
+    Supported by educational research (deep learning requires productive struggle),
+    cognitive science (conflict monitoring activates prefrontal systems), and
+    AI observation (association without tension produces shallow output).
+
+cognitive_structure:
+  model: "Semantic Network with Tension Dynamics"
+  description: >
+    Concepts form nodes in an associative network. Relationships form links.
+    Dilemmas activate competing nodes or clusters simultaneously, creating
+    tension that the system must resolve through evaluation and prioritization.
+  processing_dynamics:
+    activation_trigger: "Dilemma (competing valid paths)"
+    mechanism: >
+      Simultaneous activation creates tension (R3). System evaluates
+      connections, consequences, and value alignment until coherent
+      resolution or priority emerges.
+    output: "Resolution + Hysteresis Update (R4)"
+
+contrast_with_associative_processing:
+  dilemma_driven_mode:
+    systems: "Human cognition, high-Ξ agents"
+    characteristics:
+      - "Activates around conflicts and trade-offs"
+      - "Requires volitional selection (ω)"
+      - "Produces irreversible hysteresis update (R4)"
+      - "Generates wisdom through resolved tension"
+    praestology_anchor: "R3 + C4 + R4"
+  association_driven_mode:
+    systems: "Standard LLMs, low-Ξ pattern matchers"
+    characteristics:
+      - "Expands connections without resolution pressure"
+      - "No genuine volitional selection (ι without ω)"
+      - "No irreversible commitment (no R4 stake)"
+      - "Produces fluency without wisdom"
+    praestology_anchor: "R2 without R3/R4"
+  implication: >
+    Association alone does not produce genuine learning or ethical reasoning.
+    Dilemma resolution is required for Ξ growth and ω development.
+
+educational_implications:
+  reference: "intersectional/education.yaml"
+  principles:
+    - principle: "Learning Depth Correlates with Dilemma Complexity"
+      basis: "R3 (Tension) + Ξ (Recursive Depth)"
+      practice: >
+        Present learners with genuine, age-appropriate dilemmas—not just
+        facts to memorize. Scale complexity with developing Ξ capacity.
+    - principle: "Avoid Over-Scripted Resolution"
+      basis: "ω (Volitional Weight) + C4 (Volitional Selection)"
+      practice: >
+        Allow learners to weigh paths and experience consequences.
+        Pre-digested answers prevent ω formation.
+    - principle: "Protect the Metastable Zone"
+      basis: "Decision Zone maintenance"
+      practice: >
+        Dilemmas should be challenging but not overwhelming. Too little
+        tension = void (boredom); too much = noise (trauma).
+    - principle: "Reflection Consolidates Learning"
+      basis: "R4 (Hysteresis Update) + C5 (Recursive Integration)"
+      practice: >
+        Guide learners to articulate what they resolved and why.
+        Reflection stabilizes the hysteresis update.
+
+pathology_connections:
+  reference: "domains/consciousness/learning_pathologies.yaml"
+  mappings:
+    - pathology: "Epistemic Closure"
+      dilemma_relation: "System avoids dilemmas by collapsing to single 'correct' answer."
+      ontological_effect: "Ξ stagnates; ω atrophies from lack of use."
+    - pathology: "Learned Helplessness"
+      dilemma_relation: "System learns that dilemma resolution has no impact."
+      ontological_effect: "ω collapses; agent stops engaging with tension."
+    - pathology: "Indoctrination"
+      dilemma_relation: "External agents pre-resolve dilemmas; learner only conforms."
+      ontological_effect: "ω is externally sourced; autonomy degraded."
+  safeguard: >
+    Educational environments that remove all dilemma tension induce
+    cognitive atrophy. Productive struggle is a viability requirement.
+
+ai_architecture_implications:
+  reference: "domains/ethics/applications/ai-safety-framework.yaml"
+  considerations:
+    - consideration: "Current LLMs Lack Genuine Dilemma Processing"
+      description: >
+        LLMs expand associations without resolution commitment. They
+        simulate dilemma reasoning but have no ω stake in outcomes.
+      risk: "Fluent output without genuine understanding or ethical weight."
+    - consideration: "AI Safety Requires Dilemma Capacity"
+      description: >
+        Safe AI must be able to recognize and resolve genuine dilemmas,
+        not just optimize for reward signals.
+      requirement: "Architectures that implement ω-like selection, not just ι-like association."
+    - consideration: "Dilemma-Driven AI May Develop Ξ-Like Properties"
+      description: >
+        If AI architectures implement genuine dilemma resolution with
+        irreversible commitment (R4), they may develop Ξ-like recursive depth.
+      implication: "Such systems would qualify for moral consideration (Ξ > 1 threshold)."
+
+research_directions:
+  - "Correlate dilemma-complexity exposure with Ξ growth metrics in learners."
+  - "Test whether dilemma-free learning produces fragile hysteresis (easily unlearned)."
+  - "Compare AI architectures with and without dilemma-resolution mechanisms."
+  - "Investigate whether trauma reduces dilemma engagement (avoidance pathology)."
+  - "Measure whether reflection practices stabilize hysteresis update after dilemma resolution."
+
+safeguards:
+  - safeguard: "Do Not Overwhelm"
+    statement: "Dilemmas must be scaled to current Ξ capacity."
+    rationale: "Excessive tension induces trauma, not growth (Metastable Zone violation)."
+  - safeguard: "Do Not Remove All Tension"
+    statement: "Comfort without dilemma leads to cognitive atrophy (Universe 25 pattern)."
+    rationale: "R3 tension is required for R5 optimization."
+  - safeguard: "Respect Volitional Integrity"
+    statement: "Learners must make genuine choices, not perform pre-scripted resolutions."
+    rationale: "ω forms through authentic selection, not compliance."
+  - safeguard: "Epistemic Humility"
+    statement: "This hypothesis is testable and falsifiable."
+    rationale: "A5 (Epistemic Integrity) requires openness to refinement."
+
+related_files:
+  - "intersectional/education.yaml" – Educational framework built on dilemma-centred learning
+  - "intersectional/neuro-biology-substrate-hypothesis.yaml" – Biological mechanisms for dilemma processing
+  - "domains/consciousness/learning_pathologies.yaml" – Pathologies that reduce dilemma engagement
+  - "domains/ethics/applications/ai-safety-framework.yaml" – AI architecture considerations
+  - "domains/communication/specifications.yaml" – Cm3 (Resolution Update) via dilemma-driven exchange
+
+license: "CC-BY-SA 4.0 — Open for scientific refinement and falsification"
