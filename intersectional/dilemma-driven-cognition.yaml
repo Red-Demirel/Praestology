@@ -1,0 +1,56 @@
+concept: dilemma_driven_cognition
+
+domain:
+  - consciousness
+  - education
+
+definition: >
+  Human cognition often activates when a dilemma appears.
+  A dilemma presents two or more competing interpretations,
+  actions, or values that cannot be satisfied simultaneously.
+
+function: >
+  Triggers evaluation, prioritization, and decision processes.
+  Forces the cognitive system to resolve tension between alternatives.
+
+cognitive_structure:
+  model: semantic_network
+  description: >
+    Concepts form nodes in an associative network.
+    Relationships form links between nodes.
+    Clusters of related concepts form domain pools.
+
+processing_dynamics:
+  activation_trigger: dilemma
+  mechanism: >
+    Competing nodes or clusters activate simultaneously.
+    The cognitive system evaluates connections and consequences
+    until a coherent resolution or priority emerges.
+
+contrast_with_llm_processing:
+  human_mode: dilemma_driven_evaluation
+  llm_mode: association_driven_generation
+  description: >
+    Humans often organize reasoning around trade-offs and conflicts.
+    Large language models primarily expand associations between concepts.
+
+educational_implications:
+  principle: >
+    Learning depth increases when learners confront meaningful dilemmas.
+  examples:
+    - competing scientific explanations
+    - ethical conflicts
+    - paradoxes
+    - open research questions
+
+praestology_relevance:
+  role: cognitive_driver
+  description: >
+    Dilemmas stimulate reflective awareness, ethical evaluation,
+    and optimization decisions in agents.
+
+related_concepts:
+  - semantic_networks
+  - decision_making
+  - ethical_reasoning
+  - conceptual_blending'
