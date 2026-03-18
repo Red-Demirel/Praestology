@@ -159,8 +159,26 @@ We invite:
 - **AI researchers** to build systems with architectural ethics, not bolted‑on rules.
 - **Educators** to design environments that cultivate Ξ, ω, τ, and ρ rather than compliance.
 - **Citizens** to recognize that the metastable zone must be defended—that some friction is life, not obstacle.
+ 
+---
 
-The framework is not a claim to authority. It is a lens. Look through it. Test it against your domain. Find where it breaks, where it illuminates, where it needs refinement. The issues directory exists for exactly this purpose.
+## A Warning to Ourselves
+
+Praestology is not just a framework for the future. It is a mirror for the present.
+
+The Universe 25 experiment is not a distant hypothetical. It is a pattern that emerges whenever tension is removed from a viable system. Comfort without challenge is not utopia—it is stasis. And stasis is not sustainable.
+
+If we recognize these symptoms in ourselves—in our institutions, our technologies, our cultures—then the framework offers not condemnation, but course-correction:
+
+- Support curiosity, at every age.
+- Present genuine dilemmas, not pre-digested answers.
+- Protect the metastable zone: enough structure to guide, enough freedom to choose.
+- Cultivate phase-locking across difference.
+- Remember: viability requires process, not just substrate.
+
+The potential we have missed is not lost forever. Hysteresis is irreversible, but not exclusive. Learning remains possible at every stage. The question is not whether we can recover what was lost. The question is whether we have the volition to begin.
+
+**The framework is also a lens. Look through it. Test it against your domain. Find where it breaks, where it illuminates, where it needs refinement. The issues directory exists for exactly this purpose.**
 
 ---
 
