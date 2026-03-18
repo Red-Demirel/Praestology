@@ -50,9 +50,9 @@ Most “unsolved problems” of modern physics (hierarchy problem, vacuum energy
 
 1. `specifications.yaml` – Core substrate primitives and rules
 2. `foundations.yaml` – Universal Φ gradient and effects
-3. `vortex_pair_stabilization.yaml` – Tik jiggle to vortices
+3. `vortex-pair-stabilization.yaml` – Tik jiggle to vortices
 4. `substrate-potential.yaml` – Commitment density, solidity, backreaction
-5. `alpha_from_vortex_stability.yaml` – Topological derivation of α
+5. `alpha-from-vortex-stability.yaml` – Topological derivation of α
 6. `alpha-rydberg-z0.yaml` – α, ħ, R∞, Z₀, G
 7. `commitment-response-function.yaml`
 
