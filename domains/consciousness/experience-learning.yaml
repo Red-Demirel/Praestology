@@ -36,6 +36,17 @@ types:
     description: "Updating internal models from observed resolutions of other systems without direct experience. Requires phase-locking (C6)."
     Ξ_required: "Moderate-High (C4 + ρ)"
 
+  - name: "Reflective Learning"
+    description: "Learning from simulated futures without direct experience; wisdom."
+    Ξ_required: "High (C5)"
+    sub_type: "Dream-State Consolidation"
+    mechanism: >
+      During low external tension (sleep), the system runs internal simulations 
+      to reorganize hysteresis (h). Microtubule-mediated transport facilitates 
+      the structural stabilization of these new patterns.
+    function: "Integrates new resolutions with existing models; prunes non-viable paths."
+    ethical_implication: "Sleep deprivation prevents hysteresis update; chronically degraded sleep is a pathology (A2 violation)."
+
 foundational_properties:
   - property: "Hysteresis Irreversibility"
     source: "R4 (Progress)"
