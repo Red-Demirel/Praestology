@@ -43,8 +43,8 @@ types:
       sources, reducing its autonomy.
     mechanism:
       - "External agents repeatedly reward alignment with specific values, punish deviation."
+      - "Information restricting access to viable alternatives, narrowing the dilemma space artificially."  # NEW
       - "R5 selects for conformity; internal modeling atrophies."
-      - "Hysteresis becomes rigid; alternative paths are pruned."
     Ξ_effect: "Stunts recursive depth; system stops questioning, stops modeling alternatives."
     ω_effect: "Volitional weight is externally sourced; the system acts from implanted values, not integrated ones."
     h_effect: "Narrow, repetitive hysteresis; low diversity of experience."
