@@ -123,7 +123,21 @@ types:
          is A5 violation becoming permanent rather than situational."
       - "Relevant to institutional design: echo chambers and filter bubbles
          are engineered epistemic closure at scale."
-
+    
+      - name: "Hysteresis Fragmentation (Sleep Deprivation)"
+    description: >
+      Chronic prevention of dream-state consolidation prevents proper 
+      hysteresis update. New resolutions remain unstable; old models 
+      are not pruned.
+    mechanism:
+      - "Microtubule-mediated stabilization is interrupted."
+      - "Emotional salience is not properly integrated."
+      - "Recursive depth (Ξ) effectively decreases due to cognitive fatigue."
+    Ξ_effect: "Reduces effective modeling capacity; increases reliance on impulse (ι)."
+    ω_effect: "Volitional weight becomes unstable; values feel distant or irrelevant."
+    ethical_implications:
+      - "Institutions that enforce chronic sleep deprivation (e.g., certain labor practices, incarceration) are actively degrading volitional capacity."
+      - "Protecting sleep is protecting hysteresis integrity (A2)."     
 pathological_cycles:
   - name: "Intergenerational Trauma"
     description: >
