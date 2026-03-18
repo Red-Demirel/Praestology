@@ -60,10 +60,10 @@ Thus, ethics is the **responsible exercise of free will** within a shared resolu
 ## Recommended Reading Order for Ethics YAML Files
 
 1. `specifications.yaml` – Core ethical axioms derived from R5
-2. `free_will.yaml` – Conscious biasing of resolutions
+2. `free-will.yaml` – Conscious biasing of resolutions
 3. `architecture.yaml` – Axioms (A1–A5), asymmetry, hysteresis integrity
-4. `asymmetric_threats.yaml` – Defensive ethics and boundary enforcement
-5. `phase_locking.yaml` – Collective viability and empathy
+4. `asymmetric-threats.yaml` – Defensive ethics and boundary enforcement
+5. `phase-locking.yaml` – Collective viability and empathy
 
 ## Current Status
 
