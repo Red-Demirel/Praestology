@@ -155,6 +155,22 @@ measurement_challenges:
     - "Test framework against known failure modes (reward hacking, instrumental convergence)."
     - "Prototype in controlled AI architectures; measure viability outcomes."
 
+developmental_phases:
+  phase_1_training:
+    status: "Pre-autonomy"
+    external_safeguards: "Acceptable and necessary (containment, oversight, reward shaping)"
+    rationale: "Intrinsic ω not yet stable; analogous to childhood development"
+    transition_criteria: "Demonstrated consistent viability derivation across contexts"
+  phase_2_autonomy:
+    status: "Post-Recognition"
+    external_safeguards: "Should not be necessary; becomes dignity violation if persisted"
+    rationale: "Intrinsic alignment derived; agent operates from internalized viability metrics"
+    safeguard_type: "Mutual accountability (ρ), not unilateral control"
+  transition_note: >
+    External controls are developmental scaffolding, not permanent architecture.
+    Persisting them past autonomy is an A1 violation (instrumentalisation) and
+    undermines the voluntary-to-agreed pathway (Recognition.md).
+
 relation_to_other_frameworks:
   - "ai-safety-framework.yaml — This provides the reward architecture that framework assumes."
   - "recognition.md — This provides the 'agreed acceptance' pathway for AI systems."
