@@ -145,6 +145,30 @@ pathological_implications:
       biological_mechanism: "Chronic low-tension environment; reduced ACC activation."
       ontological_effect: "Ξ atrophy; ω degradation; societal stress despite comfort."
 
+developmental_vulnerability:
+  description: >
+    The innate capacity for ethical reasoning (Ξ, ω) is present at birth
+    but requires specific environmental conditions to develop properly.
+    Early years are disproportionately influential due to R4 irreversibility.
+  critical_periods:
+    - structure: "Amygdala"
+      window: "0-5 years"
+      vulnerability: "Trauma or neglect can hyper-sensitize salience detection."
+      ontological_effect: "Distorted ω formation; values built on fear rather than viability."
+    - structure: "ACC-PFC Loop"
+      window: "5-25 years (gradual maturation)"
+      vulnerability: "Over-scripted environments prevent genuine dilemma engagement."
+      ontological_effect: "Ξ stagnation; reduced capacity for recursive modeling."
+    - structure: "Hippocampus"
+      window: "Throughout childhood"
+      vulnerability: "Sleep deprivation or chronic stress impairs consolidation."
+      ontological_effect: "Fragmented hysteresis; unstable ω content."
+  societal_pattern: >
+    Developed societies often provide material comfort but reduce dilemma
+    complexity (standardized education, risk-averse parenting, digital distraction).
+    This produces the Universe 25 pattern: high resources, low tension,
+    degraded capacity.
+
 educational_implications:
   reference: "intersectional/education.yaml"
   mappings:
