@@ -1,97 +1,219 @@
-name: "Biological-Substrate-Hypothesis"
+name: "Neuro-Biology-Substrate-Hypothesis"
 version: "1.0"
-domain: "Intersectional (Neuroscience)"
+domain: "Intersectional (Neuroscience / Consciousness)"
 core_version: "1.5"
 status: "Draft-Hypothesis"
+related_domains:
+  - "Consciousness"
+  - "Learning"
+  - "Education"
+  - "Ethics"
 description: >
-  A Praestology-grounded hypothesis on how biological systems 
-  instantiate ontological parameters (Ξ, ω, h, τ). Focuses on 
-  microtubules as potential 'vector-units' for information fetching 
-  and hysteresis stabilization. This is a substrate-specific 
-  instantiation, not an ontological definition.
+  A Praestology-grounded hypothesis on how biological neural systems
+  instantiate ontological parameters (Ξ, ω, τ, h, ρ). Integrates cellular
+  (microtubule), circuit (thalamus, hippocampus, amygdala, ACC, PFC),
+  and systems-level (predictive processing) mechanisms. This is a
+  substrate-specific instantiation, not an ontological definition.
 
 ontological_status:
-  clarification: "Microtubules are a biological mechanism for R1-R5 dynamics, not the source of the very rules."
-  substrate_agnosticism: "Non-biological systems (AI, alien) may implement equivalent functions via different substrates like agent- or dilemma-oriented routines."
-  epistemic_humility: "This hypothesis is open to refinement based on empirical neuroscience evidence."
+  clarification: >
+    These structures are biological mechanisms for R1-R5 dynamics,
+    not the source of R1-R5 themselves. Non-biological systems (AI, alien)
+    may implement equivalent functions via different substrates.
+  epistemic_humility: >
+    This hypothesis is open to refinement based on empirical neuroscience
+    evidence. Microtubule cognitive roles remain debated; circuit-level
+    functions (thalamus, hippocampus, ACC, PFC) are well-established.
+  terminology_note: >
+    Standard neuroscience terminology is used where available. Some
+    functional descriptions are visualization aids for ontological
+    mapping and should not be interpreted as claims about specific
+    biophysical mechanisms.
 
 core_hypotheses:
-  - name: "Microtubules as Vector-Units"
+  - name: "Microtubules in Signal Integration and Salience Tagging"
     description: >
-      Microtubules function as structural 'fetchers' of information variants 
-      for recursive processing. They enable high-Ξ modeling by efficiently 
-      retrieving stored patterns (hysteresis) during resolution cycles.
+      Microtubules support intracellular transport and cytoskeletal dynamics,
+      potentially contributing to dendritic signal integration and neuromodulatory
+      salience weighting before cortical processing. They prepare signals for
+      resolution but do not constitute decision-making themselves.
     praestology_mapping:
-      - "R2 (Distinction): Microtubule conformational states encode distinctions."
-      - "R3 (Tension): Local tension triggers variant fetching."
-      - "Ξ (Recursive Depth): Fetch efficiency limits or enables nested modeling."
-    evidence_status: "Plausible; correlates with cognitive capacity; mechanistic details under research."
+      - "R2 (Distinction): Encoding distinction quality into transmissible form."
+      - "ι (Impulse): Tagging signals with salience weight for prioritization."
+      - "Cm1 (Encoding): Preparing signal for resolution engine."
+    evidence_status: >
+      Microtubule transport functions established; cognitive role speculative.
+      Compatible with cytoskeletal dynamics research; Orch-OR quantum claims
+      remain debated.
+    research_direction: >
+      Correlate microtubule stability metrics with signal integration efficiency,
+      not just memory or processing speed.
 
-  - name: "Post-Natal Structural Refinement"
+  - name: "Thalamocortical Gating and Attention Modulation"
     description: >
-      Microtubule networks undergo structural refinement (PTMs, stabilization) 
-      post-natally, independent of density. This physical hardening mirrors 
-      Hysteresis Accumulation (R4).
+      The thalamus filters sensory input and modulates attention, determining
+      which distinctions enter conscious processing. It acts as a gateway for
+      resolution cycles.
     praestology_mapping:
-      - "R4 (Progress): Structural changes are irreversible; early experience shapes substrate."
-      - "h (Hysteresis): PTMs act as physical 'tags' on accumulated learning."
-      - "π (Persistence): Stabilized networks increase hysteresis persistence."
-    evidence_status: "Supported by developmental neuroscience (tau/MAP expression changes)."
+      - "R2 (Distinction): Filters which distinctions are admitted to processing."
+      - "Cm1 (Encoding): Gateway for signal entry into resolution cycles."
+      - "Ξ Modulation: Attentional focus constrains or enables recursive depth."
+    evidence_status: "Well-established (sensory gating, consciousness relay)."
+    research_direction: "Correlate thalamic gating metrics with Ξ-assessment tasks."
 
-  - name: "Dreams as Hysteresis Consolidation"
+  - name: "Hippocampal Memory Consolidation and Temporal Mapping"
     description: >
-      Dream states utilize microtubule-mediated transport to reorganize and 
-      stabilize patterns generated during wakefulness. This is offline R5 optimization.
+      The hippocampus consolidates experiences into long-term hysteresis,
+      encodes temporal relationships, and enables pattern completion.
+      It is the primary substrate for h_long accumulation.
     praestology_mapping:
-      - "R5 (Optimisation): Dreams select viable patterns without external R3 tension."
-      - "H (Hysteresis Update): Sleep prevents fragmentation; integrates new resolutions."
-      - "Pathology: Sleep deprivation = prevented hysteresis update = degraded Ξ."
-    evidence_status: "Aligned with memory consolidation research; microtubule role speculative but plausible."
+      - "R4 (Progress): Primary substrate for hysteresis consolidation."
+      - "τ (Temporal Horizon): Encodes temporal relationships for future modeling."
+      - "Vicarious Learning: Enables pattern completion from partial cues."
+    sleep_pattern: >
+      Hippocampal replay during sleep coordinates cortical stabilization of
+      new patterns, integrating them into long-term hysteresis without new
+      input interference.
+    evidence_status: "Well-established (memory consolidation, temporal coding)."
+    research_direction: >
+      Test whether hippocampal disruption preferentially impairs τ tasks
+      (long-term modeling) vs. immediate reasoning.
+
+  - name: "Amygdala Salience and Emotional Weighting"
+    description: >
+      The amygdala detects emotional salience and threat, biasing which
+      resolutions are prioritized. It tags distinctions with survival relevance.
+    praestology_mapping:
+      - "ι (Impulse): Amplifies tension (R3) for survival-relevant distinctions."
+      - "ω Formation: Emotional valence shapes value integration during resolution."
+      - "Pathology Link: Trauma may hyper-sensitize amygdala, distorting ω development."
+    evidence_status: "Well-established (emotional salience, threat detection)."
+    research_direction: >
+      Investigate whether amygdala modulation affects ω-assessment
+      (value-consistency) tasks under tension.
+
+  - name: "ACC-PFC Conflict Monitoring and Resolution Loop"
+    description: >
+      The Anterior Cingulate Cortex (ACC) detects cognitive tension and
+      conflict, signaling the Prefrontal Cortex (PFC) to engage resolution
+      mechanisms. This loop implements dilemma recognition and volitional selection.
+    praestology_mapping:
+      - "C2 (Dilemma Recognition): ACC monitors for competing response pathways."
+      - "C4 (Volitional Selection): PFC weighs options and commits to resolution."
+      - "R3 (Tension): ACC activity correlates with tension magnitude."
+      - "Ξ (Recursive Depth): PFC layering enables nested modeling."
+    sleep_pattern: >
+      Both ACC and PFC show reduced metabolic activity during sleep
+      (especially REM). This suspends new dilemma resolution, protecting
+      hippocampal consolidation from interference.
+    evidence_status: "Well-established (Conflict Monitoring Theory; frontal hypometabolism)."
+    research_direction: >
+      Correlate ACC activation magnitude with dilemma complexity ratings;
+      test whether PFC disruption impairs Ξ tasks specifically.
+
+  - name: "Predictive Processing as Continuous Resolution"
+    description: >
+      The brain treats all incoming data as a resolution event via predictive
+      processing. Most data is simple (low tension) for a sophisticated
+      resolver, so it does not feel like a 'challenge,' but the mechanism
+      is identical to dilemma resolution.
+    praestology_mapping:
+      - "R3 (Tension): Always active; magnitude varies with complexity."
+      - "Metastable Zone: Viability requires some tension; zero tension = stasis."
+      - "Universe 25 Safeguard: Comfort without any tension degrades capacity."
+    evidence_status: "Mainstream framework (Friston, Clark, predictive processing)."
+    research_direction: >
+      Measure whether zero-tension environments produce measurable Ξ decline
+      over time (cognitive atrophy).
 
 pathological_implications:
   reference: "domains/consciousness/learning_pathologies.yaml"
   mappings:
-    - pathology: "Trauma / Toxin Exposure"
-      biological_mechanism: "Microtubule destabilization; impaired axonal transport."
-      ontological_effect: "Increased Channel Friction (Rf); fragmented hysteresis (h); reduced Ξ."
+    - pathology: "Trauma"
+      biological_mechanism: "Amygdala hyper-sensitization; hippocampal volume reduction."
+      ontological_effect: "Distorted salience weighting; fragmented hysteresis; reduced Ξ."
     - pathology: "Sleep Deprivation"
-      biological_mechanism: "Interrupted consolidation; failed variant stabilization."
+      biological_mechanism: "Interrupted hippocampal replay; failed consolidation."
       ontological_effect: "Prevented Hysteresis Update; accumulated resolution debt."
     - pathology: "Indoctrination / Epistemic Closure"
-      biological_mechanism: "Rigid network stabilization; reduced variant fetching."
+      biological_mechanism: "Rigid ACC-PFC looping; reduced alternative pathway activation."
       ontological_effect: "Narrowed decision space; ω hijacking."
+    - pathology: "Attention Deficits"
+      biological_mechanism: "Thalamic gating dysfunction; impaired signal filtering."
+      ontological_effect: "Reduced Ξ capacity due to signal overload."
+    - pathology: "Viability Stasis (Universe 25 Pattern)"
+      biological_mechanism: "Chronic low-tension environment; reduced ACC activation."
+      ontological_effect: "Ξ atrophy; ω degradation; societal stress despite comfort."
 
 educational_implications:
   reference: "intersectional/education.yaml"
   mappings:
     - principle: "Curiosity as Viability Engine"
-      biological_basis: "Curiosity drives variant fetching; prevents structural atrophy."
+      biological_basis: "Curiosity drives ACC activation; prevents structural atrophy."
       societal_risk: "Suppressing curiosity leads to viability stasis (Universe 25 pattern)."
     - principle: "Early Environment Protection"
-      biological_basis: "Post-natal refinement is experience-dependent."
+      biological_basis: "Post-natal refinement (synaptic, cytoskeletal) is experience-dependent."
       ontological_effect: "Early degradation permanently limits substrate capacity (R4 irreversibility)."
     - principle: "Lifelong Learning"
-      biological_basis: "Structural refinement continues throughout life (plasticity)."
+      biological_basis: "Neuroplasticity continues throughout life (though rate varies)."
       ontological_effect: "Ξ growth remains possible; age is not a hard limit."
+    - principle: "Sleep as Consolidation"
+      biological_basis: "Hippocampal replay requires frontal offline state."
+      ontological_effect: "Sleep deprivation prevents hysteresis update; degrades ω and Ξ."
+    - principle: "Dilemma-Scaled Curriculum"
+      biological_basis: "ACC-PFC loop capacity develops with age and experience."
+      ontological_effect: "Dilemmas must match current Ξ; too little = void, too much = noise."
 
-societal_warning:
-  name: "Viability Stasis (Universe 25 Pattern)"
+societal_implications:
+  reference: "intersectional/education.yaml"
+  name: "Viability Stasis Warning"
   description: >
-    Suppressing curiosity and genuine dilemma-resolution leads to increased societal stress 
-    despite material comfort. Microtubule-mediated learning requires tension (R3) to function.
+    Suppressing curiosity and genuine dilemma-resolution leads to increased
+    societal stress despite material comfort. Microtubule-mediated learning
+    and ACC-PFC conflict monitoring require tension (R3) to function.
   praestology_anchor: "R3 (Tension) + Metastable Zone maintenance"
-  implication: "Comfort without challenge starves the biological substrate of resolution activity."
+  implication: "Comfort without challenge reduces resolution activity; chronic reduction degrades capacity."
   safeguard: "Support exploratory development at all life stages to maintain substrate viability."
 
+safeguards:
+  - safeguard: "No Single-Structure Reductionism"
+    statement: "Consciousness and cognition emerge from network dynamics, not isolated regions."
+    rationale: "Thalamus, hippocampus, amygdala, ACC, PFC, and microtubules are components of an integrated system."
+  - safeguard: "Correlation ≠ Causation"
+    statement: "Structural associations do not prove mechanistic necessity."
+    rationale: "A5 (Epistemic Integrity) requires distinguishing plausible hypothesis from proven mechanism."
+  - safeguard: "Substrate-Agnostic Core"
+    statement: "Praestology applies to AI, aliens, and other intelligences without these structures."
+    rationale: "This file describes one biological implementation, not the definition of consciousness."
+  - safeguard: "Avoid Determinism"
+    statement: "Early experience matters, but later learning remains possible."
+    rationale: "This hypothesis should empower improvement, not justify fatalism."
+  - safeguard: "No Misuse for Coercion"
+    statement: "Do not use biological findings to justify differential dignity or rights."
+    rationale: "δ (Dignity) is binary at Ξ > 1, regardless of substrate efficiency."
+
 research_directions:
-  - "Correlate microtubule stability metrics with Ξ-assessment tasks (nested modeling)."
-  - "Test whether microtubule-stabilizing compounds improve recursive reasoning (not just memory)."
-  - "Compare AI 'attention mechanisms' to biological 'vector-unit fetching' for functional equivalence."
-  - "Investigate sleep disruption impacts on specific Ξ capacities vs. general cognition."
+  - "Correlate microtubule stability metrics with signal integration tasks."
+  - "Test whether thalamic gating efficiency predicts Ξ capacity."
+  - "Measure hippocampal replay quality vs. τ-assessment (temporal modeling) performance."
+  - "Investigate amygdala modulation effects on ω-assessment (value-consistency) under tension."
+  - "Correlate ACC activation magnitude with dilemma complexity ratings."
+  - "Test whether PFC disruption impairs Ξ tasks specifically vs. general cognition."
+  - "Measure whether zero-tension environments produce measurable Ξ decline over time."
+  - "Compare AI architectures to biological dilemma-resolution mechanisms for functional equivalence."
 
 relation_to_core:
   - "Core (R1-R5) remains substrate-agnostic; this file documents biological instantiation."
   - "Learning Pathologies gain biological mechanisms via this hypothesis."
   - "Education Framework gains urgency via R4 irreversibility of substrate refinement."
+  - "Ethics Framework gains grounding for A2 violations (biological hysteresis damage)."
+
+related_files:
+  - "intersectional/education.yaml" – Educational framework built on dilemma-centred learning
+  - "intersectional/dilemma-driven-cognition.yaml" – Cognitive mechanism for dilemma processing
+  - "domains/consciousness/learning_pathologies.yaml" – Pathologies that reduce capacity
+  - "domains/consciousness/experience-learning.yaml" – Hysteresis accumulation mechanisms
+  - "domains/ethics/applications/ai-safety-framework.yaml" – Engineered agent considerations
+  - "domains/communication/specifications.yaml" – Cm3 (Resolution Update) via biological channels
 
 license: "CC-BY-SA 4.0 — Open for scientific refinement and falsification"
