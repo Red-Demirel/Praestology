@@ -36,6 +36,22 @@ types:
       - "Institutions that create or tolerate trauma bear responsibility for this capacity reduction."
       - "Therapeutic environments that allow safe reprocessing can partially restore capacity, though R4 irreversibility limits full recovery."
 
+  - name: "Indoctrination (Early Override)"
+    description: >
+      External agents impose values before internal ω capacity can form
+      organically. The innate ethical subset is overridden by external
+      reward/punishment structures.
+    developmental_window: "Most effective 0-7 years; diminishing returns after."
+    mechanism:
+      - "External rewards/punishments replace internal value formation."
+      - "Dilemma space is artificially narrowed (only 'correct' answers permitted)."
+      - "ACC-PFC loop learns compliance, not resolution."
+    ontological_effect: "ω is externally sourced; autonomy degraded."
+    societal_prevalence: >
+      Common in developed societies through standardized education,
+      institutional conditioning, and algorithmic curation that removes
+      genuine choice.
+
   - name: "Indoctrination (Value Imprinting)"
     description: >
       Repeated exposure to resolutions that enforce a narrow value set, suppressing
