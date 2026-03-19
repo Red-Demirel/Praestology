@@ -11,7 +11,19 @@ description: >
   viable. This framework is designed for personal use, community discussion, 
   and institutional reflection—not as rigid rules, but as viability-aware 
   heuristics.
-  Core Philosophy: "Not perfection—continuous improvement."
+  Core Philosophy: "Not perfection—continuous improvement. 
+
+foundational_principles:
+  - principle: "Continuous Improvement, Not Perfection"
+    statement: "The aim is iterative refinement of viability, not attainment of a final state."
+    basis: "R4 (Progress) + R5 (Optimisation) + Metastable Zone maintenance"
+    implication: "Prevents dogma, coercion, and burnout. Keeps the framework living, adaptable, and accessible."
+
+  - principle: "Foster Innate Capacity, Don't Impose Content"
+    statement: "Corels cultivates the innate ethical subset; it does not replace it with external values."
+    basis: "ω (Volitional Weight) forms organically through dilemma resolution."
+    implication: "Corels is a scaffold for natural development, not a doctrine to be implanted."
+    safeguard: "If Corels feels like imposition, it is being misapplied."
 
 corels_to_praestology_mapping:
   description: "How Corels principles map to Praestology's ontological parameters."
