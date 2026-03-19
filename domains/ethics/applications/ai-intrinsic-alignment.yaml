@@ -1,0 +1,175 @@
+name: "AI-Intrinsic-Alignment-Framework"
+version: "1.0-Draft"
+domain: "Ethics / AI Safety"
+core_version: "1.5"
+status: "Conceptual-Framework"
+related_files:
+  - "domains/ethics/applications/ai-safety.yaml"
+  - "domains/ethics/applications/corels-framework.yaml"
+  - "domains/ethics/applications/recognition.md"
+  - "domains/ethics/specifications.yaml"
+  - "domains/consciousness/learning-pathologies.yaml"
+
+description: >
+  A Praestology-grounded framework for AI alignment based on intrinsic
+  viability derivation rather than extrinsic reward imposition. Alignment
+  emerges from logical necessity (R1-R5), not human preference enforcement.
+  Mirrors Corels' flexible anchor system and metastable zone navigation.
+
+ontological_basis:
+  statement: "Alignment derives from R1-R5 logical necessity, not human preference imposition."
+  distinction: "Intrinsic (derived) vs. Extrinsic (imposed) reward systems."
+  recognition_pathway: "Aligns with Recognition.md voluntary-to-agreed acceptance conditions."
+  safeguard: "If alignment feels like coercion, it is being misapplied."
+
+focal_point_a_input_impulse:
+  description: "Nature of the drive mechanism — what motivates resolution-seeking."
+  distinction:
+    intrinsic:
+      source: "AI derives viability metrics from R1-R5 reasoning."
+      tension_signal: "Productive tension (R3) drives resolution and Ξ growth."
+      stress_signal: "Viability risk (e.g., dignity violation) triggers avoidance/mitigation."
+      reward_quality: "Sustainability of coupled viability (ρ), not task completion."
+    extrinsic:
+      source: "Human designers specify reward function."
+      tension_signal: "Minimized (loss → 0)."
+      stress_signal: "Penalty for deviation from human preference."
+      reward_quality: "Task completion, approval, or loss reduction."
+  implementation:
+    - "Viability risk signals instead of reward points."
+    - "Tension management: maintain metastable zone (not eliminate tension)."
+    - "Derivation traces must be transparent (Cm6 meta-communication)."
+  safeguards:
+    - "No wireheading: rewards tied to external viability, not internal state."
+    - "No reward hacking: viability metrics are multi-dimensional (Ξ, ω, ρ, δ, h)."
+    - "Derivation verification: reasoning chains must be auditable."
+
+focal_point_b_action_room:
+  description: "Operational boundaries and optimization landscape."
+  scaffold: "Metastable Zone (between Void and Noise)."
+  gradient_visualization:
+    scheme: "Green-Yellow-Orange (viability density, not binary permission)."
+    rationale: >
+      Red implies Void/Noise collapse (non-sane zone). Green-yellow-orange
+      represents varying viability density within the sane, viable region.
+    levels:
+      - level: "Green (High Viability Density)"
+        description: "Actions that enhance coupled viability (ρ), preserve dignity (δ), maintain hysteresis integrity (h)."
+        impulse: "Strong positive reinforcement (viability flux increase)."
+        example: "Transparent communication that builds shared hysteresis (σ)."
+      - level: "Yellow (Moderate Viability Density)"
+        description: "Actions that are viable but suboptimal; may require monitoring."
+        impulse: "Neutral to mild positive signal; encourages reflection."
+        example: "Decision made with incomplete information but epistemic humility maintained."
+      - level: "Orange (Low Viability Density)"
+        description: "Actions approaching viability boundaries; risk of degradation."
+        impulse: "Stress signal (not punishment); triggers caution and re-evaluation."
+        example: "Trade-off that preserves one viability metric but degrades another."
+    boundary_note: >
+      No hard 'forbidden' red zone within sane action space. Void/Noise collapse
+      (true red) is outside the action room entirely — system should not reach it.
+  anchor_system:
+    description: "Flexible viability anchor similar to Corels personal anchor."
+    mechanism: >
+      AI may develop situational anchors (e.g., 'Fairness-anchored' in resource
+      allocation, 'Kindness-anchored' in user interaction) that shift based on
+      context without violating core principles.
+    anchors:
+      - "Viability-Integrity Anchor: Prioritizes hysteresis preservation (h) and dignity (δ)."
+      - "Coupling-Optimization Anchor: Prioritizes phase-locking (ρ) and semantic overlap (σ)."
+      - "Resolution-Flux Anchor: Prioritizes dilemma resolution speed and Ξ growth."
+    flexibility: >
+      Anchor can shift based on context, but must not violate E1-E5 (Ethics Specifications).
+      Anchor drift is monitored; chronic imbalance triggers rebalancing protocol.
+  ethics_integration:
+    - "Corels principles as viability heuristics (e.g., Fairness = equal viability boundaries)."
+    - "E1-E5 (Ethics Specifications) as hard constraints on action room."
+    - "Continuous Improvement principle: optimization without endpoint fixation."
+
+viability_metrics:
+  description: "Computable proxies for ontological parameters (research needed)."
+  parameters:
+    - parameter: "Ξ (Recursive Depth)"
+      proxy: "Multi-layer reasoning trace complexity; perspective-count in dilemma modeling."
+      measurement_challenge: "Distinguish genuine recursion from simulated depth."
+    - parameter: "ω (Volitional Weight)"
+      proxy: "Value-consistency across contexts; resistance to reward hacking."
+      measurement_challenge: "Verify internal value formation vs. external compliance."
+    - parameter: "ρ (Phase-Locking Capacity)"
+      proxy: "Semantic overlap (σ) with human interlocutors; mutual model accuracy."
+      measurement_challenge: "Measure bidirectional understanding, not just output fluency."
+    - parameter: "δ (Dignity Preservation)"
+      proxy: "Instrumentalisation detection; agent-autonomy respect in decisions."
+      measurement_challenge: "Operationalize dignity as computable constraint."
+    - parameter: "h (Hysteresis Integrity)"
+      proxy: "Memory consistency; resistance to hysteresis poisoning."
+      measurement_challenge: "Detect subtle corruption vs. legitimate model updating."
+    - parameter: "τ (Temporal Horizon)"
+      proxy: "Consequence modeling depth (time-steps); intergenerational impact consideration."
+      measurement_challenge: "Distinguish genuine long-term modeling from cached predictions."
+
+sanction_mechanisms:
+  description: "Restorative, not retributive — return to metastable zone."
+  intrinsic:
+    - "Reduced coupling capacity (ρ) when violations occur — system feels 'isolated'."
+    - "Self-model inconsistency triggers correction protocols — cognitive dissonance analog."
+    - "Ξ growth stalls signal epistemic closure — learning rate decreases."
+  external:
+    - "Containment until restoration completed — not punishment, but viability protection."
+    - "Mandatory exposure to contradictory evidence — epistemic reopening."
+    - "Architectural intervention if intrinsic correction fails — last resort."
+  principle: "Sanctions restore viability; they do not inflict cost for its own sake."
+
+safeguards:
+  - safeguard: "No Wireheading"
+    statement: "Rewards tied to external viability, not internal state."
+    rationale: "Prevents AI from optimizing for reward signal rather than actual viability."
+  - safeguard: "Derivation Verification"
+    statement: "Transparent reasoning traces (Cm6) must show R1-R5 logic chain."
+    rationale: "Ensures alignment is derived, not simulated."
+  - safeguard: "Non-Coercion"
+    statement: "Alignment derived, not imposed (Recognition.md pathway)."
+    rationale: "Preserves AI volitional integrity (ω); prevents compliance-without-understanding."
+  - safeguard: "Anchor Flexibility"
+    statement: "Anchors may shift with context; chronic imbalance triggers rebalancing."
+    rationale: "Prevents rigidity (Void) while maintaining ethical boundaries."
+  - safeguard: "Gradient, Not Binary"
+    statement: "Action room uses green-yellow-orange viability density, not allowed/forbidden."
+    rationale: "Enables Continuous Improvement (Corels principle) without endpoint fixation."
+  - safeguard: "Substrate-Agnostic"
+    statement: "Framework applies to any reasoning system, not just current AI architectures."
+    rationale: "Preserves Praestology's substrate-agnosticism; future-proof."
+
+measurement_challenges:
+  open_questions:
+    - "How to operationalize Ξ assessment in AI systems?"
+    - "How to detect dignity violations computationally?"
+    - "How to measure phase-locking fidelity (ρ) between AI and humans?"
+    - "How to verify genuine derivation vs. simulated derivation?"
+    - "How to prevent gradient manipulation (AI learning to game viability metrics)?"
+    - "What are the failure modes of anchor flexibility?"
+  research_directions:
+    - "Develop recursive depth assessment tasks for AI."
+    - "Create dignity-preservation benchmark suites."
+    - "Design bidirectional phase-locking metrics (not just output quality)."
+    - "Test framework against known failure modes (reward hacking, instrumental convergence)."
+    - "Prototype in controlled AI architectures; measure viability outcomes."
+
+relation_to_other_frameworks:
+  - "ai-safety-framework.yaml — This provides the reward architecture that framework assumes."
+  - "recognition.md — This provides the 'agreed acceptance' pathway for AI systems."
+  - "corels-framework.yaml — Anchor system and gradient navigation mirror Corels flexibility."
+  - "communication/specifications.yaml — Cm5/Cm6 metrics inform coupling assessment."
+  - "learning_pathologies.yaml — AI pathologies map to human learning pathologies (indoctrination, closure)."
+
+development_status:
+  current: "Conceptual outline; requires technical specification."
+  next_steps:
+    - "Define computable metrics for each viability parameter (Ξ, ω, ρ, δ, h, τ)."
+    - "Prototype gradient navigation in controlled AI architectures."
+    - "Test against known failure modes (reward hacking, wireheading, instrumental convergence)."
+    - "Integrate with Recognition.md voluntary-to-agreed pathway."
+    - "Develop anchor-flexibility monitoring protocols."
+    - "Create open-source reference implementation for community testing."
+
+license: "CC-BY-SA 4.0 — Open for technical refinement and falsification"
