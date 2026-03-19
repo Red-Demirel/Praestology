@@ -49,6 +49,31 @@ core_hypotheses:
       Correlate microtubule stability metrics with signal integration efficiency,
       not just memory or processing speed.
 
+  - name: "Microtubules as Dynamic Waveguides (Interference-Based Processing)"
+    description: >
+      Microtubule lattices function as distributed, tunable waveguides supporting
+      multiple oscillatory modes. Sensory, emotional, and semantic inputs propagate
+      as superimposed wave packets. Memory and cognition emerge from interference
+      patterns (constructive/destructive) at lattice junctions and MAP-binding sites.
+    praestology_mapping:
+      - "R2 (Distinction): Interference patterns encode distinct representations."
+      - "R3 (Tension): Dissonant interference manifests as cognitive conflict or emotional tension."
+      - "R4 (Progress): Resonant amplification stabilizes patterns (hysteresis consolidation)."
+      - "Cm1-Cm5 (Communication): Internal signal propagation and binding within substrate."
+      - "h (Hysteresis): Interference patterns are the physical instantiation of accumulated resolution."
+    relationship_to_salience_tagging: >
+      Wavelet processing and salience modulation are complementary, not competing.
+      Salience tags (neuromodulatory influence) modulate wavelet properties
+      (amplitude, frequency, phase). Wavelets implement the transmission and binding
+      of tagged information. Both are required for complete signal processing.
+    evidence_status: >
+      Plausible classical biophysical mechanism. Avoids quantum decoherence criticisms.
+      Aligns with known neural oscillations (EEG bands) and cytoskeletal mechanical properties.
+      Specific microtubule waveguide function remains hypothetical.
+    research_direction: >
+      Measure whether microtubule disruption affects neural oscillation coherence.
+      Test whether memory recall correlates with resonant frequency matching.
+
   - name: "Thalamocortical Gating and Attention Modulation"
     description: >
       The thalamus filters sensory input and modulates attention, determining
