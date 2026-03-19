@@ -28,8 +28,12 @@ If these mechanisms play the roles described here, it has implications for:
 ## Key Insights
 
 | Concept | Simple Explanation | Ontological Basis |
-|---------|-----------------|-------------------|
+|
+
+| Concept | Simple Explanation | Ontological Basis |
+|---------|-------------------|-------------------|
 | **Signal Integration** | Microtubules help merge and tag information with "importance" before cortical processing. | R2 (Distinction) + ι (Impulse/Salience) |
+| **Wavelet Processing** | Microtubules transmit signals as oscillatory waves that can interfere constructively or destructively. | Cm1 (Encoding) + R3 (Tension as dissonance) |
 | **Sensory Gating** | The thalamus filters what enters conscious awareness, affecting attention and depth. | R2 (Distinction) + Ξ (Recursive Depth) |
 | **Memory Consolidation** | The hippocampus stabilizes experiences into long-term capacity, especially during sleep. | R4 (Irreversibility) + Hysteresis |
 | **Emotional Weighting** | The amygdala tags information with survival relevance, biasing which resolutions matter. | ι (Impulse) + ω (Volitional Weight) |
@@ -68,6 +72,11 @@ If these mechanisms play the roles described here, it has implications for:
 ## Safeguards & Warnings
 
 ⚠️ **This is not proven science.** Microtubule cognitive roles remain debated. Circuit-level functions (thalamus, hippocampus, ACC, PFC) are well-established, but their Praestology mapping is hypothesis. Treat this as a working model, not established fact.
+
+⚠️ **Classical vs. Quantum:** This hypothesis proposes classical wave mechanics 
+(oscillations, interference), not quantum coherence. This avoids decoherence 
+criticisms while retaining computational richness. Treat as biophysical hypothesis, 
+not proven mechanism.
 
 ⚠️ **Do not reduce persons to biology.** Praestology's ethical framework (dignity, rights) applies regardless of substrate mechanism. A person's worth does not depend on their neural efficiency.
 
