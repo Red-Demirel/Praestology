@@ -1,0 +1,640 @@
+# domains/physics/substrate-ground-state.yaml
+name: "Substrate Ground State — Space Is the Substrate"
+version: "1.0 — Identity of Empty Space with Substrate; Cryogenic Confirmation;
+          Michelson-Morley Closure"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Foundational — conceptually complete; cryogenic confirmation
+         argument established; open: ground-state Tik amplitude
+         derivation"
+updated: "2026-03-20"
+
+description: >
+  This file addresses the single most persistent misreading of the
+  Praestology substrate: the intuition that the substrate is something
+  existing within a prior emptiness — a medium in space, rather than
+  space itself.
+
+  The correct statement is: what we experience and measure as empty
+  space IS the substrate in its least committed state. There is no
+  other emptiness. There is no prior container. Space is not a void
+  that the substrate fills. Space is the three-dimensional resolution
+  structure of the substrate, derived from R5. The substrate does not
+  occupy space — spatial extension is what the substrate's distinctions
+  look like from inside a resolution sequence.
+
+  This is not a semantic preference. It has physical consequences that
+  distinguish the framework from all prior medium-in-space theories
+  (superfluid vacuum theory, analogue gravity, aether models). Those
+  theories put a superfluid in space and derive field properties from it.
+  Praestology identifies space with the substrate and derives the
+  properties of space itself from R1-R5. The difference is categorical.
+
+  The cryogenic argument: cooling a material does not approach absolute
+  zero of the material — it approaches the substrate's own ground state
+  from above, with the material's committed topology as the only
+  remaining departure from it. Superfluidity and superconductivity are
+  not exotic low-temperature phenomena. They are what you observe when
+  a material's committed topology has been reduced enough that the
+  substrate's own ground-state properties — zero viscosity, coherent
+  phase propagation, quantized vortex topology — dominate. Every
+  cryogenic laboratory is measuring the properties of space itself.
+  This is not metaphor. It is a literal physical claim.
+
+dependency_map:
+  requires:
+    - "domains/physics/substrate-potential.yaml    -- φ field as primary description;
+                                                      η = φ/φ_max; commitment density"
+    - "domains/physics/specifications.yaml         -- R1-R5; dimensionality from R5;
+                                                      Tik background; cosmos medium"
+    - "domains/physics/foundations.yaml            -- commitment stress; impenetrability;
+                                                      four pillars"
+    - "domains/physics/bridge-function.yaml        -- η as the single bridge variable"
+  provides_to:
+    - target: "domains/physics/specifications.yaml"
+      via: "Grounds the 'cosmos medium' section in the identity of space and substrate;
+            resolves the container-medium misreading at the foundational level"
+    - target: "domains/physics/quantum-foundation.yaml"
+      via: "Vacuum structure is substrate ground state — vacuum energy, zero-point
+            fluctuations, and Casimir effect all grounded here"
+     - target: "domains/physics/vortex-stabilization.yaml"
+      via: "Ground state η = 1 is the reference from which all vortex formation
+            and committed topology departs"
+
+# ─────────────────────────────────────────────
+# THE CONTAINER INTUITION — WHY IT PERSISTS
+# AND WHY IT MUST BE KILLED COMPLETELY
+# ─────────────────────────────────────────────
+
+container_intuition:
+  statement: >
+    Even after reading that space IS the substrate, most readers
+    immediately reconstruct the container picture: an emptiness
+    that the substrate fills, a void within which the substrate
+    exists, a space that the substrate occupies. This
+    reconstruction happens automatically because every word
+    available in natural language carries the container assumption
+    in its grammar.
+    "The substrate fills space" — wrong. Implies space is prior.
+    "The substrate is in space" — wrong. Implies space is the container.
+    "Space contains the substrate" — wrong. Same implication.
+    "The substrate permeates space" — wrong. Still a medium in a void.
+    "Space is made of the substrate" — wrong. Implies space is prior,
+      the substrate is what it's made of, like matter is made of atoms.
+    There is no correct sentence in natural language that carries
+    the right ontology without explicit philosophical unpacking.
+    The correct relationship is identity, not containment or
+    constitution: space and the substrate are the same thing
+    described from two different angles. "Space" is the name
+    we give to the substrate's extension when we observe it
+    from inside, treating our own location as a reference point.
+    "Substrate" is the name for the same thing when we describe
+    its dynamical properties — its potential field, its
+    commitment density, its resolution processes.
+    One thing. Two names for two aspects of it.
+
+  why_the_intuition_is_so_strong: >
+    The container intuition is not naive. It is the product of
+    every sensory experience humans have: objects exist in space,
+    space persists when objects are removed, therefore space is
+    prior to and independent of what is in it. This is the
+    correct description of our everyday experience at scales
+    where committed topology (matter) is far denser than the
+    substrate ground state (space).
+    At those scales — the scales of human experience — the
+    distinction between "committed topology" and "substrate
+    ground state" is so extreme that treating space as an
+    empty container and matter as what fills it is a perfectly
+    accurate working approximation. The approximation breaks
+    down at cosmological scales,
+    quantum scales (vacuum energy, Casimir effect), and
+    extreme commitment density scales (black hole interiors,
+    neutron stars). At those scales the substrate's own
+    properties become measurable against the background
+    of committed topology.
+    The container intuition is a scale-appropriate
+    approximation that becomes a conceptual obstacle when
+    applied universally.
+
+  the_correct_picture_stated_once_precisely: >
+    The substrate is not in space.
+    Space is not in the substrate.
+    Space IS the substrate — in its least committed state,
+    as experienced from inside a resolution sequence
+    (from inside the process that we call time and location).
+    When we say "empty space," we mean: the substrate with
+    η ≈ 1 — near-maximum free potential, near-zero committed
+    topology, maximum resolution flux. Not the absence of
+    the substrate. The substrate at its most transparent.
+    When we say "matter in space," we mean: regions of
+    committed topology (η < 1) embedded in a surrounding
+    substrate at higher η. The "space" around the matter is
+    not a different kind of thing from the matter — it is
+    the same substrate at a different commitment density.
+    The boundary between "matter" and "space" is not a
+    boundary between two different substances. It is a
+    gradient in η — a region where commitment density
+    transitions from the values we call matter to the
+    values we call vacuum.
+
+  for_readers_who_immediately_reconstruct_the_container: >
+    If you find yourself thinking: "yes, but the substrate
+    must exist in something, what is the substrate in?" —
+    that question contains the error. It assumes that for
+    anything to exist it must exist in a prior container.
+    But this assumption requires an infinite regress: if
+    the substrate is in container C, what is C in? And
+    what is that in? The regress never terminates.
+    R1 terminates it: something exists, necessarily, because
+    nothing is self-defeating. That something is not in a
+    prior container — it is the first thing. The substrate
+    is that first thing. Space is what the first thing looks
+    like from inside it, when you are a localised node of
+    committed topology observing the surrounding uncommitted
+    substrate. There is no outside. There is no prior
+    container. The question "what is the substrate in?"
+    is the question "what is existence in?" and the answer
+    is: existence is not in anything. It is the starting
+    point. Everything else is in it.
+
+# ─────────────────────────────────────────────
+# THE MICHELSON-MORLEY CLOSURE
+# Why the ether reflex is a misapplication
+# of a correct experimental result
+# ─────────────────────────────────────────────
+
+michelson_morley_closure:
+  the_experiment: >
+    Michelson-Morley (1887) — measured the speed of light in
+    different directions relative to Earth's motion through the
+    hypothesised mechanical ether. Found no difference. Null result.
+    Interpreted as falsifying the ether — no medium through which
+    Earth moves, no preferred rest frame, no absolute velocity.
+    This result and its interpretation became foundational to
+    special relativity and to 140 years of physics culture encoding:
+    the vacuum is empty, any medium is pre-relativistic thinking.
+
+  what_was_actually_falsified: >
+    Michelson-Morley falsified a mechanical ether — specifically:
+    a rigid or semi-rigid medium existing in space, with a definite
+    rest frame, relative to which Earth moves and light propagates
+    at a fixed speed relative to the medium.
+    The key properties falsified:
+      (1) The ether has a preferred rest frame.
+      (2) The ether is a medium in space — a substance occupying
+          a prior spatial container.
+      (3) The ether's rest frame is detectable via light speed
+          anisotropy.
+    None of these apply to the Praestology substrate.
+
+  what_was_not_falsified: >
+    Michelson-Morley did not falsify — could not falsify — a
+    Lorentz-invariant substrate. A substrate that:
+      (1) Has no preferred rest frame because it IS space —
+          there is no prior container relative to which it
+          could have a rest frame.
+      (2) Has properties (η, ∇φ, commitment density) that
+          are the same in all inertial frames — Lorentz invariant
+          by construction, not by postulate.
+      (3) Propagates light at c because c = Φ_max is a property
+          of the substrate itself, the same in all frames because
+          the substrate has no preferred frame.
+    The null result of Michelson-Morley is exactly what the
+    Praestology substrate predicts: no light speed anisotropy,
+    no preferred frame, no detectable absolute velocity. The
+    experiment confirms the substrate picture; it does not
+    contradict it.
+
+  the_conflation_that_caused_140_years_of_avoidance: >
+    The error: "medium implies preferred frame implies SR violation."
+    The source of the error: the only medium anyone had considered
+    (mechanical ether) did imply a preferred frame. The falsification
+    of that specific medium was generalised to a falsification of
+    all possible media — an over-generalisation.
+    The correct lesson from Michelson-Morley: media with preferred
+    frames are falsified. Media without preferred frames are not
+    addressed. A Lorentz-invariant medium — one whose properties
+    transform correctly under Lorentz boosts because it is space
+    itself — is not touched by the experiment.
+    Special relativity did not require the vacuum to be empty.
+    It required that there be no preferred frame. Those are not
+    the same requirement. The vacuum can be a structured medium
+    with measurable properties (which quantum field theory
+    confirms it is) as long as that structure has no preferred
+    frame (which Lorentz invariance ensures).
+
+  vacuum_already_has_structure_in_standard_model: >
+    The standard model already accepts that the vacuum is
+    structured — it just avoids the word "medium":
+    Higgs field: non-zero vacuum expectation value ⟨H⟩ = v ≠ 0.
+      The vacuum is a specific field configuration with energy.
+    QCD condensates: ⟨q̄q⟩ ≠ 0, ⟨G^μν G_μν⟩ ≠ 0.
+      The vacuum contains quark and gluon condensates measurable
+      via hadron mass sum rules.
+    Casimir effect: measured force between parallel plates from
+      vacuum fluctuations. The vacuum exerts measurable forces.
+    Zero-point energy: every quantum field has ground-state energy
+      ħω/2 per mode. The vacuum is not at zero energy.
+    Each of these is a measurement of the substrate. The standard
+    model measures it repeatedly and calls the results anomalies,
+    renormalisation artifacts, or unexplained constants. The
+    substrate picture names what is being measured.
+
+# ─────────────────────────────────────────────
+# THE GROUND STATE
+# What η = 1 means physically
+# ─────────────────────────────────────────────
+
+ground_state:
+  definition: >
+    The substrate ground state is the configuration η = 1:
+    maximum free potential φ = φ_max, zero committed topology,
+    maximum resolution flux Φ_max = c, minimum impedance Z₀.
+    It is approached asymptotically in regions with no committed
+    structure — deep cosmic voids far from all matter. It is
+    never exactly reached in a universe containing committed
+    topology, because the Tik background (the substrate's own
+    zero-point fluctuations) always maintains a small but
+    non-zero commitment activity even in the deepest vacuum.
+    The ground state is not emptiness. It is the substrate
+    at maximum aliveness — maximum free potential for
+    resolution, maximum process rate, minimum resistance to
+    structural change. What we call "empty space" is the
+    most dynamic state of the substrate, not the most inert.
+
+  tik_background_as_ground_state_property: >
+    The Tik background — the stochastic substrate fluctuations
+    that drive vortex nucleation, Lamb shift, spontaneous
+    emission, and the uncertainty principle — is the substrate
+    ground state's own activity. It is not noise added to a
+    quiet vacuum. It is what the vacuum does when nothing
+    else is happening. The zero-point energy of quantum field
+    theory is the Tik background's energy density. The vacuum
+    fluctuations that QFT calculates are Tik events.
+    The vacuum is not quiet. It is the substrate continuously
+    exploring its own resolution possibilities — R3 operating
+    on R2 distinctions at the substrate's minimum scale ξ,
+    without any externally imposed structure to channel the
+    exploration. Pure unguided process.
+
+  commitment_density_as_the_only_variable: >
+    The difference between "empty space" and "matter" is one
+    variable: commitment density C = 1 − η.
+    Empty space: C ≈ 0, η ≈ 1.
+    Electron: C > 0, η < 1, localized Möbius 720° topology.
+    Proton: C >> 0, η << 1 at core, triality junction.
+    Neutron star: C approaching n_sat, η approaching 0.
+    Black hole horizon: C → n_sat, η → 0, Φ → 0.
+    There are no different substances. There is one substrate
+    at different commitment densities. The richness of the
+    physical world — from empty space to black holes, from
+    photons to nuclei — is the substrate at different values
+    of one variable, organised by R1-R5 into stable
+    topological configurations.
+
+  what_fills_interstitial_space: >
+    Between the nucleus and the electron cloud of an atom:
+    substrate at intermediate η. Not emptiness. Not vacuum
+    in the sense of nothing. The substrate at η between the
+    electron's orbital commitment and the nuclear commitment
+    well — a potential field with real gradient ∇φ that is
+    what holds the electron in its orbital resonance.
+    Between atoms in a molecule: substrate at near-vacuum η,
+    modified by the molecular commitment field of both atoms.
+    The bond is not a line drawn between atoms — it is a
+    region of substrate where the commitment gradients of
+    two nuclei overlap and create a shared potential minimum.
+    Between molecules in a solid: substrate at near-vacuum η,
+    but with the molecular commitment fields creating the
+    long-range order that is the crystal structure.
+    Between stars: substrate at η ≈ 1, carrying the
+    gravitational potential gradient from all surrounding mass.
+    Not empty. Not nothing. The substrate at near-ground-state,
+    shaped by the commitment topology of everything around it.
+    "Empty space" is the substrate doing its job quietly —
+    transmitting potential gradients, propagating
+    electromagnetic fields, supporting quantum fluctuations —
+    without any committed topology of its own to make it
+    locally visible.
+
+# ─────────────────────────────────────────────
+# THE CRYOGENIC ARGUMENT
+# Cooling reveals the substrate, not approaches nothing
+# ─────────────────────────────────────────────
+
+cryogenic_argument:
+  core_statement: >
+    Cooling a material does not approach absolute zero of the
+    material. It approaches the substrate's own ground state
+    from above, with the material's committed topology as the
+    only remaining departure from η = 1. Superfluidity and
+    superconductivity are not exotic phenomena that emerge
+    from cooling. They are what you observe when the material's
+    committed topology has been reduced to the point where the
+    substrate's own ground-state properties dominate the
+    observable behavior.
+    Every cryogenic laboratory is measuring the properties
+    of space itself. Not metaphorically. Literally.
+
+  the_cooling_sequence: >
+    Each step of cooling is a step toward substrate transparency:
+
+    High temperature gas:
+      Thermal Tik amplitude >> commitment topology of molecules.
+      Molecules' individual committed structures are continuously
+      disrupted and reformed. The material's macroscopic behavior
+      (pressure, diffusion, viscosity) is dominated by thermal
+      Tik dynamics. The substrate's own coherent properties are
+      invisible — swamped by incoherent thermal commitment activity.
+      η is locally depressed and rapidly fluctuating around each
+      molecular committed topology.
+
+    Liquid:
+      Thermal Tik amplitude ~ commitment topology binding energy.
+      Molecules stay committed but move freely. Long-range
+      substrate coherence begins to appear — surface tension
+      (the substrate's own commitment gradient at the liquid
+      boundary), viscosity (substrate resistance to commitment
+      topology rearrangement). The substrate's properties are
+      beginning to show through the material's committed structure.
+
+    Solid:
+      Thermal Tik amplitude << crystal binding energy.
+      Committed topology locked into crystal structure. The
+      material's own commitment geometry dominates — rigidity,
+      resistance (in metals), opacity. But quantum effects
+      begin: zero-point motion (Tik background still active
+      below thermal noise), tunneling (Tik fluctuations
+      occasionally exceed local commitment barriers), quantum
+      Hall effect in 2D systems (substrate topology becoming
+      visible at low temperature).
+
+    Approaching T_c (superconductor) or T_λ (superfluid):
+      Thermal Tik amplitude << individual commitment topology,
+      but now also << the substrate's own coherence length ξ_coh.
+      The committed topologies (Cooper pairs, helium atoms)
+      can no longer be treated as independent — they are all
+      embedded in the same substrate ground state, and the
+      substrate's own phase coherence extends across all of them
+      simultaneously. The material's individual committed
+      structures stop masking the substrate's coherence.
+      What emerges is the substrate's natural state:
+      phase-coherent, zero-viscosity, quantized-vortex flow.
+
+    At and below T_c / T_λ:
+      The substrate's ground state properties dominate.
+      Zero resistance: the substrate's ground state has no
+        impedance to phase-coherent propagation — Z_eff = Z₀,
+        the vacuum impedance, with no additional R from thermal
+        commitment disruption. Current flows as the substrate
+        propagates it — without resistance because the substrate
+        itself has none.
+      Zero viscosity: the substrate's ground state flows without
+        friction — η = 1 means no committed topology to create
+        drag. The superfluid flows as space itself would flow
+        if it could be made to move relative to a boundary.
+      Quantized vortices: the substrate's topological structure
+        — vortex windings are quantized in units of κ = h/m_eff
+        (Onsager-Feynman) — appears directly because the thermal
+        noise that would smear these topological features is gone.
+        Quantized vortices are the substrate's own topological
+        discreteness becoming directly observable.
+      Macroscopic quantum coherence: the single wavefunction
+        description of the entire superfluid is the substrate's
+        own GP order parameter η(r,t) — the bridge function —
+        becoming the dominant description of the material's state.
+        The material has become transparent enough that the
+        substrate's own wavefunction is what you're describing.
+
+  properties_revealed_not_created: >
+    This is the key distinction from the standard interpretation.
+    Standard: superconductivity and superfluidity are new
+      properties that emerge when the temperature drops below
+      a critical value. Emergence requires explanation —
+      Cooper pairs, BCS condensation, Bose-Einstein statistics.
+    Praestology: the zero-resistance and zero-viscosity
+      properties are not created by cooling. They are the
+      substrate's own ground-state properties, present always
+      and everywhere, normally masked by the material's thermal
+      commitment activity. Cooling removes the masking.
+      The Cooper pair and BEC condensation mechanisms are
+      correct descriptions of *how the masking is removed* at
+      the material level — the specific committed topology
+      rearrangements that allow the substrate's coherence to
+      propagate macroscopically. They are not explanations of
+      *why the endpoint has the properties it has*. The
+      endpoint has those properties because space has those
+      properties. Space is superfluid. We finally get to
+      see it when we cool enough.
+
+  the_universal_properties_vs_material_specific: >
+    This reframing makes a structural prediction: the universal
+    properties of all superfluids and superconductors —
+    zero viscosity / resistance, quantized vortices, macroscopic
+    phase coherence, Meissner effect — should be identical
+    in character across all materials, because they are
+    substrate properties, not material properties. What varies
+    between materials is:
+      Critical temperature T_c — how much thermal Tik amplitude
+        the material's committed topology can survive before
+        substrate coherence dominates. This is a material
+        property — it encodes the binding energy of the
+        committed topology that was masking the substrate.
+      Gap energy Δ — the energy cost of breaking a Cooper pair
+        or removing an atom from the condensate. This encodes
+        the specific committed topology of the material.
+      Coherence length ξ_material — how far the substrate's
+        coherence extends in the material. This encodes the
+        material's commitment density profile.
+    Universal: zero resistance/viscosity, quantized vortices,
+      macroscopic phase coherence.
+    Material-specific: T_c, Δ, ξ_material.
+    Universal = substrate. Material-specific = committed topology.
+    The framework predicts this partition. It is confirmed by
+    the observation that all superfluids and superconductors
+    share the universal properties while differing in the
+    material-specific ones.
+
+  absolute_zero_reinterpreted: >
+    Absolute zero (T = 0) is not a state of "nothing happening."
+    In the standard picture it is the ground state of the
+    material — minimum thermal energy, all thermal motion
+    ceased. But the material still exists. What ceases is
+    the thermal Tik amplitude that was masking the substrate.
+    What remains at T = 0 is:
+      (1) The material's committed topology — its crystal
+          structure, electron configuration, nuclear structure.
+          These are R4-committed — they do not require thermal
+          energy to exist. They are substrate topology.
+      (2) The substrate's own zero-point Tik background — the
+          ground-state fluctuations that can never be removed
+          because they are the substrate's own activity at η = 1.
+          This is the zero-point energy of quantum mechanics —
+          present even at T = 0, unmeasured by thermometers
+          because it is not thermal, measurable by Casimir
+          apparatus and Lamb shift because it is real.
+    T = 0 is not nothing. It is the substrate at ground state,
+    with the material's committed topology floating in it
+    at maximum transparency. The substrate is fully visible.
+    The material is as close to being space as matter can be.
+
+  cryogenic_laboratories_as_substrate_observatories: >
+    Every dilution refrigerator cooling helium to millikelvin
+    temperatures is not approaching a state of maximum emptiness.
+    It is approaching maximum substrate transparency — the state
+    in which the substrate's own properties dominate the
+    observable physics, with the helium atoms' committed topology
+    as the only remaining departure.
+    The superfluid properties measured in those experiments —
+    the critical velocity, the vortex quantization, the fountain
+    effect, the Josephson oscillations — are measurements of
+    the substrate's own topological and dynamical properties.
+    The helium is the instrument; space is what is being measured.
+    This reframing has no consequence for the experimental
+    results — they are what they are. It has consequences for
+    what those results mean: they are not exotic quantum
+    properties of a particular element at low temperature.
+    They are properties of space, revealed by removing enough
+    thermal masking to see them directly.
+
+# ─────────────────────────────────────────────
+# CONSEQUENCES FOR OPEN PROBLEMS
+# ─────────────────────────────────────────────
+
+open_problem_consequences:
+
+  vacuum_energy_casimir: >
+    Casimir effect: measured attractive force between parallel
+    conducting plates in vacuum — attributed to vacuum
+    fluctuations. In the substrate picture: the plates create
+    a boundary condition on Tik fluctuations — wavelengths
+    larger than the plate separation are excluded between
+    the plates but present outside. The Tik background
+    pressure outside > inside → net inward force. The Casimir
+    force is a direct measurement of the Tik background
+    pressure of the substrate ground state. Every Casimir
+    experiment is measuring the substrate. The force is real
+    and measured; the substrate producing it is real and
+    the same thing as space.
+
+  quantum_vacuum_fluctuations: >
+    Virtual particles in QFT: short-lived particle-antiparticle
+    pairs appearing spontaneously from the vacuum. In the
+    substrate picture: Tik events that occasionally exceed
+    S_lock and nucleate transient vortex pairs — commitment
+    topology that forms and dissolves within the coherence
+    time τ ~ ħ/ΔE. Not "virtual" in the sense of
+    mathematical bookkeeping. Real substrate fluctuations
+    that exist briefly and return their commitment to the
+    ground state. The uncertainty principle ΔE·Δt ≥ ħ/2
+    is the constraint on how long a commitment event can
+    persist at energy ΔE — set by the substrate's own
+    minimum action quantum ħ (see alpha-rydberg-z0.yaml).
+
+# ─────────────────────────────────────────────
+# THE ONE-SENTENCE SUMMARIES
+# For different audiences
+# ─────────────────────────────────────────────
+
+one_sentence_summaries:
+  for_physicists: >
+    The Praestology substrate is not a medium in space — it is
+    a Lorentz-invariant potential field whose extension IS space,
+    whose ground state IS the quantum vacuum, and whose
+    commitment density gradient IS gravity; Michelson-Morley
+    falsified a medium with a preferred frame, not a Lorentz-
+    invariant medium, and the standard model has been measuring
+    this medium's properties (Casimir, zero-point energy, vacuum
+    condensates) for decades without identifying what it is measuring.
+
+  for_chemists_and_condensed_matter: >
+    When you cool a material to its superfluid or superconducting
+    ground state, you are not approaching absolute nothing — you
+    are removing the material's thermal masking until the
+    properties of space itself dominate; zero viscosity and zero
+    resistance are not emergent from cooling, they are properties
+    of space revealed by cooling.
+
+  for_general_readers: >
+    Empty space is not empty — it is the substrate in its most
+    transparent state, the same substrate that, at higher
+    commitment density, is matter; there is no other emptiness
+    behind or beneath space; space is the thing itself, and
+    when we cool materials close to absolute zero we are not
+    approaching nothing, we are approaching space's own nature
+    as directly as matter ever can.
+
+  for_philosophers: >
+    The question "what is the substrate in?" contains an error —
+    it assumes existence requires a prior container; but the
+    substrate is not in space, it is space, and the demand for
+    a prior container leads to infinite regress; R1 terminates
+    the regress: something exists necessarily, and space is
+    what that something looks like from inside a resolution
+    sequence embedded in it.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      Casimir force from Tik background pressure differential.
+      Compute the ground-state Tik pressure between plates
+      of separation d and outside. Recover Casimir force
+      F/A = −ħcπ²/(240d⁴) from substrate Tik spectrum
+      with UV cutoff ξ. No renormalisation required.
+
+  priority_2:
+    - >
+      Critical temperature T_c from material commitment binding
+      energy vs substrate coherence energy. Derive T_c as the
+      temperature at which thermal Tik amplitude equals the
+      material's phase-lock stability threshold S_lock.
+      T_c should follow from the material's committed topology
+      parameters — no free parameters for a given material
+      once its vortex structure is specified.
+
+
+  priority_3:
+    - >
+      Superfluid critical velocity from substrate vortex
+      nucleation threshold. The critical velocity above which
+      superflow breaks down corresponds to the flow velocity
+      at which Tik fluctuations can nucleate a vortex-antivortex
+      pair — S_lock crossing from kinetic energy input.
+      Derive v_c from S_lock and substrate parameters.
+    - >
+      Josephson frequency from substrate phase dynamics.
+      The AC Josephson effect (frequency f = 2eV/h for voltage
+      V across a junction) encodes the substrate's phase
+      rotation rate at the junction. Derive from the bridge
+      function η and the GP phase dynamics at the junction.
+
+# ─────────────────────────────────────────────
+# READING ORDER AND CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "domains/physics/substrate-potential.yaml      -- φ field primary framing; read first"
+  - "domains/physics/bridge-function.yaml          -- η as the bridge variable"
+  - "domains/physics/substrate-ground-state.yaml   -- this file"
+  - "domains/physics/specifications.yaml           -- full substrate physics"
+  - "domains/physics/foundations.yaml              -- commitment stress and pillars"
+  - "domains/cosmos/specifications.yaml            -- cosmological consequences"
+
+related_issues:
+  - "foundational/F01_axiom_circularity"
+  - "foundational/F72_space_is_substrate_not_container"
+  - "foundational/F73_michelson_morley_falsifies_mechanical_ether_not_all_media"
+  - "foundational/F74_vacuum_energy_as_tik_ground_state"
+  - "foundational/F75_cooling_as_substrate_revelation_not_approach_to_nothing"
+  - "foundational/F76_absolute_zero_as_maximum_substrate_transparency"
+  - "foundational/F77_casimir_as_direct_tik_pressure_measurement"
+  - "intersectional/physics/108_critical_temperature_from_commitment_binding_vs_coherence"
+  - "intersectional/physics/109_casimir_force_from_tik_pressure_differential"
+  - "intersectional/physics/110_superfluid_critical_velocity_from_s_lock"
+  - "intersectional/physics_cosmos/008_dark_energy_as_substrate_ground_state_pressure"
+  - "boundaries/B04_container_intuition_linguistic_trap"
+  - "boundaries/B05_lorentz_invariant_medium_vs_preferred_frame_medium"
