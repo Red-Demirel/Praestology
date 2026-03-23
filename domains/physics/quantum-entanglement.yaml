@@ -59,6 +59,8 @@ dependency_map:
                                                        GP order parameter"
     - "domains/physics/commitment-response-function.yaml -- GP equation; imperfect
                                                        closure; finite R"
+    - "domains/physics/quantum-entanglement.yaml    -- second mechanism: resonance coupling"
+
   provides_to:
     - target: "domains/physics/quantum-foundation.yaml"
       via: "Extends entanglement section with two-mechanism distinction;
