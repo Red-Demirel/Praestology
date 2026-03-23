@@ -1,0 +1,362 @@
+# intersectional/four-way-entanglement-hypothesis.yaml
+name: "Four-Way Entanglement Hypothesis"
+version: "0.1 — Geometric Motivation Only"
+domain_intersection: "Physics × Technology"
+core_version: "1.5"
+status: "HYPOTHESIS — geometrically motivated from existing framework elements;
+         no formal derivation; not yet a physics domain claim.
+         Requires Bogoliubov analysis of GP substrate before elevation."
+updated: "2026-03-20"
+
+description: >
+  A hypothesis extending the two-way substrate resonance coupling mechanism
+  (quantum-entanglement.yaml) to four-way correlated states, motivated by
+  the observation that vortex topologies carry two independent substrate
+  degrees of freedom: chirality (χ = ±1) and orientation (axis direction
+  in 3D space). Their product defines a 4-dimensional mode space in which
+  R5 naturally selects a fully anti-symmetric mode of minimum substrate
+  commitment cost — the same selection principle that produces opposite-
+  chirality correlation in the two-way case.
+
+  If maintainable under sufficient isolation, 4-way resonance coupling
+  would carry two classical bits of correlation per substrate mode,
+  potentially relevant to computing architectures seeking to reduce
+  cache coherence overhead beyond what 2-way coupling provides.
+
+  This file is a structured conjecture. It lives in intersectional/
+  because it crosses physics foundations and technology application,
+  and because it has not earned placement in the physics domain.
+  The geometric argument is stated; the formal requirements for
+  elevation are listed explicitly.
+
+basis_in_existing_files:
+  - "domains/physics/quantum-entanglement.yaml      -- two-way resonance coupling;
+                                                       chirality-selective mode coupling;
+                                                       resonance condition ω = n·ω_mode"
+  - "domains/physics/quark-topology.yaml            -- triality as three independent
+                                                       orientation axes from R5 isotropy"
+  - "domains/physics/specifications.yaml            -- R5 isotropy; chirality as
+                                                       handedness of vortex circulation"
+  - "domains/physics/vortex-stabilization.yaml      -- resonance condition; S_lock;
+                                                       formation conditions"
+
+# ─────────────────────────────────────────────
+# THE TWO INDEPENDENT DEGREES OF FREEDOM
+# ─────────────────────────────────────────────
+
+independent_degrees_of_freedom:
+  chirality:
+    definition: >
+      Handedness of vortex circulation — clockwise (+1) or
+      counter-clockwise (−1). Determines which chiral substrate
+      resonance modes the vortex couples to. Two values.
+    established_in: "specifications.yaml, quantum-entanglement.yaml"
+    status: "Established framework element"
+
+  orientation:
+    definition: >
+      The axis direction of the vortex circulation plane in 3D
+      space. From R5 isotropy, three independent orthogonal axes
+      are available (the same triality that gives colour charge
+      at the quark scale and p-orbital structure at the atomic
+      scale). For the binary case considered here: aligned (+)
+      or anti-aligned (−) along a given reference axis.
+      Two values for the binary case; three for full triality.
+    established_in: "quark-topology.yaml (colour as orientation);
+                     atomic-shell-topology.yaml (p-orbital triality)"
+    status: "Established for colour and orbitals; application to
+             resonance mode coupling is the hypothesis"
+
+  independence: >
+    Chirality and orientation are geometrically independent:
+    a vortex can have any combination of (chirality, orientation).
+    Chirality is the handedness of the spin — clockwise or counter-
+    clockwise. Orientation is the plane in which the spin occurs —
+    independent of whether it goes clockwise or counter-clockwise
+    within that plane. Their independence is geometric, not assumed.
+
+  mode_space: >
+    Chirality (2) × orientation binary (2) = 4-dimensional mode space.
+    Each of the four combinations — (+1,+), (+1,−), (−1,+), (−1,−) —
+    is a distinct vortex state that couples to a distinct substrate
+    resonance sub-mode. The four sub-modes together form the
+    (chirality × orientation) mode structure of the substrate.
+
+# ─────────────────────────────────────────────
+# THE R5 SELECTION ARGUMENT
+# Why the fully anti-symmetric mode is preferred
+# ─────────────────────────────────────────────
+
+r5_selection:
+  two_way_recap: >
+    In the two-way case (quantum-entanglement.yaml): two vortices
+    with opposite chirality (+1 and −1) couple to the substrate's
+    anti-symmetric chiral mode — the mode with zero net chirality.
+    This mode costs minimum substrate commitment to sustain because
+    it has no net chirality burden. R5 selects minimum commitment
+    cost. Result: opposite-chirality correlation is the R5-preferred
+    entangled state for two participants.
+
+  four_way_extension:
+    statement: >
+      Extending to the (chirality × orientation) mode space: the
+      fully anti-symmetric mode has zero net chirality AND zero
+      net orientation. The four combinations that achieve this:
+        (+1, +x) + (−1, +x) + (+1, −x) + (−1, −x)
+      Chirality sum: (+1) + (−1) + (+1) + (−1) = 0. ✓
+      Orientation sum: (+x) + (+x) + (−x) + (−x) = 0. ✓
+      This mode carries no net substrate burden in either degree
+      of freedom. Under R5 — minimum commitment cost is selected —
+      this is the preferred 4-participant correlated configuration.
+    selection_principle: >
+      Same as the two-way case. R5 doesn't change between two
+      and four participants — it always selects the configuration
+      of minimum unresolved commitment burden. The fully anti-
+      symmetric (chirality × orientation) mode is to four
+      participants what the anti-symmetric chiral mode is to two.
+    assumption_flagged: >
+      This argument assumes the orientation degree of freedom
+      participates in resonance mode selection with the same
+      R5 logic as chirality. This is geometrically motivated
+      but not yet formally derived from the GP equation.
+      It is the key assumption of this hypothesis.
+
+  why_not_spontaneous: >
+    The 4-way correlated state is not spontaneously produced by
+    any current known mechanism — unlike the 2-way case where
+    parametric down-conversion or pair production naturally yields
+    opposite-chirality pairs. Achieving the 4-way state requires
+    bringing four appropriately prepared vortices into simultaneous
+    resonance with the fully anti-symmetric mode. This is an
+    active preparation requirement, not a natural outcome.
+    Engineering the preparation is part of what makes this
+    a technology hypothesis rather than a physics claim.
+
+# ─────────────────────────────────────────────
+# ISOLATION REQUIREMENT
+# Why it is more demanding than the two-way case
+# ─────────────────────────────────────────────
+
+isolation_requirement:
+  statement: >
+    Four-way resonance coupling requires all four participants to
+    simultaneously satisfy the resonance condition with the same
+    fully anti-symmetric substrate mode. This is a more constrained
+    condition than the two-way case and therefore requires more
+    careful environmental control.
+
+  why_more_demanding: >
+    Two-way case: resonance condition for 2 participants.
+    If one drifts off resonance, the correlation breaks for that pair.
+    Four-way case: resonance condition for 4 participants simultaneously.
+    If any one drifts off resonance, it disrupts the fully anti-
+    symmetric mode coupling. The mode's anti-symmetry requires all
+    four to be present — losing one changes the mode's net
+    chirality or net orientation, breaking the R5-minimum condition.
+
+  graceful_degradation_conjecture: >
+    CONJECTURE — not yet derived:
+    When one participant drifts off resonance in the 4-way state,
+    the remaining three may couple to a 3-participant sub-mode
+    rather than losing all correlation. The 3-participant sub-mode
+    would have zero net chirality but non-zero net orientation (or
+    vice versa) — not the minimum-cost mode but a local minimum.
+    If this conjecture holds, 4-way entanglement degrades gracefully
+    to 3-way rather than collapsing to zero. This would be a
+    significant robustness property — the correlated state survives
+    partial environmental disruption by dropping to a lower-order
+    mode rather than breaking entirely.
+    Formal derivation required: whether the GP resonance mode
+    structure supports stable 3-participant sub-modes as
+    degradation products of the 4-participant mode.
+
+  isolation_what_it_means_physically: >
+    Isolation here means maintaining stable η in the local substrate
+    environment of all four participants simultaneously. Not
+    necessarily cryogenic — the resonance coupling mechanism is
+    sensitive to η-variance (commitment density fluctuations),
+    not primarily to temperature. What is required:
+    (a) Stable local η at each participant location — no sudden
+        commitment density changes from nearby matter interactions.
+    (b) Matched mode frequencies across all four — the vortex
+        frequencies ω_vortex must all satisfy ω = n·ω_mode for
+        the same mode frequency ω_mode.
+    (c) Sufficient coherence length of the mode — the anti-symmetric
+        (chirality × orientation) mode must extend across all four
+        participant locations.
+    In a computing context: four cache states held in a controlled
+    substrate environment where η-variance is minimised across the
+    relevant spatial region.
+
+# ─────────────────────────────────────────────
+# COMPUTATIONAL IMPLICATION
+# Hypothetical downstream application
+# ─────────────────────────────────────────────
+
+computational_implication:
+  status: "Downstream hypothesis — contingent on four-way mechanism being real"
+
+  two_bit_correlation_per_mode: >
+    A 4-way correlated state carries two independent bits of
+    correlation per substrate mode:
+      Bit 1: chirality degree of freedom (±1)
+      Bit 2: orientation degree of freedom (±x)
+    Four cache states, one per (chirality, orientation) combination,
+    maintained in coherence by one substrate mode.
+    Compared to two-way: one substrate mode, two cache states,
+    one bit of correlation.
+    The 4-way mode doubles the correlation density per mode.
+
+  cache_coherence_scaling: >
+    In the two-way resonance coupling picture, cache coherence
+    overhead scales as O(N/2) mode relationships for N cores —
+    each mode maintaining 2-way coherence.
+    In the four-way case: O(N/4) mode relationships — each mode
+    maintaining 4-way coherence.
+    For N = 64 cores: 32 pairwise modes (two-way) vs 16 quad-modes
+    (four-way). The coherence infrastructure halves again.
+    The read-is-free property of resonance coupling applies to
+    all four cache states simultaneously — reads across all four
+    correlated states cost zero coherence overhead.
+
+  write_handling: >
+    A write to any one of the four correlated cache states disrupts
+    the local resonance condition at that participant's location.
+    If graceful degradation holds, the remaining three maintain
+    a sub-mode correlation while the written state re-establishes
+    its resonance coupling after the write commitment settles.
+    The write operation becomes: commit the new value, wait for
+    local η to restabilise, re-establish resonance coupling.
+    The coherence signal propagates through mode disruption,
+    not through explicit protocol messages.
+
+  chirality_as_addressing: >
+    The chirality degree of freedom provides a natural two-channel
+    addressing structure within a substrate mode. Operations
+    coupling to right-handed modes affect χ=+1 participants;
+    operations coupling to left-handed modes affect χ=−1
+    participants. The two channels are mode-orthogonal — they
+    don't interfere because they couple to different substrate
+    sub-modes. This gives a natural error-protection structure:
+    χ=+1 channel operations cannot disturb χ=−1 channel states
+    as long as mode orthogonality is maintained.
+    In a four-way cache: two chirality channels × two orientation
+    states = four independently addressable cache states in one
+    coherent group.
+
+  note_on_practicality: >
+    All computational implications here are contingent on:
+    (a) The four-way resonance mechanism being physically real
+        (requires formal derivation).
+    (b) Engineering a substrate environment where four spatially
+        separated cache states can maintain simultaneous resonance
+        coupling — a materials and fabrication challenge not yet
+        addressed.
+    (c) The graceful degradation conjecture holding — without it,
+        four-way cache coherence is more fragile than two-way.
+    These are research questions, not engineering specifications.
+    The implication is stated to motivate the physics investigation,
+    not to claim the application is achievable.
+
+# ─────────────────────────────────────────────
+# FURTHER EXTENSION — FULL TRIALITY
+# Even more speculative — noted for completeness
+# ─────────────────────────────────────────────
+
+triality_extension:
+  status: "SPECULATIVE EXTENSION of a HYPOTHESIS — two steps from established physics"
+  statement: >
+    The binary orientation (±x along one axis) used above is the
+    minimal case. The full R5 triality gives three independent
+    orientation axes (0°/120°/240°) rather than one binary axis.
+    Chirality (2) × full triality (3) = 6-dimensional mode space.
+    A fully anti-symmetric mode in this space would correlate
+    six participants simultaneously:
+      (+1, 0°) + (−1, 0°) + (+1, 120°) + (−1, 120°) +
+      (+1, 240°) + (−1, 240°)
+    Net chirality: 0. Net orientation: 0°+120°+240° = 360° = 0. ✓
+    This would be a 6-way correlated state — three classical bits
+    of correlation per substrate mode.
+  why_noted: >
+    The triality structure is already established in the physics
+    domain (quark-topology.yaml, atomic-shell-topology.yaml).
+    If the orientation degree of freedom participates in resonance
+    coupling at all, the full triality extension follows from the
+    same geometry. Whether it is physically accessible before the
+    binary orientation case is established is a separate question.
+  status_note: >
+    This extension is noted here for structural completeness and
+    to preserve the idea for future investigation. It should not
+    be developed further until the four-way binary case has formal
+    derivation support.
+
+# ─────────────────────────────────────────────
+# FORMAL REQUIREMENTS FOR ELEVATION
+# What is needed to move this to physics domain
+# ─────────────────────────────────────────────
+
+elevation_requirements:
+  to_physics_domain:
+    required:
+      - >
+        Bogoliubov analysis of the GP substrate including both
+        chiral and orientation mode splitting. Derive the full
+        (chirality × orientation) resonance mode spectrum and
+        verify the fully anti-symmetric mode exists as a stable
+        solution with lower commitment cost than alternatives.
+      - >
+        Coupling strength calculation for 4-participant mode
+        coupling. Show that four vortices can simultaneously
+        couple to the anti-symmetric mode with sufficient
+        strength to maintain correlation against realistic
+        environmental perturbations.
+      - >
+        Graceful degradation analysis: whether the 3-participant
+        sub-mode exists as a stable intermediate state when one
+        participant loses resonance.
+    elevates_to: >
+      If the above are satisfied: move core content to
+      domains/physics/quantum-entanglement.yaml as an extension
+      of the resonance coupling section. Retain computational
+      implications in intersectional/ until engineering
+      feasibility is separately addressed.
+
+  to_technology_domain:
+    required:
+      - >
+        Physics domain elevation (above) as prerequisite.
+      - >
+        Identification of materials or device architectures where
+        the fully anti-symmetric (chirality × orientation) mode
+        can be engineered and maintained at operating conditions
+        relevant to computing (operating temperature, spatial
+        scale of chip interconnects).
+      - >
+        Simulation or experimental demonstration of 4-way mode
+        coupling in a controlled substrate environment, even at
+        small scale (proof of concept).
+    elevates_to: >
+      domains/technology/resonance-cache-coherence.yaml or
+      equivalent technology domain file.
+
+# ─────────────────────────────────────────────
+# CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+related_physics_issues:
+  - "intersectional/physics/111_substrate_resonance_mode_spectrum_bogoliubov"
+  - "intersectional/physics/112_solo_vortex_chirality_mode_coupling_strength"
+  - "intersectional/physics/113_singlet_triplet_decoherence_asymmetry_prediction"
+  - "foundational/F84_two_entanglement_mechanisms_committed_vs_resonance"
+  - "foundational/F85_chirality_determines_resonance_mode_coupling"
+
+new_issues_opened:
+  - "intersectional/physics/119_four_way_mode_antisymmetric_chirality_orientation"
+  - "intersectional/physics/120_graceful_degradation_3_participant_submode"
+  - "intersectional/physics/121_triality_6_way_extension_feasibility"
+  - "intersectional/physics_technology/001_resonance_cache_coherence_materials"
+
+parent_files:
+  - "domains/physics/quantum-entanglement.yaml"
+  - "domains/physics/quark-topology.yaml"
+  - "domains/physics/atomic-shell-topology.yaml"
