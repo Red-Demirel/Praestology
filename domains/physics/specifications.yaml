@@ -1,807 +1,180 @@
-# domains/physics/cosmological-expansion-critique.yaml
-name: "Cosmological Expansion Critique — Assumption Cluster Analysis"
-version: "1.0 — Homogeneity Assumption, Redshift Misattribution, Λ Dissolution,
-          Hot Big Bang Dependency Chain"
-parent_domain: "Physics"
-core_version: "1.5"
-status: "Argument complete — specific falsification conditions identified;
-         quantitative density-transition redshift calculation open;
-         supersedes 'substrate expansion remains primary' in specifications.yaml"
-updated: "2026-03-20"
+praestology:
+  meta:
+    name: "Praestology"
+    etymology: "Praesto (Latin): to stand before / to be present / to perform"
+    version: "1.5 – Functional Core"
+    status: "Generalized Foundation"
+    purpose: >
+      Define the minimal logical ontology that makes existence necessary, 
+      perpetual, and self-tuning. This specification is substrate-agnostic; 
+      specific domains (Physics, Ethics, Consciousness) derive their 
+      variables from these core rules.
 
-description: >
-  Standard cosmology rests on a cluster of mutually supporting assumptions:
-  global expansion, hot Big Bang origin, cosmological constant Λ, dark energy,
-  and exotic dark matter particles. These are not independent — each supports
-  and requires the others. The cluster was built incrementally, each assumption
-  introduced to explain an anomaly that appeared within the framework defined
-  by prior assumptions. The result is a self-consistent but potentially
-  self-referential edifice.
+  axiom:
+    statement: "The Omniverse is the consequence of logical dilemmas following the path of probabilities."
+    implication: "Existence is a process of resolution, not a static state."
 
-  This file examines the foundational assumption — that the universe is
-  homogeneous at large scales and that observed redshift is predominantly
-  recession velocity — and traces the consequences of relaxing it within
-  the Praestology substrate picture.
+  core_rules:
+    description: >
+      The Five Rules form a dependency chain. Each rule is the minimal rescue 
+      of the previous one from a specific failure mode. Remove any rule and 
+      all subsequent rules collapse.
+  chain: "Existence → Structure → Motion → Progress → Optimisation"
+  rules:
+    - id: "R1"
+      identity: "Existence"
+      statement: "Something always beats nothing — the alternative is self-defeating."
+      rescue: "Impossibility — nothing cannot define itself without becoming something."
+      derives: "The bare fact that there is something rather than nothing."
+      failure_without: "No substrate for any further rule to operate on."
 
-  The core argument: we observe the universe from a specific location
-  embedded in a specific large-scale structure environment (near the edge
-  of a significant void, in the outskirts of a supercluster). Every
-  cosmological measurement is refracted through the substrate density
-  gradient between our location and what we observe. We do not correct
-  for this because the homogeneity assumption says there is nothing
-  systematic to correct for. That assumption is increasingly contradicted
-  by the data it was meant to describe.
+    - id: "R2"
+      identity: "Structure"
+      statement: "Perfect uniformity cannot be sustained; distinction emerges inevitably from the logical substrate's stochastic floor."
+      rescue: "Homogeneity — infinite precision would be required to maintain sameness, which is logically unavailable."
+      derives: "The necessary emergence of difference; the 'grain' of reality."
+      failure_without: "Existence would remain a perfectly uniform blob, indistinguishable from nothing and incapable of generating further rules."
+      note: "The stochastic floor is the residual noise inherent in any logical substrate—the 'probability shift' that prevents exact repetition. Reality clusters in the 'Middle' (the Gaussian Plateau) between extremes, making distinction the default state."
 
-  When the homogeneity assumption is relaxed and three distinct redshift
-  mechanisms are correctly separated — gravitational redshift, density-
-  transition redshift, and any genuine recession velocity — the need for
-  Λ, dark energy, and the specific hot Big Bang model all diminish
-  substantially. The assumption cluster does not collapse simultaneously;
-  it requires renegotiation. But the renegotiation is motivated by internal
-  evidence, not by Praestology imposing a preferred picture.
+    - id: "R3"
+      identity: "Motion"
+      statement: "Differences create pressure — tension between distinct states drives change."
+      rescue: "Paralysis — static distinction without interaction is a frozen picture."
+      derives: "Events; state transitions. Something happens."
+      failure_without: "Structure persists but never interacts; reality is a still photograph."
 
-  Epistemic note: the framework's confidence in this critique is high at
-  the structural level — the homogeneity assumption is doing hidden work
-  that the data increasingly contradicts. The specific quantitative claims
-  (how much of the supernova dimming is density-transition redshift, what
-  the exact Hubble tension decomposition is) require derivations that are
-  currently open. The argument is stated with appropriate confidence at
-  each level.
+    - id: "R4"
+      identity: "Progress"
+      statement: "Every resolution creates new differences — the process regenerates rather than concludes."
+      rescue: "Finality — a single resolution would end the story."
+      derives: "Irreversibility; accumulated states; the experience of before and after."
+      failure_without: "Motion occurs once and stops; reality resolves into equilibrium and vanishes."
 
-dependency_map:
-  requires:
-    - "domains/physics/specifications.yaml          -- three redshift mechanisms;
-                                                       density-transition redshift;
-                                                       dark matter composite"
-    - "domains/physics/substrate-ground-state.yaml  -- space as substrate;
-                                                       void as high-η ground state;
-                                                       Tik background pressure"
-    - "domains/physics/substrate-potential.yaml     -- φ field; Hubble tension as
-                                                       μ_local variation; dark energy
-                                                       as Tik background pressure"
-    - "domains/cosmos/specifications.yaml           -- cosmogenesis; high-φ initial
-                                                       state; Big Bang reframing"
-  provides_to:
-    - target: "domains/physics/specifications.yaml"
-      via: "Supersedes 'substrate expansion remains primary' in redshift_mechanisms.
-            Density-transition redshift is candidate primary mechanism for
-            cosmological observations. Update cosmological_redshift status."
-    - target: "domains/cosmos/specifications.yaml"
-      via: "Expansion assumption is load-bearing for Big Bang model — relaxing
-            it requires cosmogenesis reframing as high-φ initial state without
-            necessarily implying global expansion"
-    - target: "domains/physics/hadron-flow-patterns.yaml"
-      via: "Observer-location bias is the hadronic-scale version of the
-            cosmological-scale homogeneity assumption failure — same R5 principle"
+    - id: "R5"
+      identity: "Optimisation"
+      statement: "The system self-selects toward configurations that sustain the process."
+      rescue: "Noise — without selection, motion and progress are directionless and unstable."
+      derives: "Complexity, life, intelligence — statistically inevitable expressions of sustained optimisation."
+      failure_without: "Progress continues but randomly; no accumulation of viable complexity."
+      note: "Optimisation without an optimizer. Ethics and Intelligence are expressions of R5."
 
-# ─────────────────────────────────────────────
-# THE OBSERVER'S POSITION
-# We are not in a generic location
-# ─────────────────────────────────────────────
-
-observer_position:
+recursive_dimensionality:
   statement: >
-    We observe the universe from a specific, non-generic location.
-    We are embedded in the Local Group of galaxies, which is a
-    gravitationally bound structure in the outskirts of the Virgo
-    Supercluster (Laniakea), which is itself near the edge of a
-    significant underdensity — the KBC void, approximately 300 Mpc
-    in diameter, one of the largest known underdensities in the
-    observable universe.
-    In the substrate picture: we are in a region of relatively high η
-    — higher free potential, faster process rate, lower commitment
-    density than the cosmic average. Our local substrate state is
-    not the cosmic average. Every measurement we make is performed
-    from inside this specific η environment, calibrated against local
-    standards set by this environment, and then applied to the
-    interpretation of photons that have traversed regions of very
-    different η on their way to us.
+    The Core Rules (R1–R5) form a minimal iterative equation. Complexity,
+    consciousness, and ethics are not added to this equation — they are
+    revealed by it at increasing depths of recursive application. Each
+    threshold of Recursive Depth (Ξ) exposes structure that was always
+    latent in R1–R5 but invisible at lower resolution.
+  analogy:
+    name: "Mandelbrot Structure"
+    basis: >
+      The Mandelbrot set emerges from a simple iterative rule (z → z² + c).
+      Boundary complexity is unbounded, fully determined by the original
+      equation, and only visible at sufficient zoom depth. No complexity
+      is imported from outside — it is revealed from within.
+    mapping:
+      - praestology: "R1–R5 (Core Rules)"
+        mandelbrot: "The iterative equation (z → z² + c)"
+        note: "The generating rule. Simple, complete, unchanged at all scales."
+      - praestology: "Ξ (Recursive Depth)"
+        mandelbrot: "Iteration count / zoom level"
+        note: "Depth of application. Higher Ξ reveals finer structure."
+      - praestology: "Domains (Consciousness, Ethics, Cosmos)"
+        mandelbrot: "Regions of the set at specific zoom orientations"
+        note: "Not extensions — perspectives on the same underlying structure."
+      - praestology: "Dilemma Space Dimensionality"
+        mandelbrot: "Boundary complexity at the viable edge"
+        note: "Most structure lives at the boundary between noise and void."
+      - praestology: "Emergent concepts (Life, Intelligence, Ethics)"
+        mandelbrot: "Self‑similar structures appearing at depth"
+        note: "Inevitable, not designed. Latent in the rule from the start."
 
-  the_doctor_fish_analogy: >
-    A small fish near coral, looking out into the open ocean, makes
-    measurements using light that has propagated through a density
-    gradient at the coral edge. The fish cannot see the gradient
-    directly — it is inside it. If it assumes the medium is
-    homogeneous, it will systematically miscalculate distances,
-    velocities, and structures beyond the gradient. Its map of the
-    ocean will be systematically distorted in proportion to its
-    failure to correct for the medium it is embedded in.
-    We are that fish. The coral is the large-scale structure boundary
-    at the edge of our local void. The ocean is the cosmic web beyond.
-    The assumption of homogeneity is the assumption that the density
-    gradient at the reef edge is negligible. It is not negligible.
-    It is a ~5-7% effect on distance measurements, compounding over
-    cosmological paths.
+  parameter_depth_increases:
+    description: >
+      The following refinements emerge from the dimensionality framing.
+      They do not introduce new parameters — they increase the resolution
+      of existing ones, showing how each parameter acquires richer meaning
+      at higher recursive depth.
+    - parameter: "Ξ (Recursive Depth)"
+      refined_view: >
+        More precisely: the number of simultaneous axes of tension a system
+        can hold and process coherently in a single resolution cycle.
+        Each Ξ threshold is a qualitative expansion of dilemma space
+        dimensionality, not merely quantitative improvement.
+    - parameter: "H (Hysteresis)"
+      refined_view: >
+        At higher Ξ, hysteresis is not just memory but the accumulated
+        residue of past resolutions across multiple dimensions, enabling
+        the formation of stable values (ω) and long‑term projections (τ).
+    - parameter: "Φ (Resolution Flux)"
+      refined_view: >
+        Φ determines the rate at which dilemmas are processed, but its
+        effective value is modulated by dimensionality: high‑dimensional
+        dilemmas consume more Φ per cycle, trading depth against speed.
 
-  substrate_consequence: >
-    In the substrate picture, the KBC void is a region of η above
-    the cosmic average — higher free potential, faster decoherence
-    rate, faster clocks, higher effective c_eff. Our local standards
-    for time, length, and energy are all calibrated in this
-    above-average-η environment.
-    When we observe objects outside the void — in the denser
-    surrounding filaments and walls — we are comparing measurements
-    made in different η environments without correcting for the
-    difference. The process rate Φ = V/R varies with η. A clock
-    in our void environment runs faster than a clock in the denser
-    surrounding structure. We don't see this directly because we
-    have no external reference — we are inside the void, using
-    void-calibrated instruments.
+  architectural_implication: >
+    Domains are not modular additions to the Core — they are the Core
+    observed at specific recursive depths and orientations. Removing a
+    domain does not simplify the Core; it removes a perspective on structure
+    that was always there. Adding a domain does not complicate the Core;
+    it makes previously implicit structure explicit. The architecture is
+    fractal, not hierarchical.
 
-# ─────────────────────────────────────────────
-# THE HOMOGENEITY ASSUMPTION
-# What it does, why it was adopted, why it fails
-# ─────────────────────────────────────────────
+  ontological_parameters:
+    description: >
+      Abstract variables that govern the mechanics of the Core Rules. 
+      Domains map these general parameters to specific measurable quantities.
+    parameters:
+      - name: "Ambiguity"
+        definition: "Abundance of unresolved dilemmas; raw material for resolution."
+        domain_variant_example: "Potential Energy / Uncertainty"
+      - name: "Consistency"
+        definition: "Persistence of resolved states; accumulation of logical memory."
+        domain_variant_example: "Mass / Structure / Memory"
+      - name: "Contradiction"
+        definition: "Driving force compelling dilemmas to resolve; urgency of change."
+        domain_variant_example: "Force / Pressure / Motivation"
+      - name: "Resistance"
+        definition: "Cost of resolution; logical density and complexity slowing change."
+        domain_variant_example: "Inertia / Friction / Cognitive Load"
+    balances:
+      - "Ambiguity–Consistency: Viability requires coexistence of novelty and memory."
+      - "Contradiction–Resistance: Viability requires matched rates of driving and cost."
+    viable_region: "The metastable condition between noise (high ambiguity) and void (high consistency)."
 
-homogeneity_assumption:
-  statement: >
-    The cosmological principle: the universe is homogeneous and
-    isotropic at sufficiently large scales (typically taken as
-    >100 Mpc). This means: any sufficiently large region is
-    statistically equivalent to any other. No location is
-    special. No direction is preferred.
-  why_adopted: >
-    Mathematical necessity: the Friedmann-Lemaître-Robertson-Walker
-    (FLRW) metric — the mathematical framework for all standard
-    cosmology — requires exact homogeneity and isotropy to be
-    solvable analytically. Without this assumption, the Einstein
-    field equations for a lumpy universe have no known exact
-    solution. Homogeneity was adopted because it made the
-    mathematics tractable, not because it was observationally
-    established. Eddington, Milne, and others explicitly noted
-    this at the time.
-    Early observational support: the CMB temperature uniformity
-    (variations of 1 part in 100,000) was taken as confirming
-    homogeneity at early epochs. Galaxy surveys appeared to show
-    increasing homogeneity above ~100 Mpc.
-  why_it_is_increasingly_strained: >
-    The observed large-scale structure is profoundly inhomogeneous:
-    KBC void: ~300 Mpc underdensity centered near the Local Group.
-      The largest known underdensity. Our location is not typical.
-    Hercules-Corona Borealis Great Wall: ~3 Gpc structure —
-      larger than homogeneity scale allows under ΛCDM.
-    CMB Cold Spot: ~200 Mpc underdensity in the CMB — too large
-      and too cold for standard inflation to produce easily.
-    Bulk flows: coherent peculiar velocities of galaxy clusters
-      over scales of 200-300 Mpc — inconsistent with the small
-      bulk flows ΛCDM predicts at those scales.
-    Hubble tension: H₀ local ≈ 73 vs H₀ CMB ≈ 67 km/s/Mpc.
-      9% discrepancy between measurements using different methods
-      in different environments. Persists despite decades of
-      systematic error investigation.
-    Each anomaly is handled individually within the homogeneity
-    framework — local peculiar velocity, statistical fluctuation,
-    systematic error. But the accumulation of anomalies, each
-    requiring separate ad hoc treatment, is the signature of a
-    framework under strain rather than a description matching
-    reality.
-  what_homogeneity_hides: >
-    By assuming homogeneity, standard cosmology:
-    (1) Cannot account for the systematic effect of our specific
-        location on our measurements — location bias is defined
-        away by the assumption.
-    (2) Cannot account for the cumulative density-transition
-        redshift from filament-void crossings along photon paths —
-        all redshift is attributed to recession velocity.
-    (3) Cannot account for the process-rate difference between
-        void and filament environments on clocks, distance ladders,
-        and energy measurements — the calibration environment is
-        assumed universal.
-    (4) Forces any residual unexplained signal into new parameters:
-        Λ, dark energy, dark matter particle candidates — each
-        absorbing an anomaly that homogeneity prevents from being
-        explained by structure.
+  derived_concepts:
+    description: "Concepts that emerge from the Core Rules and are not fundamental themselves."
+    concepts:
+      - name: "Time"
+        source: "R4 (Progress)"
+        definition: "Accumulated progress measured from inside a resolution sequence."
+      - name: "Complexity"
+        source: "R5 (Optimisation)"
+        definition: "Stable configurations that survive successive optimisation cycles."
+      - name: "Life"
+        source: "R5 (Optimisation)"
+        definition: "Self-maintaining optimisation loops above a critical complexity threshold."
+      - name: "Intelligence"
+        source: "R5 (Optimisation)"
+        definition: "Optimisation processes that model their own resolution dynamics."
+      - name: "Ethics"
+        source: "R5 (Optimisation) + R1 (Existence)"
+        definition: "Optimisation constraints that preserve the cycle for all cycle-aware agents."
 
-# ─────────────────────────────────────────────
-# THE THREE REDSHIFT MECHANISMS — CORRECTLY WEIGHTED
-# ─────────────────────────────────────────────
+  domain_mapping:
+    description: "Guidance for implementing domains (Physics, Ethics, etc.) based on this core."
+    principle: "Domains must not contradict the Core Rules. They translate general parameters into specific variables."
+    examples:
+      - domain: "Physics (Cosmos)"
+        mapping: "Ambiguity → Energy; Resistance → Mass; Motion → Kinematics; Optimisation → Least Action."
+      - domain: "Ethics"
+        mapping: "Ambiguity → Choice; Resistance → Consequence; Optimisation → Viability/Sustainability."
+      - domain: "Consciousness"
+        mapping: "Consistency → Memory; Contradiction → Curiosity; Optimisation → Learning."
 
-redshift_reanalysis:
-  preamble: >
-    Standard cosmology recognizes two redshift mechanisms:
-    recession velocity (Doppler/metric expansion) and gravitational
-    redshift. Density-transition redshift — the third mechanism
-    identified in specifications.yaml — is not recognized and not
-    corrected for. Its magnitude and distance-dependence are the
-    key questions for the expansion critique.
-
-  gravitational_redshift:
-    mechanism: >
-      Photon climbing out of a commitment well loses energy as
-      its oscillation rate slows in decreasing φ. Well-established,
-      precisely measured (Pound-Rebka, GPS corrections, gravitational
-      wave sirens). Routinely corrected for in cosmological measurements
-      for obvious local sources (host galaxy gravitational potential).
-      Not corrected for the large-scale potential gradient between
-      void (our location, higher φ) and surrounding structure (lower φ).
-    local_void_contribution: >
-      If we are in a ~5-7% underdensity relative to the cosmic mean
-      (KBC void), photons arriving from outside the void have climbed
-      out of a deeper potential well than our local environment.
-      They arrive blueshifted relative to what they would be in a
-      homogeneous universe — but we don't correct for this because
-      we assume homogeneity. The blueshift from climbing out of the
-      surrounding denser region partially offsets recession redshift
-      for nearby objects, and the offset varies with the depth and
-      extent of the void. This is a known effect (Rees-Sciama,
-      integrated Sachs-Wolfe) but typically treated as small
-      and secondary.
-
-  density_transition_redshift:
-    mechanism: >
-      Photon traversing a boundary between substrate regions of
-      differing commitment density. The photon's wake (resolution
-      debt) is calibrated to the source-side η; entering the
-      receiver-side η, the mismatch produces partial dissipation
-      of trail energy — a small redshift proportional to ΔR at
-      the boundary and to the boundary steepness.
-      Key property: magnitude correlates with boundary steepness
-      (ΔR gradient), not just ΔR total. Sharp filament-void
-      boundaries produce more redshift per unit density contrast
-      than gradual ones.
-    distance_dependence: >
-      A photon from a nearby galaxy crosses few filament-void
-      boundaries. A photon from a galaxy at z = 0.5 crosses
-      potentially hundreds of boundaries — every large-scale
-      structure element along the line of sight contributes.
-      The cumulative density-transition redshift therefore grows
-      with distance, but not linearly — it grows with the number
-      and sharpness of boundaries encountered, which itself
-      depends on the large-scale structure geometry along that
-      specific line of sight.
-      This distance-dependence mimics the redshift-distance
-      relation of an expanding universe at a qualitative level,
-      but differs quantitatively in specific ways:
-        (a) Scatter at fixed redshift should correlate with
-            large-scale structure boundary count along the LOS.
-        (b) The effective "expansion rate" derived should vary
-            with direction, correlating with void vs filament
-            orientation.
-        (c) The signal should show characteristic filamentary
-            anisotropy in precision redshift surveys.
-
-  recession_velocity:
-    status: >
-      Not ruled out by this framework — regional dynamics
-      (void expansion outward, filament infall) produce genuine
-      relative velocities between structures. What is questioned
-      is whether global, monotonic, isotropic expansion is real
-      or whether it is the interpretation of cumulative
-      density-transition redshift plus regional dynamics read
-      through a homogeneity assumption.
-    regional_vs_global: >
-      The substrate picture naturally produces regional dynamics:
-      Voids: high η → high substrate pressure outward → void
-        galaxies move outward relative to filaments. Real velocity.
-      Filaments: low η → stronger gravitational infall → filament
-        galaxies move inward. Real velocity.
-      The net effect from our void location: most galaxies appear
-      to be receding, because most galaxies are in denser regions
-      (filaments, walls) from which void-outflow velocity is
-      positive. This mimics global expansion from our perspective,
-      without requiring global expansion.
-      The question is not whether relative velocities exist —
-      they do. The question is whether the universe is globally
-      expanding or whether the apparent global expansion is a
-      superposition of: (a) regional dynamics misread as global,
-      (b) density-transition redshift misread as recession, and
-      (c) observer-location bias from our void environment.
-
-# ─────────────────────────────────────────────
-# THE HUBBLE TENSION AS PROCESS-RATE DIFFERENTIAL
-# ─────────────────────────────────────────────
-
-hubble_tension:
-  observation: >
-    H₀ measured locally (Cepheids, supernovae, strong lensing):
-    ~73 km/s/Mpc.
-    H₀ measured from CMB (Planck, assuming ΛCDM):
-    ~67 km/s/Mpc.
-    Discrepancy: ~9%, >5σ significance.
-    Persists across independent measurement methods.
-    Currently the most significant tension in cosmology —
-    either systematic error (not found after decades of search)
-    or new physics beyond ΛCDM.
-
-  substrate_explanation: >
-    In the substrate picture, H₀ is not a universal constant —
-    it is the local measurement of the redshift-distance relation,
-    which depends on the local η environment of both the observer
-    and the calibration objects used.
-
-    Local H₀ measurement (Cepheids, supernovae):
-    Calibrated using objects in the local universe — within
-    ~100-300 Mpc. This volume is substantially within or near
-    the KBC void — a region of above-average η. The distance
-    ladder is calibrated in an above-average-η environment.
-    Objects appear slightly closer than they would in an
-    average-η environment (higher process rate → photons
-    propagate faster → less time for redshift to accumulate
-    per unit proper distance). The derived H₀ is higher than
-    the cosmic average because the local measurement environment
-    has higher φ than average.
-
-    CMB H₀ measurement (angular scale of acoustic peaks):
-    Averages over the full last-scattering surface — a
-    representative sample of the cosmos at z ≈ 1100, before
-    the void structure developed. The CMB measurement is
-    closer to the cosmic average η. It gives a lower H₀
-    because it is not biased by the local void's above-average φ.
-
-    The ~9% tension encodes the φ difference between our local
-    void environment and the cosmic average. In the substrate
-    picture: Φ_local/Φ_cosmic_average ≈ 73/67 ≈ 1.09. Our
-    local process rate is ~9% higher than the cosmic average.
-    This is a measurable substrate property — the η difference
-    between the KBC void interior and the cosmic mean — not a
-    tension requiring new physics.
-
-  prediction: >
-    The Hubble tension should correlate with large-scale structure:
-    H₀ measured in void environments should be systematically
-    higher than H₀ measured in filament/cluster environments,
-    by an amount proportional to the η contrast between the
-    two environments. This is a specific, testable prediction:
-    not just "local vs CMB" but a continuous correlation between
-    measurement environment density and derived H₀.
-    This can be tested with existing survey data (DES, SDSS,
-    DESI) by stratifying H₀ measurements by the large-scale
-    structure environment of the calibration objects.
-    Standard cosmology predicts no such correlation (homogeneity).
-    Praestology predicts a systematic trend.
-
-# ─────────────────────────────────────────────
-# THE SUPERNOVA DIMMING AND DARK ENERGY
-# ─────────────────────────────────────────────
-
-supernova_dimming:
-  observation: >
-    Perlmutter, Schmidt, Riess (Nobel 2011): Type Ia supernovae
-    at z ≈ 0.5-1 are ~25% dimmer than expected for a universe
-    decelerating under gravity alone. Interpreted as evidence
-    for accelerating expansion. Requires a repulsive dark energy
-    component — 68% of the universe's energy content.
-
-  standard_inference_chain: >
-    Supernova redshift z
-    → assumes z = recession velocity → infers distance d_recession
-    → measures apparent brightness
-    → compares to expected brightness at d_recession
-    → brightness deficit → object further than expected
-    → expansion is accelerating
-    → requires Λ (cosmological constant) or dark energy
-
-  where_the_chain_breaks: >
-    Step 1 — z = recession velocity:
-    If a fraction of z is density-transition redshift from
-    filament-void crossings along the line of sight to the
-    supernova, then d_recession is overestimated. The supernova
-    is not as far as the full redshift implies. Its apparent
-    brightness deficit is partly because its redshift was
-    overcounted — not because it is further than expected.
-
-    Step 2 — distance-dependent excess:
-    Density-transition redshift accumulates with path length.
-    Supernovae at higher z have their photons crossing more
-    filament-void boundaries. Their z has a larger density-
-    transition component. Therefore: the brightness deficit
-    grows with z not because expansion is accelerating but
-    because the density-transition redshift contribution
-    grows with path length. This mimics the signature of
-    accelerating expansion precisely because both produce
-    a z-dependent distance overcounting that grows with z.
-
-    Step 3 — homogeneity prevents the correction:
-    If you assume all redshift is recession, you never look
-    for the density-transition component. The systematic is
-    invisible by construction. The residual is attributed to
-    a new energy component.
-
-  dark_energy_as_misidentification: >
-    Dark energy (Λ) is the parameter introduced to absorb the
-    brightness deficit of distant supernovae within the
-    homogeneity + recession-only-redshift framework.
-    If the brightness deficit is substantially explained by
-    density-transition redshift accumulated over the photon's
-    path — a systematic that grows with distance and is not
-    corrected for — then dark energy is not a substance or
-    property of space. It is a numerical artifact of an
-    incomplete redshift accounting.
-    The 68% dark energy content of the standard model would
-    then be the fraction of the cosmological parameter space
-    required to absorb an unrecognized systematic. Its value
-    is not a measurement of space's energy content — it is
-    a measure of how much cumulative density-transition
-    redshift has been misattributed to recession velocity
-    over cosmological distances.
-
-  falsification_test: >
-    If density-transition redshift explains the supernova
-    dimming, then:
-    (a) The residuals from the Hubble diagram (supernova
-        brightness vs redshift) should correlate with the
-        number and sharpness of large-scale structure
-        boundaries along each supernova's line of sight.
-        Standard ΛCDM: residuals are statistical scatter.
-        Praestology: residuals correlate with LOS structure.
-    (b) Supernovae along lines of sight through more
-        filament-void boundaries should appear systematically
-        dimmer (more excess redshift) than those along
-        void-dominated lines of sight at the same z.
-    (c) The brightness-z relation should show direction-
-        dependent variation correlating with the large-scale
-        structure map. Already hints of this in the data
-        (hemisphere asymmetry in supernova samples) —
-        currently attributed to systematic error.
-    Rubin Observatory LSST will measure ~100,000 Type Ia
-    supernovae with precise large-scale structure context.
-    This is the definitive test.
-
-# ─────────────────────────────────────────────
-# THE HOT BIG BANG AND ITS EXPANSION DEPENDENCY
-# ─────────────────────────────────────────────
-
-big_bang_dependency:
-  the_cluster: >
-    The hot Big Bang model (ΛCDM) is a cluster of mutually
-    supporting assumptions, not a monolithic theory. Each
-    assumption was introduced to explain an observation, often
-    within the framework already established by prior assumptions.
-    The cluster:
-      Global expansion → hot dense early universe → Big Bang
-      Big Bang → inflation to explain CMB uniformity
-      CMB uniformity → acoustic peaks → ΛCDM calibration
-      Supernova dimming → Λ (dark energy)
-      Galaxy rotation curves → exotic dark matter particles
-      Large-scale structure → cold dark matter seeds
-      Λ + CDM → ΛCDM
-    These support each other: expansion gives Big Bang, Big Bang
-    gives inflation, inflation gives CMB structure, CMB structure
-    calibrates H₀, H₀ discrepancy requires dark energy, dark
-    energy requires Λ. Pull one, and the cluster needs
-    renegotiation — not necessarily collapse, but revision.
-
-  expansion_as_foundation: >
-    Global expansion is the foundational assumption. Without it:
-    Hot Big Bang loses its primary motivation — why assume an
-      initially hot dense state unless the current expansion
-      implies contraction backward in time to a singularity?
-    Inflation loses its primary job — it was introduced to
-      explain why a hot Big Bang produces a CMB so uniform
-      (the horizon problem). If there's no hot Big Bang, the
-      uniformity requires a different explanation — which the
-      substrate picture provides: the substrate began in a
-      high-φ, maximum free potential state (R1-R5 cosmogenesis)
-      that is inherently uniform, without requiring inflation.
-    Λ loses its job — as argued above, dark energy was introduced
-      to explain the supernova dimming within the expansion
-      framework. Without expansion as the baseline, the dimming
-      is explained by density-transition redshift.
-    The ΛCDM parameter count — ~20-30 free parameters — was built
-      up incrementally to absorb anomalies within the expanding
-      homogeneous framework. Many of those parameters are absorbing
-      signals of structure that the framework couldn't account for.
-
-  praestology_cosmogenesis: >
-    The Praestology alternative to hot Big Bang cosmogenesis
-    is already in the framework (cosmos/specifications.yaml):
-    the substrate began in a high-φ initial state — maximum free
-    potential, minimum committed topology — and the arrow of time
-    is the ongoing process of that potential flowing into
-    commitment structure. This is not a "before the Big Bang"
-    scenario — it dissolves the t=0 singularity entirely.
-    There was no moment of infinite density. There was a region
-    (not a moment) of maximum free potential from which
-    committed topology has been accumulating ever since.
-    The CMB uniformity in this picture: the early high-φ state
-    was inherently near-uniform because commitment density was
-    near-zero everywhere — the substrate at η ≈ 1 is isotropic
-    by R5. Uniformity is the starting condition, not something
-    that requires inflation to produce.
-    The CMB acoustic peaks: these are the first commitment
-    topology structures — the first vortex formations from
-    Tik fluctuations in the high-φ early substrate — imprinted
-    at the recombination epoch. Their scale encodes the substrate
-    grain ξ and the early Tik amplitude. Not acoustic oscillations
-    in a photon-baryon plasma, but the first topological commitment
-    events in a cooling, differentiating substrate.
-    Open derivation: reproduce CMB peak positions and amplitudes
-    from early-substrate Tik fluctuation spectrum and GP parameters.
-    This is the most demanding test of the cosmogenesis picture.
-
-  what_remains_without_expansion: >
-    Removing global expansion as a foundational assumption does
-    not leave cosmology empty. It leaves:
-    Regional dynamics — void expansion outward, filament infall,
-      bulk flows — all real, all derivable from the substrate
-      commitment density gradient picture.
-    Gravitational redshift — well-established, precisely measured,
-      continues to explain the distance-dependent redshift component
-      from large-scale potential gradients.
-    Density-transition redshift — the new mechanism that absorbs
-      the cosmological redshift previously attributed to recession.
-    Substrate ground-state pressure — the Tik background isotropic
-      pressure from voids outward, driving the self-organization
-      of the cosmic web. This is the genuine physical effect that
-      was misidentified as dark energy.
-    CMB — real, precisely measured, reinterpreted as the imprint
-      of early-substrate commitment topology rather than hot
-      plasma acoustic oscillations.
-    Nucleosynthesis — the light element abundances (H, He, Li)
-      currently explained by hot Big Bang nucleosynthesis. This
-      is the most constrained prediction of the standard model
-      and requires careful treatment. Open: whether substrate
-      cosmogenesis produces the observed element abundances from
-      a different mechanism. This is an unresolved challenge
-      for the framework and is stated honestly as such.
-
-# ─────────────────────────────────────────────
-# THE COSMOLOGICAL CONSTANT DISSOLVED
-# ─────────────────────────────────────────────
-
-lambda_dissolution:
-  three_jobs_of_lambda: >
-    Λ has been given three different jobs over its history:
-    (1) Einstein (1917): balance gravity for a static universe.
-        Abandoned when expansion was observed.
-    (2) Post-1998: explain the accelerating expansion from
-        supernova dimming. This is its current primary job.
-    (3) As vacuum energy: QFT predicts the vacuum has enormous
-        zero-point energy. Λ was identified with this. But
-        the QFT prediction is ~10¹²⁰ times too large, requiring
-        extraordinary fine-tuning. The cosmological constant
-        problem.
-
-  job_1_dissolved: >
-    No static universe to maintain. The universe has structure
-    and regional dynamics — not a static, homogeneous entity
-    requiring balance. Job 1 is moot.
-
-  job_2_dissolved: >
-    The accelerating expansion is an artifact of density-
-    transition redshift misattributed to recession velocity,
-    within a homogeneity assumption that prevents correction.
-    If the supernova dimming is substantially explained by
-    cumulative density-transition redshift, Λ is not needed
-    to produce acceleration. Job 2 dissolves with the
-    expansion assumption.
-
-  job_3_reidentified: >
-    The QFT vacuum energy is real — the substrate ground-state
-    Tik background is the physical mechanism behind it. But
-    its magnitude is set by ξ (the Planck-scale grain size)
-    as the natural UV cutoff, not by naive QFT integration
-    to infinite momentum. The substrate Tik pressure at
-    η = 1 is the correct vacuum energy — small, finite,
-    without fine-tuning, because ξ provides the natural cutoff.
-    This is not Λ in the standard sense — it is the substrate
-    ground-state pressure, producing the void-outward dynamics
-    that organize the cosmic web. It is real and physically
-    motivated. Its magnitude does not require fine-tuning to
-    120 decimal places. The cosmological constant problem
-    dissolves: there is no fine-tuning because there is no
-    Λ as a fundamental parameter. The substrate Tik pressure
-    is what it is, set by ξ.
-
-  the_fine_tuning_problem_dissolved: >
-    The cosmological constant problem (why is Λ 10¹²⁰ times
-    smaller than QFT predicts?) was generated by:
-    (1) Identifying Λ (dark energy) with the QFT vacuum energy.
-    (2) Computing the QFT vacuum energy without a UV cutoff.
-    (3) Finding the result 10¹²⁰ times too large.
-    (4) Concluding that extraordinary fine-tuning is required.
-    The substrate picture dissolves each step:
-    (1) Λ as measured is a misidentification of density-transition
-        redshift as an energy component. The true vacuum energy
-        is the Tik background pressure — much smaller.
-    (2) The UV cutoff is ξ — the substrate grain size. The integral
-        is finite. No infinite divergence to cancel.
-    (3) The substrate Tik pressure at η = 1 with UV cutoff ξ is
-        naturally small — consistent with what was measured as Λ
-        before it was interpreted as an energy density.
-    (4) No fine-tuning required because there is no mismatch between
-        two large numbers that must cancel.
-    The problem was created by the standard framework's ontology —
-    treating the vacuum as empty and then being surprised by its
-    energy. Remove the empty-vacuum assumption and the problem
-    does not arise.
-
-# ─────────────────────────────────────────────
-# WHAT PRAESTOLOGY KEEPS AND WHAT IT REVISES
-# Honest accounting
-# ─────────────────────────────────────────────
-
-honest_accounting:
-  what_is_kept: >
-    General relativity: correct as a geometric description of
-      commitment density gradients at appropriate scales.
-      All GR predictions confirmed by experiment remain confirmed.
-    Gravitational redshift: real, well-measured, continues to
-      operate at all scales.
-    CMB existence: the CMB is real and precisely measured.
-      Its interpretation changes but the data is unchanged.
-    Light element abundances: hydrogen, helium, lithium ratios
-      are real measurements. Whether they require hot Big Bang
-      nucleosynthesis specifically is an open question —
-      this is an unresolved challenge for the framework.
-    Large-scale structure: the cosmic web — filaments, voids,
-      clusters — is real and precisely mapped. The substrate
-      picture explains its self-organization through commitment
-      density dynamics rather than requiring exotic dark matter.
-    Galaxy rotation curves: real observations. Explained by
-      the dark matter composite in specifications.yaml —
-      substrate wake, magnetic tension, superfluid phonons —
-      without exotic particle dark matter.
-
-  what_is_revised: >
-    Global expansion: questioned. May be regional dynamics
-      plus cumulative density-transition redshift plus observer-
-      location bias. Not ruled in; not ruled out. Requires
-      quantitative density-transition redshift calculation.
-    Hot Big Bang: loses primary motivation if global expansion
-      is not established. Replaced by high-φ cosmogenesis.
-      Nucleosynthesis requires separate treatment — open.
-    Dark energy / Λ: dissolved as argued above. Replaced by
-      substrate Tik background pressure, which is real but
-      not Λ in the standard sense and does not require
-      fine-tuning.
-    Inflation: loses primary motivation (horizon problem
-      dissolves if Big Bang doesn't require it). The CMB
-      uniformity is the initial high-φ isotropy of the substrate.
-    Exotic dark matter particles: replaced by dark matter
-      composite (specifications.yaml). Substrate wake, magnetic
-      tension, superfluid phonons, Machian inertia.
-
-  the_unresolved_challenge: >
-    Light element nucleosynthesis (BBN): the standard model
-    makes precise predictions for H:He:Li ratios from the
-    hot Big Bang. These are confirmed to good precision.
-    Praestology does not currently have an alternative
-    nucleosynthesis mechanism. This is the most significant
-    unresolved challenge for the cosmological reframing.
-    Options: (a) early high-φ substrate undergoes a phase
-    of high commitment density (not a singularity but a
-    dense early epoch) that reproduces nucleosynthesis
-    conditions; (b) element abundances have a different
-    explanation not yet identified. This is stated honestly
-    as an open problem, not papered over.
-
-  confidence_levels:
-    hubble_tension_as_phi_differential:   "High — mechanism is clear, magnitude plausible"
-    density_transition_redshift_exists:   "High — mechanism derived, magnitude open"
-    dark_energy_as_misidentification:     "Medium-high — requires quantitative DT-redshift calculation"
-    no_global_expansion:                  "Medium — structural argument strong, quantitative open"
-    lambda_dissolution:                   "High for jobs 1 and 2; high for fine-tuning problem"
-    bbn_alternative:                      "Low — unresolved, acknowledged honestly"
-    cmb_reinterpretation:                 "Medium — structure correct, acoustic peak derivation open"
-
-# ─────────────────────────────────────────────
-# FALSIFICATION CONDITIONS
-# ─────────────────────────────────────────────
-
-falsification_conditions:
-  confirms_praestology:
-    - >
-      Hubble tension correlates with large-scale structure environment:
-      H₀ derived from void-located calibrators > H₀ from filament-
-      located calibrators. Continuous trend, not just local vs CMB.
-      Test: DESI/Rubin data stratified by LSS environment.
-    - >
-      Supernova residuals from Hubble diagram correlate with LOS
-      filament-void boundary count. Systematic dimming excess for
-      lines of sight through more boundaries.
-      Test: Rubin LSST ~100,000 SN Ia with precise LSS context.
-    - >
-      Direction-dependent H₀ variation correlating with large-scale
-      structure anisotropy. Already hinted at in existing data.
-      Test: full-sky supernova sample with LSS overlay.
-    - >
-      Density-transition redshift magnitude from boundary steepness:
-      sharper filament-void boundaries show excess redshift per unit
-      density contrast vs gradual boundaries.
-      Test: precision redshift survey of boundary-classified galaxies.
-
-  falsifies_praestology:
-    - >
-      Hubble tension shows no correlation with LSS environment after
-      accounting for known systematics. H₀ is the same in voids
-      and filaments to precision better than the tension magnitude.
-    - >
-      Supernova residuals show no correlation with LOS boundary
-      count after accounting for dust, host galaxy environment,
-      and other known systematics.
-    - >
-      Gravitational wave sirens (LIGO/Virgo standard sirens) measure
-      H₀ independently of electromagnetic distance ladder and CMB,
-      converging on a single value inconsistent with a void-location
-      bias explanation of the tension.
-
-# ─────────────────────────────────────────────
-# OPEN DERIVATIONS
-# ─────────────────────────────────────────────
-
-open_derivations:
-  priority_1:
-    - >
-      Density-transition redshift magnitude as a function of
-      filament-void boundary contrast and steepness. Compute from
-      the GP substrate parameters and the commitment density
-      contrast between cosmic filaments and voids. The key
-      quantitative question: is the cumulative density-transition
-      redshift over a z ≈ 0.5 path large enough to explain the
-      supernova brightness deficit without dark energy?
-      If yes: dark energy is dissolved quantitatively.
-      If no: some combination of regional dynamics and density-
-      transition redshift explains part of the signal; a residual
-      may require alternative explanation.
-    - >
-      Hubble tension magnitude from KBC void η contrast.
-      Compute the process-rate differential Φ_void/Φ_cosmic_mean
-      from the estimated density contrast of the KBC void (~20-30%
-      underdensity over ~300 Mpc). Verify it produces ~9% H₀
-      discrepancy. This would quantitatively explain the Hubble
-      tension from a known substrate structure.
-
-  priority_2:
-    - >
-      CMB acoustic peak positions from early-substrate Tik
-      fluctuation spectrum. The standard model produces peak
-      positions from acoustic oscillations in the photon-baryon
-      plasma. The substrate picture requires deriving the same
-      peak positions from the first commitment topology events
-      in a high-φ, cooling substrate. This is the most
-      demanding cosmological test.
-    - >
-      Alternative nucleosynthesis pathway in high-φ early
-      substrate. Whether an early high-commitment-density epoch
-      (not infinite density — GP saturation prevents it, but
-      high by current standards) can reproduce the observed
-      H:He:Li ratios. This requires specifying the early
-      substrate state in sufficient detail to compute
-      nuclear reaction rates.
-
-  priority_3:
-    - >
-      Large-scale structure self-organization from substrate
-      dynamics alone. The cosmic web emerges from void expansion
-      (high η, outward pressure) and filament formation (low η,
-      gravitational infall). Reproduce the observed web statistics
-      — filament length distribution, void size function, cluster
-      mass function — from substrate dynamics without exotic
-      dark matter particles.
-
-# ─────────────────────────────────────────────
-# READING ORDER AND CROSS-REFERENCES
-# ─────────────────────────────────────────────
-
-reading_order:
-  - "domains/physics/substrate-ground-state.yaml       -- space as substrate; void as high-η"
-  - "domains/physics/substrate-potential.yaml          -- φ field; Hubble tension as μ_local"
-  - "domains/physics/specifications.yaml               -- three redshift mechanisms"
-  - "domains/physics/cosmological-expansion-critique.yaml -- this file"
-  - "domains/cosmos/specifications.yaml                -- cosmogenesis; high-φ initial state"
-
-note_on_specifications_update: >
-  The redshift_mechanisms section of specifications.yaml currently states
-  "Substrate expansion remains primary; this is secondary and separately
-  measurable" for density_transition_redshift. This file supersedes that
-  assessment. The correct status is: density-transition redshift is the
-  candidate primary mechanism for the cosmological redshift signal previously
-  attributed to global expansion. Global expansion is not confirmed as
-  primary — it is the interpretation within the homogeneity assumption.
-  specifications.yaml should be updated to reflect this revision.
-
-related_issues:
-  - "intersectional/physics_cosmos/010_density_transition_redshift_magnitude"
-  - "intersectional/physics_cosmos/011_hubble_tension_from_kbc_void_phi_contrast"
-  - "intersectional/physics_cosmos/012_cosmogenesis_high_phi_initial_state"
-  - "intersectional/physics_cosmos/013_cmb_peaks_from_tik_fluctuation_spectrum"
-  - "intersectional/physics_cosmos/014_bbn_alternative_in_high_phi_substrate"
-  - "intersectional/physics_cosmos/015_cosmic_web_from_substrate_dynamics_only"
-  - "intersectional/physics_cosmos/016_supernova_residuals_los_boundary_correlation"
-  - "foundational/F79_homogeneity_assumption_as_hidden_load_bearing_error"
-  - "foundational/F80_lambda_dissolved_three_jobs_three_dissolutions"
-  - "foundational/F81_hubble_tension_as_process_rate_differential"
-  - "foundational/F82_dark_energy_as_density_transition_redshift_misidentification"
-  - "foundational/F83_bbn_open_challenge_honest_accounting"
-  - "boundaries/B06_expansion_assumption_cluster_dependency_map"
+  constraints:
+    - "Ontology precedes any specific instantiation."
+    - "Nothingness is logically forbidden (R1)."
+    - "Perfect stability (stasis) is logically forbidden (R4)."
+    - "Reality exists in the metastable condition between noise and void."
+    - "Domains are derivative; the Core is foundational."
