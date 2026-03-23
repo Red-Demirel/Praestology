@@ -1,0 +1,1187 @@
+# domains/cosmos/cosmological-expansion-critique.yaml
+name: "Cosmological Expansion Critique — Assumption Cluster Analysis"
+version: "1.0 — Homogeneity Assumption, Redshift Misattribution, Λ Dissolution,
+          Hot Big Bang Dependency Chain"
+parent_domain: "Cosmos"
+core_version: "1.5"
+status: "Argument complete — specific falsification conditions identified;
+         quantitative density-transition redshift calculation open;
+         supersedes 'substrate expansion remains primary' in specifications.yaml"
+updated: "2026-03-20"
+
+description: >
+  Standard cosmology rests on a cluster of mutually supporting assumptions:
+  global expansion, hot Big Bang origin, cosmological constant Λ, dark energy,
+  and exotic dark matter particles. These are not independent — each supports
+  and requires the others. The cluster was built incrementally, each assumption
+  introduced to explain an anomaly that appeared within the framework defined
+  by prior assumptions. The result is a self-consistent but potentially
+  self-referential edifice.
+
+  This file examines the foundational assumption — that the universe is
+  homogeneous at large scales and that observed redshift is predominantly
+  recession velocity — and traces the consequences of relaxing it within
+  the Praestology substrate picture.
+
+  The core argument: we observe the universe from a specific location
+  embedded in a specific large-scale structure environment (near the edge
+  of a significant void, in the outskirts of a supercluster). Every
+  cosmological measurement is refracted through the substrate density
+  gradient between our location and what we observe. We do not correct
+  for this because the homogeneity assumption says there is nothing
+  systematic to correct for. That assumption is increasingly contradicted
+  by the data it was meant to describe.
+
+  When the homogeneity assumption is relaxed and three distinct redshift
+  mechanisms are correctly separated — gravitational redshift, density-
+  transition redshift, and any genuine recession velocity — the need for
+  Λ, dark energy, and the specific hot Big Bang model all diminish
+  substantially. The assumption cluster does not collapse simultaneously;
+  it requires renegotiation. But the renegotiation is motivated by internal
+  evidence, not by Praestology imposing a preferred picture.
+
+  Epistemic note: the framework's confidence in this critique is high at
+  the structural level — the homogeneity assumption is doing hidden work
+  that the data increasingly contradicts. The specific quantitative claims
+  (how much of the supernova dimming is density-transition redshift, what
+  the exact Hubble tension decomposition is) require derivations that are
+  currently open. The argument is stated with appropriate confidence at
+  each level.
+
+dependency_map:
+  requires:
+    - "domains/physics/specifications.yaml          -- three redshift mechanisms;
+                                                       density-transition redshift;
+                                                       dark matter composite"
+    - "domains/physics/substrate-ground-state.yaml  -- space as substrate;
+                                                       void as high-η ground state;
+                                                       Tik background pressure"
+    - "domains/physics/substrate-potential.yaml     -- φ field; Hubble tension as
+                                                       μ_local variation; dark energy
+                                                       as Tik background pressure"
+    - "domains/cosmos/specifications.yaml           -- cosmogenesis; high-φ initial
+                                                       state; Big Bang reframing"
+  provides_to:
+    - target: "domains/physics/specifications.yaml"
+      via: "Supersedes 'substrate expansion remains primary' in redshift_mechanisms.
+            Density-transition redshift is candidate primary mechanism for
+            cosmological observations. Update cosmological_redshift status."
+    - target: "domains/cosmos/specifications.yaml"
+      via: "Expansion assumption is load-bearing for Big Bang model — relaxing
+            it requires cosmogenesis reframing as high-φ initial state without
+            necessarily implying global expansion"
+    - target: "domains/physics/hadron-flow-patterns.yaml"
+      via: "Observer-location bias is the hadronic-scale version of the
+            cosmological-scale homogeneity assumption failure — same R5 principle"
+
+# ─────────────────────────────────────────────
+# THE OBSERVER'S POSITION
+# We are not in a generic location
+# ─────────────────────────────────────────────
+
+observer_position:
+  statement: >
+    We observe the universe from a specific, non-generic location.
+    We are embedded in the Local Group of galaxies, which is a
+    gravitationally bound structure in the outskirts of the Virgo
+    Supercluster (Laniakea), which is itself near the edge of a
+    significant underdensity — the KBC void, approximately 300 Mpc
+    in diameter, one of the largest known underdensities in the
+    observable universe.
+    In the substrate picture: we are in a region of relatively high η
+    — higher free potential, faster process rate, lower commitment
+    density than the cosmic average. Our local substrate state is
+    not the cosmic average. Every measurement we make is performed
+    from inside this specific η environment, calibrated against local
+    standards set by this environment, and then applied to the
+    interpretation of photons that have traversed regions of very
+    different η on their way to us.
+
+  the_doctor_fish_analogy: >
+    A small fish near coral, looking out into the open ocean, makes
+    measurements using light that has propagated through a density
+    gradient at the coral edge. The fish cannot see the gradient
+    directly — it is inside it. If it assumes the medium is
+    homogeneous, it will systematically miscalculate distances,
+    velocities, and structures beyond the gradient. Its map of the
+    ocean will be systematically distorted in proportion to its
+    failure to correct for the medium it is embedded in.
+    We are that fish. The coral is the large-scale structure boundary
+    at the edge of our local void. The ocean is the cosmic web beyond.
+    The assumption of homogeneity is the assumption that the density
+    gradient at the reef edge is negligible. It is not negligible.
+    It is a ~5-7% effect on distance measurements, compounding over
+    cosmological paths.
+
+  substrate_consequence: >
+    In the substrate picture, the KBC void is a region of η above
+    the cosmic average — higher free potential, faster decoherence
+    rate, faster clocks, higher effective c_eff. Our local standards
+    for time, length, and energy are all calibrated in this
+    above-average-η environment.
+    When we observe objects outside the void — in the denser
+    surrounding filaments and walls — we are comparing measurements
+    made in different η environments without correcting for the
+    difference. The process rate Φ = V/R varies with η. A clock
+    in our void environment runs faster than a clock in the denser
+    surrounding structure. We don't see this directly because we
+    have no external reference — we are inside the void, using
+    void-calibrated instruments.
+
+# ─────────────────────────────────────────────
+# THE HOMOGENEITY ASSUMPTION
+# What it does, why it was adopted, why it fails
+# ─────────────────────────────────────────────
+
+homogeneity_assumption:
+  statement: >
+    The cosmological principle: the universe is homogeneous and
+    isotropic at sufficiently large scales (typically taken as
+    >100 Mpc). This means: any sufficiently large region is
+    statistically equivalent to any other. No location is
+    special. No direction is preferred.
+  why_adopted: >
+    Mathematical necessity: the Friedmann-Lemaître-Robertson-Walker
+    (FLRW) metric — the mathematical framework for all standard
+    cosmology — requires exact homogeneity and isotropy to be
+    solvable analytically. Without this assumption, the Einstein
+    field equations for a lumpy universe have no known exact
+    solution. Homogeneity was adopted because it made the
+    mathematics tractable, not because it was observationally
+    established. Eddington, Milne, and others explicitly noted
+    this at the time.
+    Early observational support: the CMB temperature uniformity
+    (variations of 1 part in 100,000) was taken as confirming
+    homogeneity at early epochs. Galaxy surveys appeared to show
+    increasing homogeneity above ~100 Mpc.
+  why_it_is_increasingly_strained: >
+    The observed large-scale structure is profoundly inhomogeneous:
+    KBC void: ~300 Mpc underdensity centered near the Local Group.
+      The largest known underdensity. Our location is not typical.
+    Hercules-Corona Borealis Great Wall: ~3 Gpc structure —
+      larger than homogeneity scale allows under ΛCDM.
+    CMB Cold Spot: ~200 Mpc underdensity in the CMB — too large
+      and too cold for standard inflation to produce easily.
+    Bulk flows: coherent peculiar velocities of galaxy clusters
+      over scales of 200-300 Mpc — inconsistent with the small
+      bulk flows ΛCDM predicts at those scales.
+    Hubble tension: H₀ local ≈ 73 vs H₀ CMB ≈ 67 km/s/Mpc.
+      9% discrepancy between measurements using different methods
+      in different environments. Persists despite decades of
+      systematic error investigation.
+    Each anomaly is handled individually within the homogeneity
+    framework — local peculiar velocity, statistical fluctuation,
+    systematic error. But the accumulation of anomalies, each
+    requiring separate ad hoc treatment, is the signature of a
+    framework under strain rather than a description matching
+    reality.
+  what_homogeneity_hides: >
+    By assuming homogeneity, standard cosmology:
+    (1) Cannot account for the systematic effect of our specific
+        location on our measurements — location bias is defined
+        away by the assumption.
+    (2) Cannot account for the cumulative density-transition
+        redshift from filament-void crossings along photon paths —
+        all redshift is attributed to recession velocity.
+    (3) Cannot account for the process-rate difference between
+        void and filament environments on clocks, distance ladders,
+        and energy measurements — the calibration environment is
+        assumed universal.
+    (4) Forces any residual unexplained signal into new parameters:
+        Λ, dark energy, dark matter particle candidates — each
+        absorbing an anomaly that homogeneity prevents from being
+        explained by structure.
+
+# ─────────────────────────────────────────────
+# THE THREE REDSHIFT MECHANISMS — CORRECTLY WEIGHTED
+# ─────────────────────────────────────────────
+
+redshift_reanalysis:
+  preamble: >
+    Standard cosmology recognizes two redshift mechanisms:
+    recession velocity (Doppler/metric expansion) and gravitational
+    redshift. Density-transition redshift — the third mechanism
+    identified in specifications.yaml — is not recognized and not
+    corrected for. Its magnitude and distance-dependence are the
+    key questions for the expansion critique.
+
+  gravitational_redshift:
+    mechanism: >
+      Photon climbing out of a commitment well loses energy as
+      its oscillation rate slows in decreasing φ. Well-established,
+      precisely measured (Pound-Rebka, GPS corrections, gravitational
+      wave sirens). Routinely corrected for in cosmological measurements
+      for obvious local sources (host galaxy gravitational potential).
+      Not corrected for the large-scale potential gradient between
+      void (our location, higher φ) and surrounding structure (lower φ).
+    local_void_contribution: >
+      If we are in a ~5-7% underdensity relative to the cosmic mean
+      (KBC void), photons arriving from outside the void have climbed
+      out of a deeper potential well than our local environment.
+      They arrive blueshifted relative to what they would be in a
+      homogeneous universe — but we don't correct for this because
+      we assume homogeneity. The blueshift from climbing out of the
+      surrounding denser region partially offsets recession redshift
+      for nearby objects, and the offset varies with the depth and
+      extent of the void. This is a known effect (Rees-Sciama,
+      integrated Sachs-Wolfe) but typically treated as small
+      and secondary.
+
+  density_transition_redshift:
+    mechanism: >
+      Photon traversing a boundary between substrate regions of
+      differing commitment density. The photon's wake (resolution
+      debt) is calibrated to the source-side η; entering the
+      receiver-side η, the mismatch produces partial dissipation
+      of trail energy — a small redshift proportional to ΔR at
+      the boundary and to the boundary steepness.
+      Key property: magnitude correlates with boundary steepness
+      (ΔR gradient), not just ΔR total. Sharp filament-void
+      boundaries produce more redshift per unit density contrast
+      than gradual ones.
+    distance_dependence: >
+      A photon from a nearby galaxy crosses few filament-void
+      boundaries. A photon from a galaxy at z = 0.5 crosses
+      potentially hundreds of boundaries — every large-scale
+      structure element along the line of sight contributes.
+      The cumulative density-transition redshift therefore grows
+      with distance, but not linearly — it grows with the number
+      and sharpness of boundaries encountered, which itself
+      depends on the large-scale structure geometry along that
+      specific line of sight.
+      This distance-dependence mimics the redshift-distance
+      relation of an expanding universe at a qualitative level,
+      but differs quantitatively in specific ways:
+        (a) Scatter at fixed redshift should correlate with
+            large-scale structure boundary count along the LOS.
+        (b) The effective "expansion rate" derived should vary
+            with direction, correlating with void vs filament
+            orientation.
+        (c) The signal should show characteristic filamentary
+            anisotropy in precision redshift surveys.
+
+  recession_velocity:
+    status: >
+      Not ruled out by this framework — regional dynamics
+      (void expansion outward, filament infall) produce genuine
+      relative velocities between structures. What is questioned
+      is whether global, monotonic, isotropic expansion is real
+      or whether it is the interpretation of cumulative
+      density-transition redshift plus regional dynamics read
+      through a homogeneity assumption.
+    regional_vs_global: >
+      The substrate picture naturally produces regional dynamics:
+      Voids: high η → high substrate pressure outward → void
+        galaxies move outward relative to filaments. Real velocity.
+      Filaments: low η → stronger gravitational infall → filament
+        galaxies move inward. Real velocity.
+      The net effect from our void location: most galaxies appear
+      to be receding, because most galaxies are in denser regions
+      (filaments, walls) from which void-outflow velocity is
+      positive. This mimics global expansion from our perspective,
+      without requiring global expansion.
+      The question is not whether relative velocities exist —
+      they do. The question is whether the universe is globally
+      expanding or whether the apparent global expansion is a
+      superposition of: (a) regional dynamics misread as global,
+      (b) density-transition redshift misread as recession, and
+      (c) observer-location bias from our void environment.
+
+# ─────────────────────────────────────────────
+# THE HUBBLE TENSION AS PROCESS-RATE DIFFERENTIAL
+# ─────────────────────────────────────────────
+
+hubble_tension:
+  observation: >
+    H₀ measured locally (Cepheids, supernovae, strong lensing):
+    ~73 km/s/Mpc.
+    H₀ measured from CMB (Planck, assuming ΛCDM):
+    ~67 km/s/Mpc.
+    Discrepancy: ~9%, >5σ significance.
+    Persists across independent measurement methods.
+    Currently the most significant tension in cosmology —
+    either systematic error (not found after decades of search)
+    or new physics beyond ΛCDM.
+
+  substrate_explanation: >
+    In the substrate picture, H₀ is not a universal constant —
+    it is the local measurement of the redshift-distance relation,
+    which depends on the local η environment of both the observer
+    and the calibration objects used.
+
+    Local H₀ measurement (Cepheids, supernovae):
+    Calibrated using objects in the local universe — within
+    ~100-300 Mpc. This volume is substantially within or near
+    the KBC void — a region of above-average η. The distance
+    ladder is calibrated in an above-average-η environment.
+    Objects appear slightly closer than they would in an
+    average-η environment (higher process rate → photons
+    propagate faster → less time for redshift to accumulate
+    per unit proper distance). The derived H₀ is higher than
+    the cosmic average because the local measurement environment
+    has higher φ than average.
+
+    CMB H₀ measurement (angular scale of acoustic peaks):
+    Averages over the full last-scattering surface — a
+    representative sample of the cosmos at z ≈ 1100, before
+    the void structure developed. The CMB measurement is
+    closer to the cosmic average η. It gives a lower H₀
+    because it is not biased by the local void's above-average φ.
+
+    The ~9% tension encodes the φ difference between our local
+    void environment and the cosmic average. In the substrate
+    picture: Φ_local/Φ_cosmic_average ≈ 73/67 ≈ 1.09. Our
+    local process rate is ~9% higher than the cosmic average.
+    This is a measurable substrate property — the η difference
+    between the KBC void interior and the cosmic mean — not a
+    tension requiring new physics.
+
+  prediction: >
+    The Hubble tension should correlate with large-scale structure:
+    H₀ measured in void environments should be systematically
+    higher than H₀ measured in filament/cluster environments,
+    by an amount proportional to the η contrast between the
+    two environments. This is a specific, testable prediction:
+    not just "local vs CMB" but a continuous correlation between
+    measurement environment density and derived H₀.
+    This can be tested with existing survey data (DES, SDSS,
+    DESI) by stratifying H₀ measurements by the large-scale
+    structure environment of the calibration objects.
+    Standard cosmology predicts no such correlation (homogeneity).
+    Praestology predicts a systematic trend.
+
+# ─────────────────────────────────────────────
+# THE SUPERNOVA DIMMING AND DARK ENERGY
+# ─────────────────────────────────────────────
+
+supernova_dimming:
+  observation: >
+    Perlmutter, Schmidt, Riess (Nobel 2011): Type Ia supernovae
+    at z ≈ 0.5-1 are ~25% dimmer than expected for a universe
+    decelerating under gravity alone. Interpreted as evidence
+    for accelerating expansion. Requires a repulsive dark energy
+    component — 68% of the universe's energy content.
+
+  standard_inference_chain: >
+    Supernova redshift z
+    → assumes z = recession velocity → infers distance d_recession
+    → measures apparent brightness
+    → compares to expected brightness at d_recession
+    → brightness deficit → object further than expected
+    → expansion is accelerating
+    → requires Λ (cosmological constant) or dark energy
+
+  where_the_chain_breaks: >
+    Step 1 — z = recession velocity:
+    If a fraction of z is density-transition redshift from
+    filament-void crossings along the line of sight to the
+    supernova, then d_recession is overestimated. The supernova
+    is not as far as the full redshift implies. Its apparent
+    brightness deficit is partly because its redshift was
+    overcounted — not because it is further than expected.
+
+    Step 2 — distance-dependent excess:
+    Density-transition redshift accumulates with path length.
+    Supernovae at higher z have their photons crossing more
+    filament-void boundaries. Their z has a larger density-
+    transition component. Therefore: the brightness deficit
+    grows with z not because expansion is accelerating but
+    because the density-transition redshift contribution
+    grows with path length. This mimics the signature of
+    accelerating expansion precisely because both produce
+    a z-dependent distance overcounting that grows with z.
+
+    Step 3 — homogeneity prevents the correction:
+    If you assume all redshift is recession, you never look
+    for the density-transition component. The systematic is
+    invisible by construction. The residual is attributed to
+    a new energy component.
+
+  dark_energy_as_misidentification: >
+    Dark energy (Λ) is the parameter introduced to absorb the
+    brightness deficit of distant supernovae within the
+    homogeneity + recession-only-redshift framework.
+    If the brightness deficit is substantially explained by
+    density-transition redshift accumulated over the photon's
+    path — a systematic that grows with distance and is not
+    corrected for — then dark energy is not a substance or
+    property of space. It is a numerical artifact of an
+    incomplete redshift accounting.
+    The 68% dark energy content of the standard model would
+    then be the fraction of the cosmological parameter space
+    required to absorb an unrecognized systematic. Its value
+    is not a measurement of space's energy content — it is
+    a measure of how much cumulative density-transition
+    redshift has been misattributed to recession velocity
+    over cosmological distances.
+
+  falsification_test: >
+    If density-transition redshift explains the supernova
+    dimming, then:
+    (a) The residuals from the Hubble diagram (supernova
+        brightness vs redshift) should correlate with the
+        number and sharpness of large-scale structure
+        boundaries along each supernova's line of sight.
+        Standard ΛCDM: residuals are statistical scatter.
+        Praestology: residuals correlate with LOS structure.
+    (b) Supernovae along lines of sight through more
+        filament-void boundaries should appear systematically
+        dimmer (more excess redshift) than those along
+        void-dominated lines of sight at the same z.
+    (c) The brightness-z relation should show direction-
+        dependent variation correlating with the large-scale
+        structure map. Already hints of this in the data
+        (hemisphere asymmetry in supernova samples) —
+        currently attributed to systematic error.
+    Rubin Observatory LSST will measure ~100,000 Type Ia
+    supernovae with precise large-scale structure context.
+    This is the definitive test.
+
+# ─────────────────────────────────────────────
+# THE HOT BIG BANG AND ITS EXPANSION DEPENDENCY
+# ─────────────────────────────────────────────
+
+big_bang_dependency:
+  the_cluster: >
+    The hot Big Bang model (ΛCDM) is a cluster of mutually
+    supporting assumptions, not a monolithic theory. Each
+    assumption was introduced to explain an observation, often
+    within the framework already established by prior assumptions.
+    The cluster:
+      Global expansion → hot dense early universe → Big Bang
+      Big Bang → inflation to explain CMB uniformity
+      CMB uniformity → acoustic peaks → ΛCDM calibration
+      Supernova dimming → Λ (dark energy)
+      Galaxy rotation curves → exotic dark matter particles
+      Large-scale structure → cold dark matter seeds
+      Λ + CDM → ΛCDM
+    These support each other: expansion gives Big Bang, Big Bang
+    gives inflation, inflation gives CMB structure, CMB structure
+    calibrates H₀, H₀ discrepancy requires dark energy, dark
+    energy requires Λ. Pull one, and the cluster needs
+    renegotiation — not necessarily collapse, but revision.
+
+  expansion_as_foundation: >
+    Global expansion is the foundational assumption. Without it:
+    Hot Big Bang loses its primary motivation — why assume an
+      initially hot dense state unless the current expansion
+      implies contraction backward in time to a singularity?
+    Inflation loses its primary job — it was introduced to
+      explain why a hot Big Bang produces a CMB so uniform
+      (the horizon problem). If there's no hot Big Bang, the
+      uniformity requires a different explanation — which the
+      substrate picture provides: the substrate began in a
+      high-φ, maximum free potential state (R1-R5 cosmogenesis)
+      that is inherently uniform, without requiring inflation.
+    Λ loses its job — as argued above, dark energy was introduced
+      to explain the supernova dimming within the expansion
+      framework. Without expansion as the baseline, the dimming
+      is explained by density-transition redshift.
+    The ΛCDM parameter count — ~20-30 free parameters — was built
+      up incrementally to absorb anomalies within the expanding
+      homogeneous framework. Many of those parameters are absorbing
+      signals of structure that the framework couldn't account for.
+
+  praestology_cosmogenesis: >
+    The Praestology alternative to hot Big Bang cosmogenesis
+    is already in the framework (cosmos/specifications.yaml):
+    the substrate began in a high-φ initial state — maximum free
+    potential, minimum committed topology — and the arrow of time
+    is the ongoing process of that potential flowing into
+    commitment structure. This is not a "before the Big Bang"
+    scenario — it dissolves the t=0 singularity entirely.
+    There was no moment of infinite density. There was a region
+    (not a moment) of maximum free potential from which
+    committed topology has been accumulating ever since.
+    The CMB uniformity in this picture: the early high-φ state
+    was inherently near-uniform because commitment density was
+    near-zero everywhere — the substrate at η ≈ 1 is isotropic
+    by R5. Uniformity is the starting condition, not something
+    that requires inflation to produce.
+    The CMB acoustic peaks: these are the first commitment
+    topology structures — the first vortex formations from
+    Tik fluctuations in the high-φ early substrate — imprinted
+    at the recombination epoch. Their scale encodes the substrate
+    grain ξ and the early Tik amplitude. Not acoustic oscillations
+    in a photon-baryon plasma, but the first topological commitment
+    events in a cooling, differentiating substrate.
+    Open derivation: reproduce CMB peak positions and amplitudes
+    from early-substrate Tik fluctuation spectrum and GP parameters.
+    This is the most demanding test of the cosmogenesis picture.
+
+  what_remains_without_expansion: >
+    Removing global expansion as a foundational assumption does
+    not leave cosmology empty. It leaves:
+    Regional dynamics — void expansion outward, filament infall,
+      bulk flows — all real, all derivable from the substrate
+      commitment density gradient picture.
+    Gravitational redshift — well-established, precisely measured,
+      continues to explain the distance-dependent redshift component
+      from large-scale potential gradients.
+    Density-transition redshift — the new mechanism that absorbs
+      the cosmological redshift previously attributed to recession.
+    Substrate ground-state pressure — the Tik background isotropic
+      pressure from voids outward, driving the self-organization
+      of the cosmic web. This is the genuine physical effect that
+      was misidentified as dark energy.
+    CMB — real, precisely measured, reinterpreted as the imprint
+      of early-substrate commitment topology rather than hot
+      plasma acoustic oscillations.
+    Nucleosynthesis — the light element abundances (H, He, Li)
+      currently explained by hot Big Bang nucleosynthesis. This
+      is the most constrained prediction of the standard model
+      and requires careful treatment. Open: whether substrate
+      cosmogenesis produces the observed element abundances from
+      a different mechanism. This is an unresolved challenge
+      for the framework and is stated honestly as such.
+
+# ─────────────────────────────────────────────
+# THE COSMOLOGICAL CONSTANT DISSOLVED
+# ─────────────────────────────────────────────
+
+lambda_dissolution:
+  three_jobs_of_lambda: >
+    Λ has been given three different jobs over its history:
+    (1) Einstein (1917): balance gravity for a static universe.
+        Abandoned when expansion was observed.
+    (2) Post-1998: explain the accelerating expansion from
+        supernova dimming. This is its current primary job.
+    (3) As vacuum energy: QFT predicts the vacuum has enormous
+        zero-point energy. Λ was identified with this. But
+        the QFT prediction is ~10¹²⁰ times too large, requiring
+        extraordinary fine-tuning. The cosmological constant
+        problem.
+
+  job_1_dissolved: >
+    No static universe to maintain. The universe has structure
+    and regional dynamics — not a static, homogeneous entity
+    requiring balance. Job 1 is moot.
+
+  job_2_dissolved: >
+    The accelerating expansion is an artifact of density-
+    transition redshift misattributed to recession velocity,
+    within a homogeneity assumption that prevents correction.
+    If the supernova dimming is substantially explained by
+    cumulative density-transition redshift, Λ is not needed
+    to produce acceleration. Job 2 dissolves with the
+    expansion assumption.
+
+  job_3_reidentified: >
+    The QFT vacuum energy is real — the substrate ground-state
+    Tik background is the physical mechanism behind it. But
+    its magnitude is set by ξ (the Planck-scale grain size)
+    as the natural UV cutoff, not by naive QFT integration
+    to infinite momentum. The substrate Tik pressure at
+    η = 1 is the correct vacuum energy — small, finite,
+    without fine-tuning, because ξ provides the natural cutoff.
+    This is not Λ in the standard sense — it is the substrate
+    ground-state pressure, producing the void-outward dynamics
+    that organize the cosmic web. It is real and physically
+    motivated. Its magnitude does not require fine-tuning to
+    120 decimal places. The cosmological constant problem
+    dissolves: there is no fine-tuning because there is no
+    Λ as a fundamental parameter. The substrate Tik pressure
+    is what it is, set by ξ.
+
+  the_fine_tuning_problem_dissolved: >
+    The cosmological constant problem (why is Λ 10¹²⁰ times
+    smaller than QFT predicts?) was generated by:
+    (1) Identifying Λ (dark energy) with the QFT vacuum energy.
+    (2) Computing the QFT vacuum energy without a UV cutoff.
+    (3) Finding the result 10¹²⁰ times too large.
+    (4) Concluding that extraordinary fine-tuning is required.
+    The substrate picture dissolves each step:
+    (1) Λ as measured is a misidentification of density-transition
+        redshift as an energy component. The true vacuum energy
+        is the Tik background pressure — much smaller.
+    (2) The UV cutoff is ξ — the substrate grain size. The integral
+        is finite. No infinite divergence to cancel.
+    (3) The substrate Tik pressure at η = 1 with UV cutoff ξ is
+        naturally small — consistent with what was measured as Λ
+        before it was interpreted as an energy density.
+    (4) No fine-tuning required because there is no mismatch between
+        two large numbers that must cancel.
+    The problem was created by the standard framework's ontology —
+    treating the vacuum as empty and then being surprised by its
+    energy. Remove the empty-vacuum assumption and the problem
+    does not arise.
+
+# ─────────────────────────────────────────────
+# WHAT PRAESTOLOGY KEEPS AND WHAT IT REVISES
+# Honest accounting
+# ─────────────────────────────────────────────
+
+honest_accounting:
+  what_is_kept: >
+    General relativity: correct as a geometric description of
+      commitment density gradients at appropriate scales.
+      All GR predictions confirmed by experiment remain confirmed.
+    Gravitational redshift: real, well-measured, continues to
+      operate at all scales.
+    CMB existence: the CMB is real and precisely measured.
+      Its interpretation changes but the data is unchanged.
+    Light element abundances: hydrogen, helium, lithium ratios
+      are real measurements. Whether they require hot Big Bang
+      nucleosynthesis specifically is an open question —
+      this is an unresolved challenge for the framework.
+    Large-scale structure: the cosmic web — filaments, voids,
+      clusters — is real and precisely mapped. The substrate
+      picture explains its self-organization through commitment
+      density dynamics rather than requiring exotic dark matter.
+    Galaxy rotation curves: real observations. Explained by
+      the dark matter composite in specifications.yaml —
+      substrate wake, magnetic tension, superfluid phonons —
+      without exotic particle dark matter.
+
+  what_is_revised: >
+    Global expansion: questioned. May be regional dynamics
+      plus cumulative density-transition redshift plus observer-
+      location bias. Not ruled in; not ruled out. Requires
+      quantitative density-transition redshift calculation.
+    Hot Big Bang: loses primary motivation if global expansion
+      is not established. Replaced by high-φ cosmogenesis.
+      Nucleosynthesis requires separate treatment — open.
+    Dark energy / Λ: dissolved as argued above. Replaced by
+      substrate Tik background pressure, which is real but
+      not Λ in the standard sense and does not require
+      fine-tuning.
+    Inflation: loses primary motivation (horizon problem
+      dissolves if Big Bang doesn't require it). The CMB
+      uniformity is the initial high-φ isotropy of the substrate.
+    Exotic dark matter particles: replaced by dark matter
+      composite (specifications.yaml). Substrate wake, magnetic
+      tension, superfluid phonons, Machian inertia.
+
+  the_unresolved_challenge: >
+    Light element nucleosynthesis (BBN): the standard model
+    makes precise predictions for H:He:Li ratios from the
+    hot Big Bang. These are confirmed to good precision.
+    Praestology does not currently have an alternative
+    nucleosynthesis mechanism. This is the most significant
+    unresolved challenge for the cosmological reframing.
+    Options: (a) early high-φ substrate undergoes a phase
+    of high commitment density (not a singularity but a
+    dense early epoch) that reproduces nucleosynthesis
+    conditions; (b) element abundances have a different
+    explanation not yet identified. This is stated honestly
+    as an open problem, not papered over.
+
+  confidence_levels:
+    hubble_tension_as_phi_differential:   "High — mechanism is clear, magnitude plausible"
+    density_transition_redshift_exists:   "High — mechanism derived, magnitude open"
+    dark_energy_as_misidentification:     "Medium-high — requires quantitative DT-redshift calculation"
+    no_global_expansion:                  "Medium — structural argument strong, quantitative open"
+    lambda_dissolution:                   "High for jobs 1 and 2; high for fine-tuning problem"
+    bbn_alternative:                      "Low — unresolved, acknowledged honestly"
+    cmb_reinterpretation:                 "Medium — structure correct, acoustic peak derivation open"
+
+# ─────────────────────────────────────────────
+# HISTORICAL CONTEXT
+# How the expansion interpretation became
+# entrenched — and why that matters
+# ─────────────────────────────────────────────
+
+historical_context:
+  observation_precedes_interpretation: >
+    The redshift was observed first. Slipher measured galaxy
+    redshifts from 1912 onward. Hubble published the distance-
+    velocity relation in 1929. The recession interpretation —
+    that redshift means galaxies are moving away — was not the
+    only available reading. It was the interpretation that fit
+    most naturally within the physics vocabulary of the time,
+    and it was adopted without being established as the unique
+    correct interpretation.
+    Zwicky proposed tired light the same year as Hubble's paper —
+    1929. He was asking the right question: does redshift require
+    recession? The mechanism he proposed (photon energy loss to
+    the medium along the path) was wrong. But the question was
+    legitimate and has never been fully answered — only the
+    specific tired light mechanism was falsified, not the general
+    class of non-recession redshift mechanisms.
+
+  hubble_himself_was_uncertain: >
+    Edwin Hubble was not fully convinced by the expansion
+    interpretation of his own data. In his 1937 Royal Astronomical
+    Society address he referred consistently to "apparent
+    velocities" rather than actual velocities, and explicitly
+    noted that the redshift might have "some other cause not yet
+    identified." This is almost never mentioned in standard
+    cosmological history, where Hubble is presented as the
+    discoverer of the expanding universe. He was the discoverer
+    of the redshift-distance relation. The expanding universe
+    interpretation was Lemaître and de Sitter's.
+    The equation called "Hubble's Law" — v = H₀d — was actually
+    first written by Lemaître in 1927, two years before Hubble's
+    paper. Hubble's contribution was the observational distance
+    calibration, not the expansion interpretation.
+
+  tired_light_falsified_on_specific_grounds: >
+    Tired light — Zwicky's continuous-energy-loss mechanism —
+    was correctly ruled out by specific observational tests:
+    (a) Surface brightness scaling: tired light predicts SB ∝
+        (1+z)^(−3); expansion predicts SB ∝ (1+z)^(−4). Data
+        favors the expansion prediction.
+    (b) Supernova light curve time dilation: supernovae at high
+        redshift have their light curves stretched by (1+z) —
+        consistent with time dilation from expansion, inconsistent
+        with tired light which predicts no time dilation.
+    These are valid falsifications of tired light specifically.
+    They do not falsify density-transition redshift, which is
+    categorically different:
+    Tired light: continuous energy loss proportional to path length.
+    Density-transition: discrete energy loss at commitment density
+      boundaries — not continuous, not proportional to path length
+      in the simple sense, proportional to boundary count and steepness.
+    The surface brightness test and the time dilation test apply
+    to the continuous-loss mechanism. The discrete-boundary mechanism
+    has different predictions for both — and those predictions have
+    not been tested because the mechanism was not considered.
+    The conflation of "tired light falsified" with "all non-recession
+    redshift mechanisms falsified" is an error of generalisation
+    that has persisted for decades.
+
+  convenience_and_entrenchment: >
+    The expansion interpretation was convenient for a specific
+    reason: it implied the universe was smaller and denser in the
+    past. Extrapolating backward produced a hot dense initial state.
+    Lemaître's "hypothesis of the primeval atom" (1931) — the
+    precursor to the Big Bang — required expansion to make sense.
+    The expansion interpretation and the Big Bang model were
+    co-dependent from the beginning: expansion motivates Big Bang,
+    Big Bang predicts expansion. Each supported the other.
+    When the CMB was discovered in 1964 — a genuine prediction
+    of the hot Big Bang model — the credibility of the whole
+    framework increased enormously. The CMB success insulated
+    the foundational expansion interpretation from scrutiny.
+    Why question the interpretation of redshift when the model
+    built on that interpretation successfully predicted the CMB?
+    This is not a conspiracy or a failure of science — it is
+    the normal sociology of successful scientific frameworks.
+    Successful models earn credibility that protects their
+    foundations. The protection becomes a problem when the
+    foundations have alternatives that weren't adequately
+    explored before the superstructure was built.
+    The BBN lithium problem — predicted Li-7 is ~3× observed —
+    is an existing crack in the foundation. The Hubble tension
+    is another. The density-transition redshift mechanism offers
+    a path that doesn't require reopening every question
+    simultaneously — it questions one specific interpretation
+    (recession velocity as the sole source of cosmological
+    redshift) and traces the consequences.
+
+  zwicky_right_question_wrong_mechanism: >
+    Fritz Zwicky deserves rehabilitation on this point. His
+    tired light mechanism was wrong. His question — "why assume
+    recession?" — was right. The field answered his mechanism
+    and stopped there. The substrate picture provides what
+    Zwicky was reaching for: a physical mechanism by which
+    photons accumulate redshift through their interaction with
+    the medium, without continuous energy loss along the path,
+    without a preferred frame, and without violating surface
+    brightness or time dilation observations. Not tired light.
+    Boundary-crossing redshift. The question Zwicky asked in
+    1929 finally has a candidate answer.
+
+# ─────────────────────────────────────────────
+# CURVATURE VS REFRACTION
+# Why these are not equivalent descriptions
+# and what distinguishes them observationally
+# ─────────────────────────────────────────────
+
+curvature_vs_refraction:
+  statement: >
+    GR describes gravity as geometric curvature of spacetime —
+    photons follow geodesics in a curved manifold. The substrate
+    picture describes gravity as refraction through a commitment
+    density gradient — photons follow paths of least resistance
+    through a medium of varying η. Both produce path deflection.
+    They are not equivalent descriptions — they make different
+    predictions for photon internal structure, specifically
+    for polarization behaviour under gravitational influence.
+
+  geometric_curvature_picture:
+    mechanism: >
+      Spacetime curvature bends the path of the photon — the
+      manifold itself is curved, and the geodesic follows that
+      curvature. The photon's path is deflected but the photon
+      is not interacting with anything — it is simply following
+      the geometry of the space it travels through.
+    polarization_consequence: >
+      In a purely geometric picture, the photon's internal
+      structure — its polarization state, the axial orientation
+      of its electromagnetic oscillation — is parallel-transported
+      along the geodesic. Parallel transport preserves the
+      polarization plane relative to the path. A photon bent
+      by gravitational lensing has its polarization plane
+      rotated by exactly the amount needed to keep it parallel-
+      transported along the curved path — a geometric rotation
+      that is entirely predictable from the path geometry and
+      produces no additional polarization signal beyond what
+      the path deflection itself implies.
+      Critically: the curvature couples to the photon's path
+      but not to the photon's internal dipole structure
+      independently. There is no mechanism for the medium to
+      exert a torque on the polarization plane beyond the
+      parallel-transport requirement. No drag. No differential
+      coupling across the photon's transverse extent.
+
+  substrate_refraction_picture:
+    mechanism: >
+      The commitment density gradient ∇η refracts the photon
+      — the effective impedance Z_eff = Z₀/η varies across the
+      path, and the photon's trajectory bends toward higher
+      commitment density (lower η), exactly as light refracts
+      toward higher refractive index in optics.
+      The photon is a dipole vortex pair propagating through
+      a medium. It is interacting with that medium at every
+      point — not following geometry but responding to the
+      medium's local properties.
+    polarization_consequence: >
+      Because the photon is interacting with the medium, the
+      medium can couple to the photon's internal structure —
+      specifically to the axial orientation of the vortex pair
+      (the polarization plane). Two mechanisms produce
+      polarization effects that geometric curvature cannot:
+
+      Mechanism 1 — Transverse η gradient:
+      The photon has finite transverse extent (of order its
+      wavelength). If the commitment density gradient has a
+      component transverse to the photon's path, the two sides
+      of the photon's spatial extent experience slightly different
+      η. The two vortices of the dipole pair couple to the
+      substrate with slightly different effective impedance.
+      This differential coupling exerts a torque on the vortex
+      pair's axial orientation — rotating the polarization plane
+      by an amount proportional to the transverse η gradient
+      integrated along the path.
+      This is a genuine drag on the polarization plane — the
+      medium pulling on the photon's internal structure — that
+      geometric curvature has no mechanism to produce.
+
+      Mechanism 2 — Chiral substrate modes:
+      The substrate's own resonance modes have chiral structure
+      (left and right-handed modes, split by α — see
+      quantum-entanglement.yaml). A photon traversing a region
+      of non-trivial commitment density topology couples
+      differentially to these chiral modes. The net effect is
+      a rotation of the polarization plane proportional to the
+      integrated chiral mode coupling along the path — a Faraday-
+      rotation-like effect from the substrate's own mode structure
+      rather than from an external magnetic field.
+
+  observational_distinction:
+    gravitational_lensing_polarization: >
+      GR prediction: gravitational lensing deflects photon paths
+      but produces no polarization rotation beyond what parallel
+      transport along the deflected path implies. The polarization
+      pattern around a gravitational lens (galaxy cluster, dark
+      matter halo) should show the geometric rotation pattern —
+      purely radial or tangential relative to the lens centre,
+      consistent with the deflected path geometry.
+      Substrate refraction prediction: gravitational lensing
+      produces additional polarization rotation from the transverse
+      η gradient across the lens. This rotation should correlate
+      with the commitment density gradient profile of the lensing
+      structure — stronger rotation where the gradient is steeper,
+      orientation correlated with the gradient direction rather
+      than purely with the path deflection geometry.
+      The two predictions are distinguishable: GR produces a
+      purely geometric polarization pattern; substrate refraction
+      produces an additional gradient-correlated component.
+    current_observations: >
+      Weak gravitational lensing surveys (DES, HSC, KiDS) measure
+      galaxy shape distortions (shear) as a proxy for lensing.
+      Polarization rotation around lensing structures is less
+      studied but not absent — weak systematic polarization
+      signals around galaxy clusters have been reported and
+      are currently attributed to dust, magnetic fields, or
+      instrumental systematics. The substrate picture predicts
+      these should correlate specifically with the commitment
+      density gradient (not just with the total mass) — a
+      distinguishing test that has not been performed.
+
+  polarization_observables:
+    correction_note: >
+      An earlier version of this section predicted that high-z
+      sources would show increased systematic polarization rotation
+      due to accumulated boundary crossings. This was wrong.
+      Filament-void boundaries in the cosmic web are statistically
+      isotropic — their transverse η gradients point in random
+      directions. Polarization rotations at successive boundaries
+      accumulate as a random walk, not as a coherent drift. The
+      net rotation after N crossings scales as √N, not N. For
+      large N, the signal averages toward zero in the mean while
+      the variance grows. More boundaries means more scrambling,
+      not more net rotation. The high-z polarization fraction
+      prediction is withdrawn.
+
+    what_is_observable:
+      polarization_angle_scatter: >
+        The correct statistical signal is increased *dispersion*
+        of polarization angles across an ensemble of high-z
+        sources compared to low-z sources of similar intrinsic
+        properties. Not a systematic shift in the mean rotation
+        but an increase in variance — the random-walk accumulation
+        of boundary-crossing rotations spreads the polarization
+        angle distribution. This is a measurable but subtle
+        signal requiring large samples and careful control of
+        intrinsic source polarization scatter.
+        GR prediction: polarization angle scatter is set by
+        source properties, independent of redshift.
+        Substrate prediction: scatter increases with redshift
+        as √(boundary count) — a specific functional form
+        testable against large quasar polarization catalogues.
+
+      coherent_alignment_within_structure: >
+        Where the prediction holds cleanly: polarization
+        alignment *within* large-scale structure regions where
+        the filament orientation is known. Here the gradient
+        direction is correlated across the source sample —
+        photons from sources embedded in the same filament
+        network traverse the same oriented commitment density
+        gradients. Their polarization rotations are coherent,
+        not random. The Hutsemekers (1998) large-scale alignment
+        of quasar polarization axes — sources separated by
+        hundreds of Mpc showing correlated orientations —
+        is exactly this signal. The alignment is not random-walk
+        accumulation but coherent torque from a common filament
+        geometry. This prediction is defensible and has existing
+        supporting data.
+        Standard model: no mechanism for coherent alignment
+        over hundreds of Mpc from structure alone.
+        Substrate: filaments oriented in a common direction
+        exert a common transverse η torque on all photons
+        traversing them — the medium's geometry prints
+        correlated orientations onto the traversing photons.
+
+      cosmic_birefringence: >
+        The ~0.35 degree uniform rotation of CMB polarization
+        (Minami & Komatsu 2020, ~3σ) requires separate treatment.
+        This is not a random-walk effect — it is a *uniform*
+        rotation of the full CMB, all photons from all directions,
+        implying a systematic rather than random accumulated effect.
+        For this to be a substrate chiral mode signal, the
+        substrate must have net global chirality — a preferred
+        handedness across the observable universe. This is not
+        arbitrary: the cosmogenesis picture in
+        vortex-stabilization.yaml identifies a chirality bias
+        from the first Möbius formation in the dominant gradient
+        direction of the high-φ initial state. If the substrate
+        has net global chirality from cosmogenesis, then CMB
+        photons traversing the cosmic web do accumulate a
+        coherent chiral mode rotation — not random-walk but
+        systematically biased by the substrate's own handedness.
+        The uniform rotation is the integral of that bias over
+        the full path length to last scattering.
+        Status: conditional on the cosmogenesis chirality bias
+        being quantifiable. If the bias is established from
+        vortex-stabilization.yaml, the birefringence calculation
+        follows. If the bias is zero or random, the birefringence
+        washes out and requires another explanation.
+        This is an honest open question, not a confirmed prediction.
+
+  summary_of_distinction: >
+    Physical spacetime curvature: bends paths, parallel-transports
+    polarization, predicts no polarization effects beyond the
+    geometric path rotation. The photon follows geometry —
+    the medium exerts no torque on its internal structure.
+    Substrate refraction: bends paths AND couples to the photon's
+    internal vortex pair structure via transverse η gradients and
+    chiral mode coupling. The medium can torque the polarization.
+    The observable consequences are more subtle than initially
+    stated: random boundary crossings produce polarization scatter
+    (not systematic rotation) that grows as √N with distance;
+    coherent structure produces alignment within regions of
+    common filament orientation (Hutsemekers effect); net global
+    substrate chirality from cosmogenesis could produce uniform
+    CMB birefringence (conditional).
+    The cleanest near-term discriminator is the Hutsemekers
+    alignment — it exists in the data, has no standard model
+    explanation, and follows directly from the substrate's
+    filamentary commitment density geometry exerting coherent
+    torques on photons traversing common filament networks.
+    GR has no mechanism for this. The substrate does.
+
+# ─────────────────────────────────────────────
+# FALSIFICATION CONDITIONS
+# ─────────────────────────────────────────────
+
+falsification_conditions:
+  confirms_praestology:
+    - >
+      Hubble tension correlates with large-scale structure environment:
+      H₀ derived from void-located calibrators > H₀ from filament-
+      located calibrators. Continuous trend, not just local vs CMB.
+      Test: DESI/Rubin data stratified by LSS environment.
+    - >
+      Supernova residuals from Hubble diagram correlate with LOS
+      filament-void boundary count. Systematic dimming excess for
+      lines of sight through more boundaries.
+      Test: Rubin LSST ~100,000 SN Ia with precise LSS context.
+    - >
+      Direction-dependent H₀ variation correlating with large-scale
+      structure anisotropy. Already hinted at in existing data.
+      Test: full-sky supernova sample with LSS overlay.
+    - >
+      Density-transition redshift magnitude from boundary steepness:
+      sharper filament-void boundaries show excess redshift per unit
+      density contrast vs gradual boundaries.
+      Test: precision redshift survey of boundary-classified galaxies.
+    - >
+      Polarization angle scatter increases with redshift as √(boundary
+      count) for an ensemble of high-z sources — increased dispersion
+      of polarization angles, not systematic rotation. Requires large
+      quasar polarization catalogues stratified by redshift and LOS
+      structure. Standard model predicts no redshift-dependent scatter
+      beyond intrinsic source variance.
+    - >
+      Quasar polarization alignment (Hutsemekers effect) correlates
+      specifically with filament orientation in the large-scale
+      structure along the line of sight — not just with redshift or
+      separation distance. The alignment pattern should track the
+      committed density geometry of the intervening filament network.
+      Test: cross-correlate Hutsemekers alignment signal with
+      large-scale structure maps from SDSS/DESI.
+    - >
+      Cosmic birefringence (~0.35 degrees, Minami & Komatsu 2020)
+      is confirmed at high significance AND its angular power
+      spectrum is consistent with a path-integrated effect
+      (flat or slowly varying with angular scale) rather than
+      a scale-dependent axion field signature. The path-integrated
+      character would distinguish substrate chirality bias from
+      particle physics alternatives.
+
+  falsifies_praestology:
+    - >
+      Hubble tension shows no correlation with LSS environment after
+      accounting for known systematics. H₀ is the same in voids
+      and filaments to precision better than the tension magnitude.
+    - >
+      Supernova residuals show no correlation with LOS boundary
+      count after accounting for dust, host galaxy environment,
+      and other known systematics.
+    - >
+      Gravitational wave sirens (LIGO/Virgo standard sirens) measure
+      H₀ independently of electromagnetic distance ladder and CMB,
+      converging on a single value inconsistent with a void-location
+      bias explanation of the tension.
+    - >
+      Quasar polarization alignment shows no correlation with
+      large-scale structure filament orientation after systematic
+      corrections — the Hutsemekers signal is instrumental or
+      source-intrinsic, not path-mediated.
+    - >
+      Cosmic birefringence angular power spectrum shows scale-
+      dependent structure inconsistent with a path-integrated
+      substrate effect — requiring a localised particle physics
+      source rather than a medium property.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      Density-transition redshift magnitude as a function of
+      filament-void boundary contrast and steepness. Compute from
+      the GP substrate parameters and the commitment density
+      contrast between cosmic filaments and voids. The key
+      quantitative question: is the cumulative density-transition
+      redshift over a z ≈ 0.5 path large enough to explain the
+      supernova brightness deficit without dark energy?
+    - >
+      Hubble tension magnitude from KBC void η contrast.
+      Compute the process-rate differential Φ_void/Φ_cosmic_mean
+      from the estimated density contrast of the KBC void (~20-30%
+      underdensity over ~300 Mpc). Verify it produces ~9% H₀
+      discrepancy.
+    - >
+      Cosmic birefringence value from substrate chirality bias.
+      Conditional on the cosmogenesis chirality bias being
+      established from vortex-stabilization.yaml. If the
+      substrate has net global chirality from the first Möbius
+      formation bias, compute the integrated chiral mode coupling
+      over the path to last scattering and verify against ~0.35
+      degrees. The calculation has no free parameters if the
+      cosmogenesis chirality bias is fixed independently.
+
+  priority_2:
+    - >
+      Polarization angle scatter as a function of redshift —
+      the √N random-walk signal. Compute the expected growth in
+      polarization angle dispersion across an ensemble of sources
+      as a function of boundary count. Compare to large quasar
+      polarization catalogues (existing and future: SKA, ngVLA).
+    - >
+      Quasar polarization alignment from filament geometry —
+      the Hutsemekers effect. Compute the expected alignment
+      correlation length and orientation from the cosmic web
+      filament statistics and cross-correlate against the
+      observed alignment signal (Hutsemekers 1998 and subsequent).
+      This is the most defensible polarization prediction and
+      has existing data to test against.
+    - >
+      CMB acoustic peak positions from early-substrate Tik
+      fluctuation spectrum — the most demanding cosmological test.
+    - >
+      Alternative nucleosynthesis pathway in high-φ early substrate.
+      Whether an early high-commitment-density epoch (not infinite
+      — GP saturation prevents it) can reproduce H:He:Li ratios.
+
+  priority_3:
+    - >
+      Large-scale structure self-organization from substrate
+      dynamics alone — reproduce observed web statistics without
+      exotic dark matter particles.
+    - >
+      High-z polarization fraction prediction: fraction of photons
+      with systematically rotated polarization should increase with
+      redshift tracking boundary count. Compare to existing
+      high-redshift polarization surveys (future: SKA, ngVLA).
+
+# ─────────────────────────────────────────────
+# READING ORDER AND CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "domains/physics/substrate-ground-state.yaml       -- space as substrate; void as high-η"
+  - "domains/physics/substrate-potential.yaml          -- φ field; Hubble tension as μ_local"
+  - "domains/physics/specifications.yaml               -- three redshift mechanisms"
+  - "domains/physics/quantum-entanglement.yaml         -- chiral mode structure; polarization"
+  - "domains/cosmos/cosmological-expansion-critique.yaml -- this file"
+  - "domains/cosmos/specifications.yaml                -- cosmogenesis; high-φ initial state"
+
+note_on_specifications_update: >
+  The redshift_mechanisms section of specifications.yaml currently states
+  "Substrate expansion remains primary; this is secondary and separately
+  measurable" for density_transition_redshift. This file supersedes that
+  assessment. The correct status is: density-transition redshift is the
+  candidate primary mechanism for the cosmological redshift signal previously
+  attributed to global expansion. Global expansion is not confirmed as
+  primary — it is the interpretation within the homogeneity assumption.
+  specifications.yaml should be updated to reflect this revision.
+
+related_issues:
+  - "intersectional/physics_cosmos/010_density_transition_redshift_magnitude"
+  - "intersectional/physics_cosmos/011_hubble_tension_from_kbc_void_phi_contrast"
+  - "intersectional/physics_cosmos/012_cosmogenesis_high_phi_initial_state"
+  - "intersectional/physics_cosmos/013_cmb_peaks_from_tik_fluctuation_spectrum"
+  - "intersectional/physics_cosmos/014_bbn_alternative_in_high_phi_substrate"
+  - "intersectional/physics_cosmos/015_cosmic_web_from_substrate_dynamics_only"
+  - "intersectional/physics_cosmos/016_supernova_residuals_los_boundary_correlation"
+  - "intersectional/physics_cosmos/017_cosmic_birefringence_from_substrate_chirality_bias"
+  - "intersectional/physics_cosmos/018_polarization_angle_scatter_sqrt_n_random_walk"
+  - "intersectional/physics_cosmos/019_quasar_polarization_alignment_from_filaments"
+  - "foundational/F79_homogeneity_assumption_as_hidden_load_bearing_error"
+  - "foundational/F80_lambda_dissolved_three_jobs_three_dissolutions"
+  - "foundational/F81_hubble_tension_as_process_rate_differential"
+  - "foundational/F82_dark_energy_as_density_transition_redshift_misidentification"
+  - "foundational/F83_bbn_open_challenge_honest_accounting"
+  - "foundational/F88_hubble_uncertain_about_expansion_interpretation"
+  - "foundational/F89_tired_light_falsified_density_transition_not_addressed"
+  - "foundational/F90_curvature_vs_refraction_polarization_discriminator"
+  - "foundational/F91_cosmic_birefringence_as_substrate_chiral_mode_integral"
+  - "foundational/F92_quasar_polarization_alignment_as_filament_torque"
+  - "boundaries/B06_expansion_assumption_cluster_dependency_map"
+  - "boundaries/B07_zwicky_right_question_wrong_mechanism"
