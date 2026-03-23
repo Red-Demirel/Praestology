@@ -1,0 +1,694 @@
+# domains/physics/quantum-entanglement.yaml
+name: "Quantum Entanglement — Two Mechanisms, Not One"
+version: "1.0 — Committed Phase-Lock and Substrate Resonance Coupling Distinguished"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Mechanism identified — two distinct entanglement types derived from
+         existing framework elements; chirality-resonance coupling is the
+         genuinely new extension; formal resonance mode derivation open"
+updated: "2026-03-20"
+
+description: >
+  The existing Praestology treatment of entanglement (quantum-foundation.yaml)
+  correctly identifies phase-locking (ρ) in the substrate commitment structure
+  as the correlating mechanism — the coupling is already in the substrate when
+  measurement occurs, explaining non-locality without action at a distance.
+
+  This file extends that picture by identifying a second, distinct entanglement
+  mechanism that the committed-vortex picture misses: substrate resonance
+  coupling. The distinction matters because the two mechanisms have different
+  physical properties, different decoherence behaviour, different range
+  characteristics, and different chirality dependence.
+
+  The key observation: the existing treatment assumes entanglement always
+  involves two committed vortex topologies with sufficient trail commitment
+  to maintain direct phase-lock. But the substrate — as a superfluid medium —
+  supports collective oscillation modes (analogous to phonons in a superfluid)
+  that are properties of the medium itself, not of localised committed
+  topologies. Two vortices, or even two solo vortices near S_lock, can be
+  correlated through coupling to the same substrate resonance mode without
+  requiring direct trail-to-trail commitment. This is a lighter, potentially
+  longer-range, and chirality-specific form of correlation.
+
+  The chirality of a solo vortex — its handedness relative to the substrate's
+  own chiral mode structure — determines which resonance modes it couples to.
+  Two solo vortices with opposite chirality preferentially couple to the
+  substrate's anti-symmetric chiral modes, producing opposite-spin correlations
+  without committed trail-to-trail phase-lock. This may be the mechanism
+  behind long-range entanglement in weakly committed systems.
+
+  Confidence levels:
+    Two-mechanism distinction: HIGH — follows from substrate superfluid nature
+    Committed phase-lock mechanism: HIGH — already in quantum-foundation.yaml
+    Resonance mode existence: HIGH — superfluid collective modes are standard
+    Chirality-resonance coupling: MEDIUM-HIGH — physically motivated, not yet
+      formally derived from GP equation
+    Formal resonance mode spectrum: OPEN — requires GP field analysis
+    Decoherence rate predictions: MEDIUM — direction clear, magnitudes open
+
+dependency_map:
+  requires:
+    - "domains/physics/quantum-foundation.yaml      -- existing entanglement treatment;
+                                                       phase-locking ρ; wavefunction as η"
+    - "domains/physics/vortex-stabilization.yaml    -- solo vortex; S_lock; resonance
+                                                       condition ω_env = n·ω_vortex;
+                                                       Tik background; formation conditions"
+    - "domains/physics/specifications.yaml          -- Tik dynamics; substrate as
+                                                       superfluid; chirality; R5 isotropy"
+    - "domains/physics/bridge-function.yaml         -- η field; commitment density;
+                                                       GP order parameter"
+    - "domains/physics/commitment-response-function.yaml -- GP equation; imperfect
+                                                       closure; finite R"
+  provides_to:
+    - target: "domains/physics/quantum-foundation.yaml"
+      via: "Extends entanglement section with two-mechanism distinction;
+            resonance coupling adds to phase-lock picture without replacing it"
+    - target: "domains/consciousness/specifications.yaml"
+      via: "Resonance-mode entanglement as substrate for non-local correlations
+            in neural systems; chirality-selective coupling relevant to
+            quantum cognition models"
+    - target: "domains/physics/photon-vortex-dynamics.yaml"
+      via: "Photon as dipole pair can couple to substrate resonance modes
+            at high energy — misalignment events as resonance disruption"
+
+# ─────────────────────────────────────────────
+# THE TWO MECHANISMS — OVERVIEW
+# ─────────────────────────────────────────────
+
+two_mechanisms:
+  statement: >
+    Entanglement in the substrate has two distinct physical
+    mechanisms. They share the same fundamental origin —
+    non-separable coupling in the substrate field — but
+    differ in how that coupling is established and maintained.
+    Conflating them produces the standard picture where all
+    entanglement is treated as equally fragile, equally
+    short-range, and equally dependent on initial interaction.
+    The two mechanisms have measurably different properties.
+
+  mechanism_1_committed_phase_lock:
+    name: "Committed phase-lock entanglement"
+    basis: >
+      Two vortex topologies with sufficient commitment (S > S_lock)
+      interact and establish mutual trail coupling. Their commitment
+      patterns become non-separable in the substrate p(r,t) field.
+      This is the mechanism in quantum-foundation.yaml — phase-locking
+      ρ in the committed commitment structure.
+    requires: >
+      Both participants must have sufficient commitment density to
+      sustain stable trails. The phase-lock itself costs substrate
+      bandwidth — a committed connection in the η field between
+      the two topology locations.
+    range: >
+      Limited by the coherence length of the committed phase-lock
+      channel between the two topologies. In dense matter (low η),
+      this is short — thermal Tik disrupts the channel rapidly.
+      In high-η environments (vacuum, cryogenic isolation), longer.
+    decoherence: >
+      Sensitive to thermal Tik amplitude — any fluctuation above
+      the phase-lock stability threshold disrupts the committed
+      channel. Decoherence rate scales with thermal Tik amplitude
+      and local commitment density (low η → high R → shorter
+      coherence time for the phase-lock channel).
+    chirality_role: >
+      Chirality determines the type of phase-lock (same-chirality
+      → orbital Möbius pair; opposite-chirality → dipole pair/
+      photon). For the correlation itself, chirality is encoded in
+      the phase-lock geometry but does not select different
+      mechanisms — both chirality combinations use the same
+      committed-trail coupling.
+    examples: >
+      Cooper pairs in superconductors; entangled photon pairs from
+      parametric down-conversion (high-commitment interaction);
+      singlet/triplet states in atoms (strong orbital coupling).
+    status: "Well-established in framework — quantum-foundation.yaml"
+
+  mechanism_2_resonance_coupling:
+    name: "Substrate resonance coupling"
+    basis: >
+      The substrate — as a superfluid-like medium — supports
+      collective oscillation modes: standing patterns in the η
+      field that are properties of the medium itself, not of
+      localised committed topologies. Two vortices (or solo
+      vortices near S_lock) that both couple to the same
+      substrate resonance mode are correlated through that mode,
+      without requiring direct trail-to-trail commitment.
+      The resonance mode is the correlating structure — it
+      exists in the medium, the vortices are coupled to it.
+    requires: >
+      Each participant need only couple to the resonance mode —
+      the coupling condition is the resonance condition from
+      vortex-stabilization.yaml: ω_vortex = n · ω_mode
+      (integer multiple of the mode frequency).
+      No direct interaction between the two participants is
+      required. They can couple to the same mode independently,
+      at different times and locations, and be correlated through it.
+    range: >
+      Potentially much longer than committed phase-lock. The
+      resonance mode extends across the coherence length of the
+      mode itself — which for ground-state substrate modes in
+      high-η regions can be macroscopic or cosmological.
+      Limited not by the participants' separation but by the
+      mode's own coherence length in the local η environment.
+    decoherence: >
+      Less sensitive to thermal Tik amplitude than committed
+      phase-lock (because no committed channel between participants
+      to disrupt). More sensitive to local commitment density
+      fluctuations that shift the mode frequency — disrupting
+      the resonance condition ω_vortex = n · ω_mode.
+      In high-η environments, mode coherence is higher and
+      decoherence is slower. Prediction: resonance-coupled
+      entanglement should show different decoherence scaling
+      with temperature than committed-phase-lock entanglement —
+      a potentially measurable distinction.
+    chirality_role: >
+      The substrate's resonance modes are chirality-structured —
+      the GP field under R5 isotropy with finite substrate
+      resistance R supports left-handed and right-handed
+      collective modes. A vortex with chirality χ = +1 couples
+      preferentially to right-handed modes; χ = −1 to left-handed
+      modes. This is the genuinely new element — the resonance
+      mechanism is chirality-selective in a way that committed
+      phase-lock is not.
+    examples: >
+      Long-range entanglement in low-density quantum systems;
+      entanglement in biological systems (if present — see
+      consciousness domain); potential mechanism for EPR
+      correlations in experiments with widely separated pairs
+      that have had minimal direct interaction.
+    status: "New derivation — mechanism identified from substrate superfluid
+             nature; formal resonance mode spectrum open"
+
+# ─────────────────────────────────────────────
+# THE SUBSTRATE RESONANCE MODES
+# What they are, why they exist, what they look like
+# ─────────────────────────────────────────────
+
+substrate_resonance_modes:
+  existence: >
+    A superfluid-like substrate necessarily supports collective
+    oscillation modes. This is not an additional assumption —
+    it follows from the GP equation that governs the substrate.
+    The linearised GP equation around the ground state η = 1
+    has normal mode solutions: oscillatory perturbations of the
+    η field that propagate or stand in the substrate without
+    requiring committed topology.
+    In superfluid helium: phonons (density waves), rotons
+    (higher-energy modes with characteristic dispersion).
+    In BECs: Bogoliubov modes (quantised density oscillations).
+    In the Praestology substrate: the equivalent modes are
+    oscillations of the η field around η = 1 — variations
+    in local free potential that propagate coherently without
+    committed topology nucleation.
+    These are Tik events that are phase-coherent with each
+    other — not the incoherent stochastic Tik background
+    but organised oscillations of the substrate that the
+    stochastic background can seed and sustain.
+
+  chiral_structure: >
+    The substrate resonance modes are not chirality-neutral.
+    Under the GP equation with finite substrate resistance R
+    (the closure imperfection that gives rise to α — see
+    commitment-response-function.yaml), the mode spectrum
+    splits into left-handed and right-handed branches.
+    This is the substrate-level analogue of circular
+    polarisation in electromagnetic waves: the substrate's
+    own oscillations can be left-chirally or right-chirally
+    rotating, and these are distinct modes with slightly
+    different dispersion relations (the difference is
+    proportional to α — the closure imperfection).
+    A committed vortex with chirality χ = +1 (clockwise
+    circulation) resonates with the right-handed substrate
+    modes: ω_vortex^+ = n · ω_mode^right.
+    A committed vortex with chirality χ = −1 (counter-
+    clockwise) resonates with left-handed modes.
+    A solo vortex — minimal winding, near S_lock, sub-
+    threshold trail — has net chirality but insufficient
+    commitment to establish a strong directed trail. Its
+    coupling to committed-phase-lock channels is weak.
+    But its chirality still couples to the substrate's
+    chiral mode structure — and this coupling is the
+    basis for resonance-mode entanglement in weakly
+    committed systems.
+
+  mode_coherence_and_eta: >
+    The coherence length of a substrate resonance mode —
+    how far a coherent oscillation pattern extends before
+    being disrupted by incoherent Tik fluctuations — scales
+    with local η. In high-η regions (voids, vacuum, cryogenic
+    isolation from matter): long mode coherence, large
+    spatial extent of correlated oscillation. In low-η
+    regions (dense matter, high temperature): short mode
+    coherence, quickly disrupted.
+    This gives the resonance coupling mechanism a natural
+    environmental dependence: entanglement mediated by
+    substrate resonance modes is more persistent in high-η
+    environments. Not because isolation is achieved by
+    removing the medium, but because the medium's own
+    coherence is higher there.
+    The medium is not the enemy of entanglement — in the
+    resonance-coupling picture, the medium is the entanglement.
+    Standard decoherence theory treats the environment as
+    the thing that destroys entanglement. In the resonance
+    picture, a coherent environment (high-η substrate) is
+    what sustains it.
+
+  open_derivation_resonance_spectrum: >
+    The formal spectrum of substrate resonance modes —
+    their dispersion relation ω(k), their chirality splitting
+    (proportional to α), their coherence length as a function
+    of η — requires solving the linearised GP equation around
+    η = 1 with finite R (commitment-response-function.yaml).
+    This is a tractable calculation using standard Bogoliubov
+    theory applied to the GP field. The result would give
+    the precise resonance frequencies and coupling strengths.
+    Priority: medium — the mechanism is identified and
+    physically motivated; the formal spectrum would convert
+    it from a qualitative picture to a quantitative prediction.
+
+# ─────────────────────────────────────────────
+# CHIRALITY-SELECTIVE COUPLING
+# Why opposite spins — derived, not postulated
+# ─────────────────────────────────────────────
+
+chirality_selective_coupling:
+  statement: >
+    The most common entanglement observation: two particles
+    produced together have opposite spin correlations —
+    measure spin-up on one, get spin-down on the other.
+    Standard QM: this follows from conservation of total
+    angular momentum at production. The mechanism by which
+    the correlation is maintained over arbitrary separation
+    is unspecified — "the wavefunction is non-separable."
+    Praestology — resonance mechanism: the opposite-spin
+    correlation arises because the anti-symmetric chiral
+    substrate mode (the mode with zero net chirality) is
+    the mode with minimum substrate commitment cost to sustain.
+    Two vortices with opposite chirality couple to this mode
+    naturally — they are the χ = +1 and χ = −1 pair that
+    jointly have zero net chirality, matching the anti-
+    symmetric mode's symmetry. The mode sustains itself
+    without consuming net substrate commitment.
+    A same-chirality pair (χ = +1, +1) would need to couple
+    to a mode with net chirality — a mode that costs net
+    substrate commitment to sustain. R5 selects minimum
+    commitment cost configurations. The anti-symmetric
+    (opposite-chirality) coupling is preferred.
+    The opposite-spin correlation is not conserved from
+    production and then mysteriously maintained. It is
+    the ongoing R5 selection of the lowest-commitment
+    substrate resonance mode that the pair can couple to.
+
+  singlet_vs_triplet: >
+    Singlet state (opposite spins, total S=0): couples to
+    the anti-symmetric chiral substrate mode. Zero net
+    chirality — minimum mode commitment cost. Most stable
+    under resonance coupling.
+    Triplet state (parallel spins, total S=1): couples to
+    the symmetric chiral substrate mode. Net chirality ≠ 0
+    — higher mode commitment cost. Less stable; decoheres
+    faster under resonance mechanism.
+    This predicts: singlet entanglement should be more
+    persistent than triplet entanglement in high-η
+    environments, because the anti-symmetric mode has
+    lower commitment cost and is more robustly sustained
+    by the substrate ground state. Triplet states should
+    decohere faster even in isolation.
+    This is distinct from the committed-phase-lock picture
+    where singlet and triplet states have similar decoherence
+    rates (both are committed-channel correlations of
+    similar cost). The two-mechanism picture makes different
+    predictions for singlet vs triplet decoherence in
+    cryogenic isolation — in principle testable.
+
+  solo_vortex_entanglement: >
+    A solo vortex — the minimal topological structure in
+    the substrate, near S_lock, with net chirality but
+    sub-threshold trail (neutrino-like) — has insufficient
+    commitment to engage committed phase-lock. But its
+    chirality still couples to the substrate's chiral
+    resonance modes.
+    Two solo vortices of opposite chirality, if both within
+    the coherence length of the same anti-symmetric
+    substrate mode, are correlated through that mode.
+    Their correlation costs minimum substrate commitment —
+    the mode itself has zero net chirality, the coupling
+    is resonant, the correlation is sustained by the
+    medium's own ground state rather than by committed
+    channels between the participants.
+    This is the lightest form of quantum correlation
+    achievable in the substrate — below the threshold
+    of committed topology, in the regime of pure substrate
+    resonance. It has no analogue in the standard model's
+    particle-based picture of entanglement.
+    Whether this kind of correlation plays a role in
+    weakly interacting systems (neutrino correlations,
+    dark matter component_2b solo vortices) is an open
+    question worth pursuing.
+
+  implications_for_measurement: >
+    When one entangled partner is measured — its commitment
+    topology is probed, crossing S_lock — the measurement
+    interaction commits the partner's chirality to a
+    definite trail. This changes the local η field at the
+    measurement site, which shifts the local resonance
+    condition ω_vortex = n · ω_mode for the measured particle.
+    The shared substrate resonance mode is now coupled to
+    a committed topology on one side and a still-uncoupled
+    topology on the other. The mode's symmetry is broken.
+    The remaining partner, still coupled to the mode, finds
+    its coupling condition changed — the mode now has net
+    chirality from the committed partner's measurement. The
+    uncoupled partner's most stable coupling to the (now
+    asymmetric) mode is to take the opposite chirality to
+    restore the mode's zero-net-chirality condition.
+    This is the instantaneous correlation: not a signal
+    traveling between partners, but the shared medium mode
+    updating its configuration when one coupled topology
+    commits, and the other coupled topology finding its
+    preferred resonance coupling in the updated mode.
+    The update is not signaling because no information
+    travels — the mode's configuration change is a
+    property of the medium, and the remaining partner
+    cannot extract information from it without a classical
+    signal telling it what the measured partner's outcome was.
+
+# ─────────────────────────────────────────────
+# BELL THEOREM AND NON-LOCALITY
+# Both mechanisms are compatible
+# ─────────────────────────────────────────────
+
+bell_theorem_compatibility:
+  statement: >
+    Bell's theorem proves that no local hidden variable
+    theory can reproduce quantum correlations — specifically,
+    no theory where each particle carries its own separate
+    pre-determined property. Both Praestology mechanisms
+    are compatible with Bell's theorem because neither
+    assigns local hidden variables to individual particles.
+
+  committed_phase_lock: >
+    The correlating structure is the non-separable commitment
+    pattern in the substrate field — a property of the
+    substrate between and around both particles, not of
+    either particle individually. This is explicitly non-local
+    (the substrate field is an extended object) and non-
+    separable (the commitment pattern cannot be decomposed
+    into local properties of each particle). Already
+    established in quantum-foundation.yaml.
+
+  resonance_coupling: >
+    The correlating structure is the substrate resonance mode —
+    a collective oscillation of the medium that is inherently
+    non-local (a mode extends across its coherence length, not
+    localised at either particle). Two particles coupled to
+    the same mode are correlated through that non-local
+    structure. Neither particle carries a local property
+    that predetermines the measurement outcome — the outcome
+    is determined by the mode's state when measurement occurs,
+    which is a property of the extended medium.
+    This satisfies Bell's non-locality requirement while
+    providing a physical mechanism — the medium's collective
+    mode — that standard QM leaves unspecified.
+
+  no_ftl_signalling: >
+    Neither mechanism allows faster-than-light information
+    transfer. In both cases:
+    The correlating structure (committed pattern or resonance
+    mode) was established before measurement. The measurement
+    reads out the local portion of the shared structure.
+    The remote partner's state is determined by the shared
+    structure, not by a signal from the measured partner.
+    But the remote partner cannot know which outcome
+    occurred here without classical communication — because
+    the local reading of the shared structure produces a
+    random outcome, and only the correlation between the
+    two random outcomes reveals the non-local structure.
+    R5 selects which outcome occurs — but R5 operates
+    locally at each measurement site, reading the local
+    portion of the shared structure. No information about
+    which local outcome was selected can travel faster than c.
+
+# ─────────────────────────────────────────────
+# DECOHERENCE — TWO MECHANISMS, TWO PROFILES
+# ─────────────────────────────────────────────
+
+decoherence_profiles:
+  statement: >
+    The two entanglement mechanisms have different decoherence
+    profiles — different dependences on temperature, commitment
+    density, and environmental structure. This produces
+    testable predictions that could distinguish them
+    experimentally.
+
+  committed_phase_lock_decoherence:
+    primary_driver: "Thermal Tik amplitude disrupting committed channel"
+    scaling: >
+      Decoherence rate Γ_1 ∝ T · R_local / ħ
+      — proportional to temperature (thermal Tik amplitude)
+      and local substrate resistance R (commitment density).
+      High temperature → fast decoherence.
+      Dense material environment (low η, high R) → fast decoherence.
+      Cryogenic isolation (low T, high η) → slow decoherence.
+    environmental_dependence: >
+      Decoherence accelerates in any environment that disrupts
+      the committed channel: electromagnetic fields that
+      perturb the trail geometry, phonons that disturb the
+      local commitment density, other committed topologies
+      that compete for the substrate channel bandwidth.
+    signature: >
+      Decoherence rate scales with T (temperature) and
+      with local matter density (which sets R_local via η).
+      Both effects have the same parametric dependence —
+      both thermal and material-density environments
+      decohere committed phase-lock at the same rate scaling.
+
+  resonance_coupling_decoherence:
+    primary_driver: "Local η fluctuations disrupting resonance condition"
+    scaling: >
+      Decoherence rate Γ_2 ∝ δη²/η² · ω_mode
+      — proportional to the fractional variance of η
+      fluctuations and the mode frequency.
+      High commitment density variance (lumpy environment) →
+        fast decoherence of resonance coupling.
+      Smooth high-η environment (uniform vacuum, isolated) →
+        slow decoherence.
+      Temperature enters only insofar as thermal Tik
+        fluctuations create δη variance — less directly
+        than for committed phase-lock.
+    environmental_dependence: >
+      Decoherence accelerates in any environment with
+      η inhomogeneity — boundaries between materials,
+      regions of varying commitment density, nearby
+      committed topologies that create local η gradients.
+      A smooth, homogeneous high-η environment (deep vacuum,
+      interstellar space) is the most stable environment
+      for resonance-coupling entanglement — even without
+      cryogenic cooling, because the mechanism doesn't
+      primarily require low temperature, it requires
+      low η-variance.
+    signature: >
+      Decoherence rate scales differently with temperature
+      vs material density: temperature matters less than
+      η homogeneity. Prediction: resonance-coupled
+      entanglement in a room-temperature but very low-density
+      environment (high vacuum) may be more persistent than
+      committed-phase-lock entanglement in a cryogenic
+      but material-dense environment.
+      This is the key experimental distinguisher: if
+      decoherence depends primarily on density-homogeneity
+      rather than temperature, the resonance mechanism
+      is operating.
+
+  predicted_measurable_distinction: >
+    An experiment that independently varies:
+    (a) Temperature of the entangled system
+    (b) Density/homogeneity of the surrounding environment
+    and measures decoherence rate under each condition
+    would distinguish the two mechanisms:
+    Committed phase-lock: Γ ∝ T, roughly independent of
+      density-homogeneity for a given T.
+    Resonance coupling: Γ ∝ δη-variance, less dependent
+      on T for fixed η-homogeneity.
+    Current entanglement experiments typically co-vary T
+    and density (cryogenic systems are also well-isolated
+    from material environments) — the two variables have
+    not been cleanly separated. Proposed: compare
+    entanglement persistence in (i) warm/high-vacuum vs
+    (ii) cold/material-dense environments at matched
+    decoherence rates. If warm/high-vacuum outperforms
+    cold/dense, resonance coupling is the dominant mechanism.
+
+# ─────────────────────────────────────────────
+# WHICH MECHANISM OPERATES WHEN
+# ─────────────────────────────────────────────
+
+mechanism_selection:
+  statement: >
+    The two mechanisms are not exclusive — both can operate
+    simultaneously, and which dominates depends on the
+    commitment density of the participating topologies
+    and the local η environment.
+
+  committed_topology_dominant:
+    condition: "Both participants have S >> S_lock — committed vortices with strong trails"
+    mechanism: "Committed phase-lock — direct trail-to-trail coupling"
+    examples: >
+      Cooper pairs (electrons in metal — high commitment density);
+      Atomic singlet/triplet states (orbital coupling — high commitment);
+      Entangled photon pairs from down-conversion (strong interaction
+      at production — high commitment).
+
+  near_threshold_dominant:
+    condition: "Participants have S ~ S_lock — minimal committed topology, solo-like"
+    mechanism: "Resonance coupling — chirality to substrate mode coupling"
+    examples: >
+      Weakly interacting quantum systems at high isolation;
+      Possible role in biological quantum effects if present
+      (enzyme tunneling, avian magnetoreception — low-commitment
+      environments where resonance coupling persists longer);
+      Solo vortex correlations (neutrino-like systems).
+
+  mixed_regime:
+    condition: "One participant committed, one near threshold"
+    mechanism: "Hybrid — the committed topology establishes a local mode distortion that
+               the near-threshold topology couples to via resonance"
+    examples: >
+      Measurement itself: measuring a committed particle disrupts
+      the local mode, to which the entangled near-threshold
+      partner responds via resonance coupling.
+
+  environmental_selection:
+    high_eta_environment: >
+      High-η (vacuum, void, cryogenic isolation): long mode coherence
+      length → resonance coupling can operate over large separations.
+      Committed phase-lock also persists longer but is still limited
+      by coherence length of the committed channel.
+    low_eta_environment: >
+      Low-η (dense matter, room temperature): short mode coherence
+      length → resonance coupling rapidly decoheres. Committed
+      phase-lock also short but may persist longer than resonance
+      coupling in very dense environments where η-variance is extreme.
+
+# ─────────────────────────────────────────────
+# RELATION TO EXISTING FILES
+# What this file adds vs replaces
+# ─────────────────────────────────────────────
+
+relation_to_existing_files:
+  quantum_foundation_entanglement: >
+    The entanglement section of quantum-foundation.yaml
+    describes committed phase-lock entanglement — mechanism 1.
+    That treatment is correct and is not superseded. This
+    file extends it by adding mechanism 2 (resonance coupling)
+    and distinguishing the two.
+    quantum-foundation.yaml should be updated to note that
+    its entanglement treatment covers mechanism 1 specifically,
+    and refer to this file for mechanism 2.
+
+  vortex_stabilization: >
+    The resonance condition ω_env = n · ω_vortex in
+    vortex-stabilization.yaml is the formal basis for
+    the resonance coupling mechanism. That condition was
+    derived for vortex formation in a dynamic environment.
+    This file applies it to the correlation of already-formed
+    (or near-threshold) vortices through shared mode coupling.
+
+  specifications_chirality: >
+    Chirality as vortex handedness (specifications.yaml,
+    electromagnetic_phenomena.charge) is the same chirality
+    that determines resonance mode coupling here. The
+    connection between charge (observable chirality) and
+    resonance mode coupling (entanglement mechanism) is new
+    in this file — charge determines which substrate modes
+    a particle couples to, which determines its entanglement
+    character.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      Formal substrate resonance mode spectrum from linearised
+      GP equation around η = 1 with finite R (Bogoliubov
+      analysis of the Praestology substrate). Derive:
+      (a) Dispersion relation ω(k) for substrate modes.
+      (b) Chirality splitting between left/right modes
+          (should be proportional to α).
+      (c) Mode coherence length as function of η.
+      This converts the resonance coupling picture from
+      qualitatively motivated to formally derived.
+    - >
+      Coupling strength between a solo vortex (near S_lock,
+      chirality χ) and substrate resonance mode of matching
+      chirality. Compute from GP field perturbation theory
+      around the solo vortex in the ground-state substrate.
+      This determines how strongly near-threshold topologies
+      couple to resonance modes vs committed phase-lock channels.
+
+  priority_2:
+    - >
+      Decoherence rate formula for resonance coupling:
+      Γ_2(η, δη, ω_mode) from the mode coherence disruption
+      by η-fluctuations. Compare to committed phase-lock
+      decoherence rate Γ_1(T, R_local) to identify the
+      crossover regime where each mechanism dominates.
+    - >
+      Singlet vs triplet decoherence rate difference from
+      resonance coupling: anti-symmetric mode (singlet) vs
+      symmetric mode (triplet) commitment cost difference.
+      Predict measurable decoherence rate asymmetry in
+      cryogenic isolation vs high-vacuum room-temperature
+      environments.
+    - >
+      Bell inequality violation magnitude from resonance
+      coupling: does the resonance mechanism produce the
+      same degree of violation as committed phase-lock,
+      or a different profile? The CHSH inequality violation
+      (max 2√2 in QM) should be reproduced by both mechanisms
+      for consistency.
+
+  priority_3:
+    - >
+      Solo vortex correlation in the neutrino sector:
+      neutrino oscillation as a resonance-coupling phenomenon.
+      Neutrinos (solo vortices near S_lock) couple to
+      substrate resonance modes — their flavour oscillation
+      may be the substrate resonance mode cycling between
+      chirality states. Formal derivation from the resonance
+      spectrum would predict oscillation lengths from
+      substrate parameters.
+    - >
+      Biological quantum effects (if real): enzyme tunneling,
+      avian magnetoreception. Are these committed phase-lock
+      or resonance coupling? The two mechanisms predict
+      different temperature dependences and environmental
+      sensitivities — distinguishable in principle from
+      existing biological quantum coherence experiments.
+
+# ─────────────────────────────────────────────
+# READING ORDER AND CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "domains/physics/quantum-foundation.yaml       -- existing QM primitives; read first"
+  - "domains/physics/vortex-stabilization.yaml     -- resonance condition; solo vortex"
+  - "domains/physics/bridge-function.yaml          -- η field; GP order parameter"
+  - "domains/physics/quantum-entanglement.yaml     -- this file"
+  - "domains/consciousness/specifications.yaml     -- resonance coupling in neural context"
+
+related_issues:
+  - "intersectional/physics/111_substrate_resonance_mode_spectrum_bogoliubov"
+  - "intersectional/physics/112_solo_vortex_chirality_mode_coupling_strength"
+  - "intersectional/physics/113_singlet_triplet_decoherence_asymmetry_prediction"
+  - "intersectional/physics/114_resonance_vs_committed_decoherence_crossover"
+  - "intersectional/physics/115_bell_violation_from_resonance_coupling"
+  - "intersectional/physics/116_neutrino_oscillation_as_resonance_mode_cycling"
+  - "foundational/F84_two_entanglement_mechanisms_committed_vs_resonance"
+  - "foundational/F85_chirality_determines_resonance_mode_coupling"
+  - "foundational/F86_opposite_spin_from_antisymmetric_mode_r5_selection"
+  - "foundational/F87_decoherence_from_eta_variance_not_temperature"
+  - "intersectional/physics_consciousness/003_resonance_entanglement_in_neural"
+  - "intersectional/physics_biology/002_enzyme_tunneling_resonance_vs_committed"
