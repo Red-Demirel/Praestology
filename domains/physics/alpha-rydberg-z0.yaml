@@ -1,6 +1,6 @@
 # domains/physics/alpha-rydberg-z0.yaml
 name: "Alpha / Rydberg / Z0 / Planck / G — Sextuple Convergence"
-version: "1.4 — Conjugate Chirality, Running Coupling Mechanism, Hadronic Extension"
+version: "1.5 — Sphere Geometry Connection; S² Basis of Rydberg Orbital Structure"
 parent_domain: "Physics"
 core_version: "1.5"
 status: "High-confidence convergence — formal numerical closure pending;
@@ -18,7 +18,12 @@ description: >
   gravity — collapses into one substrate topology description.
   Zero free parameters.
 
-  New in v1.4:
+  New in v1.5:
+    Sphere geometry connection added to Rydberg section — the S²
+    basis of atomic orbitals is inherited from the hadronic triality
+    closure. The 4π factor in a₀ = α/(4π·R∞) reflects the same
+    isotropic S² geometry as the 4π in α = ΔS_chiral/(4π·S_dipole,sat).
+    α, R∞, and a₀ all encode S² geometry at different coupling depths.
     Conjugate chirality formalised as the algebraic foundation
     for chiral vector sums — the S_net = 0 cancellation in the
     photon and the fractional sums in quark composites both
@@ -55,7 +60,10 @@ dependency_map:
     - "domains/physics/foundations.yaml            -- commitment density, impenetrability"
     - "domains/physics/photon-absorption-emission.yaml -- orbital transitions, R∞ context"
     - "domains/physics/quantum-foundation.yaml     -- Tik fluctuation as physical mechanism"
-    - "domains/physics/quark-topology.yaml         -- fractional windings, conjugate chirality"
+    - "domains/physics/quark-topology.yaml         -- fractional windings, conjugate chirality;
+                                                       sphere geometry of triality closure"
+    - "domains/physics/quark-sphere-mapping.yaml   -- S² projection; Y_lm basis; proton
+                                                       charge radius from sphere geometry"
   provides_to:
     - target: "domains/physics/specifications.yaml"
       via: "Closes open derivations: alpha_from_Z0, R_infinity, Lamb shift"
@@ -367,6 +375,28 @@ rydberg_derivation:
     the proton's chirality gradient commitment attraction
     (potential energy). a₀ follows from α and m_eff
     without additional parameters.
+  sphere_geometry_connection: >
+    The proton's commitment well — which the electron couples
+    to at radius a₀ — is a spherical commitment distribution
+    on S². This is not an assumption: the triality closure
+    of the uud junction projects isotropically onto S² under
+    R5 isotropy (see quark-topology.yaml, sphere_geometry_of_
+    triality_closure). The spherical harmonic basis Y_lm that
+    organises atomic orbitals is inherited from this hadronic
+    S² projection — not imposed by the Schrödinger equation
+    as a boundary condition, but geometrically necessitated
+    by the proton's own triality structure.
+    Consequence for R∞: the Rydberg constant encodes not just
+    α and m_eff but implicitly the S² geometry of the coupling
+    target. The factor 4π in a₀ = α/(4π·R∞) is the same
+    isotropic geometry factor from R5 that appears in the
+    α derivation — both are spherical couplings, and their
+    shared 4π factor reflects the same underlying S² geometry.
+    This connects the constant stack directly to the hadronic
+    sphere: α, R∞, and a₀ are all encoding properties of S²
+    at different coupling depths — α at the Möbius crossover,
+    R∞ at the atomic orbital scale, a₀ at the ground-state
+    radius.
   numerical_target: "R∞ ≈ 10,973,731.568160 m⁻¹ (CODATA 2018)"
   open_derivation: >
     Compute S_electron from Möbius 720° vortex stability
@@ -1219,7 +1249,11 @@ related_issues:
   - "intersectional/physics_cosmos/007_G_variation_void_filament_prediction"
   - "foundational/F62_conjugate_chirality_vector_sum_algebra"
   - "foundational/F63_alpha_running_as_topology_sampling_transition"
+  - "foundational/F93_s2_as_emergent_geometry_of_triality_closure"
+  - "foundational/F94_ylm_basis_inherited_from_hadronic_s2_projection"
+  - "foundational/F96_4pi_factor_unified_s2_geometry_alpha_and_rydberg"
   - "intersectional/physics/089_string_tension_from_gp_circulation_quantum"
   - "intersectional/physics/090_lambda_qcd_from_eta_core_partial_winding"
   - "intersectional/physics/091_neutron_proton_delta_m_cross_scale_closure"
   - "intersectional/physics/092_alpha_running_kink_hadronic_threshold"
+  - "intersectional/physics/125_bohr_radius_s2_geometry_4pi_unification"
