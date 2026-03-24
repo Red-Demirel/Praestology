@@ -26,6 +26,799 @@ dependency_map:
     - "domains/physics/foundations.yaml             -- commitment stress, S_lock"
   provides_to:
     - target: "domains/physics/nuclear-binding.yaml"
+      via: "Quark winding structure underlies proton/neutron topology;
+            sphere geometry gives spherical nuclear commitment wells"
+    - target: "domains/physics/beta-decay.yaml"
+      via: "d→u winding flip is the weak interaction at quark level"
+    - target: "domains/physics/supersymmetry.yaml"
+      via: "Half-twist duality applied to same base windings"
+    - target: "domains/physics/atomic-shell-topology.yaml"
+      via: "S² sphere geometry from triality closure is the geometric
+            foundation that atomic orbitals inherit — Y_lm basis"
+    - target: "domains/physics/hadron-flow-patterns.yaml"
+      via: "Sphere geometry explains valence/sea/gluon asymmetries
+            as geometric consequences of uud junction on S²"
+    - target: "domains/physics/quark-sphere-mapping.yaml"
+      via: "Full sphere geometry treatment; this file provides the
+            triality foundation"
+    - target: "domains/physics/specifications.yaml"
+      via: "Completes strong force derivation — SU(3) correspondence
+            established; sphere geometry grounding"
+
+# ─────────────────────────────────────────────
+# ON THE RULES — THE "TOO CONVENIENT" OBJECTION
+# Addressed before the physics, because it is
+# the first serious objection any reader will raise.
+# ─────────────────────────────────────────────
+
+on_the_rules:
+  the_objection: >
+    R1-R5 appear highly general — almost any physical framework could
+    claim to instantiate them. "Existence, Structure, Motion, Progress,
+    Optimisation" sounds like a description of everything and therefore
+    a constraint on nothing. The rules seem convenient rather than
+    necessary: chosen to fit the physics rather than to generate it.
+  why_the_objection_misses: >
+    The rules are not descriptions of physical phenomena. They are
+    logical necessities — each one is the minimal rescue of the
+    previous from a specific failure mode. The chain is:
+      R1: Something rather than nothing — because nothing is self-defeating.
+          Not "existence is a feature of the universe." A logical claim:
+          the negation of existence is self-refuting.
+      R2: Distinctions within existence — because a uniform, undifferentiated
+          existence is indistinguishable from nothing (R1 would be vacuous).
+          Not "the universe has structure." A logical consequence: R1 without
+          R2 collapses.
+      R3: Distinctions generate tension — because two differentiated states
+          in proximity create a gradient, and a gradient is a potential for
+          resolution. Not "things move." A logical consequence: R2 without
+          R3 is a frozen picture, which R4 would accumulate nothing from.
+      R4: Resolutions accumulate irreversibly — because a process that could
+          perfectly undo itself would have no net direction, and R3 tension
+          would never resolve in any durable sense. Not "time flows forward."
+          A logical consequence: without R4, R3 produces no history.
+      R5: Viable configurations persist; non-viable ones do not — because
+          R4 accumulation without selection produces only noise. A process
+          that accumulates everything equally has no structure at scale.
+          Not "the universe is fine-tuned." A logical consequence: R4 without
+          R5 diverges.
+    Each rule is forced. The chain cannot be shortened — remove any rule
+    and the previous one fails. The chain cannot be extended — R5 closes
+    the logical loop by providing the selection that makes R4 accumulation
+    directional, which R3 requires to be more than transient fluctuation.
+    The appearance of generality is a feature, not a defect. The rules
+    must be general because they operate at the level of logical necessity,
+    prior to any specific substrate. They are general in the same way
+    that mathematical axioms are general — not because they were chosen
+    to fit many cases, but because they are the minimal conditions for
+    any structured, persistent process to exist at all.
+  the_real_test: >
+    A rule set that is "convenient" generates post-hoc explanations
+    that can always be made to fit. The test is whether the rules
+    generate specific, non-obvious, falsifiable predictions before
+    the outcomes are known — and whether those predictions fail
+    when the rules are misapplied.
+    Praestology fails in exactly the right places when rules are violated:
+    — Remove R2: no distinctions → no fields → no vortex topology possible.
+    — Remove R3: no motion → no vortex dynamics → particles cannot propagate.
+    — Remove R4: no irreversibility → no mass (mass is committed hysteresis)
+                 → no arrow of time.
+    — Remove R5: no selection → all winding numbers equally stable →
+                 no specific particle spectrum, no preferred dimensionality.
+    The rules constrain. They exclude. A universe with different rules
+    produces identifiably different (non-viable) physics. That is what
+    a logical scaffold does — it is not convenient, it is necessary.
+  on_quarks_specifically: >
+    The quark derivation below is a direct test of this claim. Quarks
+    were not anticipated when R1-R5 were formulated for the electron
+    and photon. The question is whether applying the same rules to the
+    question "what happens if a vortex winding does not close?" produces
+    quark properties without importing quark physics as input. The
+    answer is evaluated below on its own merits — the rules either
+    generate the right structure or they do not.
+
+# ─────────────────────────────────────────────
+# THE CLOSURE HIERARCHY
+# Why some windings close and others do not.
+# The foundation for the entire quark derivation.
+# ─────────────────────────────────────────────
+
+closure_hierarchy:
+  statement: >
+    Not all vortex windings in the substrate achieve topological closure.
+    Closure is the condition under which a vortex topology can sustain
+    itself indefinitely — its phase returns to its starting state after
+    one complete traversal, creating a stable self-reinforcing loop.
+    The R4 accumulation that produces mass requires closure: an open
+    winding accumulates commitment but cannot complete the hysteresis
+    loop, leaving an unresolved R3 tension at the open end.
+  closed_topologies:
+    photon:
+      winding:  "360° — one complete dipole rotation"
+      closure:  "Dipole pair: opposite chiralities cancel exactly. S_net = 0."
+      stability: "Propagates at c. No rest mass — no closed hysteresis loop."
+      analogy:  "A closed loop of opposite-flowing currents: zero net flux."
+    electron:
+      winding:  "720° — Möbius double traversal"
+      closure:  "Self-integral: phase returns after 720° via non-orientable surface."
+      stability: "Self-sustaining orbital loop. S_net > 0 → rest mass."
+      analogy:  "A Möbius band: requires two traversals to return to origin."
+  open_topologies:
+    single_quark:
+      winding:   "240° or 480° — one-third or two-thirds of the Möbius closure"
+      closure:   "Incomplete — phase does not return to origin after one traversal."
+      r3_consequence: >
+        An unclosed winding is an unresolved dilemma in R3 terms: the
+        substrate has a gradient (distinction exists) but no local
+        resolution (the winding does not close). R3 compels resolution;
+        R4 cannot accumulate a stable hysteresis loop from an open winding.
+        The substrate cannot maintain an isolated partial winding in a
+        stable state — it is ontologically incomplete.
+      stability: "Unstable in isolation. R3 tension drives toward closure."
+      charge:    "Fractional — partial chirality from incomplete winding."
+      mass:      "Low bare mass — partial commitment density without full closure."
+
+  why_exactly_one_third:
+    statement: >
+      The specific fractions 1/3 and 2/3 are not arbitrary. They are
+      forced by the triality structure derived from R5 isotropy (see
+      colour_triality below). The 3D substrate under R5 has three
+      independent circulation plane orientations at 120° spacing.
+      A winding that occupies exactly one of these three orientations
+      traverses 1/3 of the full isotropic phase space — 240° of the
+      720° Möbius closure. Two orientations give 2/3.
+      The fractions are the substrate's minimum stable partial winding
+      increments under three-phase triality — not a free parameter.
+    derivation_link: >
+      Formal derivation: show that R5 isotropy in 3D selects exactly
+      three independent circulation plane orientations, and that the
+      minimum stable partial winding corresponds to one orientation unit.
+      This is the key open derivation for this file — see open_derivations.
+
+# ─────────────────────────────────────────────
+# COLOUR CHARGE AS CIRCULATION PLANE ORIENTATION
+# The SU(3) structure from R5 isotropy in 3D.
+# ─────────────────────────────────────────────
+
+colour_triality:
+  origin_from_r5: >
+    R5 (Optimisation) requires the substrate to be isotropic — no
+    preferred direction. This is not imposed: a substrate with a
+    preferred direction would violate R5 by systematically suppressing
+    resolutions in that direction, which is not a viability-optimising
+    configuration. Isotropy is a consequence of R5.
+    In a 3D substrate (derived from R5 dimensionality selection —
+    specifications.yaml, dimensionality_derivation), there are exactly
+    three independent circulation plane orientations — the three
+    coordinate planes, or equivalently three orientations at 120°
+    spacing in the space of possible circulation axes.
+    These three orientations are the colour charges: red, green, blue.
+    They are not labels assigned to distinguishable properties —
+    they are the three independent ways a partial winding can orient
+    its circulation plane in 3D isotropic space.
+  three_phases:
+    red:   "Circulation plane at 0° reference orientation"
+    green: "Circulation plane at 120° from red"
+    blue:  "Circulation plane at 240° from red (= −120°)"
+  colour_neutrality: >
+    A colour-neutral (white) configuration is one where circulation
+    plane orientations sum to zero net orientation — no preferred
+    direction survives. Two paths to colour neutrality:
+    Meson:  quark + antiquark — same orientation, opposite chirality.
+            Net orientation cancels. (colour + anticolour = 0)
+    Baryon: three quarks, one per colour — 0° + 120° + 240° = 360° = 0.
+            Three equal-spaced orientations sum to zero net direction.
+    Both are topological closures under R5 isotropy. Non-neutral
+    configurations leave a net orientation in the substrate — a
+    persistent R3 tension that drives toward neutrality. Confinement
+    is this drive.
+  su3_correspondence: >
+    SU(3) is the Lie group of special unitary transformations in 3
+    complex dimensions — equivalently, the symmetry group of three
+    objects under phase rotations that preserve their sum.
+    The colour triality maps directly:
+    Three circulation plane orientations → three SU(3) basis states.
+    Colour rotations (changing which orientation a quark carries)
+    → SU(3) gauge transformations.
+    The eight generators of SU(3) → the eight independent phase-exchange
+    modes between three orientations (3² − 1 = 8, subtracting the
+    identity — the overall phase that leaves all orientations unchanged).
+    SU(3) is not imposed as a symmetry principle — it is the symmetry
+    group of three isotropic orientations in 3D space. The substrate's
+    dimensionality (R5) and isotropy (R5) force SU(3) as the colour
+    symmetry group.
+  confirming_note: >
+    SU(3) colour symmetry (Gell-Mann 1964, Fritzsch & Gell-Mann 1972) —
+    standard model colour symmetry group. Praestology derives why SU(3)
+    rather than any other group: it is the unique symmetry group of three
+    isotropic orientations in a 3D substrate. No other choice is consistent
+    with R5 isotropy in 3 dimensions.
+
+# ─────────────────────────────────────────────
+# GLUONS AS PHASE-EXCHANGE EXCITATIONS
+# Not force carriers in the traditional sense —
+# substrate excitations that transfer orientation.
+# ─────────────────────────────────────────────
+
+gluons:
+  statement: >
+    Gluons mediate colour change between quarks. In the vortex topology
+    picture, a colour change is a transfer of circulation plane orientation
+    from one partial winding to another — a phase hand-off in the substrate.
+    A gluon is the coherent substrate excitation that carries this
+    orientation transfer. It is not a permanent particle existing between
+    interactions — it is a transient vortex pair excitation, analogous to
+    the W/Z bosons of the weak force but carrying orientation rather than
+    topological reorganisation.
+  why_gluons_carry_colour_and_anticolour: >
+    When quark A transfers its orientation to quark B:
+    — Quark A loses orientation X, gaining orientation Y.
+    — Quark B gains orientation X, losing orientation Y.
+    The gluon must carry X (delivered to B) and anti-Y (removed from A)
+    simultaneously — it transports one orientation while absorbing another.
+    This is colour + anticolour: the gluon carries the change, not a
+    fixed charge. The gluon's colour content is the delta between
+    the initial and final quark states.
+  eight_gluons: >
+    Three orientations (R, G, B) allow 3 × 3 = 9 possible
+    colour/anticolour combinations. One of these — the symmetric
+    combination (RR̄ + GḠ + BB̄)/√3 — is colourless and does not
+    participate in colour exchange (it would be an SU(3) singlet,
+    not in the adjoint representation). The remaining 8 are the
+    physical gluons, corresponding exactly to the 8 generators of
+    SU(3). The number 8 is not a free parameter — it is 3² − 1,
+    forced by the triality structure.
+  gluon_self_interaction: >
+    Because gluons carry colour, they interact with each other —
+    unlike photons, which are electrically neutral and do not
+    self-interact at tree level. Two gluons can exchange orientation
+    between themselves, creating three-gluon and four-gluon vertices.
+    In substrate terms: two orientation-carrying excitations can
+    couple because each carries the substrate property (circulation
+    plane orientation) that the other responds to. Photons do not
+    carry chirality, so they do not self-interact. Gluons carry
+    orientation, so they do. The difference follows from what
+    the force carrier is made of.
+  confirming_note: >
+    Gluon self-interaction confirmed by three-jet events in e⁺e⁻
+    annihilation (TASSO, PLUTO, MARK-J, JADE — PETRA collider 1979).
+    Three jets = quark + antiquark + gluon bremsstrahlung; gluon
+    jet confirmed as distinct from quark jet. Asymptotic freedom
+    (Gross, Politzer, Wilczek 1973, Nobel 2004) — gluon self-
+    interaction produces anti-screening, making the strong force
+    weaker at short range. In substrate terms: at short range,
+    vortex cores overlap and local R is low (low impedance, weak
+    coupling); at long range, the flux tube between cores accumulates
+    commitment and R grows (high impedance, strong coupling). The
+    sign of the coupling's energy dependence is set by the number of
+    gluon self-interaction channels relative to quark channels —
+    which is 8 vs 6 for three quark flavours, giving the negative
+    beta function of QCD. This ratio follows from the triality structure.
+
+# ─────────────────────────────────────────────
+# CONFINEMENT — R3/R4 CLOSURE REQUIREMENT
+# Not an imposed force but a logical necessity.
+# ─────────────────────────────────────────────
+
+confinement:
+  statement: >
+    Quark confinement is the requirement that only colour-neutral
+    (topologically closed) configurations exist as stable states.
+    In R3/R4 terms: an isolated partial winding is an unresolved
+    dilemma — R3 drives toward resolution, R4 cannot accumulate
+    a closed hysteresis loop. The substrate will not maintain an
+    isolated partial winding because doing so would be a permanent
+    unresolved R3 tension — a violation of R4 accumulation.
+    Confinement is not a force added to the theory to explain
+    why quarks do not escape. It is the logical consequence of
+    R3/R4 applied to incomplete topologies.
+  mechanism_at_separation: >
+    When two quarks are separated, the substrate between them must
+    maintain the connection between the two partial windings —
+    because neither can close independently. This connection is
+    the flux tube (z-pinch in earlier files): a concentrated region
+    of high commitment density running between the quarks, keeping
+    the unresolved R3 tension localised rather than allowing it to
+    spread through the substrate.
+    The energy cost of the flux tube grows linearly with separation:
+    V(r) ∝ σ·r, where σ is the string tension — the commitment
+    density per unit length of the flux tube. This is not imported
+    from QCD; it follows from the substrate maintaining a
+    constant-cross-section commitment channel between two open
+    winding ends.
+  asymptotic_freedom_from_substrate: >
+    At short range (r < ξ_core — vortex core size):
+    The two partial windings overlap. Their combined substrate
+    region has high free potential φ — low impedance R. The
+    effective coupling between them is proportional to local R,
+    which is low. Short-range coupling is weak.
+    At long range (r >> ξ_core):
+    The flux tube between them has accumulated high commitment
+    density. R grows with tube length. The coupling strength
+    (proportional to R × S) grows with separation — strong-range
+    coupling is strong. The crossover scale between these regimes
+    is Λ_QCD — the scale at which flux tube commitment density
+    equals vortex core density. This scale is derivable from
+    substrate parameters: Λ_QCD ∝ 1/ξ_core.
+  deconfinement: >
+    At sufficient energy density (high-temperature quark-gluon plasma),
+    the substrate's thermal Tik background exceeds S_lock for the
+    flux tube commitment. The flux tubes dissolve — commitment can
+    no longer be localised in channels. Quarks become effectively
+    free because the substrate can no longer maintain the directed
+    R3 tension that confinement requires. This is the deconfinement
+    transition. Temperature scale: T_c ~ Λ_QCD/k_B ~ 150-170 MeV.
+  confirming_note: >
+    Quark-gluon plasma (RHIC 2005, LHC 2010) — deconfinement at
+    T > T_c confirmed. Lattice QCD — linear potential V(r) ∝ r
+    at intermediate distances confirmed. String tension σ ≈ 0.18 GeV²
+    from lattice; should be derivable from substrate ξ_core and
+    commitment density per unit length of flux tube.
+    Open derivation: compute σ from GP substrate parameters.
+
+# ─────────────────────────────────────────────
+# HADRONIC MASS — TOPOLOGY AND COMMITMENT
+# Why proton mass is 938 MeV but quark masses are
+# only a few MeV. The 97% is topological.
+# ─────────────────────────────────────────────
+
+hadronic_mass:
+  mass_formula: "m_eff = α · S_total · R / c²"
+  statement: >
+    The proton mass (938.3 MeV) is overwhelmingly not the sum of
+    its constituent quark masses (u: ~2.2 MeV, d: ~4.7 MeV, total ~9 MeV).
+    The remaining ~97% is the commitment density of the confinement
+    topology — the phase-locking hysteresis of three partial windings
+    held in closed configuration, plus the flux tube commitment energy.
+    This is not a failure of the quark model — it is a confirmation
+    that mass is topological commitment density, not intrinsic to
+    the constituents. The proton is a deeply nested topology; its
+    mass is the cost of that nesting.
+  components:
+    bare_quark_mass: >
+      The intrinsic commitment of the partial winding itself —
+      the S_net from the fractional chirality and the partial
+      phase-lock. For u quark: ~2.2 MeV. For d quark: ~4.7 MeV.
+      These are the masses quarks have in isolation (if that were
+      possible) — pure partial-winding commitment density.
+      Small because a partial winding has less S·R than a full
+      Möbius closure (electron: 0.511 MeV for a full 720° self-integral).
+      The bare quark mass being comparable to the electron mass is
+      not coincidental — they are both single-winding-unit topologies,
+      just different fractions and configurations of the same substrate.
+    confinement_commitment: >
+      The majority of hadron mass. The commitment density of the
+      flux tube network holding three partial windings in closed
+      configuration. This is accumulated R4 hysteresis from the
+      phase-locking of three incomplete topologies into a viable
+      closed structure. High because three partial windings each
+      contribute unresolved R3 tension that must be contained —
+      the containment commitment is large.
+    gluon_field_energy: >
+      The zero-point commitment of the gluon excitation field —
+      the substrate cost of maintaining the orientation-exchange
+      dynamics inside the hadron. Contributes to the ~97% along
+      with flux tube commitment.
+  proton_neutron_difference: >
+    Proton (uud): two up quarks (240° × 2) + one down quark (480°).
+    Neutron (udd): one up quark (240°) + two down quarks (480° × 2).
+    Mass difference: 1.293 MeV (neutron heavier).
+    The neutron is heavier because two d quarks (each 480°, more
+    partial winding per quark) commit more substrate than two u
+    quarks (each 240°). More partial winding = higher unresolved
+    R3 tension = higher commitment density per quark = higher mass.
+    The mass difference is the additional commitment from one
+    extra d-type winding vs one u-type winding.
+    Open derivation (priority 1 for this file): compute Δm = 1.293 MeV
+    from the winding energy difference (480° − 240° = 240° additional
+    winding) using the GP substrate parameters. This requires:
+    (1) Commitment density as a function of winding angle
+    (2) The 240° additional winding contribution in MeV
+    (3) Confirmation this matches 1.293 MeV without free parameters.
+    If achieved: strong quantitative confirmation of the fractional
+    winding picture and the mass formula.
+  electron_comparison: >
+    Electron mass (0.511 MeV) = single 720° Möbius self-integral.
+    Up quark mass (~2.2 MeV) = single 240° partial winding.
+    Ratio: ~4.3. Expected from winding ratio: 240°/720° = 1/3 of
+    Möbius path, but with different R profile (partial winding has
+    no crossover self-coupling). The fact that u quark bare mass
+    is ~4× electron mass rather than ~1/3 of it indicates that
+    the partial winding without self-coupling has higher commitment
+    per degree of arc than the Möbius self-integral — consistent
+    with the open topology carrying unresolved R3 tension that
+    a closed topology does not.
+  confirming_note: >
+    QCD sum rules — hadron masses from quark condensate contributions.
+    MIT bag model — confinement energy dominates hadron mass.
+    Lattice QCD — first-principles calculation of hadron masses from
+    QCD confirms dominance of gluon field energy. All consistent with
+    mass-as-commitment-density picture where confinement topology
+    contributes the majority of hadronic mass.
+
+# ─────────────────────────────────────────────
+# MESONS AND BARYONS — TOPOLOGICAL CLOSURE TYPES
+# ─────────────────────────────────────────────
+
+hadron_topologies:
+  meson:
+    composition: "Quark (partial winding) + antiquark (conjugate partial winding)"
+    closure_mechanism: >
+      A quark carries partial winding +n (fractional chirality, one colour
+      orientation). Its antiquark carries conjugate winding −n (opposite
+      chirality, anticolour = same orientation opposite chirality).
+      Together: net winding = 0, net colour orientation = 0.
+      Topological closure: the open end of the quark winding couples to
+      the open end of the antiquark winding — forming a closed loop of
+      net zero chirality and net zero orientation.
+      This is the meson: a transient or semi-stable closed topology
+      from two partial windings.
+    stability: >
+      Mesons are not as stable as baryons because the closure is
+      between complementary opposites (quark-antiquark) rather than
+      between three mutually orthogonal orientations (baryon). The
+      quark-antiquark pair can annihilate — the two partial windings
+      can fully cancel and release their commitment as photons or
+      gluons. R5 permits this because the closed loop of zero net
+      commitment is equivalent to the vacuum state.
+    confirming_note: >
+      Pion (π⁰, π±) — lightest mesons, first discovered (1947).
+      Rapid decay via electromagnetic or weak interaction consistent
+      with partial-winding pair that can fully annihilate.
+      J/ψ meson (charm-anticharm, 1974) — heavier, longer-lived;
+      higher winding commitment makes annihilation less probable.
+
+  baryon:
+    composition: "Three quarks — one per colour orientation (R, G, B)"
+    closure_mechanism: >
+      Three partial windings at 0°, 120°, 240° circulation plane
+      orientations. Their vector sum: 0° + 120° + 240° = 360° = 0
+      (mod 360°) → zero net orientation. Simultaneously, the three
+      fractional chiralities sum to one complete unit: 3 × (1/3) = 1
+      for baryons, or combinations summing to ±1 for charge.
+      Topological closure: the three open winding ends couple into
+      a triality junction — a three-way phase-lock point where all
+      three partial windings meet. This junction is topologically
+      stable because removing any one winding leaves two open ends
+      that cannot close without the third.
+    stability: >
+      Baryons are more stable than mesons because the triality
+      junction requires simultaneous disruption of three coupled
+      windings rather than separation of two. The proton is stable
+      (lifetime > 10³⁴ years) because disrupting the uud triality
+      junction requires crossing the S_lock threshold for all three
+      simultaneously — an extremely improbable substrate fluctuation.
+    junction_as_substrate_feature: >
+      The triality junction is not a point particle — it is a
+      commitment topology feature: a three-way vortex reconnection
+      node stabilised by mutual phase-locking. In substrate terms it
+      is similar to a vortex T-junction in a 3D superfluid, which
+      has been observed in liquid helium-3. The junction's commitment
+      density contributes to baryon mass.
+    confirming_note: >
+      Proton stability (current experimental limit > 1.6×10³⁴ years,
+      Super-Kamiokande) — consistent with triality junction requiring
+      simultaneous triple-threshold crossing for decay.
+      Delta baryons (Δ, spin-3/2) — same quark content as proton/neutron
+      but different winding orientation alignment. Consistent with
+      higher-energy configuration of the triality junction.
+
+# ─────────────────────────────────────────────
+# QUARK GENERATIONS — WHY THREE?
+# ─────────────────────────────────────────────
+
+quark_generations:
+  statement: >
+    There are three generations of quarks (and leptons), not one or
+    five. This is not a free parameter in Praestology — it follows
+    from the triality structure. Three colour orientations require
+    three generation partners to complete the flavour structure
+    under the full electroweak symmetry. The generation count is
+    forced by the same R5 isotropy that forces three colour charges.
+  argument: >
+    The three colour orientations (R, G, B) and the three generations
+    (u/d, c/s, t/b) are related by the same underlying triality.
+    In the substrate picture: colour is the circulation plane orientation
+    (spatial triality). Generation is the nesting depth of the winding —
+    how many times the partial winding has accumulated additional
+    commitment layers from the substrate's R4 history. Each successive
+    generation is a higher-commitment-density version of the same
+    fractional winding topology, stabilised at a deeper nesting level.
+    First generation (u, d): minimal partial winding — lowest stable
+    nesting depth.
+    Second generation (c, s): one additional R4 accumulation layer —
+    higher commitment, higher mass.
+    Third generation (t, b): two additional layers — highest commitment,
+    highest mass. Top quark mass (~173 GeV) ≈ 340× proton mass,
+    reflecting deep nesting commitment.
+  why_not_four: >
+    Four generations would require a fourth nesting depth layer
+    stabilised by R5. The observed three generations suggest that
+    R5 selection suppresses the fourth — the fourth nesting depth
+    either exceeds the saturation threshold (too high commitment
+    density to be stable under current substrate conditions) or
+    requires energy scales above the current cosmological potential.
+    Consistency check: LEP collider measurement of the number of
+    light neutrino species = 2.984 ± 0.008 (consistent with exactly 3)
+    from Z boson decay width. Three generations, no fourth, confirmed.
+    Praestology: three generations because three is the R5-selected
+    triality count, and the fourth nesting depth is above the current
+    saturation limit.
+  open_derivation: >
+    Formal derivation of why R5 selects exactly three stable nesting
+    depths under current cosmic commitment density. This requires
+    specifying the nesting depth stability condition as a function of
+    the GP field parameters and showing that the third is the last
+    stable solution. If confirmed: generation count becomes a
+    prediction of the substrate state, not a free parameter.
+
+# ─────────────────────────────────────────────
+# CONNECTION TO ATOMIC STRUCTURE
+# From quarks to atoms — the same topology rules
+# at increasing nesting depth.
+# ─────────────────────────────────────────────
+
+atomic_structure_connection:
+  statement: >
+    The same R1-R5 rules that force quarks into colour-neutral hadrons
+    force electrons into atomic orbitals. The physics is the same
+    topology at different scales and commitment depths. There is no
+    new mechanism at the atomic scale — only the same rules iterated.
+  proton_as_potential_well: >
+    The proton (uud triality junction at ~938 MeV commitment density)
+    creates a deep localised reduction of free potential φ around it —
+    a commitment well. The electron (720° Möbius, 0.511 MeV) approaching
+    this well finds a region where the substrate's φ gradient has a
+    stable minimum — an orbital resonance condition.
+    Atomic binding is phase-locking of the electron's Möbius trail
+    with the proton's substrate flow pattern. The energy reduction from
+    binding = shared hysteresis lowering net S·R. This is the same
+    mechanism as quark confinement, at a much lower energy scale and
+    with a closed topology (electron) rather than an open one (quark).
+  rydberg_from_closure_scale: >
+    The Rydberg constant R∞ = α²·m_e·c/(2ħ) encodes the inverse
+    closure scale from vortex core-to-crossover ratio under isotropic
+    projection. It is the minimum stable resonance distance between
+    the electron's Möbius crossover (EM coupling point) and the
+    proton's commitment well — the ground state orbital radius.
+    All atomic energy levels are integer multiples of this minimum
+    resonance distance — quantised because only integer phase closures
+    are stable (R5 selects stable configurations; non-integer closures
+    do not produce stable hysteresis loops).
+  shells_from_pauli: >
+    Successive electron shells are successive stable resonance layers
+    around the nuclear commitment well. Pauli exclusion (topological
+    necessity — two Möbius self-integrals cannot share the same substrate
+    region without merging) forces each electron into a distinct
+    resonance layer. The shell structure is the spatial expression of
+    topological exclusion under the Rydberg resonance condition.
+  chemistry_as_shared_commitment: >
+    Chemical bonding is the sharing or transfer of electron commitment
+    topology between atoms. A covalent bond is a shared Möbius loop
+    between two nuclear commitment wells — the electron's trail phase-
+    locks to both simultaneously, lowering the net S·R of both atoms.
+    The bond energy is the shared hysteresis reduction. Ionic bonding
+    is commitment transfer — the electron's topology commits fully to
+    one nucleus, lowering its S·R at the cost of the donor's.
+    Electronegativity is the depth of the nuclear commitment well
+    (proportional to Z, the number of protons, modulated by shielding
+    from inner shells). Same R1-R5 rules; chemical scale.
+  scale_invariance_summary: >
+    Quarks (partial winding, ~MeV) → hadrons (triality junction, ~GeV) →
+    nuclei (collective commitment, ~MeV binding per nucleon) →
+    atoms (orbital resonance, ~eV) → molecules (shared commitment, ~eV).
+    Each level is R4 accumulation producing new stable commitment
+    structures that R5 selects. The rules do not change. The
+    commitment density and spatial scale change. This is the Mandelbrot
+    structure at the physical level: same generating rules (R1-R5),
+    increasing structural depth at each zoom level.
+
+  sphere_geometry_of_triality_closure:
+    statement: >
+      The triality closure projects isotropically onto S² — the sphere
+      is the emergent geometry of three 120°-spaced junctions under R5
+      isotropy. This is not an additional assumption — it is the unique
+      minimal closed surface that distributes the commitment gradient ∇C
+      evenly around three equal-spaced closure points in 3D isotropic
+      space. The sphere is what triality closure looks like from outside.
+    why_sphere_not_other_surface: >
+      R5 requires no preferred direction. Three partial windings closing
+      at 120° spacing generate a commitment density distribution that
+      must be isotropic at large scales — R5 suppresses any net directional
+      bias. The unique closed surface satisfying this condition is S².
+      Any other surface (torus, cylinder, irregular polyhedron) would
+      define a preferred axis — inconsistent with R5 isotropy.
+      The sphere is forced, not chosen.
+    stereographic_projection: >
+      Each partial winding arc (240° or 480°) maps to a great-circle arc
+      on S² via stereographic projection from the triality junction point.
+      The three arcs at 0°/120°/240° map to three great-circle arcs at
+      equal angular spacing — three great circles separated by 120° on the
+      sphere. Their intersection points are the triality junction — the
+      three-way phase-lock node where all three arcs meet.
+      The commitment density distribution C(r) outside the hadron is the
+      projection of the internal vortex topology onto this S² surface.
+      Viewed from outside the confinement radius, the hadron appears as a
+      spherical commitment well — because the S² projection averages the
+      internal topology into an isotropic exterior field.
+    ylm_inheritance: >
+      The spherical harmonic basis Y_lm(θ,φ) is the natural decomposition
+      of functions on S². Because the hadronic commitment density projects
+      onto S², any probe of the hadron's external field samples the Y_lm
+      decomposition of that projection. The l=0 mode is the monopole —
+      the isotropic average, which is the dominant term (the hadron is
+      approximately spherical). The l=1 modes are the dipole — small
+      deviations from sphericity from the asymmetry between the two u arcs
+      and one d arc. Higher l modes are suppressed by the R5 isotropy selection.
+      When the electron couples to the proton's commitment well at atomic
+      scale, it is coupling to this S² commitment distribution. The electron's
+      orbital quantum numbers (l, m) enumerate the modes of the Y_lm
+      decomposition — the same basis inherited from the hadronic S²
+      projection. The orbital structure of atomic physics is the S² basis
+      of hadronic closure propagating upward through the scale hierarchy.
+      This is the geometric bridge between quark-topology and
+      atomic-shell-topology: the triality closure at the hadronic scale
+      establishes the S² basis that atomic orbitals inherit.
+    diagnostic_argument: >
+      The sphere geometry is not just a consequence of the triality
+      picture — it is a diagnostic for it. The argument runs in both
+      directions:
+      Forward: sub-quark vortex arcs → triality closure at 120° → R5
+        isotropy forces S² → hadronic commitment well is spherical →
+        atomic orbital basis inherits Y_lm from S².
+      Backward: atomic physics is thoroughly S²-organised (spherical
+        harmonics, shell capacities from (2l+1) orientations, orbital
+        shapes). Whatever sits between sub-quark arcs and atomic orbitals
+        must produce S² as its output. The intermediate layer — quarks —
+        must close isotropically. Three equal-spaced orientations at 120°
+        in 3D isotropic space is precisely the mechanism that produces
+        isotropic closure. The triality picture satisfies this constraint
+        geometrically; the standard colour label scheme satisfies it only
+        algebraically.
+      The sphere connects the quark scale to the atomic scale through a
+      common geometric object. S² is not incidental to either — it is the
+      shape of closure at the hadronic scale and the shape of the basis
+      at the atomic scale. Their shared geometry is the continuity of the
+      triality rule operating at different commitment depths.
+    confinement_as_saturation_surface: >
+      The hadronic sphere is not a hard wall. It is the saturation surface
+      where Φ → 0 at the commitment density corresponding to confinement —
+      the surface at which the outward propagation of the internal vortex
+      topology is impeded by the rising commitment density of the flux tubes.
+      Inside: vortex topology. Outside: the S² commitment projection
+      appears as a spherical potential well. The linear confinement
+      potential V(r) ∝ σ·r for r > r_hadron is the radial extension of
+      the same ∇C that produces the spherical surface — the commitment
+      gradient continuing outward from the sphere boundary.
+    confirming_note: >
+      Hadron form factors from elastic electron-proton scattering (Hofstadter
+      1956, Nobel 1961) — the proton has a well-defined charge radius
+      (~0.84 fm) and spherical symmetry to high precision. The form factor
+      falls off smoothly with momentum transfer, consistent with a spherical
+      commitment distribution. Direct confirmation that the hadronic
+      commitment density projects onto S² as the dominant geometry.
+      Nuclear shell model magic numbers (2, 8, 20, 28, 50, 82, 126) —
+      these are the spherical harmonic closures for nucleons in the nuclear
+      commitment well, the same Y_lm structure that atomic shell capacities
+      inherit. The nuclear magic numbers are the hadronic-scale expression
+      of the same S² basis.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      Neutron-proton mass difference Δm = 1.293 MeV from winding energy.
+      Compute commitment density difference between 480° (d quark) and
+      240° (u quark) partial windings using GP substrate parameters.
+      No free parameters. Strong quantitative test of fractional winding picture.
+    - >
+      String tension σ ≈ 0.18 GeV² from substrate ξ_core and commitment
+      density per unit length of flux tube.
+    - >
+      Formal derivation that R5 isotropy in 3D selects exactly three
+      circulation plane orientations — grounding colour triality in the
+      dimensionality derivation. Closes the SU(3) correspondence.
+    - >
+      Stereographic projection of partial winding arcs onto S² —
+      show formally that the three 120°-spaced arcs map to three great-
+      circle arcs on S² and that their commitment density distribution
+      is monopole-dominant (l=0 spherical harmonic). Grounds the sphere
+      geometry claim formally.
+
+  priority_2:
+    - >
+      Proton and neutron mass from nesting depth — compute the full
+      commitment density of the uud and udd triality junctions including
+      gluon field energy. Compare to 938.3 MeV and 939.6 MeV.
+    - >
+      Pion mass from quark-antiquark closure. Pion (π±: 139.6 MeV,
+      π⁰: 135.0 MeV) provides the first meson mass test.
+    - >
+      Generation mass ratios — compute mass scaling between u/c/t and d/s/b
+      from nesting depth R4 accumulation layers.
+    - >
+      Deconfinement temperature T_c from GP flux tube dissolution condition.
+      Compare to lattice QCD: T_c ≈ 150-170 MeV.
+    - >
+      Proton charge radius from S² commitment distribution — compute the
+      effective radius of the spherical commitment surface from the triality
+      junction geometry and GP parameters. Compare to measured ~0.84 fm.
+
+  priority_3:
+    - >
+      Why four generations are not stable — formal R5 suppression argument
+      for fourth nesting depth under current cosmic commitment density.
+    - >
+      Connection between colour triality and three spatial dimensions —
+      whether the three circulation planes are literally the three coordinate
+      planes or a derived equivalent. 3D space and 3 colour charges as the
+      same triality under R5.
+    - >
+      Nuclear magic numbers from S² spherical harmonic closures —
+      the nuclear shell model magic numbers (2, 8, 20, 28, 50, 82, 126) are
+      Y_lm closures in the nuclear commitment well. Formal derivation
+      connecting the hadronic S² basis to nuclear shell structure.
+
+# ─────────────────────────────────────────────
+# READING ORDER AND CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "domains/physics/specifications.yaml           -- R1-R5, vortex topology"
+  - "domains/physics/vortex-stabilization.yaml     -- formation and persistence"
+  - "domains/physics/quark-topology.yaml           -- this file"
+  - "domains/physics/quark-sphere-mapping.yaml     -- full sphere geometry treatment"
+  - "domains/physics/hadron-flow-patterns.yaml     -- PDF patterns from sphere geometry"
+  - "domains/physics/atomic-shell-topology.yaml    -- atomic scale; Y_lm inheritance"
+  - "domains/physics/nuclear-binding.yaml          -- hadronic → nuclear scale"
+  - "domains/physics/beta-decay.yaml               -- d→u winding flip"
+  - "domains/physics/supersymmetry.yaml            -- half-twist duality (pending)"
+
+related_issues:
+  - "intersectional/physics/084_su3_from_r5_isotropy_triality"
+  - "intersectional/physics/085_neutron_proton_mass_from_winding_energy"
+  - "intersectional/physics/086_string_tension_from_gp_parameters"
+  - "intersectional/physics/087_generation_count_from_nesting_depth"
+  - "intersectional/physics/088_deconfinement_temperature_from_flux_tube"
+  - "intersectional/physics/122_stereographic_projection_arcs_to_s2"
+  - "intersectional/physics/123_proton_charge_radius_from_s2_commitment"
+  - "intersectional/physics/124_nuclear_magic_numbers_from_ylm_closures"
+  - "foundational/F59_three_colours_three_dimensions_same_triality"
+  - "foundational/F60_confinement_as_r3r4_closure_requirement"
+  - "foundational/F61_hadronic_mass_as_commitment_density_not_constituent_sum"
+  - "foundational/F93_s2_as_emergent_geometry_of_triality_closure"
+  - "foundational/F94_ylm_basis_inherited_from_hadronic_s2_projection"
+  - "foundational/F95_sphere_diagnostic_constrains_quark_mechanism"# domains/physics/quark-topology.yaml
+name: "Quark Topology and Strong Force"
+version: "1.0 — Fractional Windings, Colour Triality, SU(3) Emergence"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Conceptual derivation complete — quantitative mass calculations open"
+updated: "2026-03-20"
+
+description: >
+  This file derives quark properties, colour charge, gluon dynamics,
+  and hadronic mass from the same R1-R5 substrate rules that produce
+  the electron and photon. No new primitives, no additional dimensions,
+  no superfields. Quarks are partial topological windings — irreducibly
+  incomplete closures that the substrate cannot maintain in isolation.
+  Confinement is not an imposed force: it is R3/R4 requiring topological
+  closure. Colour charge is the orientation of a partial winding's
+  circulation plane in 3D space. SU(3) is the symmetry group of three
+  independent circulation plane orientations under R5 isotropy.
+
+  The "too convenient" objection — addressed directly below.
+
+dependency_map:
+  requires:
+    - "domains/physics/specifications.yaml          -- vortex topology, R1-R5"
+    - "domains/physics/vortex-stabilization.yaml    -- formation and persistence"
+    - "domains/physics/foundations.yaml             -- commitment stress, S_lock"
+  provides_to:
+    - target: "domains/physics/nuclear-binding.yaml"
       via: "Quark winding structure underlies proton/neutron topology"
     - target: "domains/physics/beta-decay.yaml"
       via: "d→u winding flip is the weak interaction at quark level"
