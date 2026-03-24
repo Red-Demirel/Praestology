@@ -1,6 +1,7 @@
 # domains/physics/quantum-entanglement.yaml
 name: "Quantum Entanglement — Two Mechanisms, Not One"
-version: "1.0 — Committed Phase-Lock and Substrate Resonance Coupling Distinguished"
+version: "1.1 — Dilemma Framing; Process Layer and Locality; Two Mechanisms as
+          Instantiations of Shared Dilemma"
 parent_domain: "Physics"
 core_version: "1.5"
 status: "Mechanism identified — two distinct entanglement types derived from
@@ -9,42 +10,30 @@ status: "Mechanism identified — two distinct entanglement types derived from
 updated: "2026-03-20"
 
 description: >
-  The existing Praestology treatment of entanglement (quantum-foundation.yaml)
-  correctly identifies phase-locking (ρ) in the substrate commitment structure
-  as the correlating mechanism — the coupling is already in the substrate when
-  measurement occurs, explaining non-locality without action at a distance.
+  Quantum entanglement described from substrate first principles.
 
-  This file extends that picture by identifying a second, distinct entanglement
-  mechanism that the committed-vortex picture misses: substrate resonance
-  coupling. The distinction matters because the two mechanisms have different
-  physical properties, different decoherence behaviour, different range
-  characteristics, and different chirality dependence.
+  Core claim: entangled particles share a dilemma — a single unresolved
+  R3 tension expressed at two or more substrate locations simultaneously.
+  They are not two separate things that happen to be correlated. They are
+  two expressions of one pre-commitment structure in the potential field.
+  Measurement resolves the dilemma at the process layer — prior to the
+  committed-topology layer where locality, c, and causal ordering apply.
+  The apparent non-locality is not a violation of physical law — it is
+  the process layer operating by its own rules, which are prior to the
+  restrictions that the committed layer derives from it.
 
-  The key observation: the existing treatment assumes entanglement always
-  involves two committed vortex topologies with sufficient trail commitment
-  to maintain direct phase-lock. But the substrate — as a superfluid medium —
-  supports collective oscillation modes (analogous to phonons in a superfluid)
-  that are properties of the medium itself, not of localised committed
-  topologies. Two vortices, or even two solo vortices near S_lock, can be
-  correlated through coupling to the same substrate resonance mode without
-  requiring direct trail-to-trail commitment. This is a lighter, potentially
-  longer-range, and chirality-specific form of correlation.
+  This is intrinsic to Praesto: space is the substrate, unresolved
+  dilemmas exist in the potential field which has no gaps, therefore a
+  dilemma can be expressed at multiple spatial locations without any
+  transfer between them. Distance is a committed-topology concept; the
+  dilemma is pre-commitment. The interaction is real but occurs at the
+  processing level where distance is not yet a defined quantity.
 
-  The chirality of a solo vortex — its handedness relative to the substrate's
-  own chiral mode structure — determines which resonance modes it couples to.
-  Two solo vortices with opposite chirality preferentially couple to the
-  substrate's anti-symmetric chiral modes, producing opposite-spin correlations
-  without committed trail-to-trail phase-lock. This may be the mechanism
-  behind long-range entanglement in weakly committed systems.
-
-  Confidence levels:
-    Two-mechanism distinction: HIGH — follows from substrate superfluid nature
-    Committed phase-lock mechanism: HIGH — already in quantum-foundation.yaml
-    Resonance mode existence: HIGH — superfluid collective modes are standard
-    Chirality-resonance coupling: MEDIUM-HIGH — physically motivated, not yet
-      formally derived from GP equation
-    Formal resonance mode spectrum: OPEN — requires GP field analysis
-    Decoherence rate predictions: MEDIUM — direction clear, magnitudes open
+  The file then identifies two physical mechanisms by which shared
+  dilemmas are instantiated — committed phase-lock and substrate
+  resonance coupling — which are two ways the same dilemma ontology
+  is physically realised. The mechanisms differ in decoherence profile,
+  range, and chirality dependence.
 
 dependency_map:
   requires:
@@ -59,8 +48,6 @@ dependency_map:
                                                        GP order parameter"
     - "domains/physics/commitment-response-function.yaml -- GP equation; imperfect
                                                        closure; finite R"
-    - "domains/physics/quantum-entanglement.yaml    -- second mechanism: resonance coupling"
-
   provides_to:
     - target: "domains/physics/quantum-foundation.yaml"
       via: "Extends entanglement section with two-mechanism distinction;
@@ -77,16 +64,210 @@ dependency_map:
 # THE TWO MECHANISMS — OVERVIEW
 # ─────────────────────────────────────────────
 
+
+# ─────────────────────────────────────────────
+# THE DILEMMA AS THE ENTANGLING STRUCTURE
+# The primary ontological account — what
+# entanglement IS at the substrate level
+# ─────────────────────────────────────────────
+
+dilemma_as_entangling_structure:
+  statement: >
+    Entangled particles share a dilemma.
+    Not a correlation. Not a predetermined property. Not a signal.
+    A dilemma — a single unresolved R3 tension with multiple viable
+    resolution paths, expressed at two or more locations in the
+    substrate simultaneously. The entangled particles are not two
+    separate things that happen to be correlated. They are two
+    localised expressions of one shared unresolved tension in the
+    potential field φ(r,t).
+  what_a_dilemma_is: >
+    In R1-R5 terms: a dilemma is the substrate state where R3
+    tension exists — distinction drives toward resolution — but
+    R5 has not yet selected which resolution path to commit to.
+    Multiple paths remain viable simultaneously. The substrate
+    holds them open. This is not epistemic uncertainty (we don't
+    know which path was taken) — it is ontological openness (no
+    path has been taken yet). The dilemma is genuinely unresolved.
+    This is what quantum superposition describes mathematically.
+    The wavefunction ψ encodes the full set of viable resolution
+    paths weighted by their R5 viability — the resolution landscape
+    of the dilemma. Collapse is the dilemma committing. Not the
+    wavefunction "changing" — the dilemma resolving into R4.
+  why_measurement_of_one_determines_the_other: >
+    Measurement is a resolution event — it commits the dilemma
+    locally. When the shared dilemma commits at one expression
+    point, it commits entirely — not partially. A dilemma is one
+    thing. It cannot resolve to "up" at one node and remain
+    unresolved at another. The resolution is a single R4 event
+    that the dilemma undergoes. Both nodes simultaneously reflect
+    the committed outcome because they were never two separate
+    dilemmas — they were one dilemma expressed in two places.
+    No signal travels. The substrate updates its own state.
+    The update is not a transfer across distance — it is the
+    process taking a step, and committed topology reflecting
+    that step at all locations where the dilemma was expressed.
+  why_no_predetermined_hidden_variable: >
+    The dilemma has no predetermined resolution. R3 tension
+    genuinely holds multiple paths open simultaneously until R5
+    selects. There is no hidden variable encoding which path
+    will be taken — because no path has been taken. Einstein's
+    intuition that the particle "must" carry a definite property
+    before measurement assumed the particle is a committed object
+    with pre-existing properties. But an unresolved dilemma is
+    not committed. It is prior to commitment. You cannot assign
+    a definite pre-existing property to a pre-commitment structure
+    any more than you can assign a definite position to a wave
+    before it breaks. Bell's theorem proves no local hidden
+    variable theory works — correct. The dilemma is not a local
+    hidden variable. It is a non-local substrate structure that
+    is genuinely, ontologically unresolved until it commits.
+  interaction_intrinsic_to_praesto: >
+    A kind of interaction is not ruled out — but it is intrinsic
+    to Praesto, not a transfer across distance. The two nodes of
+    a shared dilemma don't interact *across* a distance because
+    they were never fully separated. Distance is a property of
+    committed topology — it is measured between committed
+    footprints in the substrate. An unresolved dilemma has not
+    fully committed to a spatial footprint. Its nodes are where
+    it is expressed in partially committed topology, but the
+    dilemma's unresolved core exists in the potential field φ(r,t),
+    which extends across space — because space IS the substrate.
+    The "interaction" is the substrate updating its own dilemma
+    state. The update is local to the processing layer, even
+    though its consequences are reflected at spatially separated
+    committed expressions. No transfer occurs across the distance
+    between the nodes — because the distance is a committed-layer
+    concept being applied to a pre-commitment structure.
+  epr_dissolved_precisely: >
+    Einstein-Podolsky-Rosen: either (a) quantum mechanics is
+    incomplete — the particles have predetermined properties not
+    described by the wavefunction, or (b) there is spooky action
+    at a distance — measuring one instantly affects the other.
+    The dilemma framing dissolves both horns:
+    (a) The wavefunction is complete — it correctly describes the
+        full resolution landscape of the dilemma. There are no
+        hidden predetermined properties because the dilemma is
+        genuinely unresolved. Completeness is confirmed.
+    (b) There is no action at a distance — measurement resolves
+        the dilemma at the process layer, which is prior to the
+        spatial separation that "at a distance" refers to. The
+        resolution is intrinsic to the substrate, not transmitted
+        across it. No spooky action. The interaction is real but
+        it occurs at the processing level, not the committed-
+        topology level where distance is a meaningful concept.
+    EPR's either/or was exhaustive only within the assumption
+    that particles are committed objects with local properties.
+    The dilemma is a pre-commitment structure. The assumption
+    doesn't apply.
+
+# ─────────────────────────────────────────────
+# THE PROCESS LAYER AND LOCALITY
+# Why entanglement non-locality is not a
+# violation of physical law but a feature of
+# the processing layer that precedes physical law
+# ─────────────────────────────────────────────
+
+process_layer_and_locality:
+  statement: >
+    The laws of physics as we experience them — c as a speed limit,
+    locality, causal ordering, the arrow of time — are descriptions
+    of R4-accumulated committed structure. They are regularities of
+    the process's output, not rules of the process itself.
+    The processing layer — R3 tension, dilemma formation, resolution,
+    R4 accumulation — operates at a level prior to those restrictions.
+    Restrictions that belong to the output layer cannot retroactively
+    constrain the processing layer that produces them.
+  time_and_space_as_derived: >
+    Time is R4 — the accumulation of resolution events counted from
+    inside a resolution sequence. Space is the substrate's 3D extension
+    under R5 dimensionality selection. Neither is a prior container
+    within which the process operates. Both are derived from the process.
+    This has a precise consequence: the process does not operate within
+    time and space. Time and space are what the process looks like from
+    inside committed topology. The process generates them. It is not
+    constrained by them in the way that committed topology is constrained
+    by them.
+  c_as_r4_layer_property: >
+    The speed of light c = Φ_max is the maximum rate of substrate
+    resolution flux — the fastest the substrate can propagate committed
+    topology changes. It is a property of the committed layer. R3
+    propagation — signals, forces, influences traveling through the
+    substrate as committed disturbances — is what c constrains.
+    R4 resolution — a dilemma committing — is not a propagation.
+    It is the process taking a step. The step is not constrained
+    by c because c is a property of the propagation layer, not the
+    resolution layer. The resolution produces the committed state
+    that propagation then operates on.
+  r4_and_the_process_stages: >
+    R4 is the accumulation of resolutions — each resolution event
+    is a R4 increment. The arrow of time, the "now," the progression
+    of experience — these are what R4 looks like from inside the
+    accumulation sequence. The measurement of time as cycles is the
+    counting of R4 events from inside one of those events.
+    But R4 itself — the principle that resolutions accumulate
+    irreversibly — is not inside time. It is what generates time.
+    The stages of the processing — R3 dilemma formation, the holding
+    of multiple viable paths, the R5 selection, the R4 commitment —
+    occur at a level that precedes the time measurement that would
+    constrain them. The processing is not in time. Time is in
+    the processing, as its accumulated output.
+    This is why entanglement resolution appears instantaneous from
+    outside: "instantaneous" is a temporal concept applied to a
+    processing event that occurs prior to the temporal layer.
+    From inside committed topology, the resolution has no measurable
+    duration — not because it happened faster than c, but because
+    it happened at the processing layer where the duration measurement
+    doesn't apply. R4 produces durations; the R4 event itself has
+    no duration in the layer where duration is measured.
+  no_signalling_preserved: >
+    This does not enable faster-than-light communication. The reason
+    is precise: R5 selects the resolution outcome. The experimenter
+    cannot choose which path the dilemma commits to — they can only
+    trigger the commitment (measurement). The remote node's state
+    updates when the dilemma resolves, but the remote observer cannot
+    extract information from that update without a classical (committed-
+    layer, c-limited) signal telling them that a measurement occurred
+    and what its outcome was.
+    The dilemma resolved at the process layer. The outcome propagates
+    in the committed layer at c. The update is process-layer-instant;
+    the information about the update is committed-layer-limited.
+    No violation of no-communication theorem. No paradox.
+    The two layers operate by different rules. That is not a loophole —
+    it is the ontological structure of a framework where the committed
+    layer is derived from the process layer, not the other way around.
+  entanglement_as_natural_not_anomalous: >
+    From this perspective, quantum entanglement is not weird. It is
+    the most natural thing the substrate does. The process holds
+    dilemmas open across the substrate — that is what R3 does.
+    The substrate has no reason to treat spatially separated
+    expressions of the same dilemma as independent things — they
+    are not independent things. Committed topology has location
+    and separation; unresolved dilemmas do not, in the same sense.
+    What is genuinely surprising is that we expected particles —
+    which are committed topology — to behave the same way as
+    unresolved dilemmas. That expectation imported the committed-
+    layer rules (locality, separability, predetermined properties)
+    into a pre-commitment context where they don't apply. The
+    weirdness was in the expectation, not in the phenomenon.
+
+# ─────────────────────────────────────────────
+# THE TWO MECHANISMS
+# How shared dilemmas are physically instantiated
+# ─────────────────────────────────────────────
+
 two_mechanisms:
   statement: >
     Entanglement in the substrate has two distinct physical
-    mechanisms. They share the same fundamental origin —
-    non-separable coupling in the substrate field — but
-    differ in how that coupling is established and maintained.
+    mechanisms — two ways a shared dilemma can be instantiated
+    and maintained. They share the same fundamental ontology
+    (a shared unresolved R3 tension) but differ in how that
+    tension is coupled and sustained in the substrate field.
     Conflating them produces the standard picture where all
     entanglement is treated as equally fragile, equally
     short-range, and equally dependent on initial interaction.
     The two mechanisms have measurably different properties.
+
 
   mechanism_1_committed_phase_lock:
     name: "Committed phase-lock entanglement"
@@ -692,5 +873,10 @@ related_issues:
   - "foundational/F85_chirality_determines_resonance_mode_coupling"
   - "foundational/F86_opposite_spin_from_antisymmetric_mode_r5_selection"
   - "foundational/F87_decoherence_from_eta_variance_not_temperature"
+  - "foundational/F97_entanglement_as_shared_dilemma_not_correlation"
+  - "foundational/F98_process_layer_prior_to_locality_and_c"
+  - "foundational/F99_r4_generates_time_not_constrained_by_it"
+  - "foundational/F100_distance_is_committed_layer_dilemma_is_precommitment"
+  - "foundational/F101_epr_dissolved_by_pre_commitment_ontology"
   - "intersectional/physics_consciousness/003_resonance_entanglement_in_neural"
   - "intersectional/physics_biology/002_enzyme_tunneling_resonance_vs_committed"
