@@ -1,0 +1,824 @@
+# domains/physics/commitment-response-function.yaml
+name: "Commitment Response Function"
+version: "2.1 — Dissolution as Renewal; Full R(Ψ) with Forward and Reverse Kernels"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Defined — dissolution kernel added; f(topological_protection) derivation open;
+         ε and τ_diss calibration open"
+updated: "2026-03-20"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Defined — formal GP parameter derivation open"
+description: >
+  This file formalises the functional form of the substrate's
+  commitment density response — how the substrate commits to
+  topological configurations as a function of available potential,
+  and how that response varies across all physical regimes from
+  quantum vacuum to event horizon.
+  Version 2.0 replaces the Michaelis-Menten (absolute saturation)
+  description with the Gross-Pitaevskii (density-dependent,
+  environment-relative) nonlinear response. Key changes:
+  (1) Saturation is relative to local environment — denser regions
+      support stronger structure and higher effective commitment
+      levels. No absolute ceiling.
+  (2) The circular phase is never perfect — finite substrate
+      resistance R ensures every winding has residual closure
+      imperfection. This imperfection is the source of α,
+      spontaneous emission, and the arrow of time.
+  (3) Phase angle is relative to local GP equilibrium, not
+      absolute zero — what counts as saturated depends on
+      the environmental commitment density.
+  (4) Hawking-type radiation from saturated regions is dominated
+      by interior GP structural pressure leaking through finite-R
+      boundary — not exterior Tik influx. Saturated substrate
+      retains finite R; enormous interior stress finds tiny
+      radiative release through the boundary.
+  Black hole interior topology is treated separately
+  (domains/physics/black-holes.yaml — forthcoming).
+
+terminology_warning: >
+  CRITICAL DISTINCTION maintained throughout this file:
+  Tik fluctuation / Tik event / substrate noise:
+    Transient, stochastic, substrate-level disturbances at
+    scale ξ. No persistent identity. No winding number. No spin.
+    The substrate's inherent granularity — medium noise.
+  Topological vortex / stable winding / particle:
+    Persistent, topologically protected winding configurations.
+    Persistent identity, winding number, spin, charge, mass.
+  Spin is a property of vortex winding geometry NOT of Tik
+  fluctuations. Möbius 720° topology forces spin-½ by
+  geometric necessity, independent of Tik.
+  GP nonlinearity: density-dependent self-interaction of the
+  commitment field — distinct from both Tik fluctuations
+  and individual vortex topology.
+
+# ─────────────────────────────────────────────
+# PART 1: CIRCULAR PHASE TOPOLOGY — IMPERFECT
+# ─────────────────────────────────────────────
+circular_phase_topology:
+  statement: >
+    The substrate phase runs circularly — representing local
+    orientation of the resolution direction. Bosonic topologies
+    require 360° for phase return; fermionic (Möbius) require
+    720°. The circle is never geometrically perfect — finite
+    substrate resistance R ensures every winding has residual
+    closure imperfection after each cycle.
+    The phase angle is not absolute. It is measured relative
+    to the local GP equilibrium state — the environmental
+    commitment density norm. The physically meaningful quantity
+    is always phase distance from local equilibrium, not
+    phase distance from absolute zero.
+
+  imperfect_closure:
+    statement: >
+      Perfect phase closure in the GP field would require
+      zero substrate resistance — a true frictionless
+      superfluid. Finite R produces a residual phase
+      mismatch δφ in the GP order parameter field after
+      each complete winding cycle around a vortex.
+      IMPORTANT PRECISION: The closure imperfection affects
+      the GP field dynamics — not the vortex topology itself.
+      The Möbius winding number is an exact integer,
+      topologically protected. The 720° geometry is exact
+      regardless of substrate R. What finite R introduces
+      is a small residual in the field coupling per rotation
+      cycle — the GP nonlinear term accumulates a phase
+      correction in the order parameter field surrounding
+      the vortex, not in the vortex's topological structure.
+      The topology is exact; the GP field around it is imperfect.
+    field_vs_topology: >
+      Vortex topology:        exact integer winding — protected
+      GP field around vortex: accumulates phase correction
+                              each cycle from finite-R coupling
+      α:                      measures the GP field imperfection
+                              rate per rotation — not a property
+                              of the vortex winding geometry
+      This distinction matters: vortex spin (720° Möbius) is
+      exact and permanent; the GP field correction (α) is
+      a field-level phenomenon that varies with environment.
+    consequences:
+      alpha_as_gp_field_imperfection: >
+        α ≈ 1/137.036 is the fractional phase correction
+        accumulated in the GP order parameter field per
+        360° rotation around the Möbius vortex, in the
+        current substrate state (current p_env, current μ_local).
+        δφ_field per rotation ≈ 2.627°
+        Not a universal geometric constant — it is the
+        GP field coupling imperfection at current cosmic
+        substrate density. In denser environments (higher R),
+        α_local is larger. Running coupling in QED reflects
+        this: at high energy density, local R increases,
+        GP field less perfectly coupled, α_effective increases.
+      spontaneous_emission: >
+        The GP field around a vortex continuously accumulates
+        phase correction — each cycle adds δφ_field. When
+        accumulated field correction exceeds the threshold
+        for a trail reconfiguration event (S_lock crossing),
+        a photon is emitted. Spontaneous emission is the
+        GP field shedding accumulated phase correction.
+        Einstein A coefficient scales as ω³α³ — three
+        powers of the field imperfection rate per cycle.
+        The vortex topology is unchanged by the emission;
+        the GP field is corrected.
+      arrow_of_time: >
+        Each GP field phase correction is an irreversible
+        R4 accumulation event — field-level, not topological.
+        The arrow of time at the quantum scale is the
+        accumulation of GP field corrections. Finite R
+        makes time irreversible at the field level, not
+        just statistically. The second law follows from
+        finite GP field imperfection rate, not from
+        initial conditions or topology alone.
+      potential_limes_zero: >
+        The saturating nonlinearity ensures the GP potential
+        has a limit as |ψ|² → n_sat: dV/d(|ψ|²) → 0.
+        This means the field correction rate also saturates —
+        at maximum commitment density, the GP field is no
+        longer accumulating corrections because the potential
+        is flat. Infinities are not reached; the field
+        corrections have a finite maximum rate set by n_sat.
+
+  relative_phase_angle:
+    statement: >
+      The phase angle θ is meaningful only relative to
+      the local GP equilibrium θ_eq(r) — the commitment
+      density the local environment naturally sustains.
+      The relevant quantity is Δθ = θ - θ_eq(r): deviation
+      from local equilibrium.
+    implications:
+      environment_dependent_saturation: >
+        Saturated means θ >> θ_eq(r) — far above local
+        equilibrium, not above some absolute ceiling.
+        Void (low θ_eq): modest absolute commitment already
+        registers as saturated — MOND effects appear at
+        low absolute accelerations.
+        Dense cluster (high θ_eq): much higher absolute
+        commitment needed before nonlinear effects appear —
+        MOND onset shifted upward in cluster environments.
+      environment_dependent_horizon: >
+        The event horizon condition is where local GP
+        pressure prevents outward propagation relative to
+        the environmental baseline — not where commitment
+        crosses an absolute threshold. A black hole in a
+        dense cluster has a horizon condition relative to
+        the cluster's θ_eq — effective Schwarzschild radius
+        differs slightly from the vacuum calculation.
+      alpha_environment_dependence: >
+        α_local = δφ(R_local) — closure imperfection depends
+        on local substrate resistance, which depends on
+        local commitment density relative to environmental
+        baseline. Sub-ppm variation between terrestrial
+        and satellite measurements of α is predicted.
+        Currently beyond experimental precision but within
+        reach of next-generation atomic clock comparisons.
+
+  two_uncertainty_regions:
+    near_zero:
+      angle: "0°/360° phase wrap"
+      character: >
+        Phase cannot resolve zero from 2π — geometric
+        adjacency of minimum and maximum. Tik floor is
+        the leakage of this boundary: commitment
+        fluctuates stochastically near zero.
+      physical_consequences: >
+        Zero-point energy (ħ), Casimir effect, vacuum
+        polarisation, spontaneous pair production.
+      dominant_mechanism: >
+        Exterior Tik fluctuations dominate near zero
+        boundary — interior commitment is low, internal
+        GP pressure small. Tik influx from the substrate
+        is the primary mechanism.
+    near_saturation:
+      angle: "~180° from local equilibrium"
+      character: >
+        Phase approaches local saturation asymptotically.
+        Finite R means boundary has finite resistance —
+        enormous internal GP structural pressure
+        (high g·|θ|²) produces tiny but nonzero radiative
+        leakage outward through finite-R boundary.
+      physical_consequences: >
+        Hawking-type radiation, compact object surface
+        emission, magnetar high-energy photons.
+      dominant_mechanism: >
+        Interior GP structural pressure dominates —
+        commitment density high, g·|θ|² enormous,
+        internal stress large. Leakage is the interior
+        pressing outward through finite resistance.
+        Radiation carries information about interior
+        commitment topology — consistent with information
+        preservation.
+      hawking_mechanism: >
+        Large black holes (high interior GP pressure,
+        low exterior Tik relative to gradient): Option B
+        (structural pressure leakage) dominates.
+        Primordial micro black holes (interior pressure
+        comparable to exterior Tik): both contribute.
+        Standard T_H ∝ 1/M is leading Option B term;
+        Option A (Tik influx) provides correction
+        significant only at very small M.
+        Crossover mass: where interior GP pressure density
+        equals exterior Tik background energy density
+        at horizon — open derivation.
+
+  mobius_crossover_heisenberg:
+    two_contributions:
+      structural_topology: >
+        Möbius crossover: geometric indeterminacy —
+        both face orientations and twist direction
+        undefined at crossing point. Present at T=0.
+        Not from Tik fluctuations. Structural minimum.
+      closure_imperfection: >
+        Finite R means δφ ≠ 0 — crossover point shifts
+        slightly each cycle. Accumulated imperfection
+        adds to structural indeterminacy. In zero-R
+        substrate only structural term remains.
+      tik_amplification: >
+        Tik fluctuations at scale ξ set the observable
+        minimum: ΔxΔp_min = ħ/2. At T>0 thermal Tik
+        adds above this floor.
+    spin_protection: >
+      Tik fluctuations cannot continuously change spin —
+      only trigger discrete topological reorganisations
+      at S_lock threshold crossings. Spin is topologically
+      protected against continuous Tik perturbation.
+
+# ─────────────────────────────────────────────
+# PART 2: GROSS-PITAEVSKII RESPONSE FUNCTION
+# ─────────────────────────────────────────────
+gross_pitaevskii_response:
+  statement: >
+    The substrate commitment density field θ(r,t) obeys
+    a GP-type nonlinear equation where self-interaction
+    strength scales with local density. Saturation is not
+    a fixed ceiling but a local dynamic equilibrium —
+    denser regions support stronger structure and higher
+    effective commitment levels.
+  why_gp_not_mm: >
+    MM assumes fixed V_max independent of environment —
+    absolute saturation. Wrong for the substrate: nuclear
+    matter sustains higher commitment than atomic matter;
+    cluster environments sustain higher density than voids.
+    GP self-interaction term g·|θ|² makes the effective
+    ceiling environment-dependent — it moves with the
+    local substrate state.
+
+  saturating_nonlinearity:
+    statement: >
+      The substrate self-interaction uses a saturating
+      nonlinear potential rather than the pure g|ψ|²
+      of standard GP. The saturating form prevents
+      infinite compression and ensures the potential
+      has a finite limit as commitment density approaches
+      the saturation parameter n_sat:
+    formula: >
+      V(|ψ|) = g·|ψ|² / (1 + |ψ|²/n_sat)
+    key_property: >
+      dV/d(|ψ|²) → 0 as |ψ|² → n_sat
+      The nonlinear potential becomes flat at saturation —
+      no infinite compression possible. The substrate
+      always retains finite compressibility above n_sat;
+      it approaches the saturation limit asymptotically.
+      Potential has a limes of zero in the gradient sense:
+      additional commitment becomes infinitely costly but
+      never strictly impossible — no hard wall, no singularity.
+    full_gp_equation: >
+      iħ ∂θ/∂t = [-ħ²/(2m_eff)·∇²
+                   + V_ext(r)
+                   + g·|θ|²/(1 + |θ|²/n_sat)
+                   - μ_local] θ
+    terms:
+      kinetic: >
+        -ħ²/(2m_eff)·∇²θ — quantum pressure resisting
+        commitment gradients at scale ξ. Topological
+        rigidity of the substrate. Prevents commitment
+        concentrating below grain scale.
+      external_potential: >
+        V_ext(r) — commitment from surrounding topology
+        and background p_env. Determines local θ_eq(r).
+      saturating_nonlinearity: >
+        g·|θ|²/(1 + |θ|²/n_sat)
+        Low density (|θ|² << n_sat): → g·|θ|² (standard GP)
+        High density (|θ|² → n_sat): → g·n_sat (constant)
+        The transition between these regimes is the MOND
+        knee and the event horizon approach — the same
+        saturation curve spanning all regimes.
+      chemical_potential: >
+        μ_local — local equilibrium commitment level
+        set by environmental baseline p_env.
+        All deviations (Δθ) measured relative to μ_local.
+    n_sat_parameter: >
+      n_sat is the saturation density — the characteristic
+      commitment level above which the nonlinear potential
+      flattens. Environment-dependent: n_sat(r) varies
+      with local p_env. In dense environments, n_sat is
+      higher — more commitment is possible before
+      saturation behaviour sets in. This is why denser
+      environments support stronger structure.
+      Physical identity: n_sat encodes the maximum stable
+      phase-lock configuration density per substrate grain
+      volume ξ³ — the topological capacity of the local
+      substrate. Open derivation: n_sat from substrate
+      grain topology classification density.
+    open_questions_from_proposal: >
+      Exact form of saturation function — the V = g|ψ|²/(1+|ψ|²/n_sat)
+      form is the simplest saturating nonlinearity. Other
+      candidates (tanh saturation, log saturation) are
+      possible. The correct form is determined by the
+      substrate's topological capacity function —
+      open derivation requiring the vortex stability
+      equations to specify how many stable configurations
+      fit per ξ³ at density |ψ|².
+      Matching to cosmological constant/acceleration:
+      n_sat at cosmic average density should reproduce
+      the observed dark energy scale — open.
+      UV completion at Planck scale: n_sat → n_max at
+      ξ_min — the Planck-scale behaviour of the
+      saturation function is the UV completion question.
+
+  healing_length_density_dependent: >
+    ξ(r) = ħ/√(2m_eff · g · |θ(r)|²/(1 + |θ(r)|²/n_sat))
+    Density-dependent — smaller in denser regions,
+    approaching minimum at commitment density → n_sat.
+    Planck length is the GP healing length at the
+    saturation density limit — dynamically determined
+    minimum grain size.
+
+  regime_structure:
+    newtonian:
+      condition: "g·|θ|² << V_ext"
+      physics: "Linear response, κ ≈ G/c², Newton's law"
+      phenomena: "Solar system, laboratory, Cavendish"
+    mond_transition:
+      condition: "g·|θ|² ~ V_ext"
+      physics: >
+        GP nonlinearity onset. κ_eff decreases below
+        Newtonian. Galaxy rotation curves flatten.
+        MOND threshold a₀ is K_eff = g·|θ_eq|² —
+        environment-dependent, not universal constant.
+      phenomena: >
+        Isolated galaxies: low local θ_eq, MOND onset
+        at low a₀. Dense clusters: high local θ_eq,
+        MOND onset shifted upward. Explains why MOND
+        fits isolated galaxies better than clusters.
+    strong_nonlinear:
+      condition: "g·|θ|² >> V_ext"
+      physics: >
+        Self-reinforcing densification. Stabilises at
+        local GP equilibrium (neutron star, white dwarf)
+        or continues to near-saturation if GP kinetic
+        pressure cannot balance inward gradient.
+      tov_connection: >
+        TOV limit: where ħ²/(2m_eff)∇²θ can no longer
+        balance inward commitment gradient. GP kinetic
+        pressure is what neutron stars stand on.
+    near_saturation:
+      condition: "|θ|²/n_sat → 1 (commitment approaching saturation density)"
+      physics: >
+        dV/d(|ψ|²) → 0 — nonlinear potential flattening.
+        Enormous internal stress from committed topology
+        pressing against the increasingly flat potential.
+        The saturating form means no infinite compression:
+        the field asymptotically approaches n_sat but the
+        potential cost of each additional commitment unit
+        approaches zero — the boundary retains finite
+        permeability. GP structural pressure produces
+        radiative leakage through finite-R boundary:
+        P_leak ∝ [g·n_sat · (|θ|²/n_sat)] / R_boundary
+        T_H ∝ 1/M from gradient steepness — larger M
+        means larger horizon area (more R_boundary)
+        relative to interior stress scale.
+      no_true_saturation: >
+        The saturating nonlinearity has no hard ceiling —
+        n_sat is the density where the potential gradient
+        approaches zero, not where commitment stops.
+        Potential has limes of zero in gradient sense:
+        infinitely expensive to compress further but
+        never strictly forbidden. This is the physical
+        reason singularities do not form: the commitment
+        field cannot be compressed to a point because
+        the saturating potential prevents infinite density,
+        not because of a separate topological argument.
+        Topology provides the vortex structure; the
+        saturating GP provides the no-singularity guarantee.
+
+  regime_unified_table:
+    - {regime: "Quantum vacuum",   condition: "θ → θ₀",      gp: "θ₀ = GP minimum", physics: "ħ, Casimir, QM"}
+    - {regime: "Atomic scale",     condition: "Δθ small",     gp: "linear",          physics: "α, R∞, ħ spectra"}
+    - {regime: "Newtonian",        condition: "g|θ|²<<V_ext", gp: "linear",          physics: "Solar system, G"}
+    - {regime: "MOND transition",  condition: "g|θ|²~V_ext",  gp: "onset nonlinear", physics: "Galaxy rotation"}
+    - {regime: "Strong gravity",   condition: "g|θ|²>>V_ext", gp: "dominant",        physics: "Neutron stars, GR"}
+    - {regime: "Near saturation",  condition: "θ>>θ_eq",      gp: "asymptotic",      physics: "Black holes, Hawking"}
+
+
+# ─────────────────────────────────────────────
+# PART 2b: BLACK HOLE SATURATION
+# Dynamic stress-maintained membrane — not a
+# rigid geometric boundary.
+# ─────────────────────────────────────────────
+black_hole_saturation:
+  title: "Black Holes as Saturation Regions in Praestology"
+  description: >
+    Black holes emerge as regions of extreme local saturation
+    in the GP substrate field. The event horizon is not a
+    rigid geometric boundary but the iso-contour where the
+    commitment density gradient becomes steep enough to trap
+    all outward resolution paths. The gradient is always
+    finite; the horizon is permeable in principle.
+  core_principle: >
+    The event horizon is a dynamic stress-maintained membrane.
+    Permeability varies with relative saturation degree —
+    never zero, never infinite. The saturating nonlinearity
+    V = g|ψ|²/(1 + |ψ|²/n_sat) ensures no absolute barrier
+    forms — the potential flattens but never becomes vertical.
+
+  key_mechanisms:
+    relative_saturation: >
+      Saturation is a degree on the circular commitment
+      spectrum — never absolute. The gradient is always
+      finite; the horizon is permeable in principle.
+      What makes the horizon effective for classical signals
+      is not absolute impermeability but gradient steepness:
+      the commitment density falls so steeply outward that
+      no classical resolution path has sufficient free
+      potential to propagate against it.
+    internal_stress: >
+      The saturated core is under constant tension —
+      attempting maximal density but blocked by the
+      saturating potential's flattening. This stress
+      maintains the steep outward gradient: the horizon
+      is held up by pressure from the inside, not by
+      a geometric property of spacetime. Remove the
+      interior stress (e.g., by mass extraction) and
+      the horizon shrinks — consistent with Hawking
+      evaporation as stress relief.
+    low_mass_infall: >
+      Low-mass objects contribute negligible change to
+      local saturation density. They encounter a near-
+      fixed, steep commitment gradient — the horizon
+      feels like a concrete wall. The object is pushed
+      inward by substrate flow (rear-end effect from
+      the commitment density gradient) and usually
+      tidally disrupted before crossing the effective
+      horizon. The gradient's steepness does the work;
+      no hard boundary is needed.
+    high_mass_infall_and_mergers: >
+      Incoming high-mass object or comparable-mass black
+      hole overlaps commitment gradients significantly.
+      In the overlap region: combined |ψ|²/n_sat drops
+      below the individual values — the combined field
+      is less saturated than either alone because the
+      opposing gradients partially cancel. This shallows
+      the local gradient → temporary permeability window
+      opens → merger becomes possible. Black hole merger
+      is not two solid objects colliding — it is two
+      saturation regions interpenetrating through a
+      transient permeability window opened by gradient
+      cancellation. LIGO ringdown waveform is the GP
+      field relaxing to the new n_sat configuration.
+    flares_and_leakage: >
+      When core saturation fluctuates (accretion events,
+      vortex rearrangements in the GP field), local
+      commitment density temporarily changes → gradient
+      temporarily shallows → micro-permeability windows
+      open → bursts of radiation/particles escape.
+      Observed as X-ray/gamma flares, jets, QPOs in AGN
+      and Sgr A*. The flare frequency and energy spectrum
+      encode the GP field's internal rearrangement dynamics.
+    hawking_like_radiation: >
+      Tiny persistent leaks from imperfect saturation —
+      internal stress relief through the finite-R boundary.
+      Thermal spectrum with temperature set by gradient
+      steepness: T_H ∝ gradient at horizon ∝ 1/M.
+      No virtual pair crossing or absolute negative
+      energy required — the radiation is GP structural
+      pressure finding release through the saturating
+      potential's finite permeability.
+      As noted: saturated substrate still has finite R;
+      enormous stress from the interior finds the path
+      of least resistance through the boundary. The
+      radiation carries information about the interior
+      GP field topology — information is preserved in
+      the phase structure of outgoing radiation.
+
+  observational_alignment:
+    dense_environments: >
+      Supermassive black holes in dense cluster environments:
+      higher background n_sat(r) (environment raises local
+      saturation capacity) → easier formation and growth →
+      consistent with observed AGN clustering in dense regions.
+    void_environments: >
+      Stellar-mass black holes in voids: lower background
+      n_sat → require more mass to reach critical gradient
+      steepness → consistent with mass gap observations.
+    agn_flares: >
+      Frequent X-ray/gamma flares in AGN and Sgr A*:
+      periodic shallowing of commitment gradient from
+      GP field internal dynamics. QPO frequencies
+      encode GP field oscillation modes — derivable
+      from the saturating nonlinearity's characteristic
+      frequencies around n_sat.
+    merger_waveforms: >
+      LIGO/Virgo/KAGRA gravitational wave chirp and
+      ringdown: smooth horizon relaxation during
+      coalescence consistent with GP field approaching
+      new saturation equilibrium. No sharp discontinuity
+      at merger — gradient cancellation produces smooth
+      permeability transition. Ringdown quasi-normal
+      modes are GP field oscillation modes around the
+      post-merger saturation configuration.
+    mass_gap: >
+      The 2-5 solar mass gap between neutron stars and
+      stellar black holes may reflect the commitment
+      density range where the GP field is transitional —
+      too dense for neutron star GP equilibrium, not
+      yet dense enough for stable horizon gradient.
+      The gap is the n_sat transition region for nuclear
+      matter topology in the current cosmic p_env.
+
+  black_hole_size_scaling: >
+    Under the saturating GP picture, black hole size
+    scales with environmental n_sat(r) as well as mass.
+    In dense environments (high n_sat): smaller effective
+    Schwarzschild radius for the same mass — the steeper
+    gradient condition requires less spatial extent.
+    In void environments (low n_sat): larger effective
+    radius for the same mass.
+    This produces a subtle mass-environment correlation
+    in black hole size statistics — testable with
+    sufficiently precise event horizon imaging across
+    different environments.
+
+# ─────────────────────────────────────────────
+# PART 3: CONSTANT REFINEMENTS
+# ─────────────────────────────────────────────
+constant_refinements:
+  alpha: >
+    α is closure imperfection per rotation at current
+    cosmic μ_local — not strictly universal. α_local(r)
+    varies with local R, which varies with local θ_eq(r).
+    The measured 1/137.036 is the vacuum value at cosmic
+    average μ_local. Sub-ppm spatial variation predicted.
+  G: >
+    G = c²·(ξ²/p_env)·(κ·α) is the linear-regime (Newtonian)
+    limit of the GP response. In MOND regime: G_eff deviates
+    via GP nonlinearity. G is not universal — it is the
+    linear-limit GP response at cosmic average μ_local.
+  hbar: >
+    ħ = minimum closure action = minimum GP field excitation
+    at vacuum density θ₀. Related to GP healing length:
+    ħ ∝ √(2m_eff · g · |θ₀|²) · ξ_vacuum.
+    Consistent with earlier derivation; GP mechanism identified.
+
+# ─────────────────────────────────────────────
+# PART 4: DARK SECTOR AND COSMOLOGY
+# ─────────────────────────────────────────────
+dark_sector:
+  dark_energy: >
+    Global Tik background pressure from 0°/360° phase wrap
+    — substrate zero-point GP pressure acting as isotropic
+    repulsive term at cosmological scale. Varies with μ_local
+    across cosmic environments — not constant Λ but GP field
+    property. Void/filament μ_local differential → varying
+    effective dark energy density → Hubble tension candidate.
+  dark_matter: >
+    GP nonlinearity in MOND transition regime mimics additional
+    mass — rotation curves flatten from GP response, not from
+    dark matter halos. Environment-dependent threshold explains
+    why dark matter inference varies with environment:
+    it tracks local GP nonlinearity (μ_local variation),
+    not a particle species.
+  hubble_tension: >
+    Void observers (low μ_local) measure H₀ from local
+    distance ladder with local α_local and G_local slightly
+    different from the cosmic average used in CMB calculations.
+    Hubble tension is a μ_local gradient effect — same GP
+    field measured from different environmental baselines
+    gives systematically different H₀ values.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+open_derivations:
+  priority_1:
+    - >
+      g and n_sat from QHD substrate wave equation nonlinear
+      term. Verify G ∝ g·c²·ξ²/p_env in linear regime.
+      Determine exact form of saturation function.
+    - >
+      n_sat from topological capacity per grain volume ξ³ —
+      how many stable winding configurations fit in one
+      substrate grain. This sets the maximum commitment
+      density and determines the no-singularity guarantee.
+    - >
+      K_eff = g·|θ_eq|²/(1 + |θ_eq|²/n_sat) as MOND
+      threshold. Verify K_eff ≈ a₀ at cosmic average
+      μ_local. Predict environment-dependent shift.
+  priority_2:
+    - >
+      Hawking crossover mass: where interior GP pressure equals
+      exterior Tik amplitude at horizon. T_H deviation from
+      1/M at very small M.
+    - >
+      α_local variation prediction — sub-ppm between
+      terrestrial and space atomic clock measurements.
+    - >
+      ξ(r) minimum = Planck length at maximum θ —
+      formal derivation that GP healing length floor
+      equals Planck scale at black hole interior density.
+  priority_3:
+    - >
+      Proton lifetime from closure imperfection accumulation
+      rate for proton topology.
+    - >
+      Dark energy density from global GP zero-point pressure —
+      derive Λ_effective from θ₀ and μ_cosmic.
+    - >
+      Hubble tension quantitative prediction from μ_local
+      gradient between void and filament observers.
+
+reading_order:
+  - "domains/physics/foundations.yaml                      -- pillars 1-6"
+  - "domains/physics/quantum-foundation.yaml               -- QM primitives"
+  - "domains/physics/specifications.yaml                   -- vortex topology"
+  - "domains/physics/commitment-response-function.yaml     -- this file"
+  - "domains/physics/alpha-rydberg-z0.yaml                 -- constant derivations"
+  - "domains/physics/black-holes.yaml                      -- interior topology (forthcoming)"
+  - "domains/cosmos/specifications.yaml                    -- cosmological application"
+
+related_issues:
+  - "foundational/F19_circular_phase_imperfect_closure"
+  - "foundational/F20_gp_response_replaces_mm"
+  - "foundational/F21_hawking_gp_pressure_dominant_mechanism"
+  - "foundational/F22_alpha_as_closure_imperfection_environment_dependent"
+  - "foundational/F23_arrow_of_time_from_closure_imperfection_accumulation"
+  - "intersectional/physics/033_g_self_coupling_from_qhd_nonlinear"
+  - "intersectional/physics/034_mond_threshold_environment_dependent_gp"
+  - "intersectional/physics/035_hawking_crossover_mass_gp_vs_tik"
+  - "intersectional/physics/036_alpha_local_variation_atomic_clock_test"
+  - "intersectional/physics/037_xi_density_dependent_planck_floor"
+  - "intersectional/physics/038_proton_lifetime_closure_imperfection"
+  - "intersectional/physics_cosmos/008_dark_energy_gp_zero_point_pressure"
+  - "intersectional/physics_cosmos/009_dark_matter_gp_nonlinearity_mond"
+  - "intersectional/physics_cosmos/010_hubble_tension_mu_local_gradient"
+  - "foundational/F24_saturating_nonlinearity_no_singularity_guarantee"
+  - "foundational/F25_gp_field_imperfection_vs_vortex_topology_exact"
+  - "intersectional/physics/039_n_sat_from_topological_capacity_per_grain"
+  - "intersectional/physics/040_mass_gap_as_n_sat_transition_region"
+  - "intersectional/physics/041_qpo_frequencies_from_gp_oscillation_modes"
+  - "intersectional/physics/042_merger_waveform_gp_saturation_relaxation"
+  - "intersectional/physics_cosmos/011_black_hole_size_environment_correlation"
+# ─────────────────────────────────────────────
+# DISSOLUTION AS RENEWAL
+# The reverse kernel — R5 sustainability requires
+# controlled un-committing alongside commitment
+# ─────────────────────────────────────────────
+
+dissolution_as_renewal:
+  name: "Dissolution as Renewal — Controlled Un-committing Kernel"
+  version: "0.1 — Proposed extension; maintains core invariance"
+  status: "Proposed — physical manifestations identified; numerical calibration open"
+  ontological_justification: >
+    R5 demands perpetual sustainability: perfect irreversibility
+    would eventually exhaust all free potential — φ → 0 everywhere
+    — producing total stasis and R3 failure. The metastable zone
+    between noise and void requires both commitment (R_forward)
+    and controlled release (R_diss). Dissolution is not loss —
+    it is the breathing cycle of the engine. History becoming
+    fuzzy over time is the renewal mechanism that turns yesterday's
+    resolved dilemmas into tomorrow's raw material for new resolution.
+    This closes a logical gap: R4 accumulates irreversibly, but
+    R5 requires the process to continue indefinitely. The dissolution
+    kernel is the mechanism that makes R4 accumulation sustainable
+    under R5 — not by reversing R4 globally (which would violate
+    it) but by slowly returning weakly protected committed topology
+    to the free potential reservoir, making room for new R4 accumulation.
+
+  full_r_psi:
+    statement: "R(Ψ) = R_forward(Ψ) + R_diss(Ψ)"
+    r_forward:
+      formula: "R_forward(Ψ) = g|Ψ|² / (1 + |Ψ|²/n_sat)"
+      description: >
+        Saturating commitment valve — locks potential into committed
+        structure. Fast timescale (quantum/nuclear). Produces particle
+        stability, mass, confinement. Hermitian. Already in v2.0.
+    r_diss:
+      formula: "R_diss(Ψ) = −ε|Ψ|² / (1 + τ_diss|Ψ|²) · f(topological_protection)"
+      description: >
+        Dissolution kernel — slowly returns weakly protected committed
+        topology to the Praegress reservoir. Slow timescale (decay,
+        biological, cosmological). Non-Hermitian contribution —
+        introduces imaginary component producing probability decay.
+    parameters:
+      epsilon: >
+        ε — base dissolution rate. Must satisfy:
+        ε << 1/(proton lifetime) ≈ 10⁻³⁴ yr⁻¹.
+        Calibrated from radioactive decay rates and cosmological
+        renewal timescales (~10-100 Gyr).
+      tau_diss: >
+        τ_diss — topological fatigue timescale. Prevents runaway
+        dissolution at extreme commitment density (black hole cores).
+        At |Ψ|² >> 1/τ_diss: R_diss saturates to −ε/τ_diss · f.
+      f_topological_protection: >
+        f(topological_protection) — topology-dependent modulation.
+        f ≈ 0: strongly wound (proton, electron) — effectively stable.
+        f ≈ 1: weakly wound (unstable isotopes, molecular patterns,
+          large-scale structure) — full dissolution rate applies.
+        Candidate form: f ≈ exp(−n_winding · R_eff / R_threshold)
+        where R_eff = R₀/η. In voids (η high, R_eff low): f increases
+        for weakly protected topology — void dissolution enhancement.
+        In dense environments (η low, R_eff high): f decreases —
+        binding suppresses dissolution.
+
+  physical_manifestations:
+    radioactive_decay: >
+      Topological charge leakage at rate ε_eff = ε · f(topology).
+      Half-life = ln(2)/ε_eff. The full spectrum of nuclear half-lives
+      — from milliseconds to billions of years — maps to the range
+      of f values across nuclear winding topologies. Not fitted:
+      f is derivable from vortex-stabilization.yaml winding numbers.
+      Void enhancement: half-lives of unstable nuclei slightly shorter
+      in void environments (lower R_eff → higher f). Potential
+      explanation for contested reports of environment-dependent
+      decay rates (Jenkins et al. and subsequent measurements).
+
+    memory_pruning: >
+      Synaptic engrams (weakly committed neural topology) fade unless
+      reinforced — R_diss acting on biological commitment patterns.
+      Memory consolidation reduces f for specific patterns by
+      increasing their effective topological protection (repeated
+      activation increases local commitment density, raises |Ψ|²,
+      which via τ_diss suppresses the dissolution rate).
+      Forgetting is not failure — it is R_diss maintaining the
+      neural substrate's capacity for new commitment (R5 sustainability
+      at the cognitive scale).
+
+    cosmic_structure_relaxation: >
+      Accumulated large-scale committed structure (filaments, halos,
+      sheets) gradually returns to the Praegress reservoir on Gyr
+      timescales. Released commitment feeds the void-outward substrate
+      pressure identified in cosmological-expansion-critique.yaml.
+      The dark energy-like pressure is partially dynamic — not a
+      constant but varying with the age and commitment density of
+      large-scale structure. Old, weakly protected structure dissolves
+      faster; young, dense structure dissolves slower.
+
+    black_hole_evaporation_analogue: >
+      At extreme commitment density (near n_sat), R_diss saturates
+      to −ε/τ_diss · f. With f → 0 for maximally wound topology
+      but non-zero from finite τ_diss, residual dissolution of the
+      black hole core generates slow internal free potential buildup.
+      This is the internal dissolution mechanism distinct from
+      Hawking radiation. For supermassive black holes where T_H ≈ 0,
+      R_diss may be the dominant long-term evolution mechanism.
+      Black holes are more dynamic than currently thought —
+      not static objects but slowly breathing commitment structures
+      whose interiors evolve on cosmological timescales via R_diss.
+
+  invariance_check: >
+    The dissolution kernel must not violate the established framework:
+    (1) Proton/electron stability: f ≈ 0 for these topologies at
+        all η values. Lifetime > 10³⁴ yr preserved by construction.
+    (2) Sextuple constant convergence: R_diss is non-Hermitian but
+        small (ε << 1). Its perturbative effect on α, R∞, ħ, Z₀,
+        ΔE_L, G must be below measurement precision. Verify: the
+        imaginary part of eigenvalues from R_diss << real part for
+        all stable particle topologies.
+    (3) Thermodynamic consistency: total dissolution rate integrated
+        over the universe must balance Tik nucleation rate — the
+        substrate's overall commitment density evolves toward a
+        steady state (R5), not toward zero or infinity.
+
+  open_numerical_tasks:
+    - >
+      Calibrate ε and τ_diss from observed half-lives (³H: 12.3 yr,
+      ¹⁴C: 5730 yr, ²³⁸U: 4.47 Gyr) while preserving sextuple
+      convergence and proton stability. Three constraints; two
+      parameters — overdetermined, which is a falsification test.
+    - >
+      Derive f(topological_protection) from vortex-stabilization.yaml
+      winding numbers. Predict half-lives for a range of unstable
+      nuclei from f values. Compare to measured half-life spectrum.
+    - >
+      Compute void enhancement factor: Δf/f = (R_threshold − R_eff)/R_threshold
+      for the KBC void η contrast (~20-30% underdensity). Predict
+      the fractional change in decay rates for ¹⁴C in void vs
+      filament environments. Current measurement precision is ~10⁻⁴
+      per year — borderline detectable.
+
+  reading_order:
+    - "commitment-response-function.yaml              -- this file"
+    - "core/core-dynamical-equation.yaml              -- full R(Ψ) in master equation"
+    - "domains/physics/alpha-from-vortex-stability.yaml"
+    - "domains/physics/vortex-stabilization.yaml      -- f derivation basis"
+
+  new_related_issues:
+    - "foundational/F104_r_diss_as_r5_renewal_mechanism"
+    - "foundational/F105_f_topological_protection_from_winding_numbers"
+    - "foundational/F106_non_hermitian_dynamics_as_open_substrate"
+    - "foundational/F108_void_decay_rate_from_eta_dependent_f"
+    - "foundational/F109_black_hole_dynamic_dissolution_r_diss"
+    - "intersectional/physics/128_void_decay_rate_prediction"
+    - "intersectional/physics/129_black_hole_interior_evolution_r_diss"
+    - "intersectional/physics/130_pt_symmetry_and_dissolution_threshold"
+    - "intersectional/physics_cosmos/021_cosmological_renewal_from_r_diss"
+    - "intersectional/physics_biology/003_memory_pruning_as_r_diss_on_engrams"
