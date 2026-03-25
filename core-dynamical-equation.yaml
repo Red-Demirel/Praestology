@@ -1,0 +1,559 @@
+# core/core-dynamical-equation.yaml
+name: "Core Dynamical Equation"
+version: "1.0 — Master Equation; R1-R5 as Single Formalism;
+          Forward Commitment and Dissolution Kernel"
+domain: "Core — applies across all domains"
+core_version: "1.5"
+status: "Formal expression complete — term derivations individually at
+         varying status; full numerical closure pending α derivation;
+         dissolution kernel calibration open"
+updated: "2026-03-20"
+
+description: >
+  The Praestology master dynamical equation is the formal expression
+  of R1-R5 as a single mathematical statement. It describes the time
+  evolution of Ψ(r,t) — the substrate's resolution landscape, the
+  full distribution of open dilemmas weighted by their R5 viability.
+
+  The equation is a vector function on the resolution of probabilistic
+  dilemmas: Ψ encodes which resolution paths exist, with what amplitude,
+  at each point in space and each moment in the process. Its evolution
+  describes how the substrate's dilemma landscape changes — how tension
+  propagates, how commitment accumulates, how dissolution returns
+  committed structure to the Praegress reservoir.
+
+  The equation:
+
+    iħ ∂Ψ/∂t = [ −ħ²/2m · ∇² + V + g|Ψ|² + R(Ψ) + Λln(1 + κ|Ψ|²) ] Ψ
+
+  where:
+
+    R(Ψ) = R_forward(Ψ) + R_diss(Ψ)
+          = g|Ψ|²/(1 + |Ψ|²/n_sat)  +  [−ε|Ψ|²/(1 + τ_diss|Ψ|²)] · f(topological_protection)
+
+  Each term maps to one or more of R1-R5. Together they constitute
+  the complete dynamical description of the substrate process.
+
+  This is the first file in the repository to express all five rules
+  simultaneously as a single equation. All domain files are either
+  limits, approximations, or applications of this equation.
+
+  Relation to existing physics:
+    Linear limit (g,R,Λ → 0): Schrödinger equation
+    Without R_diss, without Λ: standard GP equation
+    Without Λ: GP with saturating nonlinearity (commitment-response-function.yaml)
+    Full equation: Praestology master dynamics
+    Adding R_diss: open quantum system (non-Hermitian) — decay and renewal
+
+dependency_map:
+  requires:
+    - "core/specifications.yaml (Praestology v1.5)    -- R1-R5 rules"
+    - "domains/physics/commitment-response-function.yaml -- R_forward and R_diss derivation"
+    - "domains/physics/bridge-function.yaml            -- η = φ/φ_max; Ψ = η"
+    - "domains/physics/substrate-potential.yaml        -- φ field primary framing"
+    - "domains/physics/alpha-rydberg-z0.yaml           -- Λ connection to α; constant stack"
+  provides_to:
+    - target: "domains/physics/specifications.yaml"
+      via: "Master equation from which all physics domain derivations follow
+            as limits or applications"
+    - target: "domains/physics/quantum-foundation.yaml"
+      via: "Schrödinger equation as linear limit; wavefunction as Ψ confirmed"
+    - target: "domains/physics/vortex-stabilization.yaml"
+      via: "Vortex topology as stationary solutions of the master equation"
+    - target: "domains/physics/alpha-from-vortex-stability.yaml"
+      via: "α from the Möbius stationary solution's self-linking; Λ encodes α"
+    - target: "all domain files"
+      via: "Master equation is the common root from which all domain
+            descriptions derive by taking appropriate limits"
+
+# ─────────────────────────────────────────────
+# THE EQUATION — FULL STATEMENT
+# ─────────────────────────────────────────────
+
+master_equation:
+  latex: >
+    i\hbar \frac{\partial \Psi}{\partial t} =
+    \left[
+      -\frac{\hbar^2}{2m}\nabla^2
+      + V
+      + g|\Psi|^2
+      + R(\Psi)
+      + \Lambda\ln\!\left(1 + \kappa|\Psi|^2\right)
+    \right]\Psi
+
+  field_identity:
+    psi: >
+      Ψ(r,t) is the substrate's resolution landscape — the full
+      distribution of open dilemmas at position r and process-counter
+      t, weighted by their R5 viability amplitude. It is the same
+      object as the quantum wavefunction (quantum-foundation.yaml:
+      ψ = η = φ/φ_max), the GP order parameter, and the normalised
+      potential field amplitude. One object; multiple descriptions
+      at different levels.
+    psi_squared: >
+      |Ψ|² is the commitment density at r,t — the probability that
+      the dilemma at r is currently in a committed state. High |Ψ|²:
+      high commitment density, low free potential, matter-like.
+      Low |Ψ|²: low commitment density, high free potential, vacuum-like.
+      This is C(r,t) = 1 − η(r,t) expressed as the squared modulus
+      of the normalised potential field amplitude.
+
+  r1_r5_mapping:
+    r1_existence:
+      term: "Ψ ≠ 0 — the field exists"
+      statement: >
+        R1 is the boundary condition of the equation: the solution
+        is required to exist. Ψ = 0 everywhere is the trivial
+        solution corresponding to absolute nothing — ruled out by
+        R1. The equation has non-trivial solutions because R1
+        demands something rather than nothing.
+      consequence: >
+        The vacuum state is not Ψ = 0 but Ψ = Ψ_vacuum — the
+        ground state of the equation with non-zero amplitude from
+        the Tik background. True nothing is not a solution.
+
+    r2_structure:
+      term: "−ħ²/2m · ∇²"
+      statement: >
+        R2 (Structure): distinctions exist and are spatially
+        distributed. The Laplacian ∇² encodes the spatial variation
+        of the resolution landscape — how the dilemma distribution
+        differs from point to point. Without ∇², all points would
+        be equivalent (no structure). The kinetic term is the
+        mathematical expression of R2 in a continuous 3D substrate.
+      consequence: >
+        The coefficient ħ²/2m encodes the substrate grain scale ξ
+        and the commitment inertia m_eff. Spatial structure at
+        scales below ξ is suppressed — the substrate has a minimum
+        distinction scale. Above ξ, distinctions propagate freely.
+
+    r3_motion:
+      term: "iħ ∂Ψ/∂t — left side; V — driving potential"
+      statement: >
+        R3 (Motion): distinctions generate tension; tension drives
+        toward resolution. The left side iħ ∂Ψ/∂t is the process
+        evolution — the resolution landscape changing in time.
+        V is the external commitment gradient — the surrounding
+        committed topology (gravity wells, nuclear wells, molecular
+        potentials) that biases which resolutions are accessible.
+        Together they express: R3 tension produces motion; the
+        direction of motion is shaped by the existing committed
+        structure V.
+      consequence: >
+        In the absence of all other terms (V = g = R = Λ = 0),
+        the equation reduces to the free Schrödinger equation —
+        pure R3 motion of undirected dilemma propagation.
+
+    r4_progress:
+      term: "Λln(1 + κ|Ψ|²)"
+      statement: >
+        R4 (Progress): resolutions accumulate irreversibly.
+        The logarithmic term is the formal expression of R4.
+        Λ > 0 is the process rate — the rate at which the substrate
+        drives unresolved dilemmas toward commitment. Without Λ
+        (Λ = 0), the equation is time-reversible — no arrow of time,
+        no irreversible accumulation. With Λ > 0, the logarithmic
+        term breaks time-reversal symmetry — it is the source of
+        the arrow of time in the master equation.
+        The logarithm grows slowly for large |Ψ|² (saturation) —
+        R4 accumulation is bounded by R5 viability, which prevents
+        over-commitment.
+      lambda_and_alpha: >
+        Λ encodes α at the quantum scale. The closure imperfection
+        per cycle (α ≈ 1/137) sets how rapidly the GP field around
+        a vortex accumulates irreversible phase correction — the
+        microscopic arrow of time from commitment-response-function.yaml
+        (level_3 of the arrow of time derivation in substrate-potential.yaml).
+        Λ is the macroscopic expression of that accumulation rate.
+        A universe with Λ = 0 would have α = 0 — no electromagnetic
+        coupling, no spontaneous emission, no irreversibility, no
+        structure. The universe has structure because Λ > 0, because
+        α > 0, because R4 is real.
+      kappa_saturation: >
+        κ is the saturation parameter — it sets the commitment
+        density at which the logarithmic term transitions from
+        linear behavior (κ|Ψ|² << 1: log term ≈ κ|Ψ|²) to
+        logarithmic saturation (κ|Ψ|² >> 1: log term ≈ ln(κ|Ψ|²)).
+        The transition scale is n_sat = 1/κ — the Planck-scale
+        maximum commitment density. κ = 1/n_sat.
+
+    r5_optimisation:
+      term: "R(Ψ) = R_forward(Ψ) + R_diss(Ψ)"
+      statement: >
+        R5 (Optimisation): viable configurations persist; non-viable
+        are suppressed. R(Ψ) is the substrate's response function —
+        how the substrate selects and sustains viable commitment
+        patterns while allowing non-viable ones to dissolve.
+        R_forward locks viable patterns into committed structure.
+        R_diss slowly returns weakly viable patterns to the
+        Praegress reservoir — the renewal mechanism that prevents
+        total stasis and maintains the metastable zone.
+        Together they express R5 as a dynamic balance between
+        commitment (forward) and dissolution (reverse), with the
+        balance point set by topological protection strength.
+      g_term: >
+        The g|Ψ|² term (cubic nonlinearity) is the leading-order
+        R5 selection — self-reinforcement of existing commitment
+        density. High |Ψ|² regions attract more commitment (like
+        attracts like). This is the basic vortex formation and
+        stability mechanism.
+
+# ─────────────────────────────────────────────
+# THE COMMITMENT-RESPONSE FUNCTION R(Ψ)
+# Full form with forward and dissolution kernels
+# ─────────────────────────────────────────────
+
+commitment_response_full:
+  statement: >
+    R(Ψ) = R_forward(Ψ) + R_diss(Ψ)
+    The full commitment-response function has two kernels operating
+    on opposite timescales: R_forward acts rapidly (quantum and
+    particle timescales) to lock potential into committed structure;
+    R_diss acts slowly (decay, biological, cosmological timescales)
+    to return weakly protected commitment back to the Praegress
+    reservoir. The balance between them maintains the metastable
+    zone required by R5.
+
+  r_forward:
+    formula: "R_forward(Ψ) = g|Ψ|² / (1 + |Ψ|²/n_sat)"
+    description: >
+      Saturating commitment valve. Standard GP nonlinearity with
+      Planck-scale saturation at n_sat = 1/κ. Locks potential into
+      committed vortex topology. Produces particle stability,
+      confinement, mass. Fast timescale — operates at quantum
+      and nuclear scales (ħ/E). Hermitian contribution to the
+      effective potential.
+    limit_low_density: "g|Ψ|² — standard GP cubic self-interaction"
+    limit_high_density: "g·n_sat — saturates to maximum commitment rate"
+    existing_file: "commitment-response-function.yaml v2.0"
+
+  r_diss:
+    formula: "R_diss(Ψ) = −ε|Ψ|² / (1 + τ_diss|Ψ|²) · f(topological_protection)"
+    description: >
+      Dissolution kernel. Slow reverse process returning committed
+      topology to the Praegress reservoir. Non-Hermitian contribution
+      — introduces imaginary component to effective potential,
+      producing probability decay (commitment release). Rate set
+      by ε (small, to preserve particle stability), modulated by
+      f (topology-dependent, near zero for strongly wound vortices).
+    parameters:
+      epsilon: >
+        ε — base dissolution rate. Sets the timescale for decay
+        of weakly protected structures. Must satisfy:
+        ε << 1/(proton lifetime) ≈ 10⁻³⁴ yr⁻¹ at the proton scale.
+        Calibrated from observed radioactive decay rates for weakly
+        protected nuclei and from cosmological renewal timescales
+        (~10-100 Gyr for large-scale structure relaxation).
+      tau_diss: >
+        τ_diss — topological fatigue timescale. Sets how quickly
+        the dissolution rate itself saturates at high commitment
+        density. At |Ψ|² >> 1/τ_diss: R_diss saturates to
+        −ε/τ_diss · f — a maximum dissolution rate even at extreme
+        commitment density. Prevents runaway dissolution of maximally
+        committed structures (black hole cores).
+      f_topological_protection: >
+        f(topological_protection) — the critical modulation function.
+        f ≈ 0: topologically protected (high-winding vortex, proton,
+          electron). Effectively stable on any accessible timescale.
+        f ≈ 1: weakly protected (loosely bound nuclear configurations,
+          unstable isotopes, molecular commitment patterns, large-scale
+          structure). Full dissolution rate applies.
+        f is continuous between 0 and 1, set by the vortex winding
+        number and the local substrate resistance R_eff:
+          f ≈ exp(−n_winding · R_eff / R_threshold)
+        High winding number n_winding: strong topological barrier
+          to dissolution → f → 0.
+        High R_eff (dense environment): stronger binding → lower f.
+        Low R_eff (void environment, high η): weaker binding → higher f.
+        This last dependence is the void/fine-structure connection:
+        in voids where η is higher and R_eff = R₀/η is lower,
+        weakly protected topologies have higher f and dissolve faster.
+        Strongly protected topologies (proton, electron) are unaffected.
+
+  non_hermitian_character: >
+    R_diss is non-Hermitian — it makes the effective Hamiltonian
+    non-Hermitian. This is physically correct and expected for an
+    open system exchanging commitment with the Praegress reservoir.
+    The imaginary part of the effective eigenvalue gives the decay
+    rate: Im(E_eff) = −ħ · ε_eff/2 where ε_eff = ε·f·|Ψ|².
+    This connects the framework to:
+    PT-symmetric quantum mechanics — non-Hermitian Hamiltonians
+      with real spectra under parity-time symmetry. The substrate's
+      dissolution kernel is a natural realisation of PT-symmetric
+      open system dynamics.
+    Gamow states — resonance states in quantum mechanics with
+      complex eigenvalues encoding decay rates. Radioactive decay
+      is the canonical example. R_diss gives the physical mechanism
+      for the imaginary part of the Gamow eigenvalue.
+    Lindblad master equation — open quantum systems formalism.
+      R_diss in the master equation maps to the Lindblad dissipator
+      in density matrix formalism, with f(topological_protection)
+      selecting which operators undergo Lindblad decay.
+
+# ─────────────────────────────────────────────
+# THE LOGARITHMIC TERM — R4 FORMALIZED
+# ─────────────────────────────────────────────
+
+logarithmic_term:
+  statement: >
+    Λln(1 + κ|Ψ|²) is the formal expression of R4 in the master
+    equation. It has a specific and well-studied mathematical
+    pedigree — the logarithmic Schrödinger equation — that connects
+    Praestology to existing rigorous mathematical physics.
+  mathematical_pedigree: >
+    Bialynicki-Birula & Mycielski (1976): proposed the logarithmic
+    Schrödinger equation iħ ∂ψ/∂t = [−ħ²/2m ∇² + b·ln|ψ|²]ψ
+    as a nonlinear modification preserving Gaussian wave packet
+    shape and separability of non-interacting systems. The equation
+    has been studied for 50 years in mathematical physics.
+    Zloshchastiev (2010 onward): applied the logarithmic term to
+    superfluid vacuum theory and quantum liquids. Showed it produces
+    a specific dispersion relation for acoustic excitations in the
+    quantum vacuum — directly relevant to the substrate picture.
+    The term Λln(1 + κ|Ψ|²) used here is a regularised version
+    avoiding the singularity at |Ψ| = 0 in the original ln|ψ|²
+    form. The regularisation κ introduces the saturation scale
+    (κ = 1/n_sat) and recovers the original logarithmic form at
+    |Ψ|² >> 1/κ.
+  key_properties:
+    gaussian_preservation: >
+      The logarithmic Schrödinger equation preserves Gaussian
+      wave packet shapes exactly. A Gaussian initial state remains
+      Gaussian under evolution — it changes width and amplitude
+      but not shape. This is the mathematical expression of R5
+      operating on the dilemma landscape: viable configurations
+      maintain their coherent shape as they evolve; they don't
+      spread into arbitrary distributions.
+    separability: >
+      Non-interacting subsystems evolve independently under the
+      logarithmic term — the equation is separable for non-coupled
+      systems. This is necessary for R5: independent viable
+      configurations should not interfere with each other's
+      viability selection.
+    arrow_of_time: >
+      Λ > 0 breaks time-reversal symmetry. The logarithmic term
+      with positive Λ is not invariant under t → −t and Ψ → Ψ*.
+      This is R4: the process accumulates irreversibly. The
+      time-reversal non-invariance is not imposed — it follows
+      from Λ > 0, which is required for R4 to operate.
+    saturation: >
+      For large |Ψ|²: Λln(1 + κ|Ψ|²) ≈ Λln(κ|Ψ|²) — grows
+      slowly. The commitment drive saturates at high commitment
+      density. This is R5: over-committed configurations are
+      suppressed. The saturation prevents the universe from
+      collapsing all dilemmas immediately — it maintains the
+      metastable zone where process can continue.
+  lambda_derivation_path: >
+    Λ should be derivable from α and the substrate grain ξ.
+    The connection: Λ encodes the rate of irreversible GP field
+    phase correction per cycle — the closure imperfection that
+    is α ≈ 1/137 per full winding cycle. Therefore:
+    Λ ∝ α · ω_characteristic
+    where ω_characteristic is the characteristic frequency of
+    the process being described. At atomic scale: ω ~ R∞·c.
+    At cosmological scale: ω ~ H₀.
+    The scale-dependence of Λ is the running coupling picture
+    from alpha-rydberg-z0.yaml extended to the master equation:
+    Λ runs with scale the same way α runs with energy, because
+    both encode the same irreversibility rate at different
+    substrate sampling scales.
+    Open derivation: formal derivation of Λ from α and ξ.
+
+# ─────────────────────────────────────────────
+# PHYSICAL REGIMES — LIMITS OF THE EQUATION
+# ─────────────────────────────────────────────
+
+physical_regimes:
+  quantum_vacuum:
+    condition: "|Ψ|² → 0 (near η = 1, deep void)"
+    active_terms: "−ħ²/2m ∇² + V + Λκ|Ψ|² (leading order of log term)"
+    behavior: >
+      Linear Schrödinger equation with small nonlinear correction.
+      Pure dilemma propagation with minimal commitment. Tik background
+      is the ground state. Vacuum fluctuations are Ψ_vacuum ≠ 0.
+    limit: "Quantum mechanics (Schrödinger equation)"
+
+  quantum_particle:
+    condition: "|Ψ|² ~ n_particle (committed vortex topology)"
+    active_terms: "All terms; R_forward dominant; R_diss near zero (high winding)"
+    behavior: >
+      Full GP dynamics with saturating nonlinearity. Stable vortex
+      solutions (particles) exist as stationary states. R_diss ≈ 0
+      for high-winding topologies → effective stability.
+      Logarithmic term provides the irreversible quantum corrections
+      (spontaneous emission, Lamb shift).
+    limit: "Quantum field theory (QED, QCD) as effective descriptions"
+
+  classical_gravity:
+    condition: "|Ψ|² >> 1/κ (high commitment density, macroscopic mass)"
+    active_terms: "V + R_forward (saturated) dominant; ∇² suppressed at macro scale"
+    behavior: >
+      Commitment density gradient ∇C = ∇(1-η) drives all trajectories.
+      This is the substrate refraction picture of gravity — commitment
+      density gradient as the gravitational field. GR geodesics are
+      recovered as paths of least resistance through the |Ψ|² field.
+    limit: "General relativity (as commitment density gradient geometry)"
+
+  decay_and_renewal:
+    condition: "weakly protected topology: f ~ 1, ε|Ψ|² ≠ 0"
+    active_terms: "R_diss dominant over R_forward for weakly wound states"
+    behavior: >
+      Non-Hermitian dynamics. Probability (commitment) leaks from
+      the system to the Praegress reservoir at rate ε_eff = ε·f·|Ψ|².
+      Exponential decay of weakly committed topology. Released
+      commitment returns as free potential, raises local η, feeds
+      the void-outward pressure identified in the cosmological
+      critique. Radioactive decay, memory fading, cosmic structure
+      relaxation all in this regime.
+    limit: "Open quantum systems (Lindblad, Gamow states)"
+
+  void_environment:
+    condition: "η → 1, R_eff = R₀/η → R₀ (minimum resistance)"
+    active_terms: "R_diss enhanced for weakly protected (f increases with decreasing R_eff)"
+    behavior: >
+      Weakly protected topologies dissolve faster in voids — reduced
+      substrate resistance lowers topological binding. Effective
+      f(η) = f₀ · exp(+[R_threshold − R_eff]/R_threshold) increases
+      as R_eff decreases. Fine structure constant α_eff shifts toward
+      α_int (bare topological value). Half-lives of unstable nuclear
+      configurations slightly shorter in void environments.
+      Strongly protected topologies (proton, electron) unaffected —
+      their f ≈ 0 regardless of η.
+    prediction: >
+      Small systematic variation in radioactive decay rates with
+      cosmic environment — faster in voids, slower in dense filaments —
+      proportional to the η contrast. Potentially testable with
+      precision nuclear decay measurements in different gravitational
+      and large-scale structure environments.
+
+  black_hole_interior:
+    condition: "|Ψ|² → n_sat (maximum commitment density, horizon approach)"
+    active_terms: "R_forward saturated; R_diss non-zero from finite τ_diss"
+    behavior: >
+      At maximum commitment density, R_forward → g·n_sat (saturated,
+      constant). R_diss → −ε/τ_diss · f (also saturated but f → 0
+      for maximally wound topology). The residual non-zero R_diss
+      at the core — from finite τ_diss preventing exact saturation —
+      is the internal dissolution mechanism.
+      The released potential accumulates as internal free potential
+      (outward propagation blocked by Z_outward divergence at horizon).
+      This slowly raises local η inside the black hole — a dynamic
+      internal evolution distinct from Hawking radiation.
+      Black holes are not static objects slowly evaporating from the
+      outside. They are dynamic commitment structures slowly dissolving
+      from the inside, releasing potential that accumulates internally
+      and contributes to the long-term evolution of the horizon geometry.
+      For supermassive black holes (M >> 10⁸ M_☉) where T_H ≈ 0
+      and Hawking radiation is negligible, R_diss is the dominant
+      long-term evolution mechanism. Old supermassive black holes
+      should show different internal structure than young ones.
+    prediction: >
+      AGN activity timescales and quasar evolution may encode the
+      internal dissolution rate of supermassive black holes. The
+      buildup of internal free potential from R_diss would eventually
+      modify the accretion dynamics and jet production — a long-term
+      evolution signal potentially observable in quasar population
+      statistics at different cosmic epochs.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      Λ from α and ξ: formal derivation of the logarithmic term
+      coefficient from the substrate closure imperfection rate.
+      Λ ∝ α · ω_characteristic — verify this relation produces
+      the correct Lamb shift, spontaneous emission rates, and
+      arrow-of-time strength at atomic scale.
+    - >
+      f(topological_protection) from vortex winding numbers:
+      derive f(n_winding, R_eff) = exp(−n_winding · R_eff/R_threshold)
+      from vortex-stabilization.yaml stability conditions. Verify:
+      proton (n_winding = 3 × 480°/720° = 2): f → 0 ✓
+      electron (n_winding = 720°/720° = 1): f → 0 ✓
+      ¹⁴C (weakly bound nuclear configuration): f calibrated to
+      5730 yr half-life → ε_eff = ln(2)/5730 yr.
+    - >
+      ε and τ_diss calibration: find ε and τ_diss such that the
+      equation simultaneously produces proton lifetime > 10³⁴ yr
+      and ¹⁴C half-life = 5730 yr and cosmological renewal
+      timescale ~ 10-100 Gyr. Three constraints on two parameters
+      (ε, τ_diss) — overdetermined, which is a falsification test.
+      If no (ε, τ_diss) simultaneously satisfies all three,
+      the dissolution kernel requires revision.
+
+  priority_2:
+    - >
+      Stationary solutions for particle topologies: find the
+      vortex solutions Ψ_vortex(r) satisfying the full equation
+      with ∂Ψ/∂t = 0 (or ∂Ψ/∂t = −iE/ħ · Ψ for bound states).
+      These are the particles — the stable commitment topologies
+      selected by R5. Their energies are the particle masses.
+    - >
+      Running of Λ with scale: show Λ(q²) tracks α(q²) running.
+      At low energy: Λ_atomic = α · R∞·c. At M_Z energy:
+      Λ_Z = α_eff(M_Z) · M_Z·c/ħ. The ratio Λ_Z/Λ_atomic should
+      equal α(M_Z)/α(atomic) = 137/128. If confirmed: Λ running
+      is the master equation expression of running coupling.
+    - >
+      Void decay rate prediction: compute the η-dependence of f
+      from R_eff = R₀/η. Predict the fractional change in decay
+      rate for ¹⁴C (or other calibrated isotope) between a void
+      environment (η ~ 1.05 × η_cosmic) and filament environment
+      (η ~ 0.95 × η_cosmic). Compare to precision decay rate
+      measurements in different environments.
+
+  priority_3:
+    - >
+      Black hole interior evolution: solve the master equation
+      in the near-saturation regime with R_diss non-zero.
+      Compute the rate of internal free potential accumulation
+      and predict the timescale for the interior commitment
+      density to begin decreasing noticeably from its maximum.
+      This sets the timescale for dynamic black hole evolution
+      beyond standard Hawking radiation.
+    - >
+      PT-symmetry analysis: determine under what conditions the
+      non-Hermitian effective Hamiltonian with R_diss is PT-symmetric
+      (real spectrum despite non-Hermiticity). If PT-symmetric:
+      bound states have real energies (stable committed topologies).
+      PT-symmetry breaking corresponds to the dissolution threshold —
+      the topology becoming unstable and decaying.
+    - >
+      Cosmological renewal timescale: integrate R_diss over the
+      cosmic web commitment density distribution to compute the
+      total rate at which large-scale structure returns to the
+      Praegress reservoir. This sets the dynamic dark energy-like
+      pressure and the universe's renewal rate.
+
+# ─────────────────────────────────────────────
+# READING ORDER
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "core/specifications.yaml                          -- R1-R5 rules first"
+  - "domains/physics/substrate-potential.yaml          -- φ field; η; primary framing"
+  - "domains/physics/bridge-function.yaml              -- Ψ = η identification"
+  - "domains/physics/commitment-response-function.yaml -- R(Ψ) full derivation"
+  - "core/core-dynamical-equation.yaml                 -- this file; master equation"
+  - "domains/physics/specifications.yaml               -- all physics as limits"
+
+related_issues:
+  - "foundational/F102_master_equation_r1r5_as_single_formalism"
+  - "foundational/F103_lambda_from_alpha_and_xi"
+  - "foundational/F104_r_diss_as_r5_renewal_mechanism"
+  - "foundational/F105_f_topological_protection_from_winding_numbers"
+  - "foundational/F106_non_hermitian_dynamics_as_open_substrate"
+  - "foundational/F107_logarithmic_term_as_r4_formal_expression"
+  - "foundational/F108_void_decay_rate_from_eta_dependent_f"
+  - "foundational/F109_black_hole_dynamic_dissolution_r_diss"
+  - "intersectional/physics/126_lambda_running_with_alpha"
+  - "intersectional/physics/127_stationary_solutions_as_particles"
+  - "intersectional/physics/128_void_decay_rate_prediction"
+  - "intersectional/physics/129_black_hole_interior_evolution_r_diss"
+  - "intersectional/physics/130_pt_symmetry_and_dissolution_threshold"
+  - "intersectional/physics_cosmos/021_cosmological_renewal_from_r_diss"
+  - "intersectional/physics_cosmos/022_agn_evolution_as_black_hole_dissolution"
+  - "intersectional/physics_biology/003_memory_pruning_as_r_diss_on_engrams"
