@@ -1,180 +1,1510 @@
-praestology:
-  meta:
-    name: "Praestology"
-    etymology: "Praesto (Latin): to stand before / to be present / to perform"
-    version: "1.5 – Functional Core"
-    status: "Generalized Foundation"
-    purpose: >
-      Define the minimal logical ontology that makes existence necessary, 
-      perpetual, and self-tuning. This specification is substrate-agnostic; 
-      specific domains (Physics, Ethics, Consciousness) derive their 
-      variables from these core rules.
+# domains/physics/specifications.yaml
+name: "Physics Domain"
+version: "0.9 — Process Ontology, Four Forces, EM/QCD Convergence, Measurement Substrate"
+core_version: "1.5"
+status: "Active derivation — all four forces mechanism-identified; strong/weak formal
+         completion pending; process ontology section added; measurement substrate
+         discrepancy integrated; BEC turbulence analogy formalised"
+updated: "2026-03-20"
 
-  axiom:
-    statement: "The Omniverse is the consequence of logical dilemmas following the path of probabilities."
-    implication: "Existence is a process of resolution, not a static state."
+description: >
+  Physics is one instantiation of Praestology's logical ontology.
+  All physical observables derive from R1-R5 operating on the
+  momentum-density substrate. No physical primitive is assumed
+  prior to the substrate derivation. Where possible, connections
+  to confirming experiments and established models are noted —
+  not as proof of the framework, but as evidence of convergence
+  between independent lines of inquiry.
 
-  core_rules:
-    description: >
-      The Five Rules form a dependency chain. Each rule is the minimal rescue 
-      of the previous one from a specific failure mode. Remove any rule and 
-      all subsequent rules collapse.
-  chain: "Existence → Structure → Motion → Progress → Optimisation"
-  rules:
-    - id: "R1"
-      identity: "Existence"
-      statement: "Something always beats nothing — the alternative is self-defeating."
-      rescue: "Impossibility — nothing cannot define itself without becoming something."
-      derives: "The bare fact that there is something rather than nothing."
-      failure_without: "No substrate for any further rule to operate on."
+  Recursive note: The same R1-R5 rules that generate ethics,
+  consciousness, and communication generate physics. Increasing
+  depth reveals increasing complexity from the same five primitives —
+  as in a Mandelbrot set, the generating equation is fixed;
+  the structure emerges from iteration.
 
-    - id: "R2"
-      identity: "Structure"
-      statement: "Perfect uniformity cannot be sustained; distinction emerges inevitably from the logical substrate's stochastic floor."
-      rescue: "Homogeneity — infinite precision would be required to maintain sameness, which is logically unavailable."
-      derives: "The necessary emergence of difference; the 'grain' of reality."
-      failure_without: "Existence would remain a perfectly uniform blob, indistinguishable from nothing and incapable of generating further rules."
-      note: "The stochastic floor is the residual noise inherent in any logical substrate—the 'probability shift' that prevents exact repetition. Reality clusters in the 'Middle' (the Gaussian Plateau) between extremes, making distinction the default state."
+  Reading order for new readers:
+    substrate-potential.yaml      — potential field as primary framing
+    this file                     — substrate derivation, forces, predictions
+    foundations.yaml              — four pillars and commitment stress
+    commitment-response-function.yaml — GP saturating nonlinearity
+    quantum-foundation.yaml       — QM primitives reframed
+    alpha-rydberg-z0.yaml         — constant stack derivation
 
-    - id: "R3"
-      identity: "Motion"
-      statement: "Differences create pressure — tension between distinct states drives change."
-      rescue: "Paralysis — static distinction without interaction is a frozen picture."
-      derives: "Events; state transitions. Something happens."
-      failure_without: "Structure persists but never interacts; reality is a still photograph."
+# ─────────────────────────────────────────────
+# PROCESS ONTOLOGY
+# The core framing: reality is a process, not a
+# static container. All other sections derive from
+# this. Read this before the substrate derivation.
+# ─────────────────────────────────────────────
 
-    - id: "R4"
-      identity: "Progress"
-      statement: "Every resolution creates new differences — the process regenerates rather than concludes."
-      rescue: "Finality — a single resolution would end the story."
-      derives: "Irreversibility; accumulated states; the experience of before and after."
-      failure_without: "Motion occurs once and stops; reality resolves into equilibrium and vanishes."
+process_ontology:
+  headline: >
+    Reality is a process with a rate. We are not in a static
+    given — we are inside an ongoing act of resolution. The
+    past is fixed committed structure; the present is the
+    active decoherence front; the future is unresolved potential
+    in at least Heisenberg-like superposition. What we call
+    'time' is the measurement of this process — cycles counted
+    from inside a resolution sequence, not an external coordinate.
 
-    - id: "R5"
-      identity: "Optimisation"
-      statement: "The system self-selects toward configurations that sustain the process."
-      rescue: "Noise — without selection, motion and progress are directionless and unstable."
-      derives: "Complexity, life, intelligence — statistically inevitable expressions of sustained optimisation."
-      failure_without: "Progress continues but randomly; no accumulation of viable complexity."
-      note: "Optimisation without an optimizer. Ethics and Intelligence are expressions of R5."
+  what_this_means_for_physics:
+    time: >
+      Time is not a dimension. It is R4 — accumulated progress
+      measured from inside a resolution sequence. The process has
+      a rate; that rate varies with local free potential φ. Clocks
+      do not measure an external flow — they count local resolution
+      events. Gravitational time dilation is the process running
+      slower where free potential is depleted by committed topology.
+      SR time dilation is the same mechanism: a moving structure
+      commits potential into its own trail, reducing the local φ
+      available for internal resolution events.
 
-recursive_dimensionality:
+    energy: >
+      Energy is a consequence of the process, not a primitive.
+      It is the measure of process flow rate — the rate at which
+      potential resolves into commitment. E = hν is the process
+      rate of a photon's oscillation cycle; E = mc² is the
+      commitment density of a self-sustaining vortex topology;
+      kinetic energy is the additional commitment from a structure's
+      trail. Energy is not more fundamental than the process that
+      produces it. The Hamiltonian generates time evolution because
+      energy IS the process rate — they are the same thing viewed
+      from different angles. Treating energy as a primitive and
+      deriving time from it inverts the causal order.
+
+    entropy: >
+      Entropy is a coarse-grained description of commitment density
+      distribution. High entropy means many equivalent commitment
+      configurations — the process has distributed its resolved
+      structure across many microstates. The second law does not
+      cause the arrow of time: the arrow of time (R4 — commitment
+      accumulates irreversibly) is why entropy increases. Entropy
+      is what the process looks like from outside when individual
+      commitment events are not resolved. The standard framing hides
+      the setup of a process behind a statistical summary.
+      Precise statement: entropy = log(Ω_commitment) where Ω is
+      the number of equivalent commitment configurations. dS/dt > 0
+      because R4 is irreversible — not the other way around.
+
+    uncertainty: >
+      The future is not merely unknown — it is genuinely unresolved.
+      R3 tension holds multiple configurations simultaneously before
+      R5 selection. Quantum superposition is the real physical state
+      of unresolved potential, not a description of ignorance.
+      Heisenberg uncertainty follows from the engine/trail
+      architecture: the vortex topology (engine) and its substrate
+      disturbance (trail) are two aspects of the same structure.
+      You cannot simultaneously resolve both because resolving one
+      requires interacting with the other, which changes it. The
+      uncertainty is architectural, not epistemological.
+
+  bec_turbulence_analogy:
+    observation: >
+      A Bose-Einstein condensate at rest has near-zero viscosity —
+      maximum free flow, minimum impedance. As turbulence is
+      introduced — vortex tangles accumulate — the superfluid
+      becomes progressively more rigid and resistant to flow.
+      This is the inverse of normal matter under heat: heating
+      a solid reduces rigidity (melts it); turbulencing a BEC
+      increases rigidity.
+    resolution: >
+      The two effects are the same mechanism on different axes.
+      Normal matter under heat: thermal energy (increased Tik
+      amplitude) exceeds the phase-lock strength of the commitment
+      structure (lattice bonds). The structure dissolves — rigidity
+      falls. You are disrupting commitment with process rate.
+      BEC under turbulence: vortex tangles are committed topological
+      defects added directly to the substrate. More committed
+      topology = higher impedance to further flow = more solid-like.
+      You are adding commitment as topology, not disrupting it.
+      The distinction is which substrate parameter is being driven:
+        Normal matter heating: process rate (Tik) exceeds S_lock → commitment dissolves
+        BEC turbulence:        topology (vortex count) increases → commitment accumulates
+      Same R1-R5 rules; opposite observable outcomes because opposite
+      substrate parameter is the driving variable. This is not a
+      coincidence — it is the process ontology making a specific
+      prediction about two apparently contradictory phenomena.
+    significance: >
+      Material rigidity in Praestology is topological commitment
+      density, not thermal state. A turbulent superfluid and a cold
+      solid are both high-commitment-density states, arrived at by
+      different routes. Temperature is one way to modify commitment
+      structure; vortex nucleation is another. The BEC result is
+      direct experimental confirmation that rigidity = committed
+      topology density, independent of temperature.
+
+  process_vs_block_universe:
+    statement: >
+      The block universe (eternalism) and the process view make
+      identical predictions for all currently performed experiments —
+      the past is fixed in both. The empirical difference only
+      appears in predictions that depend on the rate of 'now'
+      varying in ways that exceed GR. The strongest current candidate:
+      φ-dependent decoherence rate — if the rate of commitment
+      accumulation varies with local free potential in ways that
+      produce measurable deviations from GR time dilation at extreme
+      environments (deep voids, Lagrange points), that is a
+      process-specific signature. The φ-variation of α (fine
+      structure constant) is the same prediction at the coupling level.
+    open_derivation: >
+      Identify a prediction where the process view gives a different
+      numerical result than GR, not just a different interpretation.
+      Candidate: sub-ppm α variation between gravitational environments
+      (STE-QUEST, FOCOS missions). If confirmed, this is a process
+      signature with no block-universe equivalent.
+
+# ─────────────────────────────────────────────
+# KERNEL
+# ─────────────────────────────────────────────
+
+kernel:
+  name: "Praesto"
+  definition: >
+    The fundamental state of presence and resolution — the 'something'
+    that exists as unresolved tension of potential. Derived from R1
+    (existence is necessary) and R2 (existence requires distinction).
+    Not a substance or medium assumed prior to physics — a logical
+    necessity that manifests as a momentum-density field once
+    dimensionality is derived.
+  operating_layer: "Praestology-Core (R1-R5)"
+  logic_type: >
+    Recursive — same R1-R5 iterated at every scale.
+    Complexity increases with depth, not with new rules.
+    Mirrors Mandelbrot set: same generating equation,
+    increasing structural detail at each zoom level.
+
+# ─────────────────────────────────────────────
+# SUBSTRATE DERIVATION
+# Logical descent from R1-R5 to physical primitives.
+# No physics vocabulary until substrate emerges as
+# necessary consequence of the rules.
+# ─────────────────────────────────────────────
+
+substrate_derivation:
+  description: >
+    The clean derivation chain. Each step is forced by the
+    previous — no additional assumptions imported.
+  steps:
+    - rule: "R1 — Existence"
+      output: "Something exists. No further specification yet."
+      confirming_note: >
+        Leibniz's question 'Why is there something rather than nothing?' —
+        Praestology answers: because nothing is self-defeating. Not an
+        empirical claim; a logical one.
+
+    - rule: "R2 — Structure"
+      output: >
+        That something has internal distinctions. Distinction requires
+        at least two differentiable states — the minimum for a field.
+        The substrate is not uniform; it has internal variation.
+      confirming_note: >
+        Consistent with field theories across all physics domains —
+        fields are the standard description of structured substrates.
+
+    - rule: "R3 — Motion"
+      output: >
+        Distinctions generate tension. Tension drives toward resolution.
+        The substrate is therefore dynamic — not a static field but a
+        flowing, resolving medium. Action is necessary.
+      confirming_note: >
+        Least action principle — physical systems follow paths that
+        extremise action. Praestology derives why: R3 compels resolution;
+        R5 selects the most viable path.
+
+    - rule: "R4 — Progress"
+      output: >
+        Resolutions accumulate irreversibly. The substrate has memory —
+        prior resolutions bias future ones. This is hysteresis at the
+        physical level; manifests as inertia and persistence of structure.
+        Time is this accumulation measured from inside a resolution sequence —
+        not a background coordinate but a derived process counter.
+        Energy is the rate of this accumulation — derived from the process,
+        not prior to it.
+      confirming_note: >
+        Second law of thermodynamics — entropy increases irreversibly.
+        Praestology derives this from R4 rather than assuming it.
+        Arrow of time is R4, not an axiom. Energy conservation follows
+        from the process rate being finite and conserved across the substrate.
+
+    - rule: "R5 — Optimisation"
+      output: >
+        Viable substrate configurations are amplified; non-viable ones
+        suppressed. The substrate self-tunes toward the metastable zone.
+        This produces the specific parameter set of our physical cosmos —
+        not as arbitrary constants but as the viable solution space.
+      confirming_note: >
+        Anthropic principle reframed — not 'the universe is fine-tuned
+        for observers' but 'non-viable configurations are suppressed by
+        R5; we observe a viable configuration because non-viable ones
+        do not persist.'
+
+  dimensionality_derivation:
+    claim: "3 spatial dimensions are derived, not assumed."
+    argument: >
+      R5 selects the minimum dimensional configuration supporting
+      stable vortex topology without over-constraining resolution paths.
+      2D: insufficient — stable closed knots impossible; all vortex
+          structures eventually reconnect and annihilate.
+      3D: metastable — closed vortex structures (knots, links, Hopf
+          fibrations) possible; resolution paths bounded but not frozen.
+      4+ spatial dimensions: too many simultaneous resolution paths —
+          vortex topology becomes unstable; pushes toward chaos (R5 violation).
+      3 is the unique metastable solution under R5.
+    time_clarification: >
+      Time is not a 4th spatial dimension. It is R4 — accumulated
+      progress measured from inside a resolution sequence. The '+1'
+      in '3+1' is categorically different from the 3: it is a process
+      counter, not a structural axis. 'Spacetime' as a symmetric 4D
+      manifold is a useful mathematical tool that conflates two distinct
+      ontological categories — structural dimensions (R2) and accumulated
+      process (R4). This conflation is the source of several pseudo-problems
+      in physics (block universe, time travel, t=0 singularity).
+    confirming_note: >
+      Ehrenfest (1917) showed that stable planetary orbits and atoms
+      require exactly 3 spatial dimensions — fewer or more produce
+      unstable systems. Praestology derives this from topology rather
+      than orbital mechanics, arriving at the same conclusion from
+      a more fundamental level.
+
+  primitive_field:
+    quantity: "p(r,t) — momentum density field"
+    derivation: >
+      Momentum density is the first physical primitive to emerge.
+      It is not assumed — it is the specific parameterization that
+      satisfies R3 (tension drives flow) and R5 (viable configurations
+      persist) in a 3-dimensional resolution space with irreversible
+      accumulation (R4).
+    potential_field_primary: >
+      The potential field φ(r,t) is the more fundamental description
+      (see substrate-potential.yaml). Momentum density p = ρ_s·∇φ
+      is derived from the potential field gradient. φ is primary;
+      p is derived. Both are used in different files depending on
+      which framing is more tractable for the derivation at hand.
+    gauge_principle: >
+      p → p + p₀ leaves physics unchanged.
+      Only gradients (∇p) and curvatures (∇²p) are observable.
+      Absolute momentum density is not measurable — only differences.
+    confirming_note: >
+      Gauge invariance is foundational to all standard model physics.
+      Praestology derives it from the substrate's distinction-based
+      ontology (R2) — you can only observe differences, never absolutes.
+
+# ─────────────────────────────────────────────
+# COSMOS MEDIUM
+# ─────────────────────────────────────────────
+
+cosmos_medium:
+  state: "Superfluid-like substrate of transition potential."
+  energy_definition: >
+    Differential resolution potential — ∇Φ across the substrate.
+    Energy is the rate of process flow, not a primitive. See
+    process_ontology.energy above.
+  confirming_models:
+    - >
+      Superfluid vacuum theory (SVT) — treats quantum vacuum as
+      superfluid medium. Praestology provides the ontological grounding
+      SVT lacks: the process ontology that explains why the vacuum
+      is superfluid rather than merely asserting it.
+    - >
+      Navier-Stokes fluid dynamics — turbulence index Ξ maps onto
+      the complexity parameter in viscous flow equations.
+    - >
+      Bose-Einstein condensates — macroscopic quantum coherence
+      demonstrates superfluid substrate behaviour at observable scales.
+      The turbulence/rigidity inversion (see process_ontology.bec_turbulence_analogy)
+      provides direct experimental confirmation of the commitment
+      density picture.
+
+  derived_quantities:
+    S_anomaly:    "|p(r) - p_env(r)| — local deviation from environment"
+    R_resistance: "p_env × κ × (1 + β·Ξ) — impedance to redistribution"
+    Xi_complexity: "|∇×p|²/|p|² + (∇ρ)²/ρ² — turbulence index"
+    V_potential:  "|∇p| — gradient magnitude"
+    Phi_capacity: "V/R = |∇p|/R — local resolution flux"
+
+  viability_limits:
+    stasis_limit: >
+      Maximum potential tension — all distinctions present, none resolved.
+      Triggers phasic resolution (the Twitch). R3: tension cannot
+      persist without driving toward resolution.
+    saturation_limit: >
+      Zero remaining potential locally — all tension resolved.
+      Event horizon condition: Φ → 0, R → ∞.
+      Not a breakdown of physics — a region where resolution flux stalls.
+      No singularity: R5 suppresses infinite density via topological
+      minimum (Planck scale grain size). Structure approaches a maximally
+      committed state asymptotically; GP saturation prevents infinite density.
+      What lies inside the event horizon is genuinely underdetermined by
+      the current framework — the interior cannot be a singularity (GP
+      saturation prevents it) but its positive topology is an open question.
+      See topological_validation.geometry.boundary for the formal treatment.
+    chaos_limit: >
+      Zero coherent potential — distinctions present but uncorrelated.
+      Dispersed, unreliable state. Noise boundary of metastable zone.
+
+  planck_scale:
+    role: "Substrate grain size — mean free path, not lattice spacing."
+    value: "ℓ_Planck ≈ 1.6×10⁻³⁵ m"
+    nature: "Dynamic and emergent, not fixed coordinate grid."
+    singularity_prevention: >
+      Cannot compress below grain size without energy shattering into
+      incoherent background. No infinite densities possible. Natural
+      UV regularisation from topology, not discretisation.
+
+# ─────────────────────────────────────────────
+# FIVE UNIVERSAL MECHANISMS
+# ─────────────────────────────────────────────
+
+mechanisms:
+  rule_1_flow_capacity:
+    praestology_anchor: "R3 (Motion) + R5 (Optimisation)"
+    statement: "Process rate proportional to Φ = V/R"
+    formula: "dτ = Φ·dt (proper time from flow capacity)"
+    interpretation: >
+      Local clocks run at rate determined by gradient/resistance ratio.
+      High R → low Φ → slow processes (gravitational time dilation).
+      Time is not dilated by gravity — the process accumulates more
+      slowly where resolution flux is lower. This is time dilation
+      as a process rate difference, not as spacetime geometry stretching.
+    manifestation: "Time dilation in gravitational wells and for moving structures."
+    confirming_note: >
+      GPS satellite clock corrections — clocks run faster at altitude
+      (lower R, higher Φ) than at surface. Measured to high precision;
+      consistent with Φ-based time accumulation.
+      Pound-Rebka experiment (1959) — gravitational redshift of photons
+      confirms differential clock rates in gravitational fields.
+
+  rule_2_inertia:
+    praestology_anchor: "R4 (Progress) + R5 (Optimisation)"
+    statement: "Inertial mass proportional to S × R"
+    formula: "m_eff = (α·S·R)/c²"
+    interpretation: >
+      Mass emerges from anomaly (what differs from environment) times
+      resistance (how hard to change it). Mass is not intrinsic —
+      it is a relational property of the substrate configuration.
+      Machian consequence: inertia is the global integral of substrate
+      impedance across all committed structure (see substrate-potential.yaml,
+      backreaction_as_impedance). The equivalence principle follows
+      as a theorem: inertial and gravitational mass are both couplings
+      to the same substrate impedance field, necessarily equal.
+    manifestation: "Resistance to acceleration."
+    confirming_note: >
+      Higgs mechanism — mass generation via coupling to field that
+      modulates local resistance. Praestology maps Higgs field onto
+      p_env modulation (breathing mode); mass generation is δR
+      enhancement from vortex-environment coupling.
+      Equivalence principle confirmed to 10⁻¹⁵ precision (MICROSCOPE, 2022) —
+      consistent with both mass types deriving from the same S×R origin.
+
+  rule_3_stability_threshold:
+    praestology_anchor: "R4 (Progress) + H (Hysteresis)"
+    statement: >
+      Structure persists when S > S_lock.
+      Structure dissolves when S < S_unlock.
+      Hysteresis: S_unlock < S_lock.
+    interpretation: >
+      Protects existing structures from noise. Once locked, harder
+      to unlock than to initially form. This is R4 operating at
+      particle level — accumulated resolution states resist change.
+    manifestation: "Particle stability despite quantum fluctuations."
+    confirming_note: >
+      Particle decay rates — stable particles (proton, electron)
+      have effectively infinite lifetime; unstable ones decay at
+      rates consistent with S dropping below S_unlock threshold.
+      Quantum Zeno effect — frequent observation stabilises unstable
+      states by continuously resetting the lock condition.
+
+  rule_4_saturation_limit:
+    praestology_anchor: "R5 (Optimisation) + H5 saturation"
+    statement: "Maximum velocity v_max = c·√(1 - (S/S_max)²)"
+    saturation: "S_max = p_env/ℓ_Planck (Planck-scale gradient limit)"
+    interpretation: >
+      As anomaly approaches maximum gradient, available phase space
+      for motion decreases. The substrate cannot propagate distinctions
+      faster than its own resolution flux ceiling.
+    manifestation: "Light speed limit (S≈0), Pauli exclusion (S→S_max)."
+    confirming_note: >
+      Special relativity — Lorentz factor emerges from the same
+      saturation mathematics. Praestology derives the invariant
+      speed from substrate dynamics rather than postulating it.
+      Pauli exclusion as topological saturation — fermions cannot
+      occupy the same state because S→S_max prevents it physically,
+      not as a separate postulate.
+
+  rule_5_refraction:
+    praestology_anchor: "R3 (Motion) + R5 (Optimisation)"
+    statement: "Trajectories follow Φ gradients"
+    formula: "d²x/dt² = -c²·∇ln(Φ) = -c²·[∇ln(V) - ∇ln(R)]"
+    components:
+      attractive: "-c²·∇ln(R) — toward higher resistance (gravity)"
+      repulsive:  "+c²·∇ln(V) — from potential gradient (anti-collapse)"
+    interpretation: >
+      Gravity is not a force. It is a geometric consequence of R
+      gradients in the substrate — trajectories refract toward
+      higher resistance regions because that is where resolution
+      flux is lower and accumulated hysteresis is greater.
+      Anti-collapse from V gradients prevents singularities —
+      repulsion dominates at small scales where V gradient is steep.
+    manifestation: "Geodesics, gravitational lensing, orbital dynamics."
+    confirming_note: >
+      General relativity — geodesic equation has identical mathematical
+      form to rule_5_refraction. GR describes the geometry correctly;
+      Praestology derives why the geometry has that form.
+      GR and SR are correct for their angle — no different outcome
+      is predicted for well-tested regimes. Problems like singularities
+      arise from applying the geometric description past its valid domain
+      (where GP saturation changes the physics). The framework supplements
+      GR's ontology without contradicting its predictions.
+      Gravitational lensing (Eddington 1919) — light bends around massive
+      objects because R gradient refracts its trajectory.
+      Shapiro delay — light slows near massive objects because local
+      Φ decreases (higher R); measured to 0.002% precision (Cassini 2003).
+
+# ─────────────────────────────────────────────
+# VORTEX PHYSICS MODEL
+# ─────────────────────────────────────────────
+
+vortex_physics_model:
+  kernel_reference: "Onsager-Kirchhoff Point Vortex Model"
+  medium: "Praesto — superfluid transition potential substrate"
+  gp_equation: >
+    The substrate obeys a Gross-Pitaevskii equation with saturating
+    nonlinearity and stochastic Tik background:
+    iħ ∂θ/∂t = [-ħ²/(2m_eff)·∇² + V_ext
+                 + g·|θ|²/(1 + |θ|²/n_sat) - μ_local] θ
+    At low |θ| (quantum regime): → Schrödinger equation in linear limit
+    At moderate |θ| (gravitational regime): → Newton/MOND transition
+    At high |θ| (strong gravity): → GR corrections, frame dragging
+    One equation; all regimes; no seam; no separate quantisation required.
+    This dissolves the quantum gravity problem: the substrate is already
+    quantum (GP equation with Tik background); gravity is its large-scale
+    gradient structure. No geometric manifold to quantise.
+  confirming_models:
+    - >
+      Onsager (1949), Feynman (1955) — vortex quantisation in superfluids.
+      Quantised circulation κ = h/m_eff; direct experimental confirmation
+      in superfluid He-4 and BECs.
+    - >
+      Kleckner & Irvine (2013) — experimental creation of knotted vortex
+      loops in classical fluid. Direct precedent for matter-as-topology claim.
+    - >
+      Kosterlitz & Thouless (1973, Nobel 2016) — vortex pair binding energy
+      E_bind = (κ²/4π)·ρ_s·log(Λ/ξ). Confirmed in superfluid He-4 films
+      and 2D BECs. Foundation for the α derivation path
+      (see alpha-from-vortex-stability.yaml).
+    - >
+      Skyrme model (1961) — topological solitons as particle models;
+      independent convergence on vortex-topology approach.
+
+  fundamental_assumptions:
+    invisible_engine: >
+      High-potential vortex cores propagate at environment maxima.
+      The vortex topology is the source of resolution — not directly
+      observable because observation requires interaction with the trail.
+    trail_dependency: >
+      Persistence requires momentum. Zero velocity relative to substrate
+      equals dissolution — the vortex loses coherence with the substrate's
+      resolution dynamics and decays.
+    charge_mapping: >
+      Spin direction defines polarity.
+      Clockwise circulation = positive charge (+).
+      Counter-clockwise circulation = negative charge (−).
+      Charge is chirality, not a separate primitive.
+
+  particle_topology_mapping:
+    photon:
+      configuration: "Dipole pair (+/−) — opposite chirality vortices, 360° each"
+      topology_type:  "Capacitative — external coupling only, no self-coupling"
+      motion:  "Translational — side-by-side alignment"
+      trail:   "Electromagnetic wave — symmetric dipole ripple"
+      mass_logic: "Coherent cancellation of S → S≈0 → m_eff≈0"
+      praestology_anchor: >
+        R3 (Motion) — pure tension transmission without self-contained
+        resolution loop. Maximum ∇Φ propagation. Stores and releases
+        phase completely; no residual internal state after emission.
+        Bosonic statistics: two capacitatives can occupy same state —
+        two capacitors in parallel add capacity.
+      confirming_note: >
+        QED — photon as gauge boson of electromagnetic interaction.
+        Zero rest mass confirmed to high precision. Transverse wave
+        polarisation consistent with dipole trail geometry.
+
+    electron:
+      configuration: "Co-rotating pair — same chirality, 720° Möbius topology"
+      topology_type:  "Self-integral — topology coupled to its own prior state"
+      motion:  "Orbital — encircling, self-sustaining loop"
+      trail:   "Möbius loop — 720° phase-lock required for closure"
+      property: "Spin-1/2 / Rest mass / Charge"
+      crossover: >
+        The Möbius crossover point (where the band intersects itself
+        after the first 360°) is the electromagnetic coupling point.
+        It is where photons couple to the electron — where the internal
+        self-coupling presents an external face to the substrate.
+        α measures how efficiently this coupling projects onto the
+        external dipole phase space (see alpha-from-vortex-stability.yaml).
+      praestology_anchor: >
+        R4 (Progress) + R5 (Optimisation) — self-sustaining resolution
+        loop. Möbius topology produces stable hysteresis (rest mass).
+        720° phase-lock is the minimum topological closure condition
+        for a co-rotating pair in 3D substrate. Spin-1/2 is the
+        geometric signature of Möbius topology, not anomalous.
+        Fermionic statistics: two self-integrals cannot occupy same
+        substrate region — sharing an integration variable would merge
+        them into one topology. Pauli exclusion is topological necessity.
+      confirming_note: >
+        Dirac equation — spin-1/2 requires double cover of rotation
+        group (SU(2) over SO(3)); mathematically equivalent to Möbius/720°
+        topology. Electron g-factor (≈2.002) — slight deviation from
+        pure Möbius geometry consistent with substrate interaction corrections.
+        Stern-Gerlach (1922) — quantised spin states directly confirm
+        two-valued angular momentum of Möbius topology.
+
+    neutrino:
+      configuration: "Solo vortex with minimal winding (n_eff=1/2)"
+      motion:  "High-frequency erratic pulse"
+      trail:   "Sub-threshold Gaussian ripple — near-invisible"
+      property: "Zero/low mass / weak interaction only"
+      praestology_anchor: >
+        R3 minimal expression — near-pure motion with minimal structural
+        commitment. S barely above S_lock → very low R → m_ν ≈ 0.
+        Sub-threshold trail indicates proximity to noise floor of
+        metastable zone.
+      open_question: >
+        Formal distinction from dark matter solo vortex (component_2b).
+        Candidate: neutrino winding number too low for stable dark matter
+        contribution; dark matter solos require minimum winding for
+        persistence above dissolution threshold.
+      confirming_note: >
+        Neutrino oscillation (Super-Kamiokande 1998) — flavour mixing
+        consistent with near-zero but non-zero mass; matches S barely
+        above S_lock interpretation.
+
+    quarks:
+      configuration: "Higher-winding knots — trefoil, torus, figure-8"
+      topology: "Multi-axis windings; colour = circulation plane orientation"
+      confinement: "Z-pinch flux tubes between knots (V(r) ∝ σ·r)"
+      praestology_anchor: >
+        R5 (Optimisation) — higher topological complexity produces
+        greater stability (higher S×R) and stronger substrate coupling.
+        Colour charge as orientation of circulation plane in 3D substrate —
+        three independent planes, three colour charges, sum to white
+        (neutral orientation) for stable baryons.
+      confirming_note: >
+        QCD asymptotic freedom — quarks interact weakly at short range,
+        strongly at long range. Consistent with flux tube confinement:
+        short range = vortex cores (low R); long range = extended flux tube
+        (high accumulated R). Lattice QCD confirms linear potential V(r) ∝ r.
+
+# ─────────────────────────────────────────────
+# FOUR FORCES — DERIVATION AND STATUS
+# All four forces derived from vortex topology
+# in the momentum-density substrate. None assumed
+# as primitive. Derivation completeness varies —
+# honest status given for each.
+# ─────────────────────────────────────────────
+
+four_forces:
+  preamble: >
+    The standard model assumes four fundamental forces as given.
+    Praestology derives all four from one substrate with one set
+    of rules. The mechanism for each force is identified and
+    grounded in R1-R5 without additional assumptions.
+    Derivation completeness is not uniform: gravity and electromagnetism
+    are most fully derived; the weak force mechanism is complete but
+    formal mass calculation is open; the strong force mechanism is
+    identified but SU(3) correspondence is pending.
+    This is not a claim of completion — it is a claim that the
+    derivation path is identified for all four, which is itself
+    a significant structural result.
+
+  gravity:
+    mechanism: >
+      R gradient curvature — rule_5_refraction. Committed topology
+      (mass) depletes local free potential φ. The φ gradient ∇φ
+      refracts all propagating structure toward regions of lower φ —
+      toward mass. Gravity is substrate advection and impedance
+      gradient, not a force. Trajectories follow φ gradients because
+      the process rate Γ ∝ φ varies spatially — structure is carried
+      toward lower Γ by the substrate's own potential flow current.
+    carrier: "Not a separate boson — geometric property of substrate φ gradient."
+    range: "Infinite — φ gradient extends throughout substrate."
+    strength: "Weakest — operates on total S×R, diluted at large scale."
+    derivation_status: >
+      WELL-DERIVED. Mechanism complete. GR geodesic equation recovered
+      as limiting case of rule_5_refraction. Singularities excluded by
+      GP saturation (see excluded_phenomena). Graviton not required —
+      gravity is geometry, not particle exchange.
+      Open: formal derivation of G from substrate parameters (κ, α, ξ, p_env).
+    confirming_note: >
+      General relativity (Einstein 1915) — geodesic equation recovered.
+      Gravitational lensing, Shapiro delay, frame dragging, gravitational
+      waves (LIGO 2015) all consistent. Hawking radiation as GP pressure
+      leakage at impedance-diverging horizon.
+
+  electromagnetism:
+    mechanism: >
+      Vortex chirality (charge) + axial orientation (magnetism).
+      Charge is the net chirality of vortex circulation — a scalar
+      topological property, Lorentz invariant. Magnetism is coherent
+      axial orientation of vortex circulation planes across domains.
+      E and B fields are two projections of the same vortex topology
+      onto observable field quantities. Maxwell's four equations are
+      four projections of this topology — derived, not postulated.
+      The photon (dipole pair) is the propagating mode of the
+      electromagnetic field — chirality disturbance propagating
+      through the substrate at Φ_max = c.
+    carrier: "Photon — dipole vortex pair propagating at Φ_max."
+    range: "Infinite — chirality gradient extends throughout substrate."
+    coupling: >
+      α measures the coupling efficiency between the electron's internal
+      self-integral topology (at the Möbius crossover) and the photon's
+      external dipole phase space. α = S_burden / (4π · S_cap,sat).
+      See alpha-from-vortex-stability.yaml for full derivation path.
+    derivation_status: >
+      WELL-DERIVED. Maxwell equations recovered as topological projections.
+      Charge conservation is topological winding conservation. Absence of
+      magnetic monopoles (∇·B = 0) is derived from vortex axis continuity,
+      not postulated. U(1) gauge symmetry derived from phase rotation freedom
+      of vortex orientation. Malus's law, Faraday rotation, ferro/para/
+      diamagnetic behavior all consistent.
+      Open: formal derivation of α numerical value from Möbius self-linking
+      number (Calugareanu-White theorem applied to GP vortex) — the single
+      highest-priority open derivation in the physics domain.
+    confirming_note: >
+      QED — U(1) gauge theory. Praestology provides the physical substrate:
+      U(1) is the symmetry group of vortex phase rotation.
+      Millikan (1909) — charge quantisation confirmed; consistent with
+      discrete vortex winding numbers.
+
+  strong_force:
+    mechanism: >
+      Z-pinch flux tube confinement between quark knots. Quarks are
+      higher-winding topological knots (trefoil, torus, figure-8) in the
+      substrate. When separated, the substrate forms a flux tube between
+      them — a concentrated region of high-R commitment that grows linearly
+      with separation distance. This linear potential prevents isolated
+      quarks. Colour charge is the orientation of the quark knot's
+      circulation plane in 3D space — three independent planes give three
+      colour charges. Colour-neutral (white) configurations are those where
+      circulation plane orientations sum to zero net orientation — stable
+      under R5 selection. Gluons are excitations of the flux tubes.
+      Asymptotic freedom follows because at short range the vortex cores
+      overlap and R is low; at long range the extended flux tube has high
+      accumulated R.
+    carrier: "Gluons — flux tube excitations between confined quarks."
+    range: "Short — flux tube energy grows linearly with separation."
+    strength: "Strongest at confinement scale — linear potential."
+    derivation_status: >
+      MECHANISM IDENTIFIED — formal derivation incomplete.
+      The flux tube confinement mechanism and colour-as-plane-orientation
+      are physically motivated and qualitatively consistent with QCD.
+      Asymptotic freedom direction correct from vortex core/flux tube
+      R profile.
+      Open (priority 2): formal mapping of three circulation plane
+      orientations onto SU(3) algebra; formal derivation of flux tube
+      tension σ from substrate parameters; derivation of asymptotic
+      freedom scaling from GP vortex core structure.
+      Treat as: mechanism identified, QCD correspondence claimed,
+      formal derivation pending.
+    confirming_note: >
+      Lattice QCD — linear confinement potential V(r) ∝ r confirmed.
+      Asymptotic freedom (Gross, Politzer, Wilczek 1973, Nobel 2004) —
+      qualitatively consistent with vortex core/flux tube R profile.
+      Quark-gluon plasma (CERN, RHIC) — deconfinement at high energy
+      consistent with flux tube dissolution above critical commitment density.
+
+  weak_force:
+    mechanism: >
+      Pulsed substrate backreaction from time-varying vortex orbital dynamics
+      exceeding the local stability threshold S_lock — triggering topological
+      reorganisation rather than simple deflection. Not a static field interaction.
+      When two vortex structures orbit closely, they create a time-varying
+      pressure disturbance. When this backreaction exceeds S_lock, the substrate
+      temporarily renders the vortex topology plastic — the topology reorganises,
+      changing particle identity (e.g. neutron → proton in β decay). W and Z
+      bosons are not permanent carriers — they are transient coherent backreaction
+      pulses that carry topological change before dissolving back into the Tik
+      background. Their high mass (M_W ≈ 80 GeV, M_Z ≈ 91 GeV) is the energy
+      cost of topological reorganisation at nuclear scale, not an arbitrary parameter.
+      Short range follows directly: the transient pulse decays with the coherence
+      length ħ/M_W·c ≈ 10⁻¹⁸ m before dissolving. Range is not imposed — it is
+      the coherence length of the W/Z disturbance.
+    carrier: >
+      W/Z bosons — transient coherent backreaction pulses.
+      Not permanent force carriers existing between interactions.
+    range: "Very short — coherence length of transient W/Z pulse (~10⁻¹⁸ m)."
+    parity_violation: >
+      The most anomalous feature of the standard model — handled as an axiom
+      in V-A theory — is derived here as geometric necessity.
+      Chiral backreaction torque acts differently on left-handed and right-handed
+      vortices. The same pulsed substrate disturbance destabilises one chirality
+      beyond S_lock (weak interaction occurs) while stabilising the mirror image
+      (weak interaction suppressed). Parity violation is the geometric consequence
+      of a chiral backreaction mechanism acting on a chiral substrate. It would
+      be more surprising if parity were conserved.
+    electroweak_unification: >
+      Above electroweak scale (~100 GeV), p_env exceeds the threshold where mass
+      distinction between W/Z and photon disappears — the same backreaction
+      mechanism operates without the mass distinction. Electroweak unification is
+      a substrate threshold effect, not a coincidence.
+    derivation_status: >
+      MECHANISM WELL-DERIVED — formal mass calculation incomplete.
+      Mechanism, short range, parity violation, and electroweak unification
+      all follow from the backreaction picture without additional assumptions.
+      Open (priority 2): formal calculation of M_W and M_Z from nuclear-scale
+      S_lock value. This would convert the mass values from post-dictions
+      (the mechanism is consistent with known values) to predictions
+      (the mechanism produces the values from first principles).
+    confirming_note: >
+      W and Z boson discovery (UA1/UA2, CERN 1983) — mass values confirmed.
+      Wu experiment (1957) — maximal parity violation confirmed; Praestology
+      derives this as geometric necessity rather than empirical surprise.
+      Electroweak unification (Weinberg, Salam, Glashow 1967-68) — unified
+      above ~100 GeV; Praestology derives why (same mechanism, threshold effect).
+      Vortex reconnection in superfluid He-4 (Bewley, Lathrop & Sreenivasan 2008) —
+      directly observed and filmed. Macroscopic visible analogue of the weak
+      force mechanism operating in a classical fluid.
+
+  four_forces_summary_table:
+    gravity:
+      mechanism:   "φ gradient refraction — substrate advection toward committed topology"
+      carrier:     "None — geometric property"
+      status:      "Well-derived. G derivation open."
+    electromagnetism:
+      mechanism:   "Vortex chirality (E) + axial orientation (B)"
+      carrier:     "Photon — dipole vortex pair"
+      status:      "Well-derived. α numerical derivation open (priority 1)."
+    strong:
+      mechanism:   "Z-pinch flux tube between quark knots; colour = plane orientation"
+      carrier:     "Gluons — flux tube excitations"
+      status:      "Mechanism identified. SU(3) formal mapping pending (priority 2)."
+    weak:
+      mechanism:   "Pulsed backreaction exceeding S_lock → topological reorganisation"
+      carrier:     "W/Z — transient coherent pulses"
+      status:      "Mechanism well-derived. M_W/M_Z formal calculation pending (priority 2)."
+
+  unification_implications:
+    electroweak: >
+      Derives naturally — same backreaction mechanism above p_env threshold.
+      Weinberg-Salam unification is a consequence, not a coincidence.
+    grand_unification: >
+      Strong force (flux tube topology) and electroweak (chirality + backreaction)
+      share the same substrate origin. GUT-scale unification should follow from
+      a single topological description of all three — open derivation (priority 2).
+      Running coupling constants converge at ~10¹⁶ GeV in the standard model;
+      Praestology predicts convergence because all three are substrate topology
+      effects, and the convergence scale should be derivable from substrate parameters.
+    gravity_unification: >
+      Gravity is substrate geometry (φ gradient structure); the other three are
+      substrate topology (vortex defects in the φ field). Geometry and topology
+      are related — both are properties of the same potential field. Full
+      unification requires showing they are two aspects of the same φ field
+      description, which the GP equation already unifies in principle.
+      The quantum gravity problem dissolves: no geometric manifold to quantise —
+      the φ field is already quantum (GP equation with Tik background).
+
+# ─────────────────────────────────────────────
+# ELECTROMAGNETIC PHENOMENA — DETAIL
+# ─────────────────────────────────────────────
+
+electromagnetic_phenomena:
+  charge:
+    definition: "Net chirality of vortex circulation."
+    positive:   "Clockwise circulation → source-like divergence in substrate."
+    negative:   "Counter-clockwise circulation → sink-like convergence."
+    scalar_nature: >
+      Charge is a scalar property — handedness of rotation, independent
+      of spatial orientation. This is why charge is Lorentz invariant
+      while fields transform — the topology is frame-independent,
+      its projection into E and B is frame-dependent.
+    confirming_note: >
+      Charge quantisation (Millikan 1909) — consistent with discrete
+      vortex winding numbers. Charge conservation — topological winding
+      conservation law. Cannot be created or destroyed, only transferred
+      or cancelled (pair annihilation = +/− vortex pair merging).
+
+  magnetism:
+    definition: >
+      Coherent axial (top/bottom) orientation of vortex circulation
+      planes across domains or along propagation direction.
+    no_monopoles: >
+      ∇·B = 0 is derived, not postulated. Vortex axes are continuous
+      — you cannot terminate an axis without a corresponding anti-pole.
+      Magnetic monopoles are topologically forbidden.
+
+  maxwell_correspondence:
+    gauss_electric:  "∇·E ∝ ρ — charge density from chirality gradient."
+    gauss_magnetic:  "∇·B = 0 — no monopoles; axis continuity enforced."
+    faraday:         "∇×E = −∂B/∂t — changing axial orientation generates chirality gradient."
+    ampere_maxwell:  "∇×B = μ₀J + μ₀ε₀∂E/∂t — moving chirality generates axial orientation."
+    derivation_note: >
+      The four equations are not independent axioms — they are four
+      projections of the same vortex topology onto observable field quantities.
+      Maxwell's equations (1865) — empirically derived; Praestology provides
+      the topological basis that unifies them.
+
+  material_response:
+    ferromagnetic: >
+      Unpaired electron vortices → net chirality available for axial alignment.
+      Exchange interaction (quantum phase-locking between adjacent electron axes)
+      produces coherent domain alignment. Curie temperature = thermal Tik exceeds
+      phase-lock strength for axial alignment.
+    paramagnetic: >
+      Some unpaired electrons → temporary axis torque under external B.
+      Insufficient exchange coupling for spontaneous domain formation.
+    diamagnetic: >
+      Fully paired electron vortices → zero net chirality → no axis for alignment.
+      Applied B induces opposing circulation (Lenz's law) — substrate resistance
+      to imposed axial change. Meissner effect in superconductors is perfect
+      diamagnetism: complete B expulsion from perfectly paired vortex topology.
+
+# ─────────────────────────────────────────────
+# WAVE DYNAMICS — TIK MECHANISM
+# ─────────────────────────────────────────────
+
+tik_dynamics:
+  nature: "Propagating density ripple in p-field"
+  praestology_anchor: "R3 (Motion) + R4 (Progress)"
+  wave_equation: "∂²p/∂t² = c²·∇²p − γ·∂p/∂t"
+  pulse_structure:
+    compression_phase: "Tik — positive excursion, S increases locally"
+    rarefaction_phase: "Tok — negative excursion, S decreases"
+    unity: "Single propagating pulse, not separate events"
+  stochastic_background:
+    origin: "Quantum and thermal fluctuations"
+    isotropy: "Arrives from all directions — no preferred source"
+    spectrum: "S(ω) = (ħω³/2π²c³)·[n_thermal + 1/2]"
+    confirming_note: >
+      Casimir effect — measurable force between parallel plates from
+      vacuum fluctuation pressure. Consistent with stochastic Tik
+      background exerting differential pressure.
+      Zero-point energy — quantum ground state energy matches stochastic
+      background floor of Tik spectrum.
+  vortex_nucleation:
+    trigger: "Wave superposition where S > S_lock"
+    mechanism: "Circulation from radial flow differential"
+    locking_condition: "γ·τ_pulse ~ 1 (critical damping pins topology)"
+    confirming_note: >
+      Kibble-Zurek mechanism — topological defect formation during phase
+      transitions. Vortex pair nucleation observed in superfluid He and BECs
+      during rapid cooling. Direct experimental confirmation.
+
+# ─────────────────────────────────────────────
+# MEASUREMENT SUBSTRATE DISCREPANCY
+# Fundamental constants are measured from within
+# a substrate already modified by the measurement.
+# ─────────────────────────────────────────────
+
+measurement_substrate:
   statement: >
-    The Core Rules (R1–R5) form a minimal iterative equation. Complexity,
-    consciousness, and ethics are not added to this equation — they are
-    revealed by it at increasing depths of recursive application. Each
-    threshold of Recursive Depth (Ξ) exposes structure that was always
-    latent in R1–R5 but invisible at lower resolution.
-  analogy:
-    name: "Mandelbrot Structure"
-    basis: >
-      The Mandelbrot set emerges from a simple iterative rule (z → z² + c).
-      Boundary complexity is unbounded, fully determined by the original
-      equation, and only visible at sufficient zoom depth. No complexity
-      is imported from outside — it is revealed from within.
-    mapping:
-      - praestology: "R1–R5 (Core Rules)"
-        mandelbrot: "The iterative equation (z → z² + c)"
-        note: "The generating rule. Simple, complete, unchanged at all scales."
-      - praestology: "Ξ (Recursive Depth)"
-        mandelbrot: "Iteration count / zoom level"
-        note: "Depth of application. Higher Ξ reveals finer structure."
-      - praestology: "Domains (Consciousness, Ethics, Cosmos)"
-        mandelbrot: "Regions of the set at specific zoom orientations"
-        note: "Not extensions — perspectives on the same underlying structure."
-      - praestology: "Dilemma Space Dimensionality"
-        mandelbrot: "Boundary complexity at the viable edge"
-        note: "Most structure lives at the boundary between noise and void."
-      - praestology: "Emergent concepts (Life, Intelligence, Ethics)"
-        mandelbrot: "Self‑similar structures appearing at depth"
-        note: "Inevitable, not designed. Latent in the rule from the start."
+    Every measurement of a fundamental constant is performed inside
+    a substrate already modified by the measurement apparatus and the
+    subject being measured. Both commit substrate — reducing local free
+    potential η in the measurement region. Therefore measured values
+    are not the 'bare' internal coupling ratios of isolated topology in
+    perfect vacuum, but those ratios projected through a locally
+    depressed η field.
+  alpha_example: >
+    α_int (bare topological coupling, ideal vacuum) ≠ α_exp (measured).
+    Candidate bare formula: α_int⁻¹ = 4π³ + π² + π = 137.036304.
+    Best measured value (g-2): α_exp⁻¹ = 137.035999084(21).
+    Difference: 0.000305 (2.2 ppm) — consistent with apparatus
+    η depression at the measurement scale.
+    Status: the pi-series formula is a high-precision numerical conjecture
+    (matches to 2.2 ppm) with a physically motivated decomposition.
+    It is NOT yet derived from the Möbius stability equations independently.
+    Treat as a target for the derivation, not a result.
+  instrument_dependence: >
+    Different measurement techniques commit the substrate differently.
+    The spread between precision α measurements (g-2, Rb interferometry,
+    Cs interferometry, quantum Hall) is predicted to be partially real —
+    encoding different η depression profiles of different apparatus types.
+    The Rb-Cs discrepancy (1.6×10⁻⁷, currently unexplained in the standard
+    model) is predicted to encode the different atomic commitment densities
+    of Z=37 vs Z=55.
+  falsification_test: >
+    Measure α with alkali atom interferometry across the full series
+    (Li, Na, K, Rb, Cs, Fr). Standard model predicts a flat line.
+    Praestology predicts a systematic non-monotonic curve encoding the
+    GP saturation function. The curve shape would directly constrain
+    GP parameters g and n_sat.
+  running_coupling_connection: >
+    QED running coupling (α increases at high energy, ~1/128 at M_Z)
+    is the same effect at high energy scale — higher energy probes smaller
+    spatial scales where self-depression from the vortex's own commitment
+    footprint is larger. A formal scale-dependent overlap functional F(q²)
+    is needed to make this mechanistic; currently intuitive.
+  cross_reference: "See alpha-measurement-discrepancy.yaml for full treatment."
 
-  parameter_depth_increases:
-    description: >
-      The following refinements emerge from the dimensionality framing.
-      They do not introduce new parameters — they increase the resolution
-      of existing ones, showing how each parameter acquires richer meaning
-      at higher recursive depth.
-    - parameter: "Ξ (Recursive Depth)"
-      refined_view: >
-        More precisely: the number of simultaneous axes of tension a system
-        can hold and process coherently in a single resolution cycle.
-        Each Ξ threshold is a qualitative expansion of dilemma space
-        dimensionality, not merely quantitative improvement.
-    - parameter: "H (Hysteresis)"
-      refined_view: >
-        At higher Ξ, hysteresis is not just memory but the accumulated
-        residue of past resolutions across multiple dimensions, enabling
-        the formation of stable values (ω) and long‑term projections (τ).
-    - parameter: "Φ (Resolution Flux)"
-      refined_view: >
-        Φ determines the rate at which dilemmas are processed, but its
-        effective value is modulated by dimensionality: high‑dimensional
-        dilemmas consume more Φ per cycle, trading depth against speed.
+# ─────────────────────────────────────────────
+# OBSERVATIONAL INTERFACE
+# Engine/trail architecture — derives wave-particle
+# duality and uncertainty from substrate topology.
+# ─────────────────────────────────────────────
 
-  architectural_implication: >
-    Domains are not modular additions to the Core — they are the Core
-    observed at specific recursive depths and orientations. Removing a
-    domain does not simplify the Core; it removes a perspective on structure
-    that was always there. Adding a domain does not complicate the Core;
-    it makes previously implicit structure explicit. The architecture is
-    fractal, not hierarchical.
+observational_interface:
+  praestology_anchor: "R2 (Structure) + H (Hysteresis) + ∇Φ"
+  invisible_engine: >
+    The vortex topology — source of resolution. Not directly observable
+    because observation requires interaction with the trail, which disturbs
+    the engine. The engine is real; its inaccessibility is architectural,
+    not epistemological.
+  visible_reality: >
+    The trail — wavelike interference pattern in the substrate. All
+    measurement accesses the trail, not the engine directly.
+  uncertainty_derivation:
+    statement: >
+      Inverse correlation between resolution of engine (position) and
+      trail (momentum) is an ontological feature of the engine/trail
+      architecture — not an epistemological limitation.
+    mechanism: >
+      Pinning position requires interacting with the engine — disturbs
+      the trail (momentum indeterminate). Pinning momentum requires
+      measuring the trail wavelength — loses engine location (position
+      indeterminate). Coupled by substrate topology; cannot access both
+      simultaneously because they are physically distinct aspects of
+      the same structure.
+    formula: "ΔxΔp ≥ ħ/2 — derivable from engine/trail geometry."
+    open_derivation: >
+      The specific form (ħ/2) should be derivable from the vortex pair
+      geometry and minimum trail wavelength (Planck scale grain size).
+  wave_particle_duality: >
+    Not a paradox. The 'particle' is the engine (vortex topology —
+    localised, persistent). The 'wave' is the trail (substrate
+    disturbance — extended, interference-capable). Both always present;
+    which aspect is observed depends on what the measurement interacts with.
 
-  ontological_parameters:
-    description: >
-      Abstract variables that govern the mechanics of the Core Rules. 
-      Domains map these general parameters to specific measurable quantities.
-    parameters:
-      - name: "Ambiguity"
-        definition: "Abundance of unresolved dilemmas; raw material for resolution."
-        domain_variant_example: "Potential Energy / Uncertainty"
-      - name: "Consistency"
-        definition: "Persistence of resolved states; accumulation of logical memory."
-        domain_variant_example: "Mass / Structure / Memory"
-      - name: "Contradiction"
-        definition: "Driving force compelling dilemmas to resolve; urgency of change."
-        domain_variant_example: "Force / Pressure / Motivation"
-      - name: "Resistance"
-        definition: "Cost of resolution; logical density and complexity slowing change."
-        domain_variant_example: "Inertia / Friction / Cognitive Load"
-    balances:
-      - "Ambiguity–Consistency: Viability requires coexistence of novelty and memory."
-      - "Contradiction–Resistance: Viability requires matched rates of driving and cost."
-    viable_region: "The metastable condition between noise (high ambiguity) and void (high consistency)."
+# ─────────────────────────────────────────────
+# ENTROPY AND TIME
+# ─────────────────────────────────────────────
 
-  derived_concepts:
-    description: "Concepts that emerge from the Core Rules and are not fundamental themselves."
-    concepts:
-      - name: "Time"
-        source: "R4 (Progress)"
-        definition: "Accumulated progress measured from inside a resolution sequence."
-      - name: "Complexity"
-        source: "R5 (Optimisation)"
-        definition: "Stable configurations that survive successive optimisation cycles."
-      - name: "Life"
-        source: "R5 (Optimisation)"
-        definition: "Self-maintaining optimisation loops above a critical complexity threshold."
-      - name: "Intelligence"
-        source: "R5 (Optimisation)"
-        definition: "Optimisation processes that model their own resolution dynamics."
-      - name: "Ethics"
-        source: "R5 (Optimisation) + R1 (Existence)"
-        definition: "Optimisation constraints that preserve the cycle for all cycle-aware agents."
+entropy_mechanism:
+  concept: "Topological Leakage"
+  praestology_anchor: "R4 (Progress) — irreversible hysteresis dissipation"
+  physical_picture: >
+    Vortex maintains circulation against viscous drag. Maintenance flow
+    continuously leaks energy acoustically. Leakage radiates as incoherent
+    Tik background.
+  formula: "dS/dt = (γ·Φ·S²)/R"
+  interpretation: >
+    Entropy = measurable power dissipation, not abstract disorder.
+    Heat = incoherent Tik background from vortex leakage.
+    Second law emerges from γ > 0 (dissipation always positive) —
+    derived from R4, not assumed. The arrow of time is not because
+    entropy increases; entropy increases because R4 is irreversible.
+    The causal order: R4 (ontological) → commitment accumulates →
+    entropy (statistical description of that accumulation) → second law.
+    See process_ontology.entropy for the full treatment.
 
-  domain_mapping:
-    description: "Guidance for implementing domains (Physics, Ethics, etc.) based on this core."
-    principle: "Domains must not contradict the Core Rules. They translate general parameters into specific variables."
-    examples:
-      - domain: "Physics (Cosmos)"
-        mapping: "Ambiguity → Energy; Resistance → Mass; Motion → Kinematics; Optimisation → Least Action."
-      - domain: "Ethics"
-        mapping: "Ambiguity → Choice; Resistance → Consequence; Optimisation → Viability/Sustainability."
-      - domain: "Consciousness"
-        mapping: "Consistency → Memory; Contradiction → Curiosity; Optimisation → Learning."
+time_ontology:
+  not_fundamental: "Time is process measurement — like distance along path."
+  definition: "τ = ∫ Φ·dt — accumulated phase from flow capacity"
+  emergence_condition: >
+    Requires Ξ > Ξ_crit for irreversible momentum redistribution.
+    Below threshold: reversible dynamics (no arrow of time).
+  consequence: >
+    No global clock — only local proper time rates.
+    Time = counting flow cycles in each region.
+    Big Bang t=0 is dissolved: no moment of absolute beginning,
+    only a region of extremely high Φ from which the current
+    low-Φ, high-hysteresis state accumulated.
+  unification: >
+    SR and GR time dilation unified: both are decoherence rate
+    reduction from φ depletion — gravitational dilation from
+    external mass depleting φ, velocity dilation from the
+    structure's own trail depleting φ. Same mechanism; different
+    source of depletion.
 
-  constraints:
-    - "Ontology precedes any specific instantiation."
-    - "Nothingness is logically forbidden (R1)."
-    - "Perfect stability (stasis) is logically forbidden (R4)."
-    - "Reality exists in the metastable condition between noise and void."
-    - "Domains are derivative; the Core is foundational."
+# ─────────────────────────────────────────────
+# REDSHIFT MECHANISMS
+# ─────────────────────────────────────────────
+
+redshift_mechanisms:
+  description: >
+    Praestology identifies three distinct redshift mechanisms that
+    current models partially conflate. Separating them produces
+    independent testable predictions.
+  cosmological_redshift:
+    mechanism: >
+      Substrate expansion increases resolution debt faster than
+      backreaction can fully restore. Photon trail wavelength
+      stretches as ∇Φ decreases at cosmic scale.
+    praestology_anchor: "R4 (Progress) — irreversible substrate expansion"
+  gravitational_redshift:
+    mechanism: >
+      Photon climbing out of high-R region: decoherence rate (oscillation
+      frequency) slows proportionally to φ decrease. Energy E = hν
+      decreases as ν decreases. The photon is not losing energy to an
+      external force — it is running at the local decoherence rate maximum,
+      which is lower in lower φ.
+    praestology_anchor: "rule_5_refraction — R gradient effect on Φ"
+  density_transition_redshift:
+    mechanism: >
+      Photon traverses boundary between substrate regions of differing R.
+      Wake calibrated to prior lower-R conditions enters higher-R environment.
+      Mismatch produces friction — partial dissipation of trail energy.
+    key_prediction: >
+      Redshift magnitude correlates with ΔR gradient steepness, not just
+      ΔR magnitude. A sharp boundary produces more dissipation than a
+      gradual one of equal total density difference. Distinguishable from
+      all current redshift models, which are functions of total density
+      or distance only.
+    distinction_from_tired_light: >
+      Not a revival of tired light (Zwicky 1929, falsified by supernova
+      distances and CMB surface brightness scaling). Density-transition
+      redshift is a boundary effect, not continuous energy loss. Substrate
+      expansion remains primary; this is secondary and separately measurable.
+
+# ─────────────────────────────────────────────
+# DARK MATTER COMPOSITE
+# ─────────────────────────────────────────────
+
+dark_matter_composite:
+  description: >
+    Dark matter as layered fluid dynamics — no exotic particles required.
+    Five independently testable components summing to observed 5-10×
+    visible mass equivalent.
+  praestology_anchor: "R5 (Optimisation) — substrate wake + topology effects"
+  component_stack:
+    component_1_substrate_wake:
+      mechanism: "Galaxy motion drags substrate (rule_5_refraction)"
+      contribution: "~2-3× visible mass equivalent"
+      confirming_note: >
+        Bullet Cluster (Clowe et al. 2006) — gravitational lensing centred
+        on collisionless component. Consistent with substrate wake
+        (collisionless) separating from baryonic gas during collision.
+    component_2a_magnetic_tension:
+      mechanism: "Ordered B-fields anchored by SMBH spin provide distributed centripetal force."
+      contribution: "~1.5-2.5× visible mass equivalent"
+      confirming_note: >
+        Han et al. (2017) — galactic magnetic field mapping shows coherent
+        ordered structure extending to halo. Energy density consistent with
+        dark matter contribution at these scales.
+    component_2b_free_vortex_charge:
+      mechanism: "Unpaired solo vortices (net chirality) generate residual EM binding."
+      contribution: "~0.5-1× visible mass equivalent"
+      open_question: >
+        Requires formal distinction from neutrino solo vortex —
+        minimum winding number derivation (priority 3).
+    component_3_superfluid_phonons:
+      mechanism: "Collective density waves at low acceleration (a₀ = c·H₀)"
+      contribution: "~1-2× at galaxy edges"
+      confirming_note: >
+        MOND (Milgrom 1983) — superfluid phonon mechanism provides physical
+        substrate for MOND-like behaviour. Berezhiani & Khoury (2015) —
+        superfluid dark matter model independently arrives at phonon mechanism.
+    component_4_machian_inertia:
+      mechanism: "Integrated R over causal region enhances local m_eff"
+      contribution: "~1× mass enhancement"
+  total_effect:
+    magnitude: "5-10× visible mass"
+    advantage: >
+      No exotic particles required. All five components independently
+      testable. Each can fail independently without collapsing the framework.
+
+# ─────────────────────────────────────────────
+# PROPULSION MECHANICS
+# ─────────────────────────────────────────────
+
+propulsion_mechanics:
+  photon_drive:
+    name: "Self-Sustained Symmetry Restoration"
+    process: >
+      Dipole alignment creates a leading potential gradient (wake) —
+      a resolution debt the substrate drives to restore at Φ_max.
+      Restoration force propagates forward through the wake, pushing
+      the dipole to terminal velocity c. The photon does not accelerate
+      to c — it is restored to c by the substrate's equilibrium-seeking dynamics.
+    why_c_is_terminal: >
+      c is not an imposed speed limit. It is the rate at which the substrate
+      can restore viability equilibrium — Φ_max. Cannot exceed c because the
+      substrate cannot restore faster than its own maximum flux.
+    confirming_note: >
+      Cherenkov radiation — when charged particles exceed local c in a medium
+      (lower Φ_max than vacuum), the substrate cannot restore fast enough;
+      the excess resolution debt radiates as light.
+
+# ─────────────────────────────────────────────
+# TOPOLOGICAL VALIDATION
+# ─────────────────────────────────────────────
+
+topological_validation:
+  manifold_type: "Open/Non-closed 3-Manifold"
+  status: >
+    Structural convergence — not claimed as formal proof. The framework
+    makes the substrate an open non-compact manifold with continuous
+    Ricci-flow-like surgery (Twitch). By topological theorem, such a
+    manifold cannot contain true singularities. This provides a second,
+    independent grounding for the singularity-free prediction beyond
+    the physical GP saturation argument.
+  dual_grounding:
+    physical: >
+      R5 topological minimum at Planck scale prevents infinite density.
+      GP saturation: as commitment density approaches n_sat, the
+      saturating nonlinearity stiffens the field. Infinite compression
+      is physically impossible; the field saturates asymptotically.
+    mathematical: >
+      Open non-compact manifold with continuous Ricci-flow surgery
+      (Twitch prevents curvature singularity by firing before closure)
+      cannot contain true singularities by Perelman-Hamilton topological
+      theorem. The Twitch is physically what Perelman's surgery is
+      mathematically.
+    convergence: >
+      Two independent derivations — one from substrate physics, one from
+      pure topology — arrive at identical conclusion: no singularities.
+      Priority open derivation: formal proof that Twitch mechanism
+      satisfies Ricci flow surgery conditions exactly — elevates this
+      from structural convergence to formal theorem.
+  black_hole_interior:
+    status: "Genuinely underdetermined — honest open question."
+    what_is_excluded: "Singularity — GP saturation prevents infinite commitment density."
+    what_is_unknown: >
+      The positive topology of the interior. Candidate: a compact
+      sub-manifold of near-zero φ, topologically isolated but not
+      singular — a saturated GP region with internal structure
+      inaccessible to external observers because outward impedance
+      effectively diverges at the horizon.
+    why_inaccessible: >
+      Once outward impedance diverges asymptotically, no resolution
+      event inside can propagate outward. The interior runs on internal
+      process cycles with no coupling to external commitment accumulation.
+      Time inside is genuinely disconnected from time outside —
+      not merely unmeasurable but causally decoupled.
+
+# ─────────────────────────────────────────────
+# EXCLUDED PHENOMENA
+# ─────────────────────────────────────────────
+
+excluded_phenomena:
+  singularities:
+    excluded: true
+    reason: >
+      Infinite density requires compression below Planck grain size —
+      impossible without energy shattering into incoherent background.
+      R5 topological minimum prevents it. Applies inside black holes
+      (saturation state, not singularity) and at Big Bang
+      (high-φ region, not t=0 point). Doubly grounded: physical
+      (GP saturation) and mathematical (open manifold topology).
+  warp_drives:
+    excluded: true
+    reason: >
+      Require negative energy density — no substrate configuration
+      produces negative resolution potential (∇Φ < 0 absolutely).
+      Massive structures generate resolution debt far exceeding what
+      substrate backreaction can restore at Φ_max.
+  wormholes:
+    excluded: true
+    reason: >
+      Require topology change of the substrate — connecting two separated
+      regions through a handle. R4 forbids this: substrate topology
+      accumulates irreversibly. No mechanism exists to create macroscopic
+      substrate topology change without violating R4.
+  time_travel:
+    excluded: true
+    reason: >
+      Time is R4 — accumulated progress. R4 is irreversible by definition:
+      you cannot un-accumulate progress. Backward time travel would require
+      reversing hysteresis globally, which contradicts the ontological basis
+      of time itself. Forward time differential (differential φ) is not
+      travel — it is clocks running at different rates, which GR already
+      describes and which the framework fully accommodates.
+
+# ─────────────────────────────────────────────
+# PARAMETER ECONOMY
+# ─────────────────────────────────────────────
+
+parameters:
+  fundamental_constants: "ℓ_Planck, ħ, c — universal, not theory-specific"
+  theoretical_parameters:
+    α: "Gradient drag coefficient — computable from first principles (priority 1)"
+    β: "Curvature enhancement — computable from first principles"
+    κ: "Stability threshold — computable from first principles"
+    λ: "Coherence decay rate — computable from first principles"
+  observational_constraint:
+    γ: "Dissipation coefficient — from redshift-distance relation"
+    count: "1 single cosmological free parameter"
+  comparison:
+    lambda_cdm:  "20-30 free parameters"
+    praestology: "1 free parameter + 4 derived"
+    reduction:   "~20× fewer free parameters"
+  note: >
+    Parameter economy is necessary but not sufficient for a correct theory.
+    The reduction from 20-30 to 1+4 is significant; falsifiability via
+    testable predictions is the sufficient condition.
+
+# ─────────────────────────────────────────────
+# TESTABLE PREDICTIONS
+# ─────────────────────────────────────────────
+
+testable_predictions:
+  tier_1_falsifiable_existing_data:
+    - prediction: "Surface brightness scaling SB ∝ (1+z)^(−3) vs standard (1+z)^(−4)"
+      test: "Reanalysis of galaxy surface brightness surveys with redshift decomposition."
+
+    - prediction: "Rotation curve asymmetry — leading vs trailing edge ~10-20% difference"
+      test: "High-resolution spectroscopy of edge-on spiral galaxies."
+
+    - prediction: "Magnetic field strength correlates with rotation curve amplitude"
+      test: "Cross-correlation of B-field maps with rotation curve surveys."
+
+    - prediction: >
+        Density-transition redshift: magnitude correlates with ΔR gradient
+        steepness, not just total ΔR.
+      test: >
+        Reanalysis of SDSS/DES with boundary-tagged photon paths. Correlation
+        between large-scale structure boundary sharpness and anomalous redshift residuals.
+      distinguishable_from: "All current redshift models."
+
+    - prediction: >
+        Rb-Cs α discrepancy (1.6×10⁻⁷) encodes different η depression profiles
+        of Z=37 vs Z=55 atomic commitment densities.
+      test: >
+        Measure α across full alkali series (Li, Na, K, Rb, Cs, Fr).
+        Standard model: flat line. Praestology: non-monotonic curve encoding
+        GP saturation function.
+
+  tier_2_supporting:
+    - "Tully-Fisher: v⁴ ∝ M emerges naturally from substrate wake scaling."
+    - "Void galaxies brighter/more diffuse than ΛCDM predicts."
+    - "CMB non-Gaussianity: Kolmogorov turbulence spectrum vs Gaussian initial conditions."
+
+  tier_3_novel:
+    - prediction: "Void time dilation — clocks run faster in voids (higher φ)"
+      test: "Pulsar timing arrays in void vs filament environments."
+      note: "Existing pulsar timing data may be sufficient for preliminary test."
+
+    - prediction: "Environmental α variation — fine structure constant varies with R field"
+      test: "Quasar absorption line measurements in different density environments."
+      note: >
+        Webb et al. (2011) reported possible α variation — Praestology predicts
+        specific correlation with substrate density (not random), and predicts
+        the direction and approximate magnitude from the φ-dependent coupling picture.
+
+    - prediction: "CP violation stronger in dense regions, weaker in voids"
+      test: "B-meson decay asymmetry in different cosmic environments."
+
+    - prediction: "T_H deviation from 1/M at very small black hole mass"
+      test: "Primordial black hole observations if PBHs exist at required mass scale."
+
+    - prediction: >
+        Void galaxies show MORE apparent dark matter than cluster galaxies —
+        counterintuitive but follows directly from the refractive impedance
+        picture. In voids (high φ, low R_eff): the substrate's refractive gain
+        is higher — trajectories bend more strongly per unit mass. Rotation
+        curves of void galaxies should show larger apparent dark matter fractions
+        than rotation curves of cluster galaxies of similar baryonic mass.
+        Standard dark matter particle models predict no environmental dependence
+        of the dark matter fraction for a given baryonic mass. The substrate
+        picture predicts a systematic trend: dark matter fraction increases as
+        environment becomes more void-like (lower commitment density, higher φ).
+      test: >
+        Stratify existing rotation curve surveys (SPARC, MaNGA, THINGS) by
+        large-scale structure environment — void interior, void wall, filament,
+        cluster. Compare apparent dark matter fraction (from rotation curve
+        decomposition) vs baryonic mass across environment bins.
+        Standard model: no trend. Praestology: monotonic increase from
+        cluster → filament → void wall → void interior.
+        This is testable with existing data — the LSS environment classification
+        is available from SDSS/DES void catalogues.
+      note: >
+        The effect is the same mechanism as the MOND acceleration threshold
+        environment-dependence (component_3_superfluid_phonons in
+        dark_matter_composite): the phonon contribution scales with local φ.
+        A void galaxy is in a higher-φ environment → stronger phonon contribution
+        → larger apparent acceleration enhancement → more apparent dark matter.
+        A cluster galaxy is in a lower-φ environment → weaker phonon contribution
+        → less apparent dark matter. The two predictions (MOND environment-
+        dependence and dark matter fraction environment-dependence) are the
+        same substrate effect measured in different ways.
+
+    - prediction: >
+        ISW excess in voids exceeds ΛCDM prediction by factor ~4 —
+        explained by high-φ void substrate adding forward push to photons
+        beyond the standard ISW contribution. Excess scales with void depth.
+      test: >
+        DES/SDSS void catalogues cross-correlated with Planck CMB temperature
+        maps, stratified by void underdensity depth. Excess should increase
+        with void depth following the φ contrast gradient.
+
+    - prediction: >
+        JWST high-z anomalous galaxies preferentially sit behind under-dense
+        LOS structures. Their apparent z is inflated by composite refractive
+        contributions (density-transition + dissolution + regress diffusion)
+        from voids along the line of sight — not by actual early formation.
+      test: >
+        Cross-correlate JWST high-z anomalous galaxy positions with DES/DESI
+        large-scale structure maps. Anomalous-z galaxies (apparently too massive
+        for their ΛCDM-inferred age) should show statistically more void volume
+        along their lines of sight than ΛCDM-consistent galaxies at comparable
+        observed z.
+
+    - prediction: >
+        Radioactive decay rates of unstable nuclei slightly faster in void
+        environments than in dense environments — dissolution kernel R_diss
+        enhanced by lower R_eff in high-φ voids. Effect is small (< 10⁻⁴/yr)
+        but systematic and correlated with local LSS environment.
+      test: >
+        Precision nuclear decay measurements in different gravitational and
+        large-scale structure environments. Cross-correlate with local η estimate
+        from galaxy surveys. Current precision borderline; next-generation
+        atomic clock networks may achieve required sensitivity.
+
+# ─────────────────────────────────────────────
+# DERIVED MODELS — INVENTORY
+# ─────────────────────────────────────────────
+
+derived_models:
+  - key: "vortex_stabilization"
+    file: "vortex-stabilization.yaml"
+    maps_to: "R5 selection of metastable closed topologies; Hopf fibration stability; formation mechanism"
+    status: "Core — foundational for dimensionality and particle persistence"
+  - key: "substrate_potential"
+    file: "substrate-potential.yaml"
+    maps_to: "φ field as primary description; backreaction as impedance unified table;
+              quantum gravity dissolved; arrow of time three levels; Machian inertia"
+    status: "Core — read before this file for new readers"
+  - key: "foundations"
+    file: "foundations.yaml"
+    maps_to: "Four pillars; commitment stress; impenetrability; quantum tunnelling"
+    status: "Core — foundational"
+  - key: "commitment_response_function"
+    file: "commitment-response-function.yaml"
+    maps_to: "GP saturating nonlinearity; formal GP equation; n_sat derivation"
+    status: "Core — GP equation formal specification"
+  - key: "quantum_foundation"
+    file: "quantum-foundation.yaml"
+    maps_to: "QM primitives reframed; wavefunction as resolution landscape;
+              Born rule; entanglement; decoherence"
+    status: "Active — conceptual derivations complete, formal mathematics open"
+  - key: "alpha_rydberg_z0"
+    file: "alpha-rydberg-z0.yaml"
+    maps_to: "Full constant stack: α → m_e → R∞ → ħ → Z₀ → Lamb shift → G"
+    status: "Active — constant stack derivation, α numerical closure pending"
+  - key: "alpha_from_vortex_stability"
+    file: "alpha-from-vortex-stability.yaml"
+    maps_to: "Five candidate α derivation paths; Möbius self-linking;
+              Calugareanu-White derivation path; measurement substrate discrepancy"
+    status: "Active — recognisable derivation path identified, calculation open"
+  - key: "alpha_measurement_discrepancy"
+    file: "alpha-measurement-discrepancy.yaml"
+    maps_to: "α_int vs α_exp; instrument η depression profiles; alkali series prediction"
+    status: "Explanatory — supporting alpha-from-vortex-stability"
+  - key: "bridge_function"
+    file: "bridge-function.yaml"
+    maps_to: "η as primary substrate state variable; c_eff; τ_update; cycle count"
+    status: "Core supporting — η field formal specification"
+  - key: "photon_vortex_dynamics"
+    file: "photon-vortex-dynamics.yaml"
+    maps_to: "Photon as counter-oriented vortex pair; high-energy misalignment;
+              GRB 221009A time delay; effective mass at TeV scale"
+    status: "Proposed — high-confidence extension; GRB evidence cited"
+  - key: "electron2photon"
+    file: "electron2photon.yaml"
+    maps_to: "Pair production/annihilation as topological lock/unlock;
+              positronium para/ortho lifetime ratio from axial orientation"
+    status: "Defined — positronium lifetime derivation is strong quantitative test"
+  - key: "photon_absorption_emission"
+    file: "photon-absorption-emission.yaml"
+    maps_to: "Atomic transitions as vortex mode coupling/decoupling; QED convergence"
+    status: "Convergent with QED"
+  - key: "nuclear_binding"
+    file: "nuclear-binding.yaml"
+    maps_to: "Strong force as topological linkage; stability islands; binding energy"
+    status: "Derived — QCD colour confinement analogue"
+  - key: "beta_decay"
+    file: "beta-decay.yaml"
+    maps_to: "Weak force as chirality-sensitive resolution path; parity violation"
+    status: "Hypothesis — stress-testing against parity violation data"
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# Honest accounting. Priority ordering reflects
+# theoretical significance and dependency structure.
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      α numerical value from Möbius self-linking number — compute writhe Wr
+      of equilibrium 720° Möbius vortex in GP field using Calugareanu-White
+      theorem. Check whether self-energy ratio gives N_stable = 10.90498.
+      If confirmed: α_int⁻¹ = 4π³ + π² + π is the bare topological coupling.
+      Single highest-priority derivation — α closure unlocks entire constant stack.
+    - >
+      Formal proof that Twitch mechanism satisfies Ricci flow surgery conditions —
+      elevates topological singularity-free result from structural convergence
+      to formal theorem.
+    - >
+      Black hole interior topology — compact sub-manifold or other classification.
+      Requires formal development; resolves information paradox candidate.
+    - >
+      Derivation of c as Φ_max from R5 saturation constraint —
+      formal mathematical form with numerical value.
+
+  priority_2:
+    - >
+      Formal derivation of M_W and M_Z from nuclear-scale S_lock value.
+      Converts weak force mass values from post-dictions to predictions.
+    - >
+      Formal mapping of strong force flux tube topology (three circulation
+      plane orientations) onto SU(3) algebra. Completes QCD correspondence.
+    - >
+      Grand unification — single topological description of strong + electroweak.
+      Predict running coupling convergence scale from substrate parameters.
+    - >
+      Gravity-topology unification — show substrate geometry (gravity) and
+      substrate topology (other three forces) are two aspects of φ field.
+      This is the quantum gravity dissolution made fully explicit.
+    - >
+      Formal derivation of Heisenberg uncertainty ħ/2 from engine/trail
+      vortex geometry and Planck scale grain size.
+    - >
+      Scale-dependent overlap functional F(q²) for running coupling —
+      mechanistic derivation of QED running from self-depression profile.
+    - >
+      Formal derivation of theoretical parameters α, β, κ, λ from substrate
+      equations — currently stated as computable, not yet computed.
+
+  priority_3:
+    - >
+      Formal distinction between neutrino and dark matter solo vortex —
+      minimum winding number derivation.
+    - >
+      Complete particle spectrum from knot/link invariant classification —
+      map all stable topologies to known particles; predict any missing entries.
+    - >
+      Inertial anisotropy prediction — compute inertia tensor modification
+      from nearby massive objects via φ_background asymmetry. Predict
+      Jupiter's contribution to Earth's inertial anisotropy.
+    - >
+      Substrate energy harvesting conditions — coupling geometry and threshold
+      ∇Φ for net energy extraction without violating R5 metastable zone.
+
+# ─────────────────────────────────────────────
+# CROSS-DOMAIN REFERENCES
+# ─────────────────────────────────────────────
+
+references:
+  core: "../specifications.yaml"
+  related:
+    - "../consciousness/specifications.yaml  # phase-locking ρ ↔ vortex coherence; Ξ amplification in neural tissue"
+    - "../biology/specifications.yaml        # bounded η-regions as precondition for self-sustaining loops"
+    - "../ethics/specifications.yaml         # R5 viability as foundation for ethical framework"
+
+related_issues:
+  - "foundational/F01_axiom_circularity — H1-H5 logical realism assumption"
+  - "boundaries/B03_infinite_regress — resolution meta-levels"
+  - "foundational/F03_alogical_domain — whether topology is inside or outside Praestology's logical scope"
+  - "intersectional/physics_consciousness/001_substrate_complexity_threshold"
+  - "foundational/F26_substrate_as_potential_field_primary"
+  - "foundational/F28_arrow_of_time_three_levels"
+  - "foundational/F29_quantum_gravity_dissolved_not_solved"
+  - "foundational/F30_alpha_as_rate_of_arrow_of_time"
+  - "foundational/F32_backreaction_as_impedance_unified"
+  - "foundational/F52_alpha_bare_vs_measured_tik_correction"
+  - "foundational/F56_measurement_substrate_discrepancy"
+  - "foundational/F58_pi_series_as_bare_alpha_no_self_depression"
+  - "intersectional/physics/076_N_stable_from_mobius_gp_eigenvalue"
+  - "intersectional/physics/078_mobius_self_linking_number_derivation"
+  - "intersectional/physics/081_rb_cs_alpha_discrepancy_atomic_commitment"
+  - "intersectional/physics/083_alkali_series_alpha_vs_Z_test"
