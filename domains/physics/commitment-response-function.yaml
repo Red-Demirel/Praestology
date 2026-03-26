@@ -548,8 +548,323 @@ black_hole_saturation:
     sufficiently precise event horizon imaging across
     different environments.
 
+  black_hole_merger_dynamics:
+    statement: >
+      Black hole mergers are more naturally understood in
+      Praestology than in standard GR because the key
+      observational puzzles — size discrepancy, gravitational
+      wave energy budget, mass gap — all resolve from the
+      commitment density picture rather than requiring
+      exotic mass-energy accounting.
+
+    size_discrepancy_from_commitment_not_mass: >
+      When LIGO detects a merger between two black holes
+      of apparent masses M₁ and M₂, the pre-merger sizes
+      (Schwarzschild radii r_s = 2GM/c²) do not simply
+      add. The post-merger object is smaller than r_s1 + r_s2.
+      In standard GR this is explained by gravitational
+      wave energy loss — the system radiates ~5% of total
+      mass-energy. The explanation works numerically but
+      requires treating radiated energy as literal mass loss.
+      In the commitment density picture: the two black holes
+      are two commitment density saturation regions. Their
+      sizes are set by their commitment density profiles,
+      not only by their mass. When they merge, the combined
+      commitment density field does not simply add — the
+      overlapping gradient regions cancel (as described in
+      high_mass_infall_and_mergers above), reducing the
+      total topological overhead of maintaining two separate
+      saturation boundaries. The post-merger object is
+      smaller not because mass was lost but because the
+      commitment overhead of two separate boundaries was
+      consolidated into one. Two saturation surfaces merge
+      into one — releasing the boundary commitment as
+      gravitational waves.
+
+    gravitational_waves_as_overhead_reduction: >
+      The fusion analogy is precise and instructive:
+      Nuclear fusion: two nuclei merge → the binding energy
+        of the combined nucleus is lower than the sum of the
+        two separate binding energies → mass deficit →
+        energy released as photons and kinetic energy.
+        The released energy is the reduction in topological
+        overhead of nuclear commitment when two separate
+        nuclei become one.
+      Black hole merger: two saturation regions merge →
+        the commitment overhead of maintaining two separate
+        horizon boundaries is lower than the sum of the
+        two individual boundary commitments → boundary
+        commitment deficit → energy released as gravitational
+        waves.
+      In both cases: the released energy is not mass being
+      converted to energy (E = mc² as a conversion formula).
+      It is topological overhead reduction — the commitment
+      cost of maintaining separate boundary structures
+      released when those structures merge into a more
+      efficient single configuration. R5 selects the
+      lower-overhead merged configuration.
+      The ~5% energy release in typical black hole mergers
+      encodes the fractional reduction in boundary commitment
+      overhead between two separate horizons and one merged
+      horizon. In principle derivable from the GP field
+      geometry of two merging saturation surfaces.
+
+    mass_gap_from_commitment_transition: >
+      The 2-5 solar mass gap between neutron stars and
+      stellar black holes is not a gap in mass — it is a
+      gap in commitment density regime. Below ~2 M_☉:
+      nuclear matter topology can maintain a stable
+      neutron star GP equilibrium — high commitment but
+      below the saturation threshold for horizon formation.
+      Above ~5 M_☉: the commitment density crosses n_sat
+      and a stable horizon gradient forms. Between these:
+      the GP field is in a transitional regime where neither
+      neutron star equilibrium nor stable horizon gradient
+      is achievable — configurations in this range are
+      unstable and rapidly transition to one or the other.
+      The gap is not empty of mass — it is unstable to
+      commitment density fluctuations. Objects formed in
+      this range immediately collapse to ~5 M_☉ or are
+      disrupted to below ~2 M_☉.
+      Environmental dependence: the gap boundaries shift
+      with local n_sat(r) — in void environments (lower
+      n_sat) the gap may be wider; in dense environments
+      (higher n_sat) narrower. Systematic variation of
+      mass gap boundaries with large-scale structure
+      environment is a specific prediction.
+
+    ringdown_as_gp_relaxation: >
+      The gravitational wave ringdown after merger —
+      quasi-normal modes decaying exponentially — is the
+      GP field relaxing to the new post-merger saturation
+      equilibrium. The quasi-normal mode frequencies are
+      the oscillation frequencies of the merged commitment
+      density field around its new equilibrium configuration.
+      These are derivable from the GP equation's linearised
+      spectrum around the post-merger stationary solution —
+      not free parameters but consequences of the substrate
+      dynamics. If the GP quasi-normal mode frequencies
+      match the observed ringdown frequencies from LIGO,
+      this is strong confirmation of the commitment density
+      picture of black hole structure.
+
+    intermediate_mass_black_holes: >
+      The observed population of intermediate mass black
+      holes (IMBH, 10²-10⁵ M_☉) is sparse and their
+      formation mechanism is debated. In the commitment
+      density picture: IMBHs form in environments where
+      the local n_sat supports the intermediate commitment
+      density range — neither the dense cluster environment
+      that grows supermassive black holes nor the sparse
+      field environment of stellar black holes. Their
+      rarity encodes the rarity of environments with
+      intermediate local n_sat. This connects IMBH
+      statistics to large-scale structure environment —
+      a testable correlation.
+
 # ─────────────────────────────────────────────
-# PART 3: CONSTANT REFINEMENTS
+# INTERGALACTIC DISSOLUTION AND BH EXTENSIONS
+# Environmental sensitivity and path-dependent
+# tired-light redshift from R_diss
+# ─────────────────────────────────────────────
+
+intergalactic_and_bh_dissolution_extensions:
+  name: "Inter-Galactic Dissolution and Black-Hole Environmental Sensitivity"
+  version: "0.1 — Proposed refinement; core-invariant"
+  status: "Proposed — mechanisms identified; quantitative calibration open"
+
+  intergalactic_dissolution:
+    statement: >
+      Low local resistance in voids (high η, low R_eff) accelerates
+      R_diss for weakly protected committed topology. The gradual
+      return of potential to the Praegress reservoir produces:
+      (a) A path-dependent redshift contribution — photons traversing
+          void regions accumulate additional redshift from the
+          dissolution pressure in those regions.
+      (b) A diffuse outward pressure from the released potential —
+          the substrate breathing outward from voids, contributing
+          to the apparent expansion signal.
+      Both effects were previously attributed to cosmic expansion
+      or dark energy. They are the dissolution kernel operating
+      in low-resistance environments.
+    link: "domains/cosmos/cosmological-expansion-critique.yaml"
+
+  tired_light_path_integral:
+    statement: >
+      Cumulative dissolution along photon paths produces a
+      path-dependent redshift component — distinct from
+      density-transition redshift (boundary-crossing) but
+      related. Where density-transition redshift is a discrete
+      boundary effect, dissolution redshift is a continuous
+      low-level energy leak from the substrate's R_diss in
+      low-R_eff void regions.
+    formula: >
+      Δz_diss ≈ ∫_path ε · f(R_eff(s)) · |Ψ(s)|² ds
+      Path integral of dissolution rate along the photon path.
+      Amplified in voids (high f from low R_eff).
+      Suppressed in filaments (low f from high R_eff).
+    distinction_from_tired_light: >
+      NOT the Zwicky tired light mechanism (continuous energy loss
+      proportional to path length, falsified by surface brightness
+      scaling). This is path-dependent dissolution: varying rate
+      along the path, concentrated in void regions, correlated
+      with large-scale structure. The two produce different
+      redshift-distance relations and different surface brightness
+      predictions — distinguishable.
+    prediction: >
+      The dissolution redshift component should correlate with
+      the integrated void fraction along the line of sight —
+      photon paths through more void volume accumulate more
+      Δz_diss than paths through the same distance but through
+      more filaments. Testable with precision redshift surveys
+      cross-correlated with void catalogues (DESI, Euclid).
+
+  bh_environmental_migration:
+    statement: >
+      When a black hole migrates from a high-R_eff environment
+      (dense cluster) to a low-R_eff environment (void), or
+      when the surrounding commitment density decreases (cluster
+      dispersal, AGN feedback evacuating the environment), the
+      local n_sat drops. The black hole's existing commitment
+      density profile now exceeds the new local n_sat — it is
+      over-committed relative to its environment.
+    consequence: >
+      The excess commitment relative to the new local n_sat
+      spikes the topological fatigue parameter τ_diss — the
+      black hole's commitment density is now in a regime of
+      higher environmental mismatch, which accelerates R_diss
+      at the horizon boundary. This produces:
+      Enhanced jet activity — the R_diss spike at the horizon
+        generates episodic topological release via the jet channel.
+      Increased flare frequency — internal commitment density
+        fluctuations become more pronounced as the equilibrium
+        shifts to a new lower n_sat configuration.
+      Partial evaporation signatures — enhanced Hawking-like
+        radiation as horizon permeability temporarily increases
+        during the equilibrium readjustment.
+    observable: >
+      Black holes in recently dispersed cluster environments
+      (post-merger clusters, AGN-feedback-evacuated regions)
+      should show elevated jet and flare activity compared to
+      black holes in stable dense environments or stable voids.
+      The activity should decay on the τ_diss timescale as the
+      black hole reaches its new environmental equilibrium.
+
+  dark_energy_reinterpretation: >
+    The positive pressure from controlled dissolution of committed
+    potential in voids — the substrate breathing — is a component
+    of the observed acceleration signal. Combined with the
+    density-transition redshift (boundary-crossing) already in
+    cosmological-expansion-critique.yaml, the full picture:
+    (a) Density-transition redshift: discrete, at boundaries
+    (b) Dissolution redshift: continuous, in void interiors
+    (c) Void-outward substrate pressure: from released potential
+    All three contribute to what was interpreted as dark energy
+    and accelerating expansion. None require Λ as a fundamental
+    constant. All are consequences of R_diss operating in the
+    low-R_eff void environment.
+
+  overdetermined_calibration_gate: >
+    The (ε, τ_diss) calibration is constrained by five
+    independent observational inputs — two parameters, five
+    constraints. Strongly overdetermined; rigorous falsification test:
+    Constraint 1: proton lifetime > 10³⁴ yr
+    Constraint 2: ¹⁴C half-life = 5730 yr
+    Constraint 3: cosmic renewal timescale ~ 10-100 Gyr
+    Constraint 4a: observed void-redshift rate from Δz_diss integral
+    Constraint 4b: BH jet/flare statistics from R_diss spike timescale
+    Constraint 5: angular broadening statistics from regress diffusion
+    If no (ε, τ_diss) pair simultaneously satisfies all five,
+    the dissolution kernel requires structural revision.
+
+# ─────────────────────────────────────────────
+# REGRESS DIFFUSION LENS
+# High-φ substrate as a distributed diverging lens
+# ─────────────────────────────────────────────
+
+regress_diffusion_lens:
+  name: "Regress-Effect — High-φ Diffusion Lens on Photons"
+  version: "0.1 — Proposed refinement; core-invariant"
+  status: "Proposed — mechanism identified; quantitative derivation open"
+
+  distinction_from_dissolution_redshift: >
+    Dissolution redshift is an energy loss mechanism — the photon
+    loses energy to the Praegress reservoir via R_diss in void regions
+    (Δz, frequency shift). The regress diffusion lens is geometrically
+    distinct: not energy loss but wavefront broadening. The photon's
+    transverse spatial extent increases as it traverses high-φ void
+    regions, producing apparent dimming and angular broadening without
+    frequency shift. Both mechanisms coexist; confusing them is the
+    standard model error that collapses all dimming into a single
+    expansion signal.
+
+  mechanism:
+    transverse_tik_pull: >
+      In a high-φ void, the substrate is near-uniform free potential —
+      no strong ∇C gradient to bias the Tik background. The Tik
+      fluctuations are omnidirectional. Their transverse components
+      exert gentle, random transverse displacements on the photon's
+      vortex pair — not along the propagation direction (which would
+      shift frequency) but perpendicular to it (which broadens the
+      wavefront). Each Tik event adds a small random δr⊥. Over path
+      length L through void regions, these accumulate as a random walk:
+        σ⊥ ~ √(L_void / λ_Tik) · δr_Tik
+      The wavefront broadens as √L_void — a distributed diverging lens.
+    dense_regions: >
+      In dense regions (low φ, high commitment), the Tik background
+      is suppressed relative to the commitment structure. The ∇C
+      gradient dominates — gravitational convergence, not diffusion.
+      The regress diffusion effect is negligible in matter-rich
+      environments. It is a void-specific phenomenon.
+
+  observational_signatures:
+    angular_broadening: >
+      Distant point sources traversing long void paths appear slightly
+      resolved. Angular broadening scales as √L_void / d_angular.
+      For radio waves (large λ): effect suppressed. For optical/UV
+      (small λ): larger effect. Future space-VLBI and ngVLA may
+      detect as anomalous angular size vs redshift for sources
+      behind identified voids.
+    apparent_dimming_without_redshift: >
+      Wavefront broadening reduces surface brightness (∝ θ_diff²)
+      without shifting frequency. Contributes to supernova brightness
+      deficit alongside dissolution redshift. Three contributions
+      to dimming now identified:
+        (a) Gravitational: standard distance modulus
+        (b) Dissolution: Δz_diss energy loss in voids
+        (c) Regress diffusion: Δθ_diff angular broadening in voids
+      Separating them requires measuring redshift, angular size, and
+      surface brightness independently — achievable with Rubin LSST
+      and Euclid for large samples.
+    void_path_dependence: >
+      Broadening is stronger along lines of sight through more void
+      volume. Sources behind cosmic voids should show more angular
+      broadening than sources at the same redshift behind filament-
+      rich paths. Testable by cross-correlating angular sizes with
+      void catalogues.
+
+  relation_to_dual_r: >
+    Three photon-path effects now formally distinct:
+    R_forward (dense): ∇C converging lens — gravitational lensing.
+    R_diss (void): dissolution energy loss — mild frequency shift.
+    Regress diffusion (high-φ Tik): wavefront broadening — apparent
+      dimming without frequency shift.
+    Together these replace "cosmological redshift + dark energy" with
+    three physically distinct, separately measurable effects.
+
+  open_numerical_tasks:
+    - >
+      Derive θ_diff from integrated high-φ exposure along z ≈ 0.5
+      path. Requires Tik background amplitude at η ≈ 1, δr_Tik from
+      ξ and GP fluctuation spectrum, effective void fraction.
+      Predict angular broadening for Type Ia supernova at z = 0.5.
+    - >
+      Separate three dimming contributions. Show their sum reproduces
+      observed brightness deficit without dark energy using same
+      (ε, τ_diss) from nuclear calibration.
+    - >
+      Incorporate as Constraint 5 in overdetermined calibration gate.
+
 # ─────────────────────────────────────────────
 constant_refinements:
   alpha: >
