@@ -234,13 +234,17 @@ domain_parameters:
     definition: "How accurately the sender's distinction is preserved in the transmitted signal."
     relation_to_core: "R2 (Structure) — how much of the original distinction survives encoding."
 
+
   - name: "Semantic Drift (ψ)"
-    definition: >
-      Rate at which shared hysteresis diverges between sender and receiver
-      over time, reducing σ.
-    relation_to_core: "R4 (Progress) — each agent's hysteresis accumulates independently;
-                       without ongoing phase-locking, models diverge."
-    note: "Language change, cultural drift, and generational gaps are all ψ phenomena."
+  definition: >
+  Rate at which shared hysteresis diverges between sender and receiver
+  over time, reducing σ. Driven by Regress (hysteresis degradation)
+  and independent Praegress (each agent accumulates new resolutions).
+  relation_to_core: >
+  R4 (Progress) — each agent's hysteresis accumulates independently;
+  Regress — hysteresis degrades without reinforcement.
+  Without ongoing phase-locking (C6), models diverge.
+  note: "Language change, cultural drift, and generational gaps are all ψ phenomena."
 
   - name: "Recursion Depth (Cm_Ρ)"
     definition: "Number of meta-communicative layers a system can sustain — communication about communication."
