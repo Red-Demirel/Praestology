@@ -1,4 +1,4 @@
-# F02 — Overdetermined Dissolution Calibration Test (Priority 1)
+# 002 — Overdetermined Dissolution Calibration Test (Priority 1)
 
 **Status:** Open — Deliberate falsification gate  
 **Priority:** 1 (blocks alpha computation and sextuple convergence closure)  
@@ -47,6 +47,6 @@ R1–R5 remain invariant. The test protects the framework against hidden tuning 
 ---
 
 **This is issue #2 in /issues/foundational/**  
-(After F01_axiom_circularity)
+(After 001_axiom_circularity)
 
 Ready to commit.
