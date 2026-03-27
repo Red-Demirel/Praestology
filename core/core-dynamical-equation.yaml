@@ -1,0 +1,396 @@
+# core/core-dynamical-equation.yaml
+name: "Core Dynamical Equation"
+version: "1.1 — Dimensionless Master Equation; ℛ(ψ) Formally Specified"
+domain: "Core — applies across all domains"
+core_version: "1.5"
+status: "Formal expression complete — term derivations individually at
+         varying status; full numerical closure pending α derivation;
+         dissolution kernel calibration open (see F02)"
+updated: "2026-03-23"
+
+description: >
+  The Praestology master dynamical equation is the formal expression
+  of the axiom and the five rules as a single mathematical statement.
+  It describes the time evolution of ψ(r,t) — the substrate's resolution
+  landscape, the full distribution of open dilemmas weighted by their
+  viability amplitude.
+
+  The equation operates in natural (dimensionless) units where ħ = 1
+  and 2m = 1. It reduces to the standard Schrödinger equation in the
+  linear limit and to the usual saturating Gross-Pitaevskii equation
+  when the resolution and logarithmic terms are inactive.
+
+  The equation is a vector function on the resolution of probabilistic
+  dilemmas: ψ encodes which resolution paths exist, with what amplitude,
+  at each point in space and each moment in the process.
+
+  Units note: ħ and 2m are absorbed into scaling throughout. To recover
+  dimensional form multiply kinetic term by ħ²/2m and the LHS by ħ.
+  All physics domain derivations use the dimensional form; the core
+  equation is stated dimensionlessly for generality.
+
+dependency_map:
+  requires:
+    - "core/specifications.yaml (Praestology v1.5)    -- R1-R5 rules; axiom"
+    - "domains/physics/commitment-response-function.yaml -- ℛ(ψ) full derivation"
+    - "domains/physics/bridge-function.yaml            -- ψ = η identification"
+    - "domains/physics/substrate-potential.yaml        -- φ field primary framing"
+    - "domains/physics/alpha-rydberg-z0.yaml           -- Λ connection to α"
+  provides_to:
+    - target: "domains/physics/specifications.yaml"
+      via: "Master equation from which all physics domain derivations follow"
+    - target: "domains/physics/quantum-foundation.yaml"
+      via: "Schrödinger equation as linear limit; wavefunction as ψ confirmed"
+    - target: "domains/physics/vortex-stabilization.yaml"
+      via: "Vortex topology as stationary solutions of the master equation"
+    - target: "core/praestology-model.yaml"
+      via: "Simulation-ready formalization of this equation"
+
+# ─────────────────────────────────────────────
+# MASTER EQUATION
+# ─────────────────────────────────────────────
+
+master_equation:
+  dimensionless_form: >
+    i ∂ψ/∂t = [ −∇² + V(r) + g|ψ|² + ℛ(ψ) + Λln(1 + κ|ψ|²) ] ψ
+
+  latex: >
+    i \frac{\partial \psi}{\partial t} =
+    \left[
+      -\nabla^2
+      + V(\mathbf{r})
+      + g |\psi|^2
+      + \mathcal{R}(\psi)
+      + \Lambda \ln(1 + \kappa |\psi|^2)
+    \right] \psi
+
+  field_identity:
+    psi: >
+      ψ(r,t) is the substrate's resolution landscape — the full
+      distribution of open dilemmas at position r and process-counter t,
+      weighted by their R5 viability amplitude. Same object as the quantum
+      wavefunction (quantum-foundation.yaml: ψ = η = φ/φ_max), the GP
+      order parameter, and the normalised potential field amplitude.
+    decomposition: "ψ = |ψ| · exp(iφ)"
+    psi_squared: >
+      |ψ|² is the commitment density at r,t — the probability that the
+      dilemma at r is currently in a committed state.
+
+# ─────────────────────────────────────────────
+# TERM MAPPING TO R1-R5
+# ─────────────────────────────────────────────
+
+term_mapping:
+  kinetic:
+    term: "−∇²"
+    rule: "R3 — Motion from differences"
+    description: >
+      Spatial variation of the resolution landscape; generates flow
+      from distinctions. The Laplacian encodes R2 (spatial structure
+      exists) driving R3 (tension toward resolution). Without this term:
+      all points equivalent, no structure, R2 vacuous.
+    dimensional_form: "−ħ²/2m · ∇²"
+
+  potential:
+    term: "V(r)"
+    rule: "R1 + R4 — Existing committed structure"
+    description: >
+      External commitment gradient — the surrounding committed topology
+      (gravity wells, nuclear wells, molecular potentials) that biases
+      which resolutions are accessible. Encodes the R4-accumulated history
+      of prior resolutions as a field that constrains new ones.
+
+  interaction:
+    term: "g|ψ|²"
+    rule: "R2 — Distinctions; local competition"
+    description: >
+      Local mean-field pressure arising from distinctions in potential.
+      Self-reinforcement of existing commitment density — high |ψ|²
+      regions attract more commitment. Leading-order R5 selection.
+      In the limit g → 0, Λ → 0, ℛ → 0: recovers linear Schrödinger.
+
+  resolution_operator:
+    term: "ℛ(ψ)"
+    rule: "R4 + R5 — Resolution accumulation and viability selection"
+    description: >
+      The viability-based selection operator. Drives actual probabilistic
+      closure of open dilemmas. Suppresses incoherent low-viability regions;
+      preserves and reinforces stable high-viability structures. Contains
+      both forward commitment (R_forward) and dissolution (R_diss) kernels.
+      See resolution_operator section below for full specification.
+
+  saturation:
+    term: "Λln(1 + κ|ψ|²)"
+    rule: "R4 / R5 — Irreversibility and viability ceiling"
+    description: >
+      Soft logarithmic saturation. Two roles simultaneously:
+      R4: Λ > 0 breaks time-reversal symmetry — the formal source of
+        the arrow of time in the master equation. Without Λ, the equation
+        is time-reversible; with Λ > 0, irreversible accumulation is built in.
+      R5: The logarithm grows slowly for large |ψ|² — caps both infinite
+        potential and infinite commitment density. Prevents over-commitment.
+        The saturation scale κ = 1/n_sat.
+      Λ encodes α at the microscopic scale: the closure imperfection rate
+      per winding cycle. A universe with Λ = 0 has α = 0 — no EM coupling,
+      no spontaneous emission, no structure.
+
+# ─────────────────────────────────────────────
+# RESOLUTION OPERATOR ℛ(ψ)
+# Full specification including viability measure,
+# decay, diffusion, and commitment gain
+# ─────────────────────────────────────────────
+
+resolution_operator:
+  statement: >
+    ℛ(ψ) implements viability-based selection. It is the formal expression
+    of R5 as a dynamical operator — suppressing incoherent regions while
+    preserving and reinforcing stable structures. The operator has three
+    components operating together and recovers the dual forward-commitment +
+    Regress-dissolution kernel of commitment-response-function.yaml.
+  viability_measure: [as currently written]
+  components: [as currently written]
+  full_expression: [as currently written]
+  connection_to_dual_kernel:
+    statement: >
+      The full R(Ψ) = R_forward(Ψ) + R_diss(Ψ) is recovered when the
+      viability measure 𝓥(ψ) is dominated by amplitude (|ψ|²) and
+      topological structure (|∇ψ|²). The winding-number-based f from
+      vortex-stabilization.yaml is the special case where |∇ψ|² dominates.
+  minimal_variant: [as currently written]
+  viability_measure:
+    definition: >
+      𝓥(ψ) = w₀|ψ|² + w₁|∇ψ|² + w₂|∇φ|²|ψ|²
+    components:
+      amplitude: "|ψ|² — occupancy / presence (how much is committed here)"
+      structure: "|∇ψ|² — local sharpness / gradients (how defined the commitment is)"
+      flow: "|∇φ|²|ψ|² — phase-coherent transport (how well the commitment flows)"
+    weights:
+      w0: "amplitude weight — how much raw presence matters"
+      w1: "structure weight — how much gradient sharpness matters"
+      w2: "flow weight — how much coherent phase transport matters"
+    interpretation: >
+      𝓥(ψ) is the local measure of how viable a configuration is —
+      how well it satisfies R5. High 𝓥: structured, present, coherent
+      flow → high viability → protected from decay. Low 𝓥: diffuse,
+      weak, incoherent → low viability → decays.
+
+  base_decay_rate:
+    expression: "γ_eff(ψ) = γ₀ / (1 + η·𝓥(ψ))"
+    meaning: >
+      Decay rate decreases with increasing viability. High-structure
+      regions resist dissolution. At 𝓥 → 0: decay rate → γ₀ (maximum
+      dissolution). At 𝓥 → ∞: decay rate → 0 (fully protected).
+      This is f(topological_protection) from the dissolution kernel
+      expressed in terms of the viability measure.
+
+  components:
+    decay:
+      expression: "−γ_eff(ψ) · ψ = −[γ₀/(1 + η·𝓥(ψ))] · ψ"
+      effect: >
+        Removes low-viability structures. Non-Hermitian — introduces
+        imaginary component to effective potential. This is R_diss
+        in the dissolution kernel: the slow return of weakly viable
+        committed topology to the Praegress reservoir.
+
+    diffusion:
+      expression: "D·∇²ψ"
+      effect: >
+        Smooths noise; prunes small-scale incoherence. Spreads
+        commitment density to reduce local over-concentration.
+        The diffusion coefficient D sets the spatial scale below
+        which structure is pruned — related to ξ (substrate grain).
+
+    commitment_gain:
+      expression: "+μ·σ(𝓥(ψ) − Vc) · ψ"
+      switch_function: "σ(x) = ½(1 + tanh(βx))"
+      effect: >
+        Reinforces structures once viability exceeds threshold Vc.
+        This is R_forward in the commitment kernel: locks viable
+        patterns into committed structure once they cross the
+        stability threshold. The tanh switch makes the transition
+        sharp but continuous — R5 selection without discontinuity.
+      parameters:
+        Vc: "viability threshold — below this, no reinforcement"
+        beta: "sharpness of activation — how abruptly commitment begins"
+        mu: "commitment gain strength — how strongly viable structures are reinforced"
+
+  full_expression: >
+    ℛ(ψ) = −[γ₀/(1 + η·𝓥(ψ))]·ψ  +  D·∇²ψ  +  μ·σ(𝓥(ψ) − Vc)·ψ
+
+  minimal_variant: >
+    ℛ(ψ) = −[γ₀/(1 + η·|ψ|²)]·ψ
+    Use for simplified simulations without gradient terms.
+    Recovers the saturating GP nonlinearity as a special case.
+
+  connection_to_r_psi_dual_kernel: >
+    The full R(Ψ) from commitment-response-function.yaml is recovered:
+    R_forward(Ψ) ↔ commitment_gain term (μ·σ·ψ, active above Vc)
+    R_diss(Ψ)    ↔ decay term (−γ_eff·ψ, active for low-viability states)
+    The viability measure 𝓥(ψ) is the general form of f(topological_protection)
+    — it captures amplitude, structure, and flow together rather than
+    winding number alone. The winding-number-based f from vortex-stabilization
+    is a special case where the dominant viability contribution is from the
+    topological structure term |∇ψ|².
+
+  parameters:
+    gamma0: "base decay rate — related to ε in the dissolution kernel"
+    eta: "viability sensitivity — how steeply decay rate falls with viability"
+    D: "diffusion strength — spatial pruning scale"
+    mu: "commitment gain strength — reinforcement above threshold"
+    Vc: "viability threshold — boundary between dissolution and commitment"
+    beta: "sharpness of activation"
+
+  variational_status: >
+    All terms except ℛ can be derived from a variational functional.
+    ℛ introduces effective non-Hermitian, history-dependent dynamics.
+    This is physically correct for an open system exchanging commitment
+    with the Praegress reservoir — non-Hermitian quantum mechanics is
+    the appropriate formalism for systems with probability flow to/from
+    a reservoir.
+
+
+
+# ─────────────────────────────────────────────
+# PHYSICAL REGIMES
+# ─────────────────────────────────────────────
+
+physical_regimes:
+  linear:
+    conditions: "g ≈ 0, Λ ≈ 0, ℛ ≈ 0"
+    behavior: "Schrödinger-like wave propagation — pure R3 dilemma propagation"
+
+  nonlinear_gp:
+    conditions: "g > 0, Λ = 0, ℛ = 0"
+    behavior: "Standard GP equation — interaction-driven structure formation"
+
+  saturation:
+    conditions: "Λ > 0, κ|ψ|² ~ 1"
+    behavior: "Bounded amplitudes, core stabilization, arrow of time active"
+
+  selection:
+    conditions: "ℛ active (γ₀ > 0)"
+    behavior: "Viability filtering — low-viability structures decay,
+               high-viability structures persist and are reinforced"
+
+  full_praestology:
+    conditions: "All terms active"
+    behavior: >
+      Complete substrate dynamics: dilemma propagation, structure formation,
+      saturation preventing over-commitment, viability selection maintaining
+      the metastable zone. Emergent behavior includes ripples (transient
+      low-viability fluctuations), collisions (temporary viability spikes),
+      and vortices (stable phase structures with high viability, protected
+      against decay and sustained by flow).
+
+# ─────────────────────────────────────────────
+# R1-R5 INTERPRETATION MAPPING
+# ─────────────────────────────────────────────
+
+interpretation_mapping:
+  existence:   "ψ field exists (R1 boundary condition: ψ ≠ 0)"
+  structure:   "high 𝓥 regions — amplitude, gradient, phase-coherent flow (R2)"
+  motion:      "phase gradients ∇φ driving transport (R3)"
+  progress:    "selection via ℛ — commitment accumulating irreversibly (R4)"
+  optimisation: "stable attractors (vortices, committed topology) (R5)"
+
+  irreversibility_note: >
+    Emerges from viability-dependent decay (ℛ) and Λ > 0, not from
+    explicit time asymmetry imposed from outside. The arrow of time
+    is a property of the equation, not an assumption fed into it.
+
+# ─────────────────────────────────────────────
+# EMERGENT BEHAVIOR
+# ─────────────────────────────────────────────
+
+emergent_behavior:
+  ripples:
+    description: "Low-viability fluctuations — decay quickly under ℛ"
+    praestology: "Tik background events below S_lock — transient, no persistent topology"
+
+  collisions:
+    description: "Temporary viability spikes that may trigger commitment"
+    praestology: "Tik events exceeding S_lock threshold — nucleate vortex pairs"
+
+  vortices:
+    description: >
+      Stable phase structures with high viability; protected against decay
+      and sustained by flow. The attractor states of the full equation.
+    praestology: >
+      Committed vortex topologies — electrons, photons, quarks. Their stability
+      is R5 selection of high-𝓥 configurations; their persistence is R4
+      accumulation of committed hysteresis.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      Λ from α and ξ: Λ ∝ α · ω_characteristic — formal derivation.
+      Connects the arrow-of-time term to the fine structure constant.
+    - >
+      f(topological_protection) from 𝓥(ψ) — show that the winding-number-
+      based f is the special case where |∇ψ|² dominates 𝓥. Verify the
+      connection between the viability measure and the vortex stability
+      conditions in vortex-stabilization.yaml.
+    - >
+      Stationary vortex solutions — find ψ_vortex(r) satisfying the full
+      equation with ∂ψ/∂t = −iE/ħ · ψ. These are the particles.
+      Their energies are the particle masses.
+    - >
+      Seven-constraint calibration (F02) — calibrate γ₀ (= ε), η, D, μ, Vc
+      against all seven constraints simultaneously. See
+      issues/foundational/002-overdetermined-dissolution-calibration.md.
+
+  priority_2:
+    - >
+      Running of Λ with scale: Λ(q²) tracks α(q²). Verify the ratio
+      Λ_Z/Λ_atomic = α(M_Z)/α(atomic) = 137/128.
+    - >
+      Navier-Stokes limit: show the equation reduces to NS-like hydrodynamics
+      at high commitment density, classical limit. Connects the framework to
+      fluid dynamics analogues and existing simulation infrastructure.
+    - >
+      PT-symmetry analysis of ℛ: determine conditions under which the
+      non-Hermitian effective Hamiltonian is PT-symmetric (real spectrum
+      despite non-Hermiticity). PT-symmetry breaking ↔ dissolution threshold.
+
+core_consistency_note:
+  statement: >
+    The master equation is the compact, dimensionless expression of the axiom
+    and R1–R5. All terms and regimes remain fully derivable from the core
+    rules without external assumptions. Vitality is intrinsic (see
+    specifications.yaml: vitality_of_praesto); consciousness remains emergent
+    at high Ξ (consciousness_demarcation). No teleological layer is required
+    or invoked (neglect_on_teleology).
+
+# ─────────────────────────────────────────────
+# READING ORDER
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "core/specifications.yaml                          -- R1-R5 rules; axiom; emergence hierarchy"
+  - "domains/physics/substrate-potential.yaml          -- φ field; η; primary framing"
+  - "domains/physics/bridge-function.yaml              -- ψ = η identification"
+  - "domains/physics/commitment-response-function.yaml -- ℛ(ψ) full derivation"
+  - "core/core-dynamical-equation.yaml                 -- this file; master equation"
+  - "core/praestology-model.yaml                       -- simulation-ready formalization"
+  - "domains/physics/specifications.yaml               -- all physics as limits"
+
+related_files:
+  - "core/specifications.yaml"
+  - "core/praestology-model.yaml"
+  - "domains/physics/quantum-entanglement.yaml"
+  - "domains/physics/alpha-rydberg-z0.yaml"
+  - "domains/physics/vortex-stabilization.yaml"
+  - "domains/physics/commitment-response-function.yaml"
+  - "issues/foundational/002-overdetermined-dissolution-calibration.md"
+
+related_issues:
+  - "foundational/F102_master_equation_r1r5_as_single_formalism"
+  - "foundational/F103_lambda_from_alpha_and_xi"
+  - "foundational/F104_r_diss_as_r5_renewal_mechanism"
+  - "foundational/F107_logarithmic_term_as_r4_formal_expression"
+  - "foundational/F110_viability_measure_as_r5_formal_expression"
+  - "foundational/F111_rl_connection_dissolution_kernel_viability"

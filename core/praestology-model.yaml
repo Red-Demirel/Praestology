@@ -1,0 +1,324 @@
+# core/praestology-model.yaml
+name: "Praestology Model — Simulation-Ready Formalization"
+version: "1.0 — Dimensionless Field Equation; Full ℛ(ψ) Specification"
+domain: "Core — simulation interface"
+core_version: "1.5"
+status: "Defined — parameter calibration open (F02);
+         numerical simulation of vortex solutions open"
+updated: "2026-03-23"
+
+description: >
+  Dimensionless nonlinear field equation describing the evolution of a
+  complex resolution field ψ. This file is the simulation-ready
+  formalization of core/core-dynamical-equation.yaml. It provides
+  the explicit parameter definitions, functional forms, and regime
+  descriptions needed to implement and simulate the Praestology
+  master equation numerically.
+
+  Dynamics arise from flow, interaction, saturation, and
+  viability-based selection (ℛ), enabling emergence of stable
+  structures such as vortices. The equation recovers known limits
+  (linear Schrödinger, saturating GP, Navier-Stokes-like) and
+  produces emergent behavior consistent with particle topology,
+  vortex formation, and substrate renewal.
+
+  Purpose: bridge between the conceptual framework (core-dynamical-
+  equation.yaml) and numerical implementation. Researchers with
+  GP superfluid or nonlinear Schrödinger equation experience can
+  implement and test this model directly from this file.
+
+dependency_map:
+  requires:
+    - "core/core-dynamical-equation.yaml    -- master equation; term mapping"
+    - "core/specifications.yaml             -- R1-R5; emergence hierarchy"
+  provides_to:
+    - target: "Numerical simulation"
+      via: "Explicit parameter definitions and functional forms"
+    - target: "domains/physics/alpha-from-vortex-stability.yaml"
+      via: "Vortex stationary solutions are α derivation targets"
+    - target: "domains/physics/vortex-stabilization.yaml"
+      via: "Simulated vortex stability confirms analytical results"
+
+# ─────────────────────────────────────────────
+# FIELD DEFINITION
+# ─────────────────────────────────────────────
+
+field:
+  psi: "ψ(r,t) — complex scalar resolution field"
+  decomposition: "ψ = |ψ| · exp(iφ)"
+  units: "dimensionless — ħ = 1, 2m = 1 absorbed into scaling"
+  domain: "3D spatial domain (derived from R5 isotropy)"
+  boundary: "ψ → 0 at spatial infinity (finite-energy solutions)"
+
+# ─────────────────────────────────────────────
+# MASTER EQUATION — EXPLICIT FORM
+# ─────────────────────────────────────────────
+
+master_equation:
+  form: >
+    i ∂ψ/∂t = [ −∇² + V(r) + g|ψ|² + ℛ(ψ) + Λln(1 + κ|ψ|²) ] ψ
+
+  assumptions:
+    hbar: "1 (absorbed into scaling)"
+    mass_factor: "2m = 1 (absorbed into scaling)"
+    note: "To recover dimensional form: multiply kinetic term by ħ²/2m,
+           multiply LHS by ħ."
+
+# ─────────────────────────────────────────────
+# TERM DEFINITIONS
+# ─────────────────────────────────────────────
+
+terms:
+  kinetic:
+    expression: "−∇²ψ"
+    meaning: "Phase-gradient driven transport — flow engine"
+    parameter: "None (set by scaling)"
+
+  potential:
+    expression: "V(r)ψ"
+    meaning: "Frozen asymmetries / boundary conditions from committed topology"
+    parameter: "V(r) — specified by the physical context (gravity well,
+                nuclear well, molecular potential, zero for free space)"
+
+  interaction:
+    expression: "g|ψ|²ψ"
+    meaning: "Local competition for coherence — distinction pressure"
+    parameter:
+      g: "Self-interaction strength. g > 0: repulsive (defocusing, standard GP).
+          At quantum/particle scale: g set by substrate grain and contact
+          interaction cross-section. Open derivation: g from ξ and p_env."
+
+  saturation:
+    expression: "Λln(1 + κ|ψ|²)ψ"
+    meaning: "Finite resolvability constraint — prevents divergence; arrow of time"
+    parameters:
+      Lambda: "Logarithmic saturation strength. Λ > 0 required for arrow of time.
+               Related to α at microscopic scale: Λ ∝ α·ω_characteristic.
+               Open derivation: Λ from α and ξ."
+      kappa: "Saturation onset scale. κ = 1/n_sat where n_sat is the maximum
+              commitment density (Planck-scale saturation). κ → 0: no saturation
+              (divergence possible). κ → ∞: saturation at arbitrarily low density."
+
+  resolution_operator:
+    expression: "ℛ(ψ)ψ"
+    meaning: "Viability-based selection — the R5 operator"
+    full_specification: "See resolution_operator section below"
+
+# ─────────────────────────────────────────────
+# RESOLUTION OPERATOR ℛ(ψ) — FULL SPECIFICATION
+# ─────────────────────────────────────────────
+
+resolution_operator:
+  viability_measure:
+    definition: "𝓥(ψ) = w₀|ψ|² + w₁|∇ψ|² + w₂|∇φ|²|ψ|²"
+    components:
+      amplitude: "|ψ|² — occupancy / presence"
+      structure: "|∇ψ|² — local sharpness / commitment gradients"
+      flow: "|∇φ|²|ψ|² — phase-coherent transport"
+    weights:
+      w0: "amplitude weight (default: 1.0)"
+      w1: "structure weight (default: 0.5 — tunable)"
+      w2: "flow weight (default: 0.5 — tunable)"
+    note: >
+      The relative weights determine what the model considers most
+      viability-enhancing. For vortex formation: w2 important (flow).
+      For structural stability: w1 important (gradients). For pure
+      amplitude selection: w1 = w2 = 0 (minimal variant).
+
+  base_decay_rate:
+    expression: "γ_eff(ψ) = γ₀ / (1 + η·𝓥(ψ))"
+    interpretation: >
+      Decay rate decreases with increasing viability. High-structure
+      regions resist dissolution. At 𝓥 = 0: γ_eff = γ₀ (maximum decay).
+      At 𝓥 → ∞: γ_eff → 0 (fully protected — proton/electron limit).
+
+  components:
+    decay:
+      expression: "−[γ₀/(1 + η·𝓥(ψ))]·ψ"
+      effect: "Removes low-viability structures — dissolution kernel R_diss"
+      parameter_meaning:
+        gamma0: "Base decay rate ≡ ε in dissolution kernel.
+                 Calibrated from ¹⁴C half-life: γ₀ · f_C14 = ln(2)/5730 yr.
+                 Must satisfy: γ₀ · f_proton << 10⁻³⁴ yr⁻¹."
+        eta: "Viability sensitivity — how steeply decay falls with viability.
+              Large η: sharp transition between protected and unprotected.
+              Small η: gradual transition."
+
+    diffusion:
+      expression: "D·∇²ψ"
+      effect: "Smooths noise; prunes small-scale incoherence"
+      parameter_meaning:
+        D: "Diffusion coefficient. Sets spatial pruning scale.
+            Related to substrate grain ξ: D ~ ξ²/τ_Tik.
+            Too large: destroys structure. Too small: no pruning."
+
+    commitment_gain:
+      expression: "+μ·σ(𝓥(ψ) − Vc)·ψ"
+      switch_function: "σ(x) = ½·(1 + tanh(β·x))"
+      effect: "Reinforces structures once viability exceeds threshold Vc"
+      parameter_meaning:
+        mu: "Commitment gain strength — how strongly viable structures
+             are reinforced once above threshold. Related to g in R_forward."
+        Vc: "Viability threshold ≡ S_lock in commitment-response-function.yaml.
+             Below Vc: dissolution dominates. Above Vc: commitment dominates.
+             The hysteresis zone (S_lock ≠ S_unlock) can be introduced by
+             making σ history-dependent."
+        beta: "Sharpness of activation. Large β: sharp threshold (near-digital).
+               Small β: gradual transition. β → ∞: step function (Heaviside)."
+
+  full_expression: >
+    ℛ(ψ) = −[γ₀/(1 + η·𝓥(ψ))]  +  D·∇²  +  μ·σ(𝓥(ψ) − Vc)
+
+    Applied as: ℛ(ψ)·ψ in the master equation.
+
+  minimal_variant:
+    expression: "ℛ(ψ) = −[γ₀/(1 + η·|ψ|²)]"
+    use_case: >
+      Simplified simulations without gradient terms. Suitable for
+      initial numerical exploration. Recovers the saturating GP
+      nonlinearity as a special case when combined with the g|ψ|² term.
+      Use for vortex stability tests before introducing full 𝓥(ψ).
+
+# ─────────────────────────────────────────────
+# COMPLETE PARAMETER TABLE
+# ─────────────────────────────────────────────
+
+parameters:
+  equation_parameters:
+    g:      "Self-interaction strength (GP coupling)"
+    Lambda: "Logarithmic saturation strength (arrow of time; related to α)"
+    kappa:  "Saturation onset scale (= 1/n_sat)"
+
+  resolution_operator_parameters:
+    gamma0: "Base decay rate (= ε in dissolution kernel)"
+    eta:    "Viability sensitivity"
+    D:      "Diffusion coefficient (spatial pruning scale)"
+    mu:     "Commitment gain strength"
+    Vc:     "Viability threshold (= S_lock)"
+    beta:   "Sharpness of activation"
+    w0:     "Amplitude weight in 𝓥(ψ)"
+    w1:     "Structure weight in 𝓥(ψ)"
+    w2:     "Flow weight in 𝓥(ψ)"
+
+  calibration_constraints:
+    note: "See issues/foundational/002-overdetermined-dissolution-calibration.md"
+    primary: "γ₀ and τ_diss (= 1/(μ·β·Vc)) constrained by seven empirical anchors"
+
+# ─────────────────────────────────────────────
+# PHYSICAL REGIMES
+# ─────────────────────────────────────────────
+
+regimes:
+  linear:
+    conditions: "g ≈ 0, Λ ≈ 0, ℛ ≈ 0"
+    behavior: "Schrödinger-like wave propagation"
+    simulation_use: "Baseline; verify propagation before adding nonlinear terms"
+
+  nonlinear_gp:
+    conditions: "g > 0, Λ = 0, ℛ = 0"
+    behavior: "Standard GP vortex dynamics"
+    simulation_use: "Verify vortex formation and stability against known GP results"
+
+  saturation:
+    conditions: "Λ > 0, κ|ψ|² ~ 1"
+    behavior: "Bounded amplitudes; core stabilization; arrow of time active"
+    simulation_use: "Verify saturation prevents divergence in high-density regions"
+
+  selection:
+    conditions: "ℛ active (γ₀ > 0, μ > 0)"
+    behavior: "Viability filtering — low-viability decays, high-viability persists"
+    simulation_use: >
+      Key test: does ℛ select stable vortex solutions from random initial
+      conditions? If yes: confirms R5 as a selection mechanism for particles.
+
+  full_praestology:
+    conditions: "All terms active"
+    behavior: "Complete substrate dynamics with emergence of stable structures"
+    target_outputs:
+      - "Stable vortex solutions with quantized winding numbers"
+      - "Vortex mass spectrum from eigenvalues of stationary solutions"
+      - "α from self-linking number of Möbius vortex (primary target)"
+      - "Threshold behavior between dissolution and commitment"
+
+# ─────────────────────────────────────────────
+# EMERGENT BEHAVIOR
+# ─────────────────────────────────────────────
+
+emergent_behavior:
+  ripples:
+    description: "Low-viability fluctuations — decay quickly"
+    praestology: "Tik background events below S_lock"
+
+  collisions:
+    description: "Temporary viability spikes — may trigger commitment"
+    praestology: "Tik events exceeding S_lock — vortex pair nucleation"
+
+  vortices:
+    description: >
+      Stable phase structures with high viability; protected against
+      decay and sustained by coherent flow. The primary attractor states
+      of the full equation.
+    praestology: "Committed vortex topologies — electrons, photons, quarks"
+    simulation_target: >
+      Find stationary solutions ψ_n(r) with winding number n and compute:
+      (a) Energy eigenvalue E_n → particle mass m_n = E_n/c²
+      (b) Self-linking number for n=1 Möbius topology → α (primary target)
+      (c) Stability under perturbation → particle lifetime
+
+# ─────────────────────────────────────────────
+# NUMERICAL IMPLEMENTATION NOTES
+# ─────────────────────────────────────────────
+
+numerical_notes:
+  recommended_methods:
+    time_evolution: >
+      Split-step Fourier method for the linear (∇²) and nonlinear
+      terms separately. Fourth-order Runge-Kutta for the ℛ(ψ) term
+      which is non-Hermitian and requires careful time-stepping to
+      avoid numerical instability.
+    stationary_solutions: >
+      Imaginary time evolution (replacing ∂t → −∂τ) to find ground
+      state. For excited vortex states: gradient descent on energy
+      functional with constrained winding number.
+    vortex_winding: >
+      Monitor phase winding ∮∇φ·dl around closed loops to track
+      topological charge. Quantized circulation is the key invariant —
+      it should be preserved by the evolution except during vortex
+      nucleation/annihilation events.
+
+  known_gp_codes: >
+    The minimal variant (g|ψ|² + Λln(1+κ|ψ|²) only, ℛ = 0) is
+    directly implementable in existing GP BEC simulation codes
+    (GPELab, XMDS2, BEC2GP, custom CUDA implementations). Adding ℛ
+    requires non-Hermitian extension — straightforward in split-step
+    but requires care with norm preservation (norm is not conserved
+    by ℛ — this is physical, representing commitment flux to/from
+    the Praegress reservoir).
+
+  connection_to_zloshchastiev: >
+    The logarithmic term Λln(1+κ|ψ|²) is Zloshchastiev's logarithmic
+    GP equation in regularized form. His published dispersion relations
+    and stability analyses apply directly to this term.
+    Key reference: Zloshchastiev (2010) "Logarithmic nonlinearity in
+    theories of quantum gravity" — provides the acoustic dispersion
+    relation and stability conditions for the log term in the vacuum
+    superfluid context.
+
+# ─────────────────────────────────────────────
+# READING ORDER
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "core/specifications.yaml                          -- R1-R5; emergence hierarchy"
+  - "core/core-dynamical-equation.yaml                 -- conceptual master equation"
+  - "core/praestology-model.yaml                       -- this file; simulation details"
+  - "domains/physics/vortex-stabilization.yaml         -- vortex formation and stability"
+  - "domains/physics/alpha-from-vortex-stability.yaml  -- α from vortex self-linking"
+
+related_issues:
+  - "foundational/F102_master_equation_r1r5_as_single_formalism"
+  - "foundational/F110_viability_measure_as_r5_formal_expression"
+  - "foundational/F111_rl_connection_dissolution_kernel_viability"
+  - "intersectional/physics/127_stationary_solutions_as_particles"
+  - "intersectional/physics/078_mobius_self_linking_number_derivation"
+  - "issues/foundational/002-overdetermined-dissolution-calibration.md"
