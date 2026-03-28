@@ -36,6 +36,48 @@ description: >
   Black hole interior topology is treated separately
   (domains/physics/black-holes.yaml — forthcoming).
 
+  gravitational_waves_as_transient_commitment:
+  status: "Integrated clarification – core-invariant"
+  description: |
+    In Praestology the substrate is a single continuous saturating medium
+    consisting of unresolved free potential and committed (bound) potential.
+    There is no ontological split between “space” and “matter/objects”.
+    Commitment appears as localized, stable topological structures (vortices,
+    particles, atoms, etc.). The surrounding regions retain a reservoir of
+    free (unbound) potential. The emptier the region (lower background
+    commitment), the greater the reservoir of free potential.
+  mechanism: |
+    When coherent structures (vortices, photons, or other topological patterns)
+    propagate through regions of high free potential, they temporarily bind
+    a small fraction of that free potential into short-lived topological
+    configurations. These create propagating impedance gradients that travel
+    at the local resolution speed (τ_update = τ₀ / η). The result is a
+    coherent, long-wavelength ripple in the substrate — observed as
+    gravitational waves.
+  consequences:
+    - "Explains the quadrupole pattern, transverse polarization, and energy-carrying
+       nature of detected gravitational waves without requiring a fundamental graviton."
+    - "Even in “empty” space the substrate is never truly commitment-free;
+       transient commitment trails provide the detectable signal."
+    - "In high-commitment regions (e.g. near mergers) the effect becomes stronger
+       and more localised, consistent with observed ring-down signals."
+    - "Interatomic, intermolecular and interstellar voids are low-commitment,
+       high-free-potential zones where impedance is reduced and propagation is easier."
+    - "Gradients between high-commitment (filled) and high-free-potential (empty)
+       regions naturally produce refraction (gravity), time dilation, and inertia."
+  relation_to_core: |
+    This picture follows directly from the saturating master equation,
+    the potential/commitment duality, and the five rules. The viability
+    operator ℛ, interaction term, and logarithmic saturation all act on
+    the same unified substrate. No extra fields, no extra dimensions,
+    and no ontological split between “matter” and “space” are required.
+  note: |
+    There is no true emptiness — only different ratios of bound commitment
+    versus free potential. What we call “space” is simply the low-commitment,
+    high-capacity expression of the same Praesto. Gravitational waves are
+    therefore transient commitment ripples propagating preferentially
+    through the high-free-potential reservoir.
+
 terminology_warning: >
   CRITICAL DISTINCTION maintained throughout this file:
   Tik fluctuation / Tik event / substrate noise:
