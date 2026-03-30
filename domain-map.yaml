@@ -336,17 +336,27 @@ praestology_domain_map:
       thinking:      "T2 — Tension between patterns initiates the reasoning process."
       free_will:     "The immediate pressure (ι) that volitional weight (ω) must override."
       ethics:        "The engine of dilemma — without tension, no ethical choice arises."
+
     R4_progress:
       direct_output: "Resolutions accumulate irreversibly; before and after are distinct."
-     temporal_asymmetry:
-      praegress: "Active accumulation — the 'now' generating hysteresis."
-      regress: "Passive degradation — history becoming fuzzy over time."
+      temporal_asymmetry:
+      praegress:
+        function: "Active accumulation — the 'now' generating hysteresis."
+        experience: "Agency, choice, responsibility, awareness."
+        ethical_weight: "Present actions create irreversible traces (E5 Accountability)."
+      regress:
+        function: "Passive degradation — history becoming fuzzy over time."
+        experience: "Memory fade, record corruption, historical distortion."
+        ethical_weight: "Accountability limits; evidence erodes (retroactive justice constrained)."
       consciousness: "C4 — Volitional Selection projects across accumulated states (h_long)."
       ethics: "Consequences are real and irreversible; ethical weight follows from this."
       communication: "Cm3 — Resolution Update. Communication leaves irreversible hysteresis traces."
-     physics: "Entropy increases; structured states decay (isotopes, memory, records)."
-      note: "Time is what Praegress looks like from inside a resolution sequence. History is what Regress produces — accessible but always degrading."
-
+      physics: "Entropy increases; structured states decay (isotopes, memory, records)."
+      note: >
+      Time is what Praegress looks like from inside a resolution sequence.
+      History is what Regress produces — accessible but always degrading.
+      This asymmetry grounds E5 (Accountability) — actions matter because
+      Praegress traces persist, but Regress limits how long they persist.
       
     R5_optimisation:
       direct_output: "Viable configurations are selected; complexity accumulates."
