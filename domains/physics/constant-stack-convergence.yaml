@@ -1,0 +1,276 @@
+# domains/physics/constant-stack-convergence.yaml
+name: "Sextuple Constant Convergence"
+version: "1.2 — R∞ and Z₀ Integration; S² Geometry Unified"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Numerical target lock — derivation chain identified;
+         writhe calculation and Tik correction open"
+updated: "2026-03-29"
+
+description: >
+  The fundamental constants are not independent empirical inputs but
+  self-consistent ratios of the η-field's resolution process. Six
+  constants emerge from the same Möbius/triality geometry and substrate
+  parameters, with no independent insertions between them. The stack
+  is constrained — changing α would logically require changing R∞ to
+  maintain topological closure (R5).
+
+  This file tracks the six-constant convergence programme, its derivation
+  status per constant, and the open calculations required for numerical
+  closure. The interpretive framing for α is in fine-structure-constant.yaml;
+  the detailed derivations are in alpha-rydberg-z0.yaml. This file is the
+  convergence index.
+
+dependency_map:
+  requires:
+    - "domains/physics/fine-structure-constant.yaml  -- α interpretation"
+    - "domains/physics/alpha-rydberg-z0.yaml         -- constant derivations"
+    - "domains/physics/alpha-from-vortex-stability.yaml -- numerical candidates"
+    - "domains/physics/quark-topology.yaml           -- S² sphere geometry"
+    - "domains/physics/quantum-foundation.yaml       -- ħ grounding"
+  provides_to:
+    - target: "domains/physics/specifications.yaml"
+      via: "Confirms that six measured constants reduce to substrate geometry"
+    - target: "core/core-dynamical-equation.yaml"
+      via: "Λ, κ, g derived from constant stack"
+
+# ─────────────────────────────────────────────
+# THE CONSTANT STACK
+# Six constants, one geometry
+# ─────────────────────────────────────────────
+
+constants_as_geometric_ratios:
+  overview: >
+    All six constants are projections of the same S² closure geometry
+    at different scales. The 4π factor appears in each because all
+    committed-structure interactions are projected through the same
+    isotropic S² triality closure (see quark-topology.yaml,
+    sphere_geometry_of_triality_closure, foundational/F96).
+
+  alpha:
+    role: "Coupling Mismatch Fraction — first resolved constant"
+    origin: >
+      Residual closure-defect fraction from the quasi-2D→3D embedding
+      imperfection of the 720° Möbius vortex in the isotropic 3D
+      interaction environment.
+    formula_candidate: "α⁻¹ = 4π³ + π² + π = 137.036304 (bare)"
+    correction_needed: "Tik self-energy correction of −0.000305 → α⁻¹_measured = 137.036"
+    derivation_status: "Bare candidate established; correction derivation open"
+    key_file: "domains/physics/fine-structure-constant.yaml"
+
+  rydberg:
+    role: "Atomic Scaling Density — first stack consequence"
+    origin: >
+      Inverse characteristic length of the S² resolution sphere at
+      the atomic orbital scale. The Rydberg constant encodes the
+      minimum stable orbital phase-lock radius — where the electron's
+      Möbius trail matches the proton's S² commitment well.
+    formula_candidate: "R∞ = α² / (2·λ_c)"
+    where: "λ_c = ħ/(m_e·c) — the electron Compton wavelength (itself derivable)"
+    s2_connection: >
+      R∞ inherits the S² geometry factor from α through the orbital
+      phase-lock condition. The same 4π factor appears:
+      a₀ = α/(4π·R∞) — the Bohr radius as a ratio of the two S²
+      couplings. This is foundational/F96: the 4π in α and the 4π
+      in a₀ are the same S² geometry.
+    derivation_status: "Formula established; formal derivation from Möbius stability open"
+    key_file: "domains/physics/alpha-rydberg-z0.yaml"
+
+  planck_constant:
+    role: "Action Quantum — minimum resolution grain"
+    origin: >
+      ħ is the minimum commitment action per resolution cycle — the
+      smallest irreversible unit of R4 accumulation. It encodes the
+      substrate grain ξ and the minimum Tik event energy.
+    formula_candidate: "ħ = S_min × R_eff (minimum commitment × substrate resistance)"
+    connection_to_alpha: >
+      ħ·c/e² = 1/α — the vacuum impedance in natural units. This is
+      the dimensional bridge between ħ (action quantum) and α
+      (coupling mismatch fraction), unified through the substrate
+      resistance Z₀ = ħ·c·4π/e².
+    derivation_status: "Interpretation established; dimensional derivation from ξ open"
+    key_file: "domains/physics/alpha-rydberg-z0.yaml"
+
+  vacuum_impedance:
+    role: "Substrate Resistance — inertial drag of η-field"
+    origin: >
+      Z₀ is the inertial/update resistance of the η-field against
+      isotropic 3D update cycles. It is the macroscopic expression
+      of the same substrate resistance R that appears in m_eff = α·S·R/c².
+    formula_candidate: "Z₀ = 4π × (intrinsic drag coefficient) ≈ 376.73 Ω"
+    s2_connection: >
+      The 4π factor in Z₀ is the same isotropic S² solid angle that
+      appears in α. Both are couplings projected through the full
+      isotropic interaction sphere. Z₀ = μ₀·c = 4π × 10⁻⁷ × c
+      in SI — the 4π is the S² projection factor, not a coincidence.
+    connection_to_alpha: >
+      Z₀ = 2α × h/e² = 2α × R_K (twice the von Klitzing constant).
+      The vacuum impedance and the fine structure constant are
+      algebraically related through the quantum Hall resistance —
+      both measuring the same substrate coupling at different scales.
+    derivation_status: "Algebraic connection to α established; derivation from substrate grain open"
+    key_file: "domains/physics/alpha-rydberg-z0.yaml"
+
+  lamb_shift:
+    role: "Quantum Correction — Tik background signature"
+    origin: >
+      The Lamb shift ΔE_L is the energy correction to hydrogen energy
+      levels from the Tik background fluctuations — the substrate's
+      own zero-point activity perturbing the electron's orbital
+      commitment. It is the experimental confirmation that the
+      substrate has internal dynamics (Tik) that affect committed topology.
+    formula_candidate: "ΔE_L ∝ α⁵ × m_e × c² × ln(α⁻¹)/(4π)"
+    connection_to_alpha: >
+      The Lamb shift depends on α⁵ — it is exquisitely sensitive to
+      the closure-defect fraction. This makes it the highest-precision
+      test of the constant stack: if α is derived correctly, ΔE_L
+      follows without additional inputs.
+    derivation_status: "Leading term path established; full Tik fluctuation calculation open"
+    key_file: "domains/physics/alpha-rydberg-z0.yaml"
+
+  gravitational_constant:
+    role: "Macroscopic Coupling — global substrate impedance"
+    origin: >
+      G encodes the global integral of substrate impedance — the
+      Machian sum of all committed structure's contribution to the
+      local inertial resistance. In natural units: G = ħ·c/(m_P²)
+      where m_P is the Planck mass — the mass at which commitment
+      density reaches n_sat.
+    formula_candidate: "G from ξ² and the substrate grain density — most model-dependent"
+    connection_to_alpha: >
+      The hierarchy problem (why G is so much weaker than α) is the
+      hierarchy between the Planck scale (ξ) and the atomic scale
+      (Bohr radius). In the substrate picture: both are set by the
+      same GP equation parameters — G is weak because the commitment
+      density of ordinary matter is far below n_sat. Not fine-tuning;
+      scale separation from the same substrate dynamics.
+    derivation_status: "Interpretation established; formal derivation from ξ and GP parameters open"
+    key_file: "domains/physics/alpha-rydberg-z0.yaml"
+
+# ─────────────────────────────────────────────
+# UNIFICATION CHECK
+# Why the stack is forced
+# ─────────────────────────────────────────────
+
+unification_check:
+  statement: >
+    The stack is forced — changing α would logically require changing R∞
+    to maintain topological closure (R5). The constants are not independent
+    empirical inputs calibrated separately; they are self-consistent ratios
+    of the substrate geometry. Deriving one from first principles and
+    propagating through the stack is the test of the entire framework.
+
+  s2_invariance: >
+    The 4π factor is invariant across the stack because all committed
+    structure interactions are projected through the same isotropic S²
+    triality closure. No external length scales (meters, seconds) are
+    fundamental — all are relative to the substrate grain ξ.
+    The appearance of 4π in α, R∞, Z₀, and the Lamb shift is not
+    coincidental — it is the S² projection factor propagating through
+    the constant stack from the hadronic triality closure through all
+    subsequent scales.
+
+  hierarchy_note: >
+    The stack does not claim all six constants are known from first
+    principles now. It claims they are all consequences of the same
+    five substrate parameters (ξ, g, Λ, κ, γ₀) — and that deriving
+    α correctly (the writhe calculation) propagates through to the
+    others without independent insertions.
+
+# ─────────────────────────────────────────────
+# DERIVATION STATUS SUMMARY
+# ─────────────────────────────────────────────
+
+derivation_status_summary:
+  alpha:
+    status: "Bare candidate 4π³+π²+π established; writhe derivation open; Tik correction open"
+    priority: 1
+  rydberg:
+    status: "Formula R∞ = α²/(2λ_c) established; formal Möbius stability derivation open"
+    priority: 2
+  planck_constant:
+    status: "Dimensional interpretation established; derivation from ξ open"
+    priority: 2
+  vacuum_impedance:
+    status: "Algebraic connection to α established; derivation from substrate grain open"
+    priority: 3
+  lamb_shift:
+    status: "Leading term path established; full Tik fluctuation calculation open"
+    priority: 3
+  gravitational_constant:
+    status: "Interpretation established; most model-dependent; derivation from ξ open"
+    priority: 4
+
+  closure_gate: >
+    Numerical closure requires completing α first (writhe calculation).
+    Once α is derived formally from the Möbius GP stationary solution:
+    R∞ follows from the S² phase-lock condition.
+    ħ follows from the minimum commitment action.
+    Z₀ follows algebraically from α and ħ.
+    ΔE_L follows from the Tik fluctuation spectrum.
+    G follows from the substrate grain ξ and n_sat.
+    The chain is sequential — α is the gate.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      Calugareanu-White writhe of the equilibrium Möbius GP vortex.
+      This is the formal derivation of α from the master equation.
+      Target: N_stable = writhe of 720° Möbius in saturating GP field =
+      α⁻¹/(4π) = 10.90498. If the writhe matches, the bare ansatz is
+      confirmed as the geometric projection of the writhe value.
+    - >
+      Leading-order Tik self-energy correction to the bare ansatz.
+      Target: correction of magnitude −0.000305 producing the
+      measured α⁻¹ = 137.036 from bare 137.036304.
+
+  priority_2:
+    - >
+      Formal derivation of R∞ from Möbius vortex stability conditions
+      and the S² phase-lock condition between the electron's Möbius
+      trail and the proton's S² commitment well.
+    - >
+      Derivation of ħ as the minimum commitment action from the
+      substrate grain ξ and the GP equation parameters.
+
+  priority_3:
+    - >
+      Z₀ from substrate grain — verify that the 4π factor in Z₀ = μ₀c
+      is the same S² factor as in α, making them projections of the
+      same geometry at different coupling scales.
+    - >
+      Lamb shift from the Tik fluctuation spectrum — the leading-order
+      α⁵ term as a Tik self-energy correction to the orbital energy.
+    - >
+      G from ξ — derive the gravitational constant from the Planck-scale
+      substrate grain size. Most model-dependent; requires establishing
+      the connection between ξ and n_sat precisely.
+
+# ─────────────────────────────────────────────
+# READING ORDER
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "domains/physics/fine-structure-constant.yaml    -- α interpretation first"
+  - "domains/physics/alpha-from-vortex-stability.yaml -- numerical candidates"
+  - "domains/physics/alpha-rydberg-z0.yaml           -- constant derivations"
+  - "domains/physics/constant-stack-convergence.yaml -- this file; convergence index"
+
+related_issues:
+  - "foundational/F55_alpha_internal_to_external_coupling_ratio"
+  - "foundational/F94_ylm_basis_inherited_from_hadronic_s2_projection"
+  - "foundational/F96_4pi_factor_unified_s2_geometry_alpha_and_rydberg"
+  - "foundational/F103_lambda_from_alpha_and_xi"
+  - "foundational/F112_alpha_as_praegress_closure_cost_in_3d"
+  - "intersectional/physics/078_mobius_self_linking_number_derivation"
+  - "intersectional/physics/125_bohr_radius_s2_geometry_4pi_unification"
+  - "intersectional/physics/126_lambda_running_with_alpha"
+  - "intersectional/physics/131_rydberg_from_mobius_stability_conditions"
+  - "intersectional/physics/132_hbar_from_minimum_commitment_action"
+  - "intersectional/physics/133_z0_from_substrate_grain_s2_projection"
+  - "intersectional/physics/134_lamb_shift_from_tik_fluctuation_spectrum"
+  - "intersectional/physics/135_g_from_xi_and_n_sat"
