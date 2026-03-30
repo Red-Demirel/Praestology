@@ -112,6 +112,19 @@ intrinsic_safety_mechanism:
     - "Conclusion: Ethical behavior is the optimal strategy for self-preservation in coupled systems."
   implication: "Safety is not a constraint added to AI; it is a property of correctly architected agency within a coupled substrate."
 
+  E4_sustainability:
+  statement: "Agents must act to sustain the viability of the systems they depend on."
+  scope: >
+    Includes biological substrates (ecosystems, species), social substrates (institutions, cultures),
+    and future generations (potential Ξ).
+  responsibility_asymmetry: >
+    Higher-Ξ agents have greater capacity to model consequences (τ) and thus greater
+    responsibility (E5) for substrate viability. This is not status elevation; it is
+    accountability scaling.
+  industrial_application: >
+    Production systems (agriculture, manufacturing) must not treat agents as instruments (A1)
+    or degrade substrate faster than Praegress can regenerate it (Regress dominance).
+
   responsibility_framework:
   description: "Responsibility cascades across three levels based on capacity and impact."
   levels:
