@@ -25,9 +25,15 @@ foundational_principles:
     implication: "Corels is a scaffold for natural development, not a doctrine to be implanted."
     safeguard: "If Corels feels like imposition, it is being misapplied."
 
-corels_to_praestology_mapping:
-  description: "How Corels principles map to Praestology's ontological parameters."
-  mappings:
+  - principle: "Ontological Acceptance vs. Ethical Action"
+    statement: "Praestology ontology accepts death/decay as structural reality (Regress). Corels ethics calls for reducing unnecessary suffering within that reality."
+    basis: "R5 (Viability) + E1–E5 (Ethics) + Kindness principle"
+    implication: "Death is inevitable; unnecessary suffering is not. Distinguish productive tension (growth) from destructive pain (viability degradation)." 
+    example: "Supporting a dying person with dignity (Kindness + Respect) while accepting death's inevitability (Wisdom)."  
+
+ corels_to_praestology_mapping:
+   description: "How Corels principles map to Praestology's ontological parameters."
+    mappings:
     - corels_principle: "Reliability (Honour/Duty)"
       praestology_anchor: "R4 (Progress) + h (Hysteresis Integrity) + ω (Volitional Commitment)"
       ontological_basis: "Actions accumulate irreversibly (R4). Reliability is the commitment to preserve hysteresis integrity for others who depend on your resolutions."
