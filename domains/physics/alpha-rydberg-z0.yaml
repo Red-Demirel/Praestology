@@ -407,6 +407,46 @@ rydberg_derivation:
     entire quadruple loop — R∞'s precision makes it
     the definitive numerical confirmation.
 
+# domains/physics/alpha-rydberg-z0.yaml (snippet)
+# Integration of R∞ via Commitment-Resistance and S² Triality
+
+rydberg_convergence:
+  statement: >
+    The Rydberg constant R∞ is the inverse characteristic length of the
+    stable S² resolution sphere. It defines the spatial limit where
+    topological pressure from the 720° winding is balanced by the
+    local commitment‑resistance (ħ_hat).
+
+  geometric_derivation:
+    formula: "R∞_measured = R∞_bare · (η_local/η_vacuum)³"
+    components:
+      - R∞_bare: "Bare value derived from α_bare and substrate length λ_c"
+      - η_local/η_vacuum: "Local commitment fraction (e.g., 1 − 2.22×10⁻⁶ for Earth lab)"
+    derivation: >
+      From α·ħ = invariant, α ∝ η, ħ ∝ 1/η. Using the standard relation
+      R∞ ∝ α² m_e c / ħ, and noting that m_e (inertia) ∝ 1/η (since m ∝ α S R /c²,
+      with R ∝ 1/η, α ∝ η), we get R∞ ∝ (η²)·(1/η)·(1/η) = constant.
+      Wait – careful: mass scales as m ∝ α·R ∝ η·(1/η) = constant. So m_e does not
+      depend on η. Then R∞ ∝ α²/ħ ∝ η²/(1/η) = η³. Thus R∞_measured ∝ η³.
+    environmental_scaling:
+      logic: >
+        Because α and ħ vary inversely (α·ħ invariant), the Rydberg constant
+        – representing the density of action units per resolved volume – scales
+        as the cube of the local commitment fraction. In low‑η environments
+        (voids), R∞ is lower (atomic orbitals larger) – a testable prediction.
+    link_to_alpha:
+      statement: >
+        The same 4π S² geometry that gives α⁻¹ = 4π³+π²+π also forces
+        the relationship between R∞, α, and the substrate length scale.
+        The sextuple convergence is a self‑consistency condition.
+
+  sextuple_link:
+    - mechanism: "The 4π factor in 1/(4πR∞) is the S² triality closure."
+    - mechanism: "The commitment‑resistance that shifts α also sets the
+                  scaling limit of R∞ through the η³ factor."
+    - result: "R∞, α, and Z₀ are locked into a single self‑consistent
+               substrate geometry."
+
 # ─────────────────────────────────────────────
 # CONVERGENCE 4: LAMB SHIFT ΔE_L
 # ─────────────────────────────────────────────
