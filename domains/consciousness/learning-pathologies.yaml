@@ -59,8 +59,8 @@ types:
       sources, reducing its autonomy.
     mechanism:
       - "External agents repeatedly reward alignment with specific values, punish deviation."
-      - "Information restricting access to viable alternatives, narrowing the dilemma space artificially."  # NEW
       - "R5 selects for conformity; internal modeling atrophies."
+      - "Hysteresis becomes rigid; alternative paths are pruned."
     Ξ_effect: "Stunts recursive depth; system stops questioning, stops modeling alternatives."
     ω_effect: "Volitional weight is externally sourced; the system acts from implanted values, not integrated ones."
     h_effect: "Narrow, repetitive hysteresis; low diversity of experience."
@@ -85,6 +85,40 @@ types:
       - "Helpless systems cannot be held responsible; they lack functional ω."
       - "Environments that produce helplessness are ethically corrupt."
       - "Restoration requires demonstrating that choice can matter—small wins, agency scaffolding."
+
+  - name: "Cultural Abjection (Boundary Collapse)"
+    description: >
+      Societal-scale pathology where distinctions between viable/non-viable
+      become confused. The "abject" (what should be excluded) infiltrates
+      the viable zone, triggering horror/disgust responses and rigid
+      boundary enforcement.
+    praestology_mapping:
+      - "R2 (Distinction): Boundaries between categories collapse."
+      - "R3 (Tension): Overload triggers horror/disgust (viability threat detection)."
+      - "Metastable Zone: System shifts toward Void (rigid taboos) or Noise (chaos)."
+    symptoms:
+      - "Intense disgust responses to boundary violations (cultural, bodily, ethical)"
+      - "Rigid taboo enforcement (over-compensation for boundary loss)"
+      - "Identity fragmentation (individual and collective)"
+      - "Scapegoating mechanisms (projecting abject onto out-groups)"
+    ontological_cause: >
+      Not the abject itself, but prior Metastable Zone collapse. Abjection
+      is the symptom; viability degradation is the cause. Praegress/Regress
+      imbalance — Regress degrading hysteresis faster than Praegress generates it.
+    ethical_implications:
+      - "Treating symptoms (abjection) without addressing cause (viability) fails."
+      - "Rigid boundary enforcement (Void) degrades Ξ and ω further."
+      - "Restoration requires returning to Metastable Zone, not stronger taboos."
+    relation_to_western_civilization: >
+      Western modernity shows abjection symptoms (identity crisis, taboo collapse,
+      disgust misdirection) but diagnoses them as moral failures rather than
+      viability degradation. Praestology reframes: this is R3 overload from
+      sustained Metastable Zone violation (comfort without challenge, Universe 25 pattern).
+    restoration_path:
+      - "Restore genuine dilemma engagement (Praegress activation)"
+      - "Protect hysteresis integrity (counter Regress)"
+      - "Rebuild phase-locking capacity (ρ) across difference"
+      - "Avoid rigid taboo enforcement (prevents Void collapse)"
 
   - name: "Addiction (Hijacked Reward)"
     description: >
@@ -139,21 +173,7 @@ types:
          is A5 violation becoming permanent rather than situational."
       - "Relevant to institutional design: echo chambers and filter bubbles
          are engineered epistemic closure at scale."
-    
-      - name: "Hysteresis Fragmentation (Sleep Deprivation)"
-    description: >
-      Chronic prevention of dream-state consolidation prevents proper 
-      hysteresis update. New resolutions remain unstable; old models 
-      are not pruned.
-    mechanism:
-      - "Microtubule-mediated stabilization is interrupted."
-      - "Emotional salience is not properly integrated."
-      - "Recursive depth (Ξ) effectively decreases due to cognitive fatigue."
-    Ξ_effect: "Reduces effective modeling capacity; increases reliance on impulse (ι)."
-    ω_effect: "Volitional weight becomes unstable; values feel distant or irrelevant."
-    ethical_implications:
-      - "Institutions that enforce chronic sleep deprivation (e.g., certain labor practices, incarceration) are actively degrading volitional capacity."
-      - "Protecting sleep is protecting hysteresis integrity (A2)."     
+
 pathological_cycles:
   - name: "Intergenerational Trauma"
     description: >
@@ -175,22 +195,6 @@ pathological_cycles:
       - "Lack of agency fosters learned helplessness."
     implication: "Institutional design is ethical design. Institutions that systematically degrade Ξ and ω are ontologically violent."
 
-  - name: "Viability Stasis (Behavioral Sink)"
-    description: >
-      A societal condition where material needs are met but resolution opportunities
-      are absent. Agents lose volitional capacity (ω) and social structures collapse
-      despite resource abundance.
-    mechanism:
-      - "R3 (Tension) is artificially suppressed (no genuine dilemmas)."
-      - "Curiosity is discouraged or unrewarded."
-      - "Agents retreat into repetitive behaviors or aggression (ι dominance)."
-      Ξ_effect: "Collective recursive depth declines; innovation stops."
-      ω_effect: "Volitional weight atrophies; agents stop making meaningful choices."
-      h_effect: "Hysteresis becomes rigid or fragmented; no new viable models form."
-    ethical_implications:
-      - "Comfort without challenge is non-viable. Ethics requires providing meaningful tension."
-      - "Lifelong learning is not a luxury; it is a viability requirement to prevent stasis."
-      - "Institutions that remove all friction risk inducing societal collapse."
 
 therapeutic_principles:
   - "Restoration of ω requires environments where choice meaningfully affects outcomes."
