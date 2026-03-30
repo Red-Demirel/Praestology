@@ -1,0 +1,508 @@
+# domains/physics/fine-structure-constant.yaml
+name: "Fine-Structure Constant α – Unified Geometric / Topological Interpretation"
+version: "2.0"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Conceptual core + numerical candidate"
+updated: "2026-03-29"
+description: >
+  This document unifies the substrate interpretation of the fine-structure
+  constant α with a candidate geometric/topological numerical ansatz.
+  Within the η-field framework, α is not treated as an arbitrary free
+  parameter, but as the observable scale of a residual closure-defect:
+  the irreducible mismatch that remains when a stable lower-dimensional
+  self-coupling topology is realised within the observed 3-dimensional
+  interaction environment. A candidate bare-value formula is provided
+  as a geometric approximation, together with its relation to transition
+  scaling, saturation behaviour, and broader constant-stack integration.
+
+  This file is the interpretive and epistemic overlay. It does not replace
+  the quantitative derivation candidates in alpha-from-vortex-stability.yaml
+  or the constant stack in alpha-rydberg-z0.yaml and
+  constant-stack-convergence.yaml. It frames *what* α is at the ontological
+  level, why the pi-series ansatz is the leading candidate, and what
+  remains to be derived.
+
+supersedes:
+  - "domains/physics/alpha-interpretation.yaml (deprecated)"
+  - "domains/physics/alpha-topological-derivation.yaml (deprecated)"
+
+dependency_map:
+  requires:
+    - "core/core-dynamical-equation.yaml      -- ℛ(ψ), Λ connection to α"
+    - "domains/physics/quantum-foundation.yaml -- transition amplitudes"
+    - "domains/physics/vortex-stabilization.yaml -- Möbius topology basis"
+  provides_to:
+    - target: "domains/physics/alpha-from-vortex-stability.yaml"
+      via: "Interpretive framing for the numerical candidates"
+    - target: "domains/physics/constant-stack-convergence.yaml"
+      via: "α as first resolved member of the constant stack"
+    - target: "domains/physics/alpha-rydberg-z0.yaml"
+      via: "Geometric embedding context for the constant derivations"
+
+# ─────────────────────────────────────────────
+# EPISTEMIC STATUS
+# Explicit confidence levels for each claim
+# ─────────────────────────────────────────────
+
+epistemic_status:
+  core_claims:
+    - "α is interpreted as a dimensionless residual closure-defect fraction."
+    - "α is not treated as an arbitrary free parameter within the substrate model."
+    - >
+      The relevant mismatch is between a topology's intrinsic self-coupling
+      logic and the ambient 3D isotropic interaction environment.
+  candidate_claims:
+    - "A bare geometric ansatz for α⁻¹ is proposed: 4π³ + π² + π = 137.03630."
+    - >
+      The 2.22 ppm deviation between the bare ansatz and measured α is a
+      measurement substrate effect — not a correction to the formula.
+      The bare formula gives the vacuum topological α (η=1). The measured
+      value reflects η-depression from the zero-point commitment density
+      of the measurement environment. The product α·ħ is invariant;
+      individual measurements shift with local η.
+    - >
+      Electromagnetically mediated transition channels may inherit α as the
+      characteristic scale of a closure-defect coupling pathway.
+  speculative_bridges:
+    - >
+      The same closure-defect scale may contribute to effective process drag
+      in high-commitment regions (see relation_to_process_drag).
+    - >
+      Related constants (R∞, Z₀) may inherit the same isotropic closure
+      geometry through the constant stack.
+  non_claims:
+    - "This file does not provide a complete derivation of the Born rule."
+    - "This file does not provide a full QED replacement."
+    - "This file does not provide a complete metric derivation of gravity."
+    - "This file does not independently establish cosmological consequences."
+
+# ─────────────────────────────────────────────
+# ALPHA DEFINITION
+# What α IS at the ontological level
+# ─────────────────────────────────────────────
+
+alpha_definition:
+  statement: >
+    α is the residual closure-defect fraction per stable coupling opportunity
+    or characteristic winding/closure cycle. It quantifies the degree to
+    which a topology's intrinsic self-coupling manifold is not perfectly
+    commensurate with the ambient 3D isotropic interaction space.
+  formal_limit: >
+    In the idealised limit of perfect commensurability between intrinsic
+    closure logic and ambient coupling space, the residual mismatch tends
+    toward zero. A universe with α = 0 would have no electromagnetic coupling,
+    no spontaneous emission, no arrow of time from Λ — no structure.
+    α > 0 is not a coincidence; it is the signature of a topology embedded
+    in a space of higher dimensionality than its intrinsic closure requires.
+  preferred_language:
+    - "residual closure-defect fraction"
+    - "dimensionless mismatch parameter"
+    - "embedding imperfection scale"
+    - "coupling mismatch fraction"
+  what_not_to_say:
+    - "'probability amplitude squared' — α is not a raw probability"
+    - "'arbitrary coupling constant' — it is geometrically determined"
+    - "'renormalization input' — the running of α is a consequence, not a definition"
+
+# ─────────────────────────────────────────────
+# INTERPRETIVE FRAMEWORK
+# The geometric mechanism producing α
+# ─────────────────────────────────────────────
+
+interpretive_framework:
+  substrate_axiom: >
+    Dimensionality is treated as emergent resolution multiplicity under
+    R5 optimisation rather than as a primitive backdrop. The 3D interaction
+    environment is the R5-selected minimal geometry supporting stable
+    vortex topology (see core/specifications.yaml, emergence_hierarchy).
+  topological_basis: >
+    Stable matter-like excitations are self-consistent topological closures
+    (chiral Möbius-like 720° windings, dipolar pairings, triality
+    stabilizations) whose local coupling logic is effectively lower-
+    dimensional than the full ambient interaction space. A Möbius band
+    lives in 3D but its intrinsic topology is quasi-2D — the self-
+    intersection (crossover) is a 0D point where the two faces connect.
+  mechanism: >
+    To remain stable in a 3D isotropic environment, such topologies
+    require a persistent closure accommodation — writhe, phase offset,
+    or equivalent geometric relaxation. α is the dimensionless remnant
+    of this accommodation cost when normalised to the available coupling
+    or saturation opportunity.
+  geometric_embedding:
+    statement: >
+      The relevant mismatch is between a topology's effective lower-
+      dimensional self-coupling manifold (quasi-2D winding support) and
+      the full 3D isotropic interaction environment in which that topology
+      must persist and interact.
+    implication: >
+      α measures the cost of maintaining stable closure when intrinsic
+      coupling logic is only approximately commensurate with the ambient
+      interaction space. This is not a failure — it is the mechanism by
+      which the topology couples to its environment at all. Without the
+      mismatch, there is no coupling channel; with too much mismatch,
+      the topology is unstable. α is the R5-selected equilibrium mismatch.
+
+# ─────────────────────────────────────────────
+# NUMERICAL CANDIDATE
+# The pi-series bare geometric ansatz
+# ─────────────────────────────────────────────
+
+numerical_candidate:
+  status: "Bare geometric ansatz — candidate, not final derivation"
+  formula: "α⁻¹_bare = 4π³ + π² + π = π(4π² + π + 1)"
+  value_calculated: 137.036303776
+  codata_2018: 137.035999084
+  delta: 0.000305
+  relative_deviation: "2.22 × 10⁻⁶ (2.2 ppm)"
+
+  geometric_interpretation:
+    statement: >
+      The formula is read as a compact geometric cost stack: the sum of
+      three closure costs for a stable 720° topological defect embedded
+      in a 3-axis isotropic resolution substrate.
+    components:
+      term_4pi3:
+        expression: "4π³"
+        role: "Volumetric bulk cost"
+        geometric_mapping: >
+          Isotropic 3-axis multiplicity displacement — the bulk embedding
+          cost of the stable closure within the ambient resolution field.
+          The factor 4π is the full isotropic solid angle (S²); the
+          additional π² encodes the double-rotation topology of the 720°
+          Möbius band projected onto the external coupling sphere.
+      term_pi2:
+        expression: "π²"
+        role: "Interfacial surface cost"
+        geometric_mapping: >
+          Effective boundary cost of the local lower-dimensional winding
+          support. The quasi-2D closure surface contributes a π² factor
+          from the product of two independent phase boundaries.
+      term_pi:
+        expression: "π"
+        role: "Linear path residue"
+        geometric_mapping: >
+          Residual 1D winding-path friction — the single-loop contribution
+          from the first 360° pass of the Möbius band before the crossover.
+
+  factored_reading: >
+    α⁻¹ = π × (4π² + π + 1)
+    Outer π: projection factor — the Möbius crossover couples to the
+      substrate through one rotation's worth of projection geometry.
+    4π²: full external dipole phase space — two complete spherical solid
+      angles matching the 720° double-rotation topology.
+    π: internal loop contribution — one 360° pass before the crossover.
+    1: the crossover self-intersection point — one minimum topological
+      coupling quantum independent of loop geometry.
+
+  discrepancy_interpretation:
+    status: "Mechanism identified — measurement substrate effect; source magnitude open"
+
+    core_claim: >
+      The 2.22 ppm discrepancy is NOT a correction to the bare formula.
+      It is a measurement artifact — the same apparatus η-depression
+      effect identified throughout the framework. The bare formula gives
+      the topological α as it exists in the free-potential vacuum substrate
+      (η = 1). The measured value is what you obtain when probing that
+      topology with apparatus made of committed topology, operating in a
+      committed environment where η_local < η_vacuum.
+
+    mechanism:
+      statement: >
+        Commitment-resistance IS inertia (see specifications.yaml,
+        rule_2_inertia, wake_trail_mechanism). The measurement apparatus
+        — the electron being probed, the photon carrying the probe, the
+        electromagnetic field mediating the interaction — all exist in a
+        substrate partially depleted of free potential by the surrounding
+        committed matter. The local η is reduced by the commitment density
+        of the measurement environment.
+      mathematical_form: >
+        α_measured = α_bare × (η_local / η_vacuum)
+
+        η_local/η_vacuum = α_measured/α_bare
+                         = 137.035999 / 137.036304
+                         = 1 − 2.223 × 10⁻⁶
+
+        The measurement environment has a commitment fraction of 2.22 ppm
+        relative to the free vacuum. This shifts the apparent coupling
+        from its bare topological value downward by 2.22 ppm.
+      planck_connection: >
+        Planck's constant enters as follows: ħ is the minimum commitment
+        action per resolution cycle — the smallest R4 event. In a
+        committed environment with η_local < 1, the effective substrate
+        resistance R_eff = R₀/η_local is slightly elevated. The inertia
+        m_eff = α·S·R_eff/c² is therefore slightly enhanced relative to
+        the vacuum value. The measurement uses this enhanced inertia to
+        calibrate everything, including ħ itself. Since ħ_eff/ħ_vacuum
+        = η_vacuum/η_local (the commitment-resistance enhancement), the
+        measured ħ absorbs the commitment fraction, and the apparent α
+        is reduced by the same factor. The relationship is:
+          α_measured × ħ_measured = α_bare × ħ_vacuum
+        The product α·ħ is invariant — the coupling constant and the
+        action quantum vary inversely with local commitment level, but
+        their product (which governs physical cross-sections) remains
+        fixed. Measurements of α and ħ are always performed in the same
+        committed environment, so the product is consistent but both
+        individual values are shifted from their vacuum levels.
+      why_not_just_qed: >
+        Standard QED vacuum polarization running of α gives ~0.1%
+        correction from q=0 to q=m_e·c². The 2.22 ppm is 50× smaller
+        and distinct in character — it is not a loop correction within
+        the theory but a substrate-level effect from the commitment
+        density of the measurement environment itself.
+      why_not_gravitational: >
+        Earth's surface gravitational potential φ/c² ≈ 6.95 × 10⁻¹⁰
+        produces a commitment fraction far smaller (3200× less) than
+        the 2.22 ppm required. Solar system potential is ~9.85 × 10⁻⁹,
+        still 226× too small. The dominant commitment source at the
+        2.22 ppm level is not classical gravity.
+
+    candidate_source: >
+      The most physically motivated source: the zero-point electromagnetic
+      field — the Tik background at η ≈ 1 permeating the laboratory
+      environment. At atomic scales, the vacuum is not purely free
+      potential — it carries the zero-point field activity of the
+      electromagnetic ground state. In the substrate picture this is
+      a non-zero background commitment density from photon-like Tik
+      events that are below S_lock but collectively contribute a small
+      η-depression relative to the ideal η = 1 vacuum.
+      This is the same Tik background that produces the Lamb shift —
+      the connection between the Lamb shift and the α discrepancy is
+      therefore not coincidental: both are the same zero-point substrate
+      activity seen through different observables. The Lamb shift is
+      the energy correction; the α discrepancy is the coupling correction.
+      Both are 2-5 ppm level effects from the same source.
+
+    derivation_target: >
+      Compute the zero-point Tik background commitment density at η ≈ 1
+      from the GP fluctuation spectrum. This is a calculation of the
+      background commitment fraction from the substrate's own ground-state
+      fluctuations — the same calculation needed for the Lamb shift but
+      applied to the local η rather than to the energy eigenvalue.
+      Target: background commitment fraction C_Tik = 2.22 × 10⁻⁶.
+      If the GP zero-point fluctuation integral gives this value, the
+      entire 2.22 ppm discrepancy is explained and the bare formula
+      4π³+π²+π is confirmed as exact. See alpha-rydberg-z0.yaml,
+      measurement_substrate_effect, for the alkali series test.
+
+    falsification: >
+      The α × ħ invariance prediction is testable in principle:
+      measure α and ħ independently in environments with different
+      known commitment densities (different gravitational potentials,
+      different matter densities). If α × ħ remains constant while
+      both individually shift in proportion to the local η, the
+      commitment-resistance mechanism is confirmed.
+      The alkali series test from alpha-rydberg-z0.yaml (non-monotonic
+      α_exp vs Z for Li → Fr atom interferometry) is the most
+      immediately feasible experimental discriminator.
+
+
+
+# ─────────────────────────────────────────────
+# RELATION TO QUANTUM TRANSITIONS
+# ─────────────────────────────────────────────
+
+relation_to_quantum_transitions:
+  statement: >
+    In the linearised η-field regime, transition probabilities retain
+    amplitude-squared behaviour. Within this framework, α sets the
+    characteristic scale for electromagnetically mediated transitions
+    involving stable chiral/dipolar coupling channels, rather than
+    serving as a universal raw probability.
+  refined_claim: >
+    The transition weight associated with a characteristic coupling cycle
+    is of order α when the process is controlled by the residual
+    closure-defect channel. This is why fine-structure splittings,
+    spontaneous emission rates, and cross-sections scale as α or α²
+    — they are probing the closure-defect coupling channel.
+  formula_candidates:
+    - "P_transition ~ O(α) for single closure-defect channel"
+    - "α ≈ sin(θ_crit)/(4π) — normalized closure-defect ratio"
+    - "α ≈ (n_chiral/n_dipole)² normalized — chirality/dipole phase space ratio"
+  caution: >
+    These are interpretive scaling statements, not complete derivations
+    of the Born rule or all transition amplitudes. They are consistent
+    placeholders for a future formal stability derivation.
+
+# ─────────────────────────────────────────────
+# RELATION TO MASTER EQUATION
+# ─────────────────────────────────────────────
+
+relation_to_master_equation:
+  statement: >
+    The saturation term Λln(1+κ|ψ|²) and the viability measure 𝓥(ψ)
+    in the core dynamical equation inherit α as a characteristic magnitude
+    of closure imperfection.
+  implication: >
+    α links the scale of selected electromagnetic transition channels with
+    the onset of saturation and with effective local process-rate suppression.
+    Specifically: Λ ∝ α·ω_characteristic encodes the per-cycle irreversibility
+    rate — which IS the closure defect per winding cycle — at the relevant
+    frequency scale.
+  caution: >
+    The exact mapping between α and the effective coefficients (Λ, κ, or
+    derived viability weights w₀, w₁, w₂) remains model-dependent and
+    is not yet fixed numerically.
+
+# ─────────────────────────────────────────────
+# RELATION TO PROCESS DRAG AND INERTIA
+# ─────────────────────────────────────────────
+
+relation_to_process_drag:
+  status: "Structural bridge hypothesis"
+  statement: >
+    The same residual closure defect that governs microscopic coupling
+    mismatch is hypothesised to act as a microscopic source of process drag.
+    As committed topologies accumulate, local resolution efficiency is
+    reduced — each additional committed structure adds its closure-defect
+    overhead to the local substrate update cost.
+  inertia_connection: >
+    The wake-trail mechanism of inertia (see specifications.yaml,
+    rule_2_inertia, wake_trail_mechanism) inherits α as its coupling
+    scale: the forward impedance-wake and rear dissolution trail are
+    both mediated by the substrate's response to moving committed
+    topology, and the coupling strength of that response is set by the
+    closure-defect fraction α. A universe with α = 0 would have no
+    impedance wake — matter would move through the substrate without
+    resistance. α > 0 is why inertia exists.
+  gravitational_connection: >
+    In high-commitment regions, the compounded closure-defect overhead
+    of many committed topologies suppresses the local resolution rate
+    Φ = V/R — producing effective time dilation and gravitational
+    redshift. The per-topology contribution is of order α; the
+    macroscopic GR metric emerges from the integral over all committed
+    structure in the region.
+  caution: >
+    This remains a structural unification hypothesis. A full quantitative
+    bridge from microscopic α-scaling to macroscopic metric-like behaviour
+    requires deriving the Green's function of the closure-defect field.
+
+# ─────────────────────────────────────────────
+# PRAEGRESS AS RESOLUTION MULTIPLICITY
+# ─────────────────────────────────────────────
+
+praegress_as_resolution_multiplicity:
+  statement: >
+    Praegress is the effective multiplicity of unresolved resolution
+    pathways in the η-field — the weighted volume of still-open viable
+    branches. It is the substrate's capacity for new commitment.
+  relation_to_dimensionality: >
+    Observed 3-dimensionality is the minimal effective multiplicity
+    supporting stable defect persistence under R5 optimisation.
+    2D multiplicity is insufficient for stable closed vortex topology;
+    4D multiplicity over-determines the resolution pathways and produces
+    chaotic instability. 3D is the R5 selection.
+  relation_to_alpha: >
+    α then measures the residual closure cost within that selected
+    interaction environment — the irreducible mismatch between a
+    topology's intrinsic closure logic and the ambient 3D multiplicity
+    in which it must remain stable. The Praegress multiplicity is 4π
+    steradians (full isotropic solid angle); the topology's intrinsic
+    closure covers slightly less; α is the fractional gap.
+  implication: >
+    This connects α directly to the emergence hierarchy: the same R5
+    selection that produces 3D space also determines what α must be.
+    A different dimensionality selection would yield a different α.
+    The observed α = 1/137 is therefore not coincidental — it is the
+    closure-defect cost of a 720° Möbius topology embedded in the
+    specific 3D interaction environment that R5 selects.
+
+# ─────────────────────────────────────────────
+# CONSTANT STACK CONNECTIONS
+# ─────────────────────────────────────────────
+
+constant_stack_connections:
+  status: "Higher-order integration layer"
+  statement: >
+    α is treated as the first resolved member of a broader constant stack
+    in which multiple measured quantities are interpreted as self-consistent
+    ratios of the same substrate geometry.
+  linked_constants:
+    rydberg:
+      constant: "R∞ (Rydberg constant)"
+      role: "Atomic scaling density"
+      interpretation: >
+        Inherits the same closure geometry through α-scaled characteristic
+        lengths. R∞ = α²/(2·λ_c) where λ_c is the substrate's periodic
+        limit (effectively the Compton wavelength of the electron).
+    vacuum_impedance:
+      constant: "Z₀ (vacuum impedance)"
+      role: "Effective substrate resistance"
+      interpretation: >
+        Reflects the inertial/update resistance of the η-field under
+        isotropic coupling cycles. Z₀ = 4π × (intrinsic drag coefficient)
+        — the 4π factor from the same S² geometry as α.
+  unification_note: >
+    The 4π factor is invariant across the stack because all committed
+    structure interactions are projected through the same isotropic S²
+    triality closure. This is the hadronic sphere geometry propagating
+    upward through the scale hierarchy (see quark-topology.yaml,
+    sphere_geometry_of_triality_closure).
+  reference: "domains/physics/constant-stack-convergence.yaml"
+
+# ─────────────────────────────────────────────
+# PREDICTIONS AND TESTS
+# ─────────────────────────────────────────────
+
+predictions_and_tests:
+  near_term_targets:
+    - >
+      Derive α from an explicit stability functional or variational principle
+      (Calugareanu-White writhe of the equilibrium Möbius GP vortex) rather
+      than from geometric decomposition alone. The writhe should yield
+      N_stable = α⁻¹/(4π) = 10.90498 directly.
+    - >
+      Compute the zero-point Tik background commitment fraction at η ≈ 1
+      from the GP fluctuation spectrum. Target: C_Tik = 2.22 × 10⁻⁶.
+      If confirmed, the bare formula 4π³+π²+π is exact and the 2.22 ppm
+      discrepancy is fully explained as the measurement substrate effect
+      rather than a correction to the topology.
+    - >
+      Verify α·ħ invariance across commitment environments: measure α
+      and ħ independently in environments with different commitment densities.
+      Both should shift individually but their product should remain constant.
+    - >
+      Recover R∞ from the same geometric substrate assumptions with no
+      independent insertion — applying the same ħ_hat resistance to the
+      S² orbital projection removes mass as a primitive.
+  falsification_risks:
+    - >
+      If no consistent dynamical derivation reproduces the bare ansatz
+      from the writhe calculation, the geometric interpretation is weakened.
+    - >
+      If α·ħ is NOT invariant across commitment environments — i.e. if
+      both shift in the same direction rather than opposite directions —
+      the measurement substrate mechanism is wrong and an additive
+      correction to the bare formula must be sought instead.
+    - >
+      If the zero-point Tik commitment fraction calculation gives a value
+      significantly different from 2.22 × 10⁻⁶, the Tik background is
+      not the source and another commitment mechanism must be identified.
+    - >
+      If the constant-stack programme fails to constrain R∞ coherently
+      from the same assumptions, the stack coupling is incomplete.
+
+# ─────────────────────────────────────────────
+# READING ORDER
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "core/core-dynamical-equation.yaml              -- Λ connection to α"
+  - "domains/physics/vortex-stabilization.yaml      -- Möbius topology basis"
+  - "domains/physics/fine-structure-constant.yaml   -- this file; interpretive layer"
+  - "domains/physics/alpha-from-vortex-stability.yaml -- numerical candidates"
+  - "domains/physics/alpha-rydberg-z0.yaml          -- constant stack derivation"
+  - "domains/physics/constant-stack-convergence.yaml -- sextuple convergence"
+
+related_issues:
+  - "foundational/F55_alpha_internal_to_external_coupling_ratio"
+  - "foundational/F57_alpha_int_vs_alpha_exp_self_depression"
+  - "foundational/F93_s2_as_emergent_geometry_of_triality_closure"
+  - "foundational/F94_ylm_basis_inherited_from_hadronic_s2_projection"
+  - "foundational/F96_4pi_factor_unified_s2_geometry_alpha_and_rydberg"
+  - "foundational/F103_lambda_from_alpha_and_xi"
+  - "foundational/F112_alpha_as_praegress_closure_cost_in_3d"
+  - "foundational/F113_process_drag_from_alpha_scale_closure_defect"
+  - "intersectional/physics/078_mobius_self_linking_number_derivation"
+  - "intersectional/physics/092_alpha_running_kink_hadronic_threshold"
+  - "intersectional/physics/125_bohr_radius_s2_geometry_4pi_unification"
