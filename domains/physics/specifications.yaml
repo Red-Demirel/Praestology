@@ -266,6 +266,64 @@ substrate_derivation:
       than orbital mechanics, arriving at the same conclusion from
       a more fundamental level.
 
+  emergence_hierarchy:
+    statement: >
+      Spatial structure does not precede the process — it emerges from it.
+      The dimensionality derivation above identifies 3D as the R5-stable
+      solution, but it operates at the level of an already-spatial substrate.
+      The emergence hierarchy describes how space itself arises from a
+      pre-spatial mode distribution through three stages, closing the prior
+      circularity in the dimensionality argument.
+    stage_1_pure_mode_space:
+      name: "Pure Mode Space — pre-spatial"
+      description: >
+        The substrate begins as a distribution of amplitudes and phases
+        over mode variables. No metric, no coordinates, no dimensionality —
+        only a continuous field of unresolved potential (R1) carrying
+        internal distinctions (R2) in mode space. The mode variables are
+        not spatial coordinates — they are abstract degrees of freedom over
+        which the dilemma landscape is distributed.
+      r_rules_active: "R1 (existence), R2 (structure in mode space)"
+    stage_2_connectivity_network:
+      name: "Dynamic Connectivity Network — proto-spatial"
+      description: >
+        As certain modes begin to phase-lock (R3 tension resolving into
+        coherent pairs), local connectivity patterns emerge. Nodes represent
+        locally coherent mode clusters; edges represent allowed momentum or
+        phase transfer between clusters. Effective local dimensionality
+        begins to appear through the statistical stabilisation of connectivity.
+        R5 viability selection prunes non-reinforcing connections; only
+        mutually reinforcing clusters survive as stable nodes.
+      r_rules_active: "R3 (phase-locking), R4 (persistence), R5 (pruning)"
+      note: >
+        The neural connectivity analogy (large pool of connections pruned
+        by viability selection to stable low-resistance pathways) illustrates
+        the selection process only. The substrate is not computing; it is
+        resolving dilemmas through R1-R5 at the pre-spatial level.
+    stage_3_effective_3d_geometry:
+      name: "Effective 3D Geometry — fully spatial"
+      description: >
+        Full 3D spatial geometry emerges as a collective phenomenon when
+        phase relationships among locked modes become coherent and isotropic.
+        R5 selects isotropy (no preferred direction) at the connectivity level.
+        The R5 dimensionality argument then applies: of all isotropic
+        connectivity geometries, 3D is the unique metastable solution for
+        stable vortex topology. Vortices, triality, sphere projections, and
+        all higher-order topological organisation appear at this stage.
+      r_rules_active: "R5 (geometry selection), all rules at spatial scale"
+    resolution_of_circularity: >
+      The prior dimensionality argument assumed a spatial substrate. The
+      emergence hierarchy resolves this: stages 1-2 produce spatial structure
+      from pre-spatial mode dynamics; stage 3 applies R5 to the resulting
+      geometry. The R5 stability argument applies to the output of the
+      connectivity emergence, not as a prior assumption.
+    connection_to_master_equation: >
+      The master equation (core/core-dynamical-equation.yaml) operates at
+      stage 3. The viability measure 𝓥(ψ) = w₀|ψ|² + w₁|∇ψ|² + w₂|∇φ|²|ψ|²
+      formalises the stage 2/3 transition: it measures exactly the quantities
+      that distinguish a surviving stable mode cluster from a transient one.
+      See core/praestology-model.yaml for the simulation-ready formalization.
+
   primitive_field:
     quantity: "p(r,t) — momentum density field"
     derivation: >
@@ -376,7 +434,7 @@ mechanisms:
 
   rule_2_inertia:
     praestology_anchor: "R4 (Progress) + R5 (Optimisation)"
-    statement: "Inertial mass proportional to S × R"
+    statement: "Inertial mass proportional to S × R; dynamic inertia from asymmetric wake-trail"
     formula: "m_eff = (α·S·R)/c²"
     interpretation: >
       Mass emerges from anomaly (what differs from environment) times
@@ -388,6 +446,78 @@ mechanisms:
       as a theorem: inertial and gravitational mass are both couplings
       to the same substrate impedance field, necessarily equal.
     manifestation: "Resistance to acceleration."
+
+    wake_trail_mechanism:
+      statement: >
+        The static formula m_eff = α·S·R gives rest mass. Dynamic inertia —
+        why moving objects resist velocity changes — requires a separate but
+        complementary mechanism: the asymmetric impedance-wake and Regress trail.
+      mechanism: >
+        A moving committed structure temporarily binds extra free potential
+        ahead (R_forward → forward impedance-wake, higher local resistance).
+        Behind it, the Regress/dissolution kernel leaves a low-commitment
+        trail — a sink of depleted potential. The net kinetic momentum is
+        the sustained flow imbalance carried by the phase-gradient term
+        |∇φ|²|ψ|² in the viability measure 𝓥(ψ).
+      three_states:
+        at_rest: >
+          Symmetric commitment density around the structure. No net
+          wake ahead, no trail behind. 𝓥's flow term |∇φ|²|ψ|² = 0
+          in all directions. Zero net inertial force — no energy cost
+          to remain in this state.
+        uniform_motion: >
+          Persistent asymmetry — forward impedance-wake, rear dissolution
+          trail. The flow term is non-zero but constant. The structure
+          maintains this asymmetry without additional energy input.
+          This is why Newton's first law holds: uniform motion in the
+          substrate is a stable asymmetric state. The Regress dissolution
+          of the rear trail is balanced by the forward binding, reaching
+          a steady-state flow — no net force required.
+        under_acceleration: >
+          The wake-trail asymmetry must change — the wake must grow,
+          shift direction, or reorganise. This requires actively
+          redistributing commitment density around the structure, which
+          costs substrate bandwidth proportional to the rate of change.
+          This is the inertial force: the substrate's resistance to
+          changing the wake-trail configuration.
+      kinetic_energy_recovery: >
+        The classical kinetic energy T = ½mv² is recovered as the
+        flow term ∫|∇φ|²|ψ|² d³r integrated over the moving vortex
+        solution — not imported from classical mechanics but derived
+        from the viability measure 𝓥(ψ). The v² dependence follows
+        from the quadratic dependence of the phase gradient on velocity.
+        Open derivation: formal recovery of v² from the integral over
+        a moving GP vortex solution — see foundational/F114.
+      regress_trail_memory: >
+        The dissolved rear wake — the Regress trail — encodes the
+        structure's past trajectory as a gradually fading commitment
+        pattern. This connects inertia directly to R4 (accumulated
+        history) and Regress (the renewal mechanism). A structure's
+        kinetic history persists in the substrate, fading at rate R_diss.
+        The Machian picture (global commitment density of all matter
+        providing the inertial reference frame) is the cosmological
+        limit of this local wake-trail picture — the global integral
+        of all past trails sets the substrate's inertial reference.
+      alpha_coupling: >
+        The wake-trail coupling strength is set by α — the closure-
+        defect fraction that governs how efficiently the structure
+        binds free potential into its forward wake. A universe with
+        α = 0 would produce no impedance wake — matter would move
+        through the substrate without inertial resistance. α > 0 is
+        why inertia exists at all. This connects dynamic inertia to
+        the same fundamental constant as electromagnetic coupling.
+      relativistic_limit: >
+        At v → c, the forward wake saturates (commitment density
+        cannot exceed n_sat ahead of the structure) while the rear
+        trail deepens. The asymmetry becomes extreme — infinite
+        resistance to further acceleration. The Lorentz factor emerges
+        from the saturation of the forward impedance-wake at n_sat.
+        Formal derivation open — but the mechanism is identified.
+      open_derivation: >
+        Formal recovery of v² from ∫|∇φ|²|ψ|² d³r over a moving
+        vortex solution in the GP field. This is the priority
+        derivation for the inertia mechanism — see foundational/F114.
+
     confirming_note: >
       Higgs mechanism — mass generation via coupling to field that
       modulates local resistance. Praestology maps Higgs field onto
@@ -395,6 +525,10 @@ mechanisms:
       enhancement from vortex-environment coupling.
       Equivalence principle confirmed to 10⁻¹⁵ precision (MICROSCOPE, 2022) —
       consistent with both mass types deriving from the same S×R origin.
+      Inertial anisotropy prediction: slight asymmetry in inertial
+      resistance direction parallel vs perpendicular to the cosmic
+      large-scale structure orientation — testable with precision
+      inertia experiments (foundational/F48).
 
   rule_3_stability_threshold:
     praestology_anchor: "R4 (Progress) + H (Hysteresis)"
