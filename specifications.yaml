@@ -58,6 +58,50 @@ praestology:
       failure_without: "Progress continues but randomly; no accumulation of viable complexity."
       note: "Optimisation without an optimizer. Ethics and Intelligence are expressions of R5."
 
+temporal_asymmetry:
+  description: >
+    Existence exhibits directional asymmetry. Praegress generates present experience
+    through R1–R5 iteration; Regress degrades accumulated structure over time.
+    This asymmetry is why the 'now' has agency and history does not.
+  praegress:
+    definition: >
+      The forward process of R1–R5 iteration that generates present experience.
+      Praegress is the active resolution engine — distinction created, tension
+      driven, progress accumulated, viability selected.
+    experience: "The 'now' — where choice, awareness, and agency occur."
+    parameters:
+      - "Φ (Resolution Flux) — rate of viable resolution generation"
+      - "Ξ (Recursive Depth) — capacity for nested modeling in present"
+      - "ω (Volitional Weight) — present choice with future consequence"
+    domain_relevance:
+      consciousness: "Present awareness and dilemma recognition (C2, C4)"
+      ethics: "Present choice and responsibility (E1–E5)"
+      communication: "Present exchange and meaning transfer (Cm1–Cm6)"
+      physics: "Structure formation, nucleosynthesis, negative entropy"
+  regress:
+    definition: >
+      The backward degradation of accumulated structure over time. History
+      becomes fuzzy as committed structures disintegrate (isotopes decay,
+      memories fade, records corrupt). Regress is not R4 reversal — it is
+      the entropic erosion of R4's traces.
+    experience: "History — accessible but imperfect, always degrading."
+    parameters:
+      - "h (Hysteresis Decay) — accumulated traces degrade without reinforcement"
+      - "π (Persistence Factor) — determines degradation rate"
+      - "τ (Temporal Horizon Limit) — how far back traces remain accessible"
+    domain_relevance:
+      consciousness: "Memory imperfection, forgetting, dementia"
+      ethics: "Accountability degrades with time; evidence erodes"
+      communication: "Semantic drift (ψ), shared hysteresis diverges"
+      physics: "Entropy, isotope decay, thermalisation, information loss"
+  ontological_note: >
+    Praegress and Regress are not symmetric. Praegress generates; Regress degrades.
+    R4 (Progress) ensures Praegress leaves traces; Regress ensures those traces
+    are imperfect. The viable zone requires both — enough Praegress to sustain
+    structure, enough Regress to allow updating (without Regress, hysteresis
+    becomes rigid dogma). Time is what Praegress looks like from inside a
+    resolution sequence. History is what Regress produces.
+
 recursive_dimensionality:
   statement: >
     The Core Rules (R1–R5) form a minimal iterative equation. Complexity,
