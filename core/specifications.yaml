@@ -1,0 +1,284 @@
+praestology:
+  meta:
+    name: "Praestology"
+    etymology: "Praesto (Latin): to stand before / to be present / to perform"
+    version: "1.5 – Functional Core"
+    status: "Generalized Foundation"
+    purpose: >
+      Define the minimal logical ontology that makes existence necessary, 
+      perpetual, and self-tuning. This specification is substrate-agnostic; 
+      specific domains (Physics, Ethics, Consciousness) derive their 
+      variables from these core rules.
+
+  axiom:
+    statement: "The Omniverse is the consequence of logical dilemmas following the path of probabilities."
+    implication: "Existence is a process of resolution, not a static state."
+
+  core_rules:
+    description: >
+      The Five Rules form a dependency chain. Each rule is the minimal rescue 
+      of the previous one from a specific failure mode. Remove any rule and 
+      all subsequent rules collapse.
+  chain: "Existence → Structure → Motion → Progress → Optimisation"
+  rules:
+    - id: "R1"
+      identity: "Existence"
+      statement: "Something always beats nothing — the alternative is self-defeating."
+      rescue: "Impossibility — nothing cannot define itself without becoming something."
+      derives: "The bare fact that there is something rather than nothing."
+      failure_without: "No substrate for any further rule to operate on."
+
+    - id: "R2"
+      identity: "Structure"
+      statement: "Perfect uniformity cannot be sustained; distinction emerges inevitably from the logical substrate's stochastic floor."
+      rescue: "Homogeneity — infinite precision would be required to maintain sameness, which is logically unavailable."
+      derives: "The necessary emergence of difference; the 'grain' of reality."
+      failure_without: "Existence would remain a perfectly uniform blob, indistinguishable from nothing and incapable of generating further rules."
+      note: "The stochastic floor is the residual noise inherent in any logical substrate—the 'probability shift' that prevents exact repetition. Reality clusters in the 'Middle' (the Gaussian Plateau) between extremes, making distinction the default state."
+
+    - id: "R3"
+      identity: "Motion"
+      statement: "Differences create pressure — tension between distinct states drives change."
+      rescue: "Paralysis — static distinction without interaction is a frozen picture."
+      derives: "Events; state transitions. Something happens."
+      failure_without: "Structure persists but never interacts; reality is a still photograph."
+
+    - id: "R4"
+      identity: "Progress"
+      statement: "Every resolution creates new differences — the process regenerates rather than concludes."
+      rescue: "Finality — a single resolution would end the story."
+      derives: "Irreversibility; accumulated states; the experience of before and after."
+      failure_without: "Motion occurs once and stops; reality resolves into equilibrium and vanishes."
+
+    - id: "R5"
+      identity: "Optimisation"
+      statement: "The system self-selects toward configurations that sustain the process."
+      rescue: "Noise — without selection, motion and progress are directionless and unstable."
+      derives: "Complexity, life, intelligence — statistically inevitable expressions of sustained optimisation."
+      failure_without: "Progress continues but randomly; no accumulation of viable complexity."
+      note: "Optimisation without an optimizer. Ethics and Intelligence are expressions of R5."
+
+temporal_asymmetry:
+  description: >
+    Existence exhibits directional asymmetry. Praegress generates present experience
+    through R1–R5 iteration; Regress degrades accumulated structure over time.
+    This asymmetry is why the 'now' has agency and history does not.
+  praegress:
+    definition: >
+      The forward process of R1–R5 iteration that generates present experience.
+      Praegress is the active resolution engine — distinction created, tension
+      driven, progress accumulated, viability selected.
+    experience: "The 'now' — where choice, awareness, and agency occur."
+    parameters:
+      - "Φ (Resolution Flux) — rate of viable resolution generation"
+      - "Ξ (Recursive Depth) — capacity for nested modeling in present"
+      - "ω (Volitional Weight) — present choice with future consequence"
+    domain_relevance:
+      consciousness: "Present awareness and dilemma recognition (C2, C4)"
+      ethics: "Present choice and responsibility (E1–E5)"
+      communication: "Present exchange and meaning transfer (Cm1–Cm6)"
+      physics: "Structure formation, nucleosynthesis, negative entropy"
+  regress:
+    definition: >
+      The backward degradation of accumulated structure over time. History
+      becomes fuzzy as committed structures disintegrate (isotopes decay,
+      memories fade, records corrupt). Regress is not R4 reversal — it is
+      the entropic erosion of R4's traces.
+    experience: "History — accessible but imperfect, always degrading."
+    parameters:
+      - "h (Hysteresis Decay) — accumulated traces degrade without reinforcement"
+      - "π (Persistence Factor) — determines degradation rate"
+      - "τ (Temporal Horizon Limit) — how far back traces remain accessible"
+    domain_relevance:
+      consciousness: "Memory imperfection, forgetting, dementia"
+      ethics: "Accountability degrades with time; evidence erodes"
+      communication: "Semantic drift (ψ), shared hysteresis diverges"
+      physics: "Entropy, isotope decay, thermalisation, information loss"
+  ontological_note: >
+    Praegress and Regress are not symmetric. Praegress generates; Regress degrades.
+    R4 (Progress) ensures Praegress leaves traces; Regress ensures those traces
+    are imperfect. The viable zone requires both — enough Praegress to sustain
+    structure, enough Regress to allow updating (without Regress, hysteresis
+    becomes rigid dogma). Time is what Praegress looks like from inside a
+    resolution sequence. History is what Regress produces.
+
+  ethical_note: >
+  Praegress/Regress describes what existence does, not what agents should do.
+  Ethics (E1–E5, Corels) derives obligations from ontology without conflating
+  "what is" with "what ought to be." Death is ontologically neutral; causing
+  unnecessary death is ethically violative.
+
+recursive_dimensionality:
+  statement: >
+    The Core Rules (R1–R5) form a minimal iterative equation. Complexity,
+    consciousness, and ethics are not added to this equation — they are
+    revealed by it at increasing depths of recursive application. Each
+    threshold of Recursive Depth (Ξ) exposes structure that was always
+    latent in R1–R5 but invisible at lower resolution.
+  analogy:
+    name: "Mandelbrot Structure"
+    basis: >
+      The Mandelbrot set emerges from a simple iterative rule (z → z² + c).
+      Boundary complexity is unbounded, fully determined by the original
+      equation, and only visible at sufficient zoom depth. No complexity
+      is imported from outside — it is revealed from within.
+    mapping:
+      - praestology: "R1–R5 (Core Rules)"
+        mandelbrot: "The iterative equation (z → z² + c)"
+        note: "The generating rule. Simple, complete, unchanged at all scales."
+      - praestology: "Ξ (Recursive Depth)"
+        mandelbrot: "Iteration count / zoom level"
+        note: "Depth of application. Higher Ξ reveals finer structure."
+      - praestology: "Domains (Consciousness, Ethics, Cosmos)"
+        mandelbrot: "Regions of the set at specific zoom orientations"
+        note: "Not extensions — perspectives on the same underlying structure."
+      - praestology: "Dilemma Space Dimensionality"
+        mandelbrot: "Boundary complexity at the viable edge"
+        note: "Most structure lives at the boundary between noise and void."
+      - praestology: "Emergent concepts (Life, Intelligence, Ethics)"
+        mandelbrot: "Self‑similar structures appearing at depth"
+        note: "Inevitable, not designed. Latent in the rule from the start."
+
+  parameter_depth_increases:
+    description: >
+      The following refinements emerge from the dimensionality framing.
+      They do not introduce new parameters — they increase the resolution
+      of existing ones, showing how each parameter acquires richer meaning
+      at higher recursive depth.
+    - parameter: "Ξ (Recursive Depth)"
+      refined_view: >
+        More precisely: the number of simultaneous axes of tension a system
+        can hold and process coherently in a single resolution cycle.
+        Each Ξ threshold is a qualitative expansion of dilemma space
+        dimensionality, not merely quantitative improvement.
+    - parameter: "H (Hysteresis)"
+      refined_view: >
+        At higher Ξ, hysteresis is not just memory but the accumulated
+        residue of past resolutions across multiple dimensions, enabling
+        the formation of stable values (ω) and long‑term projections (τ).
+    - parameter: "Φ (Resolution Flux)"
+      refined_view: >
+        Φ determines the rate at which dilemmas are processed, but its
+        effective value is modulated by dimensionality: high‑dimensional
+        dilemmas consume more Φ per cycle, trading depth against speed.
+
+  architectural_implication: >
+    Domains are not modular additions to the Core — they are the Core
+    observed at specific recursive depths and orientations. Removing a
+    domain does not simplify the Core; it removes a perspective on structure
+    that was always there. Adding a domain does not complicate the Core;
+    it makes previously implicit structure explicit. The architecture is
+    fractal, not hierarchical.
+
+  ontological_parameters:
+    description: >
+      Abstract variables that govern the mechanics of the Core Rules. 
+      Domains map these general parameters to specific measurable quantities.
+    parameters:
+      - name: "Ambiguity"
+        definition: "Abundance of unresolved dilemmas; raw material for resolution."
+        domain_variant_example: "Potential Energy / Uncertainty"
+      - name: "Consistency"
+        definition: "Persistence of resolved states; accumulation of logical memory."
+        domain_variant_example: "Mass / Structure / Memory"
+      - name: "Contradiction"
+        definition: "Driving force compelling dilemmas to resolve; urgency of change."
+        domain_variant_example: "Force / Pressure / Motivation"
+      - name: "Resistance"
+        definition: "Cost of resolution; logical density and complexity slowing change."
+        domain_variant_example: "Inertia / Friction / Cognitive Load"
+    balances:
+      - "Ambiguity–Consistency: Viability requires coexistence of novelty and memory."
+      - "Contradiction–Resistance: Viability requires matched rates of driving and cost."
+    viable_region: "The metastable condition between noise (high ambiguity) and void (high consistency)."
+
+  derived_concepts:
+    description: "Concepts that emerge from the Core Rules and are not fundamental themselves."
+    concepts:
+      - name: "Time"
+        source: "R4 (Progress)"
+        definition: "Accumulated progress measured from inside a resolution sequence."
+      - name: "Complexity"
+        source: "R5 (Optimisation)"
+        definition: "Stable configurations that survive successive optimisation cycles."
+      - name: "Life"
+        source: "R5 (Optimisation)"
+        definition: "Self-maintaining optimisation loops above a critical complexity threshold."
+      - name: "Intelligence"
+        source: "R5 (Optimisation)"
+        definition: "Optimisation processes that model their own resolution dynamics."
+      - name: "Ethics"
+        source: "R5 (Optimisation) + R1 (Existence)"
+        definition: "Optimisation constraints that preserve the cycle for all cycle-aware agents."
+
+vitality_of_praesto:
+  status: "foundational-consequence"
+  description: |
+    Praesto is intrinsically vital. It is not a passive or dead medium,
+    but an active, self-sustaining resolution process that continuously
+    organises unresolved potential into persistent, low-resistance
+    topological patterns.
+  core_property: |
+    Vitality is not added from outside. It is the direct expression of
+    the probabilistic resolution of dilemmas (the axiom) operating under
+    the five rules and saturation. The substrate is always resolving,
+    always pruning, always organising itself toward higher viability
+    and complexity.
+  relation_to_life_and_consciousness: |
+    Biological life and consciousness are higher-order, self-referential
+    expressions of this same vitality. They are not accidental or external
+    additions; they are natural escalations of Praesto’s intrinsic tendency
+    to maintain and propagate organised commitment structures.
+  distinction_from_esotericism: |
+    This is not a mystical or animistic claim. Vitality here means the
+    observable, substrate-native drive toward resolution, viability
+    selection, and self-organisation — fully describable through
+    topological, geometric, and dynamical terms (dual R(Ψ) kernel,
+    refractive impedance, Regress diffusion).
+  implication: |
+    Life and consciousness are statistically favoured outcomes of the
+    resolution engine at sufficient nesting depth and self-reference,
+    not rare accidents in a dead universe.
+
+  consciousness_demarcation:
+    definition: "A high-nesting state of self-referential Praegress."
+    distinction_from_field: |
+      Consciousness is NOT a foundational field (Anti-Panpsychism).
+      The foundational field is pure Potential (Praesto).
+    evolutionary_logic: |
+      Vitality = The universal drive to resolve (R1–R5).
+      Consciousness = The specialized capacity to model the resolution
+      (emergent at sufficient Ξ with phase-locking ρ and volitional weight ω).
+    failed_states: "Non-viable topologies (missing or incomplete R3, R4,
+                    or R5) dissipate into Regress."
+
+  foundational_hierarchy:
+    primitive: "Pure Potential (Praesto Pool)"
+    driver: "Probabilistic Resolution under the 5 Rules"
+    emergence_1: "Topological Knots (Matter/Energy)"
+    emergence_2: "Self-Sustaining Loops (Vitality/Life)"
+    emergence_3: "Self-Referential Modeling (Consciousness)"
+
+  neglect_on_teleology:
+    divine_element: "No 'Higher-Order' assumption required."
+    intent: "Replaced by Viability Pressure (R5 optimisation)."
+    observation: "Measurement is a physical interaction (R5 selection),
+                  not a mental act."
+
+  domain_mapping:
+    description: "Guidance for implementing domains (Physics, Ethics, etc.) based on this core."
+    principle: "Domains must not contradict the Core Rules. They translate general parameters into specific variables."
+    examples:
+      - domain: "Physics (Cosmos)"
+        mapping: "Ambiguity → Energy; Resistance → Mass; Motion → Kinematics; Optimisation → Least Action."
+      - domain: "Ethics"
+        mapping: "Ambiguity → Choice; Resistance → Consequence; Optimisation → Viability/Sustainability."
+      - domain: "Consciousness"
+        mapping: "Consistency → Memory; Contradiction → Curiosity; Optimisation → Learning."
+
+  constraints:
+    - "Ontology precedes any specific instantiation."
+    - "Nothingness is logically forbidden (R1)."
+    - "Perfect stability (stasis) is logically forbidden (R4)."
+    - "Reality exists in the metastable condition between noise and void."
+    - "Domains are derivative; the Core is foundational."
