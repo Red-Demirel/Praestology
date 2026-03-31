@@ -1,0 +1,65 @@
+name: "Master Core Equation – Dimensionless Form with Planck_hat Anchor"
+version: "1.0"
+core_version: "1.5"
+status: "Authoritative core expression – numerical closure pending"
+description: >
+  This is the single master equation from which all physics-domain
+  derivations descend. It encodes the axiom and R1–R5 as a compact
+  dynamical statement in dimensionless units. Planck_hat (ħ_hat) is
+  introduced as the unit-action resistance scale that emerges from
+  the residual closure-defect in the 3D embedding.
+
+master_equation:
+  dimensionless_form: >
+    i ∂ψ/∂t = [ −∇² + V(r) + g|ψ|² + ℛ(ψ) + Λ ln(1 + κ|ψ|²) ] ψ
+  latex: >
+    i \frac{\partial \psi}{\partial t} =
+    \left[ -\nabla^2 + V(\mathbf{r}) + g|\psi|^2 + \mathcal{R}(\psi) + \Lambda \ln(1 + \kappa |\psi|^2) \right] \psi
+
+planck_hat_anchor:
+  definition: "ħ_hat is the dimensionless unit-action resistance – the residual
+               cost of stabilising one quantum of phase advance (2π) against
+               the substrate's commitment-resistance in the 3D embedding."
+  role: "Sets the microscopic scale of inertial resistance, process-rate drag,
+         and the coupling strength for closure-defect channels (including α)."
+  derivation_note: >
+    ħ_hat emerges as the normalised residual impedance per cycle when the
+    bare geometric embedding cost (4π³ + π² + π) is corrected by the
+    observed α-skew under environmental commitment density η.
+  current_value: "≈ 0.0372 (provisional, to be fixed by vortex stability)"
+
+central_constants:
+  alpha: "Residual closure-defect fraction per winding cycle (α ≈ 1/137)"
+  lambda: "Saturation strength parameter in the logarithmic term"
+  kappa: "Inverse saturation density (κ = 1/n_sat)"
+  gamma0: "Base Regress decay rate"
+  eta: "Viability sensitivity in the dissolution kernel"
+
+lagrangian_proposal:
+  status: "Initial variational seed – non-Hermitian extension"
+  statement: >
+    The master equation can be derived from a variational principle with
+    an effective Lagrangian that includes a non-Hermitian viability term.
+    Proposed seed:
+    L = ψ* (i ∂t + ∇² - V) ψ - (g/2)|ψ|⁴ - (Λ/2) |ψ|² ln(1 + κ|ψ|²)
+        - ψ* ℛ(ψ) ψ   (where ℛ encodes viability-weighted commitment and Regress)
+  note: >
+    The non-Hermitian term from ℛ(ψ) makes the action complex, reflecting
+    the open exchange with the Praegress reservoir. Full variational closure
+    is pending PT-symmetry analysis and calibration against F02.
+
+reading_order:
+  - "core/specifications.yaml – axiom and R1–R5"
+  - "domains/physics/bridge-function.yaml – ψ = η identification"
+  - "domains/physics/commitment-response-function.yaml – dual ℛ(ψ) kernel"
+  - "core/master-core-equation.yaml – this file"
+  - "domains/physics/alpha-from-vortex-stability.yaml – numerical closure"
+
+open_derivations:
+  priority_1:
+    - "Fix ħ_hat from vortex stability functional (independent of observed α)."
+    - "Derive full Lagrangian variation that yields the master equation."
+    - "Complete F02 seven-constraint calibration with environmental η dependence."
+  priority_2:
+    - "PT-symmetry analysis of the non-Hermitian ℛ term."
+    - "Recover R∞ and Z0 from the same ħ_hat + η framework."
