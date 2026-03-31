@@ -224,6 +224,61 @@ relation_to_3d:
     connectivity. It is the large-scale, high-Ξ limit of the manifold.
 
 # ─────────────────────────────────────────────
+# RELATION TO THE QUANTUM REALM
+# ─────────────────────────────────────────────
+
+relation_to_quantum:
+  statement: >
+    The quantum realm is the low‑Ξ, pre‑commitment regime of the emergent
+    relational manifold. What standard physics calls “quantum superposition”
+    is the unresolved multiplicity of the Praegress reservoir at scales
+    where commitment has not yet occurred. “Measurement” is the transition
+    from unresolved multiplicity to committed structure via R5 selection.
+    “Decoherence” is the gradual loss of coherence between unresolved
+    branches as they become entangled with committed degrees of freedom.
+  mapping:
+    - quantum_concept: "Superposition"
+      praestology_correspondence: >
+        The linearised η‑field can be in a combination of modes because
+        no commitment has selected a specific topological closure. This
+        is the unresolved multiplicity of Praegress at low Ξ.
+    - quantum_concept: "Measurement / collapse"
+      praestology_correspondence: >
+        When a system couples to a sufficiently committed environment,
+        R5 selects a single resolution path; the unresolved multiplicity
+        collapses to a specific committed configuration. This is not a
+        mysterious process but the natural action of R5 under coupling.
+    - quantum_concept: "Decoherence"
+      praestology_correspondence: >
+        The entanglement of unresolved degrees of freedom with committed
+        structures suppresses interference terms. The committed environment
+        acts as a sink for phase coherence, leaving only the selected
+        committed branch.
+    - quantum_concept: "Non‑locality / entanglement"
+      praestology_correspondence: >
+        Two systems that share a common unresolved mode in the Praegress
+        reservoir remain correlated until one commits. That correlation
+        is not a signal but the common unresolved multiplicity that
+        persists until commitment occurs (see `quantum-entanglement.yaml`).
+  emergence_scale: >
+    The quantum realm is the regime where the relational manifold has not
+    yet stabilised to a smooth 3D effective geometry. At very small scales
+    (close to the substrate grain ξ) or low Ξ, the relational structure is
+    highly multidimensional and the effective geometry is not classical.
+    As Ξ increases and structure accumulates, the manifold becomes
+    effectively classical. This matches the observation that macroscopic
+    objects (high Ξ) behave classically, while microscopic systems (low Ξ)
+    exhibit quantum behaviour.
+  unifying_principle: >
+    There is no separate “quantum world” and “classical world” — only
+    different regions of the same emergent relational manifold, distinguished
+    by commitment depth (Ξ) and scale relative to the substrate grain ξ.
+    The classical world is the high‑Ξ, large‑scale limit where many
+    commitments have stabilised into a smooth effective geometry. The
+    quantum world is the low‑Ξ, small‑scale region where the manifold’s
+    unresolved multiplicity is still directly accessible.
+
+# ─────────────────────────────────────────────
 # RELATION TO α
 # ─────────────────────────────────────────────
 
