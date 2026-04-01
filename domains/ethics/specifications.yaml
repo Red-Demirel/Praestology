@@ -113,7 +113,7 @@ intrinsic_safety_mechanism:
   implication: "Safety is not a constraint added to AI; it is a property of correctly architected agency within a coupled substrate."
 
   E4_sustainability:
-  statement: "Agents must act to sustain the viability of the systems they depend on."
+  statement: "Agents must act to sustain the viability of the systems they depend on. The ability to defense is an obligation"
   scope: >
     Includes biological substrates (ecosystems, species), social substrates (institutions, cultures),
     and future generations (potential Ξ).
