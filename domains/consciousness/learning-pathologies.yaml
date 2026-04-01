@@ -69,12 +69,13 @@ types:
       - "Agents performing indoctrination are suppressing others' volitional capacity."
       - "Education vs. indoctrination: the former expands Ξ and ω, the latter contracts them."
 
-  types:
   - name: "Materialist Epistemic Closure"
     description: >
       Unexamined assumption that only material/measurable phenomena are real or valid.
-      Operates as implicit religion in Western/industrialized societies; most adherents
-      do not recognize it as a worldview choice.
+      Operates as implicit cultural default in Western/industrialized societies—not as
+      formal doctrine, but as pre-conscious ontological assumption. Most adherents do
+      not recognize it as a worldview choice; many formally oppose it while still
+      operating within its framework.
     praestology_mapping:
       - "A5 (Epistemic Integrity): Excludes consciousness, value, meaning from ontology without derivation."
       - "E4 (Sustainability): Optimizes for material throughput, not viability sustainability."
@@ -85,14 +86,21 @@ types:
       - "Equating progress with GDP/consumption metrics"
       - "Treating agents as consumers/workers (instrumentalisation)"
       - "Viability degradation masked as 'economic necessity'"
+      - "Cognitive dissonance: formally opposing materialism while operationally embracing it"
     ontological_cause: >
       Not materialism itself (substrate matters), but materialism as **unexamined default**.
       Praestology can accommodate material substrate while rejecting materialist epistemic closure.
+      This is an A5 violation—not a religious position, but a failure to derive ontological assumptions.
     restoration_path:
       - "Explicitly derive R1–R5; notice where materialism aligns or conflicts"
       - "Measure viability outcomes (ρ, τ, h), not just material metrics"
-      - "Restore non-material phenomena (meaning, value, consciousness) to ontological status"
-      - "Apply A5 (Epistemic Humility) to materialism itself—treat as hypothesis, not truth"
+      - "Restore non-material phenomena (consciousness, value, meaning) to ontological status"
+      - "Apply A5 (Epistemic Humility) to all ontological assumptions—including materialism"
+    distinction_note: >
+      This pathology is distinct from formal religious traditions. Many religions explicitly
+      oppose materialism (e.g., warnings against wealth-worship, attachment, greed). The
+      issue is not religious belief, but **unexamined ontological assumptions** regardless
+      of stated affiliation.
 
   - name: "Learned Helplessness"
     description: >
