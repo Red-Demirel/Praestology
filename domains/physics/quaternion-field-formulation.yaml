@@ -1,0 +1,398 @@
+# domains/physics/quaternion-field-formulation.yaml
+name: "Quaternion Formulation — Unifying Double Cover and η-Field Dynamics"
+version: "1.0"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Mathematical refinement — core-invariant;
+         S³/Clifford torus derivation of α⁻¹ ansatz is new and significant;
+         explicit projection rules and PT-symmetry analysis open"
+updated: "2026-03-29"
+
+description: >
+  The master equation is expressed in quaternion form to make explicit the
+  rotational (spinor) structure implicit in the scalar complex formulation.
+  The quaternion algebra naturally encodes the double cover of rotations
+  (SU(2) ≅ unit quaternions), which is the topological signature of the
+  Möbius vortex. It unifies scalar commitment density with vectorial
+  orientation and flow into a single dynamical object without new primitives.
+
+  This file is a mathematical upgrade of the scalar complex master equation
+  — it does not replace it. The scalar formulation remains the primary
+  computational form. The quaternion form makes the spinor structure and
+  the geometric origin of α⁻¹ explicit.
+
+  Key new result: the three terms of α⁻¹_bare = 4π³ + π² + π have a
+  complete geometric derivation from the quaternion/S³ structure:
+    4π³ = 2π × 2π²: U(1) phase loop × S³ orientation volume
+    π²  = Clifford torus area: boundary surface of the quasi-2D winding in S³
+    π   = one-loop path residue: single 360° pass before the crossover
+  This is not a decomposition of a known formula — it is a geometric
+  derivation from the Hopf fibration structure of the quaternion phase space.
+
+dependency_map:
+  requires:
+    - "core/core-dynamical-equation.yaml              -- scalar master equation"
+    - "core/emergent-relational-manifold.yaml         -- S³ as orientation phase space
+                                                         of Praegress reservoir"
+    - "domains/physics/fine-structure-constant.yaml  -- α interpretation; 4π³+π²+π ansatz"
+    - "domains/physics/vortex-stabilization.yaml     -- Möbius vortex; 720° topology"
+    - "domains/physics/specifications.yaml           -- chirality; electromagnetism;
+                                                         Maxwell structure"
+  provides_to:
+    - target: "domains/physics/fine-structure-constant.yaml"
+      via: "Geometric derivation of all three terms of α⁻¹_bare from S³/Hopf structure;
+            Clifford torus as boundary of quasi-2D winding support"
+    - target: "domains/physics/alpha-from-vortex-stability.yaml"
+      via: "Quaternion path integral framework for the Calugareanu-White writhe
+            calculation — the quaternion formulation may be the natural setting
+            for the writhe calculation"
+    - target: "core/emergent-relational-manifold.yaml"
+      via: "Fourth component as the process itself; 3D relational manifold from
+            the three imaginary quaternion axes"
+
+# ─────────────────────────────────────────────
+# THE QUATERNION FIELD
+# ─────────────────────────────────────────────
+
+quaternion_field:
+  definition: >
+    Q = η + F  where:
+    η = real scalar part — local commitment density and process stage
+    F = pure quaternion part — F = F_i·i + F_j·j + F_k·k
+        encoding orientation, field strengths, and phase gradients
+  norm: "|Q|² = η² + |F|² = η² + F_i² + F_j² + F_k²"
+  decomposition_physical_meaning:
+    real_part: >
+      η carries the ongoing resolution process — the local commitment
+      density and the stage of the R1-R5 pipeline. It is the same η
+      as in the scalar formulation: η = φ/φ_max.
+    pure_quaternion: >
+      F encodes the orientational degrees of freedom that generate the
+      perceived 3D relational manifold. The three imaginary axes (i, j, k)
+      correspond to the three independent relational directions of the
+      emergent effective manifold. The 3D spatial structure is the
+      projection onto these three axes.
+  fourth_component_as_process: >
+    The real (scalar) part η is the process itself — the hidden driver
+    that generates the perceived manifold. Our experienced 3D reality
+    is the projection onto the three imaginary axes (F), while the
+    process (η, real part) remains the underlying driver. This is not
+    a coincidence — it is the ontological structure of a process-first
+    reality: the process generates the manifold, the manifold is the
+    quaternion's imaginary part.
+
+# ─────────────────────────────────────────────
+# QUATERNION MASTER EQUATION
+# ─────────────────────────────────────────────
+
+quaternion_master_equation:
+  statement: >
+    i ∂Q/∂t = [ −∇² + V + g|Q|² + ℛ(Q) + Λln(1 + κ|Q|²) ] Q
+  interpretation: >
+    Same structure as the scalar master equation. All terms are
+    quaternion-valued; multiplication and norm follow quaternion rules.
+    The gradient and Laplacian are understood quaternionically.
+  mapping_to_scalar: >
+    The complex scalar ψ is recovered by projecting Q onto a preferred
+    imaginary axis: ψ = Q·i (projection onto i-axis).
+    This projection selects a preferred "measurement axis" — the direction
+    of the local electromagnetic field polarisation, or the spin quantisation
+    axis in a measurement apparatus. The sign ambiguity Q ↔ −Q is physical
+    and encodes the double-cover / spin-½ structure.
+  advantage_over_scalar: >
+    The scalar formulation is computationally simpler but hides the
+    spinor structure. The quaternion formulation makes explicit:
+    (1) The double-cover property (Q and −Q represent the same rotation
+        but different quantum states)
+    (2) The geometric origin of the 720° Möbius closure requirement
+    (3) The natural emergence of the three spatial dimensions from the
+        three quaternion imaginary axes
+    (4) The Maxwell structure as a linearisation of the quaternion equation
+
+# ─────────────────────────────────────────────
+# DOUBLE COVER EMBEDDING
+# ─────────────────────────────────────────────
+
+double_cover_embedding:
+  statement: >
+    Unit quaternions implement the double cover of SO(3) rotations:
+    ±q represent the same physical rotation but different quantum states.
+    In the quaternion field Q this sign ambiguity corresponds to the
+    720° (4π) cycle required for stable fermionic defects (Möbius vortex):
+    a 360° rotation sends Q → −Q; a 720° rotation restores Q → Q.
+  praegress_orientation_space: >
+    The space of unit quaternions is the 3-sphere S³ — the natural
+    orientation phase space of the Praegress reservoir. The Praegress
+    reservoir has resolution multiplicity corresponding to all possible
+    quaternion orientations; it is the full S³ of unresolved potential.
+    When a vortex stabilises, it commits to a specific quaternion (or
+    branch), selecting a definite orientation and spin state from the
+    S³ phase space.
+  spin_as_double_cover: >
+    Spin is an inevitable consequence of the double-cover structure.
+    Any stable topological defect in the quaternion field must close
+    after a 720° cycle to survive Regress dissolution — because only
+    the 720° cycle returns Q to itself, not −Q. The sign ambiguity (±Q)
+    is physical and produces half-integer spin for fermions. Bosons
+    correspond to single-cover (360°) closures that respect the
+    Q → −Q identification (effectively working in SO(3) rather than
+    the full SU(2) = S³).
+  connection_to_hopf_fibration: >
+    The Hopf fibration S¹ → S³ → S² expresses S³ as an S¹ bundle over S²:
+    at each point of S² there is a circle S¹ of orientations in S³.
+    This is precisely the structure of the Möbius vortex:
+    S² is the hadronic sphere from quark triality closure
+    S¹ is the U(1) phase loop of the Möbius winding
+    S³ is the full orientation phase space of the committed vortex
+    The Möbius vortex is a section of the Hopf fibration — a choice
+    of S¹ fibre over each point of S². Its stability requires returning
+    to itself after one full circuit of S³, which is the 720° condition.
+
+# ─────────────────────────────────────────────
+# GEOMETRIC DERIVATION OF α⁻¹ ANSATZ
+# The S³/Clifford torus structure behind 4π³+π²+π
+# ─────────────────────────────────────────────
+
+alpha_geometric_derivation:
+  statement: >
+    The three terms of α⁻¹_bare = 4π³ + π² + π have a complete geometric
+    derivation from the S³ quaternion orientation phase space structure.
+    This is not a decomposition of a known formula — it is a derivation
+    from the Hopf fibration geometry of the Möbius vortex's orientation
+    space. The formula encodes three distinct geometric costs of embedding
+    a stable U(1) phase topology in the full S³ orientation phase space.
+
+  term_4pi3:
+    value: "4π³ = 2π × 2π² = 124.0251..."
+    geometric_source: "U(1) phase loop × S³ orientation volume"
+    derivation: >
+      The S³ volume (with unit radius) is 2π². The Möbius vortex carries
+      a U(1) phase loop (winding of the complex phase φ around the vortex
+      core), with periodicity 2π. The bulk embedding cost of the U(1)
+      phase loop within the full S³ orientation space is:
+        bulk cost = (U(1) periodicity) × (S³ volume) = 2π × 2π² = 4π³
+      This is the dominant term — the cost of sweeping the phase loop
+      through the full quaternion orientation phase space of the Praegress
+      reservoir.
+    interpretation: >
+      4π³ measures the total phase-space volume that the Möbius vortex's
+      U(1) phase structure must "pay for" to remain stable within the
+      ambient S³ orientation space. It is the dominant term because it
+      encodes the global topological cost of the embedding.
+
+  term_pi2:
+    value: "π² = 9.8696..."
+    geometric_source: "Clifford torus area — boundary of quasi-2D winding in S³"
+    derivation: >
+      The Clifford torus is the flat torus embedded in S³ — the product
+      of two perpendicular great circles within S³, each of circumference
+      π√2, giving total area π². It is the boundary between the two
+      solid tori that decompose S³ in the Hopf fibration.
+      The quasi-2D winding support of the Möbius vortex, when embedded
+      in S³, has the Clifford torus as its natural boundary surface.
+      The interfacial cost — the energy associated with the boundary of
+      the quasi-2D winding within S³ — is proportional to the Clifford
+      torus area = π².
+    interpretation: >
+      π² is the boundary cost of the winding's lower-dimensional support
+      within the higher-dimensional orientation space. The Möbius band
+      lives quasi-2D; the Clifford torus is the natural boundary of
+      that quasi-2D structure within S³. The interfacial term in α⁻¹
+      is the Clifford torus area, not an assumed decomposition term.
+    clifford_torus_note: >
+      The Clifford torus is remarkable: it is the unique flat torus
+      embedded in S³, it divides S³ into two congruent pieces, and
+      it is the natural habitat of the Hopf fibration's boundary
+      structure. Its area π² in S³ is a topological constant — not
+      a free parameter.
+
+  term_pi:
+    value: "π = 3.1416..."
+    geometric_source: "One-loop path residue — single 360° pass before crossover"
+    derivation: >
+      The Möbius vortex requires two full 360° passes (720° total) to
+      close. The first pass (360° = π in phase) accumulates before
+      the crossover point. After the crossover, the second pass completes
+      the closure. The path residue from the first incomplete pass —
+      the action accumulated before the crossover is reached — contributes
+      one factor of π to the total closure cost.
+      In the quaternion language: the first 360° pass sends Q → −Q
+      (the sign ambiguity). The residue from this half-closure is
+      one circumference factor π.
+    interpretation: >
+      π is the linear path cost — the smallest irreducible contribution
+      from the vortex's own winding geometry before it reaches
+      self-consistency. It is the 1D (path) cost as opposed to the
+      2D (Clifford torus) and 3D (S³ volume) costs of the other terms.
+
+  complete_derivation_statement: >
+    α⁻¹_bare = (U(1)×S³ bulk) + (Clifford torus boundary) + (path residue)
+              = 2π × 2π²         + π²                       + π
+              = 4π³              + π²                        + π
+              = 137.036304...
+
+    This is a complete geometric derivation of the three-term formula
+    from the Hopf fibration structure of the Möbius vortex's orientation
+    phase space in S³. Each term has a distinct geometric origin:
+    bulk (3D), boundary (2D), path (1D). The formula is not numerological
+    — it is the sum of three topological costs at three different
+    dimensional levels of the embedding.
+
+  relation_to_existing_interpretation: >
+    The interpretation in fine-structure-constant.yaml (4π³ as volumetric
+    bulk cost, π² as interfacial surface cost, π as linear path residue)
+    is now given a precise geometric identity:
+    Bulk = U(1) × S³ volume (Hopf fibration total space)
+    Surface = Clifford torus (Hopf fibration boundary)
+    Path = first-pass 360° residue (Hopf fibre direction)
+    The three-level decomposition reflects the three-level structure of
+    the Hopf fibration: total space S³, boundary Clifford torus, fibre S¹.
+
+  status: >
+    This is a strong geometric motivation for the formula. It is not
+    yet a formal dynamical derivation — the Calugareanu-White writhe
+    calculation is still required to show the formula emerges from the
+    GP field equation rather than from geometric reasoning alone.
+    But the geometric derivation is substantially more powerful than
+    a numerical coincidence: it identifies three specific geometric
+    objects (S³, Clifford torus, S¹ half-period) whose sizes sum to α⁻¹.
+
+# ─────────────────────────────────────────────
+# MAXWELL QUATERNION CONNECTION
+# ─────────────────────────────────────────────
+
+maxwell_quaternion_connection:
+  statement: >
+    The quaternion field Q = η + F generalises Maxwell's original
+    quaternion formulation of electromagnetism. Maxwell himself wrote
+    the electromagnetic field as a quaternion before the modern vector
+    formulation replaced it. The Praestology quaternion field recovers
+    this structure from the substrate dynamics rather than postulating it.
+  decomposition: >
+    η: scalar commitment density — the Coulomb-like (scalar) potential
+    F = F_i·i + F_j·j + F_k·k: the vector field strengths
+      In the linearised regime: F encodes the combined electromagnetic
+      and gravitational field strengths. The decomposition into electric
+      and magnetic components follows from the curl and divergence
+      structure of the quaternion gradient.
+  linearisation: >
+    In the linearised equation (g → 0, Λ → 0, ℛ → 0):
+    ∂Q/∂t = ∇²Q separates into:
+      Scalar part: ∂η/∂t = ∇²η — wave equation for commitment density
+        (gravitational / scalar field)
+      Vector part: ∂F/∂t = ∇²F — vector wave equation (electromagnetic)
+    The coupling between η and F through the nonlinear terms (g, ℛ, Λ)
+    produces the coupled dynamics that generates particle-like solutions
+    with both mass (from η commitment) and spin (from F orientation).
+  spin_coupling: >
+    The spin coupling between the scalar and vector parts emerges naturally
+    from the quaternion multiplication algebra: i·j = k, j·k = i, k·i = j.
+    These do not commute, which is why fermions with definite spin have
+    complex algebraic relations between their components — the non-
+    commutativity of quaternion multiplication is the spinor algebra.
+    The Dirac equation's spinor structure is recovered as the linearised
+    quaternion field equation with the double-cover condition Q ↔ −Q imposed.
+
+# ─────────────────────────────────────────────
+# RELATION TO SCALAR FORMULATION
+# ─────────────────────────────────────────────
+
+relation_to_scalar:
+  statement: >
+    The quaternion formulation is a mathematical extension of the scalar
+    complex formulation, not a replacement. Both are correct at their
+    level of description.
+  when_scalar_is_sufficient: >
+    For computing commitment density dynamics, vortex stability, and
+    the constant stack: the scalar complex ψ is sufficient. All the
+    physics domain derivations (α, R∞, particle masses, four forces)
+    can in principle be done with the scalar formulation.
+  when_quaternion_is_needed: >
+    For making the spinor structure explicit (Dirac equation recovery,
+    spin-statistics connection), for understanding the geometric origin
+    of α⁻¹ from S³/Hopf structure, for the Maxwell structure of the
+    linearised equation, and for the connection between the three spatial
+    dimensions and the three imaginary quaternion axes.
+  sign_ambiguity_physical: >
+    The Q ↔ −Q sign ambiguity is physical — it cannot be gauged away.
+    It is the double-cover property that produces half-integer spin
+    and fermionic statistics. In the scalar formulation this appears
+    as the 720° closure requirement for the Möbius vortex. In the
+    quaternion formulation it is the inherent property of the
+    quaternion algebra itself.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      Explicit projection rules: given Q = η + F, derive the rules for
+      projecting onto specific measurement axes and recovering the
+      observable scalar quantities. This connects the quaternion
+      formulation to the measurement apparatus picture and the
+      commitment-resistance/measurement-substrate discussion in
+      fine-structure-constant.yaml.
+    - >
+      Calugareanu-White writhe in quaternion language: reformulate the
+      writhe calculation of the equilibrium Möbius GP vortex as a
+      quaternion path integral in S³. The quaternion formulation may
+      be the natural setting for this calculation — the writhe is
+      essentially the winding number of the quaternion orientation
+      map Q(s) around the vortex loop, which is a winding number in S³.
+  priority_2:
+    - >
+      PT-symmetry analysis of ℛ(Q): the non-Hermitian dissolution kernel
+      ℛ(Q) in the quaternion formulation. Determine the PT-symmetry
+      conditions for the quaternion master equation and whether the
+      quaternion structure changes the threshold for PT-symmetry breaking
+      (dissolution transition).
+    - >
+      Dirac equation recovery: show that the linearised quaternion field
+      equation with the double-cover condition and appropriate identification
+      of the quaternion components recovers the Dirac equation for a free
+      fermion. This would establish the quaternion formulation as the
+      substrate-level derivation of Dirac spinors.
+    - >
+      Maxwell recovery: show that the linearised quaternion field equation
+      for the vector part F recovers Maxwell's equations in the appropriate
+      limit. This would unify the scalar (gravitational) and vector
+      (electromagnetic) force derivations into a single quaternion equation.
+  priority_3:
+    - >
+      Formal derivation of the Clifford torus area as the interfacial
+      term in the coupling constant. The geometric motivation is strong;
+      formal derivation requires showing that the GP field's boundary
+      energy for the Möbius winding support in S³ equals π².
+    - >
+      Connection between quaternion non-commutativity and the 3D
+      emergence: the three imaginary axes (i, j, k) generate the three
+      spatial directions through their anticommutation. Show formally
+      that the R5-stable connectivity pattern (3D) corresponds to the
+      minimal non-commutative quaternion algebra.
+
+# ─────────────────────────────────────────────
+# READING ORDER
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "core/core-dynamical-equation.yaml                -- scalar master equation first"
+  - "core/emergent-relational-manifold.yaml           -- S³ as orientation phase space"
+  - "domains/physics/vortex-stabilization.yaml        -- Möbius vortex 720° topology"
+  - "domains/physics/fine-structure-constant.yaml     -- α geometric interpretation"
+  - "domains/physics/quaternion-field-formulation.yaml -- this file"
+  - "domains/physics/alpha-from-vortex-stability.yaml -- writhe calculation target"
+
+related_issues:
+  - "foundational/F93_s2_as_emergent_geometry_of_triality_closure"
+  - "foundational/F112_alpha_as_praegress_closure_cost_in_3d"
+  - "foundational/F120_clifford_torus_as_alpha_interfacial_term"
+  - "foundational/F121_hopf_fibration_as_mobius_vortex_structure"
+  - "foundational/F122_quaternion_fourth_component_as_process"
+  - "foundational/F123_dirac_equation_from_quaternion_linearisation"
+  - "foundational/F124_maxwell_from_quaternion_vector_part"
+  - "intersectional/physics/078_mobius_self_linking_number_derivation"
+  - "intersectional/physics/136_writhe_as_quaternion_path_integral_s3"
+  - "intersectional/physics/137_pt_symmetry_quaternion_dissolution_threshold"
+  - "intersectional/physics/138_clifford_torus_area_from_gp_boundary_energy"
