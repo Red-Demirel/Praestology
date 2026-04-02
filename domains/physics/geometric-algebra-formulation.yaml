@@ -1,0 +1,622 @@
+# domains/physics/geometric-algebra-formulation.yaml
+name: "Geometric Algebra Formulation of the Praestology Substrate"
+version: "1.0"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Mathematical formulation — natural algebraic structure of the
+         substrate field; core-invariant; Dirac/Maxwell recovery and
+         conformal extension open"
+updated: "2026-03-29"
+
+description: >
+  The Praestology master equation, derived without assuming a background
+  manifold or pre-specified dimensionality, generates a field structure
+  that naturally decomposes into objects of different grades — scalars,
+  vectors, bivectors, pseudoscalars. This grade structure is precisely
+  what geometric algebra (GA) is built to handle. GA is therefore not
+  imposed on the framework — it is the algebra the framework generates
+  when followed without pre-constraining the geometry.
+
+  The development path is instructive and worth preserving:
+  R1-R5 without background → pre-spatial mode distribution (no metric)
+  → connectivity network (proto-spatial relations) → effective 3D geometry
+  (R5-selected) → stable vortex solutions (Möbius, 720° topology)
+  → S³ as orientation phase space (quaternion structure emerges)
+  → grade decomposition of the substrate field (GA structure manifests)
+  → Clifford torus and Hopf fibration as natural features of α⁻¹.
+
+  None of this was imposed. Starting without restrictions — no assumed
+  dimensionality, no assumed spacetime signature, no assumed field type —
+  led to the discovery that the natural algebraic structure is GA.
+  Had we assumed 3D+1 from the start, several of these insights would
+  have been invisible: the S³ orientation phase space, the Clifford torus
+  as the α⁻¹ interfacial term, the grade structure of the substrate field,
+  and the natural emergence of the Dirac and Maxwell structures from the
+  same algebraic object.
+
+  Quaternions (even subalgebra of Cl(3,0)) capture the spinor/rotation
+  structure but compress the grade decomposition. Full GA makes the
+  grade structure explicit and extends naturally to conformal geometry
+  (Cl(4,1)) — the right setting for a framework that derives geometry
+  from process rather than assuming it.
+
+  Relation to other files:
+  Scalar complex formulation: core/core-dynamical-equation.yaml (primary)
+  Quaternion stepping stone: domains/physics/quaternion-field-formulation.yaml
+  This file: the full algebraic structure, from which the others are limits
+
+dependency_map:
+  requires:
+    - "core/core-dynamical-equation.yaml               -- scalar master equation"
+    - "core/emergent-relational-manifold.yaml          -- grade structure as
+                                                          emergent, not assumed"
+    - "domains/physics/quaternion-field-formulation.yaml -- spinor structure;
+                                                            S³; Clifford torus"
+    - "domains/physics/fine-structure-constant.yaml    -- α geometric derivation"
+    - "domains/physics/specifications.yaml             -- chirality; four forces"
+  provides_to:
+    - target: "domains/physics/fine-structure-constant.yaml"
+      via: "Complete GA derivation of all three α⁻¹ terms from Cl(3,0)
+            grade structure and Hopf fibration"
+    - target: "domains/physics/alpha-from-vortex-stability.yaml"
+      via: "Writhe calculation as GA path integral; natural GA setting
+            for Calugareanu-White theorem"
+    - target: "domains/physics/specifications.yaml"
+      via: "Maxwell equations as single GA equation ∇F = J;
+            Dirac equation as even-grade GA equation"
+    - target: "core/emergent-relational-manifold.yaml"
+      via: "GA grade structure as the algebraic expression of the
+            emergent relational manifold's degrees of freedom"
+
+# ─────────────────────────────────────────────
+# METHODOLOGICAL NOTE
+# Why the no-assumption approach matters
+# ─────────────────────────────────────────────
+
+methodological_note:
+  statement: >
+    The framework was developed without pre-assuming:
+    - A background spacetime manifold
+    - A specific number of spatial dimensions
+    - A metric signature
+    - A particular field type (scalar, vector, spinor)
+    - A preferred algebraic structure
+
+    Following R1-R5 without these restrictions led to:
+    - Pre-spatial mode distribution (stage 1 of emergence hierarchy)
+    - 3D as R5-selected stability outcome (not an input)
+    - S³ as the natural orientation phase space (not imposed)
+    - Clifford torus as the α⁻¹ interfacial term (not assumed)
+    - Grade decomposition of the substrate field (not specified)
+
+    The grade structure — scalar (η), vector (commitment current),
+    bivector (field strengths), pseudoscalar (topological charge) —
+    was not put into the framework. It is what the framework produces
+    when the substrate field is allowed to have its natural algebraic
+    structure. This is precisely geometric algebra.
+
+    Had the framework started with "3+1 dimensional spacetime" and
+    "scalar field" or "spinor field," the following would have been
+    invisible or forced:
+    - The S³ orientation phase space of the Möbius vortex
+    - The Clifford torus as a topological cost in α⁻¹
+    - The Hopf fibration as the natural structure of the vortex's
+      embedding in the orientation space
+    - The grade decomposition as the natural field structure
+    - The conformal group as the natural symmetry (rather than Poincaré)
+
+    This is worth preserving as a methodological principle: derive the
+    algebra from the physics, not the physics from the algebra.
+
+  geometric_algebra_usage:
+    status: "Emergent descriptive layer — not imposed a priori"
+    principle: >
+      Geometric algebra is adopted only to the extent it naturally arises
+      as a consequence of the potential → commitment dynamics and the
+      emergence hierarchy. No algebraic structure is set up in advance
+      of the substrate dynamics. GA is the description of what the
+      framework generates — not a framework imposed on the physics.
+    current_focus: >
+      Cl(3,0) appears as the natural algebra for describing the transition
+      from 1D streams (grade-1 vectors, directed commitment flows) →
+      2D planes/vortices (grade-2 bivectors, outer products of streams)
+      → 3D merged geometry (grade-3 pseudoscalar, volume closure).
+      This grade progression is the algebraic shadow of the emergence
+      hierarchy: the same transition from pre-spatial mode distribution
+      through connectivity network to effective 3D geometry, expressed
+      in the language that the dynamics itself generates.
+    rule: >
+      No algebraic structure is set up in advance of the substrate
+      dynamics. This applies equally to dimensionality (derived, not
+      assumed), metric signature (emergent from commitment density),
+      field type (grade structure found from the dynamics), and algebraic
+      product structure (geometric product emerges from the grade
+      decomposition, not the other way around).
+    consistency_with_framework: >
+      This principle is consistent with how the framework has treated
+      all structure from the beginning:
+      Dimensions: derived from R5 stability, not assumed (3D)
+      Time: derived as R4 accumulation counter, not a background axis
+      Metric: emerges from commitment density gradients, not imposed
+      Algebra: geometric algebra found as the natural description
+      In each case: the structure was derived by following the logic
+      of R1-R5 without pre-constraining the answer.
+
+
+# ─────────────────────────────────────────────
+# GEOMETRIC ALGEBRA BASICS
+# What GA is and why it is the natural algebra here
+# ─────────────────────────────────────────────
+
+geometric_algebra_basics:
+  definition: >
+    Geometric algebra Cl(p,q) is the Clifford algebra generated by n = p+q
+    basis vectors eᵢ with the geometric product rule:
+    eᵢeⱼ + eⱼeᵢ = 2ηᵢⱼ (the metric)
+    where ηᵢⱼ = +1 for i ≤ p and ηᵢⱼ = −1 for i > p.
+    The geometric product of two vectors a and b decomposes as:
+    ab = a·b + a∧b (inner product + outer product)
+    producing a sum of a scalar (grade 0) and a bivector (grade 2).
+
+  grade_structure:
+    grade_0: "Scalars — commitment density η, topological charge"
+    grade_1: "Vectors — commitment current, momentum flow"
+    grade_2: "Bivectors — field strengths (electromagnetic, gravitational)"
+    grade_3: "Trivectors / pseudoscalar — volume element, duality"
+    general: >
+      A general element of Cl(3,0) is a multivector M = M₀ + M₁ + M₂ + M₃
+      where Mₖ is the grade-k part. This single object simultaneously
+      encodes scalar, vector, bivector, and pseudoscalar information.
+
+  why_natural_for_praestology:
+    grade_0_eta: >
+      The scalar commitment density η(r,t) is naturally grade-0.
+      It is the 'how much' of the substrate field — dimensionless,
+      directionless, the pure resolution level at each point.
+    grade_1_current: >
+      The commitment current (flow of potential toward resolution)
+      is naturally grade-1 — it has direction in the relational manifold.
+      The phase gradient ∇φ from the master equation is a grade-1 object.
+    grade_2_fields: >
+      The electromagnetic field strengths E and B are naturally grade-2
+      (bivectors). In 3D GA: E = Eₓ(e₁e₀) + Ey(e₂e₀) + Ez(e₃e₀)
+      and B = Bₓ(e₂e₃) + By(e₃e₁) + Bz(e₁e₂). They are the same
+      grade-2 object in spacetime algebra — not separate vector fields.
+      The split into E and B is observer-dependent; the bivector F = E + iB
+      is frame-independent.
+    grade_3_topology: >
+      The topological charge density (winding number density, the source
+      of particle discreteness) is naturally grade-3 — a pseudoscalar,
+      the highest grade in 3D. The pseudoscalar i₃ = e₁e₂e₃ in Cl(3,0)
+      is the volume element that mediates duality between grades.
+
+  relation_to_quaternions: >
+    Quaternions are the even subalgebra of Cl(3,0) — the grade-0 and
+    grade-2 parts only. The quaternion imaginary units correspond to:
+    i ↔ e₂e₃ (bivector in the 23-plane)
+    j ↔ e₃e₁ (bivector in the 31-plane)
+    k ↔ e₁e₂ (bivector in the 12-plane)
+    The quaternion field Q = η + F therefore mixes grade-0 (η) and
+    grade-2 (F). But the full substrate field also has grade-1
+    (commitment current) and grade-3 (topological charge) components
+    that quaternions cannot represent without a separate formalism.
+    GA unifies all four grades in one object.
+
+# ─────────────────────────────────────────────
+# THE SUBSTRATE FIELD AS A MULTIVECTOR
+# ─────────────────────────────────────────────
+
+substrate_multivector_field:
+  statement: >
+    The substrate field Ψ(r,t) is a full multivector in Cl(3,0):
+    Ψ = ⟨Ψ⟩₀ + ⟨Ψ⟩₁ + ⟨Ψ⟩₂ + ⟨Ψ⟩₃
+  grade_components:
+    grade_0_scalar:
+      symbol: "⟨Ψ⟩₀ = η"
+      meaning: "Scalar commitment density — the process level at r"
+      relation_to_scalar_eq: "This is ψ in the scalar master equation"
+    grade_1_vector:
+      symbol: "⟨Ψ⟩₁ = J"
+      meaning: >
+        Commitment current — directional flow of resolution potential.
+        J = η·(∇φ) encodes the phase gradient weighted by commitment
+        amplitude. This is the momentum density of the vortex flow —
+        the kinetic term |∇φ|²|ψ|² in 𝓥(ψ) is J·J.
+      relation_to_inertia: >
+        The wake-trail mechanism of inertia (rule_2_inertia) lives here:
+        the forward impedance-wake is a grade-1 asymmetry in J ahead of
+        the moving structure. Kinetic momentum is the grade-1 part of the
+        substrate field — not a separately defined quantity but a natural
+        grade of the same multivector.
+    grade_2_bivector:
+      symbol: "⟨Ψ⟩₂ = F"
+      meaning: >
+        Bivector field strengths — the combined electromagnetic and
+        gravitational field strengths in their natural geometric form.
+        F = E + i₃B where E is the electric bivector and B is the
+        magnetic bivector. These are not separate fields — they are
+        grades of the same substrate bivector F.
+      chirality_connection: >
+        Chirality χ = ±1 of the vortex corresponds to the orientation
+        of F in the bivector space. A positive-chirality vortex has
+        F aligned with e₁e₂ + e₂e₃ + e₃e₁ (right-hand sense);
+        negative chirality has F anti-aligned. The charge (observable
+        chirality) is the sign of the grade-2 orientation.
+    grade_3_pseudoscalar:
+      symbol: "⟨Ψ⟩₃ = ρᵥ·i₃"
+      meaning: >
+        Topological charge density — the winding number density of
+        the vortex topology. In 3D GA, the pseudoscalar i₃ = e₁e₂e₃
+        is the volume element. The grade-3 part of the substrate field
+        is the topological charge density times the volume element.
+        This is the source of quantization: the topological charge is
+        an integer (winding number), so the grade-3 part is discretely
+        valued at committed vortex locations.
+      relation_to_particles: >
+        Particles are localised grade-3 concentrations — topological
+        charge density concentrated at the vortex core. The grade-0
+        field η spreads continuously; the grade-3 field ρᵥ·i₃ is
+        concentrated at committed topology locations. This is the
+        algebraic expression of the particle/wave distinction:
+        grade-0 is wave-like (continuous η field);
+        grade-3 is particle-like (discrete topological charge).
+
+  full_field_object: >
+    Ψ = η + J + F + ρᵥ·i₃
+    One multivector. Four grades. One master equation.
+    The scalar complex formulation projects onto ⟨Ψ⟩₀ alone (η).
+    The quaternion formulation captures ⟨Ψ⟩₀ + ⟨Ψ⟩₂ (η and F).
+    The full GA formulation includes all four grades simultaneously.
+
+  norm: >
+    |Ψ|² = Ψ̃Ψ = η² + |J|² − |F|² + ρᵥ²
+    (using the reverse Ψ̃ which changes the sign of grade-2 and grade-3)
+    The sign of the bivector term is negative — a metric signature
+    effect that naturally encodes the distinction between spacelike
+    (positive) and timelike (negative) field strengths.
+
+# ─────────────────────────────────────────────
+# THE MASTER EQUATION IN GA
+# ─────────────────────────────────────────────
+
+master_equation_ga:
+  statement: >
+    ∂ₜΨ = [ ∇² − V − g|Ψ|² − ℛ(Ψ) − Λln(1 + κ|Ψ|²) ] Ψ
+  note: >
+    Written without the imaginary unit i — in GA, the role of i is
+    played by the pseudoscalar i₃ = e₁e₂e₃ when needed. The equation
+    is real in the GA sense (real coefficients, multivector field).
+    The complex structure of the scalar formulation arises from the
+    even subalgebra acting on grade-0 via the pseudoscalar.
+  geometric_product: >
+    All multiplications are geometric products — ab = a·b + a∧b.
+    This unifies inner and outer products, making the coupling between
+    grades explicit. The coupling between η (grade-0) and F (grade-2)
+    through the geometric product generates the grade-1 current J —
+    the commitment current is generated by the interaction of scalar
+    commitment density with the field orientation.
+  grade_separation: >
+    The master equation mixes grades through the geometric product.
+    Taking grade-k projections gives equations for each grade:
+    Grade 0: evolution of scalar commitment density η (GP equation limit)
+    Grade 1: evolution of commitment current J (momentum equation)
+    Grade 2: evolution of field strengths F (Maxwell-like equation)
+    Grade 3: evolution of topological charge ρᵥ (conservation law)
+    These are not separate equations — they are grade projections of
+    one equation. The coupling between them through the geometric
+    product is the origin of the force laws.
+
+# ─────────────────────────────────────────────
+# MAXWELL AND DIRAC AS GRADE PROJECTIONS
+# ─────────────────────────────────────────────
+
+maxwell_as_grade_projection:
+  statement: >
+    Maxwell's equations emerge as the grade-2 projection of the
+    linearised master equation.
+  ga_maxwell: >
+    In the linearised regime (g → 0, ℛ → 0, Λ → 0) with the
+    spacetime algebra Cl(1,3) or Cl(3,1):
+    ∇F = J
+    where F = E + i₃B is the electromagnetic bivector and J is the
+    4-current. This is the full set of Maxwell's equations in a
+    single equation. No separate equations for ∇·E = ρ/ε₀,
+    ∇×B = μ₀J + ∂E/∂t, etc. — all four Maxwell equations are
+    grade projections of ∇F = J.
+  praestology_derivation: >
+    In the Praestology master equation, the grade-2 projection of the
+    linearised equation is:
+    ∂ₜF = ∇·(ηJ) + ∇×(ηJ) + ...
+    The electromagnetic field F = E + i₃B emerges from the coupling
+    between the scalar commitment field η and the commitment current J
+    through the geometric product. Maxwell's equations are not postulated
+    — they are a projection of the substrate field dynamics onto the
+    grade-2 sector. The electromagnetic field is the grade-2 component
+    of the substrate field's response to committed vortex topology.
+  status: "Derivation path identified — formal grade projection calculation open"
+
+dirac_as_even_grade:
+  statement: >
+    The Dirac equation emerges from the even-grade projection of the
+    linearised master equation in the spacetime algebra Cl(1,3).
+  ga_dirac: >
+    In Cl(1,3) spacetime algebra, the Dirac equation for a free fermion is:
+    ∇Ψe₁₂ = mΨ
+    where Ψ is an even-grade multivector (spinor) and e₁₂ = e₁e₂.
+    This is the Dirac equation in GA form — no gamma matrices, no
+    abstract spinor space, no separate algebraic structure required.
+    The Dirac spinor IS an even-grade multivector in spacetime algebra.
+  praestology_derivation: >
+    The 720° Möbius topology of the electron requires the double-cover
+    property — a vortex that returns to −Ψ after 360° and to Ψ after 720°.
+    In GA this is precisely the transformation law of even-grade multivectors
+    under rotations: a rotor R transforms a vector v as v → RvR̃, but a
+    spinor Ψ transforms as Ψ → RΨ — the spinor sees only half the rotation.
+    The 720° condition for the Möbius vortex is the fermion condition in GA.
+    The Dirac equation is the linearised wave equation for the even-grade
+    substrate field component describing the Möbius vortex propagation.
+  status: "Derivation path identified — formal derivation from GP vortex open"
+
+# ─────────────────────────────────────────────
+# THE α⁻¹ DERIVATION IN GA
+# Clifford torus and Hopf fibration in Cl(3,0)
+# ─────────────────────────────────────────────
+
+alpha_in_ga:
+  statement: >
+    The geometric derivation of α⁻¹ = 4π³ + π² + π from the Hopf
+    fibration (quaternion-field-formulation.yaml) is naturally a GA
+    result — the Clifford torus, S³, and the Hopf fibration are all
+    native objects in Cl(3,0) or Cl(4,0).
+  s3_in_ga: >
+    The unit sphere S³ is the set of even-grade unit multivectors in
+    Cl(3,0): all R = a + b·e₁e₂ + c·e₂e₃ + d·e₃e₁ with a²+b²+c²+d² = 1.
+    This is exactly SU(2) = unit quaternions. The Praegress reservoir's
+    S³ orientation phase space is the even subalgebra of Cl(3,0) at
+    unit norm — a native GA object.
+  clifford_torus_in_ga: >
+    The Clifford torus is the intersection of S³ with the product of
+    two unit circles in the (e₁e₂) and (e₃e₄) planes of Cl(4,0).
+    In GA: it is the set of even multivectors of the form
+    R = cos(θ₁)·e₁₂ + sin(θ₁)·e₃₄ where e₁₂ = e₁e₂ and e₃₄ = e₃e₄
+    are unit bivectors. Its area in S³ is π² — a GA-native topological
+    constant derivable from the norm of the bivector product.
+  hopf_in_ga: >
+    The Hopf fibration S¹ → S³ → S² is a standard result in GA:
+    S³ (unit even multivectors in Cl(3,0)) fibres over S² (unit vectors
+    in the grade-1 sector) with S¹ fibres (unit pseudoscalar phases).
+    The writhe of the Möbius vortex, expressed as a GA path integral
+    of R⁻¹dR around the vortex loop, directly gives the winding number
+    in S³ — the Calugareanu-White theorem in GA form.
+  writhe_as_ga_integral: >
+    The α derivation target — writhe of the 720° Möbius vortex in
+    the GP field — is naturally expressed in GA as:
+    W = (1/2π) ∮ ⟨R⁻¹∇R⟩₂ · dl
+    where R(s) is the quaternion/spinor orientation of the vortex
+    at arc-length s, and ⟨·⟩₂ extracts the grade-2 (bivector) part.
+    This is the GA form of the Calugareanu-White writhe integral.
+    The GA setting makes the topological structure of the integral
+    transparent — the writhe is a winding number in the S³ of
+    even-grade unit multivectors.
+
+# ─────────────────────────────────────────────
+# THE CONFORMAL EXTENSION Cl(4,1)
+# The natural setting for a metric-free framework
+# ─────────────────────────────────────────────
+
+conformal_extension:
+  motivation: >
+    Cl(3,0) handles 3D Euclidean geometry. Cl(1,3) or Cl(3,1) handles
+    Minkowski spacetime. But the Praestology framework derives geometry
+    from process — the metric is not assumed. The natural symmetry group
+    of a framework that derives geometry is the conformal group, not the
+    Poincaré group. The Poincaré group preserves a given metric; the
+    conformal group preserves angles but not lengths — more appropriate
+    for a framework where lengths are derived from commitment density
+    gradients rather than from a fixed background metric.
+  cl41: >
+    The conformal geometric algebra Cl(4,1) represents the conformal
+    group of 3D Euclidean space. In Cl(4,1):
+    Points, lines, planes, circles, and spheres are all represented
+    as grade-1 or grade-2 multivectors.
+    Rotations, translations, scalings, and inversions are all rotors
+    (even-grade elements).
+    The entire conformal group action is geometric product operations —
+    no special cases for translations vs rotations.
+  praestology_relevance: >
+    In the Praestology framework, the metric emerges from the commitment
+    density gradient. A region of high commitment density has a different
+    "size" relative to a region of low commitment density — the effective
+    scale varies. This scale variation is a conformal transformation:
+    the angles between relational directions are preserved (isotropy of
+    the substrate) but the effective scale changes with η.
+    Cl(4,1) is the natural algebraic setting for a framework where
+    geometry is scale-dependent and derived from the field dynamics.
+    The conformal transformation represents a change in commitment level —
+    moving from a void (η ≈ 1) to a dense region (η << 1) is a conformal
+    rescaling of the effective relational metric.
+  eta_as_conformal_factor: >
+    In Cl(4,1) with conformal representation, the substrate field η
+    plays the role of the conformal factor — the local scale of the
+    metric relative to the flat background. In a void: η ≈ 1, scale
+    ≈ 1 (flat). Near mass: η < 1, scale < 1 (contracted metric).
+    This is exactly the conformal factor in GR's scalar-tensor theories —
+    but here it emerges from the substrate dynamics rather than being
+    postulated. The conformal factor IS the commitment density field.
+  status: >
+    Cl(4,1) is identified as the natural extension — the formal
+    treatment of the substrate field in conformal GA is an open
+    development. Priority: after the Cl(3,0) Dirac and Maxwell
+    recoveries are established.
+
+# ─────────────────────────────────────────────
+# GRADE STRUCTURE AND THE FORCES
+# ─────────────────────────────────────────────
+
+forces_as_grade_interactions:
+  statement: >
+    The four forces emerge as grade-specific interactions in the GA
+    master equation — not separate mechanisms but grade projections
+    of the single substrate field dynamics.
+  gravity:
+    grade_interaction: "Grade-0 × Grade-0 → Grade-1"
+    description: >
+      Scalar commitment density η generating a grade-1 gradient force.
+      Two grade-0 fields interact through their product to produce a
+      grade-1 vector (the gravitational acceleration). This is the
+      lowest-grade interaction — hence the longest range and weakest
+      coupling (it acts on the most slowly varying, smoothest component
+      of the substrate field).
+  electromagnetism:
+    grade_interaction: "Grade-2 × Grade-2 → Grade-1"
+    description: >
+      Bivector field strengths F interacting to produce grade-1 forces
+      (the Lorentz force). The electromagnetic force is a grade-2 × grade-2
+      interaction mediated by the geometric product. The grade-2 character
+      of the field explains why there are two types of charge (±chirality)
+      and two types of field strength (E and B as the two faces of F).
+  strong_force:
+    grade_interaction: "Grade-3 × Grade-3 → confined"
+    description: >
+      Pseudoscalar (grade-3) topological charges interacting. The grade-3
+      interaction is the highest — shortest range, strongest coupling.
+      Confinement follows from the grade-3 structure: grade-3 is the
+      pseudoscalar, which is the duality of grade-0. Confined systems
+      are those where the grade-3 charges combine to produce a grade-0
+      (scalar) — colour neutrality is grade-3 → grade-0 via duality.
+      Open grade-3 topology (quarks) is unstable; closed grade-0
+      (hadrons) is stable. This is the R3/R4 closure requirement in GA.
+  weak_force:
+    grade_interaction: "Grade-0 ↔ Grade-2 transitions (topology switching)"
+    description: >
+      The weak force mediates grade transitions — d→u quark transitions
+      involve a change in the grade structure of the winding topology.
+      In GA: the transition from a 480° (d quark) to 240° (u quark)
+      partial winding is a grade-0 to grade-2 transition mediated by
+      the W boson (which is the grade-1/grade-2 mixed-grade transition
+      operator). Parity violation follows from the handedness of the
+      grade transition: only left-handed grade-1 currents couple to
+      the W-like transition operator. The handedness is fixed by the
+      pseudoscalar i₃ in the transition operator.
+
+# ─────────────────────────────────────────────
+# RELATION TO SCALAR AND QUATERNION FORMULATIONS
+# ─────────────────────────────────────────────
+
+relation_to_other_formulations:
+  hierarchy: >
+    Scalar complex ψ (grade-0 projection)
+    ⊂ Quaternion Q = η + F (grade-0 + grade-2)
+    ⊂ Full multivector Ψ (all grades)
+    ⊂ Conformal multivector Ψ_conf in Cl(4,1) (conformal extension)
+
+  scalar_complex:
+    recovers_from_ga: >
+      Project full multivector onto grade-0: ⟨Ψ⟩₀ = η.
+      This is the scalar commitment density field that appears in
+      the GP equation and all current physics domain derivations.
+      Sufficient for: vortex stability, constant stack, cosmology.
+      Misses: momentum current (grade-1), field strengths (grade-2),
+      topological charge structure (grade-3).
+
+  quaternion:
+    recovers_from_ga: >
+      Project onto even grades: ⟨Ψ⟩₀ + ⟨Ψ⟩₂ = η + F.
+      Captures: spinor/rotation structure, double-cover, S³ phase space,
+      Clifford torus α⁻¹ derivation.
+      Misses: grade-1 momentum current, grade-3 topological charge.
+      Quaternion formulation in quaternion-field-formulation.yaml is a
+      valid stepping stone — it captures the key new results (S³, Clifford
+      torus) while being more accessible than full GA.
+
+  full_ga:
+    advantage: >
+      All four grades simultaneously. Maxwell and Dirac as grade
+      projections of one equation. Forces as grade interactions.
+      Conformal extension natural. Writhe calculation as GA integral.
+      The algebraic structure that the framework generates when followed
+      without pre-constraining the field type.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  priority_1:
+    - >
+      Writhe as GA path integral: express the Calugareanu-White writhe
+      of the Möbius GP vortex as W = (1/2π)∮⟨R⁻¹∇R⟩₂·dl in Cl(3,0).
+      This is the primary α derivation reframed in GA. The GA setting
+      makes the topological structure transparent and may simplify the
+      calculation relative to the standard coordinate-based approach.
+    - >
+      Maxwell recovery: formal grade-2 projection of the linearised
+      GA master equation recovering ∇F = J. Verify the coupling
+      constant (charge) emerges from the grade-2 vortex chirality
+      without additional input.
+    - >
+      Dirac recovery: formal even-grade projection in Cl(1,3) recovering
+      the Dirac equation ∇Ψe₁₂ = mΨ. Verify the mass term encodes
+      the commitment density and the spinor structure is the 720°
+      Möbius topology in GA form.
+
+  priority_2:
+    - >
+      Grade interaction derivation of force laws: formal computation
+      of the grade-k × grade-k → grade-1 interactions for each force.
+      Verify the coupling strengths (α for EM, αₛ for strong) emerge
+      from the GA norm structure.
+    - >
+      Conformal factor identification: show formally that η in Cl(4,1)
+      conformal GA plays the role of the conformal factor, and that
+      the effective metric gᵢⱼ = η²δᵢⱼ recovers GR in the appropriate
+      limit. This would be the complete derivation of GR from the
+      substrate commitment density.
+    - >
+      PT-symmetry in full GA: the dissolution kernel ℛ(Ψ) in GA form.
+      Determine PT-symmetry conditions for the full multivector equation
+      and whether the grade structure changes the PT-symmetry threshold.
+
+  priority_3:
+    - >
+      Cl(4,1) conformal GA treatment: the full substrate field in
+      conformal GA. Verify that the metric emergence (from commitment
+      density gradients) is correctly captured by the conformal factor
+      identification. This is the most complete formulation of the
+      framework algebraically.
+    - >
+      Parity violation from grade-transition handedness: formal
+      derivation that only left-handed grade-1 currents couple to
+      the W-like grade transition operator. This would derive parity
+      violation from the asymmetry of the pseudoscalar i₃ in the
+      grade-0 ↔ grade-2 transition operator.
+
+# ─────────────────────────────────────────────
+# READING ORDER
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "core/core-dynamical-equation.yaml                  -- scalar master equation"
+  - "core/emergent-relational-manifold.yaml             -- no-assumption derivation path"
+  - "domains/physics/quaternion-field-formulation.yaml  -- spinor stepping stone"
+  - "domains/physics/geometric-algebra-formulation.yaml -- this file; full GA"
+  - "domains/physics/fine-structure-constant.yaml       -- α; Clifford torus"
+  - "domains/physics/alpha-from-vortex-stability.yaml   -- writhe calculation"
+  - "domains/physics/specifications.yaml                -- physics instantiation"
+
+related_issues:
+  - "foundational/F120_clifford_torus_as_alpha_interfacial_term"
+  - "foundational/F121_hopf_fibration_as_mobius_vortex_structure"
+  - "foundational/F123_dirac_equation_from_quaternion_linearisation"
+  - "foundational/F124_maxwell_from_quaternion_vector_part"
+  - "foundational/F125_grade_structure_as_emergent_not_assumed"
+  - "foundational/F126_conformal_group_as_natural_symmetry_metric_free"
+  - "foundational/F127_eta_as_conformal_factor_in_cl41"
+  - "foundational/F128_forces_as_grade_interactions"
+  - "foundational/F129_parity_violation_from_grade_transition_handedness"
+  - "intersectional/physics/136_writhe_as_ga_path_integral_cl30"
+  - "intersectional/physics/139_maxwell_recovery_grade2_projection"
+  - "intersectional/physics/140_dirac_recovery_even_grade_cl13"
+  - "intersectional/physics/141_conformal_factor_eta_in_cl41"
+  - "intersectional/physics/142_grade_interaction_force_coupling_constants"
+  - "boundaries/B10_ga_derived_not_imposed_from_physics"
