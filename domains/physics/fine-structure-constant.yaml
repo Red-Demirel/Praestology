@@ -158,32 +158,44 @@ numerical_candidate:
 
   geometric_interpretation:
     statement: >
-      The formula is read as a compact geometric cost stack: the sum of
-      three closure costs for a stable 720° topological defect embedded
-      in a 3-axis isotropic resolution substrate.
+      The formula encodes three distinct geometric costs at three
+      dimensional levels for a stable 720° Möbius vortex embedded in the
+      S³ quaternion orientation phase space of the Praegress reservoir.
+      This is derivable from the Hopf fibration S¹ → S³ → S² — each
+      term corresponds to one level of the Hopf structure.
+      See quaternion-field-formulation.yaml for the full derivation.
     components:
       term_4pi3:
-        expression: "4π³"
-        role: "Volumetric bulk cost"
+        expression: "4π³ = 2π × 2π²"
+        role: "Bulk 3D cost — U(1) phase loop × S³ volume"
         geometric_mapping: >
-          Isotropic 3-axis multiplicity displacement — the bulk embedding
-          cost of the stable closure within the ambient resolution field.
-          The factor 4π is the full isotropic solid angle (S²); the
-          additional π² encodes the double-rotation topology of the 720°
-          Möbius band projected onto the external coupling sphere.
+          S³ volume = 2π². The Möbius vortex carries a U(1) phase loop
+          of periodicity 2π. Bulk embedding cost = 2π × 2π² = 4π³.
+          Hopf fibration: total space S³ × fibre U(1) length.
+          The dominant term — the cost of embedding the phase loop
+          in the full quaternion orientation phase space.
       term_pi2:
         expression: "π²"
-        role: "Interfacial surface cost"
+        role: "Boundary 2D cost — Clifford torus area in S³"
         geometric_mapping: >
-          Effective boundary cost of the local lower-dimensional winding
-          support. The quasi-2D closure surface contributes a π² factor
-          from the product of two independent phase boundaries.
+          The Clifford torus is the flat torus embedded in S³ — product
+          of two perpendicular great circles, total area π². It is the
+          natural boundary surface of the quasi-2D winding support
+          within S³, and the boundary between the two solid tori in the
+          Hopf decomposition. The interfacial cost of the quasi-2D
+          winding in the quaternion phase space = Clifford torus area = π².
       term_pi:
         expression: "π"
-        role: "Linear path residue"
+        role: "Path 1D residue — first-pass 360° before crossover"
         geometric_mapping: >
-          Residual 1D winding-path friction — the single-loop contribution
-          from the first 360° pass of the Möbius band before the crossover.
+          The first 360° pass of the Möbius band sends Q → −Q (quaternion
+          sign change). This half-closure accumulates one factor of π
+          in phase before the crossover. The second pass restores Q → Q.
+          Hopf fibration: S¹ half-period = π.
+    hopf_summary: >
+      α⁻¹ = (S³ total space cost) + (Clifford torus boundary) + (S¹ residue)
+           = 4π³ + π² + π
+      Three topological costs, three dimensional levels, one Hopf fibration.
 
   factored_reading: >
     α⁻¹ = π × (4π² + π + 1)
