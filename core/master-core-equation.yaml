@@ -55,6 +55,10 @@ reading_order:
   - "core/master-core-equation.yaml – this file"
   - "domains/physics/alpha-from-vortex-stability.yaml – numerical closure"
 
+see_also:
+  - "core/quaternion-formulation.yaml – quaternion version of the master equation,
+     making the double cover and SU(2) gauge structure explicit."
+
 open_derivations:
   priority_1:
     - "Fix ħ_hat from vortex stability functional (independent of observed α)."
