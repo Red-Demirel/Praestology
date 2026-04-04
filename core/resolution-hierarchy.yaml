@@ -1,0 +1,185 @@
+# core/resolution-hierarchy.yaml
+name: "Resolution Hierarchy – Emergent Algebraic Grades"
+version: "1.0"
+core_version: "1.5"
+status: "Descriptive layer – core-invariant"
+description: >
+  This file presents a descriptive grading of the resolution process,
+  from pure unresolved potential to the mature relational manifold.
+  The hierarchy is not imposed a priori; it emerges as a convenient
+  way to visualise the stages of commitment. Geometric algebra is used
+  only to the extent it naturally arises from potential → commitment
+  dynamics. The grades correspond to algebraic levels (scalar, vector,
+  bivector, pseudoscalar) in the emergent 3D geometry, but they are
+  not fundamental – they are dynamic, scale‑dependent, and may coexist
+  in multiple instances within a complex system.
+
+dependency_map:
+  requires:
+    - "core/specifications.yaml"
+    - "core/core-dynamical-equation.yaml"
+    - "core/emergent-relational-manifold.yaml"
+  provides_to:
+    - target: "domains/consciousness/specifications.yaml"
+      via: "Visualisation of recursive depth (Ξ) and the emergence of higher grades"
+    - target: "domains/physics/quantum-foundation.yaml"
+      via: "Interpretation of superposition as grade‑0 multiplicity"
+
+# ─────────────────────────────────────────────
+# CORE PRINCIPLE
+# ─────────────────────────────────────────────
+
+principle: >
+  The hierarchy is a descriptive convenience, not a foundational
+  postulate. Any algebraic structure is used only to the extent it
+  naturally arises from the potential → commitment dynamics described
+  by the master equation and R1–R5. The grades are not fixed layers
+  of reality; they are dynamic, scale‑dependent, and can be present
+  in multiple instances simultaneously within a complex system.
+
+# ─────────────────────────────────────────────
+# THE GRADES
+# ─────────────────────────────────────────────
+
+stages:
+  - grade: 0
+    algebraic_element: "Scalar"
+    identity: "Praesto Pool / Praegress Reservoir"
+    pressure_direction: "Inside‑out (Praegress)"
+    description: >
+      Pure unresolved potential – maximum multiplicity, no commitment,
+      Ξ = 0. This is the source of all resolution events. It is not
+      empty space but the weighted landscape of viable open dilemmas.
+      In quantum terms, this is the domain of superposition.
+    r_rules: "R1 (existence), R2 (distinction in mode space)"
+
+  - grade: 1
+    algebraic_element: "Vector"
+    identity: "Exaltation / Directional Flow"
+    pressure_direction: "Inside‑out (Praegress)"
+    description: >
+      First emergence of direction and gradient. R3 tension creates
+      flows of potential toward local imbalances. This is the onset
+      of motion and the initial stage of commitment.
+    r_rules: "R3 (motion)"
+
+  - grade: 2
+    algebraic_element: "Bivector"
+    identity: "The Meeting Point / Interface"
+    pressure_direction: "Dual – inside‑out and outside‑in meet"
+    description: >
+      The bivector represents an oriented plane – the circulation
+      plane of a vortex. Here, two opposite extremes (e.g., positive
+      and negative chirality) are held in tension, forming a stable
+      interface. This is the grade where vortex pairs (dipoles) and
+      Möbius self‑intersections appear. The interface is where
+      unresolved potential (Praegress) meets committed structure
+      (Regress). The bivector's dual character captures the equilibrium
+      of extremes.
+    r_rules: "R3, R4 (regeneration through vortex formation)"
+
+  - grade: 3
+    algebraic_element: "Pseudoscalar"
+    identity: "External Reality / Mature Relational Manifold"
+    pressure_direction: "Outside‑in (Regress)"
+    description: >
+      The oriented volume – the full 3D relational manifold that
+      emerges when enough committed structure has accumulated.
+      Regress pressure (from accumulated commitments) acts from
+      the outside‑in, maintaining the metastable zone and resisting
+      collapse into pure potential. This grade corresponds to the
+      observed 3D space with its causal structure and global stability.
+    r_rules: "R5 (optimisation), R4 (accumulated commitment)"
+
+# ─────────────────────────────────────────────
+# DYNAMIC AND MULTIPLE INSTANCES
+# ─────────────────────────────────────────────
+
+multiple_instances:
+  statement: >
+    The hierarchy is not a single, monolithic ladder. In any complex
+    system (e.g., a living cell, a galaxy, a conscious brain), many
+    instances of each grade can coexist at different scales and levels
+    of commitment. A single system can have multiple grade‑2 interfaces
+    (many vortices), multiple grade‑1 flows, and a background grade‑0
+    reservoir. The count of these descriptive elements increases with
+    complexity, which matches the emergence hierarchy and the increase
+    of Ξ (recursive depth).
+
+superposition_interpretation: >
+  Superposition corresponds to the persistence of grade‑0 multiplicity
+  even when higher grades have locally committed. A quantum system can
+  be in a superposition of states (grade‑0) while the measurement
+  apparatus (grade‑2/3) is committed. The collapse is the transition
+  from grade‑0 to a specific grade‑2/3 configuration under R5 selection.
+
+# ─────────────────────────────────────────────
+# RELATION TO PRAEGRESS AND REGRESS
+# ─────────────────────────────────────────────
+
+praegress_regress_balance:
+  statement: >
+    Praegress is the inside‑out pressure: the drive of unresolved
+    potential toward commitment, manifested in grades 0, 1, and the
+    inner aspect of grade 2. Regress is the outside‑in pressure: the
+    accumulated commitment that constrains further resolution,
+    manifested in grade 3 and the outer aspect of grade 2. The
+    metastable zone (the viable region) is the dynamic balance
+    between these two pressures – the “meeting point” where new
+    structure can emerge without collapsing into noise or void.
+
+# ─────────────────────────────────────────────
+# SPIN, ROTATION, AND PHASE
+# ─────────────────────────────────────────────
+
+spin_and_phase:
+  statement: >
+    Spin is not an intrinsic property of a point. It is the observable
+    signature of the phase holonomy of a Möbius vortex (grade‑2
+    bivector). The vector‑point idealisation is replaced by a localised
+    phase defect whose circulation plane is described by the bivector.
+    Rotation and angular momentum emerge from the oriented geometry
+    of the bivector and its coupling to the grade‑3 pseudoscalar
+    (the external manifold). No separate “spin” degree of freedom is
+    required; it is a consequence of the phase topology.
+
+# ─────────────────────────────────────────────
+# CAUTIONS AND OPEN QUESTIONS
+# ─────────────────────────────────────────────
+
+cautions:
+  - "The hierarchy is descriptive, not foundational. It does not replace
+     the master equation or R1–R5."
+  - "The assignment of Praegress/Regress to specific grades is a
+     conceptual aid; the actual dynamics are given by the master
+     equation and the dual ℛ(ψ) kernel."
+  - "Spin and rotation are not yet derived from the hierarchy; they
+     are hinted at by the bivector and trivector grades, awaiting
+     a full dynamical derivation."
+
+open_derivations:
+  - "Formal derivation of the bivector grade from vortex stability
+     (see domains/physics/vortex-stabilization.yaml)."
+  - "Quantitative description of how grade‑2 interfaces give rise to
+     measured spin and magnetic moment."
+  - "Dynamic equations for the flow of multiplicity between grades,
+     i.e., the transition rates from grade 0 → 1 → 2 → 3 and back via
+     dissolution (ℛ(ψ))."
+
+# ─────────────────────────────────────────────
+# READING ORDER
+# ─────────────────────────────────────────────
+
+reading_order:
+  - "core/specifications.yaml"
+  - "core/core-dynamical-equation.yaml"
+  - "core/emergent-relational-manifold.yaml"
+  - "core/resolution-hierarchy.yaml (this file)"
+  - "domains/physics/fine-structure-constant.yaml"
+  - "domains/consciousness/specifications.yaml"
+
+related_issues:
+  - "foundational/F115_alpha_drift_with_xi_increase"
+  - "foundational/F119_four_forces_as_xi_scale_relational_structure"
+  - "intersectional/physics_consciousness/004_xi_physical_substrate_for_experiential"
+  - "boundaries/B10_hierarchy_descriptive_not_foundational"
