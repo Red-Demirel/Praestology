@@ -620,9 +620,11 @@ decoherence_profiles:
   statement: >
     The two entanglement mechanisms have different decoherence
     profiles — different dependences on temperature, commitment
-    density, and environmental structure. This produces
-    testable predictions that could distinguish them
-    experimentally.
+    density, and environmental structure. A third, independent
+    contribution exists from commitment density gradients (∇C) —
+    the relational potential principle from substrate-potential.yaml.
+    All three contributions are independent and can be separately
+    measured.
 
   committed_phase_lock_decoherence:
     primary_driver: "Thermal Tik amplitude disrupting committed channel"
@@ -678,26 +680,73 @@ decoherence_profiles:
       environment (high vacuum) may be more persistent than
       committed-phase-lock entanglement in a cryogenic
       but material-dense environment.
-      This is the key experimental distinguisher: if
-      decoherence depends primarily on density-homogeneity
-      rather than temperature, the resonance mechanism
-      is operating.
+
+  gradient_driven_decoherence:
+    primary_driver: "Commitment density gradient |∇C| driving R3 tension"
+    statement: >
+      Independent of both thermal Tik amplitude and η-variance,
+      steep commitment density gradients (|∇C| = |∇(1−η)|) drive
+      R3 tension that forces resolution regardless of temperature.
+      This is the relational potential principle: the gradient axis
+      of viability is independent of the absolute commitment level.
+    scaling: >
+      Decoherence rate Γ_3 ∝ |∇C|² = |∇η|²
+      — proportional to the squared gradient of the commitment
+      density field. Steep gradients → fast decoherence regardless
+      of T or absolute η.
+      Smooth commitment landscape (low |∇C|) → suppressed gradient
+        decoherence even at moderate temperature.
+      Sharp commitment boundaries (phase boundaries, heavy nuclei,
+        filament-void edges) → fast decoherence even in cold vacuum.
+    environmental_dependence: >
+      Decoherence accelerates near any sharp commitment density
+      boundary — not because the environment is hot or dense on
+      average, but because it is inhomogeneous in structure.
+      Examples:
+        Near a heavy nucleus: high |∇C| at nuclear surface
+        Near a void-filament boundary: high |∇C| at cosmic scale
+        Near a phase transition boundary in condensed matter
+        Near the event horizon of a black hole (maximum |∇C|)
+      Smooth environments — even at moderate η — suppress this
+      contribution because |∇C| is small throughout.
+    signature: >
+      Decoherence rate correlates with |∇C|² independently of T
+      and independently of absolute η. A quantum system near a
+      sharp density boundary decoheres faster than one in a
+      smooth environment of equal temperature and equal average η.
+      Distinguishable experimentally by comparing decoherence rates
+      in: (i) smooth high-η environments, (ii) structured high-η
+      environments with internal density contrasts — same T, same
+      average η, different |∇C|.
+    connection_to_measurement_substrate: >
+      The 2.22 ppm measurement-substrate effect for α
+      (fine-structure-constant.yaml) may have a gradient component:
+      the measurement apparatus is not just a high-η-depression
+      environment but a structured one with sharp boundaries
+      (electrode surfaces, optical components, atomic shells).
+      The |∇C|² contribution to the local decoherence rate is
+      part of what makes the measurement environment different
+      from the free vacuum. This adds a gradient term to the
+      α-measurement correction alongside the zero-point Tik
+      background term.
 
   predicted_measurable_distinction: >
-    An experiment that independently varies:
-    (a) Temperature of the entangled system
-    (b) Density/homogeneity of the surrounding environment
-    and measures decoherence rate under each condition
-    would distinguish the two mechanisms:
-    Committed phase-lock: Γ ∝ T, roughly independent of
-      density-homogeneity for a given T.
-    Resonance coupling: Γ ∝ δη-variance, less dependent
-      on T for fixed η-homogeneity.
-    Current entanglement experiments typically co-vary T
-    and density (cryogenic systems are also well-isolated
-    from material environments) — the two variables have
-    not been cleanly separated. Proposed: compare
-    entanglement persistence in (i) warm/high-vacuum vs
+    Three independent variables and three independent decoherence
+    contributions — in principle fully separable:
+    Γ_total ≈ Γ_1(T, R_local) + Γ_2(δη²/η²) + Γ_3(|∇C|²)
+    Experiment design:
+    (a) Vary T at fixed η and fixed |∇C| → isolates Γ_1
+    (b) Vary η-homogeneity at fixed T and fixed |∇C| → isolates Γ_2
+    (c) Vary |∇C| at fixed T and fixed average η → isolates Γ_3
+    Current experiments typically co-vary (a) and (b) (cryogenic
+    systems are also smooth environments). Separation requires
+    deliberately engineering environments with different gradient
+    structures at the same temperature and average density.
+    Matter-wave interferometry near structured surfaces (varying
+    surface roughness at fixed distance and temperature) is the
+    most feasible near-term test of Γ_3 independently.
+
+
     (ii) cold/material-dense environments at matched
     decoherence rates. If warm/high-vacuum outperforms
     cold/dense, resonance coupling is the dominant mechanism.
