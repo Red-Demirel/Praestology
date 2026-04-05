@@ -920,6 +920,180 @@ derivation_structure:
         φ_background. Connects α derivation to the
         potential field description.
 
+# ─────────────────────────────────────────────
+# RELATIONAL POTENTIAL
+# Gradient of commitment density as independent
+# determinant of viability alongside absolute level
+# ─────────────────────────────────────────────
+
+relational_potential:
+  status: "Refinement of metastable zone concept — core-invariant"
+  statement: >
+    Potential (the capacity for unresolved multiplicity and sustained
+    Praegress) is not determined solely by low absolute commitment
+    density (high η). It is fundamentally relational: it requires both
+    low average commitment AND low gradients (small ∇C) between regions,
+    objects, or modes within the system.
+  definition: >
+    High potential exists where the substrate maintains low commitment
+    overall AND a smooth, low-gradient commitment landscape. Large ∇C
+    creates strong R3 tension that accelerates resolution and suppresses
+    open pathways, even in regions that are not globally saturated.
+    The metastable zone is therefore two-dimensional:
+      Axis 1: absolute commitment density C = 1 − η (not too high)
+      Axis 2: commitment density gradient |∇C| (not too steep)
+    A system can exit the viable zone by either axis independently.
+
+  connection_to_master_equation: >
+    This is already encoded in the viability measure 𝓥(ψ):
+      𝓥(ψ) = w₀|ψ|² + w₁|∇ψ|² + w₂|∇φ|²|ψ|²
+    The w₁ and w₂ terms are the gradient-dependent viability
+    contributions — they measure ∇C directly. The relational potential
+    claim is the physical interpretation of why these gradient terms
+    matter: high |∇ψ|² signals a steep commitment density gradient
+    that drives R3 tension and accelerates resolution regardless of
+    the absolute commitment level. The viability measure was correct;
+    this section states the principle it encodes.
+
+  connection_to_rules:
+    r3: >
+      R3 (Motion from differences) is driven primarily by ∇C gradients,
+      not merely by absolute potential levels. A smooth high-η region
+      has less R3 tension than a steep-gradient moderate-η region.
+    r5: >
+      R5 (Viability selection) responds to both local η and local
+      gradient strength |∇C| when choosing stable closure configurations.
+      The R5-stable configurations are those that minimise both
+      absolute commitment and gradient steepness simultaneously.
+    saturation: >
+      The saturation term Λln(1+κ|ψ|²) acts locally on absolute
+      commitment density. It does not directly suppress gradients —
+      gradient smoothing is handled by the diffusion term D∇²ψ in
+      ℛ(ψ). Both terms are needed: saturation caps the level,
+      diffusion smooths the gradient.
+
+  implications:
+    decoherence: >
+      Decoherence rate has two independent contributions:
+      (1) Thermal: Γ_thermal ∝ T·R_local (from committed channel disruption)
+      (2) Gradient-driven: Γ_gradient ∝ |∇C|² (from R3 tension forcing
+          resolution regardless of temperature)
+      A quantum system in a smooth high-η environment decoheres slowly
+      even at moderate temperature. A quantum system in a steep-gradient
+      environment (near a phase boundary, near a heavy nucleus, near
+      the edge of a void-filament boundary) decoheres rapidly even at
+      low temperature.
+    superposition_range: >
+      Distant superpositions are sustainable primarily in low-∇C regimes,
+      where the vortex pattern is not strongly pulled toward any single
+      closure site. Isolated cold atoms in matter-wave interferometry
+      maintain distant superpositions because ∇C is minimal in the
+      ultra-low-density trap environment — not merely because η is high,
+      but because the trap creates a smooth commitment landscape.
+    goldilocks_zone_refined: >
+      The Goldilocks viability zone is defined by moderate absolute
+      commitment AND moderate gradients — not just low η, but smooth
+      commitment landscapes. This explains why systems at the edge of
+      structural transitions (sharp ∇C boundaries) are both fragile
+      and productive: high gradient drives rapid R3 resolution
+      (productivity) but also threatens viability if the gradient
+      exceeds the smoothing capacity of D∇²ψ (fragility).
+
+  black_hole_merger_prediction:
+    statement: >
+      At the onset of a black hole merger, before boundary commitment
+      overhead is released, the two approaching saturation surfaces
+      create a maximum-gradient transitional phase. The commitment
+      density in the overlap region decreases (gradient cancellation
+      between the two approaching saturation surfaces) creating a
+      local high-φ spike between the horizons.
+    environmental_draw: >
+      This local φ spike temporarily draws commitment density from
+      the surrounding environment — the nearby substrate has its
+      commitment density slightly reduced as potential flows toward
+      the high-gradient boundary. This is analogous to the Casimir
+      effect but at the merger scale: the boundary between two high-
+      commitment regions draws from the surrounding medium.
+    negative_strain_prediction:
+      statement: >
+        The temporary draw of commitment density from the local
+        environment would appear, to a distant observer, as a brief
+        reduction in local spacetime curvature — a negative gravitational
+        wave strain — occurring just before or concurrent with the merger
+        peak. The standard LIGO signal (inspiral chirp → merger peak →
+        ringdown) may contain a subtle negative strain component at the
+        merger moment, representing the environmental commitment draw,
+        before the dominant positive strain of the boundary overhead
+        release (gravitational waves).
+      magnitude: >
+        The effect is small — the environmental draw is a fraction of
+        the total merger commitment, itself ~5% of total mass-energy.
+        The negative strain would be a fraction of the positive merger
+        strain, likely at the level of a few percent of the merger peak
+        amplitude or less. Probably below detection threshold for most
+        events but potentially visible in high-SNR events as a systematic
+        departure from GR templates at the merger moment.
+      observational_test: >
+        LIGO/Virgo post-Newtonian template residuals at the merger
+        moment for high-SNR binary black hole events (GW150914,
+        GW170814, GW190521 and subsequent). If the raw strain data
+        shows a systematic negative departure from the best-fit GR
+        template just before or at the merger peak — in the direction
+        of a brief local expansion — this would be the environmental
+        commitment draw signal. Current matched-filter pipelines may
+        absorb this into template fitting rather than flag it as a
+        residual, so the test requires examining the raw residuals
+        specifically at the merger epoch.
+      status: >
+        Novel prediction — not yet studied to our knowledge. The effect
+        has no analogue in standard GR (which has no substrate dynamics
+        and no mechanism for environmental commitment draw). If present
+        in existing LIGO data, it would be a signature of the substrate
+        commitment density dynamics at the merger scale.
+    post_merger_result: >
+      The post-merger black hole is smaller (less committed topology)
+      than the sum of the two progenitors — the difference is radiated
+      as gravitational waves. This is the boundary commitment overhead
+      reduction: one efficient horizon requires less total committed
+      topology than two separate horizons combined. The relational
+      potential gradient drove the rapid R3 resolution; R5 selected
+      the minimum-overhead merged configuration as the outcome.
+      The environmental draw (negative strain) is temporary — once the
+      merger completes and the new horizon stabilises, the local
+      commitment density returns to the environmental baseline.
+
+  cross_scale_examples:
+    quantum: >
+      Isolated cold atoms in matter-wave interferometry maintain distant
+      superpositions because ∇C is minimal in the ultra-low-density
+      trap — smooth commitment landscape, not just high η.
+    neural: >
+      Neural plasticity and learning are optimal in regimes of moderate
+      commitment with low internal gradients. Sharp gradients (trauma,
+      rigid over-commitment patterns) suppress open resolution pathways
+      even when overall commitment level is moderate.
+    cosmological: >
+      Filament-void boundaries are high-∇C regions — steep transitions
+      between high-commitment filaments and high-φ voids. These boundaries
+      drive density-transition redshift (discrete energy loss at each
+      boundary crossing) and are the cosmological-scale expression of
+      the gradient-driven R3 resolution mechanism.
+
+  open_derivations:
+    - >
+      Formal derivation of Γ_gradient = f(|∇C|²) from the master equation.
+      Compute the decoherence rate contribution from the gradient term
+      w₁|∇ψ|² in 𝓥(ψ) independently of the thermal contribution.
+    - >
+      LIGO residual analysis: examine raw strain residuals for GW150914
+      and subsequent high-SNR events at the merger epoch specifically
+      for a systematic negative departure from GR templates.
+    - >
+      Gradient smoothing timescale: from D∇²ψ, compute how quickly
+      steep commitment gradients are smoothed by the diffusion term.
+      This gives the timescale over which high-gradient environments
+      lose their viability-suppressing character.
+
 reading_order:
   - "domains/physics/substrate-potential.yaml           -- this file FIRST"
   - "domains/physics/foundations.yaml                   -- four pillars"
@@ -950,4 +1124,4 @@ related_issues:
   - "intersectional/physics/049_z_inertia_machian_integral"
   - "intersectional/physics/050_event_horizon_asymptotic_impedance"
   - "intersectional/physics/051_refractive_index_as_z_local_z0_ratio"
-  - "intersectional/physics/052_mond_as_gp_nonlinearity_impedance_inflection""
+  - "intersectional/physics/052_mond_as_gp_nonlinearity_impedance_inflection"
