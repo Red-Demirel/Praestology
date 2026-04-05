@@ -6,17 +6,18 @@ status: "Hypothesis – core-invariant, cross‑scale"
 description: >
   Viability (the persistence of a system in the metastable zone) is a dynamic
   balance between two opposing pressures: inside‑out (Praegress) and outside‑in
-  (Regress). The master equation’s saturation term and ℛ(ψ) kernel encode these
+  (Regress). The master equation's saturation term and ℛ(ψ) kernel encode these
   pressures. Too much inside‑out leads to noise (chaotic instability); too much
-  outside‑in leads to void (rigid stasis). The “Goldilocks zone” between them is
+  outside‑in leads to void (rigid stasis). The "Goldilocks zone" between them is
   the region where sustainable resolution occurs. This hypothesis applies at all
   scales – from quantum systems to social organisations to mental health.
 
 dependency_map:
   requires:
-    - "core/specifications.yaml"              # R1–R5, Praegress/Regress
-    - "core/core-dynamical-equation.yaml"     # saturation term, ℛ(ψ)
-    - "core/emergent-relational-manifold.yaml" # inside‑out/outside‑in as ontological directions
+    - "core/specifications.yaml"
+    - "core/core-dynamical-equation.yaml"
+    - "core/emergent-relational-manifold.yaml"
+    - "core/resolution-hierarchy.yaml"
   provides_to:
     - target: "domains/ethics/specifications.yaml"
       via: "Balance as condition for ethical agency and social health"
@@ -79,8 +80,11 @@ goldilocks_zone:
     Tik background (inside‑out). The system self‑tunes via R5 to stay
     near this balance.
   formal_expression: >
-    ∂_t |ψ|² = 0 (in the long‑term average) for a viable system,
-    with fluctuations allowed around the equilibrium.
+    ∂ₜ|ψ|² = 0 (in the long‑term average) for a viable system,
+    with fluctuations allowed around the equilibrium. The same formal
+    condition applies at every scale — the master equation is scale-
+    invariant in this sense; what changes is the commitment density
+    regime and the characteristic timescales of the fluctuations.
   cross_scale_manifestations:
     - scale: "Quantum"
       inside_out: "Superposition, vacuum fluctuations"
@@ -115,11 +119,14 @@ pathologies_as_imbalance:
   inside_out_dominance:
     conditions: "Excessive unresolved potential, insufficient scaffolding"
     examples:
-      - "Quantum: Uncontrolled decoherence? (open system)"
+      - "Quantum: Uncontrolled decoherence (open system, insufficient potential well)"
       - "Mental: Psychosis, mania, impulsivity"
       - "Social: Anarchy, revolution, collapse of institutions"
       - "Biological: Cancer (uncontrolled proliferation)"
-    dynamics: "Noise regime – inability to maintain persistent structure"
+    dynamics: >
+      Noise regime — grade-0 multiplicity proliferates without resolving
+      into stable grade-2/3 structure. The Praegress reservoir drives
+      new dilemmas faster than they can commit to persistent topology.
 
   outside_in_dominance:
     conditions: "Excessive commitment, rigidity, insufficient novelty"
@@ -128,13 +135,24 @@ pathologies_as_imbalance:
       - "Mental: Depression, obsessive‑compulsive, learned helplessness"
       - "Social: Totalitarianism, bureaucratic paralysis, cultural stagnation"
       - "Biological: Fibrosis, excessive homeostasis (dystrophy)"
-    dynamics: "Void regime – loss of adaptability, eventual collapse"
+    dynamics: >
+      Void regime — accumulated grade-3 committed structure suppresses
+      the grade-0 Praegress reservoir. No new resolution pathways open;
+      existing topology becomes increasingly rigid and self-reinforcing.
 
   treatment_implication: >
-    Restoring viability requires re‑balancing the pressures:
-    reduce outside‑in (e.g., create safe space for novelty, reduce rigid constraints)
-    or increase inside‑out (e.g., introduce controlled variability, encourage exploration)
-    depending on the dominant pathology.
+    Restoring viability means targeting improved balance by adjusting
+    both inside-out and outside-in parameters when possible, rather
+    than pushing exclusively in one direction. Effective interventions
+    typically work on both simultaneously:
+    — Reduce outside-in rigidity (remove constraints, reduce commitment
+      load, create space for grade-0 multiplicity to re-emerge)
+    — Increase inside-out renewal (introduce controlled variability,
+      encourage exploration, support Tik-level substrate renewal)
+    The balance is the target, not a specific pressure level. Interventions
+    that address only one pressure risk overshooting into the opposite
+    pathology — increasing inside-out without reducing outside-in can
+    amplify noise rather than restore the metastable zone.
 
 # ─────────────────────────────────────────────
 # RELATION TO EXISTING CORE CONCEPTS
@@ -143,119 +161,210 @@ pathologies_as_imbalance:
 relation_to_core:
   - concept: "R5 (Optimisation)"
     connection: >
-      R5 selects configurations that maintain the balance. Systems that drift
-      too far into noise or void are less viable and tend to be suppressed.
+      R5 selects configurations that maintain the balance. Systems that
+      drift too far into noise or void are less viable and tend to be
+      suppressed. The balance is the R5-stable attractor of the system's
+      commitment density dynamics.
   - concept: "Saturation limit (φ_max)"
     connection: >
-      The outside‑in pressure sets the maximum commitment density; the
-      inside‑out pressure drives toward that limit; the balance is where
+      The outside-in pressure sets the maximum commitment density; the
+      inside-out pressure drives toward that limit; the balance is where
       the system operates just below saturation, allowing fluctuations.
   - concept: "Metastable zone"
     connection: >
-      The Goldilocks zone is exactly the metastable zone between noise and void
-      defined in the core constraints. This hypothesis gives it a dynamic
-      interpretation: the interplay of two opposing pressures.
-  - concept: "ℛ(ψ) kernel"
+      The Goldilocks zone is exactly the metastable zone between noise
+      and void defined in the core constraints. This hypothesis gives it
+      a dynamic interpretation: the interplay of two opposing pressures
+      whose balance is continuously maintained by R5.
+  - concept: "ℛ(ψ) dual kernel"
     connection: >
-      The dual kernel encodes both dissolution (outside‑in return of commitment)
-      and stochastic nucleation (inside‑out creation of new potential). Its
-      structure determines the balance point.
+      R_forward (commitment gain) is the outside-in kernel — it locks
+      potential into committed structure, reinforcing the grade-3 manifold.
+      R_diss (dissolution) is the inside-out renewal kernel — it returns
+      weakly protected commitment to the Praegress reservoir, maintaining
+      the grade-0 multiplicity. Their balance via f(topological_protection)
+      is the substrate-level expression of the viability balance.
+  - concept: "Resolution hierarchy grades"
+    connection: >
+      The viability balance is the dynamic equilibrium between grade-0
+      (inside-out Praegress, maximum multiplicity) and grade-3 (outside-in
+      Regress, maximum commitment). Grade-2 (bivector, vortex circulation
+      plane) is the meeting point — the grade where both pressures
+      operate simultaneously. Viability is the sustained existence of
+      grade-2 structures at the boundary of the two pressures.
 
 # ─────────────────────────────────────────────
 # PREDICTIONS AND TESTS
 # ─────────────────────────────────────────────
 
 predictions:
-  - "Systems far from the balance will exhibit increased variability or
-     rigidity, and will tend to move toward the balance under R5 selection."
-  - "In quantum systems, the decoherence rate should correlate with the
-     local imbalance between inside‑out and outside‑in pressures."
-  - "In neural systems, learning and memory consolidation should be optimal
-     at a specific ratio of synaptic potentiation/depression (the balance)."
-  - "In social systems, measures of innovation and institutional strength
-     should show an inverted‑U relationship (too little or too much of either
-     leads to dysfunction)."
-  - "Mental health interventions that restore balance (e.g., psychotherapy
-     that loosens rigid patterns while providing safety) should be effective."
-
+  - >
+    Systems far from the balance will exhibit increased variability or
+    rigidity, and will tend to move toward the balance under R5 selection
+    when sufficient Praegress is available.
+  - >
+    In quantum systems, the decoherence rate should correlate with the
+    local imbalance between inside‑out and outside‑in pressures —
+    specifically with the local η contrast between the system and
+    its environment.
+  - >
+    In neural systems, learning and memory consolidation should be optimal
+    at a specific ratio of synaptic potentiation/depression — the balance
+    point where grade-0 multiplicity and grade-3 committed structure
+    coexist at their R5-optimal ratio.
+  - >
+    In social systems, measures of innovation and institutional strength
+    should show an inverted‑U relationship — too little or too much of
+    either inside-out or outside-in pressure leads to dysfunction.
+  - >
+    Mental health interventions that restore balance by adjusting both
+    pressures simultaneously (rather than one alone) should show
+    better outcomes than those targeting a single pressure.
 
 empirical_alignment:
   description: >
-    Selected studies that show patterns consistent with the viability balance
-    hypothesis. Mappings are interpretive and do not imply the original authors
-    endorse Praestology. Real studies are used where possible; gaps are noted
-    explicitly.
+    Selected studies showing patterns consistent with the viability
+    balance hypothesis. Mappings are interpretive — the original authors
+    do not necessarily endorse Praestology. Real studies are used where
+    possible; gaps are noted explicitly.
   examples:
-    - study: "Beggs & Plenz (2003), Shew et al. (2011) – Neural criticality and optimal information processing"
-      alignment: "Neural networks operate near a critical point between order and chaos for maximal dynamic range and information capacity."
-      gap: "Criticality is usually statistical; mechanistic link to commitment-density gradients or dual ℛ(ψ) kernel is missing."
-      praestology_mapping: "Critical regime ≈ dynamic balance... Saturation term (Λ) prevents runaway commitment (Noise); dual ℛ(ψ) prevents decay (Void)."
+    - study: >
+        Beggs & Plenz (2003), Shew et al. (2011) —
+        Neural criticality and optimal information processing
+      alignment: >
+        Neural networks operate near a critical point between order and
+        chaos for maximal dynamic range and information capacity.
+      gap: >
+        Criticality is usually statistical; mechanistic link to
+        commitment-density gradients or dual ℛ(ψ) kernel is missing.
+      praestology_mapping: >
+        Critical regime ≈ dynamic balance. Saturation term (Λ) prevents
+        runaway commitment (noise); dual ℛ(ψ) prevents decay (void).
 
-    - study: "Yerkes-Dodson law and inverted-U performance curves (classic and modern meta-analyses)"
-      alignment: "Performance peaks at intermediate arousal/stress levels; too little or too much leads to decline."
-      gap: "Typically phenomenological; underlying viability pressure not derived from first principles."
-      praestology_mapping: "Optimal zone ≈ metastable balance; low arousal = insufficient inside-out (void/stasis), high arousal = inside-out overwhelms outside-in scaffolding (noise)."
+    - study: >
+        Yerkes-Dodson law and inverted-U performance curves
+        (classic and modern meta-analyses)
+      alignment: >
+        Performance peaks at intermediate arousal/stress levels;
+        too little or too much leads to decline.
+      gap: >
+        Typically phenomenological; underlying viability pressure not
+        derived from first principles.
+      praestology_mapping: >
+        Optimal zone ≈ metastable balance. Low arousal = insufficient
+        inside-out (void/stasis); high arousal = inside-out overwhelms
+        outside-in scaffolding (noise).
 
-    - study: "March (1991) & subsequent exploration-exploitation literature in organisational learning"
-      alignment: "Organisations must balance exploration (novelty) and exploitation (efficiency) for long-term survival."
-      gap: "Balance is often treated as strategic choice rather than emergent from substrate dynamics."
-      praestology_mapping: "Exploration ≈ inside-out Praegress pressure; exploitation ≈ outside-in Regress scaffolding."
+    - study: >
+        March (1991) and subsequent exploration-exploitation literature
+        in organisational learning
+      alignment: >
+        Organisations must balance exploration (novelty) and exploitation
+        (efficiency) for long-term survival.
+      gap: >
+        Balance is often treated as strategic choice rather than emergent
+        from substrate dynamics.
+      praestology_mapping: >
+        Exploration ≈ inside-out Praegress pressure;
+        exploitation ≈ outside-in Regress scaffolding.
 
-    - study: "U-shaped or inverted-U relationships in creativity research (e.g., Byron et al. on stress and creativity)"
-      alignment: "Moderate levels of constraint or pressure often maximise creative output."
-      gap: "Mechanisms are usually psychological; no direct link to resolution multiplicity or dual kernel."
-      praestology_mapping: "Moderate outside-in pressure enables viable grade-2/3 interfaces without collapsing into noise or rigidity."
+    - study: >
+        Byron et al. — stress and creativity; related creativity research
+      alignment: >
+        Moderate levels of constraint or pressure often maximise creative
+        output; inverted-U relationship.
+      gap: >
+        Mechanisms usually psychological; no direct link to resolution
+        multiplicity or dual kernel.
+      praestology_mapping: >
+        Moderate outside-in pressure enables viable grade-2/3 interfaces
+        without collapsing into noise or rigidity.
 
 falsification_candidates:
   description: >
     Observations or experimental outcomes that would challenge or falsify
     the universality or mechanistic claims of the hypothesis.
-
   examples:
-    - "If R5 selection is shown to favor extreme imbalance (pure Noise or Void) at any scale over evolutionary time."
-    - "A biological or neural system that maintains long-term viability and adaptability in a state of pure noise (unconstrained inside-out, no persistent structure) or pure void (rigid outside-in, no novelty)."
-    - "Neural learning shown to be optimal at extreme plasticity with zero outside-in constraint (no homeostasis, no structural limits, no pruning)."
-    - "Quantum decoherence rates showing no measurable dependence on local commitment-density gradients or environmental η variation in controlled experiments."
-    - "Social or organisational systems that thrive indefinitely with zero innovation (pure outside-in) or zero structure (pure inside-out) without eventual collapse or stagnation."
-    - "A scale at which the inside-out / outside-in balance is irrelevant or where one pressure alone suffices for sustained viability."
-
-methodological_note:
-
-  statement: >
-    This hypothesis is derived from R1–R5 and the dual ℛ(ψ) kernel. Empirical
-    studies cited here may use different terminology; the mappings are provided
-    to enable cross-framework dialogue and generate testable predictions.
-    Absence of Praestology concepts in a study does not invalidate its findings
-    — it highlights an opportunity for deeper unification. All mappings remain
-    provisional until quantitatively anchored in the master equation and the
-    dual kernel. The hypothesis invites empirical testing at multiple scales.
-    This approach embodies A5 (Epistemic Humility) — inviting refinement
-    rather than asserting dogma.
-
+    - >
+      R5 selection shown to favor extreme imbalance (pure noise or void)
+      at any scale over evolutionary time.
+    - >
+      A biological or neural system that maintains long-term viability
+      and adaptability in a state of pure noise (unconstrained inside-out,
+      no persistent structure) or pure void (rigid outside-in, no novelty).
+    - >
+      Neural learning shown to be optimal at extreme plasticity with zero
+      outside-in constraint — no homeostasis, no structural limits, no pruning.
+    - >
+      Quantum decoherence rates showing no measurable dependence on local
+      commitment-density gradients or environmental η variation in controlled
+      experiments.
+    - >
+      Social or organisational systems that thrive indefinitely with zero
+      innovation (pure outside-in) or zero structure (pure inside-out)
+      without eventual collapse or stagnation.
+    - >
+      A scale at which the inside-out / outside-in balance is irrelevant
+      or where one pressure alone suffices for sustained viability.
+    - >
+      Mental health interventions targeting both pressures simultaneously
+      showing no advantage over single-pressure interventions across a
+      range of conditions — which would suggest the balance target is not
+      the operative mechanism.
 
 # ─────────────────────────────────────────────
 # EPISTEMIC STATUS
 # ─────────────────────────────────────────────
 
 epistemic_status:
-  core_claim: "High confidence – follows from R5 and the master equation"
-  cross_scale_universality: "Moderate confidence – supported by examples but
-                             not yet quantitatively verified at all scales"
-  specific_predictions: "Low to moderate – awaiting experimental and
-                         observational tests"
+  core_claim: >
+    High confidence — follows directly from R5 and the dual ℛ(ψ) kernel.
+    Not an extra postulate: the balance is a consequence of the saturation
+    term and the dissolution kernel operating together.
+  cross_scale_universality: >
+    Moderate confidence — supported by examples across scales but not
+    yet quantitatively verified. The formal condition ∂ₜ|ψ|² = 0 applies
+    at all scales from the master equation; whether the balance is
+    actually maintained at biological and social scales requires
+    domain-specific verification.
+  specific_predictions: >
+    Low to moderate — awaiting experimental and observational tests.
+    The neural criticality alignment (Beggs & Plenz) is the strongest
+    existing support; the mental health and social predictions are more
+    speculative and require dedicated study design.
+
+methodological_note:
+  statement: >
+    This hypothesis is derived from R1-R5 and the dual ℛ(ψ) kernel.
+    Empirical studies cited here may use different terminology; the
+    mappings are provided to enable cross-framework dialogue and generate
+    testable predictions. Absence of Praestology concepts in a study
+    does not invalidate its findings — it highlights an opportunity for
+    deeper unification. All mappings remain provisional until
+    quantitatively anchored in the master equation and the dual kernel.
+    This approach embodies epistemic humility — inviting refinement
+    rather than asserting dogma.
 
 notes:
-  - "This hypothesis is a direct consequence of the saturation limit and
-     the dual ℛ(ψ) kernel. It is not an extra postulate."
-  - "The balance is dynamic, not static; systems fluctuate around it."
-  - "The hypothesis provides a unified language for discussing viability
-     across physics, biology, psychology, and sociology."
+  - >
+    This hypothesis is a direct consequence of the saturation limit and
+    the dual ℛ(ψ) kernel. It is not an extra postulate.
+  - >
+    The balance is dynamic, not static; systems fluctuate around it.
+    The formal condition ∂ₜ|ψ|² = 0 is a long-term average, not a
+    moment-to-moment constraint.
+  - >
+    The hypothesis provides a unified language for discussing viability
+    across physics, biology, psychology, and sociology — using the same
+    formal structure (master equation, dual kernel, metastable zone)
+    at each scale.
 
 reading_order:
   - "core/specifications.yaml"
   - "core/core-dynamical-equation.yaml"
   - "core/emergent-relational-manifold.yaml"
-  - "core/viability-balance-hypothesis.yaml (this file)"
+  - "core/resolution-hierarchy.yaml"
+  - "intersectional/viability-balance-hypothesis.yaml (this file)"
   - "domains/ethics/specifications.yaml"
   - "domains/consciousness/learning-pathologies.yaml"
 
@@ -263,3 +372,6 @@ related_issues:
   - "foundational/F02_status_of_nonviable_paths"
   - "intersectional/psychology/001_balance_in_mental_health"
   - "intersectional/sociology/001_institutional_balance"
+  - "intersectional/physics_consciousness/005_decoherence_as_outside_in_dominance"
+  - "foundational/F130_viability_balance_as_r5_attractor"
+  - "foundational/F131_grade2_as_meeting_point_of_dual_pressures"
