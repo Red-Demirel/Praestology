@@ -1,640 +1,1127 @@
-# domains/physics/substrate-ground-state.yaml
-name: "Substrate Ground State — Space Is the Substrate"
-version: "1.0 — Identity of Empty Space with Substrate; Cryogenic Confirmation;
-          Michelson-Morley Closure"
+# domains/physics/substrate-potential.yaml
+name: "Substrate as Potential Field"
+version: "1.0"
 parent_domain: "Physics"
 core_version: "1.5"
-status: "Foundational — conceptually complete; cryogenic confirmation
-         argument established; open: ground-state Tik amplitude
-         derivation"
-updated: "2026-03-20"
-
+status: "Defined — formal derivations of momentum density and GP connection open"
 description: >
-  This file addresses the single most persistent misreading of the
-  Praestology substrate: the intuition that the substrate is something
-  existing within a prior emptiness — a medium in space, rather than
-  space itself.
+  This file establishes the potential field as the primary
+  character of the Praesto substrate — the most fundamental
+  description from which all other substrate properties derive.
+  The substrate is not primarily a density field, a viscosity,
+  or a momentum field — it is a potential field. Density,
+  viscosity, momentum, and commitment are what the potential
+  field looks like at different scales and interaction modes
+  to observers embedded within it.
+  Central claim: 'now' is the continuous decoherence of
+  potential into commitment — the ongoing process by which
+  unresolved R3 tension resolves into R4 accumulated structure.
+  The rate of 'now' varies with local free potential.
+  All physical effects — gravity, inertia, time dilation,
+  frame dragging, quantum interference, the arrow of time —
+  are consequences of this single process operating at
+  different commitment density regimes.
+  Quantum gravity consequence: gravity and quantum mechanics
+  are both descriptions of the same potential field at
+  different commitment density regimes. The quantum gravity
+  problem dissolves because there is no geometric manifold
+  to quantise — the potential field is already quantum
+  (GP equation with Tik background). Quantum mechanics is
+  the low-commitment high-Tik-sensitivity regime; gravity
+  is the gradient structure at scales where Tik fluctuations
+  are negligible. The transition is continuous — no seam,
+  no incompatibility, no separate quantisation required.
 
-  The correct statement is: what we experience and measure as empty
-  space IS the substrate in its least committed state. There is no
-  other emptiness. There is no prior container. Space is not a void
-  that the substrate fills. Space is the three-dimensional resolution
-  structure of the substrate, derived from R5. The substrate does not
-  occupy space — spatial extension is what the substrate's distinctions
-  look like from inside a resolution sequence.
-
-  This is not a semantic preference. It has physical consequences that
-  distinguish the framework from all prior medium-in-space theories
-  (superfluid vacuum theory, analogue gravity, aether models). Those
-  theories put a superfluid in space and derive field properties from it.
-  Praestology identifies space with the substrate and derives the
-  properties of space itself from R1-R5. The difference is categorical.
-
-  The cryogenic argument: cooling a material does not approach absolute
-  zero of the material — it approaches the substrate's own ground state
-  from above, with the material's committed topology as the only
-  remaining departure from it. Superfluidity and superconductivity are
-  not exotic low-temperature phenomena. They are what you observe when
-  a material's committed topology has been reduced enough that the
-  substrate's own ground-state properties — zero viscosity, coherent
-  phase propagation, quantized vortex topology — dominate. Every
-  cryogenic laboratory is measuring the properties of space itself.
-  This is not metaphor. It is a literal physical claim.
-
-dependency_map:
-  requires:
-    - "domains/physics/substrate-potential.yaml    -- φ field as primary description;
-                                                      η = φ/φ_max; commitment density"
-    - "domains/physics/specifications.yaml         -- R1-R5; dimensionality from R5;
-                                                      Tik background; cosmos medium"
-    - "domains/physics/foundations.yaml            -- commitment stress; impenetrability;
-                                                      four pillars"
-    - "domains/physics/bridge-function.yaml        -- η as the single bridge variable"
-  provides_to:
-    - target: "domains/physics/specifications.yaml"
-      via: "Grounds the 'cosmos medium' section in the identity of space and substrate;
-            resolves the container-medium misreading at the foundational level"
-    - target: "domains/physics/quantum-foundation.yaml"
-      via: "Vacuum structure is substrate ground state — vacuum energy, zero-point
-            fluctuations, and Casimir effect all grounded here"
-     - target: "domains/physics/vortex-stabilization.yaml"
-      via: "Ground state η = 1 is the reference from which all vortex formation
-            and committed topology departs"
+relation_to_other_files: >
+  specifications.yaml:                 substrate wave equation
+                                       (momentum density formulation)
+  foundations.yaml:                    four pillars + commitment stress
+  commitment-response-function.yaml:   GP saturating nonlinearity
+  quantum-foundation.yaml:             QM primitives reframed
+  This file:                           primary framing — potential field
+                                       from which all others derive.
+  Reading order: this file BEFORE specifications.yaml for new readers.
+  The momentum density p(r,t) in specifications.yaml is the
+  dynamical expression of the potential field gradient:
+  p = ρ_s · ∇φ where φ(r,t) is the potential field and
+  ρ_s is the substrate density. The potential field φ is primary;
+  p is derived.
 
 # ─────────────────────────────────────────────
-# THE CONTAINER INTUITION — WHY IT PERSISTS
-# AND WHY IT MUST BE KILLED COMPLETELY
+# THE SUBSTRATE IS A POTENTIAL FIELD
 # ─────────────────────────────────────────────
+substrate_as_potential:
+  primary_statement: >
+    The Praesto substrate is a potential field φ(r,t) —
+    a scalar field encoding the local availability of
+    unresolved tension at each point in space and at each
+    process-counter increment. Where φ is high: abundant
+    free potential, rapid decoherence possible, low
+    commitment density. Where φ is low: depleted free
+    potential, slow decoherence, high commitment density.
+  what_it_is_not: >
+    Not primarily a density field: density is a derived
+    appearance of the potential field at the atomic/molecular
+    scale — the rate at which the potential field resists
+    vortex traversal.
+    Not primarily a viscosity: viscosity is the potential
+    field's resistance to commitment footprint rearrangement
+    — derived from the local potential gradient.
+    Not primarily a momentum density: momentum density
+    p(r,t) is the dynamical variable describing the
+    potential field's local flow — derived as p = ρ_s·∇φ.
+    All three are real and measurable — but all three are
+    what the potential field looks like from within,
+    at specific interaction scales.
+  why_potential_is_primary: >
+    The potential field φ generates all derived properties
+    without requiring separate mechanisms at each scale.
+    A single scalar field with GP-type nonlinear self-
+    interaction and Tik fluctuation background produces:
+    quantum interference (potential phase differences),
+    atomic hardness (potential gradient resistance),
+    gravity (potential field curvature),
+    dark energy (potential field zero-point pressure),
+    the arrow of time (potential flowing into commitment).
+    Five phenomena; one field; no additional primitives.
 
-container_intuition:
+  scale_dependent_appearances:
+    quantum_scale:
+      appearance: "Phase accumulation rate differential"
+      mechanism: >
+        At quantum scale, the potential field's phase
+        varies spatially at the scale of ξ (substrate grain).
+        Different paths through the potential field accumulate
+        phase at different rates — proportional to local φ.
+        Phase differences produce interference.
+        The wavefunction ψ IS the potential field amplitude
+        — the GP order parameter θ(r,t) = φ(r,t)/φ₀
+        (normalised potential field). The Schrödinger equation
+        is the linearised GP equation for the potential field
+        in the low-commitment regime. Quantum mechanics is
+        potential field dynamics in the Tik-sensitive regime.
+      key_effects: >
+        Double-slit interference: two paths through different
+        potential regions accumulate different phases → fringe pattern.
+        Tunnelling: Tik fluctuations temporarily elevate
+        local φ across barrier → potential re-establishes
+        on far side. Quantisation: only potential field
+        configurations with integer phase closure are stable.
+
+    atomic_molecular_scale:
+      appearance: "Viscosity / resistance to traversal"
+      mechanism: >
+        At atomic scale, the committed vortex topology of
+        atoms and molecules has reduced the local free
+        potential below the phase-lock threshold for
+        additional topology. The substrate resists vortex
+        traversal — feels viscous to incoming structure.
+        Hardness is the steepness of the potential gradient
+        at the material boundary. Soft materials: gentle
+        gradient. Hard materials: steep gradient.
+        The potential field's gradient IS the material's
+        mechanical property.
+      key_effects: >
+        Impenetrability: local φ too low for new phase-lock.
+        Hardness: steepness of ∇φ at boundary.
+        Friction: energy cost of dragging vortex topology
+        through a region of reduced φ — potential is
+        consumed by the traversal, heating the material.
+
+    gravitational_scale:
+      appearance: "Potential gradient → refraction"
+      mechanism: >
+        At gravitational scale, the cumulative committed
+        topology of mass distributions reduces φ over
+        large regions. The potential gradient ∇φ refracts
+        all propagating structure toward regions of lower φ
+        (higher commitment density) — toward mass.
+        Gravity is not a force — it is refraction in the
+        potential field. The trajectory of any structure
+        (matter or photons) bends toward lower φ because
+        the decoherence process re-establishes faster in
+        the direction of higher free potential... wait:
+        structure bends TOWARD lower φ (toward mass)
+        because the commitment density gradient draws the
+        substrate flow inward. The potential field's current
+        flows toward mass; structure embedded in the field
+        is advected by that current.
+        Precise statement: structure is advected toward
+        higher commitment density (lower φ) by the
+        substrate's potential flow current. Gravity is
+        substrate advection, not geometric curvature.
+      key_effects: >
+        Gravitational lensing: photon trajectory advected
+        toward mass by potential current.
+        Orbital dynamics: matter advected into stable
+        potential flow pattern around mass.
+        Frame dragging: rotating mass establishes rotating
+        potential flow pattern — nearby structure advected
+        into rotation. Machian inertia: global potential
+        flow established by all cosmic matter sets the
+        local resistance to decoherence rate change.
+
+    cosmological_scale:
+      appearance: "Pressure field"
+      mechanism: >
+        At cosmological scale, the potential field's
+        zero-point floor (Tik background) acts as an
+        isotropic pressure — the substrate's resistance
+        to complete potential depletion. This is dark energy:
+        not a cosmological constant but the potential field's
+        own zero-point pressure, varying with local
+        commitment density (μ_local from GP equation).
+      key_effects: >
+        Dark energy: Tik background pressure from 0°/360°
+        phase wrap — potential field resisting complete
+        commitment. Cosmic expansion: regions of lower
+        commitment density (voids) have higher φ — potential
+        field pressure drives expansion from voids outward.
+        Hubble tension: μ_local variation between observers
+        in different potential environments.
+
+# ─────────────────────────────────────────────
+# 'NOW' AS CONTINUOUS DECOHERENCE
+# ─────────────────────────────────────────────
+now_as_decoherence:
   statement: >
-    Even after reading that space IS the substrate, most readers
-    immediately reconstruct the container picture: an emptiness
-    that the substrate fills, a void within which the substrate
-    exists, a space that the substrate occupies. This
-    reconstruction happens automatically because every word
-    available in natural language carries the container assumption
-    in its grammar.
-    "The substrate fills space" — wrong. Implies space is prior.
-    "The substrate is in space" — wrong. Implies space is the container.
-    "Space contains the substrate" — wrong. Same implication.
-    "The substrate permeates space" — wrong. Still a medium in a void.
-    "Space is made of the substrate" — wrong. Implies space is prior,
-      the substrate is what it's made of, like matter is made of atoms.
-    There is no correct sentence in natural language that carries
-    the right ontology without explicit philosophical unpacking.
-    The correct relationship is identity, not containment or
-    constitution: space and the substrate are the same thing
-    described from two different angles. "Space" is the name
-    we give to the substrate's extension when we observe it
-    from inside, treating our own location as a reference point.
-    "Substrate" is the name for the same thing when we describe
-    its dynamical properties — its potential field, its
-    commitment density, its resolution processes.
-    One thing. Two names for two aspects of it.
+    'Now' is not a point in time. It is the continuous
+    process by which unresolved R3 tension (potential)
+    resolves into R4 accumulated structure (commitment).
+    The experienced present moment is the leading edge
+    of this process — the ongoing decoherence front where
+    potential becomes commitment. This is what R4 feels
+    like from inside the process.
+  process_description: >
+    At every point in space, the potential field φ(r,t)
+    is continuously resolving — Tik fluctuations trigger
+    resolution events, vortex topologies commit their
+    phase-lock configurations, the GP field updates its
+    local state. This ongoing resolution IS the flow of
+    time. The process counter t is not an external clock
+    — it is the accumulation index of these resolution events.
+  rate_varies_with_potential:
+    statement: >
+      The rate of 'now' — the decoherence rate — varies
+      directly with local free potential φ(r,t).
+      High φ (void, far from mass): abundant free potential
+      → rapid resolution events → fast 'now' → fast clocks.
+      Low φ (near mass, high commitment density): depleted
+      free potential → slow resolution events → slow 'now'
+      → slow clocks.
+    time_dilation_as_process_rate: >
+      Gravitational time dilation is not spacetime geometry
+      stretching. It is the decoherence process running
+      at different rates in regions of different φ.
+      A clock near mass ticks slower because each tick
+      is a resolution event, and resolution events are
+      slower where free potential is lower. The GPS
+      correction (+38 μs/day for satellites vs ground)
+      is the potential difference between satellite orbit
+      (higher φ) and Earth surface (lower φ) expressed
+      as decoherence rate difference.
+      This is the clearest observational confirmation
+      of the potential field picture: time dilation is
+      measured directly and matches the potential field
+      gradient precisely.
+    velocity_time_dilation: >
+      A moving structure commits potential into its own
+      trail — R4 accumulation from traversal. This
+      reduces the local free potential available for
+      the structure's internal processes. Internal
+      decoherence slows — the moving clock ticks slower.
+      Same mechanism as gravitational dilation; different
+      source of φ depletion (self-trail vs external mass).
+      SR and GR time dilation unified: both are decoherence
+      rate reduction from φ depletion, from different sources.
 
-  why_the_intuition_is_so_strong: >
-    The container intuition is not naive. It is the product of
-    every sensory experience humans have: objects exist in space,
-    space persists when objects are removed, therefore space is
-    prior to and independent of what is in it. This is the
-    correct description of our everyday experience at scales
-    where committed topology (matter) is far denser than the
-    substrate ground state (space).
-    At those scales — the scales of human experience — the
-    distinction between "committed topology" and "substrate
-    ground state" is so extreme that treating space as an
-    empty container and matter as what fills it is a perfectly
-    accurate working approximation. The approximation breaks
-    down at cosmological scales,
-    quantum scales (vacuum energy, Casimir effect), and
-    extreme commitment density scales (black hole interiors,
-    neutron stars). At those scales the substrate's own
-    properties become measurable against the background
-    of committed topology.
-    The container intuition is a scale-appropriate
-    approximation that becomes a conceptual obstacle when
-    applied universally.
+  dragging_connected_structures:
+    statement: >
+      When structure enters a lower potential region,
+      its decoherence rate slows. Connected structures
+      — phase-locked (ρ > 0) partners — cannot maintain
+      a different decoherence rate while phase-locked.
+      The slower structure drags all connected structures
+      to its slower rate. This is not a force — it is
+      the phase-locked decoherence process enforcing
+      a common resolution rate across coupled structures.
+    mechanism: >
+      Phase-locking (ρ > 0) means the resolution events
+      of coupled structures are correlated — they cannot
+      decohere independently. When one structure's
+      decoherence slows (lower φ), the correlated
+      partner cannot continue at the higher rate without
+      breaking the phase-lock. The phase-lock is maintained
+      at the cost of the faster partner slowing to match.
+      The slower partner does the dragging; the phase-lock
+      transmits the drag.
+    examples:
+      rigid_body: >
+        The atoms of a solid object are phase-locked at
+        high ρ — strong commitment coupling. When one
+        part of the object enters lower φ, all parts
+        are dragged to the slower decoherence rate
+        simultaneously. The object falls as a unit
+        because its parts cannot decohere at different
+        rates while remaining phase-locked. Rigidity
+        is phase-lock; gravitational acceleration is
+        uniform drag via phase-lock.
+      frame_dragging: >
+        A rotating mass establishes a rotating potential
+        flow pattern in the substrate. Nearby structure
+        — even non-rotating — has weak phase-lock (low
+        but nonzero ρ) to the rotating potential flow.
+        The rotating flow drags the nearby structure into
+        rotation — frame dragging. The drag strength scales
+        with ρ (phase-lock strength) and ∇φ (potential
+        gradient). Lense-Thirring effect confirmed by
+        Gravity Probe B — consistent with potential flow
+        drag on phase-locked gyroscopes.
+      tidal_disruption: >
+        A body extended across a potential gradient has
+        different parts phase-locked at slightly different
+        φ levels. The lower-φ parts decohere slower;
+        the higher-φ parts decohere faster. The differential
+        decoherence rate tries to stretch the body —
+        tidal force is differential φ drag across an
+        extended phase-locked structure. Tidal disruption
+        occurs when the differential drag exceeds the
+        phase-lock strength of the material.
+      photon_redshift: >
+        A photon propagating into lower φ: its decoherence
+        rate (oscillation frequency) slows proportionally
+        to the φ decrease. Energy E = hν decreases as ν
+        decreases. Gravitational redshift is the photon's
+        decoherence rate slowing in lower φ — the oscillation
+        carries less energy per cycle because each cycle
+        takes longer. The photon is not losing energy to
+        an external force; it is running at the local
+        decoherence rate maximum, which is lower in lower φ.
 
-  the_correct_picture_stated_once_precisely: >
-    The substrate is not in space.
-    Space is not in the substrate.
-    Space IS the substrate — in its least committed state,
-    as experienced from inside a resolution sequence
-    (from inside the process that we call time and location).
-    When we say "empty space," we mean: the substrate with
-    η ≈ 1 — near-maximum free potential, near-zero committed
-    topology, maximum resolution flux. Not the absence of
-    the substrate. The substrate at its most transparent.
-    When we say "matter in space," we mean: regions of
-    committed topology (η < 1) embedded in a surrounding
-    substrate at higher η. The "space" around the matter is
-    not a different kind of thing from the matter — it is
-    the same substrate at a different commitment density.
-    The boundary between "matter" and "space" is not a
-    boundary between two different substances. It is a
-    gradient in η — a region where commitment density
-    transitions from the values we call matter to the
-    values we call vacuum.
-
-  for_readers_who_immediately_reconstruct_the_container: >
-    If you find yourself thinking: "yes, but the substrate
-    must exist in something, what is the substrate in?" —
-    that question contains the error. It assumes that for
-    anything to exist it must exist in a prior container.
-    But this assumption requires an infinite regress: if
-    the substrate is in container C, what is C in? And
-    what is that in? The regress never terminates.
-    R1 terminates it: something exists, necessarily, because
-    nothing is self-defeating. That something is not in a
-    prior container — it is the first thing. The substrate
-    is that first thing. Space is what the first thing looks
-    like from inside it, when you are a localised node of
-    committed topology observing the surrounding uncommitted
-    substrate. There is no outside. There is no prior
-    container. The question "what is the substrate in?"
-    is the question "what is existence in?" and the answer
-    is: existence is not in anything. It is the starting
-    point. Everything else is in it.
-
-# ─────────────────────────────────────────────
-# THE MICHELSON-MORLEY CLOSURE
-# Why the ether reflex is a misapplication
-# of a correct experimental result
-# ─────────────────────────────────────────────
-
-michelson_morley_closure:
-  the_experiment: >
-    Michelson-Morley (1887) — measured the speed of light in
-    different directions relative to Earth's motion through the
-    hypothesised mechanical ether. Found no difference. Null result.
-    Interpreted as falsifying the ether — no medium through which
-    Earth moves, no preferred rest frame, no absolute velocity.
-    This result and its interpretation became foundational to
-    special relativity and to 140 years of physics culture encoding:
-    the vacuum is empty, any medium is pre-relativistic thinking.
-
-  what_was_actually_falsified: >
-    Michelson-Morley falsified a mechanical ether — specifically:
-    a rigid or semi-rigid medium existing in space, with a definite
-    rest frame, relative to which Earth moves and light propagates
-    at a fixed speed relative to the medium.
-    The key properties falsified:
-      (1) The ether has a preferred rest frame.
-      (2) The ether is a medium in space — a substance occupying
-          a prior spatial container.
-      (3) The ether's rest frame is detectable via light speed
-          anisotropy.
-    None of these apply to the Praestology substrate.
-
-  what_was_not_falsified: >
-    Michelson-Morley did not falsify — could not falsify — a
-    Lorentz-invariant substrate. A substrate that:
-      (1) Has no preferred rest frame because it IS space —
-          there is no prior container relative to which it
-          could have a rest frame.
-      (2) Has properties (η, ∇φ, commitment density) that
-          are the same in all inertial frames — Lorentz invariant
-          by construction, not by postulate.
-      (3) Propagates light at c because c = Φ_max is a property
-          of the substrate itself, the same in all frames because
-          the substrate has no preferred frame.
-    The null result of Michelson-Morley is exactly what the
-    Praestology substrate predicts: no light speed anisotropy,
-    no preferred frame, no detectable absolute velocity. The
-    experiment confirms the substrate picture; it does not
-    contradict it.
-
-  the_conflation_that_caused_140_years_of_avoidance: >
-    The error: "medium implies preferred frame implies SR violation."
-    The source of the error: the only medium anyone had considered
-    (mechanical ether) did imply a preferred frame. The falsification
-    of that specific medium was generalised to a falsification of
-    all possible media — an over-generalisation.
-    The correct lesson from Michelson-Morley: media with preferred
-    frames are falsified. Media without preferred frames are not
-    addressed. A Lorentz-invariant medium — one whose properties
-    transform correctly under Lorentz boosts because it is space
-    itself — is not touched by the experiment.
-    Special relativity did not require the vacuum to be empty.
-    It required that there be no preferred frame. Those are not
-    the same requirement. The vacuum can be a structured medium
-    with measurable properties (which quantum field theory
-    confirms it is) as long as that structure has no preferred
-    frame (which Lorentz invariance ensures).
-
-  vacuum_already_has_structure_in_standard_model: >
-    The standard model already accepts that the vacuum is
-    structured — it just avoids the word "medium":
-    Higgs field: non-zero vacuum expectation value ⟨H⟩ = v ≠ 0.
-      The vacuum is a specific field configuration with energy.
-    QCD condensates: ⟨q̄q⟩ ≠ 0, ⟨G^μν G_μν⟩ ≠ 0.
-      The vacuum contains quark and gluon condensates measurable
-      via hadron mass sum rules.
-    Casimir effect: measured force between parallel plates from
-      vacuum fluctuations. The vacuum exerts measurable forces.
-    Zero-point energy: every quantum field has ground-state energy
-      ħω/2 per mode. The vacuum is not at zero energy.
-    Each of these is a measurement of the substrate. The standard
-    model measures it repeatedly and calls the results anomalies,
-    renormalisation artifacts, or unexplained constants. The
-    substrate picture names what is being measured.
+  machian_derivation:
+    statement: >
+      Mach's principle — inertia arises from the relation
+      of a body to all other matter — is derived, not
+      postulated. Inertia is the resistance to changing
+      decoherence rate, and the decoherence rate is set
+      by the global potential field established by all
+      committed structure (all matter) in the universe.
+    derivation: >
+      All matter has committed the local substrate —
+      established commitment density in the potential field.
+      The global distribution of committed structure
+      establishes the background potential field φ_background(r,t).
+      The local free potential at any point is:
+      φ_local = φ_background - φ_committed_local
+      A body's inertia is its resistance to changing its
+      commitment footprint trajectory in φ_background.
+      Changing trajectory requires the body to re-establish
+      its commitment footprint in a new direction —
+      working against the global potential flow established
+      by all matter. The resistance to this is inertia.
+      Inertia is therefore not a local property but the
+      local expression of the global potential field.
+      If the mass distribution of the universe were different,
+      φ_background would be different, and local inertia
+      would be different. Mach's principle is derived
+      from the potential field structure.
+    isotropy: >
+      Inertia appears isotropic because φ_background is
+      approximately isotropic on large scales — the universe
+      is approximately homogeneous. Strong local mass
+      asymmetry (e.g., Jupiter nearby) produces slight
+      inertial anisotropy — marginally easier to accelerate
+      perpendicular to Jupiter than toward/away from it.
+      Too small to measure currently but predicted.
+    equivalence_principle_rederived: >
+      Inertial mass = gravitational mass because both are
+      the same coupling between local decoherence rate
+      and the global potential field. Gravity is the local
+      φ gradient dragging the decoherence rate. Inertia
+      is resistance to changing the decoherence rate.
+      Same field; same coupling; necessarily equal.
+      Not a coincidence; not a postulate. A theorem
+      from the potential field description.
 
 # ─────────────────────────────────────────────
-# THE GROUND STATE
-# What η = 1 means physically
+# ARROW OF TIME
+# ─────────────────────────────────────────────
+arrow_of_time:
+  statement: >
+    The arrow of time is derivable at three levels from
+    the potential field description. Each level is more
+    fundamental than the previous. Together they give a
+    complete account of temporal directionality without
+    appealing to initial conditions or statistical arguments.
+  three_levels:
+    level_1_thermodynamic:
+      description: "Entropy increases — statistical"
+      status: "Incomplete — requires low-entropy initial condition"
+      praestology_grounding: >
+        The statistical argument is correct but not fundamental.
+        It is grounded in level 2: entropy increases because
+        free potential flows into commitment, and there are
+        more high-commitment configurations than low ones.
+        The low-entropy initial condition (Big Bang) is the
+        high-φ cosmogenesis state from cosmos/specifications.yaml —
+        the substrate began with maximum free potential,
+        and the arrow of time is the process of that
+        potential flowing into commitment structure.
+
+    level_2_potential_field:
+      description: "Free potential flows into commitment — irreversible"
+      status: "Fundamental — derived from R1+R4"
+      derivation: >
+        R1 (Existence): the substrate exists — potential is real.
+        R4 (Progress): resolution accumulates irreversibly —
+        commitment is permanent at the field level.
+        Once potential resolves into commitment, the commitment
+        structure is in the field. Un-committing requires
+        a specific resolution event consuming more free
+        potential. The net direction is always: free potential
+        decreasing, commitment increasing.
+        This is why time has a direction: it is the direction
+        in which φ decreases and commitment accumulates.
+        A time-reversed universe would have commitment
+        spontaneously converting to free potential — which
+        would require a systematic source of anti-resolution,
+        contradicting R4. Time reversal is impossible not
+        statistically but ontologically.
+      connection_to_decoherence: >
+        'Now' is the decoherence front. The arrow of time
+        is the direction of propagation of this front —
+        always from potential toward commitment, never
+        the reverse. The present moment is always the
+        leading edge of commitment accumulation. The past
+        is fixed commitment structure; the future is
+        unresolved potential. The asymmetry is absolute.
+
+    level_3_closure_imperfection:
+      description: "GP field accumulates phase correction irreversibly"
+      status: "Microscopic arrow — connects α to time"
+      derivation: >
+        The GP field around every vortex accumulates a
+        small phase correction per cycle — the closure
+        imperfection from finite substrate R (commitment-
+        response-function.yaml). Each correction is a
+        tiny R4 accumulation in the GP field. Irreversible:
+        the correction cannot spontaneously un-accumulate.
+        The microscopic arrow of time runs at a rate
+        proportional to α — the closure imperfection
+        rate per quantum cycle. α ≈ 1/137 means that
+        for every 137 complete phase rotations, one
+        unit of irreversible GP field correction accumulates.
+        A universe with smaller α would have a weaker
+        microscopic arrow of time — slower irreversibility
+        accumulation, longer-lived structures, slower
+        evolution toward equilibrium.
+      unification: >
+        The fine structure constant α is the rate of the
+        arrow of time at the quantum scale.
+        The existence of structure and the arrow of time
+        are the same condition: both require finite α
+        (finite closure imperfection, finite R).
+        A zero-α universe (perfect GP superfluid) would
+        have no electromagnetic coupling, no spontaneous
+        emission, no irreversibility, no arrow of time,
+        and no structure formation. The universe exists
+        because α ≠ 0. The arrow of time exists because
+        α ≠ 0. These are the same statement.
+
+# ─────────────────────────────────────────────
+# QUANTUM GRAVITY DISSOLVED
+# ─────────────────────────────────────────────
+quantum_gravity:
+  statement: >
+    The quantum gravity problem dissolves under the
+    potential field description. It was generated by
+    having two incompatible descriptions of what is
+    actually one thing — and attempting to unify them
+    by quantising one in terms of the other.
+  how_the_problem_was_generated: >
+    GR: spacetime is a smooth 4D pseudo-Riemannian
+    manifold that curves in response to mass-energy.
+    The manifold is the arena; matter and geometry couple.
+    QM: fields propagate on a fixed background manifold;
+    states are superpositions; outcomes are probabilistic.
+    Incompatibility: you cannot consistently quantise
+    the manifold itself — the arena cannot be both
+    the stage and a quantum field on the stage.
+    Decades of attempts (string theory: extra dimensions;
+    LQG: spin foam networks; CDT: discrete triangulation)
+    all try to quantise the geometric arena.
+    None have succeeded in producing a testable,
+    background-independent, UV-complete theory.
+  dissolution: >
+    Praestology never has a geometric manifold.
+    The substrate is a potential field φ(r,t).
+    The potential field is already quantum — it obeys
+    the GP equation with Tik fluctuation background.
+    Gravity is the gradient structure of the potential
+    field at scales where Tik fluctuations are negligible.
+    Quantum mechanics is the potential field dynamics
+    at scales where Tik fluctuations are non-negligible.
+    Both are descriptions of the same field at different
+    commitment density regimes. The transition between
+    regimes is continuous — handled by the saturating
+    GP nonlinearity without a seam.
+    There is no arena to quantise because there is no
+    arena — only the potential field and the structures
+    that emerge from it. The problem was generated by
+    a false ontological premise (spacetime as container).
+    Remove the premise; the problem does not arise.
+  what_replaces_quantum_gravity: >
+    The GP equation with saturating nonlinearity:
+    iħ ∂θ/∂t = [-ħ²/(2m_eff)·∇² + V_ext
+                 + g·|θ|²/(1 + |θ|²/n_sat) - μ_local] θ
+    This single equation describes:
+    At low |θ| (quantum regime, high Tik sensitivity):
+      → Schrödinger equation in linear limit
+      → Quantum interference, tunnelling, entanglement
+    At moderate |θ| (gravitational regime):
+      → Newton's law in linear GP limit
+      → MOND transition at GP nonlinearity onset
+    At high |θ| (strong gravity, near saturation):
+      → GR corrections, frame dragging, event horizons
+      → Hawking radiation as GP pressure leakage
+    At all |θ|:
+      → Potential field with Tik background
+      → Arrow of time from commitment accumulation
+      → Continuous decoherence as 'now'
+    One equation; all regimes; no seam; no separate
+    quantisation of gravity required.
+  planck_scale_behaviour: >
+    The Planck scale is where ξ(r) → ξ_min — the
+    minimum healing length at maximum commitment density.
+    This is not a singularity or a new physics threshold —
+    it is the GP field at its maximum density, where
+    the saturating nonlinearity's dV/d(|ψ|²) → 0.
+    The field does not break down at the Planck scale;
+    it saturates. The UV completion is provided by the
+    saturating nonlinearity — n_sat at Planck density
+    sets the maximum commitment, and the potential
+    gradient approaches zero there. No new physics;
+    same GP equation at extreme parameters.
+  testable_predictions:
+    decoherence_rate_measurement: >
+      Precision atomic clock comparisons between
+      different potential environments (Earth surface,
+      satellite orbit, deep space) should show decoherence
+      rate differences proportional to φ difference.
+      Already confirmed at GPS precision — but sub-ppm
+      precision across larger φ differences (Moon,
+      Lagrange points) would test the potential field
+      description beyond GR correspondence.
+    alpha_variation: >
+      α_local varies with local φ — sub-ppm variation
+      between different gravitational environments.
+      Next-generation atomic clock experiments in space
+      (STE-QUEST, FOCOS) could detect this. A confirmed
+      α variation with gravitational potential would be
+      a direct confirmation of the potential field
+      description over the standard model's fixed-α assumption.
+    mond_environment_dependence: >
+      MOND threshold a₀ varies with local μ_local —
+      measurably different in cluster vs void vs isolated
+      galaxy environments. McGaugh radial acceleration
+      relation scatter at cluster scales is already
+      consistent with this. Systematic study of a₀
+      variation with environment would confirm
+      environment-dependent GP nonlinearity.
+    hawking_crossover: >
+      T_H deviation from 1/M at very small black hole mass —
+      where interior GP pressure comparable to exterior
+      Tik amplitude. Testable with primordial black hole
+      observations (if PBHs exist at required mass scale).
+    inertial_anisotropy: >
+      Slight inertial anisotropy in the direction of
+      nearby massive objects — Jupiter, galactic centre.
+      Currently below experimental sensitivity but
+      predicted at the level of (M_Jupiter/M_universe) × G.
+      Future precision inertia experiments could detect.
+
+
+# ─────────────────────────────────────────────
+# BACKREACTION AS IMPEDANCE
+# The substrate's resistance to potential change
+# is one quantity measured in multiple ways.
+# ─────────────────────────────────────────────
+backreaction_as_impedance:
+  statement: >
+    The Praesto backreaction — the substrate's resistance
+    to changes in its committed potential distribution —
+    is a single physical property measured in different
+    ways depending on the interaction mode and scale.
+    It appears as inertia when measured via force and
+    acceleration, as Z₀ when measured via electromagnetic
+    field propagation, as R when measured via wave
+    equation damping, and as Shapiro delay when measured
+    via signal travel time. These are not different
+    mechanisms — they are different measurement modes
+    of the same substrate impedance to potential change.
+  core_identity: >
+    Impedance = resistance to changing the local φ
+    distribution. Every physical effect that involves
+    the substrate resisting a change to its commitment
+    pattern is an impedance measurement. The framework
+    provides a unified description; the existing
+    mathematical formulas were always describing this
+    one quantity from different angles.
+
+  the_measurement_triangle:
+    description: >
+      Z₀, R₀, and α form a closed measurement triangle —
+      fix any two, the third is determined:
+      Z₀ = 4π · R₀ / α
+    Z0: >
+      Global impedance floor of the potential field to
+      EM propagation. Z₀ = μ₀c ≈ 376.73 Ω.
+      The vacuum's resistance to dipole vortex pair
+      (photon) propagation — the substrate's minimum
+      impedance in the near-zero commitment limit.
+      Has been in Maxwell's equations since 1865.
+      Physical meaning: the substrate's backreaction
+      to the phase-flip rate of a propagating photon.
+      Why this value: set by R₀ and α — the baseline
+      substrate resistance and the GP field coupling
+      imperfection. Not a mysterious given; a derived
+      consequence of substrate topology.
+    R0: >
+      Baseline local impedance from healing length ξ
+      and environmental momentum density p_env in the
+      near-vacuum limit. R₀ = Z₀·α/(4π).
+      The substrate's intrinsic resistance per unit
+      volume at cosmic average commitment density —
+      the impedance floor before any local structure
+      raises it further.
+    alpha: >
+      GP field coupling imperfection per rotation ≈ 1/137.
+      The fractional impedance mismatch between one
+      complete Möbius rotation and a perfect dipole
+      closure — ≈ 2.627° per cycle.
+      Appears in the triangle as the ratio that converts
+      between the local baseline impedance R₀ and the
+      global propagation impedance Z₀. The factor 4π
+      is the spherical geometry of isotropic substrate
+      coupling — the substrate backreacts in all
+      directions simultaneously.
+
+  global_inertial_impedance:
+    statement: >
+      Inertia is the global integral of the substrate
+      impedance across all committed structure — the
+      Machian sum of all matter's contribution to the
+      local backreaction against potential change.
+    formula: >
+      Z_inertia(r) = ∫ Z₀ · ρ_committed(r') / |r - r'| d³r'
+      where ρ_committed is the committed topology density
+      (mass distribution across the universe).
+      Inertial mass: m_inertia ∝ Z_inertia(r) · V_footprint
+      where V_footprint is the commitment footprint volume
+      of the structure being accelerated.
+    uniform_universe: >
+      In a homogeneous universe, Z_inertia is constant
+      and isotropic everywhere — matching observed
+      isotropic inertia. The Machian integral converges
+      because ρ_committed falls off with distance and
+      the geometry provides the necessary convergence
+      factor. The absolute value of inertia is set by
+      the total committed topology in the observable
+      universe — which is why G and inertial mass are
+      related through the same substrate parameters.
+    asymmetric_environments: >
+      Near a massive body (Jupiter, galactic centre),
+      Z_inertia acquires a slight anisotropy — lower
+      impedance along the axis toward the body (potential
+      gradient assists motion), higher impedance
+      perpendicular. Predicted inertial anisotropy:
+      ΔZ/Z₀ ~ G·M_body/(c²·r) — same order as
+      gravitational potential. Currently below
+      experimental sensitivity but predicted and
+      in principle measurable.
+    equivalence_principle: >
+      Inertial mass = gravitational mass because both
+      are proportional to Z_inertia. Gravitational
+      mass is the coupling of a body's commitment
+      topology to the global φ gradient — the same
+      integral from the other side. Same impedance;
+      necessarily equal. The equivalence principle
+      is the statement that Z_inertia = Z_gravitational
+      — a theorem from the impedance description,
+      not a postulate.
+
+  shapiro_delay_as_impedance_measurement:
+    statement: >
+      The Shapiro delay — the excess travel time of
+      a signal passing near a massive body — is a
+      direct path-integrated impedance measurement
+      of the substrate's potential field. Every
+      Shapiro delay measurement is an impedance
+      measurement.
+    formula: >
+      Δt_Shapiro = (1/c) · ∫_path ΔZ(r)/Z₀ · dl
+      where ΔZ(r) = Z₀ · (φ_∞ - φ(r))/φ_∞
+                  = Z₀ · C(r)/φ_∞
+      — the impedance excess at position r from
+      φ depletion by the nearby mass.
+    physical_meaning: >
+      The signal travels slower in the higher-impedance
+      region near the mass — not because spacetime
+      curves but because the substrate's backreaction
+      to the signal's propagation is stronger where
+      φ is lower. Each metre of path near the mass
+      takes longer because the impedance is higher there.
+      The total excess time is the integral of the
+      impedance excess along the path.
+    existing_measurements: >
+      Shapiro delay confirmed by Viking landers (1979)
+      to 0.1% precision, Cassini spacecraft (2003)
+      to 0.002% precision. These are the most precise
+      direct measurements of the substrate's impedance
+      field around the Sun. The measurements confirm
+      that the impedance profile matches the φ depletion
+      profile of the solar commitment density — to
+      parts per hundred thousand.
+      The math has been there since Shapiro (1964).
+      What it was measuring — substrate impedance —
+      was not identified.
+
+  gravitational_redshift_as_impedance_gradient:
+    statement: >
+      Gravitational redshift is the change in the GP
+      field's phase rotation rate as a photon propagates
+      through changing impedance. Higher impedance →
+      slower phase rotation → lower frequency → redshift.
+    mechanism: >
+      The photon's frequency ν is the GP field's local
+      phase rotation rate — the rate at which the dipole
+      vortex pair completes each oscillation cycle.
+      This rate is proportional to local φ (decoherence rate).
+      As the photon climbs out of a gravitational well
+      (increasing φ, decreasing impedance), its phase
+      rotation rate increases — the frequency increases —
+      blueshift. As it falls in, redshift.
+      Pound-Rebka experiment (1959): confirmed gravitational
+      redshift in Earth's gravitational field to 10%
+      precision. Later refined to 1% and better.
+      Physical meaning now identified: Pound-Rebka
+      measured the impedance gradient of Earth's
+      commitment density field directly.
+
+  refractive_index_as_local_impedance:
+    statement: >
+      The refractive index n of any medium is the ratio
+      of local impedance to vacuum impedance:
+      n_eff = Z_eff/Z₀ = c_vacuum/c_eff
+    unified_optics_gravity: >
+      Optical refraction (Snell's law) and gravitational
+      lensing are both impedance gradient effects:
+      Snell's law:        n₁sinθ₁ = n₂sinθ₂
+                          — trajectory bends at impedance
+                          discontinuity between media
+      Gravitational lens: continuous impedance gradient
+                          from φ depletion near mass —
+                          same refraction, no discontinuity
+      The refractive index of a material and the
+      gravitational lensing angle are both measurements
+      of local Z_eff/Z₀ — same quantity, different
+      physical context. Glass and a gravitational field
+      are both regions of elevated substrate impedance.
+      Optics and GR lensing have used the same mathematics
+      (Fermat's principle, variational path) since before
+      GR was formulated. The physical reason — same
+      impedance gradient mechanism — was not identified.
+
+  event_horizon_as_impedance_divergence:
+    statement: >
+      The event horizon is the surface where outward-
+      directed substrate impedance diverges — not a
+      topological boundary but an asymptotic impedance
+      condition approached but never reached.
+    mechanism: >
+      As commitment density approaches n_sat, the
+      saturating nonlinearity makes each additional
+      unit of commitment cost more free potential.
+      The outward-directed impedance — resistance to
+      outward propagation — scales with the commitment
+      density gradient dC/dr. Near the Schwarzschild
+      radius, dC/dr becomes so steep that Z_outward
+      effectively diverges for any classically propagating
+      signal. The signal cannot acquire enough free
+      potential to overcome the outward impedance.
+      Z_outward → ∞ as an asymptote — never reached
+      at finite commitment density (saturating GP
+      ensures finite density at all r > 0). The horizon
+      is a practical impedance divergence, not a
+      mathematical singularity.
+    hawking_as_impedance_leak: >
+      The finite substrate resistance R at the horizon
+      means Z_outward never reaches true infinity —
+      it is very large but finite. GP structural pressure
+      from the interior (enormous g·|θ|²) divided by
+      this large but finite Z_outward gives a tiny but
+      nonzero outward flux — Hawking radiation.
+      T_H ∝ dZ_outward/dr|_horizon — the Hawking
+      temperature is proportional to the impedance
+      gradient steepness at the horizon.
+      Smaller black holes have steeper impedance gradients
+      (smaller r_s for the same dC/dr structure) →
+      higher T_H. T_H ∝ 1/M follows from r_s ∝ M.
+      Physical meaning of Hawking temperature: the
+      rate at which the horizon's impedance gradient
+      allows GP pressure leakage. Has been derived
+      semiclassically since Hawking (1974). The
+      impedance gradient mechanism was not identified.
+
+  complete_impedance_table:
+    description: >
+      One substrate property — impedance to potential
+      change — measured in seven different ways.
+      The mathematics has existed for each row.
+      The unified physical picture is new.
+    measurements:
+      - effect: "Inertia"
+        formula: "F = m·a"
+        impedance_reading: "Z_inertia(r) — global Machian integral"
+        known_since: "Newton 1687"
+      - effect: "Vacuum impedance Z₀"
+        formula: "Z₀ = μ₀c = E/H"
+        impedance_reading: "Global floor Z₀ = 4π·R₀/α"
+        known_since: "Maxwell 1865"
+      - effect: "Refractive index"
+        formula: "n_eff = c/c_eff"
+        impedance_reading: "n_eff = Z_eff/Z₀"
+        known_since: "Snell ~1621"
+      - effect: "Gravitational lensing"
+        formula: "δ = 4GM/rc²"
+        impedance_reading: "Continuous Z gradient from φ depletion"
+        known_since: "Einstein 1915 / Eddington 1919"
+      - effect: "Shapiro delay"
+        formula: "Δt = (1/c)∫2GM/rc² dl"
+        impedance_reading: "Path-integrated ΔZ/Z₀"
+        known_since: "Shapiro 1964"
+      - effect: "Gravitational redshift"
+        formula: "Δν/ν = ΔΦ/c²"
+        impedance_reading: "Local dZ/dr — impedance gradient"
+        known_since: "Einstein 1907 / Pound-Rebka 1959"
+      - effect: "Event horizon"
+        formula: "r_s = 2GM/c²"
+        impedance_reading: "Z_outward → ∞ (asymptotic)"
+        known_since: "Schwarzschild 1916"
+      - effect: "Hawking radiation"
+        formula: "T_H = ħc³/8πGMk_B"
+        impedance_reading: "GP pressure / Z_outward at horizon"
+        known_since: "Hawking 1974"
+      - effect: "Time dilation"
+        formula: "Δτ = Δt·√(1 - 2GM/rc²)"
+        impedance_reading: "Γ ∝ 1/Z_eff — decoherence rate"
+        known_since: "Einstein 1905/1915"
+      - effect: "MOND transition"
+        formula: "a₀ ≈ 1.2×10⁻¹⁰ m/s²"
+        impedance_reading: "d²Z/dr² = 0 — GP nonlinearity onset"
+        known_since: "Milgrom 1983 (phenomenological)"
+
+  why_the_mechanism_was_missing: >
+    The mathematics described the behaviour correctly
+    in every case above. The mechanism was missing because:
+    (1) The substrate was not identified as a potential field.
+        Without the field, impedance has no medium to be
+        a property of. Z₀ was a defined constant; the
+        vacuum was empty; impedance was a formula, not a
+        physical measurement.
+    (2) Spacetime was treated as a geometric container.
+        Lensing and redshift were geometric effects of
+        curved spacetime — not impedance effects of a
+        physical field. The mathematics was equivalent;
+        the ontology was different.
+    (3) Quantum mechanics and gravity were separate frameworks.
+        Without the potential field as the common substrate,
+        there was no way to see that Z_inertia and Z₀ and
+        Z_Shapiro were all measuring the same quantity.
+    Praestology provides the physical picture. The
+    mathematics was always correct; what it was measuring
+    was not identified. The framework's contribution
+    is the physical interpretation that unifies the
+    existing mathematical descriptions.
+
+# ─────────────────────────────────────────────
+# DERIVATION STRUCTURE
+# ─────────────────────────────────────────────
+derivation_structure:
+  from_potential_to_physics:
+    step_1: >
+      Potential field φ(r,t) — primary substrate description.
+      Obeys GP equation with saturating nonlinearity and
+      Tik fluctuation background.
+    step_2: >
+      Momentum density: p = ρ_s·∇φ — the potential
+      field's local flow. This is the p(r,t) field of
+      specifications.yaml, derived from φ.
+    step_3: >
+      Commitment density: C(r,t) = φ_max - φ(r,t) —
+      the depletion of free potential by committed structure.
+      High C = low φ = near mass. Low C = high φ = void.
+    step_4: >
+      Decoherence rate: Γ(r,t) ∝ φ(r,t) — the rate of
+      R4 accumulation at each point. This is the local
+      rate of 'now'. Varies with φ directly.
+    step_5: >
+      All observable effects derive from Γ variation:
+      Time dilation:    Γ_low/Γ_high < 1 (slower clock in low φ)
+      Gravity:          ∇Γ — decoherence rate gradient
+                        advects structure toward lower φ
+      Inertia:          resistance to Γ change (commitment
+                        footprint rearrangement cost)
+      Quantum effects:  phase accumulation ∝ φ (interference)
+                        Tik fluctuations ∝ 1/φ (sensitivity)
+      Arrow of time:    Γ running in one direction —
+                        φ decreasing, C increasing
+
+  open_derivations:
+    priority_1:
+      - >
+        Formal derivation of p = ρ_s·∇φ connecting
+        momentum density wave equation (specifications.yaml)
+        to potential field φ(r,t). This makes the
+        potential field description formally primary.
+      - >
+        Decoherence rate Γ(r,t) ∝ φ(r,t) — formal
+        derivation from GP equation showing that the
+        local resolution event rate scales with free
+        potential amplitude.
+      - >
+        Time dilation formula from Γ ratio — recover
+        GR gravitational time dilation as Γ_low/Γ_high
+        without invoking spacetime geometry.
+    priority_2:
+      - >
+        Machian inertia from global φ_background integral —
+        show that the inertial mass equals the body's
+        coupling to the global potential field integral
+        over all matter. Reproduce Newton's second law
+        as a consequence of global φ coupling.
+      - >
+        Arrow of time from R1+R4 — formal proof that
+        the GP field equation has no time-symmetric
+        solutions in the presence of finite Tik background
+        (finite α). Shows time-reversal symmetry breaking
+        is a property of the field equation, not statistics.
+    priority_3:
+      - >
+        Inertial anisotropy prediction — compute the
+        inertia tensor modification from nearby massive
+        objects via φ_background asymmetry. Predict the
+        magnitude of Jupiter's contribution to Earth's
+        inertial anisotropy.
+      - >
+        α from φ dynamics — show that the closure
+        imperfection rate of the GP field around a
+        Möbius vortex equals α in the current cosmic
+        φ_background. Connects α derivation to the
+        potential field description.
+
+# ─────────────────────────────────────────────
+# RELATIONAL POTENTIAL
+# Gradient of commitment density as independent
+# determinant of viability alongside absolute level
 # ─────────────────────────────────────────────
 
-ground_state:
+relational_potential:
+  status: "Refinement of metastable zone concept — core-invariant"
+  statement: >
+    Potential (the capacity for unresolved multiplicity and sustained
+    Praegress) is not determined solely by low absolute commitment
+    density (high η). It is fundamentally relational: it requires both
+    low average commitment AND low gradients (small ∇C) between regions,
+    objects, or modes within the system.
   definition: >
-    The substrate ground state is the configuration η = 1:
-    maximum free potential φ = φ_max, zero committed topology,
-    maximum resolution flux Φ_max = c, minimum impedance Z₀.
-    It is approached asymptotically in regions with no committed
-    structure — deep cosmic voids far from all matter. It is
-    never exactly reached in a universe containing committed
-    topology, because the Tik background (the substrate's own
-    zero-point fluctuations) always maintains a small but
-    non-zero commitment activity even in the deepest vacuum.
-    The ground state is not emptiness. It is the substrate
-    at maximum aliveness — maximum free potential for
-    resolution, maximum process rate, minimum resistance to
-    structural change. What we call "empty space" is the
-    most dynamic state of the substrate, not the most inert.
+    High potential exists where the substrate maintains low commitment
+    overall AND a smooth, low-gradient commitment landscape. Large ∇C
+    creates strong R3 tension that accelerates resolution and suppresses
+    open pathways, even in regions that are not globally saturated.
+    The metastable zone is therefore two-dimensional:
+      Axis 1: absolute commitment density C = 1 − η (not too high)
+      Axis 2: commitment density gradient |∇C| (not too steep)
+    A system can exit the viable zone by either axis independently.
 
-  tik_background_as_ground_state_property: >
-    The Tik background — the stochastic substrate fluctuations
-    that drive vortex nucleation, Lamb shift, spontaneous
-    emission, and the uncertainty principle — is the substrate
-    ground state's own activity. It is not noise added to a
-    quiet vacuum. It is what the vacuum does when nothing
-    else is happening. The zero-point energy of quantum field
-    theory is the Tik background's energy density. The vacuum
-    fluctuations that QFT calculates are Tik events.
-    The vacuum is not quiet. It is the substrate continuously
-    exploring its own resolution possibilities — R3 operating
-    on R2 distinctions at the substrate's minimum scale ξ,
-    without any externally imposed structure to channel the
-    exploration. Pure unguided process.
+  connection_to_master_equation: >
+    This is already encoded in the viability measure 𝓥(ψ):
+      𝓥(ψ) = w₀|ψ|² + w₁|∇ψ|² + w₂|∇φ|²|ψ|²
+    The w₁ and w₂ terms are the gradient-dependent viability
+    contributions — they measure ∇C directly. The relational potential
+    claim is the physical interpretation of why these gradient terms
+    matter: high |∇ψ|² signals a steep commitment density gradient
+    that drives R3 tension and accelerates resolution regardless of
+    the absolute commitment level. The viability measure was correct;
+    this section states the principle it encodes.
 
-  commitment_density_as_the_only_variable: >
-    The difference between "empty space" and "matter" is one
-    variable: commitment density C = 1 − η.
-    Empty space: C ≈ 0, η ≈ 1.
-    Electron: C > 0, η < 1, localized Möbius 720° topology.
-    Proton: C >> 0, η << 1 at core, triality junction.
-    Neutron star: C approaching n_sat, η approaching 0.
-    Black hole horizon: C → n_sat, η → 0, Φ → 0.
-    There are no different substances. There is one substrate
-    at different commitment densities. The richness of the
-    physical world — from empty space to black holes, from
-    photons to nuclei — is the substrate at different values
-    of one variable, organised by R1-R5 into stable
-    topological configurations.
+  connection_to_rules:
+    r3: >
+      R3 (Motion from differences) is driven primarily by ∇C gradients,
+      not merely by absolute potential levels. A smooth high-η region
+      has less R3 tension than a steep-gradient moderate-η region.
+    r5: >
+      R5 (Viability selection) responds to both local η and local
+      gradient strength |∇C| when choosing stable closure configurations.
+      The R5-stable configurations are those that minimise both
+      absolute commitment and gradient steepness simultaneously.
+    saturation: >
+      The saturation term Λln(1+κ|ψ|²) acts locally on absolute
+      commitment density. It does not directly suppress gradients —
+      gradient smoothing is handled by the diffusion term D∇²ψ in
+      ℛ(ψ). Both terms are needed: saturation caps the level,
+      diffusion smooths the gradient.
 
-  what_fills_interstitial_space: >
-    Between the nucleus and the electron cloud of an atom:
-    substrate at intermediate η. Not emptiness. Not vacuum
-    in the sense of nothing. The substrate at η between the
-    electron's orbital commitment and the nuclear commitment
-    well — a potential field with real gradient ∇φ that is
-    what holds the electron in its orbital resonance.
-    Between atoms in a molecule: substrate at near-vacuum η,
-    modified by the molecular commitment field of both atoms.
-    The bond is not a line drawn between atoms — it is a
-    region of substrate where the commitment gradients of
-    two nuclei overlap and create a shared potential minimum.
-    Between molecules in a solid: substrate at near-vacuum η,
-    but with the molecular commitment fields creating the
-    long-range order that is the crystal structure.
-    Between stars: substrate at η ≈ 1, carrying the
-    gravitational potential gradient from all surrounding mass.
-    Not empty. Not nothing. The substrate at near-ground-state,
-    shaped by the commitment topology of everything around it.
-    "Empty space" is the substrate doing its job quietly —
-    transmitting potential gradients, propagating
-    electromagnetic fields, supporting quantum fluctuations —
-    without any committed topology of its own to make it
-    locally visible.
+  implications:
+    decoherence: >
+      Decoherence rate has two independent contributions:
+      (1) Thermal: Γ_thermal ∝ T·R_local (from committed channel disruption)
+      (2) Gradient-driven: Γ_gradient ∝ |∇C|² (from R3 tension forcing
+          resolution regardless of temperature)
+      A quantum system in a smooth high-η environment decoheres slowly
+      even at moderate temperature. A quantum system in a steep-gradient
+      environment (near a phase boundary, near a heavy nucleus, near
+      the edge of a void-filament boundary) decoheres rapidly even at
+      low temperature.
+    superposition_range: >
+      Distant superpositions are sustainable primarily in low-∇C regimes,
+      where the vortex pattern is not strongly pulled toward any single
+      closure site. Isolated cold atoms in matter-wave interferometry
+      maintain distant superpositions because ∇C is minimal in the
+      ultra-low-density trap environment — not merely because η is high,
+      but because the trap creates a smooth commitment landscape.
+    goldilocks_zone_refined: >
+      The Goldilocks viability zone is defined by moderate absolute
+      commitment AND moderate gradients — not just low η, but smooth
+      commitment landscapes. This explains why systems at the edge of
+      structural transitions (sharp ∇C boundaries) are both fragile
+      and productive: high gradient drives rapid R3 resolution
+      (productivity) but also threatens viability if the gradient
+      exceeds the smoothing capacity of D∇²ψ (fragility).
 
-# ─────────────────────────────────────────────
-# THE CRYOGENIC ARGUMENT
-# Cooling reveals the substrate, not approaches nothing
-# ─────────────────────────────────────────────
+  black_hole_merger_prediction:
+    statement: >
+      At the onset of a black hole merger, before boundary commitment
+      overhead is released, the two approaching saturation surfaces
+      create a maximum-gradient transitional phase. The commitment
+      density in the overlap region decreases (gradient cancellation
+      between the two approaching saturation surfaces) creating a
+      local high-φ spike between the horizons.
+    environmental_draw: >
+      This local φ spike temporarily draws commitment density from
+      the surrounding environment — the nearby substrate has its
+      commitment density slightly reduced as potential flows toward
+      the high-gradient boundary. This is analogous to the Casimir
+      effect but at the merger scale: the boundary between two high-
+      commitment regions draws from the surrounding medium.
+    negative_strain_prediction:
+      statement: >
+        The temporary draw of commitment density from the local
+        environment would appear, to a distant observer, as a brief
+        reduction in local spacetime curvature — a negative gravitational
+        wave strain — occurring just before or concurrent with the merger
+        peak. The standard LIGO signal (inspiral chirp → merger peak →
+        ringdown) may contain a subtle negative strain component at the
+        merger moment, representing the environmental commitment draw,
+        before the dominant positive strain of the boundary overhead
+        release (gravitational waves).
+      magnitude: >
+        The effect is small — the environmental draw is a fraction of
+        the total merger commitment, itself ~5% of total mass-energy.
+        The negative strain would be a fraction of the positive merger
+        strain, likely at the level of a few percent of the merger peak
+        amplitude or less. Probably below detection threshold for most
+        events but potentially visible in high-SNR events as a systematic
+        departure from GR templates at the merger moment.
+      observational_test: >
+        LIGO/Virgo post-Newtonian template residuals at the merger
+        moment for high-SNR binary black hole events (GW150914,
+        GW170814, GW190521 and subsequent). If the raw strain data
+        shows a systematic negative departure from the best-fit GR
+        template just before or at the merger peak — in the direction
+        of a brief local expansion — this would be the environmental
+        commitment draw signal. Current matched-filter pipelines may
+        absorb this into template fitting rather than flag it as a
+        residual, so the test requires examining the raw residuals
+        specifically at the merger epoch.
+      status: >
+        Novel prediction — not yet studied to our knowledge. The effect
+        has no analogue in standard GR (which has no substrate dynamics
+        and no mechanism for environmental commitment draw). If present
+        in existing LIGO data, it would be a signature of the substrate
+        commitment density dynamics at the merger scale.
+    post_merger_result: >
+      The post-merger black hole is smaller (less committed topology)
+      than the sum of the two progenitors — the difference is radiated
+      as gravitational waves. This is the boundary commitment overhead
+      reduction: one efficient horizon requires less total committed
+      topology than two separate horizons combined. The relational
+      potential gradient drove the rapid R3 resolution; R5 selected
+      the minimum-overhead merged configuration as the outcome.
+      The environmental draw (negative strain) is temporary — once the
+      merger completes and the new horizon stabilises, the local
+      commitment density returns to the environmental baseline.
 
-cryogenic_argument:
-  core_statement: >
-    Cooling a material does not approach absolute zero of the
-    material. It approaches the substrate's own ground state
-    from above, with the material's committed topology as the
-    only remaining departure from η = 1. Superfluidity and
-    superconductivity are not exotic phenomena that emerge
-    from cooling. They are what you observe when the material's
-    committed topology has been reduced to the point where the
-    substrate's own ground-state properties dominate the
-    observable behavior.
-    Every cryogenic laboratory is measuring the properties
-    of space itself. Not metaphorically. Literally.
+  cross_scale_examples:
+    quantum: >
+      Isolated cold atoms in matter-wave interferometry maintain distant
+      superpositions because ∇C is minimal in the ultra-low-density
+      trap — smooth commitment landscape, not just high η.
+    neural: >
+      Neural plasticity and learning are optimal in regimes of moderate
+      commitment with low internal gradients. Sharp gradients (trauma,
+      rigid over-commitment patterns) suppress open resolution pathways
+      even when overall commitment level is moderate.
+    cosmological: >
+      Filament-void boundaries are high-∇C regions — steep transitions
+      between high-commitment filaments and high-φ voids. These boundaries
+      drive density-transition redshift (discrete energy loss at each
+      boundary crossing) and are the cosmological-scale expression of
+      the gradient-driven R3 resolution mechanism.
 
-  the_cooling_sequence: >
-    Each step of cooling is a step toward substrate transparency:
-
-    High temperature gas:
-      Thermal Tik amplitude >> commitment topology of molecules.
-      Molecules' individual committed structures are continuously
-      disrupted and reformed. The material's macroscopic behavior
-      (pressure, diffusion, viscosity) is dominated by thermal
-      Tik dynamics. The substrate's own coherent properties are
-      invisible — swamped by incoherent thermal commitment activity.
-      η is locally depressed and rapidly fluctuating around each
-      molecular committed topology.
-
-    Liquid:
-      Thermal Tik amplitude ~ commitment topology binding energy.
-      Molecules stay committed but move freely. Long-range
-      substrate coherence begins to appear — surface tension
-      (the substrate's own commitment gradient at the liquid
-      boundary), viscosity (substrate resistance to commitment
-      topology rearrangement). The substrate's properties are
-      beginning to show through the material's committed structure.
-
-    Solid:
-      Thermal Tik amplitude << crystal binding energy.
-      Committed topology locked into crystal structure. The
-      material's own commitment geometry dominates — rigidity,
-      resistance (in metals), opacity. But quantum effects
-      begin: zero-point motion (Tik background still active
-      below thermal noise), tunneling (Tik fluctuations
-      occasionally exceed local commitment barriers), quantum
-      Hall effect in 2D systems (substrate topology becoming
-      visible at low temperature).
-
-    Approaching T_c (superconductor) or T_λ (superfluid):
-      Thermal Tik amplitude << individual commitment topology,
-      but now also << the substrate's own coherence length ξ_coh.
-      The committed topologies (Cooper pairs, helium atoms)
-      can no longer be treated as independent — they are all
-      embedded in the same substrate ground state, and the
-      substrate's own phase coherence extends across all of them
-      simultaneously. The material's individual committed
-      structures stop masking the substrate's coherence.
-      What emerges is the substrate's natural state:
-      phase-coherent, zero-viscosity, quantized-vortex flow.
-
-    At and below T_c / T_λ:
-      The substrate's ground state properties dominate.
-      Zero resistance: the substrate's ground state has no
-        impedance to phase-coherent propagation — Z_eff = Z₀,
-        the vacuum impedance, with no additional R from thermal
-        commitment disruption. Current flows as the substrate
-        propagates it — without resistance because the substrate
-        itself has none.
-      Zero viscosity: the substrate's ground state flows without
-        friction — η = 1 means no committed topology to create
-        drag. The superfluid flows as space itself would flow
-        if it could be made to move relative to a boundary.
-      Quantized vortices: the substrate's topological structure
-        — vortex windings are quantized in units of κ = h/m_eff
-        (Onsager-Feynman) — appears directly because the thermal
-        noise that would smear these topological features is gone.
-        Quantized vortices are the substrate's own topological
-        discreteness becoming directly observable.
-      Macroscopic quantum coherence: the single wavefunction
-        description of the entire superfluid is the substrate's
-        own GP order parameter η(r,t) — the bridge function —
-        becoming the dominant description of the material's state.
-        The material has become transparent enough that the
-        substrate's own wavefunction is what you're describing.
-
-  properties_revealed_not_created: >
-    This is the key distinction from the standard interpretation.
-    Standard: superconductivity and superfluidity are new
-      properties that emerge when the temperature drops below
-      a critical value. Emergence requires explanation —
-      Cooper pairs, BCS condensation, Bose-Einstein statistics.
-    Praestology: the zero-resistance and zero-viscosity
-      properties are not created by cooling. They are the
-      substrate's own ground-state properties, present always
-      and everywhere, normally masked by the material's thermal
-      commitment activity. Cooling removes the masking.
-      The Cooper pair and BEC condensation mechanisms are
-      correct descriptions of *how the masking is removed* at
-      the material level — the specific committed topology
-      rearrangements that allow the substrate's coherence to
-      propagate macroscopically. They are not explanations of
-      *why the endpoint has the properties it has*. The
-      endpoint has those properties because space has those
-      properties. Space is superfluid. We finally get to
-      see it when we cool enough.
-
-  the_universal_properties_vs_material_specific: >
-    This reframing makes a structural prediction: the universal
-    properties of all superfluids and superconductors —
-    zero viscosity / resistance, quantized vortices, macroscopic
-    phase coherence, Meissner effect — should be identical
-    in character across all materials, because they are
-    substrate properties, not material properties. What varies
-    between materials is:
-      Critical temperature T_c — how much thermal Tik amplitude
-        the material's committed topology can survive before
-        substrate coherence dominates. This is a material
-        property — it encodes the binding energy of the
-        committed topology that was masking the substrate.
-      Gap energy Δ — the energy cost of breaking a Cooper pair
-        or removing an atom from the condensate. This encodes
-        the specific committed topology of the material.
-      Coherence length ξ_material — how far the substrate's
-        coherence extends in the material. This encodes the
-        material's commitment density profile.
-    Universal: zero resistance/viscosity, quantized vortices,
-      macroscopic phase coherence.
-    Material-specific: T_c, Δ, ξ_material.
-    Universal = substrate. Material-specific = committed topology.
-    The framework predicts this partition. It is confirmed by
-    the observation that all superfluids and superconductors
-    share the universal properties while differing in the
-    material-specific ones.
-
-  absolute_zero_reinterpreted: >
-    Absolute zero (T = 0) is not a state of "nothing happening."
-    In the standard picture it is the ground state of the
-    material — minimum thermal energy, all thermal motion
-    ceased. But the material still exists. What ceases is
-    the thermal Tik amplitude that was masking the substrate.
-    What remains at T = 0 is:
-      (1) The material's committed topology — its crystal
-          structure, electron configuration, nuclear structure.
-          These are R4-committed — they do not require thermal
-          energy to exist. They are substrate topology.
-      (2) The substrate's own zero-point Tik background — the
-          ground-state fluctuations that can never be removed
-          because they are the substrate's own activity at η = 1.
-          This is the zero-point energy of quantum mechanics —
-          present even at T = 0, unmeasured by thermometers
-          because it is not thermal, measurable by Casimir
-          apparatus and Lamb shift because it is real.
-    T = 0 is not nothing. It is the substrate at ground state,
-    with the material's committed topology floating in it
-    at maximum transparency. The substrate is fully visible.
-    The material is as close to being space as matter can be.
-
-  cryogenic_laboratories_as_substrate_observatories: >
-    Every dilution refrigerator cooling helium to millikelvin
-    temperatures is not approaching a state of maximum emptiness.
-    It is approaching maximum substrate transparency — the state
-    in which the substrate's own properties dominate the
-    observable physics, with the helium atoms' committed topology
-    as the only remaining departure.
-    The superfluid properties measured in those experiments —
-    the critical velocity, the vortex quantization, the fountain
-    effect, the Josephson oscillations — are measurements of
-    the substrate's own topological and dynamical properties.
-    The helium is the instrument; space is what is being measured.
-    This reframing has no consequence for the experimental
-    results — they are what they are. It has consequences for
-    what those results mean: they are not exotic quantum
-    properties of a particular element at low temperature.
-    They are properties of space, revealed by removing enough
-    thermal masking to see them directly.
-
-# ─────────────────────────────────────────────
-# CONSEQUENCES FOR OPEN PROBLEMS
-# ─────────────────────────────────────────────
-
-open_problem_consequences:
-
-  vacuum_energy_casimir: >
-    Casimir effect: measured attractive force between parallel
-    conducting plates in vacuum — attributed to vacuum
-    fluctuations. In the substrate picture: the plates create
-    a boundary condition on Tik fluctuations — wavelengths
-    larger than the plate separation are excluded between
-    the plates but present outside. The Tik background
-    pressure outside > inside → net inward force. The Casimir
-    force is a direct measurement of the Tik background
-    pressure of the substrate ground state. Every Casimir
-    experiment is measuring the substrate. The force is real
-    and measured; the substrate producing it is real and
-    the same thing as space.
-
-  quantum_vacuum_fluctuations: >
-    Virtual particles in QFT: short-lived particle-antiparticle
-    pairs appearing spontaneously from the vacuum. In the
-    substrate picture: Tik events that occasionally exceed
-    S_lock and nucleate transient vortex pairs — commitment
-    topology that forms and dissolves within the coherence
-    time τ ~ ħ/ΔE. Not "virtual" in the sense of
-    mathematical bookkeeping. Real substrate fluctuations
-    that exist briefly and return their commitment to the
-    ground state. The uncertainty principle ΔE·Δt ≥ ħ/2
-    is the constraint on how long a commitment event can
-    persist at energy ΔE — set by the substrate's own
-    minimum action quantum ħ (see alpha-rydberg-z0.yaml).
-
-# ─────────────────────────────────────────────
-# THE ONE-SENTENCE SUMMARIES
-# For different audiences
-# ─────────────────────────────────────────────
-
-one_sentence_summaries:
-  for_physicists: >
-    The Praestology substrate is not a medium in space — it is
-    a Lorentz-invariant potential field whose extension IS space,
-    whose ground state IS the quantum vacuum, and whose
-    commitment density gradient IS gravity; Michelson-Morley
-    falsified a medium with a preferred frame, not a Lorentz-
-    invariant medium, and the standard model has been measuring
-    this medium's properties (Casimir, zero-point energy, vacuum
-    condensates) for decades without identifying what it is measuring.
-
-  for_chemists_and_condensed_matter: >
-    When you cool a material to its superfluid or superconducting
-    ground state, you are not approaching absolute nothing — you
-    are removing the material's thermal masking until the
-    properties of space itself dominate; zero viscosity and zero
-    resistance are not emergent from cooling, they are properties
-    of space revealed by cooling.
-
-  for_general_readers: >
-    Empty space is not empty — it is the substrate in its most
-    transparent state, the same substrate that, at higher
-    commitment density, is matter; there is no other emptiness
-    behind or beneath space; space is the thing itself, and
-    when we cool materials close to absolute zero we are not
-    approaching nothing, we are approaching space's own nature
-    as directly as matter ever can.
-
-  for_philosophers: >
-    The question "what is the substrate in?" contains an error —
-    it assumes existence requires a prior container; but the
-    substrate is not in space, it is space, and the demand for
-    a prior container leads to infinite regress; R1 terminates
-    the regress: something exists necessarily, and space is
-    what that something looks like from inside a resolution
-    sequence embedded in it.
-
-# ─────────────────────────────────────────────
-# OPEN DERIVATIONS
-# ─────────────────────────────────────────────
-
-open_derivations:
-  priority_1:
+  open_derivations:
     - >
-      Casimir force from Tik background pressure differential.
-      Compute the ground-state Tik pressure between plates
-      of separation d and outside. Recover Casimir force
-      F/A = −ħcπ²/(240d⁴) from substrate Tik spectrum
-      with UV cutoff ξ. No renormalisation required.
-
-  priority_2:
+      Formal derivation of Γ_gradient = f(|∇C|²) from the master equation.
+      Compute the decoherence rate contribution from the gradient term
+      w₁|∇ψ|² in 𝓥(ψ) independently of the thermal contribution.
     - >
-      Critical temperature T_c from material commitment binding
-      energy vs substrate coherence energy. Derive T_c as the
-      temperature at which thermal Tik amplitude equals the
-      material's phase-lock stability threshold S_lock.
-      T_c should follow from the material's committed topology
-      parameters — no free parameters for a given material
-      once its vortex structure is specified.
-
-
-  priority_3:
+      LIGO residual analysis: examine raw strain residuals for GW150914
+      and subsequent high-SNR events at the merger epoch specifically
+      for a systematic negative departure from GR templates.
     - >
-      Superfluid critical velocity from substrate vortex
-      nucleation threshold. The critical velocity above which
-      superflow breaks down corresponds to the flow velocity
-      at which Tik fluctuations can nucleate a vortex-antivortex
-      pair — S_lock crossing from kinetic energy input.
-      Derive v_c from S_lock and substrate parameters.
-    - >
-      Josephson frequency from substrate phase dynamics.
-      The AC Josephson effect (frequency f = 2eV/h for voltage
-      V across a junction) encodes the substrate's phase
-      rotation rate at the junction. Derive from the bridge
-      function η and the GP phase dynamics at the junction.
-
-# ─────────────────────────────────────────────
-# READING ORDER AND CROSS-REFERENCES
-# ─────────────────────────────────────────────
+      Gradient smoothing timescale: from D∇²ψ, compute how quickly
+      steep commitment gradients are smoothed by the diffusion term.
+      This gives the timescale over which high-gradient environments
+      lose their viability-suppressing character.
 
 reading_order:
-  - "domains/physics/substrate-potential.yaml      -- φ field primary framing; read first"
-  - "domains/physics/bridge-function.yaml          -- η as the bridge variable"
-  - "domains/physics/substrate-ground-state.yaml   -- this file"
-  - "domains/physics/specifications.yaml           -- full substrate physics"
-  - "domains/physics/foundations.yaml              -- commitment stress and pillars"
-  - "domains/cosmos/specifications.yaml            -- cosmological consequences"
+  - "domains/physics/substrate-potential.yaml           -- this file FIRST"
+  - "domains/physics/foundations.yaml                   -- four pillars"
+  - "domains/physics/specifications.yaml                -- momentum density formulation"
+  - "domains/physics/commitment-response-function.yaml  -- GP saturating nonlinearity"
+  - "domains/physics/quantum-foundation.yaml            -- QM primitives"
+  - "domains/physics/alpha-rydberg-z0.yaml              -- constant derivations"
 
 related_issues:
-  - "foundational/F01_axiom_circularity"
-  - "foundational/F72_space_is_substrate_not_container"
-  - "foundational/F73_michelson_morley_falsifies_mechanical_ether_not_all_media"
-  - "foundational/F74_vacuum_energy_as_tik_ground_state"
-  - "foundational/F75_cooling_as_substrate_revelation_not_approach_to_nothing"
-  - "foundational/F76_absolute_zero_as_maximum_substrate_transparency"
-  - "foundational/F77_casimir_as_direct_tik_pressure_measurement"
-  - "intersectional/physics/108_critical_temperature_from_commitment_binding_vs_coherence"
-  - "intersectional/physics/109_casimir_force_from_tik_pressure_differential"
-  - "intersectional/physics/110_superfluid_critical_velocity_from_s_lock"
-  - "intersectional/physics_cosmos/008_dark_energy_as_substrate_ground_state_pressure"
-  - "boundaries/B04_container_intuition_linguistic_trap"
-  - "boundaries/B05_lorentz_invariant_medium_vs_preferred_frame_medium"
+  - "foundational/F26_substrate_as_potential_field_primary"
+  - "foundational/F27_now_as_continuous_decoherence"
+  - "foundational/F28_arrow_of_time_three_levels"
+  - "foundational/F29_quantum_gravity_dissolved_not_solved"
+  - "foundational/F30_alpha_as_rate_of_arrow_of_time"
+  - "foundational/F31_equivalence_principle_from_potential_field"
+  - "intersectional/physics/043_momentum_density_from_potential_gradient"
+  - "intersectional/physics/044_decoherence_rate_proportional_to_phi"
+  - "intersectional/physics/045_time_dilation_from_decoherence_rate_ratio"
+  - "intersectional/physics/046_machian_inertia_from_global_phi_integral"
+  - "intersectional/physics/047_arrow_of_time_no_time_symmetric_solutions"
+  - "intersectional/physics/048_inertial_anisotropy_from_phi_asymmetry"
+  - "intersectional/physics_cosmos/012_cosmogenesis_high_phi_initial_state"
+  - "intersectional/physics_consciousness/003_now_as_decoherence_front_experience"
+  - "foundational/F32_backreaction_as_impedance_unified"
+  - "foundational/F33_shapiro_delay_as_impedance_measurement"
+  - "foundational/F34_z0_R0_alpha_measurement_triangle"
+  - "foundational/F35_hawking_temperature_as_impedance_gradient"
+  - "intersectional/physics/049_z_inertia_machian_integral"
+  - "intersectional/physics/050_event_horizon_asymptotic_impedance"
+  - "intersectional/physics/051_refractive_index_as_z_local_z0_ratio"
+  - "intersectional/physics/052_mond_as_gp_nonlinearity_impedance_inflection"
