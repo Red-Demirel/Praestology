@@ -145,34 +145,36 @@ resolution_operator:
     ℛ(ψ) implements viability-based selection. It is the formal expression
     of R5 as a dynamical operator — suppressing incoherent regions while
     preserving and reinforcing stable structures. The operator has three
-    components operating together and recovers the dual forward-commitment +
-    Regress-dissolution kernel of commitment-response-function.yaml.
-  viability_measure: [as currently written]
-  components: [as currently written]
-  full_expression: [as currently written]
-  connection_to_dual_kernel:
-    statement: >
-      The full R(Ψ) = R_forward(Ψ) + R_diss(Ψ) is recovered when the
-      viability measure 𝓥(ψ) is dominated by amplitude (|ψ|²) and
-      topological structure (|∇ψ|²). The winding-number-based f from
-      vortex-stabilization.yaml is the special case where |∇ψ|² dominates.
-  minimal_variant: [as currently written]
+    components operating together.
+
   viability_measure:
     definition: >
       𝓥(ψ) = w₀|ψ|² + w₁|∇ψ|² + w₂|∇φ|²|ψ|²
     components:
-      amplitude: "|ψ|² — occupancy / presence (how much is committed here)"
-      structure: "|∇ψ|² — local sharpness / gradients (how defined the commitment is)"
+      amplitude: "|ψ|² — occupancy / presence (absolute commitment density)"
+      structure: "|∇ψ|² — local sharpness / gradients (commitment density gradient ∇C)"
       flow: "|∇φ|²|ψ|² — phase-coherent transport (how well the commitment flows)"
     weights:
-      w0: "amplitude weight — how much raw presence matters"
-      w1: "structure weight — how much gradient sharpness matters"
+      w0: "amplitude weight — how much absolute commitment level matters"
+      w1: "structure weight — how much commitment density gradient matters"
       w2: "flow weight — how much coherent phase transport matters"
     interpretation: >
       𝓥(ψ) is the local measure of how viable a configuration is —
       how well it satisfies R5. High 𝓥: structured, present, coherent
       flow → high viability → protected from decay. Low 𝓥: diffuse,
       weak, incoherent → low viability → decays.
+    relational_potential_note: >
+      The w₁ term |∇ψ|² encodes the relational potential principle
+      (see substrate-potential.yaml, relational_potential): viability
+      depends not just on absolute commitment density (w₀ term) but
+      also on the commitment density gradient. A steep |∇ψ|² — even
+      at moderate absolute |ψ|² — drives R3 tension that accelerates
+      resolution and suppresses open pathways. The Goldilocks zone
+      is two-dimensional: moderate absolute commitment AND moderate
+      gradient. Systems can exit viability on either axis independently.
+      Decoherence has two independent contributions:
+        Thermal: Γ_thermal ∝ T·R_local (channel disruption)
+        Gradient-driven: Γ_gradient ∝ |∇C|² (R3 tension forcing resolution)
 
   base_decay_rate:
     expression: "γ_eff(ψ) = γ₀ / (1 + η·𝓥(ψ))"
@@ -247,8 +249,6 @@ resolution_operator:
     with the Praegress reservoir — non-Hermitian quantum mechanics is
     the appropriate formalism for systems with probability flow to/from
     a reservoir.
-
-
 
 # ─────────────────────────────────────────────
 # PHYSICAL REGIMES
@@ -355,15 +355,6 @@ open_derivations:
       PT-symmetry analysis of ℛ: determine conditions under which the
       non-Hermitian effective Hamiltonian is PT-symmetric (real spectrum
       despite non-Hermiticity). PT-symmetry breaking ↔ dissolution threshold.
-
-core_consistency_note:
-  statement: >
-    The master equation is the compact, dimensionless expression of the axiom
-    and R1–R5. All terms and regimes remain fully derivable from the core
-    rules without external assumptions. Vitality is intrinsic (see
-    specifications.yaml: vitality_of_praesto); consciousness remains emergent
-    at high Ξ (consciousness_demarcation). No teleological layer is required
-    or invoked (neglect_on_teleology).
 
 # ─────────────────────────────────────────────
 # READING ORDER
