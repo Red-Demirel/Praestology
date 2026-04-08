@@ -234,6 +234,19 @@ geometric_algebra_usage:
     showing how the algebra arises from R1–R5 operating on the η-field
     at the appropriate recursive depth Ξ.
 
+resolution_hierarchy_reference:
+  statement: >
+    A separate descriptive layer using emergent geometrical algebra grades
+    (scalar → vector → bivector → pseudoscalar) is provided in
+    core/resolution-hierarchy.yaml. It visualises the inside-out progression
+    from Praegress reservoir to the mature relational manifold. This hierarchy
+    is strictly descriptive and does not replace or modify the master equation
+    or the scalar formulation used in classical physics derivations.
+  note: >
+    Geometric algebra is used only where it naturally arises from the potential
+    → commitment dynamics. It is kept separate from the main/classical physics
+    treatment to preserve substrate-agnostic parsimony.
+
 # ─────────────────────────────────────────────
 # VITALITY AND INSIDE-OUT EMERGENCE
 # ─────────────────────────────────────────────
