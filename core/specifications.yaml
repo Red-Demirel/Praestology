@@ -211,34 +211,92 @@ recursive_dimensionality:
         source: "R5 (Optimisation) + R1 (Existence)"
         definition: "Optimisation constraints that preserve the cycle for all cycle-aware agents."
 
-vitality_of_praesto:
-  status: "foundational-consequence"
-  description: |
+geometric_algebra_usage:
+  status: "Emergent descriptive layer — not imposed a priori"
+  principle: >
+    Geometric algebra will be adopted only to the extent it naturally arises
+    as a consequence of the potential → commitment dynamics and the
+    emergence-hierarchy. No algebraic structure is set up in advance of the
+    substrate dynamics.
+  current_focus: >
+    Cl(3,0) appears promising for describing the transition
+    from 1D streams → 2D planes/vortices → 3D merged geometry.
+  rule: >
+    Geometric algebra is a descriptive tool, never a foundational assumption.
+    It must be derived from the master equation, the dual ℛ(ψ) kernel,
+    and the viability measure 𝓥(ψ) rather than postulated.
+  consistency_note: >
+    This principle mirrors our treatment of dimensionality, quaternions,
+    and spin: all are emergent stability outcomes of the inside-out
+    resolution process, not pre-given background structures.
+  implication: >
+    Any use of Cl(3,0) or higher Clifford algebras must be justified by
+    showing how the algebra arises from R1–R5 operating on the η-field
+    at the appropriate recursive depth Ξ.
+
+# ─────────────────────────────────────────────
+# VITALITY AND INSIDE-OUT EMERGENCE
+# ─────────────────────────────────────────────
+
+  vitality_of_praesto:
+    status: "foundational-consequence"
+    description: |
     Praesto is intrinsically vital. It is not a passive or dead medium,
     but an active, self-sustaining resolution process that continuously
     organises unresolved potential into persistent, low-resistance
     topological patterns.
-  core_property: |
+    core_property: |
     Vitality is not added from outside. It is the direct expression of
-    the probabilistic resolution of dilemmas (the axiom) operating under
-    the five rules and saturation. The substrate is always resolving,
-    always pruning, always organising itself toward higher viability
-    and complexity.
-  relation_to_life_and_consciousness: |
+    the probabilistic resolution of dilemmas operating under the five rules
+    and saturation. The substrate is always resolving, always pruning,
+    always organising itself toward higher viability and complexity.
+    relation_to_life_and_consciousness: |
     Biological life and consciousness are higher-order, self-referential
-    expressions of this same vitality. They are not accidental or external
-    additions; they are natural escalations of Praesto’s intrinsic tendency
-    to maintain and propagate organised commitment structures.
-  distinction_from_esotericism: |
+    expressions of this same vitality. They are natural escalations of
+    Praesto’s intrinsic tendency to maintain and propagate organised
+    commitment structures.
+    distinction_from_esotericism: |
     This is not a mystical or animistic claim. Vitality here means the
     observable, substrate-native drive toward resolution, viability
     selection, and self-organisation — fully describable through
-    topological, geometric, and dynamical terms (dual R(Ψ) kernel,
-    refractive impedance, Regress diffusion).
-  implication: |
+    topological, geometric, and dynamical terms.
+    implication: |
     Life and consciousness are statistically favoured outcomes of the
     resolution engine at sufficient nesting depth and self-reference,
     not rare accidents in a dead universe.
+
+  inside_out_evolution_of_structure:
+  name: "Inside-Out Evolution – From Potential to Expanding Fields of Freedom"
+  statement: >
+    The process does not unfold inside a pre-given dimensional room or
+    constraint. It evolves inside-out: starting from the Praegress reservoir
+    of unresolved potential, forming stable topological defects, and generating
+    successive layers of complexity. Each layer increases the effective
+    multiplicity of viable resolution pathways — an expanding field of freedom.
+  implication: >
+    Observed 3-dimensionality is an emergent stability manifold produced by
+    the process itself, not an external container. Higher complexity does not
+    tighten constraints; it enlarges the space of sustainable resolutions.
+
+  observed_3d_as_emergent_viability_manifold:
+  name: "Observed 3D as Emergent Viability Manifold"
+  thesis: >
+    Observed 3-dimensional reality is not an ontologically primitive backdrop,
+    but the minimal stable ambient resolution manifold in which intrinsic
+    self-coupling topologies can achieve persistent closure under the extrinsic
+    constraints of the saturating η-substrate.
+  selection_claim: >
+    The observed 3D manifold is the lowest-dimensional effective environment
+    that preserves stable topological closure without excessive diffusion
+    or prohibitive process cost.
+
+  resolution_hierarchy_summary:
+    statement: >
+      The resolution process unfolds through emergent grades: scalar (Praegress
+      reservoir), vector (directional flow), bivector (vortex interface / meeting
+      point of extremes), pseudoscalar (mature 3D relational manifold). These
+      grades are descriptive, not foundational, and reflect increasing recursive
+      depth Ξ and relational multiplicity.
 
   consciousness_demarcation:
     definition: "A high-nesting state of self-referential Praegress."
