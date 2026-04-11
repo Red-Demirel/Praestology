@@ -574,17 +574,45 @@ qft_correspondence:
     QFT's virtual particles — intermediate states in
     Feynman diagrams that violate energy conservation
     within the Heisenberg uncertainty window — are
-    Tik fluctuations in the substrate tension landscape.
-    They are real substrate fluctuations that influence
-    the resolution process but do not themselves
-    constitute committed resolution events. They are
-    "virtual" in the sense that they are unresolved
-    R3 tension states that contribute to the resolution
-    probability amplitude without themselves crossing S_lock.
+    partial-constraint fluctuations in the substrate:
+    Tik events that satisfy some but not all stability
+    constraints simultaneously. They meet the kinetic
+    constraint (wave equation, correct dispersion) but
+    not the full persistence condition (topological
+    winding closure, ℛ(ψ) viability selection). They
+    are "virtual" in the precise substrate sense: real
+    fluctuations that influence the resolution probability
+    amplitude without crossing S_lock into committed topology.
+    This is distinct from committed Tik events (which cross
+    S_lock and nucleate persistent vortex topology) and from
+    background Tik fluctuations (which are below any
+    constraint threshold). Virtual particles occupy the
+    intermediate regime: above the kinetic threshold but
+    below the full persistence threshold.
     The Casimir effect — measurable force from virtual
     particles between conducting plates — confirms that
-    Tik fluctuations are physically real and have
-    measurable consequences. Already noted in foundations.yaml.
+    partial-constraint fluctuations are physically real.
+    In the substrate picture: the plates (committed topology)
+    provide the structural template that modifies which
+    partial-constraint fluctuations are accessible between
+    them relative to outside — changing the vacuum energy
+    density through structure-templating, not through
+    some mysterious action of the vacuum alone.
+    The Lamb shift is the energy correction from partial-
+    constraint fluctuations coupling to the committed
+    electron-proton orbital topology — the same mechanism
+    at the atomic scale.
+    Frequency templating: partial-constraint fluctuations
+    that are resonant with the natural modes of existing
+    committed topology (ω_tik = n·ω_vortex) couple more
+    efficiently and contribute more strongly to observable
+    effects. This is why the Casimir force depends on plate
+    geometry and why the Lamb shift depends on orbital
+    quantum numbers — the committed structure's frequency
+    spectrum determines which partial-constraint fluctuations
+    are resonantly enhanced.
+    See core/core-dynamical-equation.yaml,
+    partial_constraint_fluctuations for the full treatment.
   gauge_symmetry: >
     QFT's gauge symmetries (U(1) for EM, SU(2) for weak,
     SU(3) for strong) are constraints on the mathematical
