@@ -321,6 +321,133 @@ emergent_behavior:
       accumulation of committed hysteresis.
 
 # ─────────────────────────────────────────────
+# PARTIAL CONSTRAINT FLUCTUATIONS
+# Virtual particles, off-shell states, and
+# structure/frequency templating across Ξ levels
+# ─────────────────────────────────────────────
+
+partial_constraint_fluctuations:
+  statement: >
+    The stochastic Tik background excites the η-field into configurations
+    that satisfy only a subset of stability constraints — correct kinetic
+    energy and local nonlinearity but insufficient winding or saturation
+    balance, for example. Such fluctuations are real but transient; they
+    do not become persistent topological defects (particles). They
+    correspond to virtual particles, zero-point fluctuations, and off-shell
+    states in quantum field theory. This gives the substrate mechanism for
+    virtual particles that the existing treatment of Tik events below S_lock
+    left implicit.
+
+  persistence_condition: >
+    Only fluctuations that meet ALL relevant constraints simultaneously —
+    kinetic, nonlinear, saturation, ℛ(ψ) viability selection, topological
+    winding — become stable persistent structures. The required constraint
+    set is domain-dependent:
+    Physics: full vortex closure (720° for electron, triality for quarks)
+    Chemistry: bond formation (complete orbital phase-lock between atoms)
+    Biology: self-sustaining metabolic loops (closed autocatalytic cycles)
+    Cognition: coherent predictive model (closed inference loop)
+
+  structure_and_frequency_templating:
+    statement: >
+      Viable solutions at lower Ξ levels increase the probability of
+      successful iterations at higher Ξ levels through two mechanisms —
+      structure and frequency — without guaranteeing higher-level viability.
+      Misses remain possible; the odds improve.
+    structural_templating: >
+      Persistent committed topology creates a structured local η field —
+      a commitment density landscape with specific gradients and wells —
+      that shapes which new fluctuations are accessible. The existing
+      structure is the context within which new resolution attempts occur.
+      A fluctuation that is geometrically compatible with the existing
+      committed structure has a higher viability amplitude |ψ|² in that
+      context than it would in an unstructured substrate. Atomic orbital
+      structure templates molecular bond geometry. Molecular structure
+      templates protein folding pathways. Neural connectivity patterns
+      template which cognitive structures can form.
+    frequency_templating: >
+      Persistent committed structures have characteristic oscillation
+      frequencies — the vortex's natural modes, the GP field's Bogoliubov
+      spectrum, the atomic orbital frequencies, the molecular vibrational
+      modes. The Tik resonance condition (ω_env = n·ω_vortex from
+      vortex-stabilization.yaml) means that fluctuations resonant with
+      existing committed frequencies have higher coupling to the substrate
+      mode structure. The existing commitment acts as a frequency template:
+      resonant fluctuations are more likely to successfully phase-lock
+      into new stable topology. Non-resonant fluctuations experience the
+      same substrate but couple less efficiently — they are not suppressed
+      by memory but simply fail to resonate.
+    mechanism_is_not_memory: >
+      This is not memory of failed attempts. The substrate does not track
+      which fluctuations were tried and failed. The mechanism is structural
+      and resonant: the committed topology at each Ξ level creates a
+      specific η field landscape and a specific frequency template that
+      biases the probability landscape for subsequent fluctuations toward
+      compatible configurations. Failed attempts leave no trace because
+      they didn't commit — only successful commitments persist to shape
+      the landscape for future attempts.
+    domain_scaling: >
+      The templating effect scales with Ξ:
+      Ξ = 1-2 (particle physics): minimal — vacuum fluctuation timescales
+        are shorter than any committed structure's characteristic period
+        at that scale; templating is negligible.
+      Ξ = 3-4 (chemistry): significant — atomic orbital frequencies
+        template molecular bond formation; catalysts work by providing
+        structural and frequency templates that lower the constraint
+        threshold for specific reactions.
+      Ξ = 5-8 (biology): strong — molecular and cellular structures
+        template metabolic pathways; evolutionary selection (R5 at
+        population level) has accumulated Ξ-levels of viable template
+        over geological timescales.
+      Ξ = 10+ (cognition): dominant — neural connectivity is the
+        accumulated template of all prior successful resolutions;
+        new cognition occurs within this template and is strongly
+        biased by it toward compatible structures.
+
+  constrained_probabilities_at_higher_xi: >
+    At higher Ξ levels where committed structure persists between
+    fluctuation attempts, the hysteresis of past successful resolutions
+    (R4 accumulation) creates a structured probability landscape for
+    future attempts. This is not vacuum-level memory but the consequence
+    of R4 accumulation being present between attempts:
+    A chemical catalyst that has successfully mediated a reaction has
+    altered its local η field through the reaction products, biasing
+    the probability of the same reaction recurring (autocatalysis).
+    A neural system that has successfully resolved a cognitive dilemma
+    has altered its synaptic commitment density, biasing future
+    resolution attempts toward similar pathways (learning).
+    In each case the "memory" is not in the substrate vacuum but in
+    the committed topology (R4) that persists between attempts.
+
+  virtual_particles_identified: >
+    Virtual particles in QFT (the off-shell propagators in Feynman
+    diagrams) are partial-constraint fluctuations in the substrate:
+    they satisfy the wave equation (kinetic term) but not the full
+    persistence condition (topological closure, ℛ(ψ) viability selection).
+    They contribute to observable effects (Casimir effect, Lamb shift,
+    anomalous magnetic moment) through their coupling to committed
+    topology, but they don't persist as particles because they don't
+    meet all constraints.
+    The Casimir effect: fluctuations between the plates satisfy the
+    wave equation but are restricted to modes compatible with the
+    plate geometry — the plates (committed topology) provide the
+    structural template that modifies which partial-constraint
+    fluctuations are accessible, changing the vacuum energy density
+    between the plates relative to outside.
+
+  open_question_born_rule: >
+    Whether the frequency templating mechanism contributes to the
+    emergence of the Born rule (|ψ|² as probability) is an open
+    derivation. If the viability amplitude |ψ|² encodes not just
+    current-state viability but also the accumulated frequency
+    coupling of the substrate mode structure to that configuration,
+    then |ψ|² would naturally represent the probability of a
+    successful resolution attempt — the Born rule from R5 templating.
+    This would connect quantum probability to the substrate's
+    frequency-mode structure in a derivable way.
+    See foundational/F132_born_rule_from_r5_frequency_templating.
+
+# ─────────────────────────────────────────────
 # OPEN DERIVATIONS
 # ─────────────────────────────────────────────
 
