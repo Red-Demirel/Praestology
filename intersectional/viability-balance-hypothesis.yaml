@@ -87,25 +87,60 @@ goldilocks_zone:
     regime and the characteristic timescales of the fluctuations.
   cross_scale_manifestations:
     - scale: "Quantum"
-      inside_out: "Superposition, vacuum fluctuations"
-      outside_in: "Potential barriers, decoherence, exclusion"
+      inside_out: "Superposition, vacuum fluctuations, partial-constraint Tik events"
+      outside_in: "Potential barriers, decoherence, exclusion, S_lock threshold"
       viable_balance: "Coherent superposition until measurement"
+      templating_note: >
+        Minimal templating at this scale — vacuum fluctuation timescales
+        are shorter than committed structure's characteristic period.
+        Partial-constraint fluctuations (virtual particles) are transiently
+        real but don't persist to template subsequent attempts.
     - scale: "Atomic / Molecular"
-      inside_out: "Electron transitions, chemical reactions"
-      outside_in: "Coulomb barriers, bonding constraints"
+      inside_out: "Electron transitions, chemical reactions, bond formation attempts"
+      outside_in: "Coulomb barriers, bonding constraints, orbital exclusion"
       viable_balance: "Stable atoms and molecules"
+      templating_note: >
+        Structure templating begins here: atomic orbital frequencies
+        (set by the electron-proton commitment topology) template
+        which molecular bond formations can resonate. Catalysts work
+        by providing structural and frequency templates that lower
+        the effective constraint threshold for specific reactions —
+        increasing the probability of successful bond formation
+        without guaranteeing it.
     - scale: "Biological / Neural"
-      inside_out: "Synaptic plasticity, exploration"
-      outside_in: "Homeostasis, structural constraints"
+      inside_out: "Synaptic plasticity, exploration, metabolic fluctuations"
+      outside_in: "Homeostasis, structural constraints, selection pressure"
       viable_balance: "Learning, adaptation, health"
+      templating_note: >
+        Strong templating: molecular and cellular structures template
+        metabolic pathways and reaction networks. Evolutionary selection
+        (R5 at population level) has accumulated Ξ-levels of viable
+        template over geological timescales. Failed attempts leave no
+        vacuum memory, but successful commitments (DNA, protein folds,
+        neural connectivity) persist as structural and frequency templates
+        that increase the odds of compatible higher-level viability.
     - scale: "Social / Organisational"
       inside_out: "Innovation, dissent, cultural evolution"
       outside_in: "Laws, norms, infrastructure"
       viable_balance: "Resilient, adaptive society"
+      templating_note: >
+        Institutions and cultural forms (viable lower-Ξ commitments)
+        template the probability space for new social innovations.
+        Innovations compatible with existing structural frequencies
+        (resonant with current norms, infrastructure, economic patterns)
+        have higher probability of successful adoption — not determined,
+        but odds increased.
     - scale: "Mental / Psychological"
       inside_out: "Spontaneity, emotion, creativity"
       outside_in: "Executive function, habits, social expectations"
       viable_balance: "Mental health, sanity"
+      templating_note: >
+        Dominant templating: neural connectivity is the accumulated
+        template of all prior successful resolutions. New cognition
+        occurs within this frequency and structural template, strongly
+        biased toward compatible structures. Psychotherapy works partly
+        by modifying the template — loosening rigid outside-in structures
+        to make new inside-out resolution pathways more accessible.
 
 # ─────────────────────────────────────────────
 # CONSEQUENCES FOR PATHOLOGIES
