@@ -1,5 +1,5 @@
 name: "Photon Vortex Dynamics"
-version: "1.0"
+version: "1.1 — Dual-Frequency Model; E/B Hand-Off; Hopfion Structure; Topological Information"
 parent_domain: "Physics"
 core_version: "1.5"
 status: "Proposed – High‑confidence extension"
@@ -11,6 +11,14 @@ description: >
   events transiently couple the vortices, producing an effective mass and
   linking photon behavior to the fundamental constants α (fine structure) and
   R∞ (Rydberg).
+
+  v1.1 additions: The dual-frequency internal structure of the photon is now
+  specified — two distinct frequencies (ω₁ orbital, ω₂ twitch) producing a
+  beat-pattern soliton with dynamic E/B quadrature modulation. The photon's
+  Hopfion-like topological structure is identified, providing additional
+  information channels beyond amplitude, frequency, and polarization. The
+  connection to the quaternion/GA field formulation is made explicit: the
+  restored scalar part of the quaternion field enables the E/B hand-off.
 
 dependencies:
   requires:
@@ -156,25 +164,236 @@ predictions:
      fluxes might reveal tiny deviations due to photon‑vortex interactions."
 
 # ─────────────────────────────────────────────
-# 6. RELATION TO OTHER DOMAIN FILES
+# 6. DUAL-FREQUENCY INTERNAL STRUCTURE
+# ω₁ orbital + ω₂ twitch → beat-pattern soliton
 # ─────────────────────────────────────────────
-cross_links:
-  - "vortex-stabilization.yaml – foundation for vortex dynamics."
-  - "alpha-from-vortex-stability.yaml – α derivation from vortex stability."
-  - "alpha-rydberg-z0.yaml – constant stack."
-  - "photon-absorption-emission.yaml – interaction with atoms."
-  - "redshift-dissipation.yaml – energy loss mechanism."
-  - "../consciousness/afterdeath.yaml – the Mandelbrot pattern of
-     self‑reference across scales (vortex pair misalignment as prototype
-     of intermittent self‑coupling)."
+
+dual_frequency_structure:
+  statement: >
+    The photon's dual-vortex structure has two distinct internal frequencies,
+    producing a beat-pattern soliton rather than a simple sinusoidal wave.
+    This is more specific than the existing dipole-vortex description and
+    gives the photon a richer internal dynamics consistent with its Hopfion-like
+    topological character.
+
+  frequencies:
+    omega_1:
+      name: "Orbital frequency"
+      description: >
+        The frequency at which the two zero-point phase singularities orbit
+        their common center of mass. Sets the pulse repetition rate and the
+        envelope of the wave-packet. Connected to the photon's energy via
+        E = ħω₁ at leading order — ω₁ is the central carrier frequency.
+      relation_to_existing: >
+        This is the ω in E = ħω. The orbital frequency is what atomic
+        transitions couple to (photon-absorption-emission.yaml) and what
+        spectrometers measure.
+    omega_2:
+      name: "Twitch frequency"
+      description: >
+        The internal frequency of the rapid phase/orientation flip at each
+        vortex core — the rate at which each zero-point singularity itself
+        rotates or flips orientation. Sets the internal pulsing of the
+        wave-packet. Much higher than ω₁ in general; related to the vortex
+        core dynamics at the substrate grain scale ξ.
+      relation_to_existing: >
+        This is the frequency of the individual Möbius-like rotation within
+        each vortex of the pair — the self-referential loop frequency of
+        each zero-point. Its ratio to ω₁ encodes the photon's internal
+        structure and may be connected to the fine structure constant α
+        through the vortex core geometry.
+
+  beat_pattern:
+    description: >
+      The superposition of ω₁ and ω₂ produces a beat pattern at frequencies
+      ω₁ ± ω₂, creating a localized wave-packet soliton with an internal
+      pulsing structure. The photon is not a monochromatic wave but a
+      beat-pattern soliton with:
+      — Carrier: ω₁ (the observable frequency)
+      — Envelope modulation: |ω₁ − ω₂| (the internal pulsing rate)
+      — Sum component: ω₁ + ω₂ (contributes to the field texture)
+    soliton_character: >
+      The beat pattern produces a self-confined topological soliton —
+      the two frequencies together create a structure that is spatially
+      localized through the interference pattern rather than through
+      a potential well. The localization is topological: the Hopfion-like
+      linking of the two vortices prevents the soliton from dispersing.
+
+  eb_quadrature_modulation:
+    statement: >
+      The electric (E) and magnetic (B) field dominance alternates
+      dynamically through the beat pattern — not a static split (E ⊥ B
+      with both present simultaneously) but a dynamic quadrature modulation
+      where energy sloshes between electric-dominant and magnetic-dominant
+      phases, analogous to an LC oscillator.
+    mechanism: >
+      The orbital rotation (ω₁) of the two vortices around their common
+      center drives the spatial phase relationship between them. When the
+      two vortices are aligned in the plane perpendicular to propagation,
+      the configuration is electric-dominant (E peak). When they are
+      in quadrature (90° offset), the configuration is magnetic-dominant
+      (B peak). The twitch frequency ω₂ provides the additional degree
+      of freedom that enables the hand-off — it's the coupling between
+      the two polarisation modes.
+    quaternion_connection: >
+      This is precisely the role of the scalar part w in the quaternion
+      field Q = w + xi + yj + zk. Maxwell's vector-only rewrite drops w;
+      restoring it provides the coupling for the E ↔ B modulation and
+      topological lock. The scalar part w mediates the hand-off between
+      the imaginary axes (i, j, k) that encode E and B — it is the
+      internal "gear" of the LC oscillator.
+      See quaternion-field-formulation.yaml, maxwell_quaternion_connection.
+    lc_analogy: >
+      The photon functions as its own LC oscillator:
+      Electric-dominant phase ↔ capacitor (energy in E field)
+      Magnetic-dominant phase ↔ inductor (energy in B field)
+      The beat frequency ω₁ ± ω₂ is the oscillation rate of this
+      internal LC circuit. The topological linking of the two vortices
+      (opposite chirality) ensures the circuit is closed — no radiation
+      loss in the internal oscillation.
+    detection_consequence: >
+      Absorption "discharges" the LC oscillator — the measurement
+      interaction couples to one phase of the oscillation, projecting
+      the topological structure onto a specific observable. The detected
+      photon energy E = ħω₁ is the carrier; the internal beat structure
+      may be detectable through correlation measurements in quantum optics
+      experiments sensitive to the photon's temporal fine structure.
 
 # ─────────────────────────────────────────────
-# 7. OPEN QUESTIONS
+# 7. HOPFION-LIKE TOPOLOGICAL STRUCTURE
+# The photon as a self-stabilizing topological soliton
 # ─────────────────────────────────────────────
+
+hopfion_structure:
+  statement: >
+    The dual-vortex photon with opposite chirality linkage forms a
+    self-stabilizing Hopfion-like or skyrmionic structure — a topological
+    soliton protected by the opposite-chirality linking number. The structure
+    cannot unwind without a topology break, giving the photon its stability
+    against certain distortions.
+  hopfion_identification: >
+    A Hopfion is a localized soliton with non-trivial Hopf invariant —
+    the linking number of the preimages of two regular values of the field
+    map S³ → S². In the photon model, the two zero-point singularities of
+    opposite chirality are linked in the field texture of the propagating
+    packet. The linking number is the photon's topological invariant.
+    This structure is precisely described in the quaternion framework as
+    a section of the Hopf fibration (S¹ → S³ → S²) — consistent with the
+    quaternion-field-formulation.yaml derivation of the Hopf structure.
+  geometric_algebra_identification: >
+    In the GA formulation (geometric-algebra-formulation.yaml), the photon's
+    dual vortices are grade-2 bivectors — oriented planes. The two opposite-
+    chirality vortices are two bivectors of opposite orientation whose
+    outer product produces a grade-3 (pseudoscalar) linking structure.
+    The grade-3 component is the topological charge density — its non-zero
+    value for the photon's Hopfion structure encodes the linking number.
+    This is the concrete physical content of the grade-3 term in the
+    substrate multivector field Ψ = η + J + F + ρᵥ·i₃ for the photon.
+  stability_source: >
+    The opposite-chirality linkage (net topological charge = 0, but
+    non-zero Hopf/linking invariant) protects the soliton against smooth
+    deformations. To unwrap the Hopfion, a topology break is required —
+    which in the substrate picture requires a fluctuation of sufficient
+    energy to cross S_lock at the vortex cores simultaneously. This is
+    why photons are stable: the energy threshold for unwinding is high
+    relative to typical environmental fluctuations.
+  analytic_initial_condition: >
+    A candidate analytic form for the photon wave-packet initial condition
+    in the paraxial approximation:
+    ψ(x,y,τ; z=0) = [(√((r⊥-r₀)²+τ²)/√z₀)]^|l₂|
+                   × exp[−((r⊥-r₀)²+τ²)/(2z₀)]
+                   × exp[−i·l₂·arctan(τ/(r⊥-r₀))]
+                   × exp[i·l₁·arctan(y/x)]
+    where r⊥ = √(x²+y²), l₁ and l₂ are the spatial and temporal vortex
+    charges (integers), and z₀ is the Rayleigh range of the packet.
+    The term exp[i·l₁·arctan(y/x)] encodes the orbital angular momentum
+    (spatial vortex), and the temporally twisted term encodes ω₂.
+    Status: analytic approximation — formal derivation from the GP master
+    equation is an open derivation.
+
+# ─────────────────────────────────────────────
+# 8. TOPOLOGICAL INFORMATION CHANNELS
+# Beyond amplitude, frequency, polarization
+# ─────────────────────────────────────────────
+
+topological_information_channels:
+  statement: >
+    The Hopfion-like photon carries more information than the standard
+    three channels (frequency, amplitude, polarization). The topological
+    structure provides additional channels that are protected by topology
+    rather than by signal amplitude.
+  standard_channels:
+    frequency: "Central carrier ω₁ — energy E = ħω₁; encodes spectral content"
+    amplitude: "Total energy in the vortex-pair strength; luminosity"
+    polarization: >
+      Relative phase and handedness offset between the two vortices →
+      linear, circular, or elliptical polarization texture.
+      Formally: E_r = cos(β/2)·exp[i(γ-α)/2], E_l = sin(β/2)·exp[i(γ+α)/2]
+      where α, β, γ define ellipticity and phases (Stokes parameters).
+  topological_channels:
+    orbital_angular_momentum: >
+      l = ħ per photon (the quantum of OAM from the spatial vortex l₁).
+      Already recognised in optical vortex beams (Allen et al. 1992).
+      In the substrate picture: this is the winding number of the spatial
+      phase structure exp[i·l₁·arctan(y/x)] — a topological integer.
+    temporal_vortex_charge: >
+      The temporal winding l₂ from the twitch frequency ω₂ — the temporal
+      vortex charge. Not yet routinely exploited in optical communications
+      but in principle an independent topological integer per photon.
+      Spatiotemporal optical vortices (STOVs) have been demonstrated
+      experimentally (Chong et al. 2020), confirming this structure exists.
+    hopf_linking_number: >
+      The Hopf invariant of the full (x,y,z,t) field texture — the linking
+      number of the two opposite-chirality vortices in the four-dimensional
+      field. This is the most protected channel: it requires a topology
+      break (energy above S_lock threshold) to alter. Robust against
+      decoherence that affects amplitude and phase channels.
+      Currently not used for information encoding; in principle could
+      provide a physically protected qubit encoding.
+  information_character: >
+    These are geometric/topological information channels — embodied in
+    field texture and coherence — rather than abstract Shannon probabilistic
+    bits. They are:
+    — Richer: continuous (amplitude, phase) with discrete invariants
+      (topological integers l₁, l₂, Hopf number)
+    — Protected: topological channels survive perturbations that destroy
+      amplitude/phase information
+    — Pre-bit: the two zero-point singularities are geometric primitives
+      enabling encirclement (grade-2 bivector in GA), not abstract bits
+
+# ─────────────────────────────────────────────
+# 9. RELATION TO OTHER DOMAIN FILES
+# ─────────────────────────────────────────────
+
+cross_links:
+  - "vortex-stabilization.yaml – foundation for vortex dynamics"
+  - "alpha-from-vortex-stability.yaml – α derivation from vortex stability"
+  - "alpha-rydberg-z0.yaml – constant stack"
+  - "photon-absorption-emission.yaml – interaction with atoms (coupling to ω₁)"
+  - "redshift-dissipation.yaml – energy loss mechanism"
+  - "quaternion-field-formulation.yaml – scalar part w enables E/B hand-off"
+  - "geometric-algebra-formulation.yaml – photon as grade-2 bivector; grade-3 linking"
+  - "quantum-entanglement.yaml – photon entanglement via shared Hopfion dilemma"
+
+# ─────────────────────────────────────────────
+# 10. OPEN QUESTIONS
+# ─────────────────────────────────────────────
+
 open_questions:
   - "Exact functional form of P_mis(E) from the GP equation."
   - "Numerical computation of m_eff(E) for comparison with GRB data."
+  - "Formal derivation of the Hopfion initial condition from the GP master
+     equation — verify the analytic form in hopfion_structure matches the
+     stationary solutions of the full nonlinear equation."
+  - "Ratio ω₂/ω₁ from GP vortex core dynamics — this ratio encodes the
+     photon's internal structure and may connect to α through the vortex
+     core geometry. A key open derivation."
+  - "Whether the temporal vortex charge l₂ is quantised and in what units —
+     does it correspond to the twitch frequency ω₂ in a simple ratio?"
+  - "Detection protocol for the Hopf linking number — what measurement
+     scheme would project the Hopf invariant onto a measurable quantity
+     while preserving its topological protection?"
   - "Can the misalignment mechanism produce the observed 3.1σ signal
      quantitatively, or does it require additional parameters?"
   - "Is there a direct laboratory test using photonic crystals with
-     time‑varying nonlinearity to mimic vortex misalignment?"
+     structured vacuum modes that could probe the dual-frequency structure?"
