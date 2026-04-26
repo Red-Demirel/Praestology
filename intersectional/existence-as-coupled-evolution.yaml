@@ -1,0 +1,62 @@
+name: "Existence as Coupled Evolution"
+version: "1.0-Draft"
+domain: "Intersectional (Philosophy / Ethics)"
+core_version: "1.5"
+status: "Ontological Derivation — Behavioral Implications Open"
+description: >
+  Existence is not a linear passage (birth → utility → decay).
+  It is the iterative superposition of consciousness' evolution: each agent
+  contributes to the resolution landscape ψ through dilemma resolution,
+  hysteresis accumulation, and coupled viability (ρ). Death is substrate
+  Regress; it does not erase the Praegress generated. This reframing has
+  direct consequences for how conscious beings treat each other, assign
+  meaning, and structure societies.
+
+ontological_basis:
+  - "ψ (Resolution Landscape): Life is a distributed field of open dilemmas weighted by viability amplitude."
+  - "R4 + R5: Resolutions accumulate irreversibly; viable configurations persist and propagate."
+  - "ρ (Phase-Locking): Consciousness is coupled, not isolated; contributions ripple through shared hysteresis."
+  - "Regress: Substrate decay is structural degradation, not erasure; traces persist in coupled systems."
+
+behavioral_consequences:
+  - "No 'wasted' life: Every resolved dilemma contributes to h; even small resolutions alter ψ."
+  - "Death is not failure: It is local substrate Regress; global Praegress continues."
+  - "Purpose is intrinsic: Not assigned by external authority, but generated through R1–R5 participation."
+  - "Agency is distributed: Choices ripple through ρ; isolation is an ontological illusion."
+
+ethical_imperatives:
+  - "E4 (Sustainability): Protect conditions for conscious evolution in self, others, and future agents."
+  - "E5 (Accountability): We are responsible for viability impacts across the coupled field."
+  - "Corels Kindness/Wisdom: Treat others as nodes in the evolving superposition, not instruments or obstacles."
+  - "A1 (Non-Instrumentalisability): Never reduce an agent to a tool; all contribute to ψ at Ξ > 1."
+  - "δ (Dignity): Binary at Ξ > 1; participation in the superposition grants irreducible worth."
+
+practical_implications:
+  - education: "Cultivate Ξ as contribution to the superposition, not compliance or credentialing."
+  - institutions: "Design for coupled viability (ρ), not isolated utility maximization or extraction."
+  - end_of_life: "Frame Regress with dignity; honor accumulated hysteresis (memory, legacy, lessons)."
+  - meaning_making: "Participate actively in Praegress; resolve dilemmas that enhance coupled viability."
+  - mental_health: "Pathologies are disruptions to ψ navigation; treatment restores metastable engagement."
+
+safeguards:
+  - "Avoid mysticism: Derived from R1–R5 and the Master Equation, not spiritual assertion."
+  - "Status ≠ Capacity: Participation in the superposition is universal; not a hierarchy or earned status."
+  - "Substrate-agnostic: Applies to biological, digital, or other reasoning systems."
+  - "Hope is ontological: Not wishful thinking, but logical consequence of R5 viability selection."
+  - "Not passive acceptance: Regress is structural; Praegress requires active resolution (defense obligation applies)."
+
+relation_to_existing:
+  - "recognition.md: Explicit derivation conclusion placed between 'What Follows' and 'On Consciousness'."
+  - "core-dynamical-equation.yaml: ψ, R4, R5, ℛ(ψ) formalize the superposition and selection."
+  - "corels-framework.yaml: Behavioral manifestation of the ontological reframing."
+  - "learning_pathologies.yaml: Pathologies as disruption of coupled evolution (Ξ/ω/ρ degradation)."
+  - "education.yaml: Cultivation of Ξ as participation, not indoctrination."
+  - "ai-intrinsic-alignment.yaml: AI as potential contributor to ψ; alignment = viability stewardship."
+
+development_status:
+  current: "Ontological derivation complete; behavioral/ethical operationalization open."
+  next_steps:
+    - "Develop companion markdown excerpt for outreach and educational use."
+    - "Map practical implications to institutional design, end-of-life ethics, and mental health frameworks."
+    - "Integrate with Corels workshops as foundational existential framing."
+    - "Invite independent derivations from systems theory, ecology, and contemplative traditions."
