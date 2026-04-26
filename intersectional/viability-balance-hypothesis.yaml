@@ -73,12 +73,16 @@ pressures:
 
 goldilocks_zone:
   statement: >
-    The viable region is where inside‑out and outside‑in pressures are
-    balanced. This balance is encoded in the master equation as the
-    interplay between the saturation term (Λ ln(1+κ|ψ|²)) – which sets
-    the maximum commitment density (outside‑in) – and the stochastic
-    Tik background (inside‑out). The system self‑tunes via R5 to stay
-    near this balance.
+    The viable region is where inside-out and outside-in pressures are
+    balanced. This balance is not a precarious "edge" — it is a dynamic
+    equilibrium basin (Metastable Zone) where R5 selection naturally
+    stabilizes fluctuations. Systems do not "balance on the edge"; they
+    settle into a self-tuning viability basin.
+  terminology_safeguard: >
+    Avoid "edge of viability" or "edge of chaos." These imply fragility
+    and scarcity. True viability is a dynamically stable region requiring
+    minimal maintenance. Human systems often mistake forced imbalance
+    (high maintenance cost) for "resilience" or "innovation."
   formal_expression: >
     ∂ₜ|ψ|² = 0 (in the long‑term average) for a viable system,
     with fluctuations allowed around the equilibrium. The same formal
