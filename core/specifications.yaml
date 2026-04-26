@@ -311,6 +311,17 @@ resolution_hierarchy_reference:
       grades are descriptive, not foundational, and reflect increasing recursive
       depth Ξ and relational multiplicity.
 
+  cross_layer_references:
+  resolution_hierarchy: >
+    A separate descriptive layer using emergent geometrical algebra grades
+    is maintained in core/resolution-hierarchy.yaml. It is strictly
+    descriptive and does not replace the scalar master equation or the
+    core rules.
+  viability_balance_hypothesis: >
+    The viability balance (inside-out Praegress vs. outside-in Regress)
+    is developed as a cross-scale hypothesis in intersectional/viability-balance-hypothesis.yaml.
+    It remains interpretive and is not promoted to core status.
+
   consciousness_demarcation:
     definition: "A high-nesting state of self-referential Praegress."
     distinction_from_field: |
