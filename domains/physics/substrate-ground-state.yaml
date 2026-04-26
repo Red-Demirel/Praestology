@@ -6,7 +6,7 @@ parent_domain: "Physics"
 core_version: "1.5"
 status: "Foundational — conceptually complete; cryogenic confirmation
          argument established; open: ground-state Tik amplitude
-         derivation"
+         derivation, cosmological constant from substrate parameters"
 updated: "2026-03-20"
 
 description: >
@@ -57,7 +57,10 @@ dependency_map:
     - target: "domains/physics/quantum-foundation.yaml"
       via: "Vacuum structure is substrate ground state — vacuum energy, zero-point
             fluctuations, and Casimir effect all grounded here"
-     - target: "domains/physics/vortex-stabilization.yaml"
+    - target: "domains/cosmos/specifications.yaml"
+      via: "Cosmological constant from substrate ground-state Tik amplitude;
+            dark energy as substrate zero-point pressure"
+    - target: "domains/physics/vortex-stabilization.yaml"
       via: "Ground state η = 1 is the reference from which all vortex formation
             and committed topology departs"
 
@@ -106,7 +109,7 @@ container_intuition:
     ground state" is so extreme that treating space as an
     empty container and matter as what fills it is a perfectly
     accurate working approximation. The approximation breaks
-    down at cosmological scales,
+    down at cosmological scales (dark energy, expansion),
     quantum scales (vacuum energy, Casimir effect), and
     extreme commitment density scales (black hole interiors,
     neutron stars). At those scales the substrate's own
@@ -235,6 +238,8 @@ michelson_morley_closure:
       vacuum fluctuations. The vacuum exerts measurable forces.
     Zero-point energy: every quantum field has ground-state energy
       ħω/2 per mode. The vacuum is not at zero energy.
+    Dark energy: the cosmological constant is vacuum energy density.
+      The vacuum has measurable gravitational effect.
     Each of these is a measurement of the substrate. The standard
     model measures it repeatedly and calls the results anomalies,
     renormalisation artifacts, or unexplained constants. The
@@ -502,6 +507,41 @@ cryogenic_argument:
 # ─────────────────────────────────────────────
 
 open_problem_consequences:
+  cosmological_constant: >
+    The cosmological constant problem: why does the vacuum have
+    the energy density it has? Why is it ~10¹²⁰ times smaller
+    than naive QFT estimates?
+    In the substrate picture: the vacuum energy is the Tik
+    background's zero-point activity — the substrate ground
+    state's own fluctuation energy at η = 1. The QFT estimate
+    diverges because QFT integrates zero-point energy up to
+    infinite momentum — there is no UV cutoff. The substrate
+    grain ξ provides the physical UV cutoff: fluctuations
+    below ξ do not exist. The energy density is finite and set
+    by ξ and the Tik background amplitude at η = 1. The
+    cosmological constant is a substrate ground-state property,
+    not a fine-tuned parameter. Its value encodes ξ and
+    the ground-state Tik amplitude — in principle derivable
+    from substrate parameters.
+    Open derivation: compute Λ from ξ and ground-state
+    Tik amplitude. Verify against observed Λ ≈ 10⁻⁵² m⁻².
+
+  dark_energy: >
+    Dark energy (the accelerated cosmic expansion) is the
+    substrate ground-state pressure — the Tik background's
+    isotropic zero-point pressure resisting complete commitment.
+    In regions of lower commitment density (cosmic voids),
+    η is higher, Tik background pressure is relatively stronger,
+    and the substrate actively expands outward from voids.
+    Dark energy is not a mysterious new substance — it is the
+    substrate's own ground-state pressure, visible at
+    cosmological scales where the committed topology (matter)
+    is sparse enough that the substrate's own pressure becomes
+    the dominant dynamical term.
+    The substrate is not passively sitting in the universe.
+    It is actively expanding it, from its own ground-state
+    pressure, in proportion to how little committed topology
+    is present to resist that pressure.
 
   vacuum_energy_casimir: >
     Casimir effect: measured attractive force between parallel
@@ -574,11 +614,113 @@ one_sentence_summaries:
     sequence embedded in it.
 
 # ─────────────────────────────────────────────
+# PRAESTO VS FLRW/MINKOWSKI — POSITIONING TABLE
+# Compact contrast for engagement with standard cosmology
+# ─────────────────────────────────────────────
+
+praesto_vs_standard_cosmology:
+  purpose: >
+    Compact positioning table for engagement with researchers
+    familiar with FLRW cosmology and Minkowski spacetime.
+    Neither framework is dismissed — FLRW and Minkowski are
+    effective descriptions that work at their level. The
+    contrast identifies what Praestology does differently
+    and why the differences matter for unresolved problems.
+
+  comparison:
+    ontological_foundation:
+      praesto: >
+        Dynamic field of free potential (Praegress reservoir).
+        No background geometry assumed. Space, time, metric all
+        emerge from the commitment dynamics of the potential field.
+        The substrate IS space; there is no prior container.
+      flrw_minkowski: >
+        Pre-existing 4D manifold (FLRW cosmologically, Minkowski
+        locally) whose curvature is the primary object. Matter and
+        energy are sources that modify the manifold. The manifold
+        is assumed; its properties are derived from Einstein's equations.
+
+    gravity_mechanism:
+      praesto: >
+        Refraction from commitment density gradient ∇C = ∇(1−η).
+        Light and matter follow paths of least substrate resistance.
+        No curvature of a background manifold — the gradient IS
+        the gravitational effect. Time dilation is reduced process
+        rate Γ ∝ ρ_free in high-commitment regions.
+      flrw_minkowski: >
+        Spacetime curvature sourced by energy-momentum tensor T_μν.
+        Geodesics in curved spacetime. Curvature is primary;
+        matter follows it. Time dilation from metric coefficients.
+
+    dark_components:
+      praesto: >
+        No separate dark components required. Different commitment
+        density regimes produce what FLRW attributes to dark matter
+        (diffuse commitment density without photon emission) and
+        dark energy (free potential pressure from void regions and
+        dissolution of weakly committed structure). Status: caution —
+        the dark matter mapping is under active revision as the
+        commitment density gradient picture develops.
+      flrw_minkowski: >
+        Dark matter (27%) and dark energy (68%) postulated to fit
+        observations. No identified particle for dark matter despite
+        decades of search. Dark energy as cosmological constant has
+        the 10¹²⁰ fine-tuning problem.
+
+    vacuum:
+      praesto: >
+        The vacuum is the Praegress reservoir at η ≈ 1 — maximum free
+        potential, pre-energy (undifferentiated potential is not yet
+        energy; energy only actualises via gradients). The vacuum
+        appears empty because it is uniform — sameness is invisible.
+        Its zero-point activity (Tik background) is substrate dynamics,
+        not infinite energy requiring renormalization.
+      flrw_minkowski: >
+        Vacuum is "empty space" with zero-point energy from quantum
+        fields. The quantum vacuum energy is 10¹²⁰ times larger than
+        the observed cosmological constant — the vacuum catastrophe.
+        Renormalization required; physical reason for cancellation unknown.
+
+    unresolved_problems_addressed:
+      praesto: >
+        Cosmological constant problem: dissolved — the Praegress ground-
+        state Tik pressure is naturally small (set by ξ, no fine-tuning).
+        Quantum gravity: dissolved — the potential field is already quantum
+        (GP equation with Tik background); no separate quantization needed.
+        Dark components: under revision — commitment density regimes
+        produce the observed effects without exotic new fields, but
+        precise mapping requires further derivation.
+        Hubble tension: explained as process-rate differential between
+        void (high η) and filament (lower η) observer environments.
+      flrw_minkowski: >
+        Cosmological constant problem: unsolved (10¹²⁰ fine-tuning).
+        Quantum gravity: unsolved (GR and QM incompatible at Planck scale).
+        Dark components: unresolved (no identified particles).
+        Hubble tension: unresolved (>5σ, no satisfactory explanation).
+
+  caution: >
+    This table is a positioning tool, not a claim of completeness.
+    Where Praestology says "dissolved" it means "the problem does not
+    arise in the framework" — not that all the derivations are complete.
+    The Hubble tension mechanism is identified but not yet quantitatively
+    computed. Dark matter mapping is under active revision. The table
+    identifies which problems the framework is structurally positioned
+    to address and which remain open within it.
+
+# ─────────────────────────────────────────────
 # OPEN DERIVATIONS
 # ─────────────────────────────────────────────
 
 open_derivations:
   priority_1:
+    - >
+      Ground-state Tik amplitude from GP substrate parameters.
+      The zero-point fluctuation energy density at η = 1 sets
+      the cosmological constant. Compute from ξ and the
+      GP nonlinearity parameters. Target: Λ ≈ 10⁻⁵² m⁻².
+      This is the cosmological constant problem dissolved —
+      not by fine-tuning but by identifying what sets the
+      ground-state energy density.
     - >
       Casimir force from Tik background pressure differential.
       Compute the ground-state Tik pressure between plates
@@ -595,7 +737,12 @@ open_derivations:
       T_c should follow from the material's committed topology
       parameters — no free parameters for a given material
       once its vortex structure is specified.
-
+    - >
+      Dark energy equation of state w = −1 from substrate
+      ground-state pressure. Verify that the Tik background
+      isotropic pressure gives w = −1 (cosmological constant
+      behavior) at large scales where committed topology
+      density is low.
 
   priority_3:
     - >
@@ -632,9 +779,11 @@ related_issues:
   - "foundational/F75_cooling_as_substrate_revelation_not_approach_to_nothing"
   - "foundational/F76_absolute_zero_as_maximum_substrate_transparency"
   - "foundational/F77_casimir_as_direct_tik_pressure_measurement"
+  - "foundational/F78_cosmological_constant_from_ground_state_tik_amplitude"
   - "intersectional/physics/108_critical_temperature_from_commitment_binding_vs_coherence"
   - "intersectional/physics/109_casimir_force_from_tik_pressure_differential"
   - "intersectional/physics/110_superfluid_critical_velocity_from_s_lock"
   - "intersectional/physics_cosmos/008_dark_energy_as_substrate_ground_state_pressure"
+  - "intersectional/physics_cosmos/009_cosmological_constant_from_xi_tik_amplitude"
   - "boundaries/B04_container_intuition_linguistic_trap"
   - "boundaries/B05_lorentz_invariant_medium_vs_preferred_frame_medium"
