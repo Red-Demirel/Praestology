@@ -1,0 +1,31 @@
+transition_stages:
+  description: >
+    The progression from physics to biology is a continuous viability-selection
+    trajectory governed by R1-R5. Each stage solves a substrate constraint,
+    crosses a viability threshold, and accumulates hysteresis persistence (π)
+    to enable the next layer of recursive optimization.
+  stages:
+    - name: "Structural/Chemical"
+      r_dominance: "R3 (flow) + R4 (commitment)"
+      master_equation_behavior: "Stable molecular topology; ℛ_diss prunes unstable bonds, ℛ_gain locks viable configurations."
+      parameters: "𝓥(ψ) ≥ Vc locally, π > 0, Ξ ≈ 0–0.3"
+      trigger: "Autocatalytic feedback → positive Φ generation"
+    - name: "Autocatalytic/Dissipative"
+      r_dominance: "R3 + R4 + early R5"
+      master_equation_behavior: "Self-sustaining reaction networks; energy harvesting increases |ψ|², γ_eff drops for viable loops."
+      parameters: "π ↑, ρ (internal-environment coupling) emerges, Ξ ≈ 0.3–0.6"
+      trigger: "Compartmentalization isolates viable networks → enables group-level selection"
+    - name: "Compartmentalized/Proto-Biological"
+      r_dominance: "R4 + R5"
+      master_equation_behavior: "Internal metabolism + information storage; ℛ(ψ) operates at network + compartment scales."
+      parameters: "π ≈ 0.7–0.9, ρ (multi-scale coupling), Ξ ≈ 0.6–0.9"
+      trigger: "Heritable variation + open-ended selection → Ξ crosses 1.0 threshold"
+  ontological_note: >
+    No stage is "alive" in isolation. Viability accumulates continuously.
+    Biology is the regime where Ξ > 1, ρ spans organisms/ecosystems,
+    and ε (edge tension) operates at maximal dynamic range within the
+    Metastable Zone.
+  implications:
+    - "Synthetic biology must respect stage sequencing; skipping constraints creates viability debt."
+    - "AI origin research should model ℛ(ψ) threshold crossings, not just pattern recognition."
+    - "Origin-of-life studies gain predictive power when framed as viability selection trajectories."

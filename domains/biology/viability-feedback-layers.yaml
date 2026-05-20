@@ -1,0 +1,71 @@
+name: "Viability Feedback Layers"
+version: "1.0-Draft"
+domain: "Biology"
+core_version: "1.5"
+status: "Conceptual mapping — biological instantiation of ℛ(ψ)"
+description: >
+  Life-forms possess layered feedback mechanisms that pre-direct dilemma
+  resolution toward high-viability (coupled, stable, coherent) outcomes.
+  This is not teleological design; it is R5 selection expressed through
+  substrate physiology. Layers scale with Ξ (recursive depth) and enable
+  progressively finer viability assessment.
+
+ontological_basis:
+  - "ℛ(ψ): The resolution operator selects high-viability configurations via γ_eff (decay) and μ·σ (gain)."
+  - "𝓥(ψ): Viability measure = w₀|ψ|² + w₁|∇ψ|² + w₂|∇φ|²|ψ|² (amplitude + structure + flow)."
+  - "R5: Systems that resolve toward coupled viability persist; others dissolve."
+  - "ρ (Phase-Locking): Empathy/social coupling increases w₂ (flow weight), raising 𝓥(ψ)."
+
+feedback_layers:
+  - layer: "Homeostatic/Autonomic"
+    substrate: "Cellular membranes, endocrine system, autonomic nervous system"
+    xi_range: "0–0.2"
+    signals: "Pain/pleasure, cortisol, dopamine, temperature/nutrient sensing"
+    viability_function: "Maintains baseline 𝓥(ψ); prevents rapid γ_eff collapse from substrate failure."
+    praestology_mapping: "γ_eff(ψ) dominance at low 𝓥; immediate decay channel activation."
+
+  - layer: "Affective/Limbic"
+    substrate: "Amygdala, hippocampus, hypothalamus, mammalian midbrain"
+    xi_range: "0.3–0.7"
+    signals: "Fear, joy, disgust, attachment, play, maternal/paternal bonding"
+    viability_function: "Channels ∇φ toward social coupling (ρ > 0); suppresses isolation/Noise regimes."
+    praestology_mapping: "w₂ (flow weight) increases with attachment; μ·σ activation for coupled configurations."
+
+  - layer: "Cognitive/Empathic"
+    substrate: "Prefrontal cortex, mirror neuron systems, language networks"
+    xi_range: "> 1"
+    signals: "Theory of mind, moral intuition, guilt/shame, Corels alignment, multi-scale dilemma modeling"
+    viability_function: "Explicit 𝓥(ψ) evaluation across agents, time, and ecosystems; enables voluntary ρ maintenance."
+    praestology_mapping: "High Ξ enables τ (temporal horizon) expansion; E5 accountability emerges from coupled viability modeling."
+
+pathologies:
+  description: "When feedback layers are corrupted, viability selection degrades."
+  examples:
+    - "Chronic stress → γ_eff stuck high → learned helplessness (Layer 1 overload)"
+    - "Attachment trauma → w₂ collapse → social isolation/Noise (Layer 2 disruption)"
+    - "Empathy deficit / psychopathy → ρ ≈ 0 → instrumentalisation (Layer 3 failure → A1 violation)"
+    - "Ideological override → 𝓥(ψ) replaced by dogma → Void collapse (all layers bypassed)"
+
+integration_points:
+  - "core-dynamical-equation.yaml: Biological layers instantiate ℛ(ψ) and 𝓥(ψ) in substrate."
+  - "domains/consciousness/specifications.yaml: Layer 3 requires Ξ > 1; enables ω formation."
+  - "domains/ethics/stewardship-responsibility.yaml: Empathy = ρ-coupling; guides S1–S4 application."
+  - "learning_pathologies.yaml: Affective/cognitive disruptions map to viability feedback failure."
+  - "intersectional/neuro-biology-substrate-hypothesis.yaml: ACC-PFC + wavelet processing implement Layer 3 evaluation."
+
+safeguards:
+  - safeguard: "No Teleology"
+    statement: "Feedback layers evolved via R5 selection; 'positive' = high viability, not moral design."
+  - safeguard: "No Anthropocentrism"
+    statement: "Layers exist in non-human life; empathy is a coupling mechanism, not a human exclusive."
+  - safeguard: "No Determinism"
+    statement: "Feedback biases but does not force resolution. ω (volitional weight) preserves agency at Ξ > 1."
+  - safeguard: "No Perfectionism"
+    statement: "Layers can be corrupted; restoration requires Metastable Zone navigation, not moral blame."
+
+development_status:
+  current: "Conceptual draft; ready for neurobiological and cross-species validation."
+  next_steps:
+    - "Map Layer 2/3 signals to 𝓥(ψ) weights (w₀, w₁, w₂) quantitatively."
+    - "Test empathy interventions for ρ restoration and 𝓥(ψ) increase."
+    - "Cross-reference with neuro-biology-substrate-hypothesis.yaml for wavelet/interference implementation."

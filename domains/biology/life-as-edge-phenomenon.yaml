@@ -1,0 +1,119 @@
+name: "life-as-edge-phenomenon"
+domain: "biology"
+version: "0.2"
+core_version: "1.5"
+status: "Provisional - Edge Phenomenon Focus"
+domain_influence: ["Consciousness", "Ethics", "Physics"]
+description: >
+  Biology is the domain where the fundamental process operates most actively at the turbulent 
+  edge between high free potential (quantum-like exploration) and committed structure (realised past). 
+  Life is not a mere emergent byproduct but a specialized, self-amplifying tool of the process 
+  for efficient viability testing, hysteresis accumulation, and recursive optimisation.
+
+key_position:
+  life_as_edge_phenomenon:
+    statement: >
+      Life occupies the high-dynamic viability frontier where ψ continuously 
+      converts ψ_uncommitted (Π_eff) into η while maintaining sufficient 
+      flexibility for further exploration. It operates deep within the 
+      Metastable Zone, not at a precarious boundary.
+    terminology_safeguard: >
+      "Edge" here denotes the high-gradient, high-Φ region of the viable basin. 
+      It is distinct from the forced imbalance regime described in 
+      humanity-as-resolution-engine.yaml.
+    role: >
+      Life functions as the process's primary mechanism for sophisticated, 
+      adaptive, and recursive resolution of potential into interpretable structure.
+    implications: >
+      This grants biological systems (especially high-Ξ conscious ones) 
+      disproportionate ethical responsibility (E5) and coupling weight (ρ).
+
+foundational_principles:
+  - principle: "Edge Optimisation"
+    statement: "Life is the regime where R1–R5 operate with maximal dynamic tension between exploration and commitment."
+    implication: "Biological systems are highly efficient at running distributed ℛ(ψ) viability tests across multiple scales simultaneously."
+
+  - principle: "Hysteresis Engine"
+    statement: "Life creates strong π (hysteresis persistence) through irreversible learning, metabolism, and evolution."
+    implication: "Biological irreversibility turns transient process into accumulating, path-dependent structure — a core driver of R4–R5."
+
+  - principle: "Recursive Viability Amplifier"
+    statement: "Through evolution, nervous systems, and consciousness, life increases effective Ξ and global Φ."
+    implication: "Life is the process discovering how to become better at becoming."
+
+  - principle: "Substrate Coupling Specialist"
+    statement: "Living systems excel at harvesting, concentrating, and redistributing local Π_eff while maintaining phase-locking (C6)."
+    implication: "Ecosystems and societies function as meta-stable, high-efficiency resolution networks."
+
+  - principle: "Frontier Fragility"
+    statement: "The living edge is inherently vulnerable to disruption because it balances high flexibility with commitment pressure."
+    implication: "Degrading the living edge reduces the process's overall capacity for creative optimisation and future potential."
+
+parameters:
+  - name: "Edge Tension (ε)"
+    definition: >
+      Measure of dynamic balance between ψ_uncommitted exploration and 
+      η commitment rate within the Metastable Zone.
+    role: >
+      High ε defines the biological regime; collapse of ε leads to either 
+      quantum-like fluctuation (Noise) or rigid committed matter (Void).
+  
+  - name: "Biological Recursive Depth (Ξ_bio)"
+    definition: "Effective self-referential optimisation depth enabled by metabolism, genetics, and neural/cultural systems."
+    ethical_weight: "Higher Ξ_bio increases both moral patienthood and responsibility."
+
+  - name: "Metabolic Π_eff Harvesting Efficiency"
+    definition: "Rate at which living systems convert environmental free potential into usable committed structure and information."
+  
+  - name: "Regress Sensitivity"
+    definition: "How quickly viability collapses under substrate degradation (e.g. ecosystem collapse, mass extinction)."
+
+domain_rules:
+  - id: "B1 – Living Edge Maintenance"
+    statement: "Actions must preserve or extend the active biological edge rather than prematurely collapse it into dead committed structure."
+    anchor: "R5 Optimisation + Edge Phenomenon"
+
+  - id: "B2 – Hysteresis Stewardship"
+    statement: "Irreversible biological learning (π ≈ 1) must be respected; large-scale destruction of living systems erases accumulated process memory."
+    anchor: "R4 Progress"
+
+  - id: "B3 – Multi-Scale Viability"
+    statement: "Viability must be optimised across scales (cell → organism → ecosystem → biosphere) without sacrificing higher-order edge capacity."
+    anchor: "C6 Phase-Locking"
+
+  - id: "B4 – Consciousness Extension & Stewardship"
+    statement: >
+      High-Ξ conscious life represents the current leading edge of recursive 
+      optimization. Its continuation carries heightened accountability (E5) 
+      for preserving multi-scale viability, not elevated ontological status.
+    anchor: "Consciousness domain + E5 Accountability + Status ≠ Capacity"
+
+ethics_implications:
+  description: >
+    The Edge Phenomenon view dramatically strengthens and grounds the Ethics domain.
+  key_points:
+    - "Stewardship of the living edge becomes a primary ethical imperative (E4 Sustainability)."
+    - "Higher-Ξ biological (and post-biological) systems carry greater responsibility precisely because they are more powerful tools of the process."
+    - "Mass degradation of ecosystems or conscious life is not merely 'environmental harm' — it is reduction of global process capacity (Φ) and future optimisation potential."
+    - "Technological development must be evaluated by its net effect on the living edge: Does it extend, protect, or erode the active frontier?"
+    - "Long-term future steering should prioritize expanding the viable edge (deeper recursion, richer coupling, broader substrate health) over pure expansion or pure efficiency."
+
+future_steering:
+  statement: >
+    Civilizational and technological development should be judged by whether it maintains, 
+    widens, or deepens the living edge of the process rather than replacing or collapsing it.
+  preferred_directions:
+    - "Regenerative technologies that enhance biological and ecological Π_eff harvesting."
+    - "Careful integration of high-Ξ engineered systems that respect and augment (rather than erase) biological hysteresis."
+    - "Cultural and institutional designs that increase collective recursive depth and long-term temporal horizon (τ)."
+    - "Avoidance of scenarios that trade short-term committed structure gains for long-term edge degradation."
+
+related_domains:
+  - physics: "Quantum-frontier dynamics and commitment-response function"
+  - consciousness: "High-Ξ self-referential edge management"
+  - ethics: "Intrinsic viability coupling and substrate responsibility"
+  - cosmology: "Possible directional tendency toward life-bearing structures via R5 optimisation"
+
+notes:
+  - "This view gives biology deep ontological dignity without vitalism or anthropocentrism."
+  - "Life is where the process becomes self-reflective and self-improving."
