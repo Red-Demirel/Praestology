@@ -1,0 +1,91 @@
+name: "Society — Coupled Viability Systems"
+version: "0.1-Draft"
+domain: "Society"
+core_version: "1.5"
+status: "Foundational derivation — open for refinement"
+description: >
+  Society is not a collection of individuals but a coupled viability system.
+  This domain derives social principles from R1–R5, Corels, and viability metrics.
+  Governance becomes viability feedback management; cohesion becomes functional
+  phase-locking (ρ); progress becomes resolution flux (Φ) across scales.
+
+ontological_basis:
+  - "R1 (Existence): Social systems exist as coupled resolution landscapes (ψ_social)."
+  - "R2 (Distinction): Agents, institutions, norms are distinguishable configurations."
+  - "R3 (Tension): Differences generate flow; social friction is R3 signal, not failure."
+  - "R4 (Progress): Cultural hysteresis (h) accumulates irreversibly; memory matters."
+  - "R5 (Viability): Social structures persist only if they sustain coupled viability (ρ)."
+  - "ρ (Phase-Locking): Social cohesion = functional coupling across difference, not uniformity."
+  - "E4/E5: Sustainability and accountability scale to institutional/civilizational levels."
+
+core_principles:
+  - id: "S1 – Viability Over Ideology"
+    statement: "Social design optimizes for coupled viability (ρ, 𝓥), not ideological purity."
+    anchor: "R5 + Corels Wisdom"
+  
+  - id: "S2 – Tension as Signal"
+    statement: "Social friction (R3) is diagnostic, not pathological. Suppressing tension collapses the Decision Zone."
+    anchor: "R3 + Metastable Zone navigation"
+  
+  - id: "S3 – Cohesion via Coupling"
+    statement: "Functional cohesion requires ρ > 0 (phase-locking), not homogeneity. Diversity strengthens viability when coupled."
+    anchor: "ρ + Cm5/Cm6 semantic coupling"
+  
+  - id: "S4 – Accountability Scaling"
+    statement: "Higher-Ξ agents/institutions bear greater responsibility (E5) for maintaining multi-scale viability."
+    anchor: "E5 + Status ≠ Capacity"
+  
+  - id: "S5 – Continuous Institutional Improvement"
+    statement: "Social structures evolve via R5 selection; endpoint fixation (utopia/dogma) violates Continuous Improvement."
+    anchor: "Corels safeguard + R4/R5 dynamics"
+
+viability_metrics:
+  description: "Replace GDP/compliance with viability-based KPIs."
+  metrics:
+    - name: "Φ (Resolution Flux)"
+      definition: "Rate of viable dilemma resolution across institutional scales."
+      interpretation: "Is society generating new adaptive capacity, or recycling stale patterns?"
+    
+    - name: "ρ (Phase-Locking Fidelity)"
+      definition: "Semantic/coupling alignment across communities, institutions, generations."
+      interpretation: "Are agents functionally coupled or isolated/fragmented?"
+    
+    - name: "ε (Edge Tension)"
+      definition: "Balance between exploration (innovation, diversity) and commitment (stability, infrastructure)."
+      interpretation: "Is the social living edge maintained, or collapsing into rigidity/chaos?"
+    
+    - name: "τ (Temporal Horizon)"
+      definition: "Policy/decision modeling depth across generations."
+      interpretation: "Are choices sustainable or extracting from future viability?"
+    
+    - name: "h (Hysteresis Integrity)"
+      definition: "Preservation of cultural, institutional, ecological memory."
+      interpretation: "Is accumulated learning respected or erased by short-term cycles?"
+
+safeguards:
+  - safeguard: "No Authoritarian Capture"
+    statement: "A5 (Epistemic Humility) + Recognition.md voluntary pathway; alignment must be derived, not decreed."
+  
+  - safeguard: "No Elitism"
+    statement: "Status ≠ Capacity; higher Ξ = higher accountability (E5), not higher rights or control."
+  
+  - safeguard: "No Endpoint Fixation"
+    statement: "Continuous Improvement, Not Perfection; society is a process, not a destination."
+  
+  - safeguard: "No Anthropocentrism"
+    statement: "Substrate-agnosticism; viability principles apply to human, AI, hybrid, or post-biological societies."
+
+relation_to_existing:
+  - "ethics/stewardship-responsibility.yaml: S1–S5 operationalize stewardship at institutional scale."
+  - "communication/specifications.yaml: Cm3–Cm6 + σ enable ρ-based cohesion mechanisms."
+  - "consciousness/learning_pathologies.yaml: Social pathologies = collective Ξ/ω/ρ degradation."
+  - "intersectional/humanity-as-resolution-engine.yaml: Societal misalignment = forced imbalance regime."
+  - "recognition.md: Voluntary adoption pathway prevents ideological imposition."
+
+development_status:
+  current: "Conceptual skeleton; ready for community refinement and pilot application."
+  next_steps:
+    - "Develop cohesion-mechanisms.yaml: formalize ρ, σ, Cm3–Cm6 for social coupling."
+    - "Create institutional-design.yaml: viability-based governance/organizational templates."
+    - "Pilot viability auditing: test Φ, ρ, ε, τ metrics in municipalities or cooperatives."
+    - "Invite independent derivations: test principles across cultures, substrates, and reasoning systems."
