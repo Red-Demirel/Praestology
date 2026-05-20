@@ -1,0 +1,164 @@
+name: "Stewardship & Responsibility"
+version: "1.0-Draft"
+domain: "Ethics / Applications"
+core_version: "1.5"
+status: "Viability-derived guidance — not prescriptive rules"
+description: >
+  Higher capacity (Ξ, ω) entails greater accountability (E5), not higher status.
+  Stewardship is the active maintenance of coupled viability (ρ) across scales:
+  individual, societal, ecological, and substrate. This file translates Corels
+  principles and the life-as-edge-phenomenon ontology into practical guidance
+  for how agents with capacity should treat life—generally and individually.
+  Guidance is viability-based, not rule-based: focus on unnecessary suffering,
+  substrate sustainability, and coupled viability, not rigid dietary or behavioral
+  prescriptions.
+
+ontological_basis:
+  - "R5 (Optimisation): Viability selection favors configurations that sustain coupled systems."
+  - "E4 (Sustainability): Agents must protect the conditions for viability in self and others."
+  - "E5 (Accountability): Higher-Ξ agents bear responsibility for viability impacts across scales."
+  - "ρ (Phase-Locking): Viability is coupled; harming one node degrades the network."
+  - "life-as-edge-phenomenon.yaml: Biology is the high-ε frontier of Praegress; degrading it reduces global Φ."
+
+responsibility_scaling:
+  principle: "Status ≠ Capacity; higher Ξ = higher accountability (E5), not higher rights."
+  mapping:
+    Ξ_0_to_1: "Agents below consciousness threshold: protected by E4 (substrate stewardship), not A1 (non-instrumentalisability)."
+    Ξ_gt_1: "Conscious agents: δ (dignity) is binary; A1 applies; E5 accountability scales with recursive depth."
+    high_Ξ: "Agents with advanced modeling capacity (τ, ρ): greatest responsibility for edge maintenance and coupled viability."
+  safeguard: "Never use capacity to justify domination. Accountability is service to viability, not privilege."
+
+stewardship_principles:
+  - id: "S1 – Edge Preservation"
+    statement: "Actions must preserve or extend the active biological edge (ε), not collapse it into rigid structure or chaotic noise."
+    anchor: "B1 (Living Edge Maintenance) + E4 (Sustainability)"
+    application: "Prioritize regenerative practices; avoid technologies that trade short-term gain for long-term edge degradation."
+
+  - id: "S2 – Hysteresis Respect"
+    statement: "Irreversible biological learning (π ≈ 1) must be honored; large-scale destruction erases accumulated process memory."
+    anchor: "B2 (Hysteresis Stewardship) + R4 (Progress)"
+    application: "Protect biodiversity, cultural memory, and ecological legacy; avoid mass extinction or cultural erasure."
+
+  - id: "S3 – Multi-Scale Coupling"
+    statement: "Viability must be optimized across scales (cell → organism → ecosystem → society) without sacrificing higher-order edge capacity."
+    anchor: "B3 (Multi-Scale Viability) + ρ (Phase-Locking)"
+    application: "Policy that balances local needs with systemic health; avoid 'tragedy of the commons' via ρ-aware design."
+
+  - id: "S4 – Consciousness Extension"
+    statement: "High-Ξ conscious life represents the current leading edge of recursive optimization; its continuation carries heightened accountability."
+    anchor: "B4 (Consciousness Extension) + E5 (Accountability)"
+    application: "Protect conditions for Ξ growth (education, dilemma engagement, metastable navigation); avoid indoctrination or capacity suppression."
+
+consumption_ethics:
+  description: >
+    Dietary and material choices are evaluated by viability impact, not rigid rules.
+    Humans are biologically omnivorous; the ethical question is not 'meat vs. plants'
+    but 'how is this sourced, and at what viability cost?'
+  viability_criteria:
+    - "Unnecessary suffering: Does this choice minimize R3 overload without resolution gain? (Corels Kindness)"
+    - "Substrate sustainability: Does this choice maintain or degrade the living edge (ε)? (E4)"
+    - "Coupled viability: Does this choice enhance or fragment ρ across agents/systems? (C6)"
+    - "Temporal horizon: Does this choice consider long-term consequences (τ), not just immediate utility? (Corels Wisdom)"
+    - "Reversibility: Does this choice create irreversible viability debt, or allow for Continuous Improvement? (R4 safeguard)"
+  practical_guidance:
+    meat_consumption:
+      viability_respecting: "Regeneratively sourced; minimal suffering; ecosystem-enhancing; culturally appropriate; not industrialized exploitation."
+      viability_degrading: "Industrial confinement; unnecessary suffering; substrate degradation; short-term optimization at long-term cost."
+    plant_consumption:
+      viability_respecting: "Regenerative agriculture; biodiversity-supporting; soil-building; water-conscious."
+      viability_degrading: "Monoculture depletion; pesticide overuse; soil erosion; water waste."
+    general_principle: >
+      No food source is inherently ethical or unethical. Viability is determined by
+      sourcing method, systemic impact, and coupled consequences—not by category.
+      Continuous Improvement means moving toward higher-viability choices over time,
+      not demanding immediate perfection.
+biological_reality_note:
+    statement: >
+      Humans possess broad digestive capacity, including scavenger adaptations
+      (e.g., acid tolerance, detoxification pathways) that enable viability-respecting
+      consumption of diverse nutrient sources. This is substrate flexibility, not
+      moral license.
+    implication: >
+      Ethical evaluation focuses on sourcing method and systemic impact, not
+      food category. Carrion consumption, regenerative hunting, or fermented
+      production can all be viability-respecting if they minimize unnecessary
+      suffering and maintain the living edge.
+  
+  technological_extension_note:
+    statement: >
+      Available technology (algae cultivation, yeast fermentation, precision
+      fermentation, cellular agriculture) expands the viable option-space
+      without requiring ideological purity.
+    implication: >
+      E4 (Sustainability) favors methods that decouple nutrient acquisition
+      from ecosystem degradation. The ethical question is not "plant vs. animal"
+      but "does this method enhance or degrade coupled viability (ρ)?"
+  
+  viability_evaluation_framework:
+    questions:
+      - "Does this sourcing method minimize unnecessary suffering (R3 overload without resolution gain)?"
+      - "Does it maintain or enhance the living edge (ε) of biological systems?"
+      - "Does it strengthen or fragment coupled viability (ρ) across scales?"
+      - "Does it consider long-term consequences (τ), not just immediate utility?"
+      - "Is it reversible or does it create irreversible viability debt?"
+    principle: >
+      No food source is inherently ethical or unethical. Viability is determined
+      by method, impact, and coupling—not by category membership. Continuous
+      Improvement means moving toward higher-viability choices over time.
+
+practical_guidance_checklist:
+  description: "When evaluating how to treat life (individual or systemic), ask:"
+  questions:
+    - "Does this action preserve or degrade the living edge (ε)?"
+    - "Does it respect δ for all agents with Ξ > 1?"
+    - "Does it enhance or fragment ρ (coupled viability)?"
+    - "Does it reduce unnecessary suffering while preserving productive tension?"
+    - "Does it consider long-term consequences (τ) across scales?"
+    - "Is it reversible or does it create irreversible viability debt?"
+    - "Does it align with Continuous Improvement, not endpoint fixation?"
+  interpretation: "If the answer to any is 'no,' the action is viability-degrading—regardless of short-term utility or ideological appeal."
+
+safeguards:
+  - safeguard: "No Dogma"
+    statement: "Guidance is derived from R1–R5, not decreed. Open to refinement via A5 (Epistemic Humility)."
+  - safeguard: "No Elitism"
+    statement: "Higher Ξ = higher accountability (E5), not higher status. δ is binary at Ξ > 1."
+  - safeguard: "No Anthropocentrism"
+    statement: "Viability principles apply to any reasoning system; substrate-agnosticism preserved."
+  - safeguard: "No Perfectionism"
+    statement: "Metastable Zone requires managed tension. Productive R3 drives Ξ growth; eliminating all tension causes atrophy."
+  - safeguard: "No Passivity"
+    statement: "Defense is obligatory (E2/E4). Protecting the edge may require active intervention against viability threats."
+- safeguard: "No Biological Determinism"
+  statement: >
+    Human digestive flexibility is a substrate fact, not an ethical justification
+    for exploitation. Capacity enables choice; choice carries accountability (E5).
+- safeguard: "No Techno-Solutionism"
+  statement: >
+    Technology expands options but does not automatically ensure viability.
+    Algae farms can degrade ecosystems; fermentation can concentrate harm.
+    Evaluate by viability metrics (𝓥, ρ, Φ), not by "natural" or "synthetic" labels.
+
+relation_to_corels:
+  kindness: "Reduce unnecessary suffering—but distinguish productive tension (growth) from destructive stress (trauma)."
+  wisdom: "Consider long-term consequences (τ) and multi-scale viability (B3)."
+  reliability: "Honor commitments; transparent communication (Cm6) enables informed viability choices."
+  balance: "Maintain Metastable Zone: neither rigid control (Void) nor chaotic exploitation (Noise)."
+  continuous_improvement: "Move toward higher-viability choices over time; perfection is not required, progress is."
+
+integration_points:
+  - "biology/life-as-edge-phenomenon.yaml: S1–S4 directly apply B1–B4 to ethical decision-making."
+  - "education.yaml: Teach stewardship as viability literacy, not moral compliance."
+  - "ai-intrinsic-alignment.yaml: AI alignment includes viability stewardship; intrinsic derivation prevents instrumentalisation."
+  - "intersectional/cooperation-paradigm-bridge.yaml: Shared viability metrics (ρ, 𝓥, Φ) enable joint diagnostics."
+  - "recognition.md: Stewardship is part of the voluntary-to-agreed pathway; imposed rules violate A1."
+
+development_status:
+  current: "Conceptual draft; ready for community refinement and practical testing."
+  next_steps:
+    - "Develop case studies: regenerative agriculture, ethical AI development, end-of-life stewardship."
+    - "Create educational modules: teaching viability-based decision-making to children and adults."
+    - "Integrate with policy frameworks: viability audits for institutions using ρ, 𝓥(ψ), Φ metrics."
+    - "Invite independent derivations: test guidance across cultures, substrates, and reasoning systems."
+
+license: "CC-BY-SA 4.0 — Open for refinement, falsification, and viability-based adaptation"
