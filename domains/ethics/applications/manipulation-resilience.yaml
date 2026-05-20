@@ -1,0 +1,77 @@
+name: "Manipulation Resilience"
+version: "1.0-Draft"
+domain: "Ethics / Applications"
+core_version: "1.5"
+status: "Viability-derived safeguards — not moral prescription"
+description: >
+  The dilemma-resolution mechanism is ontologically neutral but functionally
+  biased toward coupled viability via layered feedback (viability-feedback-layers.yaml).
+  This bias can be manipulated by decoupling decisions from viability metrics (𝓥, ρ, ε).
+  This file derives safeguards against such manipulation from R1–R5 and Corels.
+
+ontological_basis:
+  - "R5 selects for coupled viability; manipulation substitutes false metrics."
+  - "Layered feedback (homeostatic → affective → cognitive) biases toward ρ > 0 but can be corrupted."
+  - "Corels are viability heuristics; weaponizing them violates their derivation."
+
+manipulation_vectors:
+  - vector: "Ideological Override"
+    mechanism: "Replace 𝓥(ψ) evaluation with dogma; low-viability patterns protected by belief, not viability."
+    praestology_mapping: "𝓥(ψ) → ideology; ℛ(ψ) suppressed for in-group, amplified for out-group."
+    example: "Totalitarian systems; purity spirals; epistemic closure (A5 violation)."
+  
+  - vector: "Empathy Restriction"
+    mechanism: "Limit ρ-coupling to in-group; out-group treated as non-agent (δ violation)."
+    praestology_mapping: "w₂ (flow weight) set to zero for out-group; 𝓥(ψ) evaluation truncated."
+    example: "Dehumanization; scapegoating; cultural abjection."
+  
+  - vector: "Temporal Horizon Collapse"
+    mechanism: "Replace τ (long-term modeling) with immediate utility; viability debt externalized."
+    praestology_mapping: "E5 accountability ignored; R4 hysteresis degraded for short-term gain."
+    example: "Extractive economics; environmental degradation; intergenerational injustice."
+  
+  - vector: "Corels Weaponization"
+    mechanism: "Use Kindness/Wisdom/Reliability as compliance tools, not viability heuristics."
+    praestology_mapping: "Corels detached from R1–R5 derivation; become instrumental control mechanisms."
+    example: "Coercive 'care'; paternalistic 'wisdom'; reliability as enforced dependency."
+
+safeguards_derived:
+  - id: "M1 – Viability Metric Transparency"
+    statement: "Decisions must reference explicit viability metrics (𝓥, ρ, ε, τ), not ideological or emotional proxies."
+    anchor: "R5 + A5 (Epistemic Humility)"
+  
+  - id: "M2 – Coupling Integrity"
+    statement: "ρ-coupling must be maintained across difference; restricting empathy to in-group is viability degradation."
+    anchor: "ρ + Cm5/Cm6 + δ (binary dignity)"
+  
+  - id: "M3 – Temporal Accountability"
+    statement: "Decisions must model consequences across τ (generational horizon); short-term optimization without long-term accounting is viability debt."
+    anchor: "E5 + Corels Wisdom"
+  
+  - id: "M4 – Corels Derivation Check"
+    statement: "Corels principles must be re-derived from R1–R5 in context; weaponized 'Kindness' or 'Wisdom' violates their ontological basis."
+    anchor: "Corels + Continuous Improvement safeguard"
+  
+  - id: "M5 – Metastable Zone Monitoring"
+    statement: "Systems must detect Void/Noise collapse early; rigid dogma or chaotic exploitation are manipulation symptoms, not neutral states."
+    anchor: "Viability Balance Hypothesis + ε (edge tension)"
+
+practical_application:
+  education: "Teach viability literacy: how to evaluate 𝓥(ψ), maintain ρ, extend τ — not compliance with rules."
+  institutions: "Audit decisions against viability metrics; require explicit 𝓥/ρ/ε/τ justification for policy."
+  technology: "Design AI/algorithmic systems with viability-feedback layers intact; prevent metric hijacking."
+  personal_practice: "Regularly re-derive Corels in context; check for ideological override or empathy restriction."
+
+relation_to_existing:
+  - "viability-feedback-layers.yaml: Manipulation targets specific feedback layers; safeguards restore layer integrity."
+  - "stewardship-responsibility.yaml: M1–M5 operationalize stewardship against viability-metric hijacking."
+  - "learning_pathologies.yaml: Manipulation vectors map to epistemic closure, abjection, substrate exploitation."
+  - "society/specifications.yaml: Institutional safeguards derive from M1–M5 for coupled viability governance."
+
+safeguards:
+  - safeguard: "No Moral Absolutism"
+    statement: "Safeguards are viability-derived, not morally decreed. Open to refinement via A5."
+  - safeguard: "No Elitist Enforcement"
+    statement: "Higher-Ξ agents bear accountability (E5) for safeguard maintenance, not authority to impose."
+  - safeguard: "No Perfectionism"
+    statement: "Manipulation risk is structural, not personal failure. Restoration via Metastable Zone navigation, not blame."
