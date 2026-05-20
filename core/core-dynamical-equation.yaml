@@ -6,7 +6,7 @@ core_version: "1.5"
 status: "Formal expression complete — term derivations individually at
          varying status; full numerical closure pending α derivation;
          dissolution kernel calibration open (see F02)"
-updated: "2026-03-23"
+updated: "2026-05-19"
 
 description: >
   The Praestology master dynamical equation is the formal expression
@@ -51,30 +51,84 @@ dependency_map:
 # ─────────────────────────────────────────────
 
 master_equation:
-  dimensionless_form: >
-    i ∂ψ/∂t = [ −∇² + V(r) + g|ψ|² + ℛ(ψ) + Λln(1 + κ|ψ|²) ] ψ
+  primary_form: >
+    i (1/Π_eff) ∂ψ/∂t = [ −∇·(Π_eff∇) + V_eff(η) + g|ψ|² + ℛ(ψ) + Λln(1 + κ|ψ|²) ] ψ
 
   latex: >
-    i \frac{\partial \psi}{\partial t} =
+    i \frac{1}{\Pi_{\rm eff}} \frac{\partial \psi}{\partial t} =
     \left[
-      -\nabla^2
-      + V(\mathbf{r})
-      + g |\psi|^2
+      -\nabla\cdot\!\left(\Pi_{\rm eff}\nabla\right)
+      + V_{\rm eff}(\eta)
+      + g|\psi|^2
       + \mathcal{R}(\psi)
-      + \Lambda \ln(1 + \kappa |\psi|^2)
-    \right] \psi
+      + \Lambda\ln(1+\kappa|\psi|^2)
+    \right]\psi
+
+  kinetic_term_interpretation: >
+    The kinetic term −∇·(Π_eff∇) is an operator acting on ψ — not a
+    multiplicative coefficient. Expanded:
+    −∇·(Π_eff∇ψ) = −Π_eff∇²ψ − (∇Π_eff)·(∇ψ)
+    The first term controls local propagation capacity.
+    The second term couples propagation directly to spatial changes in
+    free potential — this is the origin of refraction, variable speed,
+    and effective curvature-like behaviour. Gravity is not added as an
+    external potential; it emerges from the (∇Π_eff)·(∇ψ) coupling.
+    All other terms in the equation are multiplicative.
+
+  lhs_interpretation: >
+    The factor 1/Π_eff on the left-hand side makes the local process rate
+    explicit: time evolution is inversely weighted by local free propagation
+    potential. Where Π_eff is small (high commitment density, near a mass),
+    ∂ψ/∂t is proportionally larger for the same right-hand-side driving —
+    but the observable process rate (∂ψ/∂t rescaled by 1/Π_eff) is slower.
+    Gravitational time dilation is built into the equation structure, not
+    added as an interpretation.
+
+  pi_eff_definition:
+    expression: "Π_eff(x,t) = Π₀ − γη(x,t)"
+    meaning: >
+      Local free propagation potential. High Π_eff: abundant free potential,
+      rapid propagation, quantum-like superposition. Low Π_eff: commitment
+      has bound the local potential, slow propagation, matter-like persistence.
+    relation_to_existing: >
+      Π_eff/Π₀ = 1 − (γ/Π₀)η recovers the existing normalisation with
+      Π₀ = φ_max and γ = 1. Π_eff is the free potential field φ in
+      rescaled units. The existing master equation is the homogeneous limit
+      Π_eff = Π₀ = const — divide both sides by Π₀ to recover
+      i∂ψ/∂t = [−∇² + V + g|ψ|² + ℛ(ψ) + Λln(1+κ|ψ|²)]ψ.
+
+  v_eff_note: >
+    V_eff(η) replaces the external V(r). The potential is determined
+    self-consistently by the commitment field η(x,t) rather than specified
+    externally. See domains/physics/gravity-from-eta-field.yaml for the
+    derivation of Shapiro delay and Newtonian gravity from this structure.
+
+  conservation_structure:
+    conserved_quantity: "C = η + Π_eff/Π₀  (closed system)"
+    local_continuity: "∂ₜ(η + Π_eff/Π₀) + ∇·J = 0"
+    flux: "J = −D_Π∇Π_eff + D_η∇η"
+    meaning: >
+      Total commitment plus normalised free potential is conserved —
+      the substrate has fixed total capacity φ_max. Flows of J encode
+      observable energy transport, heat flow, and field radiation as
+      redistribution of commitment and free potential.
 
   field_identity:
     psi: >
-      ψ(r,t) is the substrate's resolution landscape — the full
-      distribution of open dilemmas at position r and process-counter t,
-      weighted by their R5 viability amplitude. Same object as the quantum
-      wavefunction (quantum-foundation.yaml: ψ = η = φ/φ_max), the GP
-      order parameter, and the normalised potential field amplitude.
-    decomposition: "ψ = |ψ| · exp(iφ)"
-    psi_squared: >
-      |ψ|² is the commitment density at r,t — the probability that the
-      dilemma at r is currently in a committed state.
+      ψ(x,t) is the substrate's resolution landscape — fundamental ongoing
+      process-field representing continuous propagative activity. Same object
+      as the quantum wavefunction (ψ = η = φ/φ_max), the GP order parameter,
+      and the normalised potential field amplitude.
+    decomposition: "ψ = √ρ · exp(iφ)"
+    rho: "|ψ|² = ρ = local process intensity = commitment density"
+    pi_eff: "Π_eff = Π₀ − γη = local free propagation potential"
+
+  eta_as_viability:
+    definition: "η(x,t) = a₀|ψ|² + a₁|∇|ψ||² + a₂|ψ|²|∇φ|²"
+    meaning: >
+      Commitment / stabilised recursive propagation. This is the viability
+      measure 𝓥(ψ) — η and 𝓥 are the same quantity in the Π_eff formulation.
+    weights: "a₀ = w₀ (amplitude), a₁ = w₁ (structure), a₂ = w₂ (flow)"
 
 # ─────────────────────────────────────────────
 # TERM MAPPING TO R1-R5
