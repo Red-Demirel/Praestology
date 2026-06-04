@@ -637,6 +637,56 @@ qft_correspondence:
     the symmetry group of the stable vortex topology
     classification system.
 
+quantum_foundation_ontology_alignment:
+  name: "Quantum Foundation in Light of Foundational Ontology"
+  version: "0.2"
+  status: "Updated integration"
+  statement: >
+    Quantum mechanics is treated as an effective description of the
+    low-commitment (high-Praegress) regime of the single saturating η-field.
+    The wavefunction ψ encodes unresolved multiplicity and propagative
+    activity prior to R5 viability selection. Apparent randomness and
+    collapse are not epistemic limitations but consequences of the transition
+    from Praegress (unresolved potential) to committed structure.
+  wavefunction_role:
+    statement: >
+      The wavefunction describes the real pre-commitment dynamics in regions
+      of high free potential. It is neither purely epistemic nor a complete
+      ontological primitive — it is the natural expression of the master
+      equation in the linearised, low-η limit (Madelung hydrodynamics).
+  praegress_regress_duality:
+    statement: >
+      Quantum behaviour dominates where Praegress (unresolved multiplicity
+      and high propagation freedom) prevails. Classical behaviour emerges
+      where Regress (committed, stabilized structure) dominates. The
+      continuous exchange between these modes is governed by the dual
+      ℛ(ψ) kernel.
+  bell_and_nonlocality:
+    statement: >
+      Entanglement reflects shared Praegress modes across a common segment
+      of the η-field. Strong R5 selection on one side induces an immediate
+      resolution update in the shared substrate. This constitutes causal
+      influence within the deeper process layer (prior to or during R5),
+      outside the committed macroscopic time we experience. From the
+      committed perspective, it manifests as instantaneous correlation
+      without controllable signaling.
+  methodological_note:
+    statement: >
+      Ours, shaped by high-commitment macroscopic experience,
+      tends to misapply classical notions of locality and substance to the
+      foundational layer. Praestology therefore prioritizes the single-field
+      process dynamics over intuitive particle or container metaphors.
+  implication: >
+    Quantum mechanics is correct and complete in its domain, but it is
+    not fundamental. The deeper reality is the ongoing resolution process
+    in the η-field under R1–R5. All quantum phenomena, including apparent
+    non-locality, are derivable consequences rather than mysteries.
+
+cross_references:
+  - "core/foundational-ontology.yaml"
+  - "core/specifications.yaml (R1–R5)"
+  - "core/master-core-equation.yaml"
+
 # ─────────────────────────────────────────────
 # PROBLEMS THAT DISSOLVE
 # ─────────────────────────────────────────────
