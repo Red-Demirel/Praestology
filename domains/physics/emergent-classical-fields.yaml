@@ -1,122 +1,93 @@
-name: "Emergent Classical Fields – Derived Descriptions from the Master Equation"
-version: "0.1"
+name: "Emergent Classical Fields – Unified Regime Descriptions"
+version: "0.4"
 core_version: "1.5"
 status: "Derived layer – descriptive, not foundational"
 description: >
-  In the appropriate regimes the master equation and single η-field dynamics
-  yield effective classical field equations. These are not fundamental laws
-  but emergent, averaged descriptions valid at specific scales and commitment
-  densities. The underlying reality remains the single saturating potential
-  field ψ governed by R1–R5 and the dual ℛ(ψ) kernel.
+  A complete synthesis of local force regimes, boundary-constrained electrodynamics, 
+  and long-wavelength non-homogeneous gravitational propagation. All classical fields 
+  are regime-dependent descriptions tracking the interplay of free potential (Π_eff) 
+  gradients, chiral vortex motion, and active substrate impedance.
 
 maxwell_emergence:
   regime: "Low-to-intermediate commitment density, linearised fluctuations"
   status: "Effective theory"
   statement: >
-    In the linear response regime with weak fields and slowly varying η,
-    the phase and amplitude dynamics of ψ yield effective Maxwell-like
-    equations. The electromagnetic field strengths emerge from the curl
-    and divergence of the phase-gradient flow coupled to charged topological
-    defects (vortices).
-  derivation_note: >
-    The U(1) phase symmetry of ψ naturally produces gauge fields. The
-    single η-field provides both the propagating medium and the sources
-    (topological charge). No separate electromagnetic field is required.
-  limitation: >
-    Full non-linear regime and strong commitment gradients require the
-    complete master equation.
+    Phase-gradient flows and chiral topological defects (vortices) in ψ produce 
+    effective Maxwell-like equations. The U(1) phase symmetry emerges naturally. 
+    Transverse Lorentz force dominates in the linear limit; longitudinal components 
+    appear as higher-order effects from commitment-density gradients along current flow.
 
-strong_force_emergence:
-  regime: "Very high local commitment density (quark cores)"
-  status: "Effective description"
+ampere_longitudinal_force:
+  name: "Ampère's Longitudinal Force – Higher-Order Commitment Flow Effect"
+  status: "Derived effective description"
+  regime: "High-current, non-steady, or high local commitment density"
   statement: >
-    The strong force emerges as the short-range impedance and topological
-    confinement arising from triality-stabilized closures (D+D+A, D+A+A
-    structures). At extremely high commitment density the Regress kernel
-    and saturation term create strong restoring forces that confine color-like
-    degrees of freedom.
-  note: "This is consistent with asymptotic freedom at short distances and
-        confinement at larger distances."
-
-weak_force_emergence:
-  regime: "Intermediate commitment density with topology-switching transitions"
-  status: "Effective description"
-  statement: >
-    The weak force corresponds to topology-changing transitions (e.g.,
-    chiral flips or decay channels) mediated by the viability operator ℛ(ψ)
-    when local commitment configurations cross instability thresholds.
-  note: "It is inherently tied to the Regress kernel and finite lifetime
-        of unstable closures."
+    Coherent commitment transport (current) creates asymmetric impedance wakes 
+    ahead and Regress trails behind, producing a measurable longitudinal stress.
+    This unifies transverse and longitudinal forces under a single η-field, 
+    accounting for historical anomalies lost in classical vacuum EM frameworks.
 
 gravity_emergence:
   regime: "Large-scale, averaged commitment density gradients"
   status: "Effective long-wavelength description"
   statement: >
-    Gravity emerges as refractive impedance due to spatial gradients in
-    the local processing capacity Π_eff (or equivalently η). Light and
-    matter follow paths of minimal processing cost, producing the observed
-    deflection, time dilation, and orbital behaviour.
-  note: "No curved spacetime arena is required. The effective metric
-        behaviour is a macroscopic average over commitment-density gradients."
-
-unification_note:
-  statement: >
-    All four forces are different expressions of the same underlying
-    potential–commitment dynamics at different recursive depths Ξ and
-    commitment density regimes. They are relational accessibility structures
-    of the emergent manifold rather than independent fundamental forces.
-
-  navier_stokes_like:
-    regime: "High commitment density, collective vortex flow"
+    Gravity emerges as refractive impedance within the single saturating η-field, 
+    arising from spatial gradients in commitment density. Higher commitment 
+    (lower free potential Π_eff) creates local depressions in propagation capacity, 
+    causing paths to bend via the principle of minimal processing cost.
+  propagation_characteristics:
+    high_commitment:
+      description: >
+        High-η regions (structures, clusters) generate intense local Π_eff gradients. 
+        This produces strong effective attraction but higher viscous damping due to 
+        elevated Regress activity.
+    low_commitment:
+      description: >
+        Low-η regions (voids and galactic outskirts) maintain higher Π_eff, resulting 
+        in weaker local tension but significantly reduced Regress damping. 
+        Gravitational gradients propagate farther with less attenuation.
+  regress_connection:
     statement: >
-      Macroscopic flow of many vortices in a background commitment density
-      yields effective Navier–Stokes-like hydrodynamics with additional quantum
-      pressure and Regress viscosity terms.
+      The Regress kernel modulates the effective depth and range of Π_eff gradients, 
+      creating an environment-dependent gravitational "reach" that is stronger and 
+      longer-ranged in low-commitment regions.
+  mathematical_encoding: >
+    This behavior is directly governed by the variable kinetic term −∇·(Π_eff ∇) 
+    in the authoritative master equation. No separate curved spacetime 
+    arena or dark matter parameters are required.
 
-  einstein_like:
-    regime: "Very large scales, averaged commitment density gradients"
-    statement: >
-      Long-wavelength refractive impedance from large-scale η-gradients produces
-      effective metric behaviour consistent with general relativity in the weak
-      field limit.
-
-ampere_longitudinal_force:
-  name: "Ampère's Longitudinal Force – Higher-Order Commitment Flow Effect"
-  version: "0.1"
-  status: "Derived effective description"
+fluid_dynamics_emergence:
+  regime: "High commitment density, collective vortex flow"
+  status: "Effective macroscopic description"
   statement: >
-    Ampère's original force law between current elements included a longitudinal
-    component along the line joining them. In Praestology this component emerges
-    naturally as a higher-order effect when there are commitment-density gradients
-    along the direction of current flow. Coherent commitment transport (current)
-    creates asymmetric impedance wakes and Regress trails, producing a measurable
-    longitudinal stress in addition to the standard transverse Lorentz force.
-  regime: "High-current, non-steady, or high local commitment density"
-  derivation_note: >
-    The longitudinal term arises from the dual ℛ(ψ) kernel acting on phase-gradient
-    flows in regions with non-uniform η. It is a natural consequence of the active,
-    saturating substrate rather than a separate fundamental force.
-  relation_to_standard_em: >
-    In the linear, low-commitment limit the transverse Lorentz force dominates.
-    The longitudinal component becomes observable under strong, directional
-    commitment flows where the substrate's impedance is locally perturbed.
-  historical_note: >
-    This explains why Ampère experimentally observed longitudinal forces that
-    later "disappeared" in the Maxwell/Lorentz formulation — they are higher-order
-    substrate effects that standard vacuum-based EM does not capture.
+    Macroscopic flow of many vortices in a background commitment density yields effective 
+    Navier–Stokes-like hydrodynamics with additional quantum pressure and Regress 
+    viscosity terms. Spatial variations in Π_eff correspond directly to effective 
+    pressure gradients.
 
-  implication: >
-    The single η-field naturally unifies transverse and longitudinal electromagnetic
-    forces as different expressions of the same potential–commitment dynamics.
+strong_force_emergence:
+  regime: "Very high local commitment density (quark cores)"
+  status: "Effective description"
+  statement: >
+    Arises as short-range impedance and topological confinement from triality-stabilized 
+    closures (D+D+A, D+A+A structures). The Regress kernel and saturation 
+    term generate extreme restoring forces, mirroring asymptotic freedom and confinement.
+
+weak_force_emergence:
+  regime: "Intermediate commitment density with topology-switching transitions"
+  status: "Effective description"
+  statement: >
+    Corresponds to topology-changing transitions (chiral flips, decay channels) 
+    mediated by the viability operator ℛ(ψ) when configurations cross local stability thresholds.
 
 cross_scale_transition:
   statement: >
-    The transition between regimes is governed by local commitment density η
-    and recursive depth Ξ. Low η → quantum / wave-like (Madelung/QHD);
-    high η → classical / refractive (effective GR and fluid-like behaviour).
-    The master equation smoothly interpolates between them.
+    The master equation smoothly interpolates between regimes: low η yields wave-like 
+    or quantum behavior; high η yields classical refractive and fluid-like behavior.
+    The transition is governed dynamically by local commitment density and the viability kernel.
 
-notes:
-  - "These emergent descriptions are valid only in their respective regimes."
-  - "The single η-field + master equation remains the authoritative core."
-  - "No new fields or dimensions are introduced."
+# Cross-Domain Architecture Check:
+- "core/foundational-ontology.yaml"            # The impossibility of nothingness
+- "core/specifications.yaml (R1–R5)"           # The minimal process constraints
+- "domains/physics/quantum-foundation.yaml"    # The low-commitment effective theory
+- "domains/physics/emergent-classical-fields.yaml" # The high-commitment effective theory
