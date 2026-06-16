@@ -1,0 +1,207 @@
+name: "Process_Rates_Effect"
+version: "0.1"
+status: "Emerging domain — conceptual framework, empirical bridges noted, formal derivations open"
+parent_framework: "Praestology / Ontic Field Continuum"
+description: >
+  Biological, cognitive, and social systems function as sub-processes within the
+  master field process. Each sub-process operates at characteristic iteration rates
+  (Π_eff-dependent). When these rates interact — internally or with external signals —
+  a spectrum of coupling effects emerges. This domain maps that spectrum and connects
+  it to existing empirical observations.
+
+---
+
+core_concept:
+  term: "Process-Rates Effect"
+  definition: >
+    The influence of coupling between process rates operating at different structural
+    depths or across sub-process boundaries. Neither resonance nor dissonance is the
+    default state — both are expressions of the same underlying rate-interaction
+    mechanism.
+  spectrum:
+    resonance:
+      description: >
+        Process rates couple constructively. Mutual reinforcement and stabilisation.
+        Low coupling overhead. Associated with health, flow states, effective
+        synchronisation.
+    harmony:
+      description: >
+        Process rates are non-identical but compatible. No active coupling work
+        required. System maintains coherence without strain.
+    interference:
+      description: >
+        Partial rate overlap produces composite patterns affecting both rates.
+        Not inherently negative — may be leveraged therapeutically (see: metronome
+        therapy). Outcome depends on relative amplitudes and proximity to viability
+        threshold.
+    dissonance:
+      description: >
+        Process rates actively incompatible. Continuous energy expenditure required
+        to maintain both. Sustained dissonance degrades viability of one or both
+        sub-processes over time.
+
+---
+
+external_rate_sources:
+  standard_second:
+    description: >
+      The SI second (~1 Hz) as pervasive societal takt. Proximity to typical human
+      resting pulse rate (50–80 BPM) places it within the biological resonance zone —
+      close enough to exert coupling pressure, not native enough for harmonic coupling.
+    hypothesis: >
+      Continuous exposure to 1 Hz signals (clocks, metronomes, notification rhythms)
+      may impose low-grade rate dissonance on biological oscillators calibrated to
+      individually variable resting pulse rates.
+    status: "Conceptual — empirical study pending"
+    signal_structure:
+      single_beat:
+        coupling_pressure: "High — dominant entrainment anchor at 1 Hz"
+        note: >
+          Acute exposure may be stabilising (entrainment reduces self-regulation
+          overhead). Chronic exposure likely dissonant for individuals whose native
+          rate deviates from 1 Hz.
+      split_signal_2:
+        coupling_pressure: "Moderate — binary rhythm structure retains entrainment potential"
+      split_signal_3_or_more:
+        coupling_pressure: "Low — energy distributed across sub-frequencies, no dominant anchor"
+        note: >
+          Recommended for ambient exposure. Analogous to natural soundscapes
+          (spectrally broad, no mono-frequency dominance). Biological systems
+          evolutionarily calibrated to such environments.
+
+  artificial_light_cycles:
+    description: >
+      Artificial lighting decouples circadian oscillators from solar cycle takt.
+    empirical_bridge: "Chronobiology — established evidence for circadian disruption as disease vector"
+    status: "Empirically supported at phenomenological level; process-rates framing adds theoretical unification"
+
+  digital_interaction_speed:
+    description: >
+      Notification rates, scroll speeds, response latency expectations impose
+      cognitive process rates orders of magnitude above biological defaults.
+    status: "Conceptual — correlational evidence from attention research"
+
+---
+
+biological_sub-processes:
+  resting_pulse:
+    role: "Primary biological takt oscillator. Individual-specific, variable."
+    note: >
+      Not a fixed frequency — healthy pulse exhibits natural variability (HRV).
+      Metronomic rigidity of pulse is itself a pathological indicator.
+    implication: >
+      No universal external rate is natively harmonic for all individuals.
+      Therapeutic rate matching should be individualised.
+
+  circadian_rhythm:
+    role: "Multi-oscillator system governing metabolic, hormonal, and cognitive cycles"
+    empirical_bridge: "Chronobiology"
+    process_rates_framing: >
+      Circadian disruption as rate dissonance between biological sub-process
+      and externally imposed light/activity takt.
+
+---
+
+pathological_expressions:
+  note: "The following are hypotheses derived from process-rates framework. Formal derivation open."
+
+  tumour_formation:
+    hypothesis: >
+      Uncontrolled local commitment accumulation without viability feedback from
+      the encompassing system. Sub-process decouples from host process rate,
+      optimises locally at systemic cost.
+    analogy: "Over-commitment without R5 constraint — mirrors ethical over-commitment at biological scale"
+    empirical_bridge: "Oncology — loss of contact inhibition, autonomous proliferation signals"
+    status: "Conceptual analogy — not formal derivation"
+
+  depression:
+    hypothesis: >
+      Sub-process fallen into critically low commitment rate. Insufficient
+      coupling energy to maintain coherent engagement with environmental gradients.
+    status: "Conceptual"
+
+  mania:
+    hypothesis: >
+      Sub-process operating at unsustainably high commitment rate. Viability
+      threshold repeatedly crossed without consolidation phase.
+    status: "Conceptual"
+
+  obsessive_compulsive_patterns:
+    hypothesis: >
+      Over-commitment to a single process channel. Local resonance loop
+      excludes coupling to broader process network.
+    status: "Conceptual"
+
+  ADHD_motor_restlessness:
+    hypothesis: >
+      Motor restlessness as active frequency defence — the sub-process generating
+      endogenous rhythmic signals to maintain native process rate against dominant
+      external takt (e.g. classroom, institutional rhythms).
+    implication: >
+      Suppression of motor restlessness without resolving rate dissonance removes
+      compensation mechanism, increasing cognitive load.
+      Therapeutic movement and rhythm support native frequency rather than
+      overriding it.
+    empirical_bridge: >
+      Interactive Metronome therapy — significant improvements in attention,
+      memory, motor control in ADHD, TBI, Parkinson's, stroke rehabilitation.
+      Mechanism: iterative feedback-guided rate coupling, not conditioning.
+    falsifiable_prediction: >
+      Individuals with ADHD should exhibit measurable, consistent endogenous
+      frequency signatures in motor patterns — interpretable as active rate
+      defence rather than dysregulation.
+    status: "Conceptual with empirical bridge — formal derivation open"
+
+---
+
+therapeutic_implications:
+  meditation:
+    description: >
+      Temporary decoupling from externally imposed process rates. System returns
+      toward native biological rates during session.
+    current_limitation: >
+      Applied without mechanistic understanding of rate dynamics. Resynchronisation
+      effect is temporary if ambient dissonance sources remain unaddressed.
+      Explains moderate and variable clinical efficacy.
+    process_rates_framing: >
+      Effective meditation practice embedded in broader lifestyle rate alignment
+      (sleep timing, social rhythm, dietary cycles) addresses multiple rate levels
+      simultaneously — consistent with superior outcomes in contemplative traditions
+      versus isolated technique application.
+    status: "Conceptual framing of existing observations"
+
+  interactive_metronome_therapy:
+    description: >
+      Structured feedback-guided motor synchronisation to external reference tone.
+    observed_effects: >
+      Improvements in attention, processing speed, memory, motor coordination
+      across ADHD, TBI, Parkinson's, stroke, cerebellar injury populations.
+    process_rates_framing: >
+      Therapeutic interference leading to resonance — external rate offered as
+      coupling anchor, iterative feedback guides sub-process toward compatible rate.
+      Not entrainment by force but guided rate negotiation.
+    empirical_status: "Well-established clinical evidence base"
+    open_question: >
+      Optimal reference rate likely individual-specific (resting pulse proximity).
+      Split-signal variants (Tick-Tock structure, signal asymmetry) unexplored
+      as variables in existing studies.
+
+---
+
+open_questions:
+  - "Quantitative relationship between resting pulse deviation from 1 Hz and dissonance load"
+  - "Whether split-signal (3+ sub-signals per second) ambient exposure measurably reduces coupling pressure vs. single beat"
+  - "Endogenous frequency signatures in ADHD motor patterns — dysregulation vs. rate defence"
+  - "Dose-response curve for meditation: session length vs. ambient dissonance load as moderating variable"
+  - "Process-rates framing of tumour microenvironment dynamics — empirical bridge to be established"
+
+cross_domain_overlap:
+  - "biology/consciousness — sub-process coherence threshold for experiential emergence"
+  - "biology/ethics — over-commitment without systemic feedback as shared pathological pattern"
+  - "physics/biology — Π_eff gradients as physical basis for biological rate variability"
+
+notes:
+  - "All pathological expressions are conceptual hypotheses, not formal derivations."
+  - "Empirical bridges indicate existing research consistent with framework — not confirmation."
+  - "Formal derivation from master equation remains open."
+  - "This file documents the process-rates effect domain. It does not modify core Praestology architecture."
