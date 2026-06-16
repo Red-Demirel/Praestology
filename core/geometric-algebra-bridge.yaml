@@ -1,0 +1,286 @@
+# geometric-algebra-bridge.yaml
+# Praestology — Mathematical Strengthening Layer
+# Geometric Algebra, Lie Groups, and QHD as coordinate-free language for ψ mechanisms
+
+id: geometric-algebra-bridge
+title: "Geometric Algebra and Lie Groups as Representation Language for Praestology"
+version: "0.2"
+status: "PROVISIONAL — formal mappings established; explicit GA formulations of key objects open"
+extends: ["navier-stokes-derivation", "master-equation-core", "madelung-cross-domain"]
+priority: 2
+
+---
+
+overview: |
+  Geometric Algebra (GA) and Lie groups do not modify the foundational ontology
+  or the master equation. They supply a coordinate-free, grade-aware representation
+  language in which Praestology mechanisms become explicit rather than implicit.
+
+  Key gain: mechanisms that required hand-inserted conventions in standard tensor/
+  complex notation (chirality, spin, phase-locking, topological protection) drop out
+  naturally from GA structure without additional postulates.
+
+  No new ontological primitives are introduced at any step.
+  All GA/Lie structures are emergent descriptions of the single ψ process.
+
+---
+
+core_principle:
+  statement: |
+    GA is inherently process- and rotation-oriented. It treats vectors (grade-1),
+    bivectors / oriented planes / rotations (grade-2), and higher-grade multivectors
+    uniformly under a single geometric product.
+
+    This maps directly onto Praestology's objects:
+      Grade 0 (scalar)    ←→  commitment density ρ, mass/energy
+      Grade 1 (vector)    ←→  directed flow u, momentum, gradient ∇S
+      Grade 2 (bivector)  ←→  vortex planes, EM field F = E + IB, angular momentum
+      Grade 3 (trivector) ←→  volume orientation, pseudoscalar in 3D
+      Full multivector    ←→  uncommitted field — all grades active, maximum freedom
+
+  grade_as_commitment_depth: |
+    Commitment is grade-reduction.
+    High-Π_eff (potential regime): full multivector — all grades active
+    R3 exploration: multivector components competing
+    R5 lock (commitment): grades progressively freeze
+    Fully committed structure: low-grade residual (scalar density + vector flow)
+
+    Phase-locking is literally grade-reduction of the multivector field.
+    This gives R5 a precise mathematical meaning without new primitives.
+
+---
+
+madelung_in_ga:
+  status: "EXACT — same content as complex Madelung; GA makes grade structure explicit"
+  standard_form: |
+    ψ = √ρ · exp(iS)    [complex notation]
+
+  ga_form: |
+    Ψ = ρ^(1/2) · R     [GA notation]
+
+    where R = exp(Bθ/2) is a rotor, B is a unit bivector (oriented rotation plane)
+    and θ is the phase angle.
+
+  grade_separation: |
+    Continuity equation  ←  grade-0 projection of ∇Ψ equation
+    Momentum equation    ←  grade-1 projection
+    Quantum pressure Q   ←  grade-2 (bivector) divergence
+    Vorticity           ←  grade-2 component of ∇∧u
+
+    Grade separation IS physics separation.
+    No projection operators or index gymnastics required.
+    The structure of the equation selects the physics automatically.
+
+---
+
+chirality:
+  status: "NATIVE in GA — no hand-inserted sign conventions required"
+  mechanism: |
+    A chiral vortex is a rotor R = exp(Bθ/2) where B is an oriented bivector.
+
+    Left-handed vortex:   B = +e₁∧e₂  (positive orientation)
+    Right-handed vortex:  B = -e₁∧e₂  (negative orientation)
+
+    Chirality is the sign of the bivector — it is intrinsic to the geometric object,
+    not a convention imposed on a scalar equation.
+
+  spin_half_from_rotors: |
+    Under a 2π rotation: R → -R  (rotor sign flip)
+    Under a 4π rotation: R → +R  (rotor returns to identity)
+
+    This is the double-cover property of rotors — exactly spin-½ behavior.
+    The 720° periodicity of the Möbius vortex drops out from rotor algebra
+    without the additional postulate that spin-½ "requires" quantum mechanics.
+
+    Fermion statistics is the rotor double-cover applied to committed chiral vortex topology.
+
+  topological_protection: |
+    Topological winding of a rotor field R(r) cannot be continuously unwound
+    without passing through a singularity (zero-amplitude point where R is undefined).
+    This is the GA statement of topological protection — the mechanism behind
+    particle stability and the winding-number contribution to α derivation.
+
+---
+
+lie_groups:
+  status: "EMERGENT from rotor subgroups — not postulated as gauge symmetries"
+  statement: |
+    U(1), SU(2), Spin(3) are rotor subgroups of the GA geometric product.
+    They do not need to be postulated as independent gauge symmetry groups.
+    They emerge as the symmetry algebras of phase-locked chiral vortex topology
+    at different recursive commitment depths.
+
+  mappings:
+    U1: |
+      Phase rotation R = exp(Iθ) where I is the unit pseudoscalar in 2D subspace.
+      Symmetry of uncommitted scalar field — EM gauge symmetry.
+      Conserved quantity (Noether): electric charge = winding number of U(1) rotor field.
+
+    SU2: |
+      Two-component rotor structure in even subalgebra of G(3,0).
+      Symmetry of spin-½ committed vortex pairs.
+      Conserved quantity: weak isospin = topological winding of SU(2) rotor configuration.
+
+    Spin3: |
+      Full rotation group in 3D — rotor group of G(3,0) is Spin(3) ≅ SU(2).
+      Symmetry of spatial orientation of committed topology.
+      Conserved quantity: angular momentum = bivector grade projection.
+
+  standard_model_note: |
+    The Standard Model gauge structure U(1) × SU(2) × SU(3) is the symmetry algebra
+    of phase-locked chiral vortices at three recursive commitment depths.
+    Not postulated — emergent from rotor structure of ψ at each scale tier.
+    SU(3) color: symmetry of three-fold vortex binding (proton/neutron topology) — open.
+
+---
+
+maxwell_from_ga:
+  status: "DERIVED — grade-2 projection of master equation onto committed chiral-vortex regime"
+  statement: |
+    The electromagnetic field in GA is a single bivector field:
+      F = E + IB    (grade-2 multivector; I = unit pseudoscalar)
+
+    Maxwell's four equations collapse to one GA equation:
+      ∇F = J
+
+    where ∇ is the vector derivative (grade-1 operator) and J is the current multivector.
+
+  praestology_reading: |
+    F is the grade-2 component of ψ in the committed chiral-vortex regime.
+    E (grade-1 vector part) ← commitment density gradient ∇ρ in polar vortex
+    B (grade-2 bivector part) ← rotational phase gradient ∇∧(∇S) in axial vortex
+
+    Maxwell is not a separate field theory.
+    It is the grade-2 projection of the master equation
+    applied to committed chiral topology at the electromagnetic scale.
+
+    ∇F = J is the long-wavelength, committed-vortex limit of:
+      i(1/Π_eff) ∂ψ/∂t = [...] ψ
+    under: high-η, phase-locked, grade-2 dominant conditions.
+
+  status_note: "Explicit term-by-term derivation open — structure is clear, algebra to be completed"
+
+---
+
+quantum_hydrodynamics_bridge:
+  status: "MESOSCOPIC BRIDGE — between GA/Lie microscopic and NS macroscopic"
+  role: |
+    QHD (Madelung in GA) occupies the mesoscopic regime:
+      Microscopic:   GA/Lie — vortex formation, rotor dynamics, grade structure
+      Mesoscopic:    QHD    — commitment density ρ, phase flow u, quantum pressure Q
+      Macroscopic:   NS     — bulk fluid, viscosity, turbulence
+
+    The chain is:
+      ψ (master eq) → Ψ = √ρ·R (GA Madelung) → {ρ, u, Q} (QHD) → {ρ, u, P, η} (NS)
+
+    Each step is a coarse-graining under explicit regime constraints.
+    No new physics is introduced — only resolution is reduced.
+
+  grade_flow: |
+    Microscopic (GA):   full multivector Ψ — all grades contribute
+    QHD regime:         grade-0 (ρ) and grade-1 (u) dominate; grade-2 (Q) small
+    NS regime:          grade-0 and grade-1 only; Q → 0; grade-2 absorbed into η
+
+---
+
+viability_operator_in_ga:
+  status: "PROVISIONAL — mechanism clear; explicit GA form open"
+  statement: |
+    R(ψ) in GA is a grade-selective damping operator:
+      - Acts on high-grade multivector components (low-viability configurations)
+      - Reinforces grade-0 and grade-1 structure that crosses viability threshold V_c
+      - Produces grade-reduction (commitment) when reinforcement exceeds threshold
+
+    Formal expression:
+      R(Ψ) = Σ_k  γ_k(V_k - V_c) · <Ψ>_k
+
+    where <Ψ>_k is the grade-k projection of Ψ, V_k is its viability measure,
+    and γ_k is the grade-k decay/reinforcement rate.
+
+    Low-viability high-grade components decay → return to free potential (R1)
+    High-viability low-grade components lock → committed structure (R4/R5)
+
+  open: "Explicit calibration of γ_k from observed decay rates — open"
+
+---
+
+pi_eff_as_refractive_index:
+  status: "STRENGTHENED by GA"
+  statement: |
+    In GA, the variable kinetic term -∇·(Π_eff ∇) in the master equation
+    is the GA statement of anisotropic propagation in a graded medium.
+
+    Π_eff(r,t) acts as the inverse refractive index of the substrate.
+    Wave paths curve toward lower Π_eff — exactly Fermat's principle in GA form.
+
+    Gravitational lensing: path integral of rotor field R(r) along geodesic
+    in Π_eff landscape — curvature without curved spacetime manifold.
+
+    This is coordinate-free and background-independent by construction —
+    GA operates without a fixed metric tensor.
+
+---
+
+open_derivations:
+  priority_2:
+    - id: "maxwell-explicit-ga"
+      description: "Term-by-term derivation of ∇F = J from master equation in GA form"
+      depends_on: ["committed-vortex-regime", "grade-2-projection"]
+    - id: "viability-operator-ga"
+      description: "Explicit grade-selective form of R(ψ) with calibrated γ_k"
+      depends_on: ["R-psi-calibration", "F02"]
+    - id: "su3-from-rotors"
+      description: "SU(3) color as symmetry of three-fold vortex binding in GA"
+      depends_on: ["proton-topology", "winding-number-derivation"]
+    - id: "entanglement-as-rotor-correlation"
+      description: "Entanglement formally as shared rotor orientation across separated committed structures"
+      depends_on: ["nonlocality-mechanism"]
+
+---
+
+summary: |
+  GA and Lie groups supply three things:
+
+  1. NATIVE MECHANISMS — chirality, spin-½, topological protection, gauge symmetry
+     drop out from rotor algebra without additional postulates.
+
+  2. GRADE AS COMMITMENT DEPTH — the mathematical grade of a multivector directly
+     encodes commitment state. R5 locking is grade-reduction. This gives the
+     R1-R5 rule-set a precise algebraic meaning.
+
+  3. UNIFIED DERIVATION CHAIN — ψ → GA Madelung → QHD → NS is a clean,
+     explicit, coarse-graining ladder. Each level is a grade-truncation of the one above.
+     Maxwell is the grade-2 projection at the committed-vortex scale.
+
+  The foundational ontology and master equation are unchanged.
+  GA is the language in which the mechanisms become self-evident.
+
+---
+# AMENDMENT v0.3 — following gauge-symmetry-reinterpretation.yaml
+
+amendments:
+  lie_groups_u1_correction:
+    section: "lie_groups.U1"
+    flag: "INCOMPLETE — captures phase-gradient component only"
+    note: |
+      U(1) phase rotation R = exp(Iθ) describes mechanism 1 (phase-gradient flow) only.
+      Full EM combines three mechanisms; U(1) is the residual symmetry of the
+      linearised projection of mechanism 1 alone.
+      See gauge-symmetry-reinterpretation.yaml for complete decomposition.
+
+  maxwell_from_ga_correction:
+    section: "maxwell_from_ga"
+    flag: "COMBINED EFFECTIVE EQUATION — not single-mechanism derivation"
+    note: |
+      ∇F = J unifies phase-gradient (mechanism 1) and Π_eff gradient (mechanism 2)
+      in the linearised limit. Grade-3 chirality mechanism (CISS, spin-polarization)
+      is projected out and appears anomalous in standard QED.
+      Full derivation requires Grade-3 × Grade-1 → Grade-2 interaction term.
+      See gauge-symmetry-reinterpretation.yaml and chirality-biology.yaml.
+
+  gauge_symmetry_status:
+    global_flag: |
+      All Lie group entries (U(1), SU(2), SU(3)) describe RESIDUAL CONSERVATION
+      SIGNATURES of committed rotor topology at each scale tier.
+      They are emergent from ψ dynamics — not foundational principles.
+      Symmetry groups do not generate physics; physics generates symmetry groups.
