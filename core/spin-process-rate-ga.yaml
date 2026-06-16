@@ -1,0 +1,265 @@
+# spin-process-rate-ga.yaml
+# Praestology — Physics Domain
+# Spin as process-rate; α as closure-configuration ratio instance
+
+name: "Spin, Process-Rate, and the Closure-Configuration Ratio Origin of α"
+version: "2.0"
+parent_domain: "Physics"
+core_version: "1.5"
+status: "Hypothesis — structurally consistent; numerical closure open"
+supersedes: "spin-process-rate-ga v1.0"
+description: >
+  Spin is not an intrinsic property of a point particle. In Praestology,
+  the electron is a 720° Möbius vortex — a spinor rotor in the even
+  subalgebra of Cl(3,0). Spin is the observable signature of the vortex's
+  internal phase iteration: the rate at which the field resolves its own
+  closure at the Möbius crossover. The fine-structure constant α emerges
+  as the electron's instance of the closure-configuration ratio (CCR) —
+  the irreducible cost of maintaining one specific committed topology
+  against the full orientational phase space of the 3D embedding field.
+
+dependency_map:
+  requires:
+    - "core/core-dynamical-equation.yaml"
+    - "core/emergent-relational-manifold.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "domains/physics/fine-structure-constant.yaml"
+  provides_to:
+    - target: "domains/physics/quantum-foundation.yaml"
+      via: "Spin as phase iteration rate; CCR as structural embedding cost"
+    - target: "core/quaternion-formulation.yaml"
+      via: "GA formulation of double cover (SU(2) ≅ unit quaternions)"
+    - target: "domains/physics/gauge-symmetry-reinterpretation.yaml"
+      via: "CCR as the ratio underlying each gauge group's coupling strength"
+
+---
+
+spin_process_rate:
+  statement: |
+    The electron is a persistent, phase-locked topological structure:
+    a 720° Möbius vortex. What experiments measure as "spin" is the
+    observable manifestation of the vortex's internal phase iteration —
+    the rate at which the field re-encounters its own closure point
+    (the Möbius crossover) during each full 720° cycle.
+
+    This iteration is a local resolution event: the vortex advances
+    through its phase space. The frequency of this advance is the
+    spin precession rate. It is not an external rotation imposed on
+    a particle — it is the field's own process-rate for resolving
+    the closure of a chiral committed topology.
+
+    Spin is a measure of how fast the vortex is iterating its
+    internal commitment cycle (R4) relative to the available
+    local processing capacity (Π_eff).
+
+  relation_to_process_rate: |
+    In the master equation, local evolution rate is scaled by 1/Π_eff.
+    For a stable vortex, the phase iteration rate is set by the local
+    free potential at the vortex core.
+
+    As the vortex moves through regions of varying commitment density,
+    its internal iteration rate (spin precession) changes accordingly.
+    This directly links spin precession to the substrate's process-rate —
+    and through it, to gravitational time dilation and velocity redshift.
+
+    Spin precession frequency variation in gravitational potentials
+    is a direct, testable prediction — not a correction but the mechanism.
+
+  per_iteration_phase: |
+    Spin quantum number s encodes the per-iteration phase advance Δθ:
+
+      Spin-½  (electron):  Δθ = π per iteration — two cycles to close
+      Spin-1  (photon):    Δθ = 2π per iteration — one cycle to close
+      Spin-0  (scalar):    Δθ = 0 — no phase rotation, pure committed density
+      Spin-3/2:            Δθ = 3π/2 — four cycles to close (high recursive depth)
+
+    Fermion/boson distinction is a Π_eff availability threshold:
+    — Photon propagates in high-Π_eff: full processing capacity, one cycle closes
+    — Electron's own committed topology depletes local Π_eff by half per iteration:
+      two iterations required to close the loop
+    — Half-integer spin = self-depleting topology; integer spin = non-depleting
+
+---
+
+ga_framework:
+  statement: |
+    Geometric Algebra (Cl(3,0)) provides the natural coordinate-free language.
+    The electron's 720° rotation is a rotor in the even subalgebra Cl₃⁺,
+    isomorphic to the quaternions, representing the double cover of SO(3).
+
+  grade_decomposition:
+    grade_0_scalar: "Commitment density η — the resolved 'now' of each iteration"
+    grade_1_vector: "Directional flows — propagation, gradients, momentum"
+    grade_2_bivector: "Oriented planes — vortex circulation plane, EM bivector F"
+    grade_3_pseudoscalar: "Oriented volume — full 3D embedding phase space; chirality winding"
+
+  spinor_rotor: |
+    R = exp(−Iθ/2), I a unit bivector — represents the vortex's phase state.
+    720° rotation → rotor returns to +1 (closure complete)
+    360° rotation → rotor at −1 (half-cycle, not yet closed)
+
+    The rotor's action on the embedding space is conjugation: x → RxR†
+    This encodes both chirality (sign of bivector I) and phase (angle θ).
+    Chirality is the grade-3 pseudoscalar component — the topological
+    winding direction that determines spin-polarization of coupled processes
+    (CISS effect at molecular scale; parity violation at weak-force scale).
+
+  double_cover_process_reading: |
+    The rotor double-cover is not merely a mathematical curiosity.
+    It is the geometric expression of the two-iteration requirement:
+
+      Geometric statement:  R → −R under 2π rotation
+      Process-rate statement: one master equation iteration advances phase by π
+      Π_eff statement: committed topology depletes half local Π_eff per cycle
+
+    These are three descriptions of the same mechanism at different levels.
+    GA's double-cover IS the process-rate consequence of half-Π_eff availability.
+
+---
+
+alpha_as_ccr:
+  statement: |
+    The fine-structure constant α is the electron's instance of the
+    closure-configuration ratio (CCR) — see closure-configuration-ratio.yaml.
+
+    CCR(electron) = Ω_rotor(electron) / Ω_embed(3D)
+                  = (phase space traversed per 720° closure) / (full 3D pseudoscalar volume)
+                  = α
+
+  framing: |
+    α is the irreducible orientational cost of maintaining the electron's
+    specific committed topology against the full orientational phase space
+    of the 3D embedding field.
+
+    It is not a defect, anomaly, or free parameter.
+    It is not "how much the electron fails to couple to the field."
+    It is the cost of being this electron — this specific committed closure —
+    rather than uncommitted field.
+
+    A committed structure necessarily occupies a specific orientation subset.
+    The ratio of that subset to the full embedding phase space is α.
+    If α = 1: rotor simultaneously all orientations = uncommitted field, not a particle.
+    0 < α < 1: the only viable regime for stable committed topology.
+
+  geometric_terms: |
+    α⁻¹ = 4π³ + π² + π ≈ 137.036304
+
+    4π³ — volume of S³: quaternion phase space traversed per 720° closure
+           (S³ is the unit quaternion sphere; double-cover factor included)
+    π²  — bivector surface: orientational interface cost of coupling the
+           rotor's 2D circulation plane to the 3D embedding space
+    π   — self-intersection residual at the Möbius crossover point
+           where the 720° closure completes
+
+    Sum: total orientational cost of one complete closure cycle.
+    Ratio to embedding pseudoscalar volume: α⁻¹.
+
+    Each term is a necessary geometric cost — none is arbitrary.
+
+  relation_to_spin: |
+    The CCR sets the conversion efficiency between process-rate and
+    observable spin precession:
+
+      ω_spin = (Π_eff · Δθ) / (CCR · τ_closure)
+
+    Higher process-rate (higher Π_eff) → faster spin precession.
+    CCR is the orientational cost per iteration — the ratio of how much
+    phase space the rotor actually traverses to how much is available.
+
+    This is not friction or resistance. It is the geometric ratio between
+    the specific and the general: committed topology vs. open field.
+
+  alpha_geometric_vs_measured: |
+    α_geometric = CCR in unperturbed free field = 4π³ + π² + π inverse
+    α_measured  = CCR sampled within commitment-dense lab environment
+
+    Environmental commitment density partially pre-selects the embedding
+    phase space, compressing effective Ω_embed slightly.
+    Result: α⁻¹_measured < α⁻¹_geometric (CODATA: 137.035999 vs 137.036304)
+
+    The 2.2 ppm gap is the environmental Π_eff depression imprinting
+    on the measurement of a geometric ratio. It is predicted, not anomalous.
+
+  running_alpha: |
+    α runs with energy scale (QED renormalization group).
+    CCR reading: at higher energy = higher local commitment density = lower Π_eff,
+    the embedding phase space Ω_embed is progressively compressed.
+    The ratio CCR = Ω_rotor/Ω_embed increases toward 1 as Ω_embed shrinks.
+    The Landau pole (α divergence) is Ω_embed → Ω_rotor —
+    physically: approach to logarithmic saturation ceiling.
+    The substrate cannot be compressed beyond processing capacity —
+    the same Λ·ln(1 + κ|ψ|²) that regularizes NS singularities
+    prevents the Landau pole from being physical.
+
+---
+
+pauli_exclusion:
+  statement: |
+    Two fermions cannot occupy the same state because two identical
+    half-iteration (spin-½) processes in the same Π_eff region would
+    mutually deplete the available processing capacity below the
+    viability threshold V_c.
+
+    R(ψ) excludes the configuration — not as an external rule
+    but as a direct viability selection outcome.
+
+    Pauli exclusion is R(ψ) viability selection applied to
+    overlapping half-Π_eff-depleting committed topologies.
+
+  status: "MECHANISM IDENTIFIED — formal derivation from R(ψ) parameters open"
+
+---
+
+chirality_connection:
+  statement: |
+    The rotor's grade-3 pseudoscalar component (topological winding direction)
+    determines spin-polarization of all processes the vortex couples to.
+
+    This is the same mechanism operating at three scale tiers:
+      Particle:   parity violation — chirality-sensitive R(ψ) at weak-force depth
+      Molecular:  CISS effect — grade-3 × grade-1 → grade-2 spin polarization
+      Biological: homochirality — R5 viability selection of efficient spin-filtered transport
+
+    The grade-3 chirality of the spinor rotor is projected out by standard
+    gauge theories (U(1) acts on grade-1 phase only) — appearing as anomalies.
+    In Praestology it is primary: the rotor's chirality is constitutive of its identity.
+
+  cross_reference: "gauge-symmetry-reinterpretation.yaml, chirality-biology.yaml"
+
+---
+
+open_derivations:
+  priority_1:
+    - id: "ccr-electron-explicit"
+      description: |
+        Derive Ω_rotor = 4π³ + π² + π from stability analysis of
+        720° Möbius vortex in saturating GP equation.
+        Confirm S³ volume, bivector surface term, and self-intersection residual
+        from first principles of vortex topology.
+      depends_on: ["mobius-vortex-stability", "F02"]
+      note: "This is the α numerical closure — highest priority open derivation"
+
+    - id: "omega-spin-explicit"
+      description: "Derive ω_spin = f(Π_eff, η) explicitly from master equation"
+      depends_on: ["ccr-electron-explicit"]
+
+  priority_2:
+    - id: "pauli-exclusion-from-rpsi"
+      description: "Formal derivation of exclusion from R(ψ) viability on overlapping half-Π_eff topologies"
+    - id: "g-minus-2-from-ccr"
+      description: "Derive g-2 series as successive environmental CCR compressions at loop order"
+      depends_on: ["ccr-electron-explicit"]
+
+---
+
+notes:
+  - "GA framing is a descriptive layer, not a new physical postulate —
+     it arises from the dynamics of the ψ field."
+  - "The CCR replaces all 'defect', 'friction', and 'anomalous coupling'
+     language from v1.0. These framings implied failure; CCR correctly
+     identifies a structural feature of committed embedding."
+  - "Numerical derivation of α from vortex stability conditions remains
+     the single highest-priority open item in the physics domain."
+  - "The spin-statistics theorem connection (half-integer spin →
+     Fermi-Dirac statistics) is now grounded in the Π_eff depletion
+     mechanism and R(ψ) exclusion — same mechanism, two descriptions."
