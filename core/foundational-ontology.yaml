@@ -1,0 +1,115 @@
+# core/foundational-ontology.yaml
+name: "Foundational Ontology and the Impossibility of Absolute Nothingness"
+version: "0.4"
+status: "Provisional Foundational Statement"
+description: >
+  This document clarifies the ontological assumptions underlying Praestology.
+  It distinguishes logical necessity from physical hypothesis and provides
+  a minimal foundation upon which the subsequent formalism is built.
+
+  The collective “we” in this file refers to the Praestology framework itself,
+  not to humanity in general. Statements are presented as logical consequences
+  of the axioms, not as subjective opinions.
+
+logical_foundation:
+  statement: >
+    Absolute nothingness is not merely physically unrealizable; it is
+    logically inconsistent.
+  rationale: >
+    Any description of a state requires at least one determination,
+    distinction, condition, or boundary. A state defined as the complete
+    absence of all determinations cannot be consistently specified without
+    introducing properties that negate its own definition.
+  consequence: >
+    Praestology does not begin from a transition from absolute nothingness
+    to existence. Instead, it assumes that some form of potential,
+    process, or possibility is logically prior to any emergent structure.
+  core_rule_reference: "R1 – Existence (something always beats nothing)"
+
+minimal_ontological_commitment:
+  statement: >
+    The framework assumes the existence of a continuously available
+    substrate of potential from which stable structures may emerge.
+  primitive: >
+    Process (dynamic commitment) is treated as the fundamental ontological
+    primitive, rather than substance or static geometry. Structure is
+    derived as sustained process.
+  identification: >
+    In the full Praestology model, this substrate is identified with the
+    η‑field described in `core/core-dynamical-equation.yaml`. Its properties
+    (saturation, nonlinearity, finite capacity) are derived from the
+    five core rules.
+  note: >
+    The detailed nature of the substrate is not assumed a priori beyond
+    the logical necessity of existence. Its specific properties must be
+    constrained by mathematical consistency and empirical observation.
+
+wavefunction_interpretation:
+  statement: >
+    The wave‑function is treated as a description of a real pre‑commitment
+    regime (i.e., before R5 selects viable configurations) rather than
+    solely as an epistemic tool.
+  interpretation: >
+    Regions of high propagation freedom and low commitment correspond
+    to unresolved viable possibilities. Apparent wave‑function collapse
+    is interpreted as the formation of stable commitment through
+    sufficient local reinforcement (the R5 selection mechanism).
+  status: >
+    This interpretation remains a physical hypothesis and must be judged
+    by its explanatory and predictive success.
+  core_rule_reference: "R5 – Optimisation (viability selection)"
+
+praegress_regress_clarification:
+  statement: >
+    The substrate has two dynamical modes:
+    - **Praegress**: unresolved potential, high propagation freedom,
+      multiplicity of viable possibilities (pre‑R5).
+    - **Regress**: committed structure, reduced free potential,
+      accumulation of irreversible resolution (post‑R5 and ongoing).
+  implication: >
+    The wavefunction describes the Praegress‑dominant regime;
+    classical objects correspond to Regress‑dominant regimes.
+    The master equation governs the continuous exchange between them.
+
+methodological_principle:
+  statement: >
+    Human intuition is shaped by experience with stable macroscopic
+    structures. Such intuitions may be useful approximations while
+    remaining unreliable guides to foundational ontology.
+  examples:
+    - "Substance‑based thinking"
+    - "Container‑based views of space"
+    - "Object‑centered descriptions of reality"
+  implication: >
+    Praestology attempts to derive familiar structures rather than
+    assume them as fundamental.
+
+scope_and_limits:
+  statement: >
+    The framework does not claim that existing physical theories are
+    incorrect. Instead, it investigates whether known theories may
+    represent effective descriptions of deeper process‑level dynamics.
+  requirement: >
+    Any proposed ontology must ultimately be evaluated through
+    mathematical consistency, empirical adequacy, and predictive power.
+
+guiding_principle:
+  statement: >
+    Stable existence is interpreted as the persistence of viable
+    process structures within an underlying field of potential.
+    Matter, fields, geometry, and observers are treated as emergent
+    regimes of this more fundamental dynamics.
+
+notes:
+  - "The map is not the territory."
+  - "All formal descriptions remain provisional."
+  - "Ontological claims do not substitute for empirical validation."
+  - "Mathematical closure and observational consistency remain the final arbiters."
+  - "The collective 'we' throughout this document refers to the Praestology
+     framework, not to humanity in general."
+
+cross_references:
+  - "core/specifications.yaml (R1–R5)"
+  - "core/core-dynamical-equation.yaml (η‑field, master equation)"
+  - "core/emergent-relational-manifold.yaml (space from commitment)"
+  - "domains/physics/fine-structure-constant.yaml (α as closure defect)"
