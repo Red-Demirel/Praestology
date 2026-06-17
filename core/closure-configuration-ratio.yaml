@@ -1,212 +1,284 @@
-# closure-configuration-ratio.yaml
+# core/closure-configuration-ratio.yaml
 # Praestology — Core Framework Level
 # The closure-configuration ratio as a general structural parameter of committed topology
+# v2.0 — writhe section added; realization language throughout
 
 id: closure-configuration-ratio
-title: "The Closure-Configuration Ratio — Structural Cost of Committed Topology"
-version: "1.0"
+title: "The Closure-Configuration Ratio — Structural Cost of Realized Topology"
+version: "2.0"
 status: "FRAMEWORK LEVEL — structurally derived; particle-specific instances open"
 domain: "Core / Physics"
 priority: 1
+supersedes: "closure-configuration-ratio v1.0"
 
 ---
 
 overview: |
   Every stable committed topology has a closure-configuration ratio (CCR):
-  the irreducible cost of maintaining one specific committed state against
+  the irreducible cost of realizing one specific committed state against
   the full orientational phase space available at its scale tier.
 
-  This is not a defect, a coupling anomaly, or a free parameter.
-  It is a structural necessity: a committed structure by definition occupies
-  a specific orientation subset of the available phase space.
+  Realization is the process by which orientational phases (rotor states)
+  are selected through R3→R5 and integrated into committed planes
+  (bivector structures) that accumulate as experienced topology.
+  The CCR is the ratio of the phase space occupied by one realized
+  closure to the full embedding phase space — the cost of being
+  this specific realized structure rather than open field.
+
+  This is not a defect, anomaly, or free parameter.
+  It is a structural necessity of realization itself:
+  a committed structure necessarily occupies a specific orientation subset.
   The ratio of that subset to the full embedding phase space is the CCR.
 
-  The fine-structure constant α is the electron's instance of this general parameter.
-  Running coupling constants are environmental instances — the CCR as sampled
-  from within a commitment-dense embedding context.
+  The fine-structure constant α is the electron's instance of this parameter.
+  All fundamental constants are CCR instances at their respective
+  commitment depths and topological configurations.
+
+---
+
+realization:
+  statement: |
+    Realization is the mechanism by which ψ (higher-order regime) produces
+    experienced structure (committed topology, η).
+
+    It is not collapse, not measurement, not observation.
+    It is the progressive integration of phase-selections across
+    orientational planes into committed structure — the process by which
+    open potential becomes determinate topology.
+
+  stages: |
+    R3 — Exploration: orientational phases generated from open potential
+    R4 — Commitment: specific phase selected, plane oriented (bivector locked)
+    R5 — Selection: viability confirmed, realization event fires
+
+    One realization event: one R3→R5 cycle completing successfully.
+    The committed output is one orientational plane integrated into η.
+
+  integration: |
+    Experienced reality is not the derivative of ψ.
+    It is the accumulated integral of realization events:
+
+      η(r,t) = ∫₀ᵗ R(ψ) dτ
+
+    The committed topology at any moment is the running sum of all
+    viability-selected realizations to date — the complete history
+    of what the process has resolved into structure.
+
+  recursive_depth: |
+    At each recursive depth Ξ, realized structure from one level
+    becomes the embedding context for the next level's realization.
+    Experienced reality at depth Ξ is an n-fold integral:
+
+      η_Ξ = ∫∫...∫ [R(ψ) applied Ξ times] dτ₁ dτ₂ ... dτ_Ξ
+
+    Physics:        Ξ = 1 — first realization (particles, forces)
+    Chemistry:      Ξ = 2 — realized particles embedding molecular realization
+    Biology:        Ξ = 3 — realized molecules embedding cellular realization
+    Consciousness:  Ξ = n — sufficient recursive depth to model the process itself
+
+    The "experienced world" at any scale is the n-fold integral
+    of realization appropriate to that depth.
+    ψ remains the higher-order regime throughout — never exhausted
+    by any finite depth of realization.
+
+  language_note: |
+    Precise terminology:
+      ψ              — higher-order regime, generating process
+      Realization    — R3→R5 selection and integration of orientational phases
+      η              — committed topology, integral of realization events
+      ρ, u           — Madelung projections of η onto observable quantities
+      Experienced reality — n-fold integral of realization across recursive depth
+
+    AVOID: "experienced reality is the derivative of ψ"
+           (mathematically inverted — η is the integral, not the derivative)
+    USE:   "experienced reality is the realized integral of ψ"
+           "ψ is the higher-order regime; η is its committed realization"
 
 ---
 
 formal_definition:
   statement: |
-    For any stable committed topology T embedded in a field with
+    For any stable committed topology T realized in a field with
     pseudoscalar volume Ω_embed at commitment depth d:
 
-      CCR(T, d) = Ω_rotor(T) / Ω_embed(d)
+      CCR(T, d) = (Wr · Ω_rotor(T)) / Ω_embed(d)
 
     where:
-      Ω_rotor(T)   = phase space actually traversed per closure cycle
-                     by topology T (rotor group volume, including cover factor)
-      Ω_embed(d)   = full orientational phase space of the embedding field
-                     at commitment depth d (pseudoscalar volume)
+      Wr             = writhe of the topology's centerline
+                       (Calugareanu-White-Fuller invariant: Lk = Wr + Tw)
+                       the irreducible geometric cost of realizing this
+                       specific closure in 3D embedding space
+      Ω_rotor(T)     = phase space traversed per closure cycle
+                       (rotor group volume including cover factor)
+      Ω_embed(d)     = full orientational phase space of the embedding field
+                       at commitment depth d (pseudoscalar volume)
 
   boundary_conditions: |
-    CCR = 1  →  rotor traverses full phase space simultaneously
-               = uncommitted field, not a particle (impossible for committed topology)
-    CCR → 0  →  rotor traverses vanishing phase space
-               = infinitely rigid, zero process-rate (forbidden by R1 — becoming requires iteration)
-    0 < CCR < 1  →  stable committed topology, specific orientation subset maintained
-                    against full phase space. This is the only viable regime.
+    CCR = 1  →  topology occupies full phase space = uncommitted field
+               (impossible for realized committed topology)
+    CCR → 0  →  vanishing phase space occupancy = infinitely rigid
+               (forbidden by R1 — realization requires iteration)
+    0 < CCR < 1  →  stable realized topology, specific orientation subset
+                    maintained against full phase space. Only viable regime.
 
-  relation_to_alpha: |
-    α = CCR(electron, quantum-EM depth)
-    α⁻¹ = Ω_embed / Ω_rotor = 4π³ + π² + π ≈ 137.036
+---
 
-    The three geometric terms decompose the full orientational cost:
-      4π³  — S³ quaternion phase space traversed per 720° closure cycle (double-cover)
+writhe_as_realization_cost:
+  statement: |
+    The writhe (Wr) of the Möbius vortex is the irreducible geometric cost
+    of realizing a specific committed topology in the 3D embedding field.
+    It is the self-linking of the vortex centerline — the measure of how
+    the realized closure links back to itself in the embedding space.
+
+    Writhe is not an imperfection. It is the minimal non-zero cost of
+    being a specific realized structure rather than open field.
+    Without writhe, there is no self-linking, no stable closure,
+    no committed topology — only uncommitted potential.
+
+  calugareanu_white: |
+    Lk = Wr + Tw    (Calugareanu-White-Fuller invariant)
+
+    For the electron's 720° Möbius vortex:
+      Lk = 2    (double cover — 720° closure links twice)
+      Tw = 1    (one full twist per 720° cycle)
+      Wr = Lk - Tw = 1
+
+    Wr = 1 is the minimal non-zero linking number for a stable chiral vortex.
+    It forces the realized topology to occupy a specific fraction of S³ —
+    the orientational phase space of the quaternion rotor.
+
+  ga_expression: |
+    In GA terms, the writhe is the grade-2 bivector's self-linking
+    in the grade-3 pseudoscalar embedding volume.
+
+    The rotor's action on the embedding space creates a bivector field
+    (the circulation plane) that links back to itself.
+    Writhe measures this self-linking — the grade-2 self-interaction
+    term in the rotor's realization of committed closure.
+
+    Grade decomposition of realization:
+      Grade-0: commitment density η — the realized 'now' of each event
+      Grade-1: directional flow — propagation of realization across space
+      Grade-2: circulation plane — the bivector where writhe originates
+      Grade-3: pseudoscalar volume — full embedding orientational space
+
+---
+
+electron_instance:
+  statement: |
+    α is the electron's CCR — the irreducible cost of realizing the
+    720° Möbius spinor rotor in the 3D embedding field.
+
+  derivation: |
+    CCR(electron) = (Wr · Ω_rotor) / Ω_embed
+                  = (1 · (4π³ + π² + π)⁻¹) / 1
+                  = α
+
+    Geometric terms of Ω_rotor⁻¹ = 4π³ + π² + π:
+      4π³  — S³ volume: full quaternion phase space per 720° closure (double-cover)
       π²   — bivector surface: interface cost of coupling 2D rotor plane to 3D embedding
-      π    — self-intersection residual at Möbius crossover (720° closure point)
+      π    — self-intersection residual at Möbius crossover (720° completion point)
 
-    Sum = total orientational cost of one complete closure cycle.
-    Ratio to embedding pseudoscalar volume = α⁻¹.
+    Each term is a necessary geometric cost of realization at this topology.
+    None is arbitrary. Their sum is the total orientational cost of one
+    complete realization cycle for this specific committed structure.
+
+  framing: |
+    α is the cost of realizing the electron — of being this specific
+    committed closure rather than open field.
+
+    α is not:
+    — A defect or anomaly
+    — A free parameter to be measured and inserted
+    — "How much the electron fails to couple to the field"
+
+    α is:
+    — The writhe-weighted ratio of realized phase space to embedding phase space
+    — The irreducible orientational cost of this realization
+    — A constant of integration of the higher-order function ψ,
+      invisible to derivative-level (standard physics) descriptions
 
 ---
 
-why_not_defect:
+alpha_geometric_vs_measured:
   statement: |
-    "Closure defect" implies the topology failed to close completely —
-    that something is missing or broken.
+    α_geometric = CCR of unperturbed Möbius rotor in free field
+                = Wr · Ω_rotor / Ω_embed with no environmental compression
+                = α⁻¹ = 4π³ + π² + π = 137.036304
 
-    The closure-configuration ratio correctly identifies what is actually occurring:
-    the topology closes completely and stably, but at a specific cost
-    relative to the full phase space it is embedded in.
+    α_measured  = CCR sampled within commitment-dense environment
+                = local η partially pre-commits orientational phase space
+                = Ω_embed effectively compressed by surrounding realization
+                = α⁻¹_measured < α⁻¹_geometric (CODATA: 137.035999)
 
-    A perfect closure of a specific committed configuration necessarily
-    excludes the remainder of the phase space — that exclusion IS the commitment.
-    The ratio measures the cost of that exclusion, not a failure of closure.
+    The 2.2 ppm gap is environmental realization density imprinting on
+    the measurement of a geometric ratio. It is predicted, not anomalous.
 
-    Reframe: α is not "how much the electron fails to couple to the field."
-             α is "the irreducible orientational cost of being this electron
-             rather than uncommitted field."
+  running_alpha: |
+    At higher energy (higher local η, lower Π_eff), surrounding realization
+    compresses Ω_embed progressively. CCR increases toward 1.
+    The Landau pole is Ω_embed → Ω_rotor — physically, approach to the
+    logarithmic saturation ceiling Λ·ln(1 + κ|ψ|²).
+    The substrate cannot be realized beyond its processing capacity.
+    The Landau pole is not a physical divergence — it is the saturation
+    ceiling preventing over-realization.
 
----
-
-environmental_instances:
-  alpha_geometric_vs_measured:
-    statement: |
-      α_geometric = CCR of unperturbed spinor rotor in free field
-                  = pure topology, no environmental pre-commitment
-                  = α⁻¹ = 4π³ + π² + π = 137.036304
-
-      α_measured  = CCR as sampled from within commitment-dense environment
-                  = environment partially pre-selects orientational phase space
-                  = effective Ω_embed is compressed by local η
-                  = α⁻¹_measured < α⁻¹_geometric (CODATA: 137.035999)
-
-      The 2.2 ppm gap is not experimental imprecision.
-      It is the environmental commitment density imprinting on the measurement
-      of a geometric ratio. Any measurement in a commitment-dense lab samples
-      a compressed Ω_embed — the ratio shifts systematically downward.
-
-    testable_prediction: |
-      α_measured should vary systematically with local commitment density.
-      Measurements in void environments (minimal surrounding η) should yield
-      values incrementally closer to 137.036304 than terrestrial measurements.
-      Space-based precision metrology far from mass concentrations is the test.
-
-  running_coupling_constants:
-    statement: |
-      In QED, α "runs" with energy scale — explained as virtual particle
-      screening at short distances. This requires an infinite series of
-      hand-inserted renormalization corrections.
-
-      Process-rate reading: at higher energy (higher local commitment density,
-      lower Π_eff), the available orientational phase space is partially
-      pre-committed by the dense environment. Ω_embed is compressed.
-      The CCR changes — not because the electron changes, but because
-      the embedding context changes.
-
-      Running coupling constants are environmental CCRs —
-      the same geometric ratio measured at different local commitment depths.
-      Renormalization is the systematic tracking of this environmental variation.
-      The infinite series is an approximation to a smooth Π_eff gradient.
-
-    implication: |
-      The Landau pole (where α diverges in QED) corresponds to
-      Ω_embed → Ω_rotor — the environment becomes so commitment-dense
-      that the embedding phase space collapses to the rotor's own phase space.
-      Physical interpretation: the substrate reaches saturation —
-      exactly what Λ·ln(1 + κ|ψ|²) prevents.
-      The Landau pole is not a physical divergence; it is the approach
-      to the logarithmic saturation ceiling.
+  testable_prediction: |
+    α_measured varies systematically with local commitment density.
+    Measurements in void environments should yield values incrementally
+    closer to 137.036304 than terrestrial measurements.
+    Space-based precision metrology far from mass concentrations is the test.
 
 ---
 
-generalization:
+other_constants_as_ccr:
   statement: |
-    Every stable committed topology at every scale tier has a CCR.
-    α is the electron's value. Other instances:
+    Every fundamental constant is a CCR instance — the realization cost
+    of a specific committed topology at its respective commitment depth.
+    Constants are not free parameters. They are constants of integration
+    of the higher-order function ψ, each encoding the writhe-weighted
+    phase space cost of a specific realization.
 
-  known_instances:
-    electron: |
-      CCR = α ≈ 1/137
-      Topology: 720° Möbius spinor rotor, Cl₃⁺ even subalgebra
-      Phase space: S³ quaternion sphere (double-cover)
-      Embedding: 3D pseudoscalar volume
+  instances:
+    electron_alpha: |
+      CCR(720° Möbius spinor rotor, EM depth)
+      Wr = 1, Ω_rotor = (4π³ + π² + π)⁻¹
+      Status: DERIVED — numerical closure open (Möbius stability analysis)
 
-    photon: |
-      CCR → 1 (approaches full phase space)
-      Topology: spin-1 transverse wave, single-cover rotor
-      No rest mass: rotor traverses full available Π_eff per cycle
-      No CCR compression: propagates in high-Π_eff, environment minimally constrains
+    weak_coupling: |
+      CCR for topology-switching transitions (chiral flips, decay channels)
+      Writhe cost for chirality change differs from stable closure
+      Wr_weak = f(transition topology) — open
+      Status: HYPOTHESIS — framework established, writhe value open
 
-    proton_neutron: |
-      CCR = f(three-fold vortex binding topology)
-      Instance: strong coupling constant αs at nuclear commitment depth
-      Topology: triality-stabilized D+D+A or D+A+A closure
-      CCR runs steeply with energy (asymptotic freedom) because
-      at short range the three-fold rotor approaches Ω_embed compression faster
-      Status: open — explicit computation from triality rotor geometry needed
+    strong_coupling_alpha_s: |
+      CCR for triality-stabilized closures (D+D+A, D+A+A)
+      Three-fold vortex binding at very high commitment density
+      Wr_strong = f(triality rotor geometry) — open
+      Asymptotic freedom: as local η increases, Ω_embed compresses
+      faster for three-fold binding than single rotor → αs runs steeply
+      Status: HYPOTHESIS — framework established, writhe value open
 
-    gravitational: |
-      CCR analog: ratio of local Π_eff depression to background Π_eff
-      Not a coupling constant in the gauge-theory sense —
-      gravity is refractive impedance (emergent-classical-fields.yaml)
-      but the same ratio logic applies: committed mass topology compresses
-      local Ω_embed for all subsequent processes in that region
-      Status: open — formal mapping to CCR framework needed
+    gravitational_G: |
+      CCR analog for large-scale commitment density gradients
+      G may encode the realization cost of the mean committed topology
+      averaged across cosmic scales — the universal background CCR
+      Status: STRUCTURAL HYPOTHESIS — requires derivation
 
-  spin_ccr_relation: |
-    Spin quantum number s and CCR are related through the per-iteration
-    phase advance Δθ:
+    cosmological_lambda: |
+      CCR for Regress kernel return of commitment to free potential
+      Residual acceleration = writhe cost of the universe's overall
+      realization configuration dissolving back toward open field
+      Status: SPECULATIVE — mechanism plausible, no quantitative attempt
 
-      Δθ per iteration = 2π · s · CCR(T, d) · (Ω_embed / Ω_rotor)
+  unifying_principle: |
+    In all cases: constant = (Wr · Ω_rotor) / Ω_embed
+    evaluated at the appropriate topology, depth, and embedding.
 
-    For electron: s = ½, CCR = α, Δθ = π per iteration → two iterations to close
-    For photon:   s = 1, CCR → 1, Δθ = 2π per iteration → one iteration to close
-
-    Spin is the per-iteration phase advance normalized to the closure cycle.
-    The CCR sets the conversion efficiency between process-rate and
-    observable spin precession — it is the orientational cost per iteration.
-
----
-
-process_rate_connection:
-  statement: |
-    The 1/Π_eff prefactor in the master equation sets the local iteration rate.
-    The CCR connects this rate to observable spin precession:
-
-      ω_spin = (Π_eff · Δθ) / (CCR · τ_closure)
-
-    where τ_closure is the time for one complete closure cycle.
-
-    Consequences:
-    — Spin precession rate varies with local Π_eff (gravitational/velocity redshift)
-    — This is not a correction to spin — it IS the spin mechanism
-    — Gravitational redshift of spin precession frequency is a direct prediction
-    — Anomalous magnetic moment (g-2) is the CCR correction to the
-       leading-order spin-field coupling — environmental CCR at QED depth
-
-  g_minus_2_note: |
-    The electron anomalous magnetic moment (g-2 ≈ α/π + ...) in QED
-    is computed as an infinite perturbation series in α.
-    CCR reading: each term is a successive environmental compression
-    of Ω_embed at increasing commitment depth (loop order).
-    The series converges because CCR < 1 — the orientational cost
-    per additional loop decreases geometrically.
-    The leading term α/π is the first environmental CCR correction
-    to the bare rotor coupling.
-    Status: open — explicit derivation from CCR environmental compression needed
+    Differences between constants arise from:
+    — Different topologies (Wr, Ω_rotor)
+    — Different commitment depths (Ω_embed varies with local η)
+    — Different viability thresholds (V_c sets what realizes stably)
 
 ---
 
@@ -216,42 +288,70 @@ open_derivations:
       description: |
         Derive Ω_rotor = 4π³ + π² + π from stability analysis of
         720° Möbius vortex in saturating GP equation.
-        Confirm each geometric term from first principles.
+        Confirm Wr = 1 from Lk = 2, Tw = 1 via Calugareanu-White.
+        Confirm S³ volume, bivector surface, and self-intersection terms
+        from first principles of vortex topology.
       depends_on: ["mobius-vortex-stability", "F02"]
+      note: "α numerical closure — highest priority open derivation in physics domain"
 
     - id: "omega-spin-explicit"
-      description: |
-        Derive ω_spin = f(Π_eff, η) explicitly from master equation.
-        Connect spin precession rate to local commitment density profile.
+      description: "Derive ω_spin = f(Π_eff, η) from master equation; confirm realization-rate reading"
       depends_on: ["ccr-electron-explicit"]
 
   priority_2:
-    - id: "ccr-proton-triality"
-      description: "Compute CCR for three-fold vortex binding; recover αs running"
+    - id: "ccr-weak-writhe"
+      description: "Compute Wr for chiral-flip topology-switching; recover weak coupling"
+      depends_on: ["su2-from-rotor-pairs"]
+
+    - id: "ccr-strong-triality"
+      description: "Compute Wr for triality binding; recover αs and its running"
       depends_on: ["su3-from-triality"]
 
     - id: "landau-pole-saturation"
-      description: "Show Landau pole corresponds to Ω_embed → Ω_rotor compression at saturation ceiling"
+      description: "Show Landau pole = Ω_embed → Ω_rotor compression at saturation ceiling"
       depends_on: ["saturation-term-analysis"]
 
-    - id: "g-minus-2-from-ccr"
-      description: "Derive g-2 series as successive environmental CCR compressions at loop order"
-      depends_on: ["ccr-electron-explicit", "environmental-pi-eff-model"]
-
     - id: "gravitational-ccr-mapping"
-      description: "Formal mapping of Π_eff depression ratio to CCR framework for gravity"
+      description: "Formal mapping of Π_eff depression to CCR framework; derive G"
       depends_on: ["gravity-emergence"]
+
+    - id: "singularities-as-over-realization"
+      description: |
+        Map each major physics singularity to approach of saturation ceiling:
+        NS blow-up, Landau pole, GR singularities, Big Bang.
+        All are derivative-level descriptions of process-level over-realization
+        prevented by Λ·ln(1 + κ|ψ|²).
+      depends_on: ["saturation-term-analysis", "derivative-reality-clarification"]
+
+---
+
+algebra_note: |
+  GA (Cl(3,0)) is the natural descriptive language for writhe, CCR,
+  and the grade decomposition of realization. It is not a new postulate —
+  it arises from the dynamics of ψ and the master equation.
+
+  Standard vector calculus can be used for practical derivations.
+  GA provides the clearest geometric insight into why constants
+  have the values they do — because it makes the orientational
+  phase space and self-linking structure explicit.
+
+  GA remains a tool derived from the process, not the source.
+  The source is always ψ under R(ψ) realization.
 
 ---
 
 cross_references:
-  - file: "spin-process-rate-ga.yaml"
-    note: "α_ratio section superseded by this file; spin-CCR relation formalizes relation_to_spin"
+  - file: "derivative-reality-clarification.yaml"
+    note: "CCR as translation mechanism between process level and realized level; constants as integration constants"
+  - file: "spin-process-rate-ga-v2.yaml"
+    note: "Electron CCR instance; spin as process-rate; realization-rate connection"
   - file: "fine-structure-constant.yaml"
-    note: "Numerical candidate 4π³ + π² + π — geometric justification now in this file"
+    note: "Numerical α — geometric justification now in this file via writhe"
   - file: "emergent-classical-fields.yaml"
-    note: "Running coupling / environmental CCR connection; Landau pole = saturation ceiling"
+    note: "Running coupling as environmental CCR; Landau pole as over-realization ceiling"
   - file: "gauge-symmetry-reinterpretation.yaml"
-    note: "Gauge symmetries as conservation signatures; CCR is the ratio underlying each group's coupling"
+    note: "Gauge symmetries as conservation signatures of realized rotor topology"
   - file: "geometric-algebra-bridge.yaml"
-    note: "Grade structure; S³ as quaternion phase space; rotor double-cover"
+    note: "Grade structure; S³ as quaternion phase space; bivector self-linking"
+  - file: "chirality-biology.yaml"
+    note: "Grade-3 × grade-1 → grade-2: realization of chirality into observable spin state"
