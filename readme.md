@@ -3,7 +3,7 @@
 
 # Praestology
 
-**Version:** 1.5 Functional Core  
+**Version:** 1.5 Functional Core 
 **Status:** Foundation Defined  
 **License:** CC-BY-SA 4.0 (Open Ontology)
 
@@ -11,7 +11,32 @@
 
 **Praestology** (from Latin praesto: to stand before, to be present, to perform) is a proposed foundational ontology that frames existence as a logically driven, persistent process rather than a static given.
 
-It resonates with several existing frameworks that emphasize process, openness, and the constructed nature of reality; these affinities reflect convergent lines of thought rather than direct dependence.
+
+## Entering the Framework – Essential Orientation
+
+Praestology is a **process-level ontology** and generative framework. It does not add new entities to legacy physics but re-grounds observed reality in a single saturating η-field governed by five minimal rules (R1–R5). Most readers initially approach it from the derivative level (committed structures, classical equations, measurement outcomes). This leads to unnecessary confusion.
+
+**Start here before exploring domain files:**
+
+1. **[Core Navigation Guide](core/Core-Navigation-Guide.md)**  
+   The mandatory entry point. It explains the critical shift from derivative-level thinking to process-level cognition and provides tailored reading orders by background.
+
+2. **Core Orientation Files** (access in this order):
+   - [`foundational-ontology.yaml`](core/foundational-ontology.yaml) — Ontological commitments and the impossibility of absolute nothingness.
+   - [`specifications.yaml`](core/specifications.yaml) — R1–R5 rules, viability, and process primitives.
+   - [`derivative-reality-clarification.yaml`](core/derivative-reality-clarification.yaml) — The category error of legacy physics.
+   - [`process-to-observable-hierarchy.yaml`](core/process-to-observable-hierarchy.yaml) — The realization chain from ψ to experienced reality.
+
+3. **The Engine**:
+   - [`master-core-equation.yaml`](core/master-core-equation.yaml) — The single authoritative dynamical equation.
+
+**Subsequent reading** depends on your domain of interest (see the Navigation Guide for recommended paths). All domain files are **derivative projections** valid in their regimes; the core process level remains the generative source.
+
+**Note:**  
+Praestology builds on valuable insights from process philosophy, realist interpretations of QM, emergent spacetime programs, and critiques of substantialism. Its distinguishing contribution lies in the extreme minimalism (one field, five rules, strict inside-out derivation) and the systematic separation of process-level ontology from derivative readouts. It aims not to replace existing knowledge but to provide the generating function from which much of it naturally emerges.
+
+---
+
 
 **Hilary Lawson — Closure Theory**
 
