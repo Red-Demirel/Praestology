@@ -1,11 +1,11 @@
 # core/derivative-reality-clarification.yaml
-# Praestology — Core Framework Level
-# The process as higher-order reality; experienced structure as first derivative
+# v2.0 — realization language throughout; derivative/integral correction applied
 
 id: derivative-reality-clarification
-title: "The Derivative Nature of Experienced Reality"
-version: "1.0"
-status: "CORE CLARIFICATION — framework level; positions between foundational-ontology and master-equation"
+title: "The Realization of Experienced Structure from the Higher-Order Process"
+version: "2.0"
+status: "CORE CLARIFICATION — framework level"
+supersedes: "derivative-reality-clarification v1.0"
 domain: "Core"
 priority: 1
 
@@ -15,262 +15,275 @@ dependency_map:
     - "core/specifications.yaml (R1–R5)"
   provides_to:
     - target: "core/master-equation.yaml"
-      via: "ψ identified as higher-order function; master equation operates at process level"
+      via: "ψ as higher-order regime; master equation governs realization process"
     - target: "domains/physics/quantum-foundation.yaml"
-      via: "Copenhagen reframed as derivative-level engineering model"
+      via: "Copenhagen reframed as realized-level engineering model"
     - target: "core/closure-configuration-ratio.yaml"
-      via: "CCR as the explicit translation ratio between process level and derivative level"
+      via: "CCR as translation ratio between process level and realized level"
     - target: "clarifications/clifford-analogy-and-derivation.yaml"
-      via: "Pattern-of-additions explained as systematic derivative-level patching"
+      via: "Pattern-of-additions explained as systematic realized-level patching"
 
 ---
 
 overview: |
-  Standard physics has operated predominantly at the derivative level of reality —
+  Standard physics has operated predominantly at the realized level —
   working with committed outputs of the process rather than the process itself.
   This is not an error in execution; it is a category displacement.
-  The wave-function / Praesto process is the higher-order reality.
-  What is experienced, measured, and called "real" is the first derivative:
-  the accumulated record of resolved commitments, not the resolver.
 
-  This clarification is not a philosophical addition to Praestology.
-  It is a precise structural statement about the relationship between
-  ψ (process level) and η (committed level) — with direct consequences
-  for why standard physics cannot derive its own constants from within itself.
+  ψ (the Praesto process) is the higher-order regime — open, generative,
+  holding all viable configurations simultaneously before realization.
+
+  What is experienced, measured, and called "real" is realized structure:
+  the accumulated integral of realization events, not the process that generates them.
+
+  This clarification is not philosophical decoration.
+  It is a precise structural statement with direct consequences for why
+  standard physics cannot derive its own constants from within itself —
+  those constants are encoded in the higher-order regime, not in the
+  realized outputs it has been working with.
+
+---
+
+key_terminology:
+  realization: |
+    The mechanism by which ψ produces experienced structure.
+    Not collapse, not measurement, not observation.
+    Realization is the progressive integration of orientational phase-selections
+    across committed planes into stable topology — the process by which
+    open potential becomes determinate, experienced structure.
+
+    One realization event = one R3→R5 cycle completing successfully:
+      R3: orientational phases generated from open potential
+      R4: specific phase selected, plane oriented (bivector committed)
+      R5: viability confirmed, realization fires, event integrated into η
+
+  higher_order_regime: |
+    ψ — the generating process, always prior to and more general than
+    any specific realized structure. ψ is not exhausted by realization —
+    it remains the open field from which further realization proceeds.
+    "Higher-order" means: ψ contains the information that determines
+    what realized structure will look like, but realized structure does
+    not contain the full information of ψ.
+
+  realized_structure: |
+    η — committed topology, the accumulated integral of realization events.
+    This is what is experienced as matter, space, forces, constants.
+    Real, causally downstream of ψ, and informationally incomplete
+    with respect to the generating process.
 
 ---
 
 the_displacement:
   statement: |
     Standard physics, culminating in the Copenhagen interpretation, treated
-    measurement outcomes as the primitive reality and the wave-function as
-    a calculational tool — useful but not real, not to be asked about ontologically.
+    realized outcomes as the primitive reality and ψ as a calculational tool.
 
     This inverted the actual order:
 
-      Higher-order reality:    ψ — the process, Praesto, the ongoing resolution
-                                   of indeterminate potential into determinate structure
-      First derivative:        η — committed topology, accumulated resolved structure,
-                                   what is experienced as matter, space, time, constants
-      Observable outputs:      ρ = |ψ|², ∇S — commitment density and phase flow,
-                                   what instruments measure
+      Higher-order regime:    ψ — the process, holding all viable configurations
+      Realization layer:      R(ψ) selection + integration — where events fire
+      Realized structure:     η = ∫R(ψ)dτ — committed topology, experienced world
+      Observable projections: ρ = |ψ|², ∇S — Madelung outputs, what instruments read
 
-    Copenhagen declared the derivative level primitive.
-    Every description, every constant, every entity in standard physics
-    is defined at this level — which is why the level is internally consistent
+    Copenhagen declared the realized level primitive.
+    All constants, entities, and descriptions in standard physics are
+    defined at this level — which is why the level is internally consistent
     and predictively powerful, and simultaneously unable to answer
     why its constants have the values they do.
 
-  analogy: |
-    Working with the derivative while mistaking it for the fundamental function.
-    The derivative is real — it contains genuine information about the function.
-    But it does not contain the full information of the generating function.
-    You cannot recover the constant of integration from the derivative alone.
-    In physics: you cannot derive α, particle masses, or dimensionality
-    from within the derivative-level description. These are determined
-    by the higher-order function — ψ and its process dynamics.
+  mathematical_note: |
+    Experienced reality is NOT the derivative of ψ.
+    It is the accumulated INTEGRAL of realization events:
 
----
+      η(r,t) = ∫₀ᵗ R(ψ) dτ
 
-precise_mapping:
-  statement: |
-    The relationship between levels is not loose analogy. It is encoded
-    directly in the master equation and the Madelung decomposition.
+    ψ is the higher-order function.
+    Realization events are selections from ψ.
+    η is the running integral — the committed history of what has been realized.
 
-  levels:
-    process_level: |
-      ψ(r,t) — the ontic field, higher-order reality
-      Governed by: i·(1/Π_eff)·∂ψ/∂t = [...] ψ
-      This is where: generative dynamics operate, viability selection occurs,
-                     topology forms and dissolves, constants are determined
+    At each recursive depth Ξ, realized structure becomes the embedding
+    context for the next level's realization:
 
-    transition_layer: |
-      ∂ψ/∂t — the rate of change of the process
-      This is where: commitment events occur, R5 selection executes,
-                     the wave-function "updates"
-      Physical meaning: the boundary between potential and committed regimes
+      η_Ξ = ∫∫...∫ [R(ψ) applied Ξ times] dτ₁ ... dτ_Ξ
 
-    derivative_level: |
-      ρ = |ψ|²  — commitment density (experienced as mass, matter, density)
-      ∇S        — phase gradient (experienced as momentum, flow, current)
-      η         — accumulated committed topology (experienced as structure, space, particles)
-      These are the Madelung outputs — what derivative-level observers measure.
+    Experienced reality at depth Ξ is an n-fold integral of realization.
+    ψ remains higher-order throughout — the generating regime at every depth.
 
-    madelung_as_level_translation: |
-      The Madelung decomposition (ψ = √ρ · exp(iS)) is the explicit mathematical
-      move from process level to derivative level.
-      It is not merely a useful substitution — it is the formal translation
-      between higher-order reality and its derivative.
+  madelung_as_projection: |
+    The Madelung decomposition (ψ = √ρ · exp(iS)) is the formal projection
+    from the higher-order regime onto realized observables:
 
-      Every time physics works with ρ, u, P as primitives (fluid dynamics,
-      thermodynamics, statistical mechanics), it is working at the derivative
-      level with Madelung outputs, not with the generating ψ.
+      ψ (process level) → √ρ · R → {ρ: realized density, ∇S: realized flow}
 
-      This is why those descriptions are correct within their domains
-      and silent on foundational questions.
+    Every time physics works with ρ, u, P as primitives (fluid dynamics,
+    thermodynamics, statistical mechanics), it works with Madelung projections
+    of realized structure — correct within its domain, silent on foundational questions.
 
 ---
 
 copenhagen_reframe:
   statement: |
-    The Copenhagen interpretation is the formalization of derivative-level physics.
+    The Copenhagen interpretation is the formalization of realized-level physics.
 
     Copenhagen: ψ is not real; only measurement outcomes are real.
-    Translation: only the derivative is real; the higher-order function is inaccessible.
+    Translation: only realized structure is real; the higher-order regime
+                 is inaccessible and not to be asked about.
 
-    This is precisely backwards ontologically — but it is precisely correct
-    as an engineering stance. Derivatives are fully sufficient for calculating
-    outputs. You do not need the generating function to predict measurement results
-    if you already have the derivative-level equations of motion.
+    This is backwards ontologically — but correct as an engineering stance.
+    Realized-level descriptions are fully sufficient for predicting outcomes.
+    You do not need the generating process to use the realized equations of motion.
 
-    Copenhagen works because:
-    — Derivative-level descriptions are internally consistent
-    — They correctly predict all measurement outcomes at their scale
-    — The higher-order function is not needed for post-selection calculations
-
-    Copenhagen fails to answer:
+  what_copenhagen_cannot_answer: |
     — Why these constants (α, particle masses, coupling strengths)?
     — Why this dimensionality (3+1)?
     — Why these particles and not others?
-    — What selects measurement outcomes (the measurement problem)?
+    — What selects realization outcomes? (the measurement problem)
 
-    These questions are unanswerable from the derivative level
-    because their answers are encoded in the higher-order function.
-    They are constants of integration — invisible to the derivative.
+    These are unanswerable from the realized level because their answers
+    are encoded in the higher-order regime — they are constants of integration
+    invisible to descriptions that work only with the realized integral.
 
   measurement_problem: |
-    The measurement problem is the derivative level trying to explain
-    why the higher-order function resolves to specific outputs.
-    It is insoluble from within the derivative level by construction —
-    the resolution mechanism (R(ψ) viability selection) operates
-    at the process level, above the derivative.
+    The measurement problem is the realized level trying to explain
+    why the higher-order regime resolves to specific outputs.
+    It is insoluble from within the realized level by construction.
+    The resolution mechanism (R(ψ) viability selection) operates
+    at the process level, above the realized integral.
 
     Praestology dissolves the measurement problem by relocating
-    the question to the correct level: R5 selection in the process,
-    not collapse of a derivative-level abstraction.
+    the question to the correct level: R5 realization in the process,
+    not collapse of a realized-level abstraction.
 
 ---
 
 pattern_of_additions_explained:
   statement: |
-    The Clifford document (clifford-analogy-and-derivation.yaml) identifies
-    the historical pattern: when derivative-level descriptions hit limits,
-    physics added more derivative-level entities.
+    When realized-level descriptions hit limits, physics added more
+    realized-level entities. This pattern (documented in
+    clifford-analogy-and-derivation.yaml) is now structurally explained:
 
-    This pattern is now structurally explained:
+    Realized-level descriptions cannot derive their own constants
+    or resolve their own singularities — these are process-level features
+    encoded in the higher-order regime.
 
-    Derivative-level descriptions cannot derive their own constants
-    or resolve their own singularities — these are process-level features.
-    When the derivative description fails, the only move available within
-    the derivative level is to add new derivative-level entities.
+    When the realized description fails, the only available move
+    within the realized level is to add new realized-level entities.
 
-    Each addition (dark matter, dark energy, extra dimensions, Higgs field,
-    renormalization patches) is an attempt to compensate at the derivative level
-    for information that only exists at the process level.
-
-    The additions work locally — they restore predictive accuracy within
-    a domain. They cannot unify — unification requires the process level
-    where all domains share the same generating function.
-
-  singularities: |
-    Singularities in derivative-level descriptions (NS blow-up, QED Landau pole,
-    GR black hole interior, Big Bang) are derivative-level symptoms of
-    process-level saturation — the approach to the logarithmic ceiling
+  singularities_as_over_realization: |
+    Every divergence in standard physics is a realized-level description
+    of a process-level saturation event — the approach to the ceiling
     Λ·ln(1 + κ|ψ|²) in the master equation.
 
-    From the derivative level, saturation looks like divergence.
+    From the realized level, saturation looks like divergence.
     From the process level, it is the substrate approaching processing capacity —
-    bounded, physical, and regulated by the saturation term.
+    bounded, physical, prevented by the saturation term.
 
-    Every divergence in standard physics is a derivative-level description
-    of a process-level saturation event.
+    NS blow-up, QED Landau pole, GR singularities, Big Bang:
+    all are realized-level symptoms of process-level over-realization
+    approaching the logarithmic saturation ceiling.
 
 ---
 
 constants_as_integration_constants:
   statement: |
-    Physical constants (α, particle masses, coupling strengths, G, c)
-    are not free parameters to be measured and inserted.
-    They are constants of integration — determined by the process-level
-    generating function and invisible to derivative-level descriptions.
+    Physical constants (α, particle masses, coupling strengths, G, c, ℏ)
+    are constants of integration of the higher-order function ψ —
+    determined by the process-level generating dynamics and invisible
+    to realized-level descriptions.
 
     This is why they cannot be derived from within standard physics:
-    you cannot recover the constant of integration by differentiating.
-    You must go to the generating function.
+    you cannot recover the constant of integration from the integral alone
+    without knowing the generating function.
 
   ccr_as_translation: |
-    The closure-configuration ratio (CCR) is the explicit translation mechanism
-    between levels — the ratio that connects process-level geometry
-    (rotor phase space, embedding pseudoscalar volume) to derivative-level
-    observables (coupling strength, fine-structure constant).
+    The closure-configuration ratio (CCR) is the explicit translation mechanism —
+    the ratio connecting process-level geometry (Wr, rotor phase space, 
+    embedding pseudoscalar volume) to realized-level observables
+    (coupling strength, fine-structure constant).
 
     Deriving α from Möbius vortex stability is computing the generating function
-    at the process level and reading off what derivative-level observers will measure.
-    It is not fitting a constant — it is recovering a constant of integration
-    from the higher-order function.
+    at the process level and reading off what realized-level observers will measure.
+    It recovers a constant of integration from the higher-order function.
 
     The same logic applies to all fundamental constants:
-    each is a CCR instance at its respective commitment depth and topology.
+    each is a CCR instance — the writhe-weighted realization cost
+    of a specific committed topology at its respective depth.
 
 ---
 
 experienced_reality:
   statement: |
-    The experienced world is real. This cannot be overstated.
+    The experienced world is real.
     Committed topology is genuine structure — the table is real,
-    particles are real, forces are real.
+    particles are real, forces are real, constants are real.
 
-    The precise relationship is:
-    — Experienced reality is real in the same sense that a derivative is real
-    — It contains genuine information about the generating function
-    — It does not contain the full information of the generating function
-    — It is causally downstream: the process generates the experience,
+    The precise relationship:
+    — Experienced reality is the n-fold integral of realization across Ξ depths
+    — It is real in the same sense that an integral of a real function is real
+    — It does not contain the full information of the generating process
+    — It is causally downstream: the process realizes the experience,
        not the reverse
     — Its constants and structures are determined at the process level
 
     "Authentic distillation" (ontic-field-continuum.yaml) is now precise:
-    experienced reality is the derivative of the process —
+    experienced reality is the realized integral of the process —
     real, causally downstream, informationally incomplete with respect
-    to the generating function, and fully sufficient for navigating
+    to the higher-order regime, and fully sufficient for navigating
     the committed world.
 
   consciousness_note: |
-    Consciousness at sufficient recursive depth (Ξ) is the process-level
-    capacity to experience the pre-commitment regime — to be present
-    at the transition layer (∂ψ/∂t) before R5 selection completes.
+    Consciousness at sufficient recursive depth (Ξ) is the capacity
+    to be present at the realization boundary — to experience the
+    pre-commitment regime before R5 selection completes.
+
     This is why conscious experience has the character of openness,
-    possibility, and genuine choice — it operates at the process level,
-    not the derivative level.
+    possibility, and genuine choice: it operates at the process level,
+    at the transition between higher-order regime and realized structure.
+
     Free will is execution of R(ψ) selection from within the process level.
-    It is not visible from the derivative level — which is why
-    derivative-level (deterministic or probabilistic) physics
-    cannot locate free will within its descriptions.
+    It is not visible from the realized level — which is why
+    realized-level (deterministic or probabilistic) physics
+    cannot locate it within its descriptions.
+
+    Consciousness is not an anomaly requiring a special theory.
+    It is the process becoming locally aware of its own higher-order regime
+    before integration completes.
 
 ---
 
-summary: |
-  The process (ψ, Praesto) is the higher-order reality.
-  Experienced structure (η, committed topology) is the first derivative.
-  Measurement outcomes (ρ, ∇S) are derivative-level observables.
+summary:
+  the_order: |
+    ψ (higher-order regime) — generates, open, all viable configurations
+         |
+         | R3→R5 realization: phases selected, planes committed
+         ↓
+    ∫R(ψ)dτ — realization events integrated
+         |
+         | × Ξ recursive depths — each level's realization embeds the next
+         ↓
+    η (realized topology) — the n-fold integral, experienced structure
+         |
+         | Madelung projection
+         ↓
+    ρ, u — observable projections of realized structure
 
-  Standard physics inverted this order — declaring the derivative primitive
-  and the process inaccessible. The result is a description that is:
-    — Internally consistent ✓
-    — Predictively powerful within domains ✓
-    — Unable to derive its own constants ✗
-    — Unable to unify across domains ✗
-    — Unable to resolve its own singularities without external patches ✗
-    — Unable to locate consciousness or free will ✗
+  standard_physics_assessment: |
+    Standard physics works at the η and {ρ, u} levels:
+      Internally consistent:               ✓
+      Predictively powerful within domains: ✓
+      Derives its own constants:            ✗
+      Unifies across domains:               ✗
+      Resolves singularities:               ✗  (patches only)
+      Locates consciousness / free will:    ✗
 
-  Praestology restores the correct order.
-  The master equation operates at the process level.
-  All derivative-level descriptions (Maxwell, NS, GR, QM) emerge as
-  regime-specific projections of the process onto the derivative level.
-  Constants are recovered as CCR instances — constants of integration
-  of the higher-order function.
+    Praestology restores the correct order by operating at the ψ level.
+    All realized-level descriptions emerge as regime-specific projections.
+    Constants are recovered as CCR instances — constants of integration
+    of the higher-order function.
 
-  This is not a new patch. It is the identification of the generating function
-  that standard physics has been differentiating without knowing it possessed.
+    This is not a new patch.
+    It is the identification of the generating process that standard physics
+    has been realizing without knowing it possessed.
 
 ---
 
@@ -278,17 +291,20 @@ open_items:
   priority_1:
     - id: "constants-as-ccr-complete"
       description: |
-        Systematic derivation of each fundamental constant as a CCR instance
-        at its respective commitment depth. α is the first.
-        G, c, ℏ, and particle masses to follow.
+        Systematic derivation of each fundamental constant as a CCR instance.
+        α is the first. G, c, ℏ, and particle masses to follow.
+        Each requires: identify topology, compute Wr, compute Ω_rotor,
+        read off CCR against embedding Ω_embed at that depth.
       depends_on: ["ccr-electron-explicit", "F02"]
+
   priority_2:
     - id: "measurement-problem-formal"
       description: |
-        Formal dissolution of the measurement problem via R(ψ) process-level
-        selection — showing why it is insoluble from the derivative level
-        and how it resolves naturally from the process level.
-    - id: "singularities-as-saturation"
+        Formal dissolution of the measurement problem:
+        show it is insoluble from the realized level by construction,
+        and how R(ψ) realization resolves it naturally at the process level.
+
+    - id: "singularities-as-over-realization"
       description: |
         Systematic mapping of each major physics singularity to the
         corresponding process-level saturation event.
