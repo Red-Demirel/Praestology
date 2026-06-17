@@ -48,7 +48,7 @@ This is a **capacitative adjustment**: an expansion of scope that retains deriva
 3. `core/specifications.yaml` (R1–R5 rules, especially R4/R5 viability selection)
 4. `domains/biology/life-as-edge-phenomenon.yaml` (biology as high-$\varepsilon$ frontier)
 5. `domains/biology/viability-feedback-layers.yaml` (biological instantiation of $\mathcal{R}(\psi)$)
-6. `intersectional/chemistry-biology/chirality-magnetism-ionization-guidance.yaml` (Levinthal's Paradox resolution, CISS effect)
+6. `intersectional/chirality-magnetism-ionization-guidance.yaml` (Levinthal's Paradox resolution, CISS effect)
 
 **Key Insight:** Biology is not "applied chemistry." It is the process operating at recursive depth $\Xi \approx 3-4$, where R5 selection actively maintains metastable viability against Regress.
 
@@ -78,8 +78,8 @@ This is a **capacitative adjustment**: an expansion of scope that retains deriva
 
 ### For Systems Theorists / Organizational Designers
 1. `core/process-to-observable-hierarchy.yaml` (realization chain across scales)
-2. `intersectional/systems/humanity-as-resolution-engine.yaml` (societal misalignment diagnosis)
-3. `intersectional/systems/viability-balance-hypothesis.yaml` (Inside-Out/Outside-In dynamics)
+2. `intersectional/humanity-as-resolution-engine.yaml` (societal misalignment diagnosis)
+3. `intersectional/viability-balance-hypothesis.yaml` (Inside-Out/Outside-In dynamics)
 4. `domains/society/specifications.yaml` (coupled viability $\rho$ at institutional scale)
 5. `intersectional/cooperation-paradigm-bridge.yaml` (convergent derivation mapping)
 
@@ -100,45 +100,47 @@ This is a **capacitative adjustment**: an expansion of scope that retains deriva
 ---
 
 ## 🔗 File Dependency Map (Visual)
+
+```text
 FOUNDATIONAL LAYER (Locked v1.5 Core)
 ├── foundational-ontology.yaml
-├── specifications.yaml (R1–R5)
-│
-├──  ORIENTATION LAYER (Read First)
-│   ├── derivative-reality-clarification.yaml  ← START HERE
-│   └── process-to-observable-hierarchy.yaml   ← THEN HERE
-│
-├── PROCESS LAYER (The Engine)
-│   ├── master-equation.yaml
-│   ├── geometric-algebra-formulation.yaml
-│   └── closure-configuration-ratio.yaml (CCR)
-│
-└── DOMAIN LAYERS (Additive, Not Locked)
-    ├── physics/
-    │   ├── quantum-foundation.yaml
-    │   └── emergent-classical-fields.yaml
+└── specifications.yaml (R1–R5)
     │
-    ├── biology/
-    │   ├── life-as-edge-phenomenon.yaml
-    │   └── viability-feedback-layers.yaml
+    ├── ORIENTATION LAYER (Read First)
+    │   ├── derivative-reality-clarification.yaml  ← START HERE
+    │   └── process-to-observable-hierarchy.yaml   ← THEN HERE
     │
-    ├── consciousness/
-    │   ├── specifications.yaml
-    │   └── emotions-empathy.yaml
+    ├── PROCESS LAYER (The Engine)
+    │   ├── master-equation.yaml
+    │   ├── geometric-algebra-formulation.yaml
+    │   └── closure-configuration-ratio.yaml (CCR)
     │
-    ├── ethics/
-    │   ├── specifications.yaml
-    │   └── stewardship-responsibility.yaml
-    │
-    └── society/
-        └── specifications.yaml
+    └── DOMAIN LAYERS (Additive, Not Locked)
+        ├── physics/
+        │   ├── quantum-foundation.yaml
+        │   └── emergent-classical-fields.yaml
+        │
+        ├── biology/
+        │   ├── life-as-edge-phenomenon.yaml
+        │   └── viability-feedback-layers.yaml
+        │
+        ├── consciousness/
+        │   ├── specifications.yaml
+        │   └── emotions-empathy.yaml
+        │
+        ├── ethics/
+        │   ├── specifications.yaml
+        │   └── stewardship-responsibility.yaml
+        │
+        └── society/
+            └── specifications.yaml
+
 INTERSECTIONAL LAYER (Bridges)
 ├── chirality-magnetism-ionization-guidance.yaml
 ├── humanity-as-resolution-engine.yaml
 ├── viability-balance-hypothesis.yaml
 └── cooperation-paradigm-bridge.yaml
-
-
+```
 ---
 
 ## 📝 How to Use This Guide
