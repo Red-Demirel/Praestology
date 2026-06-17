@@ -1,0 +1,188 @@
+# core/process-to-observable-hierarchy.yaml
+# Praestology — Core Framework Level
+# The direction of realization: from higher-order process to realized observables
+
+id: process-to-observable-hierarchy
+title: "Process-Level Ontology to Realized Observables"
+version: "0.3"
+status: "CORE CLARIFICATION — navigational reference; entry point for framework orientation"
+domain: "Core"
+priority: 1
+
+dependency_map:
+  requires:
+    - "core/foundational-ontology.yaml"
+    - "core/specifications.yaml (R1–R5)"
+    - "core/derivative-reality-clarification.yaml"
+  provides_to:
+    - target: "core/master-equation.yaml"
+      via: "ψ positioned as higher-order regime; master equation as process-level governor"
+    - target: "core/closure-configuration-ratio.yaml"
+      via: "CCR positioned at the ψ → η translation boundary"
+    - target: "domains/physics/quantum-foundation.yaml"
+      via: "Quantum formalism positioned as process-level description"
+    - target: "domains/physics/emergent-classical-fields.yaml"
+      via: "Classical fields positioned as coarse-grained realized projections"
+
+---
+
+description: |
+  The direction of realization runs from the higher-order process (ψ)
+  downward to realized observables. Observables are not primary —
+  they are integrated consequences of repeated realization events,
+  accumulated across recursive depths and projected onto measurable variables.
+
+  This file is the navigational reference for the full realization chain.
+  It makes the directionality of causation explicit and positions every
+  level of description within the framework.
+
+---
+
+flow:
+
+  - level: "ψ — Higher-Order Regime"
+    character: "Praegress-dominant"
+    description: |
+      Fundamental propagating process field — continuous activity and
+      unresolved multiplicity. All viable configurations held simultaneously.
+      ψ is not exhausted by any realization event; it remains the open
+      generating regime from which further realization always proceeds.
+    governed_by: "Master equation: i·(1/Π_eff)·∂ψ/∂t = [...]ψ"
+
+  - transition: "R3 — Exploration"
+    description: |
+      Orientational phases and viable configurations are generated
+      from open potential. The field explores the available phase space
+      without yet committing to any specific orientation.
+
+  - transition: "R4 — Commitment"
+    description: |
+      A specific orientational phase is selected and locked.
+      Local orientation is fixed; the bivector plane is committed.
+      This is the moment of phase selection — not yet permanently realized.
+
+  - transition: "R5 — Selection"
+    description: |
+      Viability is confirmed against the local field context.
+      If V(ψ) ≥ V_c: realization event fires and writes permanent commitment
+      into the field history. If V(ψ) < V_c: configuration dissolves,
+      potential returns to free regime (Regress), R3 resumes.
+
+  - integration: "∫ R(ψ) dτ — Realization Accumulation"
+    description: |
+      Confirmed realization events are integrated across local process time.
+      The committed record grows monotonically — each realization is permanent.
+      This integration is the source of irreversibility (arrow of time)
+      and the reason realized structure persists.
+
+  - recursion: "× Recursive Depth Ξ — Layered Realization"
+    description: |
+      Each layer of realized structure becomes the embedding context
+      for the next layer's R3→R5 cycle. Realization at depth Ξ+1
+      proceeds within the committed topology realized at depth Ξ.
+      Experienced reality at any scale is the n-fold integral
+      of realization appropriate to that recursive depth.
+      Physics (Ξ=1) → Chemistry (Ξ=2) → Biology (Ξ=3) → Consciousness (Ξ=n)
+
+  - level: "η — Committed Topology"
+    character: "Regress-dominant"
+    description: |
+      Fully realized, stable topological structure — the accumulated
+      integral of all realization events to date.
+      η = ∫R(ψ)dτ across all depths.
+      This is what is experienced as matter, particles, forces, space.
+      Real, permanent, causally downstream of ψ, and informationally
+      incomplete with respect to the generating process.
+
+  - projection: "Madelung Projection — ψ = √ρ · exp(iS)"
+    description: |
+      The exact, lossless translation from the higher-order regime
+      to realized fluid-like variables. No approximation at this step —
+      only a change of representation.
+      Commitment density ρ = |ψ|² and phase gradient ∇S are extracted
+      as the two observable projections of the realized field.
+      The Madelung decomposition is the formal boundary between
+      process-level description and realized-level description.
+
+  - level: "ρ, u — Realized Projections"
+    description: |
+      Local commitment intensity (ρ = |ψ|²) and phase-gradient flow
+      (u = Π_eff·∇S) — the directly measurable projections of realized
+      structure onto scalar and vector observables.
+      These are not derivatives of ψ — they are Madelung projections
+      of η, one step further downstream from the committed topology.
+      All instruments and measurements operate at this level or below.
+
+  - coarse_graining: "Coarse-Graining Across Scale"
+    description: |
+      Averaging over many realization events and recursive layers
+      within a given commitment-density regime. This step produces
+      the effective theories: Navier-Stokes (high-η mobile regime),
+      Maxwell (low-η chiral-vortex regime), GR-like (large-scale
+      Π_eff gradient regime). Each effective theory is valid within
+      its regime; none is fundamental.
+
+  - level: "Experienced Reality — n-fold Realized Integral"
+    description: |
+      The n-fold integral of realization events as perceived from within
+      the committed manifold at recursive depth Ξ.
+      Real, stable, sufficient for navigating the committed world.
+      Does not contain the full information of the generating process ψ —
+      constants, dimensionality, and particle structure are encoded
+      at the process level and appear as given from within the realized level.
+
+---
+
+directionality:
+  statement: |
+    Causation runs exclusively downward in this chain:
+      ψ → realization events → η → {ρ, u} → experienced reality
+
+    The reverse direction does not hold:
+    — Realized structure does not generate ψ
+    — Measurement does not collapse ψ (Copenhagen error)
+    — Observation does not create reality
+    — The experienced world does not produce the process that realizes it
+
+    What appears as "upward causation" (e.g., conscious intention affecting
+    physical reality) is the process-level execution of R(ψ) selection
+    by a system operating at sufficient recursive depth to act at the
+    R4→R5 boundary — not a violation of the hierarchy but an operation
+    from within it at a deeper level than standard physics tracks.
+
+---
+
+implication: |
+  What is called "classical physics" or "observable reality" is the
+  downstream realized readout of the underlying resolution process.
+
+  The master equation governs the generative layer (ψ).
+  Madelung hydrodynamics and classical equations are effective projections
+  valid in specific commitment-density regimes — correct within their domains,
+  silent on why their constants have the values they do.
+
+  Constants (α, particle masses, G, c, ℏ) are encoded at the ψ level
+  as closure-configuration ratios — the realization cost of specific
+  committed topologies against the full orientational phase space.
+  They are invisible to descriptions that work only with realized outputs.
+
+  The measurement problem, the origin of constants, the unification of forces,
+  and the location of consciousness and free will are all insoluble from
+  within the realized level. They resolve naturally when the correct level
+  of description — the process level — is restored.
+
+---
+
+cross_references:
+  - file: "derivative-reality-clarification.yaml"
+    note: "Full argument for process as higher-order regime; integral vs derivative correction"
+  - file: "closure-configuration-ratio.yaml"
+    note: "CCR as the ψ→η translation ratio; constants as realization costs"
+  - file: "navier-stokes-derivation.yaml"
+    note: "NS as coarse-grained projection — high-η mobile-topology limit"
+  - file: "geometric-algebra-bridge.yaml"
+    note: "Grade decomposition maps onto realization levels: grade-3→grade-0"
+  - file: "emergent-classical-fields.yaml"
+    note: "All classical fields positioned as realized-level regime projections"
+  - file: "spin-process-rate-ga-v2.yaml"
+    note: "Spin as process-rate; CCR as realization cost at ψ→η boundary"
