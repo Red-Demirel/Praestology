@@ -1,38 +1,38 @@
-# spin-process-rate-ga.yaml
+# domains/physics/spin-process-rate-ga.yaml
 # Praestology — Physics Domain
-# Spin as process-rate; α as closure-configuration ratio instance
+# Spin as process-rate; α as CCR; Inertia as variational reconfiguration cost
 
 name: "Spin, Process-Rate, and the Closure-Configuration Ratio Origin of α"
-version: "2.0"
+version: "3.0"
 parent_domain: "Physics"
 core_version: "1.5"
-status: "Hypothesis — structurally consistent; numerical closure open"
-supersedes: "spin-process-rate-ga v1.0"
+status: "PROPOSED — language corrected; inertia derivation formally open"
+supersedes: "spin-process-rate-ga-v2.yaml"
 description: >
-  Spin is not an intrinsic property of a point particle. In Praestology,
-  the electron is a 720° Möbius vortex — a spinor rotor in the even
-  subalgebra of Cl(3,0). Spin is the observable signature of the vortex's
-  internal phase iteration: the rate at which the field resolves its own
-  closure at the Möbius crossover. The fine-structure constant α emerges
-  as the electron's instance of the closure-configuration ratio (CCR) —
-  the irreducible cost of maintaining one specific committed topology
-  against the full orientational phase space of the 3D embedding field.
+  Spin is the observable signature of a 720° Möbius vortex's internal phase
+  iteration rate. The fine-structure constant α emerges as the electron's
+  instance of the closure-configuration ratio (CCR). Inertia is introduced
+  as the reconfiguration resistance of committed topology — formally derivable
+  as the second variation of the energy functional with respect to displacement,
+  with CCR entering as the coupling coefficient. Full derivation is an open item.
 
 dependency_map:
   requires:
-    - "core/core-dynamical-equation.yaml"
-    - "core/emergent-relational-manifold.yaml"
+    - "core/master-core-equation.yaml"
     - "core/closure-configuration-ratio.yaml"
-    - "domains/physics/fine-structure-constant.yaml"
+    - "core/derivative-reality-clarification.yaml"
+    - "core/process-to-observable-hierarchy.yaml"
   provides_to:
     - target: "domains/physics/quantum-foundation.yaml"
-      via: "Spin as phase iteration rate; CCR as structural embedding cost"
-    - target: "core/quaternion-formulation.yaml"
-      via: "GA formulation of double cover (SU(2) ≅ unit quaternions)"
-    - target: "domains/physics/gauge-symmetry-reinterpretation.yaml"
-      via: "CCR as the ratio underlying each gauge group's coupling strength"
+      via: "Inertia and spin derived as process-level reconfiguration costs"
+    - target: "domains/physics/emergent-classical-fields.yaml"
+      via: "Equivalence principle grounded in single Π_eff mechanism"
 
 ---
+
+# ─────────────────────────────────────────────
+# SPIN AS PROCESS-RATE
+# ─────────────────────────────────────────────
 
 spin_process_rate:
   statement: |
@@ -42,15 +42,11 @@ spin_process_rate:
     the rate at which the field re-encounters its own closure point
     (the Möbius crossover) during each full 720° cycle.
 
-    This iteration is a local resolution event: the vortex advances
+    This iteration is a local realization event: the vortex advances
     through its phase space. The frequency of this advance is the
     spin precession rate. It is not an external rotation imposed on
     a particle — it is the field's own process-rate for resolving
     the closure of a chiral committed topology.
-
-    Spin is a measure of how fast the vortex is iterating its
-    internal commitment cycle (R4) relative to the available
-    local processing capacity (Π_eff).
 
   relation_to_process_rate: |
     In the master equation, local evolution rate is scaled by 1/Π_eff.
@@ -62,8 +58,8 @@ spin_process_rate:
     This directly links spin precession to the substrate's process-rate —
     and through it, to gravitational time dilation and velocity redshift.
 
-    Spin precession frequency variation in gravitational potentials
-    is a direct, testable prediction — not a correction but the mechanism.
+    Spin precession frequency variation with local Π_eff is a direct,
+    testable prediction — not a correction but the mechanism itself.
 
   per_iteration_phase: |
     Spin quantum number s encodes the per-iteration phase advance Δθ:
@@ -71,15 +67,144 @@ spin_process_rate:
       Spin-½  (electron):  Δθ = π per iteration — two cycles to close
       Spin-1  (photon):    Δθ = 2π per iteration — one cycle to close
       Spin-0  (scalar):    Δθ = 0 — no phase rotation, pure committed density
-      Spin-3/2:            Δθ = 3π/2 — four cycles to close (high recursive depth)
+      Spin-3/2:            Δθ = 3π/2 — four cycles to close
 
     Fermion/boson distinction is a Π_eff availability threshold:
     — Photon propagates in high-Π_eff: full processing capacity, one cycle closes
     — Electron's own committed topology depletes local Π_eff by half per iteration:
       two iterations required to close the loop
-    — Half-integer spin = self-depleting topology; integer spin = non-depleting
+    — Half-integer spin = self-depleting topology
+    — Integer spin = non-self-depleting topology
+
+  double_cover_unified: |
+    Three descriptions of the same mechanism at different levels:
+
+      GA statement:          R → −R under 2π rotation (rotor double-cover)
+      Process-rate statement: one master equation iteration advances phase by π
+      Π_eff statement:       committed topology depletes half local Π_eff per cycle
+
+    These are not separate claims. They are the same physical fact expressed
+    at the geometric, process-rate, and field-capacity levels respectively.
 
 ---
+
+# ─────────────────────────────────────────────
+# INERTIA AS RECONFIGURATION RESISTANCE
+# ─────────────────────────────────────────────
+
+inertia_as_reconfiguration_resistance:
+  statement: |
+    Inertia is not an intrinsic property of a point-like mass.
+    It is the resistance of a committed topology to reconfiguration —
+    the cost of changing the phase orientation of the Möbius vortex
+    against the substrate's finite local free potential.
+
+    When a committed topology is displaced or accelerated, its rotor
+    must re-traverse its orientational closure cycle in the new context.
+    This re-traversal draws on local Π_eff. Where Π_eff is locally
+    depressed by the topology's own commitment density, re-traversal
+    is slower — the topology resists change. This resistance is inertia.
+
+    The CCR enters as the coupling coefficient: it sets what fraction
+    of the available orientational phase space the topology must
+    re-negotiate per realization cycle when reconfiguration occurs.
+    Higher CCR → larger phase space fraction per cycle → greater
+    resistance to reconfiguration → greater inertial mass.
+
+  physical_picture: |
+    Reconfiguration sequence when a force is applied:
+
+    1. External Π_eff gradient (∇Π_eff) exerts pressure on the vortex
+    2. The bivector plane must re-orient relative to the pseudoscalar volume
+    3. Re-orientation requires the vortex to advance through its closure cycle
+       in the new orientation — drawing on local Π_eff
+    4. The rate of re-orientation is suppressed where Π_eff is low
+    5. This suppression manifests as inertial resistance at the realized level
+
+    Inertia is the field's own process-rate limitation on reconfiguration —
+    not a property the topology possesses but a consequence of how quickly
+    the field can realize the updated committed state.
+
+  language_note: |
+    AVOID: "computed," "computational impedance," "background iterations to compute,"
+           "processing workload" — these imply simulation, which contradicts the
+           ontological priority of the process over any computational description.
+
+    USE:   "realized," "resolved," "processed by the field," "re-traversed,"
+           "drawn on local Π_eff," "rate of realization"
+
+    The substrate is not executing a calculation. It is resolving physical
+    tension — realization is ontologically prior to any computational description.
+
+  relation_to_relativistic_dilations: |
+    Gravitational time dilation:
+      Near mass concentrations, local Π_eff is depressed by surrounding
+      commitment density. Realization cycles slow — clocks run slowly.
+      Inertial resistance increases in the same region by the same mechanism.
+
+    Velocity time dilation:
+      Translating a committed topology through the field requires continuous
+      re-orientation of the rotor into new spatial volumes. This motion
+      draws on local Π_eff, partially depleting it. The internal realization
+      rate slows — the topology's clock dilates — and inertial resistance
+      increases. Both effects are the same Π_eff depletion mechanism,
+      with translation as the source rather than surrounding commitment density.
+
+    Equivalence principle:
+      Gravitational mass (tracking ∇Π_eff gradients) and inertial mass
+      (resistance to reconfiguration via Π_eff depletion) are both
+      consequences of the same Π_eff mechanism in the master equation.
+      Their equality is not a postulate — it is a structural consequence.
+      Formal proof: open derivation (see below).
+
+  formal_derivation_path:
+    status: "OPEN — path identified, algebra not yet completed"
+    approach: |
+      Inertial mass should emerge as the second variation of the
+      energy functional of the Möbius vortex solution with respect
+      to spatial displacement.
+
+      Starting point: stable vortex solution ψ₀ satisfying the master equation.
+
+      Step 1 — Energy functional:
+        E[ψ] = ∫ [ Π_eff |∇ψ|² + V|ψ|² + (g/2)|ψ|⁴
+                   + Λ(|ψ|²·ln(1+κ|ψ|²) - |ψ|²/κ) ] d³r
+
+      Step 2 — Perturbation:
+        ψ = ψ₀(r − ε·n̂) for small displacement ε in direction n̂
+        Expand to second order in ε
+
+      Step 3 — Second variation:
+        δ²E/δε² |_{ε=0} = m_eff
+
+        This is the inertial mass — the energy cost of displacing
+        the vortex by an infinitesimal amount. It should be expressible
+        as a functional of Π_eff, the vortex profile ψ₀, and CCR.
+
+      Step 4 — CCR entry:
+        CCR appears as the ratio Ω_rotor/Ω_embed in the coupling
+        between the vortex's phase space and the embedding field.
+        It sets the coefficient of the leading term in δ²E/δε².
+
+      Step 5 — Equivalence principle:
+        Show that the same expression appears when computing the
+        force on ψ₀ from an external ∇Π_eff gradient (gravitational mass).
+        If the two expressions are identical, the equivalence principle
+        is derived from the master equation without additional postulates.
+
+    depends_on: ["mobius-vortex-stability", "ccr-electron-explicit", "F02"]
+    note: |
+      This derivation, if completed, would simultaneously:
+      — Ground inertial mass in the master equation
+      — Derive the equivalence principle
+      — Confirm CCR as the coupling coefficient for inertial response
+      — Provide a mass formula parallel to the α formula
+
+---
+
+# ─────────────────────────────────────────────
+# GEOMETRIC ALGEBRA FRAMEWORK
+# ─────────────────────────────────────────────
 
 ga_framework:
   statement: |
@@ -88,145 +213,95 @@ ga_framework:
     isomorphic to the quaternions, representing the double cover of SO(3).
 
   grade_decomposition:
-    grade_0_scalar: "Commitment density η — the resolved 'now' of each iteration"
+    grade_0_scalar: "Commitment density ρ_η — the realized 'now' of each event"
     grade_1_vector: "Directional flows — propagation, gradients, momentum"
-    grade_2_bivector: "Oriented planes — vortex circulation plane, EM bivector F"
-    grade_3_pseudoscalar: "Oriented volume — full 3D embedding phase space; chirality winding"
+    grade_2_bivector: "Oriented planes — vortex circulation plane, writhe origin"
+    grade_3_pseudoscalar: "Oriented volume — full 3D embedding phase space; chirality"
 
   spinor_rotor: |
     R = exp(−Iθ/2), I a unit bivector — represents the vortex's phase state.
     720° rotation → rotor returns to +1 (closure complete)
     360° rotation → rotor at −1 (half-cycle, not yet closed)
 
-    The rotor's action on the embedding space is conjugation: x → RxR†
-    This encodes both chirality (sign of bivector I) and phase (angle θ).
-    Chirality is the grade-3 pseudoscalar component — the topological
-    winding direction that determines spin-polarization of coupled processes
-    (CISS effect at molecular scale; parity violation at weak-force scale).
+    The rotor's action: x → RxR† (conjugation)
+    Chirality: sign of the grade-3 pseudoscalar component —
+    determines spin-polarization of all coupled realization processes
+    (CISS at molecular scale; parity selection at weak-force scale;
+    homochirality at biological scale — same mechanism, different depth)
 
-  double_cover_process_reading: |
-    The rotor double-cover is not merely a mathematical curiosity.
-    It is the geometric expression of the two-iteration requirement:
+  inertia_in_ga: |
+    In GA terms, inertial resistance is the cost of re-orienting
+    the grade-2 bivector (circulation plane) relative to the
+    grade-3 pseudoscalar (embedding volume) under displacement.
 
-      Geometric statement:  R → −R under 2π rotation
-      Process-rate statement: one master equation iteration advances phase by π
-      Π_eff statement: committed topology depletes half local Π_eff per cycle
+    The CCR = Ω_rotor/Ω_embed is the ratio of the bivector's phase space
+    to the pseudoscalar volume — directly the coupling coefficient
+    between applied force and inertial response.
 
-    These are three descriptions of the same mechanism at different levels.
-    GA's double-cover IS the process-rate consequence of half-Π_eff availability.
+    A displacement that changes the spatial position of the vortex
+    requires re-aligning the rotor R in the new context.
+    The grade-2 self-linking (writhe) sets the minimum re-alignment cost.
+    Wr = 1 for the electron means one full self-linking must be
+    re-traversed per displacement cycle — this is the inertial quantum.
 
 ---
+
+# ─────────────────────────────────────────────
+# THE CLOSURE-CONFIGURATION RATIO (α)
+# ─────────────────────────────────────────────
 
 alpha_as_ccr:
   statement: |
-    The fine-structure constant α is the electron's instance of the
-    closure-configuration ratio (CCR) — see closure-configuration-ratio.yaml.
+    The fine-structure constant α is the electron's instance of the CCR —
+    the irreducible orientational cost of realizing the 720° Möbius spinor
+    rotor against the full 3D embedding phase space.
 
-    CCR(electron) = Ω_rotor(electron) / Ω_embed(3D)
-                  = (phase space traversed per 720° closure) / (full 3D pseudoscalar volume)
-                  = α
-
-  framing: |
-    α is the irreducible orientational cost of maintaining the electron's
-    specific committed topology against the full orientational phase space
-    of the 3D embedding field.
-
-    It is not a defect, anomaly, or free parameter.
-    It is not "how much the electron fails to couple to the field."
-    It is the cost of being this electron — this specific committed closure —
-    rather than uncommitted field.
-
-    A committed structure necessarily occupies a specific orientation subset.
-    The ratio of that subset to the full embedding phase space is α.
-    If α = 1: rotor simultaneously all orientations = uncommitted field, not a particle.
-    0 < α < 1: the only viable regime for stable committed topology.
+    CCR(electron) = (Wr · Ω_rotor) / Ω_embed = α
+      Wr = 1  (Calugareanu-White: Lk=2, Tw=1, Wr=1)
 
   geometric_terms: |
-    α⁻¹ = 4π³ + π² + π ≈ 137.036304
+    α_geometric⁻¹ = 4π³ + π² + π ≈ 137.036304
 
-    4π³ — volume of S³: quaternion phase space traversed per 720° closure
-           (S³ is the unit quaternion sphere; double-cover factor included)
-    π²  — bivector surface: orientational interface cost of coupling the
-           rotor's 2D circulation plane to the 3D embedding space
-    π   — self-intersection residual at the Möbius crossover point
-           where the 720° closure completes
+      4π³ — S³ volume: quaternion phase space per 720° closure (double-cover)
+      π²  — bivector surface: interface cost of 2D rotor plane to 3D embedding
+      π   — self-intersection residual at Möbius crossover point
 
-    Sum: total orientational cost of one complete closure cycle.
-    Ratio to embedding pseudoscalar volume: α⁻¹.
+    Each term is a necessary geometric cost of realization at this topology.
 
-    Each term is a necessary geometric cost — none is arbitrary.
+  alpha_measured_shift: |
+    α_geometric⁻¹ = 137.036304  (bare CCR, unperturbed field)
+    α_measured⁻¹  = 137.035999  (CODATA — within commitment-dense lab)
 
-  relation_to_spin: |
-    The CCR sets the conversion efficiency between process-rate and
-    observable spin precession:
-
-      ω_spin = (Π_eff · Δθ) / (CCR · τ_closure)
-
-    Higher process-rate (higher Π_eff) → faster spin precession.
-    CCR is the orientational cost per iteration — the ratio of how much
-    phase space the rotor actually traverses to how much is available.
-
-    This is not friction or resistance. It is the geometric ratio between
-    the specific and the general: committed topology vs. open field.
-
-  alpha_geometric_vs_measured: |
-    α_geometric = CCR in unperturbed free field = 4π³ + π² + π inverse
-    α_measured  = CCR sampled within commitment-dense lab environment
-
-    Environmental commitment density partially pre-selects the embedding
-    phase space, compressing effective Ω_embed slightly.
-    Result: α⁻¹_measured < α⁻¹_geometric (CODATA: 137.035999 vs 137.036304)
-
-    The 2.2 ppm gap is the environmental Π_eff depression imprinting
-    on the measurement of a geometric ratio. It is predicted, not anomalous.
-
-  running_alpha: |
-    α runs with energy scale (QED renormalization group).
-    CCR reading: at higher energy = higher local commitment density = lower Π_eff,
-    the embedding phase space Ω_embed is progressively compressed.
-    The ratio CCR = Ω_rotor/Ω_embed increases toward 1 as Ω_embed shrinks.
-    The Landau pole (α divergence) is Ω_embed → Ω_rotor —
-    physically: approach to logarithmic saturation ceiling.
-    The substrate cannot be compressed beyond processing capacity —
-    the same Λ·ln(1 + κ|ψ|²) that regularizes NS singularities
-    prevents the Landau pole from being physical.
+    The 2.2 ppm gap is environmental Π_eff depression compressing
+    the effective embedding phase space Ω_embed slightly downward.
+    Predicted, not anomalous. Testable via space-based precision metrology.
 
 ---
+
+# ─────────────────────────────────────────────
+# PAULI EXCLUSION
+# ─────────────────────────────────────────────
 
 pauli_exclusion:
   statement: |
     Two fermions cannot occupy the same state because two identical
-    half-iteration (spin-½) processes in the same Π_eff region would
-    mutually deplete the available processing capacity below the
-    viability threshold V_c.
+    half-Π_eff-depleting topologies in the same region would collectively
+    exhaust the local free potential below the viability threshold V_c.
 
-    R(ψ) excludes the configuration — not as an external rule
-    but as a direct viability selection outcome.
+    R(ψ) viability selection excludes the configuration —
+    not as an external rule but as a direct consequence of
+    the field's finite local processing capacity.
 
-    Pauli exclusion is R(ψ) viability selection applied to
-    overlapping half-Π_eff-depleting committed topologies.
+    Pauli exclusion is R(ψ) selection applied to overlapping
+    self-depleting committed topologies.
 
   status: "MECHANISM IDENTIFIED — formal derivation from R(ψ) parameters open"
 
 ---
 
-chirality_connection:
-  statement: |
-    The rotor's grade-3 pseudoscalar component (topological winding direction)
-    determines spin-polarization of all processes the vortex couples to.
-
-    This is the same mechanism operating at three scale tiers:
-      Particle:   parity violation — chirality-sensitive R(ψ) at weak-force depth
-      Molecular:  CISS effect — grade-3 × grade-1 → grade-2 spin polarization
-      Biological: homochirality — R5 viability selection of efficient spin-filtered transport
-
-    The grade-3 chirality of the spinor rotor is projected out by standard
-    gauge theories (U(1) acts on grade-1 phase only) — appearing as anomalies.
-    In Praestology it is primary: the rotor's chirality is constitutive of its identity.
-
-  cross_reference: "gauge-symmetry-reinterpretation.yaml, chirality-biology.yaml"
-
----
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
 
 open_derivations:
   priority_1:
@@ -234,32 +309,156 @@ open_derivations:
       description: |
         Derive Ω_rotor = 4π³ + π² + π from stability analysis of
         720° Möbius vortex in saturating GP equation.
-        Confirm S³ volume, bivector surface term, and self-intersection residual
+        Confirm Wr = 1 from Lk = 2, Tw = 1 via Calugareanu-White.
+        Confirm S³ volume, bivector surface, self-intersection terms
         from first principles of vortex topology.
       depends_on: ["mobius-vortex-stability", "F02"]
-      note: "This is the α numerical closure — highest priority open derivation"
+      note: "α numerical closure — highest priority open derivation"
 
+    - id: "inertia-variational-derivation"
+      description: |
+        Complete the five-step variational derivation outlined in
+        inertia_as_reconfiguration_resistance.formal_derivation_path.
+        Expected outputs:
+        — m_eff as functional of Π_eff, ψ₀, CCR
+        — Equivalence principle as structural identity
+        — CCR confirmed as inertial coupling coefficient
+        — Mass formula parallel to α formula
+      depends_on: ["ccr-electron-explicit", "mobius-vortex-stability"]
+
+  priority_2:
     - id: "omega-spin-explicit"
       description: "Derive ω_spin = f(Π_eff, η) explicitly from master equation"
       depends_on: ["ccr-electron-explicit"]
 
-  priority_2:
-    - id: "pauli-exclusion-from-rpsi"
-      description: "Formal derivation of exclusion from R(ψ) viability on overlapping half-Π_eff topologies"
+    - id: "pauli-from-rpsi"
+      description: |
+        Formal derivation of Pauli exclusion from R(ψ) viability
+        applied to overlapping half-Π_eff-depleting topologies.
+
     - id: "g-minus-2-from-ccr"
-      description: "Derive g-2 series as successive environmental CCR compressions at loop order"
+      description: |
+        Derive g-2 series as successive environmental CCR compressions
+        at increasing commitment depth (loop order in QED language).
       depends_on: ["ccr-electron-explicit"]
 
 ---
 
-notes:
-  - "GA framing is a descriptive layer, not a new physical postulate —
-     it arises from the dynamics of the ψ field."
-  - "The CCR replaces all 'defect', 'friction', and 'anomalous coupling'
-     language from v1.0. These framings implied failure; CCR correctly
-     identifies a structural feature of committed embedding."
-  - "Numerical derivation of α from vortex stability conditions remains
-     the single highest-priority open item in the physics domain."
-  - "The spin-statistics theorem connection (half-integer spin →
-     Fermi-Dirac statistics) is now grounded in the Π_eff depletion
-     mechanism and R(ψ) exclusion — same mechanism, two descriptions."
+cross_references:
+  - file: "closure-configuration-ratio.yaml"
+    note: "CCR definition, writhe, V_eff formula, extreme-suppression regime"
+  - file: "geometric-algebra-bridge.yaml"
+    note: "Grade structure, rotor double-cover, chirality as grade-3"
+  - file: "gauge-symmetry-reinterpretation.yaml"
+    note: "U(1) as phase-gradient residual symmetry; CCR as underlying ratio"
+  - file: "chirality-biology.yaml"
+    note: "Same chirality mechanism at molecular and biological depth"
+  - file: "navier-stokes-derivation.yaml"
+    note: "Madelung as cross-domain translator; same field, different regime"
+  - file: "derivative-reality-clarification.yaml"
+    note: "Constants as integration constants of higher-order regime"
+
+---
+
+# ─────────────────────────────────────────────
+# TENSION AS DERIVATIVE OF RECONFIGURATION COST
+# ─────────────────────────────────────────────
+
+tension_as_derivative:
+  statement: |
+    Tension in the field is the derivative of the total reconfiguration cost
+    with respect to changes in the vortex's state — phase, orientation, or position.
+    It is the field's resistance to change in committed topology, arising from
+    finite local free potential (Π_eff) and the closure-configuration ratio (CCR).
+
+    Formally, using the energy functional E[ψ] from the variational derivation
+    of inertia (see inertia_as_reconfiguration_resistance.formal_derivation_path):
+
+      Tension = δE[ψ] / δ(phase)
+
+    This derivative quantifies the additional reconfiguration cost per unit
+    change in the vortex's state. High derivative → strong resistance (tension).
+    Low derivative → weak resistance (compliant topology).
+
+    Note: a schematic integral C = ∫ f(CCR, Π_eff) dτ can represent the
+    accumulated reconfiguration cost, but its explicit form depends on the
+    completed variational derivation of inertia. Until that derivation is closed,
+    tension is defined via δE[ψ]/δ(phase) rather than by a separate integral.
+    Status: formal expression contingent on inertia-variational-derivation.
+
+  reciprocity:
+    statement: |
+      The field's resistance to reconfiguration is not a one-way effect.
+      When a vortex resists reconfiguration, the field exerts an equal and
+      opposite tension on the vortex's bivector plane.
+
+      This reciprocity is guaranteed by the variational structure of E[ψ]:
+
+        δE/δ(phase) = −δE/δ(field)
+
+      Change in the vortex's state costs the field free potential;
+      the field returns that cost as a restoring force or internal stress
+      on the vortex. This is Newton's third law, Lenz's law, and
+      action-reaction — unified as a single variational identity
+      at the process level.
+
+      The identity holds for any differentiable energy functional —
+      it is not specific to a particular topology or scale.
+      It is the process-level origin of all mechanical reciprocity.
+
+  manifestations: |
+    Gravitational stress:
+      ∇Π_eff exerts a restoring force on committed structures —
+      the refraction mechanism (emergent-classical-fields.yaml).
+      Tension = δE/δ(position) along the Π_eff gradient.
+
+    Electromagnetic stress:
+      The bivector plane's resistance to reorientation produces
+      the Lorentz force. Tension = δE/δ(phase) of the chiral rotor
+      under an external phase-gradient field.
+
+    Mechanical / elastic stress:
+      Within a committed lattice structure, the field's resistance
+      to displacement of topology produces elastic restoring forces.
+      Tension = δE/δ(displacement) for each committed node.
+      Hooke's law is the linear approximation of this derivative.
+
+    Cosmological stress (dark energy):
+      The Regress kernel's return of commitment to free potential
+      produces a global tension as realized structure dissolves
+      back toward the higher-order regime.
+      Appears as residual acceleration at cosmological scale —
+      the derivative of the universe's total reconfiguration cost
+      with respect to its overall commitment configuration.
+
+  fluid_correspondence: |
+    In fluid dynamics (emergent from the master equation via Madelung
+    and NS derivation), the same variational structure produces:
+
+      Pressure:      δE/δ(volume)       — derivative of internal energy
+      Viscous stress: δD/δ(strain rate) — derivative of dissipation (Regress kernel)
+      Elastic stress: δE/δ(deformation) — derivative of stored realization energy
+
+    In Praestology these are not analogies — they are the same
+    δE/δ(state) structure applied to the same field in the
+    high-η, mobile-topology, Madelung-projected regime.
+
+    The CCR sets the coupling coefficient between stress and strain
+    at each commitment depth. The Regress kernel provides the
+    dissipative component (viscosity in the NS limit).
+
+    The stress-strain relationship in a compressible viscous fluid
+    is the coarse-grained, derivative-level projection of
+    δE[ψ]/δ(phase) operating in the high-η regime.
+
+  cross_references:
+    - file: "master-equation.yaml"
+      note: "Energy functional E[ψ] — source of variational derivatives"
+    - file: "closure-configuration-ratio.yaml"
+      note: "CCR as coupling coefficient between stress and strain"
+    - file: "emergent-classical-fields.yaml"
+      note: "Gravitational and EM stress as Π_eff gradient effects"
+    - file: "navier-stokes-derivation.yaml"
+      note: "Viscous stress from R(ψ); pressure from GP + saturation terms"
+    - file: "inertia_as_reconfiguration_resistance"
+      note: "Inertia is the integral; tension is its derivative — same E[ψ]"
