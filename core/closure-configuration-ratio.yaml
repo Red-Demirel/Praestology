@@ -355,3 +355,219 @@ cross_references:
     note: "Grade structure; S³ as quaternion phase space; bivector self-linking"
   - file: "chirality-biology.yaml"
     note: "Grade-3 × grade-1 → grade-2: realization of chirality into observable spin state"
+
+---
+# AMENDMENT v2.1 — viability ratio, extreme-suppression regime, high-V_eff regime
+# Note: "frozen" is the external observer's appearance only.
+# Regress is continuous and rate-proportional to Π_eff — never fully absent.
+
+viability_ratio:
+  statement: |
+    The viability of a committed topology is not absolute.
+    It depends on the local balance between free potential (Π_eff)
+    and commitment density, relative to its intrinsic CCR:
+
+      V_eff = Π_eff / (ρ_η · CCR)
+
+    where ρ_η is the local commitment density magnitude (scalar — the
+    local value of |η|, not the full topological structure of η).
+    CCR is the closure-configuration ratio of the topology in question.
+
+    A structure persists when V_eff ≥ V_c (viability threshold set by R(ψ)).
+    When V_eff < V_c, the structure is unstable and will dissolve via Regress
+    at a rate proportional to Π_eff — unless it can reconfigure to a lower-CCR state.
+
+    This makes CCR an active participant in the viability condition —
+    not only the realization cost of a topology but a continuous
+    determinant of whether that topology remains viable as its
+    local environment (Π_eff, ρ_η) changes.
+
+  regimes:
+    viable: |
+      Condition: V_eff ≥ V_c
+      Behavior: structure persists, moves, interacts, reconfigures.
+                R3→R4→R5 realization cycles proceed normally.
+      Examples: free particles, atoms, molecules in low-density environments
+
+    unstable_dissolving: |
+      Condition: V_eff < V_c, Π_eff at normal range
+      Behavior: R(ψ) drives dissolution (Regress) at normal process rate —
+                commitment returns to free potential on observable timescales.
+      Examples: virtual particles, unstable resonances, high-energy excitations
+
+    extreme_suppression: |
+      Condition: Π_eff → 0 (extremely low free potential)
+      Behavior: Regress continues but at a rate proportional to Π_eff —
+                τ_regress = f(1/Π_eff) diverges as Π_eff → 0.
+                The process is not halted; it proceeds on timescales that
+                approach and may exceed cosmological observation windows.
+
+                From outside: the structure appears frozen — an observational
+                artifact of the timescale divergence, not a process discontinuity.
+                From inside: Regress and realization continue at near-zero rate.
+
+                Key distinction: dissolution itself is a realization event
+                requiring processing capacity. Regress rate scales with Π_eff
+                continuously — no sharp threshold, no discontinuity.
+                The master equation's 1/Π_eff prefactor produces this behavior
+                directly, with no additional mechanism required.
+      Examples: deep black hole interiors, regions of extreme commitment density
+
+  relation_to_master_equation: |
+    The 1/Π_eff prefactor on the time derivative governs local process rate
+    continuously. As Π_eff → 0, evolution rate → 0 asymptotically.
+    There is no discontinuous freeze threshold — only continuous suppression.
+
+    Gravitational time dilation:    Π_eff moderately low → clocks slow
+    Extreme suppression regime:     Π_eff → 0 → process rate → 0 asymptotically
+    "Frozen" appearance:            τ_regress exceeds observation window —
+                                    external appearance only, not process reality
+
+---
+
+black_hole_interpretation:
+  statement: |
+    A black hole is not a singularity or a breakdown of physics.
+    It is a region of extreme Π_eff suppression where all process rates —
+    realization and Regress alike — approach zero asymptotically.
+
+    The committed structure (collapsed matter) is not held together by forces
+    and is not frozen in an absolute sense. It is dissolving via Regress
+    at a rate so slow it is unobservable on any accessible timescale.
+    The event horizon is the surface where τ_regress first exceeds
+    the cosmological observation window — not a geometric discontinuity
+    but a process-rate horizon.
+
+  explains: |
+    Apparent stability:  τ_regress ≫ t_universe inside the horizon —
+                         Regress proceeds but is unobservable from outside
+    Hawking radiation:   at the horizon, Π_eff is low but non-zero;
+                         Regress events occasionally couple to the external field,
+                         carrying commitment outward as thermal radiation —
+                         the same continuous Regress mechanism, now with
+                         access to external free potential
+    No singularity:      Π_eff → 0 suppresses process rate before divergence;
+                         logarithmic saturation Λ·ln(1+κ|ψ|²) prevents
+                         infinite commitment density from forming —
+                         consistent with singularities-as-over-realization
+                         (derivative-reality-clarification.yaml)
+    Information:         committed topology is not destroyed — it dissolves
+                         via Regress on extreme timescales, returning structure
+                         to free potential incrementally; information is not lost
+                         but becomes inaccessible on any finite observation window
+
+  cross_reference: "domains/cosmos/black-hole-extreme-suppression.yaml (to be created)"
+
+---
+
+high_veff_regime:
+  statement: |
+    When V_eff ≫ 1 (Π_eff ≫ ρ_η · CCR), the field enters a high-process-rate,
+    low-commitment regime. Realization cycles run rapidly; the GP self-interaction
+    term g|ψ|² dominates, driving rapid local self-reinforcement.
+    The saturation term Λ·ln(1+κ|ψ|²) caps the amplitude, producing
+    discrete bursts of realization activity.
+
+    This is the same mechanism governing modulational instability,
+    soliton formation, and vortex nucleation in BECs.
+
+  gp_limit: |
+    The Gross-Pitaevskii equation is the limiting form of the master equation
+    when Π_eff is constant and high, and the saturation term is negligible
+    or linearised. BEC solitons and vortices are the same process
+    at laboratory scale and controlled environment — direct empirical access
+    to the high-V_eff realization dynamics.
+
+  cosmological_implication: |
+    In the early universe (high Π_eff, low ρ_η), the field would have exhibited
+    these realization bursts — producing seeds of large-scale structure
+    without requiring a separate inflationary epoch.
+    Inflation is a derivative-level description of the high-V_eff regime's
+    burst dynamics in the master equation.
+
+  laboratory_signature: |
+    BEC experiments (solitons, vortices, modulational instability) are
+    the direct laboratory analog. Same process, different scale.
+    This provides experimental access to high-V_eff dynamics
+    without requiring cosmological observation.
+
+  cross_reference: "domains/cosmos/early-universe-high-veff.yaml (to be created)"
+
+---
+
+ccr_first_derivation_discipline:
+  status: "DIRECTIONAL CORRECTION — methodological note, not a new result"
+  context: |
+    A proposed connection suggested deriving CCR from the Gauss-Bonnet theorem
+    applied directly to the Möbius band as a surface. This is mathematically
+    incorrect as stated: the Möbius band is intrinsically flat (developable),
+    so ∫K dA = 2πχ = 0 for χ(Möbius) = 0 — not 4π³+π²+π. Gauss-Bonnet
+    governs intrinsic surface curvature; it is the wrong tool for an
+    embedding/self-linking question.
+
+  salvaged_intuition: |
+    The underlying instinct is correct and worth preserving: Calugareanu-
+    White-Fuller (Lk = Wr + Tw) IS the appropriate member of the Gauss-Bonnet
+    family for this problem — it is the curve-self-linking analog, decomposing
+    a topological invariant (Lk) into geometric (Wr) and framing (Tw)
+    contributions, structurally parallel to how Gauss-Bonnet decomposes χ
+    into curvature and boundary terms. CWF is already correctly used
+    elsewhere in this file (Wr = 1 for the electron). The error was reaching
+    for the surface-curvature member of the family instead of the
+    curve-linking member, when the electron's structure is a vortex
+    filament, not a surface.
+
+  directional_correction: |
+    The deeper methodological issue is direction of derivation, not just
+    choice of theorem:
+
+      Backward (incorrect approach): start from an assumed geometric picture
+      of the electron (Möbius surface), then search for a theorem that
+      describes that picture. This fits invariants to shapes already assumed —
+      it can produce numerically suggestive but structurally unjustified results.
+
+      Forward (correct approach): start from CCR as the defining ratio,
+      and ask what geometric/topological structure is NECESSARILY implied
+      by that ratio's required properties (dimensionless, 0 < CCR < 1,
+      writhe-weighted, S³-valued phase space). Let the ratio constrain
+      the topology, rather than retrofitting a theorem onto a presumed shape.
+
+    This directional discipline applies to all future CCR instance derivations
+    (weak, strong, gravitational) — see other_constants_as_ccr above.
+    The geometric terms (4π³ + π² + π) remain a candidate pending
+    ccr-electron-explicit; they should be derived FROM the CCR structure,
+    not justified by retrofitting surface theorems onto an assumed picture.
+
+  epistemic_note: |
+    Consistent with the framework's stated epistemic stance (praestology-recap):
+    "the framework stands or falls by its ability to derive known physics...
+    not by philosophical elegance alone." This is logged as an open
+    directional correction, not forced to premature closure. Future work —
+    plausibly by contributors with more native fluency in geometric algebra —
+    may resolve this further than current derivation permits.
+
+  open_candidates_for_correct_invariant: |
+    Possible correct tools for deriving Ω_rotor from CCR's structural
+    requirements (none yet attempted; listed for future direction only):
+    — Calugareanu-White-Fuller, applied forward from CCR's writhe requirement
+    — Chern-Simons / Chern class on the rotor bundle over S³ (the double-cover
+      is fundamentally a bundle/holonomy structure, possibly more natural
+      than a surface-curvature approach)
+    — Direct volume computation of the rotor's image in S³ under the
+      closure map (note: S³ of radius r has volume 2π²r³ — this should be
+      checked against the claimed 4π³ term for internal consistency
+      before any of these candidates are pursued further)
+
+  status_flag: "Logged, not merged as a derivation. ccr-electron-explicit remains open."
+
+---
+# Amendment cross-references
+amendment_cross_references:
+  - file: "derivative-reality-clarification-v2.yaml"
+    note: "Singularities as over-realization / saturation ceiling — consistent with extreme-suppression regime"
+  - file: "emergent-classical-fields.yaml"
+    note: "Gravity as Π_eff gradient — extreme suppression is the asymptotic limit"
+  - file: "master-equation.yaml"
+    note: "1/Π_eff scaling — process-rate suppression mechanism"
+  - file: "navier-stokes-derivation.yaml"
+    note: "High-V_eff burst dynamics relate to NS turbulence onset (R3 regime)"
