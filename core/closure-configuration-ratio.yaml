@@ -6,7 +6,7 @@
 id: closure-configuration-ratio
 title: "The Closure-Configuration Ratio — Structural Cost of Realized Topology"
 version: "2.0"
-status: "FRAMEWORK LEVEL — structurally derived; particle-specific instances open"
+status: "FRAMEWORK LEVEL — ratio structure established; electron's explicit functional form open"
 domain: "Core / Physics"
 priority: 1
 supersedes: "closure-configuration-ratio v1.0"
@@ -169,6 +169,17 @@ electron_instance:
     α is the electron's CCR — the irreducible cost of realizing the
     720° Möbius spinor rotor in the 3D embedding field.
 
+    This is not a static, retrofitted geometric formula chosen to match
+    the CODATA value. CCR is an accounting mechanism: a ratio of realized
+    phase space to embedding phase space, derived from the topology's
+    writhe and rotor structure. The formula below is a temporary,
+    illustrative projection showing how this phase-exclusion ledger maps
+    onto classical 3D geometric boundaries — it is not yet the native
+    derivation. The actual value is expected to run dynamically with
+    environmental commitment density (see alpha_geometric_vs_measured).
+    The native derivation remains a strictly open, non-linear boundary
+    value problem (see ccr-electron-explicit).
+
   illustrative_translation_mapping: |
     To demonstrate how the CCR framework translates to standard geometry,
     the current candidate expression for the unperturbed free-field rotor
@@ -176,22 +187,22 @@ electron_instance:
 
       Ω_rotor⁻¹ ≈ 4π³ + π² + π = 137.036304
 
-    Status: EXAMPLE ONLY. This specific geometric decomposition (S³ volume, 
-    bivector interface, crossover residual) serves as a conceptual model. 
-    In strict compliance with 'ccr_first_derivation_discipline', the exact numerical 
-    bounds must emerge natively from the non-linear stability solutions of the 
-    Gross-Pitaevskii core engine (id: ccr-electron-explicit), rather than being 
-    retro-fitted from standard geometric constants.
+    Status: EXAMPLE ONLY. This specific geometric decomposition (S³ volume,
+    bivector interface, crossover residual) serves as a conceptual model.
+    In strict compliance with 'ccr_first_derivation_discipline', the exact
+    numerical bounds must emerge natively from the non-linear stability
+    solutions of the Gross-Pitaevskii core engine (id: ccr-electron-explicit),
+    rather than being retro-fitted from standard geometric constants.
 
-
-   Geometric terms of Ω_rotor⁻¹ = 4π³ + π² + π:
+    Geometric terms of Ω_rotor⁻¹ = 4π³ + π² + π:
       4π³  — S³ volume: full quaternion phase space per 720° closure (double-cover)
       π²   — bivector surface: interface cost of coupling 2D rotor plane to 3D embedding
       π    — self-intersection residual at Möbius crossover (720° completion point)
 
     Each term is a necessary geometric cost of realization at this topology.
-    None is arbitrary. Their sum is the total orientational cost of one
-    complete realization cycle for this specific committed structure.
+    None is arbitrary in intent, but none is yet derived — their sum is
+    offered as the total orientational cost of one complete realization
+    cycle for this specific committed structure, pending native derivation.
 
   framing: |
     α is the cost of realizing the electron — of being this specific
@@ -207,13 +218,6 @@ electron_instance:
     — The irreducible orientational cost of this realization
     — A constant of integration of the higher-order function ψ,
       invisible to derivative-level (standard physics) descriptions
-
-  statement: |
-    We are not presenting a static, retrofitted geometric formula to match the CODATA value.
-    We are presenting an entirely new accounting mechanism (the CCR).
-    The formula 4π³ + π² + π is a temporary, illustrative projection used to show how our phase-exclusion ledger maps onto classical 3D boundaries.
-    The actual value runs dynamically based on environmental mass density.
-    The native derivation remains a strictly open, non-linear boundary value problem.
 
 ---
 
@@ -259,8 +263,10 @@ other_constants_as_ccr:
   instances:
     electron_alpha: |
       CCR(720° Möbius spinor rotor, EM depth)
-      Wr = 1, Ω_rotor = (4π³ + π² + π)⁻¹
-      Status: DERIVED — numerical closure open (Möbius stability analysis)
+      Wr = 1; Ω_rotor/Ω_embed candidate form under examination
+      Status: RATIO ESTABLISHED — explicit functional form open (Möbius stability analysis).
+      Note: there is no single fixed α to close on; the ratio yields different
+      readouts under different local conditions (see alpha_geometric_vs_measured).
 
     weak_coupling: |
       CCR for topology-switching transitions (chiral flips, decay channels)
@@ -303,13 +309,18 @@ open_derivations:
   priority_1:
     - id: "ccr-electron-explicit"
       description: |
-        Derive Ω_rotor = 4π³ + π² + π from stability analysis of
-        720° Möbius vortex in saturating GP equation.
+        Establish the explicit functional form of CCR = (Wr · Ω_rotor) / Ω_embed
+        for the electron's 720° Möbius vortex, from stability analysis of the
+        saturating GP equation. This is not a search for a fixed number —
+        CCR is a ratio between two phase-space quantities, and any numerical
+        readout (geometric/bare, terrestrial-measured, void-measured) is an
+        evaluation of that ratio under stated local conditions, not the goal itself.
         Confirm Wr = 1 from Lk = 2, Tw = 1 via Calugareanu-White.
-        Confirm S³ volume, bivector surface, and self-intersection terms
-        from first principles of vortex topology.
+        Establish whether the candidate terms (S³ volume, bivector surface,
+        self-intersection residual) follow natively from vortex topology,
+        or whether the correct functional form differs.
       depends_on: ["mobius-vortex-stability", "F02"]
-      note: "α numerical closure — highest priority open derivation in physics domain"
+      note: "Presenting the electron's CCR as an explicit relationship — not deriving a single fixed number. Highest priority open item in physics domain."
 
     - id: "omega-spin-explicit"
       description: "Derive ω_spin = f(Π_eff, η) from master equation; confirm realization-rate reading"
