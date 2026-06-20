@@ -169,12 +169,22 @@ electron_instance:
     α is the electron's CCR — the irreducible cost of realizing the
     720° Möbius spinor rotor in the 3D embedding field.
 
-  derivation: |
-    CCR(electron) = (Wr · Ω_rotor) / Ω_embed
-                  = (1 · (4π³ + π² + π)⁻¹) / 1
-                  = α
+  illustrative_translation_mapping: |
+    To demonstrate how the CCR framework translates to standard geometry,
+    the current candidate expression for the unperturbed free-field rotor
+    phase space is mapped as:
 
-    Geometric terms of Ω_rotor⁻¹ = 4π³ + π² + π:
+      Ω_rotor⁻¹ ≈ 4π³ + π² + π = 137.036304
+
+    Status: EXAMPLE ONLY. This specific geometric decomposition (S³ volume, 
+    bivector interface, crossover residual) serves as a conceptual model. 
+    In strict compliance with 'ccr_first_derivation_discipline', the exact numerical 
+    bounds must emerge natively from the non-linear stability solutions of the 
+    Gross-Pitaevskii core engine (id: ccr-electron-explicit), rather than being 
+    retro-fitted from standard geometric constants.
+
+
+   Geometric terms of Ω_rotor⁻¹ = 4π³ + π² + π:
       4π³  — S³ volume: full quaternion phase space per 720° closure (double-cover)
       π²   — bivector surface: interface cost of coupling 2D rotor plane to 3D embedding
       π    — self-intersection residual at Möbius crossover (720° completion point)
@@ -197,6 +207,13 @@ electron_instance:
     — The irreducible orientational cost of this realization
     — A constant of integration of the higher-order function ψ,
       invisible to derivative-level (standard physics) descriptions
+
+  statement: |
+    We are not presenting a static, retrofitted geometric formula to match the CODATA value.
+    We are presenting an entirely new accounting mechanism (the CCR).
+    The formula 4π³ + π² + π is a temporary, illustrative projection used to show how our phase-exclusion ledger maps onto classical 3D boundaries.
+    The actual value runs dynamically based on environmental mass density.
+    The native derivation remains a strictly open, non-linear boundary value problem.
 
 ---
 
@@ -479,12 +496,11 @@ high_veff_regime:
     to the high-V_eff realization dynamics.
 
   cosmological_implication: |
-    In the early universe (high Π_eff, low ρ_η), the field would have exhibited
-    these realization bursts — producing seeds of large-scale structure
-    without requiring a separate inflationary epoch.
-    Inflation is a derivative-level description of the high-V_eff regime's
-    burst dynamics in the master equation.
-
+    In regions of high Π_eff and low ρ_η (voids, pre-commitment zones), the field exhibits realization bursts — producing
+    seeds of large-scale structure without requiring a separate inflationary epoch. 
+    The inflationary scenario in standard cosmology is a derivative-level parameterization of local burst dynamics, erroneously globalized.
+    The master equation produces these bursts regionally, not globally.
+    
   laboratory_signature: |
     BEC experiments (solitons, vortices, modulational instability) are
     the direct laboratory analog. Same process, different scale.
