@@ -1,0 +1,243 @@
+# Alpha, Rydberg, and z0: CCR-Based Relations
+name: "Alpha-Rydberg-z0"
+version: "1.1"
+status: "CCR-Updated — ratio framing applied; no fixed numerical closures presented"
+description: >
+  This file reworks the relations between the fine-structure constant (α), Rydberg
+  constant, and atomic scale (z0) using the Closure-Configuration Ratio (CCR) and
+  spin-process-rate frameworks. It replaces earlier empirical or ad-hoc approaches
+  with a unified, process-based foundation rooted in Praestology's core rules (R1–R5).
+
+  IMPORTANT: None of these constants are presented as derived fixed numbers.
+  CCR is a ratio between phase-space quantities (Wr·Ω_rotor / Ω_embed), and any
+  numerical readout depends on stated local conditions (Π_eff, ρ_η). This file
+  presents the relational structure connecting these constants to that ratio —
+  not closed-form numerical derivations. See closure-configuration-ratio.yaml
+  for the full discussion of why CCR is not a fixed-value target.
+
+  For background on CCR, see closure-configuration-ratio.yaml.
+  For spin and α, see spin-process-rate-ga.yaml.
+
+---
+
+methodological_note:
+  statement: |
+    This file is subject to the same directional discipline established in
+    closure-configuration-ratio.yaml (ccr_first_derivation_discipline):
+    relations should be established FORWARD from CCR's structural requirements,
+    not backward by retrofitting standard-physics formulas onto CCR language.
+
+    Where standard physics already relates a constant to α (e.g., R_∞ ∝ α²),
+    that relation is noted as a STARTING REFERENCE — but the constant's own
+    status as fixed-vs-conditional must be re-examined once α is understood
+    as ratio-valued and environment-dependent, not assumed automatically
+    by substituting CCR for α in the existing formula.
+
+---
+
+## Transition from Standard to CCR-Based Relations
+transition_note:
+  description: >
+    Previously, α, Rydberg, and z0 were treated as empirically fitted or
+    semi-classically derived fixed constants (e.g., Bohr model for z0).
+    The CCR framework reframes these as relations to a committed topology's
+    realization cost in phase space — not as independently fixed numbers,
+    but as quantities that co-vary with the same local conditions (Π_eff, ρ_η)
+    that CCR itself depends on.
+  references:
+    - "closure-configuration-ratio.yaml"
+    - "spin-process-rate-ga.yaml"
+    - "../core/specifications.yaml"
+
+---
+
+## Fine-Structure Constant (α)
+fine_structure_constant:
+  description: |
+    α is the electron's CCR — the ratio quantifying the electron's committed
+    topology's realization cost against the embedding phase space.
+    This replaces empirical-fit or purely QED-postulated definitions with
+    a structural relationship.
+
+    α is NOT a fixed number to be derived. It is a ratio:
+
+      α = CCR_electron = (Wr · Ω_rotor) / Ω_embed
+
+    Ω_embed is itself a function of local commitment density (ρ_η) and
+    free potential (Π_eff) — see alpha_geometric_vs_measured in
+    closure-configuration-ratio.yaml. The CODATA value is one evaluation
+    of this ratio under terrestrial laboratory conditions, not the ratio itself.
+
+  status: |
+    Ratio structure established (CCR framework).
+    Explicit functional form of Ω_rotor for the electron's 720° Möbius
+    topology remains open (see ccr-electron-explicit in
+    closure-configuration-ratio.yaml). The writhe contribution (Wr = 1)
+    is established via Calugareanu-White; the embedding term is not yet
+    derived from first principles.
+
+  role:
+    - Couples electromagnetic interactions to the substrate's geometry
+    - Connects to gravitational, electromagnetic, and mechanical stresses
+      via tension (derivative of reconfiguration cost — see
+      tension_as_derivative in spin-process-rate-ga.yaml)
+
+  connections:
+    - Links to spin (720° Möbius vortex) via spin-process-rate-ga.yaml
+    - Links to inertia as resistance to reconfiguration (CCR-dependent,
+      itself an open variational derivation)
+
+  see_also: ["closure-configuration-ratio.yaml", "spin-process-rate-ga.yaml"]
+
+---
+
+## Rydberg Constant
+rydberg_constant:
+  description: |
+    Standard physics relates the Rydberg constant to α via:
+
+      R_∞ = α² m_e c / (2h)
+
+    This is the STARTING REFERENCE, not an endpoint. Since α is now
+    understood as a ratio rather than a fixed number, R_∞ inherits
+    the same conditional structure: it is not an independently fixed
+    constant, but co-varies with whatever local conditions (Π_eff, ρ_η)
+    determine the evaluated value of α at the point of measurement.
+
+  relational_structure: |
+    R_∞ is the CCR-consistent realization cost of the hydrogen atom's
+    bound electron-proton configuration — a distinct committed topology
+    from the free electron, with its own Wr and Ω_rotor in principle,
+    but constrained by the same embedding Ω_embed as the electron's CCR
+    (both topologies share the same local environment).
+
+    R_∞ ∝ f(CCR_H)
+
+    where CCR_H is the hydrogen-bound-state ratio. This is NOT simply
+    α multiplied by a frequency scale as an independent fixed product —
+    that formulation incorrectly treats CCR_H as a separate fixed input
+    rather than a ratio sharing the same environmental dependence as α.
+
+  status: |
+    STRUCTURAL HYPOTHESIS — open. No derivation of CCR_H from first
+    principles (bound-state topology, Wr for the two-body configuration)
+    has been attempted. The standard-physics formula R_∞ ∝ α² is retained
+    as the dimensional starting point pending native derivation.
+
+  role:
+    - Sets the scale for atomic energy levels
+    - Inherits α's environment-dependence — testable prediction: R_∞ as
+      measured should show the same systematic shift with local commitment
+      density that α does (see alpha_geometric_vs_measured)
+
+  see_also: ["closure-configuration-ratio.yaml"]
+
+---
+
+## Atomic Scale (z0)
+atomic_scale:
+  description: |
+    The atomic scale (e.g., Bohr radius) standardly relates to α via
+    a₀ = ℏ/(m_e c α). Since α here is CCR_electron, not an independent
+    multiplicative factor:
+
+  relational_structure: |
+    z0 ∝ 1 / CCR_electron
+
+    NOT z0 ∝ 1/(CCR_electron · α) — since α = CCR_electron in this
+    framework, writing both factors treats the same quantity as two
+    independent inputs. This was an error in the prior version of this
+    file and has been corrected here.
+
+    The atomic scale reflects the inverse relationship between the
+    electron's realization cost and the spatial scale of its bound
+    orbital topology — a single ratio, not a product of the ratio
+    with itself under a different name.
+
+  status: |
+    STRUCTURAL HYPOTHESIS — open, and dependent on ccr-electron-explicit
+    closing for the electron's CCR functional form before z0's relation
+    can be evaluated beyond the dimensional/structural level.
+
+  role:
+    - Defines the characteristic size of atomic systems
+    - Connects to α and Rydberg via shared CCR-based topology,
+      not independent derivations
+
+  see_also: ["closure-configuration-ratio.yaml", "spin-process-rate-ga.yaml"]
+
+---
+
+## Suggested Additional Constants — Open Hypotheses Only
+suggested_extensions:
+  description: |
+    The CCR framework may extend to other fundamental constants.
+    NONE of the following are derivations, mechanisms, or established
+    relations. Each is a candidate direction for future work, listed
+    per the framework's own epistemic stance: "architectural... open
+    to participation... stands or falls by ability to derive known
+    physics, not by philosophical elegance alone" (praestology-recap).
+
+    Per ccr_first_derivation_discipline (closure-configuration-ratio.yaml):
+    these should be approached by asking what topology CCR's structure
+    necessarily implies for each case — not by assuming a topology first
+    and retrofitting CCR language onto it.
+
+  candidates:
+    - name: "Gravitational Constant (G)"
+      status: "SPECULATIVE — no topology identified"
+      open_question: |
+        What committed topology would G's CCR be the ratio of?
+        Gravity in this framework is refractive impedance from ∇Π_eff
+        gradients (emergent-classical-fields.yaml), not a gauge coupling —
+        it is not obvious G admits the same rotor/writhe structure as α.
+        This needs to be established before any CCR-style relation is proposed.
+      references: ["closure-configuration-ratio.yaml#gravitational_ccr_mapping"]
+
+    - name: "Planck Constant (ħ)"
+      status: "SPECULATIVE — no topology identified"
+      open_question: |
+        ħ sets the scale of action, not a dimensionless ratio like α.
+        Before proposing ħ as a CCR instance, the dimensional mismatch
+        (CCR is dimensionless; ħ is not) must be resolved — likely ħ
+        relates to CCR only via a dimensioned scale factor, not as a
+        direct CCR instance itself. Open.
+      references: ["../core/specifications.yaml#R4"]
+
+    - name: "Speed of Light (c)"
+      status: "SPECULATIVE — likely not a CCR instance directly"
+      open_question: |
+        c is a propagation rate (Π_eff-dependent, per master-equation.yaml),
+        not a phase-space ratio. It is more likely related to the maximum
+        gradient of Π_eff than to any topology's CCR. This candidate may
+        belong in a different framework section (process-rate, not CCR).
+      references: ["derivative-reality-clarification.yaml"]
+
+    - name: "Cosmological Constant (Λ)"
+      status: "SPECULATIVE — mechanism gestured at, not derived"
+      open_question: |
+        Possible connection to Regress kernel dynamics at cosmic scale
+        (see closure-configuration-ratio.yaml high_veff_regime,
+        regionalized — not a global "early universe" mechanism).
+        No topology or ratio has been formally proposed.
+      references: ["core-dynamical-equation.yaml"]
+
+    - name: "Electron Mass (m_e)"
+      status: "OPEN — overlaps directly with inertia-variational-derivation"
+      open_question: |
+        This is not a new candidate — it is the same open item as
+        inertia_as_reconfiguration_resistance in spin-process-rate-ga.yaml.
+        m_e should emerge from the variational derivation of inertia
+        (second variation of the energy functional), with CCR entering
+        as the coupling coefficient — not as an independent CCR instance.
+      references: ["spin-process-rate-ga.yaml#inertia-variational-derivation"]
+
+---
+
+## Cross-Referencing
+see_also:
+  - "closure-configuration-ratio.yaml"       # CCR definition, ratio structure, discipline note
+  - "spin-process-rate-ga.yaml"               # Spin, α as CCR, inertia, tension
+  - "core-dynamical-equation.yaml"            # Master equation for ψ dynamics
+  - "derivative-reality-clarification.yaml"  # Process vs. realized-integral ontology
+  - "../core/specifications.yaml"            # Core rules (R1–R5)

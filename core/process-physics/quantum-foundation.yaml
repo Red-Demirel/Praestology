@@ -1,0 +1,187 @@
+# core/process-physics/quantum-foundations.yaml
+name: "Quantum Foundations"
+version: "1.1"
+status: "Process-First — regressions corrected; realization language throughout"
+description: >
+  Quantum mechanics rederived from ψ (the substrate) and its R1–R5 dynamics.
+  The wave-function is the process-level description of ψ restricted to Ξ=1
+  commitment depth. Quantum phenomena arise from the substrate's realization
+  landscape — not from observer-triggered collapse or measurement primitives.
+  Pointer-style: full content lives in referenced files.
+
+# ─── REGRESSION WATCH ───────────────────────────────────────────────────────
+# The following substitutions have been made deliberately and should not be
+# reverted without updating the referenced files first:
+#   "η is the derivative of ψ"    →  "η is the realized integral of ψ"
+#   "measurement/collapse"         →  "realization" (R5 event)
+#   "R4 leads to collapse"         →  "R5 fires realization; R4 is commitment only"
+# These are not stylistic choices — they reflect mathematical and ontological
+# corrections established in derivative-reality-clarification.yaml and
+# process-to-observable-hierarchy.yaml.
+# ────────────────────────────────────────────────────────────────────────────
+
+---
+
+## Quantum Mechanics as Ξ=1 Projection
+qm_as_projection:
+  statement: >
+    Standard quantum mechanics is what you get when ψ is restricted to
+    Ξ=1 commitment depth and the Copenhagen viability filter is applied:
+    only realized outputs (η, ρ, ∇S) are tracked; the process level (ψ)
+    is declared inaccessible. This is internally consistent and predictively
+    powerful within its domain — and silent on why its constants have the
+    values they do, because those are encoded at the process level.
+  implication: >
+    Quantum phenomena are not mysterious exceptions to classical physics.
+    They are the direct observational signature of the process level (ψ)
+    at commitment depth Ξ=1, where Π_eff is high enough that the
+    pre-realization regime is directly accessible.
+  see_also: ["derivative-reality-clarification.yaml",
+             "process-to-observable-hierarchy.yaml",
+             "../core/specifications.yaml"]
+
+---
+
+## Wave-Function as Process-Level Description
+wave_function:
+  description: >
+    The wave-function is not a primitive and not a derivative of ψ.
+    It IS ψ — restricted to Ξ=1 commitment depth and expressed in the
+    standard complex-amplitude notation that committed observers use to
+    track the pre-realization regime from within the realized level.
+
+    η (committed topology) is the accumulated INTEGRAL of realization
+    events — η = ∫R(ψ)dτ — not a derivative of ψ. The wave-function
+    describes the open process; η is the committed record of what has
+    been realized from it.
+
+  emergence:
+    - "R2 (Structure): gradients form in ψ — the potential landscape"
+    - "R3 (Exploration): orientational phases generated from open potential"
+    - "R4 (Commitment): specific phase selected and locked"
+    - "R5 (Selection): viability confirmed; realization fires; committed
+       to η permanently"
+
+  mathematical_basis: >
+    GA (Cl(3,0)) provides the natural coordinate-free language for ψ's
+    grade structure. Madelung decomposition (ψ = √ρ · exp(iS)) is the
+    formal translation from process-level to realized-level variables —
+    exact, not an approximation.
+  see_also: ["geometric-algebra-bridge.yaml",
+             "navier-stokes-derivation.yaml#madelung_decomposition",
+             "process-to-observable-hierarchy.yaml"]
+
+---
+
+## Quantum Phenomena from Substrate Dynamics
+quantum_phenomena:
+
+  - name: "Superposition"
+    description: >
+      Superposition is the ontological state of ψ in the pre-realization
+      regime (R3) — the field genuinely holding multiple viable configurations
+      simultaneously before R5 selection fires. It is not a statement of
+      observer ignorance about a hidden classical state. It is the actual
+      physical condition of the field before viability selection completes.
+      Superposition ends when R5 fires — not when an observer looks.
+    see_also: ["../core/specifications.yaml#R3",
+               "process-to-observable-hierarchy.yaml"]
+
+  - name: "Realization (formerly: measurement/collapse)"
+    description: >
+      Realization is the R3→R4→R5 cycle completing successfully:
+      a specific orientational phase is explored (R3), committed (R4),
+      confirmed viable against V_c (R5), and written permanently into η.
+      This is a continuous physical process in the substrate — not an
+      instantaneous observer-triggered event. "Collapse" and "measurement"
+      are deprecated: they import Copenhagen observer-dependence that
+      is not present in the process-level description.
+    governing_rule: "R5 — selection fires realization. R4 is commitment only."
+    see_also: ["core-dynamical-equation.yaml",
+               "../core/specifications.yaml#R5",
+               "process-to-observable-hierarchy.yaml#transition_R5"]
+
+  - name: "Non-Locality"
+    description: >
+      Non-locality arises because ψ is a single continuous field — there
+      is no gap between separated regions of the substrate. Correlations
+      between topologies realized at different locations persist because
+      they were realized from the same continuous ψ, sharing the same
+      field history (η = ∫R(ψ)dτ across all space).
+      GA describes the topology of these correlations but does not itself
+      explain non-locality — field continuity is the mechanism; GA is
+      the language in which it is expressed.
+    see_also: ["../core/foundational-ontology.yaml",
+               "geometric-algebra-bridge.yaml"]
+
+  - name: "Entanglement"
+    description: >
+      Entanglement is correlated rotor orientation across separated
+      committed topologies — both realized from a shared pre-commitment
+      ψ configuration. The correlation is written into η at the moment
+      of realization and persists because η is permanent. Measuring one
+      topology does not affect the other — both are already committed;
+      what changes is the observer's knowledge of the shared realization
+      history.
+    status: "MECHANISM IDENTIFIED — formal derivation as shared-rotor
+             orientation open (see geometric-algebra-bridge.yaml
+             #entanglement-as-rotor-correlation)"
+    see_also: ["geometric-algebra-bridge.yaml#open_derivations",
+               "closure-configuration-ratio.yaml"]
+
+---
+
+## Planck Scale as Realization Threshold
+planck_scale:
+  statement: >
+    ħ is the minimum quantization scale — the boundary below which no
+    realization event can fire and the process/wave-function regime is
+    all there is. Below this scale, effects do not "break down" in the
+    standard-physics sense; rather, committed topology cannot form because
+    no configuration can cross the viability threshold V_c.
+  proposed_mechanism: >
+    ħ is likely related to the minimum stable vortex configuration —
+    the smallest topology for which R5 viability can be satisfied.
+    This connects to the Möbius vortex stability analysis (ccr-electron-
+    explicit): the energy scale of the smallest stable closure may be
+    what sets ħ as the translation element between dimensionless
+    process-level GA/CCR and dimensioned realized-level observables.
+  status: "OPEN STRUCTURAL HYPOTHESIS — mechanism proposed; vortex stability
+           analysis needed for further grounding. See physics-foundations.yaml
+           #scale_setting for full discussion."
+  see_also: ["physics-foundations.yaml#planck_constant",
+             "closure-configuration-ratio.yaml#ccr-electron-explicit",
+             "spin-process-rate-ga.yaml"]
+
+---
+
+## Quantum Mechanics as Realized-Level Description
+qm_status:
+  description: >
+    Standard quantum mechanics operates at the realized level (η, ρ, ∇S),
+    describing the outputs of ψ's dynamics at Ξ=1.
+    Praestology provides the process-level (ψ) foundation from which QM
+    emerges as a regime-specific projection — correct within its domain,
+    silent on the origin of its constants, and unable to dissolve the
+    measurement problem because that problem is insoluble from the
+    realized level by construction.
+  key_points:
+    - "ψ is the higher-order regime — the generating process"
+    - "η = ∫R(ψ)dτ — committed topology; the realized integral of ψ"
+    - "QM mistakes η (and ρ, ∇S) for fundamental reality"
+    - "The measurement problem is insoluble from the realized level —
+       it dissolves at the process level via R5 realization"
+  see_also: ["derivative-reality-clarification.yaml",
+             "../core/specifications.yaml#axiom"]
+
+---
+
+see_also:
+  - "../core/specifications.yaml"
+  - "../core/closure-configuration-ratio.yaml"
+  - "../core/spin-process-rate-ga.yaml"
+  - "../core/geometric-algebra-bridge.yaml"
+  - "../core/core-dynamical-equation.yaml"
+  - "../core/derivative-reality-clarification.yaml"
+  - "../core/process-to-observable-hierarchy.yaml"
+  - "physics-foundations.yaml"

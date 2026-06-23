@@ -1,0 +1,116 @@
+# /core/process-physics/specifications.yaml
+name: "Physics"
+version: "1.1"
+status: "Active Development — regressions corrected against current core status"
+description: >
+  Physics-specific extensions of the Praestology core framework.
+  This file applies the core rules (R1–R5) to physical phenomena,
+  including CCR, the process/realized-level distinction, and the
+  master dynamical equation. Pointer-style: full content lives in
+  the referenced files; this index does not restate it.
+core_dependency: "../core/specifications.yaml"
+
+---
+
+# Core Rules in Physics Context
+core_rules_in_physics:
+  description: >
+    The five core rules (R1–R5) applied to physics:
+    - R1 (Existence): ψ — the ontic field substrate, higher-order regime.
+    - R2 (Structure): Configurations in ψ form gradients (the potential field).
+    - R3 (Exploration): Orientational phases generated from open potential.
+    - R4 (Commitment): Specific phase selected and locked; orientation fixed.
+    - R5 (Selection): Viability confirmed against V_c; realization event fires,
+      writing permanent commitment into η.
+  note: "Full definitions: ../core/specifications.yaml#core_rules"
+
+---
+
+## Closure-Configuration Ratio (CCR)
+closure_configuration_ratio:
+  description: >
+    CCR is the structural parameter expressing the realization cost of a
+    committed topology as a ratio of phase-space quantities — not a fixed
+    number, but a relation (Wr · Ω_rotor / Ω_embed) evaluated under stated
+    local conditions (Π_eff, ρ_η).
+  role:
+    - Relates fundamental constants (e.g., α) to a common ratio structure
+    - Explains why realized-level physics cannot derive its own constants —
+      they are encoded at the process level, not the realized level
+  see_also: ["../core/specifications.yaml#R5", "closure-configuration-ratio.yaml"]
+
+---
+
+## Process Level vs. Realized Level
+process_vs_realized:
+  description: >
+    Standard physics operates at the realized level (η, committed topology;
+    ρ, ∇S — observable projections), while ψ (the process) is the higher-order
+    regime. η is the accumulated INTEGRAL of realization events — η = ∫R(ψ)dτ —
+    not a derivative of ψ. This is why realized-level physics cannot derive
+    its own constants or unify across domains: constants are determined at
+    the process level and appear as given from within the realized level.
+  see_also: ["../core/specifications.yaml#axiom", "derivative-reality-clarification.yaml", "process-to-observable-hierarchy.yaml"]
+
+---
+
+## Master Dynamical Equation
+master_dynamical_equation:
+  description: >
+    The dimensionless equation governing ψ's resolution landscape.
+    Unifies quantum-like and nonlinear behaviors; terms map to physical
+    regimes (linear, nonlinear GP, saturation, selection) and emergent
+    phenomena (waves, vortices, classical limits).
+  components:
+    - resolution_operator: "R(ψ) — viability-based selection"
+    - viability_measure: "V(ψ), compared against threshold V_c"
+    - gravitational_effects: "via Π_eff in the local-explicit kinetic term"
+  see_also: ["core-dynamical-equation.yaml", "../core/specifications.yaml#core_rules"]
+
+---
+
+## Wave-Function Realization
+wave_function_realization:
+  description: >
+    The wave-function (ψ, restricted to Ξ=1 commitment depth) is the
+    process-level regime prior to realization. Realization — not
+    "collapse" or "measurement" — is the R3→R4→R5 cycle by which
+    orientational phases are explored, committed, and selected:
+    - R3 (Exploration): phases generated from open potential
+    - R4 (Commitment): specific phase locked, plane oriented
+    - R5 (Selection): viability confirmed, realization fires, event
+      integrated into η
+  note: >
+    "Collapse" and "measurement" are avoided as terms — they carry
+    Copenhagen connotations (observer-triggered, instantaneous,
+    non-physical) that "realization" does not.
+  see_also: ["process-to-observable-hierarchy.yaml"]
+
+---
+
+## Spin and Fine-Structure Constant (α)
+spin_and_fine_structure_constant:
+  description: >
+    Spin is the observable phase-iteration rate of a 720° Möbius vortex.
+    α is the electron's CCR instance — a ratio, not a fixed derived value
+    (see closure_configuration_ratio above).
+  role:
+    - CCR as coupling coefficient for inertia (open variational derivation)
+    - Tension (derivative of reconfiguration cost) unifies gravitational,
+      electromagnetic, and mechanical stresses under the same mechanism
+  status_note: >
+    Extension of CCR to other constants (G, ħ, c, Λ, m_e) is open/speculative;
+    see alpha-rydberg-z0.yaml#suggested_extensions for per-constant status,
+    including dimensional caveats not yet resolved for ħ and c.
+  see_also: ["spin-process-rate-ga.yaml", "closure-configuration-ratio.yaml", "alpha-rydberg-z0.yaml"]
+
+---
+# Cross-Referencing
+see_also:
+  - "../core/specifications.yaml"
+  - "closure-configuration-ratio.yaml"
+  - "derivative-reality-clarification.yaml"
+  - "process-to-observable-hierarchy.yaml"
+  - "core-dynamical-equation.yaml"
+  - "spin-process-rate-ga.yaml"
+  - "alpha-rydberg-z0.yaml"

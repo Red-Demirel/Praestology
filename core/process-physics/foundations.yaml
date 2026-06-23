@@ -1,0 +1,157 @@
+# core/process-physics/foundations.yaml
+name: "Foundations"
+version: "1.1"
+status: "Process-First — ontological commitments; pointers only"
+description: >
+  The foundational ontological commitments of Praestology's physics domain.
+  All physical observables are realized from ψ (the process-level substrate),
+  governed by R1–R5 and described using Geometric Algebra (GA).
+  This file states what physics IS in this framework; it does not re-derive it.
+  Read derivative-reality-clarification.yaml and process-to-observable-hierarchy.yaml
+  before this file — those establish the level-structure these commitments presuppose.
+
+reading_order:
+  - "../core/derivative-reality-clarification.yaml"   # process vs. realized-integral level
+  - "../core/process-to-observable-hierarchy.yaml"    # full realization chain
+  - "../core/process-physics/foundations.yaml"                # this file — ontological commitments
+  - "../core/process-physics/specifications.yaml"             # physics-domain rule mapping
+  - "../core/process-physics/[domain files]"                  # specific derivations and relations
+
+---
+
+## Ontological Commitments
+
+commitments:
+
+  - name: "Mass as Inertia-Effect"
+    description: >
+      Mass is not an intrinsic property of a point-like particle.
+      It is the realized manifestation of a committed topology's resistance
+      to reconfiguration — the cost of re-traversing the vortex's orientational
+      closure cycle against finite local free potential (Π_eff).
+      The CCR enters as the coupling coefficient between applied perturbation
+      and inertial response.
+    derivation_status: >
+      Derivation path identified: second variation of the energy functional
+      E[ψ] with respect to spatial displacement of the Möbius vortex solution.
+      NOT yet completed — this is an open variational derivation.
+    see_also: ["spin-process-rate-ga.yaml#inertia-variational-derivation",
+               "closure-configuration-ratio.yaml"]
+
+  - name: "Space and Time as Emergent from ψ Dynamics"
+    description: >
+      Space and time are not containers or independent dimensions.
+      Space is the relational pattern of commitment gradients (∇η) —
+      not an arena but a description of where commitment is and is not.
+      Time is the local process-rate: the 1/Π_eff-scaled iteration rate
+      of the master equation at each point. Both are emergent from ψ;
+      neither is fundamental.
+      QHD (via Madelung) and optical refraction (via ∇Π_eff) provide
+      the appropriate mathematical descriptions — not as replacements
+      for space-time but as the process-level grounding from which
+      the realized-level space-time description emerges.
+    see_also: ["derivative-reality-clarification.yaml",
+               "process-to-observable-hierarchy.yaml",
+               "core-dynamical-equation.yaml",
+               "navier-stokes-derivation.yaml"]
+
+  - name: "Energy as Rate and Flow of η ↔ Π Conversion"
+    description: >
+      Energy is not a substance or an independently conserved primitive.
+      It is the bookkeeping of η ↔ Π_eff conversion rate and flow —
+      how rapidly and in which direction committed topology is dissolving
+      into free potential (Regress) or free potential is resolving into
+      committed topology (realization).
+      In the master equation, energy appears as the eigenvalue of the
+      time-evolution operator — a derived quantity, not a primitive.
+    note: >
+      If Φ is used as a symbol for this bookkeeping quantity elsewhere
+      in the framework, the mapping Φ ↔ η↔Π conversion rate should be
+      made explicit in the file introducing that notation.
+      Currently, the master equation uses Π_eff, ψ, η, ρ_η as primary
+      symbols; Φ is not yet defined in the core files.
+    see_also: ["core-dynamical-equation.yaml",
+               "spin-process-rate-ga.yaml#tension_as_derivative"]
+
+---
+
+## Scale-Setting Elements: ħ and c
+
+scale_setting:
+  description: >
+    The GA/CCR base is dimensionless — CCR is a pure ratio, rotors are
+    unit objects, phase space volumes are numerical. Physical dimensions
+    at the realized level require scale-setting elements that translate
+    between the dimensionless process level and the dimensioned realized
+    level. ħ and c are proposed as this translation layer.
+  status: "OPEN STRUCTURAL HYPOTHESIS — mechanism proposed, not yet derived"
+
+  planck_constant:
+    proposal: >
+      ħ is the translation element from the dimensionless process-level
+      (GA/CCR base) to the dimensioned realized level — setting the unit
+      of action, and through it the unit of distance/structure.
+      It is not a CCR instance (CCR is dimensionless; ħ is not) but the
+      scale-setter that makes CCR ratios legible as physical quantities
+      at the realized level.
+    open_questions: >
+      What determines the specific value of ħ — i.e., what fixes the
+      scale of the translation? Is ħ derivable from Π_eff's normalization
+      (φ_max in the definition Π_eff = φ/φ_max) or from the saturation
+      parameter κ in the logarithmic term? These questions need to be
+      addressed before ħ can be stated as more than a proposal.
+    status: "OPEN — mechanism proposed; value-setting question unresolved"
+    see_also: ["closure-configuration-ratio.yaml",
+               "core-dynamical-equation.yaml"]
+
+  speed_of_light:
+    proposal: >
+      If ħ sets the unit of structure/distance (realized-level length scale),
+      and the process-rate (Π_eff in 1/Π_eff · ∂ψ/∂t) sets how fast
+      realization proceeds locally, then c = structural unit / process-rate unit.
+      c is the ratio of these two scale-setting elements — not a CCR instance
+      and not a direct Π_eff value, but the relation between the two
+      scale-setters that translates process-rate into realized-level velocity.
+    consequence: >
+      c is locally variable wherever Π_eff varies — lower Π_eff near mass
+      concentrations means slower local realization rate for the same
+      structural unit, yielding the correct gravitational time dilation
+      already in the framework. c is not a universal constant at the
+      process level; it is an evaluated parameter, co-varying with Π_eff.
+    sequencing: >
+      ħ must be settled before c — c is the ratio of the distance scale
+      (set by ħ) to the process-rate unit (set by Π_eff). Without ħ fixed,
+      c has no distance unit to relate to.
+    status: "OPEN — contingent on ħ proposal; mechanism internally consistent"
+    see_also: ["core-dynamical-equation.yaml",
+               "emergent-classical-fields.yaml",
+               "closure-configuration-ratio.yaml"]
+
+---
+
+## Mathematical Foundation: Geometric Algebra (GA)
+geometric_algebra:
+  description: >
+    GA (Cl(3,0)) is the natural coordinate-free language for ψ and its
+    dynamics. It provides unified treatment of vectors, bivectors, and
+    higher-grade multivectors — mapping directly onto the grade structure
+    of realization (grade-3 chirality → grade-2 bivector → grade-1 flow
+    → grade-0 density). GA is a descriptive layer, not an ontological
+    primitive; it arises from the dynamics of ψ, not the reverse.
+  role:
+    - Describes vortex topology, chirality, rotor phase space
+    - Makes CCR's geometric content explicit (Ω_rotor, Ω_embed, writhe)
+    - Provides coordinate-free derivation of Maxwell, spin, and inertia
+  see_also: ["geometric-algebra-bridge.yaml",
+             "spin-process-rate-ga.yaml"]
+
+---
+
+see_also:
+  - "../core/specifications.yaml"
+  - "../core/derivative-reality-clarification.yaml"
+  - "../core/process-to-observable-hierarchy.yaml"
+  - "../core/closure-configuration-ratio.yaml"
+  - "../core/spin-process-rate-ga.yaml"
+  - "../core/geometric-algebra-bridge.yaml"
+  - "../core/core-dynamical-equation.yaml"

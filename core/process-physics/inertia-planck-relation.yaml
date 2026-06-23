@@ -1,0 +1,162 @@
+# core/process-physics/inertia-planck-relation.yaml
+name: "Inertia_Planck_Relation"
+version: "0.2"
+status: "EXPLORATORY — provisional hypothesis; promising but requires rigorous development"
+description: >
+  Explores the potential deep connection between macroscopic inertia and the
+  Planck constant ħ as two expressions of the same underlying mechanism:
+  the reconfiguration cost of committed topological structures against finite
+  local free potential (Π_eff). Kept as a separate provisional file pending
+  mathematical development sufficient to merge into core physics files.
+
+---
+
+core_hypothesis:
+  statement: >
+    Inertia and ħ are not independent primitives.
+    ħ is the microscopic quantum of inertial update cost — the smallest discrete
+    amount of action required to reconfigure or reorient a stable vortex/rotor
+    in the field. Inertia is the macroscopic manifestation of the same cost when
+    accumulated commitment (η) must be updated across a larger structure.
+
+    Both originate from the same source: committed topology's resistance to change,
+    mediated by the CCR as coupling coefficient and by local Π_eff as the
+    available processing capacity against which that cost is paid.
+
+---
+
+mechanism:
+  inertia:
+    description: >
+      Inertia arises as the total resistance to changing the integral history
+      of a committed structure. Any acceleration or reorientation requires
+      re-traversing and updating its phase-locked topology against local Π_eff.
+      The deeper the commitment (higher accumulated η, higher CCR-weighted
+      phase space cost), the higher the reconfiguration resistance.
+      Formal expression: second variation of the energy functional E[ψ] with
+      respect to spatial displacement, with CCR entering as coupling coefficient.
+      Status: derivation path established; algebra not yet completed.
+      See: spin-process-rate-ga.yaml#inertia-variational-derivation
+
+  planck_constant:
+    description: >
+      ħ is the minimal discrete action required for one meaningful rotor
+      update or phase advancement — the smallest step in rotor phase space
+      consistent with CCR-weighted vortex stability (i.e., consistent with
+      remaining above the viability threshold V_c after reorientation).
+
+      At the pure process level (ψ), the field is continuous — no quantization.
+      ħ emerges only at the realized level, after R5 commitment locking has
+      produced stable topological structures whose minimum reconfiguration
+      cost is non-zero and discrete.
+
+      Likely grounding: the minimum stable vortex configuration — the smallest
+      topology for which R5 viability can be satisfied — sets the scale of ħ
+      as the energy of that minimum closure. This connects ħ to the same
+      Möbius vortex stability analysis needed for ccr-electron-explicit.
+
+---
+
+relation_to_CCR:
+  statement: >
+    CCR is the static ratio quantifying the orientational cost of a committed
+    topology (Wr · Ω_rotor / Ω_embed). It does not itself vary with motion —
+    it is a topological property of the vortex structure.
+
+    What varies under motion is Π_eff, and through it the cost of re-traversing
+    the CCR-weighted phase space. Therefore:
+
+      Inertia ≈ second variation of E[ψ] w.r.t. displacement,
+                with CCR as coupling coefficient (not CCR differentiated)
+
+      ħ ≈ minimal discrete step in rotor phase space consistent with
+           CCR-weighted stability threshold — the quantum of that coupling
+
+    CCR is the coefficient, not the variable. The variable under dynamics
+    is the field state (Π_eff, ψ₀ profile) under perturbation.
+    This distinction is essential to avoid circularity in eventual derivation
+    (see open_questions below).
+
+  sequencing_in_framework: >
+    CCR (static ratio, dimensionless)
+      → × field dynamics under perturbation (Π_eff, displacement)
+      → Inertia (second variation, macroscopic, continuous)
+      → ħ (minimal discrete step, microscopic, quantized)
+      → c (ħ-scale distance / Π_eff process-rate unit, propagation parameter)
+
+    ħ must be established before c, since c is the ratio of the
+    distance scale (set by ħ) to the process-rate unit (set by Π_eff).
+
+---
+
+unification_potential:
+  statement: >
+    This hypothesis reduces two seemingly independent primitives — inertial
+    mass and ħ — to consequences of the same process-level mechanism:
+    committed topology's resistance to change under finite Π_eff,
+    expressed at macroscopic (inertia) and microscopic (ħ) scales.
+
+  implications:
+    - >
+      Explains why ħ appears universally in quantum mechanics: it is the
+      scale at which the wave-function's pre-commitment dynamics become
+      observable after realization — the minimum action of a stable
+      realization event.
+    - >
+      Supports the equivalence principle: gravitational and inertial effects
+      share the same origin in Π_eff gradients acting on committed structures.
+      ħ is the quantum of that shared mechanism.
+    - >
+      Suggests ħ may have very weak environment dependence (via local Π_eff
+      depression) — analogous to the 2.2 ppm gap in α_measured vs α_geometric,
+      but likely far smaller and harder to detect given ħ's role as a
+      scale-setter rather than a pure ratio.
+
+---
+
+open_questions:
+  - id: "planck-from-vortex-stability"
+    description: >
+      Exact derivation linking CCR-weighted vortex stability threshold to ħ
+      as minimal action. Expected to emerge from the same Möbius stability
+      analysis as ccr-electron-explicit — if the minimum stable closure has
+      a characteristic energy, that energy is ħ × (characteristic frequency).
+    depends_on: ["ccr-electron-explicit", "mobius-vortex-stability"]
+
+  - id: "saturation-role-in-planck"
+    description: >
+      Role of the saturation term Λ·ln(1+κ|ψ|²) and viability kernel R(ψ)
+      in setting the scale of ħ. The saturation term prevents over-commitment;
+      it may set the ceiling above which no stable vortex can form, with ħ
+      as the scale of the minimum viable state below that ceiling.
+
+  - id: "circularity-check"
+    description: >
+      Whether inertia and ħ can be expressed as functions of the same
+      underlying multivector field properties without circularity.
+      Key risk: if ħ is used to define the energy functional E[ψ], and
+      inertia is derived from E[ψ], then ħ and inertia are not independently
+      derived from CCR — one presupposes the other. The derivation order
+      must be: CCR → E[ψ] (dimensionless) → ħ (scale-setter) → E[ψ]
+      (dimensioned) → inertia. Not: inertia → ħ or ħ → inertia circularly.
+
+---
+
+status_note: >
+  Exploratory. The hypothesis is structurally consistent with the established
+  framework and reduces two primitives to one mechanism. It requires the
+  Möbius vortex stability analysis to ground ħ's value, and a circularity-
+  free derivation order to be mathematically clean. Filed separately pending
+  that development.
+
+cross_references (../physics-foundations, ../core domain):
+  - file: "spin-process-rate-ga.yaml"
+    note: "Inertia variational derivation; CCR as coupling coefficient"
+  - file: "closure-configuration-ratio.yaml"
+    note: "CCR definition; ccr-electron-explicit open item"
+  - file: "physics-foundations.yaml"
+    note: "ħ and c as scale-setting elements; sequencing"
+  - file: "quantum-foundations.yaml"
+    note: "ħ as realization threshold; vortex stability connection"
+  - file: "core-dynamical-equation.yaml"
+    note: "Saturation term; viability kernel; E[ψ] energy functional"
