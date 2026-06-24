@@ -1,0 +1,180 @@
+# /core/friedmann-emergence.yaml
+name: "Friedmann Equation as Cosmological Limit of Master Equation"
+version: "1.1"
+status: "Structural derivation — numerical closure open"
+domain: "Core / Process-Physics"
+description: >
+  The Friedmann equation (without Λ) emerges from the cosmological limit
+  of the master equation, where homogeneity and isotropy are assumed and
+  the effective scale factor a(t) is identified as the inverse of the
+  local process-rate Π_eff(t). It is a regime projection of the master
+  equation at cosmic scale — the same field dynamics that yield Maxwell
+  at the EM scale, NS at the fluid scale, and QHD at the quantum scale,
+  applied to the homogeneous, isotropic, low-commitment-density limit.
+
+---
+
+position_in_derivation_chain:
+  statement: |
+    All classical field equations are coarse-grained projections of the
+    master equation onto specific commitment-density regimes:
+
+      QHD / Madelung:   Ξ=1, all Π_eff     — quantum regime
+      Maxwell:          low-η, chiral vortex — EM regime
+      Navier-Stokes:    high-η, mobile       — fluid regime
+      Friedmann:        homogeneous, isotropic, cosmic scale — cosmological regime
+
+    None is fundamental. All emerge from the same field dynamics.
+    The Friedmann equation is not more or less valid than Maxwell or NS —
+    it is equally a regime description, equally derived, equally silent
+    on questions that only the process level can answer.
+
+---
+
+derivation:
+  assumptions: |
+    - Homogeneous, isotropic universe: Π_eff = Π_eff(t), η = η(t) only
+    - Scale factor identification: a(t) = 1 / Π_eff(t)
+      (as Π_eff rises — less commitment density — the scale factor grows)
+    - Commitment density ρ(t) identified with η(t) or a functional of η
+    - Saturation term Λ_sat·ln(1+κ|ψ|²) provides natural UV regularization
+
+  steps:
+    - "1. Write master equation in homogeneous, isotropic limit:
+          Π_eff(t) uniform in space; all spatial gradients vanish except
+          mean commitment density evolution."
+    - "2. From the time derivative term i·(1/Π_eff)·∂ψ/∂t, extract
+          the evolution equation for Π_eff(t) using the mean-field
+          approximation over a Hubble volume."
+    - "3. Express (dΠ_eff/dt)² in terms of η(t) and the saturation term.
+          Invert via a(t) = 1/Π_eff(t) to obtain (ȧ/a)²."
+    - "4. Identify G_eff from the coefficient of η(t) — this is the
+          CCR for the cosmic-scale committed topology (see connection_to_CCR)."
+    - "5. Obtain: (ȧ/a)² = (8π G_eff / 3)·ρ(t) − k/a²
+          This is the Friedmann equation without Λ."
+
+  status: |
+    Structural derivation complete — steps identified and consistent with
+    master equation structure. Numerical closure (explicit evaluation of
+    G_eff from cosmic-scale CCR) remains open.
+    See: closure-configuration-ratio.yaml#gravitational_ccr_mapping
+
+---
+
+connection_to_CCR:
+  statement: |
+    G_eff is the closure-configuration ratio for the cosmic-scale committed
+    topology — the average CCR of all committed structure in the Hubble volume.
+    It is not a fundamental constant inserted by hand; it is the realization
+    cost of the universe's mean committed configuration against the full
+    available orientational phase space at cosmic depth.
+
+    G_eff co-varies with the universe's overall commitment density — it is
+    not fixed but evolves as Regress returns commitment to free potential.
+    This is consistent with observational hints of varying G over cosmic time,
+    which the standard ΛCDM model cannot accommodate without further patches.
+
+  status: "OPEN — see gravitational_ccr_mapping in closure-configuration-ratio.yaml"
+
+---
+
+cosmological_constant:
+  statement: |
+    The cosmological constant Λ was introduced because the Friedmann equation
+    without it predicted deceleration, while observations showed acceleration.
+    Within the derivative-level framework, adding Λ was the only available
+    move — the same pattern-of-additions documented in
+    clarifications/clifford-analogy-and-derivation.yaml.
+
+    At the process level, the mechanism producing apparent acceleration
+    is already present in the master equation: the Regress kernel
+    continuously returns committed topology to free potential.
+
+  regress_mechanism: |
+    On cosmological timescales and at void-scale conditions
+    (low ρ_η, high Π_eff), Regress operates slowly but systematically.
+    As committed topology dissolves:
+      — ρ_η decreases
+      — Π_eff rises
+      — a(t) = 1/Π_eff(t) grows faster
+
+    This reads in Friedmann-limit terms as accelerating expansion.
+    No repulsive force, no new constant, no new entity.
+    The apparent acceleration is Regress at cosmic scale in the
+    high-Π_eff void regime — a phase of the process, not a permanent
+    cosmological property.
+
+  void_vs_dense: |
+    The environment-dependence of Regress rate is critical here:
+    — Dense regions (galaxy clusters, filaments): high ρ_η, low Π_eff,
+      slow Regress — structure persists, local expansion decelerates
+    — Void regions: low ρ_η, high Π_eff, faster Regress — commitment
+      dissolves more readily, local expansion accelerates
+
+    The observed large-scale acceleration is dominated by the volume-weighted
+    void contribution. Λ was a uniform constant applied to a process that
+    is inherently environment-dependent — a category error in addition to
+    being an unnecessary addition.
+
+    Full treatment of void vs. dense environment consequences reserved for:
+    domains/cosmos/ (see cross_references)
+
+  einstein_note: |
+    Einstein called the cosmological constant his "greatest blunder" after
+    Hubble's expansion observations made it seem unnecessary. In this framework
+    the blunder was not adding Λ per se — it was working at the realized level
+    without access to the Regress mechanism, which made Λ the only available
+    explanation for what was actually an ongoing process-level phenomenon.
+    The observations were correct; the interpretation was derivative-level
+    and therefore incomplete.
+
+---
+
+implications:
+  - "No cosmological constant required — Regress provides the mechanism"
+  - "Apparent acceleration is environment-dependent (void-dominant), not uniform"
+  - "G_eff is a CCR instance, not a fundamental constant — it co-evolves with
+     the universe's commitment density"
+  - "The Friedmann equation is an effective description at cosmic scale,
+     derived from the same process that yields QM, EM, and fluid dynamics —
+     not a more fundamental law than any of the others"
+  - "ΛCDM is a derivative-level patch; the process level replaces it with
+     a single mechanism (Regress + Π_eff gradients) that also accounts for
+     what is currently attributed to dark matter (void Π_eff refractive effects)
+     and dark energy (Regress dissolution rate)"
+
+---
+
+open_derivations:
+  priority_2:
+    - id: "friedmann-numerical-closure"
+      description: |
+        Explicit derivation of G_eff from cosmic-scale CCR — evaluate
+        (Wr · Ω_rotor / Ω_embed) for the mean committed topology of the
+        Hubble volume and confirm it reproduces the observed value of G.
+      depends_on: ["gravitational_ccr_mapping", "ccr-electron-explicit"]
+
+    - id: "regress-rate-cosmological"
+      description: |
+        Quantitative model of Regress rate as a function of local (ρ_η, Π_eff)
+        at void vs. dense scales, producing the observed acceleration parameter
+        without Λ. Should reproduce the supernova Type Ia distance-redshift
+        relation as an environment-weighted Regress rate integral.
+      depends_on: ["friedmann-numerical-closure"]
+
+---
+
+cross_references:
+  - file: "core/master-equation.yaml"
+    note: "Π_eff scaling; source of all regime projections"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR and gravitational_ccr_mapping; G_eff as CCR instance"
+  - file: "core/process-physics/navier-stokes-derivation.yaml"
+    note: "Parallel derivation at fluid scale — same method, different regime"
+  - file: "clarifications/clifford-analogy-and-derivation.yaml"
+    note: "Pattern-of-additions; Λ as derivative-level patch"
+  - file: "core/derivative-reality-clarification.yaml"
+    note: "Why derivative-level descriptions cannot derive their own constants"
+  - file: "domains/cosmos/"
+    note: "Void vs. dense environment consequences; ΛCDM critique;
+           black hole extreme-suppression — reserved for cosmos domain"
