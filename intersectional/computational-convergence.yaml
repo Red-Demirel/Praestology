@@ -1,0 +1,234 @@
+# intersectional/computational-convergence.yaml
+id: computational-convergence
+title: "Computational Convergence: CliffordNet and Conformal Prediction"
+version: "1.1"
+status: "Intersectional mapping — structural isomorphism documented; validation claims calibrated"
+domain: "Intersection / Computational Theory"
+core_version: "1.5"
+updated: "2026-06-25"
+description: >
+  Documents the structural isomorphism between Praestology's core ontological
+  and epistemological claims and independently developed computational frameworks.
+  CliffordNet demonstrates that GA is the natural language of relational structure
+  in computation (eliminating realized-level patches). Conformal Prediction
+  independently formalizes the same viability-bounded pre-commitment logic as
+  the ℛ(ψ) operator and the Agency Triad. Both convergences were independent —
+  neither framework was built with Praestology in mind.
+
+dependency_map:
+  requires:
+    - "core/core-dynamical-equation.yaml"
+    - "core/derivative-reality-clarification.yaml"
+    - "clarifications/analogy-disclaimer.md"
+  provides_to:
+    - "clarifications/what-ga-means.md"
+    - "core/praestology-model.yaml"  # Future computational implementation
+
+---
+
+epistemic_note: |
+  The convergences documented here show structural isomorphism — independently
+  developed frameworks arriving at the same formal structures Praestology uses.
+  This is significant but should be read carefully:
+
+  Isomorphism confirms structural coherence (the same pressures produce the
+  same solutions in different domains). It does not confirm ontological priority
+  — it cannot establish which framework is "more fundamental" or that either
+  validates the other's metaphysical claims.
+
+  What it does establish: the structural moves Praestology makes (GA as
+  relational language, pre-commitment regime, viability-bounded selection) are
+  not idiosyncratic. They are appearing independently across computation and
+  statistics under their own internal pressures. That is worth documenting.
+
+---
+
+# ─────────────────────────────────────────────
+# CLIFFORDNET: GA AS NATIVE COMPUTATIONAL LANGUAGE
+# ─────────────────────────────────────────────
+
+cliffordnet_alignment:
+  source: "Zhongping Ji (2026) — CliffordNet: All You Need is Geometric Algebra"
+  independence_note: |
+    CliffordNet was developed as a computational architecture question, not as
+    a response to Praestology or process philosophy. The convergence on GA as
+    the natural language for relational computation arose from internal
+    engineering pressure — the same structural problems producing the same
+    structural resolution.
+
+  praestological_mapping:
+    pattern_of_additions_in_computation: |
+      Standard neural networks use flat, realized-level tensors. Because these
+      tensors strip away orientation, chirality, and relational structure,
+      architectures require attention heads, residual connections, and
+      positional encodings as patches — each added to compensate for
+      structural information that was discarded at the representation level.
+
+      This is the pattern-of-additions from clarifications/clifford-analogy.yaml
+      applied to computation: hitting a limit at the realized level (flat tensors),
+      patching it with new realized-level entities (attention mechanisms), rather
+      than working at the level where the structure is native.
+
+    cliffordnet_resolution: |
+      CliffordNet uses multivectors and the geometric product to natively encode
+      orientation, rotation, and relational structure. The patches become
+      unnecessary because the structural information is not discarded in the
+      first place.
+
+      In Praestology terms: CliffordNet operates at the grade-structured level
+      where commitment and orientation are explicit, rather than projecting
+      onto flat tensors (the computational analog of the Madelung projection
+      onto ρ, ∇S) and then trying to recover the structure that was lost.
+
+    what_this_confirms: |
+      GA is not a mathematical preference or a downstream physical analogy.
+      It is the natural language for relational structure at whatever level
+      relational structure exists — confirmed independently by computational
+      practice. This provides external grounding for the claim in
+      analogy-disclaimer.md that GA earns its exception from the "borrowed
+      downstream" critique: it is not borrowed from spatial geometry but
+      arrived at from structural necessity.
+
+    what_this_does_not_confirm: |
+      CliffordNet's success does not confirm Praestology's ontological claims
+      about ψ, η, or the R1-R5 process. It confirms that GA is the right
+      language for relational computation. The ontological reading of what
+      that computation represents remains Praestology's own claim, subject
+      to its own standards of derivation and falsification.
+
+---
+
+# ─────────────────────────────────────────────
+# CONFORMAL PREDICTION: VIABILITY-BOUNDED STATISTICS
+# ─────────────────────────────────────────────
+
+conformal_prediction_alignment:
+  source: "Venn, Gammerman, Shafer — distribution-free uncertainty quantification"
+  independence_note: |
+    Conformal Prediction was developed as a statistical framework for rigorous
+    uncertainty quantification, with no reference to process ontology. The
+    structural isomorphism with ℛ(ψ) and the pre-commitment regime was not
+    designed in — it arose from the same formal pressure: how to maintain
+    a bounded envelope of viable configurations without premature collapse.
+
+  praestological_mapping:
+    prediction_sets:
+      praestology_equivalent: "Pre-commitment regime (ψ, R3 exploration)"
+      isomorphism: |
+        CP refuses to collapse uncertainty into a single realized point
+        prematurely. It maintains an open envelope of viable configurations
+        until the evidence warrants closure. This is formally identical to
+        the pre-commitment regime — ψ holding multiple viable configurations
+        before R5 selection fires. The prediction set IS the open dilemma
+        space before realization.
+
+    nonconformity_scores:
+      praestology_equivalent: "Viability measure 𝓥(ψ)"
+      isomorphism: |
+        A nonconformity score measures how poorly a potential prediction fits
+        the structural context of calibration data. This maps directly to
+        𝓥(ψ) evaluating whether a configuration meets the viability threshold
+        V_c. Both are measures of fit between a candidate state and the
+        ambient structure — with rejection of poor-fitting candidates.
+
+    coverage_guarantee:
+      praestology_equivalent: "Metastable zone maintenance / Responsibility"
+      isomorphism: |
+        CP mathematically enforces a minimum coverage guarantee — the prediction
+        set must contain the true outcome with specified probability. This is
+        the formal analog of the Responsibility principle: never commit to a
+        realized outcome without a rigorously bounded envelope of viability.
+        Over-realization (false certainty, premature commitment below V_c)
+        is excluded by construction.
+
+    what_this_confirms: |
+      Responsible agency — maintaining the pre-commitment regime until viability
+      is established, then committing — is not only an ethical principle. It is
+      a mathematically optimal strategy for navigating open systems, independently
+      arrived at by statistical theory. The Agency Triad (exploration, commitment,
+      selection) has a formal statistical instantiation that was not derived from
+      Praestology.
+
+    what_this_does_not_confirm: |
+      CP's validity as a statistical method does not validate Praestology's
+      ontological reading of what viability selection means at the process level.
+      The isomorphism is structural. Whether the same formal structure describes
+      both statistical inference and physical realization remains Praestology's
+      own claim.
+
+---
+
+# ─────────────────────────────────────────────
+# COMPUTATIONAL MODELING ROADMAP
+# ─────────────────────────────────────────────
+
+computational_modeling:
+  status: "ROADMAP — structural path identified; implementation not yet attempted"
+  statement: |
+    The two convergences together suggest a structurally faithful computational
+    implementation path for the master equation:
+
+      Architecture:    CliffordNet (GA multivector operations)
+                       — preserves grade structure, chirality, orientation natively
+      Uncertainty:     Conformal Prediction bounds on ℛ(ψ) output
+                       — maintains pre-commitment envelope, prevents over-realization
+      Together:        A computational substrate that respects both the ontological
+                       (GA grade structure) and epistemic (viability-bounded selection)
+                       requirements of the framework natively
+
+    This would not be a simulation of Praestology in the sense of modeling a
+    separate physical process — it would be a structurally faithful implementation
+    of the same formal operations the framework describes, in a domain (computation)
+    where those operations can be run and tested directly.
+
+  open_questions:
+    - "How does the saturation term Λ·ln(1+κ|ψ|²) translate into CliffordNet
+       activation constraints? (Natural candidate: conformal prediction bounds
+       as the saturation ceiling for multivector amplitude)"
+    - "Can the Madelung projection (ψ → ρ, ∇S) be implemented as a grade
+       projection within CliffordNet, recovering fluid-like behavior at the
+       realized level from the GA computation at the process level?"
+    - "Does a CliffordNet trained on physical data show the same regime
+       transitions (quantum → fluid → classical) that the master equation
+       predicts as grade-projection limits?"
+
+  target_file: "core/praestology-model.yaml (to be created)"
+
+---
+
+# ─────────────────────────────────────────────
+# FRAMEWORK IMPLICATIONS
+# ─────────────────────────────────────────────
+
+framework_implications:
+  ga_explanatory_texts: |
+    The CliffordNet convergence provides a concrete, state-of-the-art
+    external reference for the 'One Exception' claim in analogy-disclaimer.md.
+    Future revisions of GA explanatory texts can cite CliffordNet as evidence
+    that the shift to GA is not a mathematical preference but an alignment with
+    what structural necessity independently produces in computation.
+    Target files: analogy-disclaimer.md, what-ga-means.md
+
+  pattern_of_additions: |
+    CliffordNet's resolution of the attention-head patch problem is now a
+    concrete example of the pattern-of-additions — and its resolution —
+    visible to anyone working in machine learning, not requiring familiarity
+    with the physics history. This provides a new entry point for explaining
+    why the framework uses GA to audiences with computational rather than
+    physics backgrounds.
+
+  conformal_prediction_ethics: |
+    The CP coverage guarantee as formal analog of Responsibility provides
+    an entry point for the ethics domain: responsible agency is
+    mathematically optimal, not merely morally prescribed. This connection
+    should be developed in domains/ethics/ when the Agency Triad formalization
+    is revisited.
+
+---
+
+reading_order:
+  - "core/core-dynamical-equation.yaml"
+  - "core/derivative-reality-clarification.yaml"
+  - "core/analogy-disclaimer.md"
+  - "intersectional/computational-convergence.yaml"  # this file
+  - "../What-GA-means-and-snapshot.md"
