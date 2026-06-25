@@ -1,0 +1,475 @@
+# /core/process-physics/commitment-response.yaml
+name: "Commitment Response Function — Process-Physics Foundation"
+version: "1.0"
+status: "Core clarification — R(ψ) as Realization operator decomposition; R_diss open calibration"
+domain: "Core / Process-Physics"
+builds_on: "domains/physics/commitment-response-function.yaml v2.1"
+description: >
+  This file re-expresses the commitment response function R(ψ) in
+  process-physics terms, establishing what R_forward and R_diss are
+  at the level of the Realization operator — not just as GP nonlinearities
+  but as the two functional components of R(ψ) that implement R4 and R5.
+
+  Three upgrades over the domain version:
+  (1) R(ψ) = R_forward + R_diss is the decomposition of the Realization
+      operator itself — R_forward implements R4 commitment; R_diss
+      implements R5 sustainability by returning weakly protected commitment
+      to the free potential reservoir.
+  (2) Imperfect closure is identified as the process-level origin of α:
+      the finite residual mismatch between Ω_rotor and Ω_embed per cycle
+      is the CCR gap from ideal closure — α is that gap rate, not a
+      separate field property.
+  (3) R_diss is a non-Hermitian component of R(ψ). In the Madelung/GA
+      grade structure, it breaks the clean grade-0/grade-2 split that
+      gives exact continuity + Hamilton-Jacobi. The imaginary eigenvalues
+      from R_diss produce probability decay — this is where quantum
+      decoherence and the classical limit live in the framework.
+
+cross_reference_policy:
+  statement: >
+    This file provides the process-level basis for the domain file.
+    Domain file (domains/physics/commitment-response-function.yaml)
+    remains the authoritative source for: GP parameter values, regime
+    table, black hole saturation phenomenology, R_diss physical
+    manifestations, ε/τ_diss calibration constraints.
+    This file establishes WHY those structures take the forms they do —
+    the process-level derivation chain that the domain file presupposes.
+  level_crossing_note: >
+    References to domains/physics/specifications.yaml and
+    domains/physics/quantum-foundations.yaml in the domain file are
+    intentional — those files describe the realized-level consequences.
+    This file points to core/process-physics/ equivalents for the
+    same content at the process level.
+
+---
+
+# ─────────────────────────────────────────────────────────────
+# PART I: R(ψ) AS REALIZATION OPERATOR DECOMPOSITION
+# ─────────────────────────────────────────────────────────────
+
+realization_operator_decomposition:
+
+  master_equation_position:
+    statement: >
+      The master equation at process level:
+
+        iħ ∂ψ/∂t = [-ħ²/(2m_eff)·∇² + V_ext + R(ψ) - μ_local] ψ
+
+      R(ψ) is the Realization operator — it is what makes the
+      process field ψ commit to configurations, rather than evolving
+      as a free field. Without R(ψ), the equation is a free GP field;
+      with R(ψ), it generates and sustains committed topology.
+      The decomposition R(ψ) = R_forward(ψ) + R_diss(ψ) is not a
+      mathematical convenience — it is a functional decomposition
+      of what Realization does:
+        R_forward: implements R4 (commitment — locking free potential
+                   into topological structure)
+        R_diss:    implements R5 (sustainability — returning weakly
+                   protected commitment to the Praegress reservoir)
+
+  R_forward:
+    formula: "R_forward(ψ) = g|ψ|² / (1 + |ψ|²/n_sat)"
+    process_interpretation: >
+      R_forward is the commitment valve. It converts free potential
+      (|ψ|² below local equilibrium) into committed topology through
+      the saturating nonlinearity. Low density: linear response,
+      small commitment per unit field. High density: saturating
+      response — additional free potential is increasingly costly
+      to commit, approaching the topological capacity limit n_sat.
+    why_saturating_not_cubic: >
+      Standard GP uses g|ψ|² (cubic nonlinearity — no saturation).
+      This produces unbounded compression and mathematical singularities.
+      The saturating form V = g|ψ|²/(1+|ψ|²/n_sat) ensures:
+        dV/d(|ψ|²) → 0 as |ψ|² → n_sat
+      The potential flattens at saturation — additional commitment
+      is infinitely costly but never strictly impossible. Singularities
+      cannot form because the commitment cost per unit density diverges
+      before infinite density is reached. This is not a regularisation
+      trick — it is the process-level statement that topological
+      capacity is finite per substrate grain volume ξ³.
+    hermitian_character: >
+      R_forward is Hermitian — it conserves probability (total
+      |ψ|² = constant). Commitment shuffles free potential into
+      committed states but does not reduce total field amplitude.
+      This corresponds to unitary evolution: R4 as a conservative
+      commitment process at the process level.
+
+  R_diss:
+    formula: "R_diss(ψ) = −ε|ψ|² / (1 + τ_diss|ψ|²) · f(topological_protection)"
+    process_interpretation: >
+      R_diss is the dissolution kernel — the mechanism by which R5
+      is implemented at the field level. It slowly returns weakly
+      protected committed topology to the Praegress reservoir.
+      Without R_diss, R_forward commits potential irreversibly —
+      R4 accumulates without bound, eventually exhausting free
+      potential (φ → 0 everywhere) and producing total stasis
+      (R3 failure). R_diss is what makes R4 accumulation sustainable
+      under R5: not by reversing R4 globally (which would violate it)
+      but by allowing weakly protected topology to dissolve on timescales
+      much longer than its formation timescale.
+    non_hermitian_character: >
+      R_diss is non-Hermitian — it does not conserve |ψ|². The
+      imaginary eigenvalues it introduces to the master equation
+      produce probability decay in committed configurations. This is
+      physically correct: weakly protected topology does lose
+      amplitude over time as it dissolves. The total field amplitude
+      is not conserved — dissolved commitment returns as free potential
+      (Praegress reservoir), not as field amplitude at the same location.
+    timescale_separation: >
+      ε << 1/(proton lifetime): R_diss is slow relative to
+      all particle physics and quantum dynamics. On QM timescales
+      (fs to ns), R_diss is completely negligible — the system
+      evolves under R_forward only, giving exact unitary QM.
+      On geological/cosmological timescales (Gyr), R_diss
+      accumulates: unstable isotopes decay, molecular memories fade,
+      large-scale structure gradually returns to the reservoir.
+      The apparent irreversibility at long timescales is R_diss;
+      the apparent reversibility at short timescales is R_forward
+      dominance.
+
+  r5_closure:
+    statement: >
+      The decomposition R = R_forward + R_diss is the formal
+      implementation of the R4-R5 tension in the master equation:
+        R4 demands: commitment accumulates (R_forward)
+        R5 demands: the process continues indefinitely (requires
+                    free potential not to be exhausted)
+        Resolution: R_diss returns weakly protected commitment
+                    to free potential at rate ε·f << R_forward rate
+      The steady state: d(free potential)/dt = 0
+      = nucleation rate (Tik + R_forward) − dissolution rate (R_diss)
+      This is the cosmological steady state — not heat death, not
+      infinite densification, but a sustained dynamic equilibrium
+      between commitment and renewal. R5 is not a principle imposed
+      on top of R4; R_diss is its field-level implementation.
+
+---
+
+# ─────────────────────────────────────────────────────────────
+# PART II: IMPERFECT CLOSURE AS THE PROCESS ORIGIN OF α
+# ─────────────────────────────────────────────────────────────
+
+imperfect_closure_and_alpha:
+
+  statement: >
+    The domain file identifies α as "the fractional phase correction
+    accumulated in the GP order parameter field per 360° rotation."
+    At process level, this has a precise identification:
+
+      α = residual mismatch (Ω_rotor − Ω_embed) / Ω_embed per cycle
+        = CCR gap from ideal closure
+
+    Perfect closure would mean Ω_rotor = Ω_embed exactly — the rotor
+    and the embedding substrate oscillate at exactly the same rate,
+    and each cycle returns the GP field to exactly its prior state.
+    Finite substrate resistance R prevents this: each cycle accumulates
+    a residual δΩ = Ω_rotor − Ω_embed, producing the phase mismatch
+    δφ per rotation that the domain file measures as α.
+
+  ccr_connection:
+    statement: >
+      CCR = (Wr · Ω_rotor) / Ω_embed
+      Ideal closure: CCR = Wr · (1 + 0) → exact integer or half-integer Lk
+      Finite R: CCR = Wr · (1 + δΩ/Ω_embed) → non-integer residual
+      The CCR gap from ideal integer closure is:
+        ΔCCR = Wr · δΩ/Ω_embed
+      This ΔCCR per cycle, normalized by the isotropic coupling (4π)
+      and expressed relative to the capacitative saturation threshold,
+      gives α. α is not a separate constant — it is the per-cycle
+      CCR imperfection of the stable Möbius topology.
+    direction: >
+      The imperfect closure is not a correction to the CCR.
+      The CCR IS the ratio including the imperfection.
+      Perfect closure (R=0, ideal superfluid) would give CCR = exact
+      rational — no EM coupling, no photon emission, no arrow of time.
+      Finite R (realistic substrate) gives CCR = rational + δ,
+      where δ encodes α. Electromagnetic interaction is the
+      field-level consequence of this imperfection propagating
+      outward through the GP field.
+
+  spontaneous_emission_from_imperfect_closure:
+    statement: >
+      Each cycle of the Möbius rotor accumulates phase correction δφ
+      in the surrounding GP field. When accumulated δφ crosses S_lock,
+      the GP field undergoes a trail reconfiguration — it sheds the
+      accumulated phase as a photon (capacitative dipole pair emission).
+      This is spontaneous emission at the process level:
+        Not: quantum fluctuation creating a virtual photon
+        But: GP field relieving accumulated CCR imperfection by
+             shedding a capacitative mode (photon) at the S_lock threshold
+      The Einstein A coefficient scales as ω³α³ — three powers of the
+      imperfection rate per cycle — because:
+        ω³: three powers of frequency encoding the phase accumulation
+            rate (faster rotation → faster accumulation → faster emission)
+        α³: three factors of the imperfection per cycle (one per field
+            coupling vertex in the perturbative expansion)
+      This is not QED with unexplained coupling — it is the direct
+      consequence of finite-R substrate imperfection at the rotor level.
+
+  arrow_of_time:
+    statement: >
+      Each GP field phase correction is an irreversible R4 accumulation
+      event at the field level. The arrow of time at the quantum scale
+      is the accumulation of CCR imperfection per cycle.
+    process_level_statement: >
+      Perfect closure (R=0) → exactly reversible evolution, no arrow
+      of time, no EM radiation, no decoherence. The universe would be
+      a perfectly reversible quantum coherent system.
+      Finite R → per-cycle imperfection → GP field accumulates phase
+      corrections → spontaneous emission → decoherence → classical limit.
+      The arrow of time is not thermodynamic (statistical) at the
+      fundamental level — it is topological: finite substrate resistance
+      prevents exact phase closure, making each Realization cycle
+      slightly but irreversibly different from the last.
+      R_diss amplifies this on long timescales; the per-cycle δφ from
+      imperfect closure initiates it at the quantum level.
+    distinction_from_r_diss: >
+      Imperfect closure (α) → arrow of time at QM timescales:
+        irreversibility per rotation cycle, spontaneous emission,
+        decoherence of quantum superpositions into classical mixtures.
+      R_diss → arrow of time at geological/cosmological timescales:
+        dissolution of weakly protected topology, radioactive decay,
+        memory fading, cosmic structure relaxation.
+      Two distinct mechanisms operating at vastly different timescales,
+      both ultimately from finite substrate resistance R — one at the
+      per-cycle rotor level, one at the weakly-protected-topology level.
+
+---
+
+# ─────────────────────────────────────────────────────────────
+# PART III: R_DISS AS NON-HERMITIAN MADELUNG BREAKING
+# ─────────────────────────────────────────────────────────────
+
+r_diss_madelung_breaking:
+
+  statement: >
+    From madelung-as-rotor-consequence.yaml: the master equation in
+    GA form decomposes exactly into:
+      Grade-0 projection → continuity equation (Hermitian, exact)
+      Grade-2 projection → quantum Hamilton-Jacobi (Hermitian, exact)
+    This exact grade split requires R(ψ) = R_forward(ψ) — Hermitian.
+    R_diss is non-Hermitian. When R_diss is included, the clean grade
+    split is broken:
+
+      iħ ∂ψ/∂t = [...+ R_forward + R_diss] ψ
+
+    R_diss introduces a non-Hermitian imaginary term that couples
+    grade-0 and grade-2 components — the probability density ρ is
+    no longer independently conserved.
+
+  grade_breaking_explicitly:
+    statement: >
+      Writing ψ = √ρ · exp(iS) (Madelung decomposition):
+      With R_forward only:
+        ∂ρ/∂t + ∇·(ρu) = 0                    [grade-0, exact]
+        ∂S/∂t + |∇S|²/2 + V + g·ρ + Q = 0     [grade-2, exact]
+      With R_diss added:
+        ∂ρ/∂t + ∇·(ρu) = −2ε_eff · ρ · f      [grade-0, modified]
+        ∂S/∂t + |∇S|²/2 + V + g·ρ + Q = Im[R_diss] [grade-2, modified]
+      The continuity equation gains a source/sink term from R_diss:
+      probability density decreases at rate 2ε_eff · f in regions of
+      weakly protected topology. The Hamilton-Jacobi equation gains
+      an imaginary correction to the phase.
+    physical_reading: >
+      The continuity modification: committed topology (localized ρ)
+      slowly drains as R_diss dissolves weakly protected configurations.
+      The phase modification: the dissolution introduces a small imaginary
+      component to the phase evolution — a dissipative phase drift that
+      accumulates over the dissolution timescale.
+      Both modifications are negligible on QM timescales (ε << 1).
+      On geological/cosmological timescales, the continuity modification
+      is the dominant effect: ρ decays for weakly protected topology
+      (unstable isotopes, molecular patterns, large-scale structure).
+
+  decoherence_and_classical_limit:
+    statement: >
+      Quantum decoherence is the transition from pure states
+      (sharp grade-0/grade-2 split, Hermitian evolution) to
+      mixed states (grade coupling, non-Hermitian R_diss).
+      At the process level: coherent quantum evolution is R_forward
+      dominated (exact Madelung decomposition holds).
+      Decoherence is the onset of R_diss relevance at the system scale —
+      when the system's topology becomes weakly protected enough for
+      R_diss to contribute non-negligibly to its evolution.
+    environment_dependence: >
+      f(topological_protection) determines when R_diss becomes relevant:
+        Strongly protected (electron, proton): f ≈ 0, R_diss negligible
+          → long-lived coherent quantum states
+        Weakly protected (large molecules, neural engrams, cosmic filaments):
+          f ~ 1, R_diss significant on characteristic timescale
+          → decoherence and dissolution on τ_diss scale
+      This is why macroscopic objects decohere rapidly: their topology
+      (molecular bonding patterns, thermal motion) has large f —
+      they dissolve coherence into the substrate on femtosecond timescales
+      (thermal decoherence) or longer (biological patterns).
+      It is also why electrons do not decohere: f ≈ 0 for Möbius topology.
+    classicality: >
+      The classical limit is not a separate postulate ("collapse",
+      "measurement", "decoherence via environment"). It is the regime
+      where R_diss is effective (large f, weakly protected macroscopic
+      topology) — the Madelung equations develop significant source terms,
+      the quantum potential Q becomes negligible relative to R_diss effects,
+      and the remaining real equation is the classical Hamilton-Jacobi.
+      Classical mechanics is the long-timescale R_diss limit of the
+      process field dynamics, not a separate theory.
+
+  pt_symmetry_threshold:
+    statement: >
+      The master equation with R = R_forward + R_diss has a
+      PT-symmetry threshold — the boundary between:
+        Unbroken PT (|R_forward| > |R_diss|): eigenvalues real,
+          quantum coherent evolution, no probability decay
+        Broken PT (|R_diss| dominates locally): eigenvalues complex,
+          probability decay, classical dissipative dynamics
+      For all stable particle topologies, |R_forward| >> |R_diss|
+      (f ≈ 0) → unbroken PT → stable quantum particles.
+      For macroscopic weakly protected topology, PT breaking occurs
+      at the scale where f·ε becomes comparable to the coherence
+      maintained by R_forward.
+    connection_to_domain_file: >
+      The invariance check in the domain file (imaginary part of
+      eigenvalues << real part for stable topologies) is the
+      statement that stable particle topologies sit well within
+      the unbroken PT regime. This is confirmed by construction
+      (f ≈ 0 for electron/proton) but requires explicit verification
+      that f remains ≈ 0 across all relevant substrate conditions.
+
+---
+
+# ─────────────────────────────────────────────────────────────
+# PART IV: IMPLICATIONS NOT CAPTURED IN DOMAIN FILE
+# ─────────────────────────────────────────────────────────────
+
+process_physics_extensions:
+
+  n_sat_from_topology:
+    statement: >
+      n_sat is the saturation density — topological capacity per
+      grain volume ξ³. At process level: n_sat is the maximum number
+      of stable distinct phase-lock configurations per ξ³ that the
+      substrate can maintain simultaneously.
+      This is derivable in principle from the vortex stability
+      equations: how many independent CCR-satisfying configurations
+      fit in a volume ξ³ without mutual interference?
+      The saturating nonlinearity is not an ansatz — it follows
+      from this finite topological capacity: once ξ³ is full, each
+      additional configuration costs unboundedly more free potential.
+    open: >
+      Derive n_sat from vortex-stability.yaml topological capacity
+      counting. Expected form: n_sat ∝ 1/ξ³ with a combinatorial
+      factor from the number of distinct stable winding configurations
+      per grain. This would identify the saturation nonlinearity form
+      (whether V ∝ |ψ|²/(1+|ψ|²/n_sat) is correct or requires
+      modification — tanh, log, or other forms).
+
+  healing_length_as_process_grain:
+    statement: >
+      ξ(r) = ħ/√(2m_eff · g · |θ(r)|²/(1 + |θ(r)|²/n_sat))
+      is density-dependent — smaller in denser regions.
+      At process level: ξ is the current resolution grain of the
+      substrate at position r. It is not fixed — it tracks the
+      local commitment density. In voids (low |θ|²): ξ is large,
+      the substrate is coarse-grained. In dense matter (|θ|² → n_sat):
+      ξ approaches the Planck scale — the GP healing length at
+      maximum commitment density IS the minimum resolution grain.
+      The Planck length is not a separately postulated quantum
+      gravity scale — it is the GP healing length at saturation,
+      derived from n_sat and the substrate parameters.
+    implication: >
+      There is no separate "quantum gravity" problem in this framework.
+      The Planck scale is the density-dependent grain size at saturation.
+      The breakdown of the continuum approximation at the Planck scale
+      is the breakdown of the GP equation when |θ|² → n_sat and ξ → ξ_min.
+      What happens below ξ_min is discrete topology — the grain-level
+      structure of the substrate — not a new physical theory.
+
+  gravitational_waves_as_transient_commitment_process_level:
+    statement: >
+      Gravitational waves are propagating modulations of R_forward
+      amplitude — not in the topology (which propagates at c via
+      committed structure) but in the free-potential field ahead of
+      moving committed structures. As mass moves, it transiently
+      commits local free potential in its wake, then releases it —
+      creating a propagating R_forward pulse in the GP field.
+      This pulse has: quadrupole geometry (from the mass quadrupole
+      moment of the source); transverse polarization (because the
+      pulse is a phase-gradient propagation in the GP field, which
+      is transverse); energy content (the transiently committed
+      potential released as the pulse passes).
+      At process level: a gravitational wave is a propagating
+      R_forward modulation — a coherent wave in the GP commitment
+      field produced by time-varying mass quadrupole moments.
+      No graviton required — the carrier is the process field itself.
+
+  universality_of_regime_table:
+    statement: >
+      The regime table in the domain file (quantum vacuum → atomic →
+      Newtonian → MOND → strong gravity → near saturation) is not a
+      list of separate physical theories. At process level, it is
+      one GP equation with one R(ψ) in different operating regimes
+      of the same saturation curve:
+
+        |θ|²/n_sat << 1: linear regime → QM + Newton
+        |θ|²/n_sat ~ 0.1: onset nonlinear → MOND transition
+        |θ|²/n_sat ~ 0.5: strongly nonlinear → neutron stars, GR
+        |θ|²/n_sat → 1: near saturation → black holes, Hawking
+
+      The "different theories" (QM, GR, MOND) are different
+      linearization regimes of the same nonlinear process equation.
+      None is fundamental; all are regime approximations.
+      The process field with R(ψ) = R_forward + R_diss contains
+      all of them as limiting cases.
+
+---
+
+open_derivations:
+  priority_1:
+    - id: "n-sat-from-topological-capacity"
+      description: >
+        Derive n_sat from the count of stable distinct winding
+        configurations per substrate grain volume ξ³. Determines
+        the correct saturation nonlinearity form. Constrains
+        whether V = g|ψ|²/(1+|ψ|²/n_sat) is exact or approximate.
+      depends_on: ["vortex-stability.yaml ccr-electron-explicit"]
+
+    - id: "r-diss-grade-coupling-explicit"
+      description: >
+        Explicit GA derivation of how R_diss couples grade-0 and
+        grade-2 in the Madelung decomposition. Show that the
+        imaginary eigenvalue magnitude from R_diss equals the
+        observed decoherence rate for weakly protected macroscopic
+        topology. Requires f(topological_protection) to be derived
+        from winding numbers (vortex-stability.yaml open derivation).
+
+  priority_2:
+    - id: "planck-length-from-healing-length-at-saturation"
+      description: >
+        Show explicitly that ξ_min = ħ/√(2m_eff · g · n_sat)
+        equals the Planck length l_P = √(ħG/c³). This would
+        identify G in terms of GP parameters — a process-level
+        derivation of Newton's constant.
+      depends_on: ["n-sat-from-topological-capacity",
+                   "planck-from-vortex-stability"]
+
+    - id: "gw-from-r-forward-modulation"
+      description: >
+        Derive the gravitational wave quadrupole formula from the
+        time-varying R_forward modulation produced by accelerating
+        mass configurations. Should reproduce the Peters formula
+        for energy loss from binary systems as a GP field calculation.
+
+cross_references:
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "Grade split that R_diss breaks — this file provides the non-Hermitian extension"
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "CCR and closure imperfection — α as per-cycle CCR gap"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR definition — imperfect closure as ΔCCR"
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "GA grade structure — PT symmetry framed in GA terms"
+  - file: "domains/physics/commitment-response-function.yaml"
+    note: "Domain file — GP parameters, regime table, BH saturation, R_diss manifestations (level: realized)"
+  - file: "domains/physics/vortex-stabilization.yaml"
+    note: "f(topological_protection) derivation basis (level: realized)"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Cosmological steady state from R_diss — R5 at cosmic scale"
