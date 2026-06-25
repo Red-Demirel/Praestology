@@ -1,0 +1,548 @@
+# /core/process-physics/vortex-stability.yaml
+name: "Vortex Stability — Process-Physics Foundation"
+version: "1.0"
+status: "Core derivation — CCR structural basis; numerical closure open"
+domain: "Core / Process-Physics"
+supersedes:
+  - "domains/physics/vortex-stabilization.yaml       (formation and persistence — retained as domain file)"
+  - "domains/physics/alpha-from-vortex-stability.yaml (obsolete as alpha-derivation; content reframed here)"
+description: >
+  This file establishes the process-level foundation for vortex topology
+  and stability in the Praestology substrate. It answers: what structural
+  requirement does a stable committed topology impose on the process field?
+  The answer is the Closure-Configuration Ratio (CCR):
+
+    CCR = (Wr · Ω_rotor) / Ω_embed
+
+  CCR is not a number to be derived post-hoc. It is the condition that
+  determines what configurations can persist. The electron's Möbius 720°
+  topology satisfies this condition at a specific CCR value — and that
+  value, measured externally against the capacitative (photon) coupling
+  reference, IS α in the context of EM interaction.
+
+  The merger of the two source files reflects this reframing:
+  α is not derived from vortex stability — α IS the CCR of the stable
+  Möbius topology, expressed as a ratio relative to the photon's
+  capacitative saturation threshold. The "derivation of α" was always
+  asking for the wrong thing: a number. The right question is: what
+  structural ratio does stable self-integral topology require?
+
+reframing_note:
+  old_question: "What formula gives α⁻¹ = 137.036?"
+  new_question: >
+    What structural ratio does the stable Möbius 720° vortex impose
+    on the process field, and what is the relationship between that
+    ratio and the capacitative (photon) coupling threshold?
+  consequence: >
+    The candidate formulas from alpha-from-vortex-stability.yaml
+    (pi-series, phase-locking margin, critical-angle, winding-ratio,
+    topological Euler) are not competing guesses at a number.
+    They are different geometric expressions of the same CCR
+    evaluated under different projection conventions.
+    The 2.2 ppm gap between pi-series (137.036304) and CODATA
+    (137.035999) is the predicted Π_eff depression from the
+    measurement substrate — not an error in the formula.
+    α_int (bare, isolated Möbius vortex) ≠ α_exp (measured with
+    apparatus and self-depression). CODATA always measures α_exp.
+
+---
+
+# ─────────────────────────────────────────────────────────────
+# PART I: TOPOLOGY — WHAT STABLE COMMITTED STRUCTURES ARE
+# ─────────────────────────────────────────────────────────────
+
+topology:
+
+  two_fundamental_modes:
+    statement: >
+      The process field admits two topologically distinct stable
+      vortex configurations. All stable committed structures at the
+      particle level are variants or composites of these two.
+
+    capacitative_mode:
+      name: "Dipolar-capacitative (photon-type)"
+      topology: "360° orientable dipole pair — opposite circulations"
+      S_net: "≈ 0 — perfect external strain cancellation"
+      self_coupling: "None — two vortices in external alignment only"
+      statistics: >
+        Bosonic: two capacitative modes can occupy the same substrate
+        region — their strain fields cancel additively.
+      persistence: >
+        Unstable if one partner is disturbed. No internal degree
+        of freedom — only relative phase between the two partners.
+        Stores and releases phase completely; no residual internal
+        state after emission.
+      CCR_value: >
+        CCR_cap = reference value — the saturation threshold
+        S_cap,sat defines the unit against which the self-integral
+        CCR is measured.
+
+    self_integral_mode:
+      name: "Möbius self-integral (electron-type)"
+      topology: "720° non-orientable — Möbius band embedded in GP field"
+      S_net: "> 0 — net chirality from Möbius handedness"
+      self_coupling: >
+        Intrinsic: at the Möbius crossover point (where the band
+        intersects itself after the first 360°), the current phase
+        of the vortex couples to the phase it had 360° earlier.
+        This is not proximity coupling between two objects.
+        It is topology coupling to its own history.
+      statistics: >
+        Fermionic: two self-integrals cannot occupy the same substrate
+        region — they would be forced to share an integration variable,
+        merging into a single topology. Pauli exclusion is a topological
+        necessity, not a separate quantum postulate.
+      charge: "Direction of self-integral coupling (chirality of Möbius twist)"
+      spin_half: >
+        The 720° requirement for phase return — double traversal
+        because self-reference requires it. The first 360° brings
+        the phase back to the crossover with a sign flip;
+        the second 360° returns it to the original orientation.
+        Spin-½ is not postulated — it is the phase return condition
+        of the non-orientable topology.
+      mass: >
+        Commitment density of the self-integral loop — the substrate
+        cost of maintaining the Möbius self-coupling continuously.
+        Nonzero because the non-orientable topology requires continuous
+        Regress commitment to sustain the crossover coupling.
+
+  crossover_as_em_coupling_point:
+    statement: >
+      The Möbius crossover point is physically the electromagnetic
+      coupling point. It is where the electron emits and absorbs photons.
+      The photon (external dipole pair) couples to the electron at this
+      crossover, where the electron's internal loop presents an external
+      face to the substrate.
+    why_alpha_is_small: >
+      The crossover is one point on the full 720° Möbius path.
+      α ≈ 1/137 means that per complete phase rotation, the crossover
+      coupling produces 1/137 of a unit interaction. The smallness is
+      the geometric consequence of one self-intersection per 4π × CCR
+      steradians of phase space. Not mysterious — it is the ratio of
+      one topological point to the full coupling volume it must project
+      across.
+    symmetry: >
+      Electron and positron have the same α: chirality determines charge
+      sign, but the Möbius self-intersection topology is identical
+      regardless of twist direction. The coupling magnitude is set by
+      the topology, not the chirality.
+
+---
+
+# ─────────────────────────────────────────────────────────────
+# PART II: CCR — THE STABILITY CONDITION
+# ─────────────────────────────────────────────────────────────
+
+CCR_as_stability_condition:
+
+  definition:
+    formula: "CCR = (Wr · Ω_rotor) / Ω_embed"
+    terms:
+      Wr: >
+        Writhe of the vortex filament — the self-linking of the
+        Möbius centreline in the embedding space. From the
+        Calugareanu-White-Fuller decomposition: Lk = Wr + Tw.
+        For the Möbius 720° vortex: Tw = ½ (half-integer, the
+        defining property of the non-orientable surface).
+        Wr is the geometric part of the self-linking — depends
+        on the specific equilibrium shape of the vortex in the GP field.
+        This is the key open computation: what is Wr for the stable
+        Möbius 720° configuration in the GP equation with saturating
+        nonlinearity?
+      Omega_rotor: >
+        Phase rotation rate of the self-integral at the crossover —
+        the internal coupling frequency at the Möbius intersection point.
+      Omega_embed: >
+        Natural frequency of the embedding substrate — the GP field's
+        characteristic oscillation scale set by Π_eff and the local
+        commitment density.
+    what_CCR_is_not: >
+      CCR is not a fixed number. It is a ratio evaluated under specific
+      substrate conditions. In the cosmological standard environment
+      (Π_eff = Π_eff,std), CCR evaluates to the value that corresponds
+      to α_int. In a depressed-η measurement environment, it evaluates
+      to the value that corresponds to α_exp. The "running of α" with
+      energy scale is the running of Π_eff — the same CCR, different
+      local substrate conditions.
+
+  alpha_as_CCR:
+    statement: >
+      In the context of electromagnetic interaction, α is the CCR of
+      the stable Möbius topology expressed as a ratio to the capacitative
+      saturation threshold:
+
+        α = CCR / (4π · S_cap,sat / S_burden)
+
+      or equivalently, using the alpha-rydberg-z0.yaml primary path:
+
+        α = S_burden / (4π · S_cap,sat)
+
+      where:
+        S_burden   = substrate cost of the Möbius self-integral loop
+                     (the full topological commitment of the 720°
+                     non-orientable winding including crossover coupling)
+        S_cap,sat  = capacitative saturation threshold (photon-mode
+                     maximum phase capacity before topology reorganises)
+        4π         = isotropic geometry factor from R5 (substrate
+                     isotropy — the crossover coupling radiates into
+                     the full 4π steradians of surrounding substrate)
+
+    direction_of_argument: >
+      The direction is: CCR structural requirement → stable Möbius
+      configuration → S_burden/S_cap,sat ratio → α.
+      NOT: assume α, fit topology to match.
+      The CCR is what the Möbius stability condition imposes.
+      α is what you measure when you probe that condition from outside
+      using photons (capacitative modes) as the coupling reference.
+
+  why_4pi_factor:
+    status: "Stated from R5 — formal GP field derivation open"
+    statement: >
+      R5 requires substrate isotropy: no preferred direction in the
+      process field. The internal crossover coupling radiates into
+      the full spherical substrate surrounding the vortex. The
+      isotropic measure of the surrounding phase space is 4π steradians.
+      The coupling ratio is therefore normalised by 4π — the crossover's
+      coupling to the full isotropic substrate is S_burden / (4π · S_cap,sat).
+    open: >
+      Formal derivation of the 4π factor from the GP field geometry —
+      showing explicitly that the spherical integration of the GP
+      coupling kernel around the Möbius crossover yields the 4π factor.
+      Expected to follow from the Green's function of the GP equation
+      in 3D at the vortex core scale.
+
+---
+
+# ─────────────────────────────────────────────────────────────
+# PART III: STABILITY MECHANISM
+# (Condensed from vortex-stabilization.yaml — process level)
+# ─────────────────────────────────────────────────────────────
+
+stability_mechanism:
+  statement: >
+    A stable vortex is not a frozen static object. It is a dynamic
+    equilibrium sustained by the substrate's ongoing Regress motion.
+    Topological protection prevents discontinuous unwinding;
+    the Tik background prevents continuous diffusive unwinding.
+    Three stabilisation contributions, two destabilising forces.
+
+  destabilising:
+    diffusive_unwinding: >
+      τ_decay ∝ 1/(D · ∇²ω) — phase coherence erodes through
+      diffusion in the η field. Tighter core → faster unwinding.
+      The substrate grain ξ sets the minimum core size.
+    topological_tunnelling: >
+      Tik-induced tunnelling through the topological barrier —
+      same mechanism as quantum tunnelling (foundations.yaml pillar 6)
+      applied at the vortex topology level. Rate is extremely low for
+      stable particles; high for unstable resonances.
+
+  stabilising:
+    zero_point_floor:
+      statement: >
+        Always present. η-independent at leading order.
+        The minimum Tik amplitude — the substrate's intrinsic
+        granularity — provides continuous stochastic counter-torque
+        that prevents monotonic phase decoherence.
+      connection_to_hbar: >
+        ħ = minimum counter-torque per cycle. The zero-point floor
+        is the physical origin of ħ as a stability threshold —
+        not a postulated constant but the minimum action required
+        to refresh one complete vortex phase cycle against diffusion.
+        This is the direction toward the open derivation:
+        planck-from-vortex-stability.yaml.
+
+    thermal_tik:
+      statement: >
+        Temperature-dependent amplitude above zero-point floor.
+        U-shaped lifetime curve: optimal Tik amplitude at T_optimal
+        (counter-torque matches diffusion rate); destabilising above
+        S_lock (chaotic disruption exceeds refresh rate).
+      testable: >
+        BEC vortex pair lifetime vs fluctuation amplitude should
+        show the U-shaped curve. T_optimal encodes S_lock directly
+        — measuring T_optimal gives S_lock for that analog system.
+
+    environmental_dynamics:
+      statement: >
+        Structured, correlated substrate motion (phonons, GW,
+        turbulent cascades, biological vibrational modes) providing
+        phase-coherent potential beyond stochastic Tik.
+        Resonance condition: ω_env ≈ n · ω_vortex (integer n).
+        On-resonance: coherent refreshing — the environment actively
+        sustains the vortex. Off-resonance: adds to background Tik.
+      CCR_connection: >
+        The resonance condition ω_env = n · ω_vortex is the same
+        integer closure condition as the CCR at the environmental
+        coupling scale. Environmental resonance is not a separate
+        effect — it is CCR closure at the extrinsic coupling frequency
+        rather than at the internal Möbius crossover frequency.
+
+  phase_lock_condition:
+    formula: "Δθ = 2π·n  (n ∈ ℤ)"
+    statement: >
+      Stable closure requires integer multiple of 2π phase winding.
+      This is not postulated — it follows from the topology of the η
+      field phase: non-integer winding produces destructive
+      self-interference and decays to the nearest integer.
+      This is the same condition as angular momentum quantisation
+      L = nħ in atomic physics — the same phase closure requirement
+      at different scales. One condition, two conventional labels.
+
+  binding_energy:
+    formula: "E_bind ≈ Γ²/(8π·ρ_s) × log(Λ/ξ)"
+    terms:
+      Gamma: "Γ = 2πħ/m_eff — minimum circulation quantum"
+      rho_s: "ρ_s — substrate commitment density"
+      Lambda: "Λ — pair separation scale"
+      xi: "ξ — substrate grain size (GP coherence length)"
+    statement: >
+      Logarithmic binding energy — same form as the KT vortex pair
+      energy (Kosterlitz-Thouless), confirmed experimentally in 2D BECs
+      and superfluid films (Hadzibabic et al. 2006, Nobel 2016).
+      The KT transition is the collective manifestation of this
+      binding energy at the macroscopic level — direct empirical
+      confirmation of the formation and persistence mechanism.
+
+---
+
+# ─────────────────────────────────────────────────────────────
+# PART IV: THE CCR DERIVATION PATH
+# (What alpha-from-vortex-stability.yaml was reaching toward)
+# ─────────────────────────────────────────────────────────────
+
+ccr_derivation_path:
+  statement: >
+    The following is the derivation path for establishing CCR from
+    first principles. It is NOT a derivation of the number 137.036.
+    It is a derivation of the structural ratio that stable Möbius
+    topology imposes, expressed in terms computable from the GP equation
+    and the Calugareanu-White theorem.
+
+  step_1_equilibrium_shape:
+    status: "Open — priority 1"
+    goal: >
+      Solve for the equilibrium shape of the Möbius 720° vortex
+      in the GP field with saturating nonlinearity:
+        iħ∂ψ/∂t = [−(ħ²/2m)∇² + V + g(ρ)|ψ|²]ψ
+      with g(ρ) as the saturating interaction (commitment-response
+      function, not simple cubic nonlinearity).
+      This is a calculus of variations problem — the equilibrium
+      configuration minimises the GP energy functional subject to
+      the Möbius topological constraint (720° non-orientable boundary
+      condition on the phase field).
+    what_is_determined: >
+      The equilibrium vortex shape determines the writhe Wr of the
+      centreline. The shape is not spherical — the 720° twist and
+      non-orientability impose a specific 3D geometry that encodes Wr.
+
+  step_2_writhe_computation:
+    status: "Open — priority 1"
+    goal: >
+      Apply Calugareanu-White-Fuller theorem to compute Wr for
+      the equilibrium configuration from step 1:
+        Lk = Wr + Tw
+        Tw = ½ (fixed by Möbius non-orientability)
+        Lk = Wr + ½
+      Wr is the geometric writhe of the centreline — computable
+      from the centreline shape via:
+        Wr = (1/4π) ∮∮ (dr₁ × dr₂) · (r₁ - r₂)/|r₁ - r₂|³
+      For the equilibrium Möbius configuration, this integral should
+      yield a specific value determined by the GP field geometry.
+    key_question: >
+      Does the equilibrium GP Möbius configuration give a writhe Wr
+      that makes Lk = Wr + ½ = a specific value related to α⁻¹/(4π)?
+      This is the central open mathematical question.
+
+  step_3_self_energy_ratio:
+    status: "Open — follows from step 2"
+    goal: >
+      Compute the self-energy of the Möbius 720° vortex relative
+      to the capacitative dipole saturation energy:
+        E_self(Möbius) / E_sat(dipole 360°) = f(Wr, ξ, ρ_s)
+      The self-energy includes: standard log(R/ξ) term + topological
+      self-energy from the non-orientable twist (the Lk contribution).
+      The ratio f is what becomes S_burden/S_cap,sat in the α formula.
+
+  step_4_CCR_value:
+    status: "Follows from step 3 — identifies α_int"
+    goal: >
+      From f(Wr, ξ, ρ_s), establish:
+        α_int = f / (4π)
+        α_int⁻¹ = 4π / f
+      This is the bare CCR — the self-integral coupling efficiency
+      of an isolated Möbius vortex in perfect vacuum (Π_eff = Π_eff,vac).
+    candidate_expressions: >
+      The five candidates from alpha-from-vortex-stability.yaml are
+      different geometric expressions of f:
+
+      Candidate 1 — Phase-locking safety margin:
+        α⁻¹ = 4π × N_stable,  N_stable = 10.90498...
+        N_stable is the number of external dipole-equivalent phase-lock
+        steps required to sustain the Möbius self-coupling — derivable
+        from the GP stability eigenvalue spectrum.
+
+      Candidate 2 — Pi-series (currently preferred geometric candidate):
+        α_int⁻¹ = 4π³ + π² + π = π(4π² + π + 1) = 137.036304
+        Interpretation:
+          Outer π: projection factor (crossover → external substrate basis)
+          4π²:     full external dipole phase space (720° → two solid angles)
+          π:       internal loop accumulation (first 360° before crossover)
+          1:       minimum topological unit (the crossover point itself)
+        Gap to CODATA: 137.036304 − 137.035999 = 0.000305 (2.2 ppm)
+        Interpretation: α_int⁻¹ = pi-series; CODATA measures α_exp⁻¹
+        with Π_eff depression. The gap is the self-depression correction.
+        Status: numerical conjecture — becomes a result only if the
+        writhe calculation in step 2 independently produces N_stable =
+        10.90498 without knowing the numerical target.
+
+      Candidate 3 — Critical angle:
+        α⁻¹ = 4π / sin(θ_crit),  θ_crit = 5.254°
+        The critical stability angle of the Möbius winding axis relative
+        to the dipole propagation plane.
+
+      Candidate 4 — Winding-number ratio:
+        α⁻¹ = 4π / (n_chiral/n_dipole)²,  ratio ≈ 0.303
+        Ratio of minimum stable chiral winding to dipole reference winding.
+
+      Candidate 5 — Topological linking number:
+        α⁻¹ = 4π × χ_eff,  χ_eff = 10.905 = N_stable
+        Identical numerical requirement to candidate 1.
+        If χ_eff from the CWF theorem equals the pi-series value,
+        candidates 2 and 5 are measuring the same invariant in two
+        different geometric languages — a deep confirmation.
+    honest_assessment: >
+      No existing mathematical result gives the self-linking number of
+      a Möbius vortex in a GP field as a specific multiple of π.
+      The path is identified; the calculation has not been done.
+      All candidates are numerical conjectures until step 2 is completed
+      independently of the numerical target.
+
+  step_5_Π_eff_correction:
+    status: "Structural prediction — magnitude requires step 4"
+    goal: >
+      Compute the leading-order Π_eff depression correction:
+        α_exp⁻¹ = α_int⁻¹ − δ(Π_eff)
+      where δ(Π_eff) encodes the self-depression of local free potential
+      by the electron's own committed topology and the measurement apparatus.
+      If pi-series is correct: δ = 0.000305 at the CODATA measurement scale.
+      The sign is fixed: apparatus commitment depresses local Π_eff →
+      increases effective Z_eff → slightly modifies the coupling projection.
+      Direction: α_exp < α_int (measured coupling slightly stronger than bare).
+    prediction: >
+      Different measurement techniques have different Π_eff depression
+      profiles. The small spread between precision α measurements
+      (g-2 vs atom interferometry vs Josephson) is partly real signal
+      of substrate depression, not purely experimental systematic error.
+      Each technique's self-depression profile is predictable from the
+      apparatus's committed topology — this is testable with sufficient
+      precision if CODATA 2022 updates shift the spread.
+
+---
+
+# ─────────────────────────────────────────────────────────────
+# PART V: RELATIONSHIP TO DOMAIN FILES
+# ─────────────────────────────────────────────────────────────
+
+domain_file_relationship:
+  statement: >
+    This process-physics file provides the structural foundation.
+    The domain files describe the phenomenological consequences
+    at the realized level. They build on this file, not the reverse.
+
+  vortex_stabilization_yaml:
+    role: "Retained as domain file (domains/physics/)"
+    content: >
+      Formation mechanism, persistence in biological/cosmological
+      environments, KT transition analogues, baryon/meson/nuclear
+      stability, environmental resonance in enzymes and BECs.
+      All domain-level realized consequences of the process-level
+      mechanism established here.
+    what_it_receives_from_this_file: >
+      The CCR as the stability condition — not a number to verify
+      against but the structural requirement that defines what "stable"
+      means for each topology.
+
+  alpha_rydberg_z0_yaml:
+    role: "Retained as domain constants file"
+    content: >
+      α, R∞, Z₀ as CCR-based ratios at the realized level.
+      The downstream constant stack built on α_int (bare) and
+      α_exp (measured) as two regimes of the same CCR.
+    what_it_receives_from_this_file: >
+      The CCR derivation path — explaining why S_burden/S_cap,sat
+      is the structural definition of α, not a formula fit to data.
+
+  alpha_from_vortex_stability_yaml:
+    role: "Obsolete as alpha-derivation file — content absorbed here"
+    reason: >
+      That file was oriented toward deriving the number 137.036.
+      That question has been dissolved: α is the CCR, not a number
+      to be derived. The structural content (topology, crossover,
+      self-integral distinction, candidate geometric expressions,
+      measurement substrate discrepancy) is preserved and reframed
+      in this file. The file can be archived.
+
+---
+
+open_derivations:
+  priority_1:
+    - id: "ccr-electron-explicit"
+      description: >
+        Steps 1-4 above: equilibrium Möbius shape from GP equation
+        → writhe Wr from CWF theorem → self-energy ratio f →
+        CCR = f/(4π). Does the result equal N_stable = 10.90498?
+        Does it reproduce the pi-series? The derivation must be
+        independent of the numerical target.
+      expertise_required:
+        - "GP superfluid vortex dynamics (condensed matter)"
+        - "Calugareanu-White-Fuller ribbon linking theory (topology)"
+        - "Numerical vortex filament equilibrium (computational)"
+      accessible_entry_point: >
+        For an external collaborator: the KT binding energy (step 3)
+        is Nobel-recognised physics. The new claim is a 720° Möbius
+        vortex has a specific self-energy ratio to the dipole
+        saturation energy, computable from CWF applied to the GP field.
+        Well-posed, tractable with existing tools, no framework
+        assumptions required beyond the GP equation.
+
+    - id: "4pi-from-GP-geometry"
+      description: >
+        Formal derivation of the 4π isotropic geometry factor from
+        the Green's function of the GP equation in 3D at the vortex
+        core scale. Should emerge naturally from the spherical
+        integration of the coupling kernel around the crossover point.
+
+  priority_2:
+    - id: "pi-eff-depression-magnitude"
+      description: >
+        Compute the leading-order Π_eff depression δ from the
+        electron's self-topology and measurement apparatus commitment.
+        Verify δ = 0.000305 at the g-2 measurement scale.
+        Predict the depression profile for Rb and Cs atom interferometry
+        and check against the current measurement spread.
+
+    - id: "planck-from-vortex-stability"
+      description: >
+        ħ as the minimum counter-torque per cycle — the zero-point
+        floor of the Tik background expressed as the minimum action
+        required to maintain one complete vortex phase cycle against
+        diffusion. Derive from the GP equation's minimum stable
+        vortex energy scale.
+      depends_on: ["ccr-electron-explicit"]
+
+cross_references:
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR definition, Wr, CWF theorem — this file applies those tools to the Möbius case"
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "GA rotor = vortex phase rotor — Ω_rotor in CCR is the GA rotor rate"
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "GP equation is the Madelung projection — the stability equations here are Madelung at Ξ=1"
+  - file: "domains/physics/vortex-stabilization.yaml"
+    note: "Domain-level formation/persistence — builds on this file"
+  - file: "domains/physics/alpha-rydberg-z0.yaml"
+    note: "Downstream constant stack — α_int and α_exp as two CCR regimes"
+  - file: "domains/physics/quantum-foundations.yaml"
+    note: "QM at Ξ=1 — the Möbius stability conditions are QM boundary conditions"
+  - file: "domains/physics/specifications.yaml"
+    note: "Vortex topology reference — Möbius, S_lock, formal definitions"
