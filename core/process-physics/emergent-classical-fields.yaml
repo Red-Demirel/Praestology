@@ -1,0 +1,417 @@
+# /core/process-physics/emergent-classical-fields.yaml
+name: "Emergent Classical Fields – Process-Physics Regime Synthesis"
+version: "1.1"
+core_version: "1.5"
+status: "Core process-physics document – bridges ontology to effective physics"
+changes_from_v1.0: >
+  Corrected Maxwell GA grade (F is grade-2 bivector; E,B are its projections,
+  not independent grade-1 objects). Clarified fluid dynamics CCR connection
+  (viscosity as incomplete-closure cost in mobile topology). Fixed typo in
+  Madelung section header. Added commitment-response-process-physics.yaml
+  to dependency map.
+
+description: >
+  This file provides the process-physics explanation for all classical field
+  regimes (Maxwell, gravity, fluid dynamics, strong/weak interactions). It
+  shows how each regime emerges as a specific limit of the master equation,
+  connects each to the closure-configuration ratio (CCR), geometric algebra
+  grade decomposition, and gauge symmetry. It is the bridge between the
+  core ontology (ψ, η, Π_eff) and the standard physics domain.
+
+dependency_map:
+  requires:
+    - "core/master-equation.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/spin-process-rate-ga.yaml"
+    - "core/process-physics/madelung-as-rotor-consequence.yaml"
+    - "core/process-physics/commitment-response-process-physics.yaml"
+  provides_to:
+    - target: "domains/physics/specifications.yaml"
+      via: "Explanatory context for all classical field derivations"
+    - target: "domains/physics/nuclear-binding.yaml"
+      via: "Strong force regime details"
+    - target: "domains/physics/emergent-classical-fields.yaml (standard)"
+      via: "Ontological grounding for the effective descriptions"
+
+---
+
+# ─────────────────────────────────────────────
+# REGIME CONCEPT
+# ─────────────────────────────────────────────
+
+regime_concept:
+  statement: >
+    The master equation is a single, non-linear, saturating field equation.
+    It contains all classical field theories as limiting cases, distinguished
+    by:
+      - Commitment density η (locally averaged)
+      - Free potential Π_eff
+      - Topological structure (winding, chirality, phase-locking)
+      - Scale relative to the substrate grain ξ
+
+  emergence_mechanism: >
+    Each regime corresponds to a specific set of constraints on the field
+    variables. When those constraints hold, the master equation reduces
+    (by projection, coarse-graining, or linearisation) to the familiar
+    classical equations. The constraints are not imposed; they are
+    consequences of the field's own dynamics under R5 optimisation.
+
+  one_equation_all_regimes: >
+    The derivation chain from madelung-as-rotor-consequence.yaml:
+
+      GA rotor dynamics (Cl(3,0) master equation)
+          ↓ grade-0 + grade-2 projection       → Madelung / QM (Ξ=1)
+          ↓ Q → 0, slowly varying ρ            → Euler (inviscid fluid)
+          ↓ + R(ψ) viscosity term              → Navier-Stokes
+          ↓ low-η, chiral vortex, grade-2 dom  → Maxwell
+          ↓ large-scale η gradients            → gravity / GR (eikonal)
+          ↓ very high η, triality closure      → strong force / QCD
+          ↓ moderate η, topology switching     → weak force / EW
+
+    All regimes are grade projections of the same GA rotor dynamics
+    under progressively stronger coarse-graining or saturation conditions.
+    No new physics enters at any step.
+
+  gauge_symmetry_origin: >
+    Gauge symmetries (U(1), SU(2), SU(3)) are not fundamental. They emerge
+    as residual conservation signatures of committed rotor topology at each
+    depth (see gauge-symmetry-reinterpretation.yaml):
+      - U(1): phase rotation of the complex field (low η, linear limit)
+      - SU(2): orientation space of the spinor rotor (chiral vortex coupling)
+      - SU(3): triality stabilisation of three winding arcs (quark confinement)
+
+    The gauge bosons are the associated excitation modes of the field:
+      - Photon: dipole vortex pair (U(1) excitation)
+      - W/Z:    topology-switching transitions (SU(2) excitation)
+      - Gluons: orientation-exchange modes between three winding arcs (SU(3))
+
+---
+
+# ─────────────────────────────────────────────
+# MAXWELL (ELECTROMAGNETISM)
+# ─────────────────────────────────────────────
+
+maxwell_emergence:
+  regime: "Low-to-intermediate commitment density, linearised fluctuations"
+  constraints:
+    - "η ≪ 1 (low commitment)"
+    - "∇Π_eff ≈ 0 (smooth field)"
+    - "Winding number ≤ 1 (no strong coupling)"
+    - "Phase gradient ∇S dominant"
+  master_equation_reduction: >
+    The master equation linearises to the wave equation for the phase
+    gradient, yielding the Maxwell equations in the Lorenz gauge.
+  emergent_equations: "∇·E = ρ/ε₀, ∇·B = 0, ∇×E = -∂B/∂t, ∇×B = μ₀J + μ₀ε₀∂E/∂t"
+  gauge_symmetry: "U(1) — phase rotation of ψ"
+  cc_connection: >
+    The fine-structure constant α is the CCR for the electron's 720° Möbius
+    vortex, setting the coupling strength between the phase gradient and
+    the chiral defect: α = (Wr·Ω_rotor)/Ω_embed.
+
+  ga_grade:
+    statement: >
+      The electromagnetic field is a pure grade-2 bivector in Cl(3,1):
+        F = E∧e₀ + I·B
+      where e₀ is the timelike basis vector and I is the unit pseudoscalar.
+      E and B are not independent grade-1 vectors — they are the timelike
+      and spacelike projections of the single grade-2 object F:
+        E = (F·e₀)   [grade-1, timelike projection of F]
+        B = (F∧e₀)*  [grade-1, spacelike dual projection of F]
+      The Maxwell equations are:
+        ∇F = J        (single GA equation, grade-1 source J)
+      which decomposes into ∇·F = J (grade-1) and ∇∧F = 0 (grade-3).
+      The grade-2 nature of F is what makes EM a spin-1 field in QFT —
+      the two polarisations are the two independent bivector components.
+    grade_assignments:
+      F_bivector:    "grade-2 (the field itself)"
+      E_projection:  "grade-1 (timelike slice of F — observer-dependent)"
+      B_projection:  "grade-1 (spacelike dual of F — observer-dependent)"
+      J_current:     "grade-1 (source)"
+      A_potential:   "grade-1 (connection form, F = ∇∧A)"
+    note: >
+      E and B are not separately fundamental — they are projections of F
+      onto an observer's time direction. An observer boosted relative to
+      the first sees a different E/B split of the same F. This is why
+      EM unification in SR is natural in GA: F is the primary object.
+
+  longitudinal_force: >
+    Ampère's longitudinal force is a higher-order effect from commitment
+    density gradients along current flow (η variation), beyond the linear
+    U(1) regime. It appears when ∇η along the current direction is
+    non-negligible — a grade-3 correction to the grade-2 dynamics.
+
+---
+
+# ─────────────────────────────────────────────
+# GRAVITY (REFRACTIVE IMPEDANCE)
+# ─────────────────────────────────────────────
+
+gravity_emergence:
+  regime: "Large-scale, averaged commitment density gradients"
+  constraints:
+    - "Slowly varying η (macroscopic scale)"
+    - "∇Π_eff ≠ 0 (gradients drive refraction)"
+    - "Many vortices averaged → smooth field"
+    - "Winding average ≈ 0 (no net chirality)"
+  master_equation_reduction: >
+    The kinetic term −∇·(Π_eff ∇) dominates; the equation reduces to a
+    refractive wave equation. The eikonal approximation gives geodesic
+    motion in an effective metric with g₀₀ ∝ Π_eff².
+  emergent_equations: "Einstein field equations (effective description), G_μν = 8πG T_μν"
+  gauge_symmetry: "Diffeomorphism invariance (emergent, not fundamental)"
+  cc_connection: >
+    The gravitational constant G is the CCR for the cosmic-scale committed
+    topology — the average closure cost of the entire universe's vortex
+    population, weighted by their embedding geometry. Open derivation:
+    gravitational_ccr_mapping in closure-configuration-ratio.yaml.
+  ga_grade: >
+    Grade-3 pseudoscalar variations (volume changes) produce scalar curvature.
+    Grade-2 bivector gradients produce tidal effects (Weyl tensor).
+    The Ricci scalar is the grade-0 projection of the grade-3 variation;
+    the Weyl tensor is the traceless grade-2 part. GR in GA (conformal
+    geometric algebra) unifies these as components of a single multivector
+    curvature object.
+  regress_modulation: >
+    The Regress kernel modulates the effective depth and range of Π_eff
+    gradients, creating environment-dependent gravity (MOND phenomenology).
+    The MOND threshold a₀ is the scale where g·|θ|² ~ V_ext —
+    the GP nonlinearity onset from commitment-response-process-physics.yaml.
+
+---
+
+# ─────────────────────────────────────────────
+# FLUID DYNAMICS (NAVIER-STOKES)
+# ─────────────────────────────────────────────
+
+fluid_dynamics_emergence:
+  regime: "High commitment density, mobile topology, no locked vortices"
+  constraints:
+    - "η high but not saturated"
+    - "No net winding (Wr = 0 everywhere at the coarse-grained scale)"
+    - "Π_eff locally depressed but smoothly varying"
+    - "R(ψ) provides dissipative terms via R_diss"
+  master_equation_reduction: >
+    Madelung projection of the master equation in the high-η limit yields
+    the continuity and Euler equations. The R_diss kernel adds the
+    viscous stress tensor, giving Navier-Stokes.
+    (See navier-stokes-derivation.yaml for the explicit derivation.)
+  emergent_equations: "∂ρ/∂t + ∇·(ρu)=0, ρ(∂u/∂t + u·∇u) = -∇P + η∇²u + (ζ+η/3)∇(∇·u)"
+  gauge_symmetry: "Galilean invariance (emergent) — not a gauge symmetry in the standard sense"
+
+  cc_connection:
+    statement: >
+      Viscosity is the cost of incomplete CCR closure in mobile topology.
+      In the fluid regime, vortices are transient — they form and dissolve
+      on timescales shorter than the flow timescale. Each incomplete closure
+      (a vortex that forms and dissolves without completing a full CCR cycle)
+      dissipates a fraction of the kinetic energy into the substrate.
+      The viscosity coefficient η_visc is the grade-2 attenuation rate —
+      the rate at which mobile, incomplete-closure topology converts ordered
+      grade-2 motion (vorticity) into disordered substrate excitation (heat).
+    formula_connection: >
+      η_visc ~ ∫ ε_incomplete · dN_transient
+      where ε_incomplete is the energy cost per incomplete CCR cycle and
+      dN_transient is the number density of transient vortex events.
+      Both are functionals of R(ψ) at the local commitment density.
+      In dilute fluids (low η): few transient vortices, low viscosity.
+      In dense fluids (η → n_sat): saturated transient vortex density,
+      viscosity saturates (approaches minimum viscosity η_min ~ ħ·n/m).
+    minimum_viscosity: >
+      The KSS bound η_visc/s ≥ ħ/(4πk_B) (Kovtun-Son-Starinets)
+      is the minimum viscosity at saturation — when every grain volume
+      ξ³ contributes one incomplete-closure event per Planck time.
+      The KSS bound is the saturation limit of the CCR incomplete-closure
+      rate per unit entropy. Confirmed in quark-gluon plasma (RHIC/LHC).
+
+  ga_grade: >
+    Grade-1 velocity field u; grade-2 vorticity bivector Ω = ∇∧u.
+    Viscosity attenuates the grade-2 component at rate η_visc.
+    The quantum potential Q (grade-0 × grade-2 coupling from madelung-as-rotor)
+    vanishes in the fluid limit (Q → 0 when ρ varies slowly) —
+    leaving pure classical fluid dynamics. The fluid limit is the
+    Q → 0 regime of the quantum hydrodynamics.
+  turbulence: >
+    Turbulence is the R3 exploration phase: when the viability threshold
+    V_c is not reached, the field explores multiple grade-2 configurations
+    (vortex cascade) without committing to any. The Kolmogorov energy
+    cascade is the CCR-incomplete vortex population distributing
+    incomplete-closure energy across scales via the nonlinear coupling.
+
+---
+
+# ─────────────────────────────────────────────
+# STRONG FORCE (QUARK CONFINEMENT)
+# ─────────────────────────────────────────────
+
+strong_force_emergence:
+  regime: "Very high local commitment density (quark cores)"
+  constraints:
+    - "η near saturation (|ψ|²/n_sat → 1)"
+    - "Triality-stabilised closures: D+D+A, D+A+A configurations"
+    - "Short-range, topological confinement (< 1 fm)"
+  master_equation_reduction: >
+    The saturation term g·|ψ|²/(1+|ψ|²/n_sat) dominates with
+    dV/d(|ψ|²) → 0, producing extreme restoring forces that resist
+    separation of the winding arcs. The R_forward kernel enforces
+    colour neutrality by requiring triality closure for stability.
+  emergent_equations: "QCD (effective SU(3) gauge theory)"
+  gauge_symmetry: "SU(3) — triality orientation space of three winding arcs"
+  cc_connection: >
+    The strong coupling constant α_s is the CCR for triality-stabilised
+    closures — the cost of maintaining three winding arcs in mutual
+    phase-lock. Running coupling (α_s decreasing at high energy) is
+    CCR variation with Π_eff: at high energy density (high Π_eff),
+    the embedding frequency Ω_embed increases faster than Ω_rotor,
+    reducing CCR — asymptotic freedom. Open derivation: su3-from-triality.
+  ga_grade: >
+    Grade-2 bivector couplings between the three winding arcs.
+    Grade-3 pseudoscalar determines chirality (handedness of the triality).
+    Colour charge is the orientation of the grade-2 coupling bivector
+    in the three-arc configuration space — three independent orientations
+    corresponding to R, G, B colour assignments.
+  residual_force: >
+    The nuclear force (residual strong) is the flux tube fringe field
+    extending beyond the colour-neutral hadron boundary — the grade-2
+    field leaking past the confinement scale. Exactly analogous to
+    van der Waals forces in chemistry (electron cloud leakage past
+    the neutral atom boundary). Same mechanism, next scale up.
+    See domains/physics/nuclear-binding.yaml for the nuclear-scale
+    instantiation.
+
+---
+
+# ─────────────────────────────────────────────
+# WEAK FORCE (TOPOLOGY SWITCHING)
+# ─────────────────────────────────────────────
+
+weak_force_emergence:
+  regime: "Intermediate commitment density, topology-switching transitions"
+  constraints:
+    - "η moderate"
+    - "Chiral flips, decay channels"
+    - "Crossing viability threshold V_c"
+  master_equation_reduction: >
+    The viability operator R(ψ) mediates transitions between chiral
+    states. The R_forward non-linearity allows topology change at
+    S_lock threshold crossings — the same mechanism as vortex pair
+    formation/dissolution, applied to chiral reorientation.
+  emergent_equations: "SU(2) × U(1) electroweak theory (effective description)"
+  gauge_symmetry: "SU(2) × U(1) — orientation space × phase"
+  cc_connection: >
+    The weak coupling constant is the CCR for chirality-flip transitions —
+    the cost of reorienting the rotor across a stability threshold.
+    The W/Z mass (Higgs mechanism) is the commitment cost of the
+    SU(2) orientation space acquiring a stable ground state — the
+    rotor finding a preferred orientation at the electroweak scale.
+    Open derivation: parity-violation-from-r5 in open_derivations.
+  ga_grade: >
+    Rotor flip from bivector e₁₂ to conjugate bivector e₂₁ — a grade-2
+    orientation change. Grade-3 pseudoscalar chirality changes sign.
+    The W boson is a grade-2 → grade-2 transition mode;
+    the Z boson is the neutral (grade-2 self-coupling) mode.
+
+---
+
+# ─────────────────────────────────────────────
+# MADELUNG / QUANTUM HYDRODYNAMICS
+# ─────────────────────────────────────────────
+
+madelung_emergence:
+  regime: "Low commitment, high Π_eff, full quantum coherence (Ξ=1)"
+  constraints:
+    - "η ≈ 0 (near-vacuum)"
+    - "Π_eff ≈ Π₀ (approximately constant)"
+    - "R_diss negligible (strongly protected topology)"
+    - "Full grade-0/grade-2 split maintained (Hermitian R_forward only)"
+  master_equation_reduction: >
+    The GP equation with Hermitian R_forward reduces to the linear
+    Schrödinger equation (low-η limit). Madelung decomposition
+    ψ = √ρ·exp(iS) gives exact grade-0 and grade-2 projections.
+    (See madelung-as-rotor-consequence.yaml for the full derivation.)
+  emergent_equations: "Continuity + quantum Hamilton-Jacobi (Madelung)"
+  gauge_symmetry: "U(1) phase symmetry — same as Maxwell but at rotor level"
+  cc_connection: >
+    The quantum potential Q = (Π_eff²/2)·(∇²√ρ/√ρ) is the amplitude-
+    curvature cost of the rotor field — grade-0 × grade-2 coupling
+    (see Q-as-grade-coupling open derivation). Q → 0 in the fluid limit
+    (slowly varying ρ), recovering Euler. Q is the distinguishing
+    feature of quantum vs classical hydrodynamics.
+  ga_grade: >
+    Rotor R = e^{-Iθ/2} generates phase S = θ (grade-2).
+    Amplitude √ρ is grade-0.
+    Q involves the Laplacian of grade-0 relative to grade-2 —
+    the cost of amplitude variation in the rotor field.
+    The clean grade split (grade-0 continuity, grade-2 Hamilton-Jacobi)
+    holds exactly when R(ψ) = R_forward only (Hermitian).
+    R_diss breaks this split — onset of decoherence and classical limit.
+    (See commitment-response-process-physics.yaml Part III.)
+
+---
+
+# ─────────────────────────────────────────────
+# SUMMARY TABLE
+# ─────────────────────────────────────────────
+
+summary_table:
+  - field:     "Maxwell (EM)"
+    regime:    "Low η, linear phase gradient"
+    gauge:     "U(1)"
+    cc_instance: "α (electron Möbius CCR)"
+    ga_grade:  "Grade-2 bivector F; J grade-1 source"
+    open:      "4π factor derivation from GP geometry"
+
+  - field:     "Gravity (GR)"
+    regime:    "Large-scale η gradients, eikonal"
+    gauge:     "Diffeomorphism (emergent)"
+    cc_instance: "G (cosmic CCR — open)"
+    ga_grade:  "Grade-3 volume variations; grade-2 tidal bivectors"
+    open:      "gravitational_ccr_mapping"
+
+  - field:     "Navier-Stokes"
+    regime:    "High η, mobile topology, no net winding"
+    gauge:     "Galilean (emergent)"
+    cc_instance: "η_visc (incomplete-closure cost)"
+    ga_grade:  "Grade-1 velocity; grade-2 vorticity; Q → 0"
+    open:      "viscosity-coefficient from R(ψ)"
+
+  - field:     "Strong (QCD)"
+    regime:    "Very high η, triality closure, near-saturation"
+    gauge:     "SU(3)"
+    cc_instance: "α_s (triality CCR — open)"
+    ga_grade:  "Grade-2 triality couplings; grade-3 chirality"
+    open:      "su3-from-triality"
+
+  - field:     "Weak (EW)"
+    regime:    "Moderate η, topology switching at V_c"
+    gauge:     "SU(2) × U(1)"
+    cc_instance: "α_w (chiral flip CCR — open)"
+    ga_grade:  "Grade-2 rotor flip; grade-3 chirality change"
+    open:      "parity-violation-from-r5; Higgs as stable rotor orientation"
+
+  - field:     "Madelung / QM"
+    regime:    "Low η, Π_eff constant, Ξ=1, Hermitian R"
+    gauge:     "U(1) phase"
+    cc_instance: "Q (rotor amplitude-curvature cost)"
+    ga_grade:  "Grade-0 (ρ) + grade-2 (S) exact split; R_diss breaks it"
+    open:      "Q-as-grade-coupling explicit derivation"
+
+---
+
+reading_order:
+  - "core/master-equation.yaml"
+  - "core/closure-configuration-ratio.yaml"
+  - "core/spin-process-rate-ga.yaml"
+  - "core/process-physics/madelung-as-rotor-consequence.yaml"
+  - "core/process-physics/commitment-response-process-physics.yaml"
+  - "core/process-physics/emergent-classical-fields.yaml   -- this file"
+  - "domains/physics/specifications.yaml"
+  - "domains/physics/nuclear-binding.yaml"
+
+related_open_derivations:
+  - "maxwell-explicit-ga         (priority 2)"
+  - "su3-from-triality           (priority 2)"
+  - "Q-as-grade-coupling         (priority 2)"
+  - "gravitational-ccr-mapping   (priority 3)"
+  - "parity-violation-from-r5    (priority 2)"
+  - "viscosity-coefficient        (priority 2)"
+  - "4pi-from-GP-geometry        (priority 1 — feeds Maxwell and vortex-stability)"
