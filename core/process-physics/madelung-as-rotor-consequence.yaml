@@ -1,0 +1,198 @@
+# /core/process-physics/madelung-as-rotor-consequence.yaml
+name: "Madelung Equations as Rotor Dynamics"
+version: "1.1"
+status: "Structural identity — core clarification; precision notes on quantum potential open"
+domain: "Core / Process-Physics"
+description: >
+  The Madelung equations (continuity + quantum Hamilton-Jacobi) turned out to
+  to be the natural hydrodynamic expression of rotor dynamics in Cl(3,0)
+  — what the master equation already is when written in GA notation, with
+  the complex amplitude ψ = √ρ·exp(iS) recognized as a rotor-magnitude pair.
+  The decomposition and the equation are the same object in two notations.
+
+co_naturality:
+  statement: |
+    The master equation and GA are co-natural: the master equation is not
+    written in GA — it is a GA equation. The complex field ψ in standard
+    notation is a compressed representation of a multivector in Cl(3,0):
+    the scalar magnitude √ρ is the grade-0 component; the phase exp(iS)
+    is a U(1) rotor in the even subalgebra. Writing ψ in complex notation
+    and then performing the Madelung decomposition is the same operation
+    as projecting a GA multivector onto its grade-0 and grade-2 components.
+
+---
+
+rotor_to_madelung:
+
+  phase_from_rotor:
+    status: "EXACT — no approximation"
+    statement: |
+      R = exp(−Iθ/2), I a unit bivector in Cl(3,0).
+      The rotor generates phase S = θ directly.
+      Phase gradient: ∇S = ∇θ
+      Flow velocity: u = Π_eff · ∇S = Π_eff · ∇θ
+      This is exact. The velocity field is the rotor's spatial phase variation
+      weighted by local free potential — nothing additional required.
+
+  continuity_from_rotor:
+    status: "EXACT — imaginary part of GA master equation"
+    statement: |
+      The continuity equation ∂ρ/∂t + ∇·(ρu) = 0 is the grade-0 projection
+      of the GA master equation's time evolution — the imaginary part in
+      complex notation, the scalar part in GA notation. Same equation,
+      two notations. No decomposition step required; it is already separated
+      by grade in the GA form.
+
+  quantum_potential_from_rotor:
+    status: "DIRECTIONALLY CORRECT — precision required on 'writhe cost' claim"
+    statement: |
+      Q = (Π_eff²/2) · (∇²√ρ / √ρ)
+
+      Q arises from the interplay between:
+        Grade-0 component: √ρ (scalar amplitude — commitment density magnitude)
+        Grade-2 component: rotor R (phase — orientational state)
+
+      Q is the cost of amplitude variation in the rotor field — specifically,
+      the curvature of the amplitude envelope √ρ relative to its local value.
+      In GA terms: it is the grade-0 Laplacian cost of maintaining a spatially
+      varying amplitude against the rotor's uniform phase assumption.
+
+    precision_note: |
+      "Writhe cost of the rotor field" (v1.0 statement) requires care.
+      Writhe (Wr) in the Calugareanu-White sense is a property of a specific
+      curve (the vortex centerline's self-linking). Q is a field quantity
+      defined at every point. They are related — the quantum potential is
+      strongest near vortex cores where amplitude variation is sharpest,
+      and the vortex writhe determines the topology of that core structure —
+      but they are not identical. Q is the field-level amplitude-curvature cost;
+      Wr is the topological self-linking cost of the specific committed vortex.
+
+      More precise: Q is the local cost of amplitude-phase decoupling in
+      the rotor field — the penalty for ρ varying while S is treated as
+      slowly varying. It vanishes in the fluid limit (slowly varying ρ)
+      and re-emerges at vortex cores and sharp interfaces — exactly where
+      writhe-carrying topology is concentrated.
+
+    open: "Formal identification of Q with a specific GA grade interaction
+           (grade-0 × grade-2 coupling) — explicit derivation needed"
+
+  hamilton_jacobi_from_rotor:
+    status: "DERIVED — real part of GA master equation"
+    statement: |
+      The quantum Hamilton-Jacobi equation:
+        ∂S/∂t + (1/2)|∇S|² + V + g·ρ + Q = 0
+
+      is the grade-2 projection of the GA master equation's time evolution —
+      the real part in complex notation, the bivector part in GA notation.
+      Taking ∇ of this yields the momentum equation (Euler + Q correction).
+      All terms appear directly from the GA master equation's grade structure:
+        V          ← committed background potential (grade-0 scalar)
+        g·ρ        ← GP self-interaction (grade-0 × grade-0)
+        Q          ← amplitude-curvature cost (grade-0 Laplacian)
+        |∇S|²/2   ← kinetic energy of rotor phase gradient (grade-2 squared)
+
+---
+
+schrodinger_as_rotor_equation:
+  statement: |
+    The Schrödinger equation i·∂ψ/∂t = Hψ uses complex arithmetic because
+    complex numbers ARE the even subalgebra of Cl(2,0) — the 2D case of the
+    same GA structure. The imaginary unit i is a unit bivector in Cl(2,0).
+
+    In Cl(3,0), the full rotor structure extends this naturally:
+    the Schrödinger equation is the complex-number (Cl(2,0)) notation for
+    what is fundamentally a rotor equation in Cl(3,0). The 3D extension
+    reveals the grade structure that complex notation compresses into a
+    single complex amplitude.
+
+    Implication: quantum mechanics at Ξ=1 is rotor dynamics on the process
+    field — not a separate theory that happens to be compatible with GA,
+    but the direct expression of GA rotor dynamics in a lower-dimensional
+    notation (complex numbers) that loses the grade distinction between
+    amplitude (grade-0) and phase (grade-2).
+
+  what_complex_notation_loses: |
+    Complex notation ψ = a + ib compresses:
+      Grade-0 (scalar):   commitment density magnitude √ρ
+      Grade-2 (bivector): phase orientation exp(iS)
+
+    into a single complex number, making them indistinguishable in notation.
+    This works computationally but obscures the physical distinction between
+    "how much commitment is here" (grade-0) and "which way is it oriented"
+    (grade-2). The Madelung decomposition recovers this distinction —
+    which is why it is not an approximation but a revelation of what was
+    always there.
+
+---
+
+derivation_chain_position:
+  statement: |
+    This file establishes the foundational step in the derivation chain:
+
+      GA master equation (Cl(3,0) rotor dynamics)
+          ↓ grade-0 projection → continuity equation (EXACT)
+          ↓ grade-2 projection → quantum Hamilton-Jacobi (EXACT)
+          = Madelung equations — quantum mechanics at Ξ=1
+          ↓ long-wavelength limit (Q → 0, slowly varying ρ)
+          = Euler equation (inviscid fluid)
+          ↓ + R(ψ) viscosity
+          = Navier-Stokes
+          ↓ low-η, chiral vortex, grade-2 dominant
+          = Maxwell
+          ↓ homogeneous, isotropic, cosmic scale
+          = Friedmann
+
+    The entire chain is grade projections of the same GA rotor dynamics
+    under progressively stronger coarse-graining assumptions.
+    No new physics enters at any step — only grade truncation and
+    regime-specific limits.
+
+  cross_domain_note: |
+    This is also why CliffordNet (computational-convergence.yaml) is
+    co-natural with the framework: implementing the master equation
+    in CliffordNet's GA architecture would naturally produce the entire
+    derivation chain as grade projections, without needing separate
+    implementations for QM, fluid dynamics, EM, and cosmology.
+    All four would emerge as activation patterns at different grade levels
+    of the same network.
+
+---
+
+open_derivations:
+  priority_2:
+    - id: "Q-as-grade-coupling"
+      description: |
+        Formal identification of the quantum potential Q as a specific
+        grade-0 × grade-2 coupling term in the GA master equation.
+        Should clarify the relationship between Q (field amplitude curvature)
+        and Wr (vortex centerline writhe) — showing that Wr determines
+        the topology within which Q is concentrated at vortex cores,
+        while Q is the local field expression of that topological cost.
+      depends_on: ["geometric-algebra-bridge.yaml", "ccr-electron-explicit"]
+
+    - id: "schrodinger-as-cl30-rotor"
+      description: |
+        Explicit derivation showing the Schrödinger equation as the
+        Cl(2,0) restriction of the full Cl(3,0) GA master equation.
+        Should identify exactly which grade information is lost in the
+        complex-number compression and confirm that the Madelung
+        decomposition exactly recovers it.
+      depends_on: ["geometric-algebra-bridge.yaml"]
+
+---
+
+cross_references:
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "GA grade structure; rotor definition; Madelung in GA"
+  - file: "core/process-physics/spin-process-rate-ga.yaml"
+    note: "Rotor as spinor; CCR; chirality as grade-3"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "Writhe (Wr) as topological self-linking cost — distinct from Q"
+  - file: "core/process-physics/navier-stokes-derivation.yaml"
+    note: "NS as long-wavelength Madelung limit — same derivation chain"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Friedmann as cosmic-scale Madelung limit — same chain"
+  - file: "intersectional/computational-convergence.yaml"
+    note: "CliffordNet as natural computational substrate for rotor dynamics"
+  - file: "core/quantum-foundations.yaml"
+    note: "QM as Ξ=1 rotor dynamics — this file provides the formal basis"
