@@ -1,0 +1,201 @@
+# /core/process-physics/open-reconciliation-notes.yaml
+name: "Open Reconciliation Notes"
+version: "1.0"
+status: "ACTIVE TRACKING — deliberately surfaced inconsistencies and dependency-of-dependency risks"
+domain: "Core / Process-Physics"
+description: >
+  This file exists to track places where recently added process-physics
+  files make claims that have not yet been reconciled with each other,
+  or where a file treats as settled something that is, one or two steps
+  upstream, still an open derivation. These are not hidden or smoothed
+  over elsewhere in the framework — they are tracked here explicitly,
+  precisely because Praestology does not claim closed-form derivation
+  of fundamental constants from first principles. The framework's
+  position is structural (what ratios and mechanisms a stable process
+  requires), not numerological (fitting formulas to known constants).
+  An itemised, honest account of where that structure is not yet
+  internally reconciled is part of the claim, not a liability to be
+  minimised.
+
+stance: >
+  Praestology is not in the business of presenting a finished derivation
+  of α, G, ħ, or any other constant as a solved problem. Where two files
+  each propose a process-level identification of the same quantity, both
+  are kept visible until reconciled — neither is quietly retired in favour
+  of the other without an explicit note explaining why. Where a file's
+  derivation chain depends on an upstream file's still-open item, that
+  dependency is named here even if the downstream file does not repeat
+  the caveat inline.
+
+---
+
+issue_1_alpha_dual_identification:
+  status: "OPEN — two structurally distinct identifications of α, not yet shown equivalent"
+  summary: >
+    Two process-physics files each claim to identify the process-level
+    origin of the fine-structure constant α, using different objects:
+
+  identification_a:
+    source: "vortex-stability.yaml"
+    framing: "STATIC GEOMETRIC RATIO"
+    statement: >
+      α = S_burden / (4π · S_cap,sat)
+      — the self-energy of the stable Möbius 720° vortex relative to the
+      capacitative (photon) saturation threshold. This is a property of
+      the equilibrium topology: a ratio of two energy/action scales,
+      evaluated once the equilibrium shape and its writhe Wr are known.
+      Depends on solving a calculus-of-variations problem (equilibrium
+      Möbius shape in the GP field) and then a topological integral
+      (Calugareanu-White-Fuller writhe of that shape). Time does not
+      appear in this definition — it is a ratio of two fixed quantities.
+
+  identification_b:
+    source: "commitment-response.yaml"
+    framing: "DYNAMICAL PER-CYCLE RESIDUAL"
+    statement: >
+      α = residual mismatch (Ω_rotor − Ω_embed) / Ω_embed, per rotation cycle
+      — the fractional phase correction that accumulates each time the
+      rotor completes one cycle, because finite substrate resistance R
+      prevents Ω_rotor and Ω_embed from matching exactly. This is a *rate*:
+      a per-cycle imperfection that accumulates over time and is explicitly
+      tied to spontaneous emission, decoherence, and the arrow of time.
+      Time is intrinsic to this definition — it is a residual that appears
+      once per rotation, not a fixed ratio of static quantities.
+
+  why_this_is_not_automatically_resolved: >
+    commitment-response.yaml gestures at a bridge (ccr_connection:
+    "ΔCCR = Wr · δΩ/Ω_embed ... gives α") but this bridge asserts the
+    two quantities are proportional via Wr without independently deriving
+    that the static self-energy ratio (identification_a) and the dynamical
+    per-cycle closure residual (identification_b) must be numerically
+    identical rather than merely analogous. A geometric ratio of two
+    energy scales and a kinetic residual of two frequencies are different
+    *kinds* of quantity (dimensionless ratio of actions vs. fractional
+    rate per cycle) that happen to both be candidates for "the same
+    dimensionless number." They could turn out to be exactly the same
+    quantity viewed two ways — that would be a genuinely strong result —
+    or they could be two different numbers that happen to be of the same
+    order, in which case at most one is actually α and the other needs
+    a different name or a corrected relationship.
+
+  what_would_resolve_this: >
+    Either (a) a derivation showing identification_b's per-cycle residual
+    integrates, in steady state, to exactly identification_a's static
+    ratio — i.e. that the rate, accumulated appropriately, reproduces the
+    equilibrium self-energy ratio without additional free parameters; or
+    (b) a demonstration that they are answers to different questions
+    (e.g. identification_a is α_int, the bare isolated-vortex value, while
+    identification_b describes how α_int relates to α_exp or to emission
+    phenomenology) — in which case the files should be edited to make
+    that division of labour explicit rather than each independently
+    claiming to be "the process-level origin of α."
+
+  current_recommendation: >
+    Do not treat either file's α claim as settled pending the other.
+    Both vortex-stability.yaml and commitment-response.yaml should retain
+    their own framing, but any future file that cites "α as derived in
+    process-physics" should cite this note alongside whichever file it
+    draws from, rather than presenting either identification as the
+    sole or final one.
+
+---
+
+issue_2_n_sat_dependency_chain:
+  status: "OPEN — multiple regime derivations rest on an unclosed functional form"
+  summary: >
+    emergent-classical-fields.yaml uses the saturating nonlinearity
+    g·|ψ|²/(1+|ψ|²/n_sat) as a settled input across at least three
+    regime derivations (Maxwell's low-η limit, the strong force's
+    near-saturation limit, and implicitly the weak force's threshold
+    crossing). The specific functional FORM of this saturation term —
+    not just the value of n_sat — is listed as an open derivation in
+    commitment-response.yaml, which in turn depends on
+    vortex-stability.yaml's own unclosed ccr-electron-explicit item.
+
+  the_chain: >
+    emergent-classical-fields.yaml (treats saturation form as given)
+      ← depends on ←
+    commitment-response.yaml: n-sat-from-topological-capacity
+      (status: OPEN, priority 1 — "This would identify the saturation
+      nonlinearity form... whether V ∝ |ψ|²/(1+|ψ|²/n_sat) is correct
+      or requires modification — tanh, log, or other forms")
+      ← depends on ←
+    vortex-stability.yaml: ccr-electron-explicit
+      (status: OPEN, priority 1 — equilibrium Möbius shape and writhe
+      not yet computed)
+
+  why_this_matters: >
+    This is not merely "one open item among several." It means the
+    specific mathematical FORM used in emergent-classical-fields.yaml's
+    regime table — not just unresolved numerical constants within an
+    agreed form — is provisional. If the eventual topological-capacity
+    derivation yields a tanh or logarithmic saturation instead of the
+    rational form g|ψ|²/(1+|ψ|²/n_sat), the qualitative shape of at
+    least the strong-force near-saturation regime (which explicitly
+    relies on dV/d(|ψ|²) → 0 behaviour at the saturation point) and
+    possibly the weak-force threshold-crossing regime would need
+    re-examination — not just re-fitting.
+
+  current_recommendation: >
+    emergent-classical-fields.yaml should carry an explicit note (not
+    currently present) stating that its regime table assumes a specific
+    saturation functional form that is itself two derivation-steps from
+    closed, and that qualitative conclusions drawn from the *shape* of
+    that function (rather than just from saturation existing at all)
+    are correspondingly provisional. This note serves that function
+    until the file itself is updated directly.
+
+---
+
+methodological_note:
+  why_track_this_separately_rather_than_inline: >
+    Both issues above could be added as inline caveats to the files
+    where they arise. They are tracked here instead, in addition to
+    or pending inline notes, because:
+      (1) issue_1 spans two files neither of which is positioned to
+          unilaterally declare itself correct over the other;
+      (2) issue_2 is a dependency-of-a-dependency that is easy to lose
+          track of as more files cite emergent-classical-fields.yaml
+          without re-checking what it itself rests on;
+      (3) a single visible location for "things we know don't fully
+          fit together yet" is more useful, for collaborators and
+          skeptical readers alike, than the same caveats scattered
+          and easy to miss across multiple files.
+
+  relationship_to_framework_epistemics: >
+    This file is itself an instance of the same discipline already
+    practiced elsewhere in the framework (e.g. vortex-stability.yaml's
+    own honest_assessment, alpha-rydberg-z0.yaml's explicit refusal to
+    present fixed numerical closures). Praestology's claim is structural:
+    it specifies what a stable process must satisfy, and lets the
+    numbers fall out of that structure where the math has actually been
+    done — not the reverse. Tracking unreconciled claims openly, including
+    ones that might look bad next to each other, is consistent with that
+    claim rather than a threat to it. A framework that derived all its
+    constants cleanly on the first pass, with no visible seams, would be
+    more suspicious, not more credible.
+
+---
+
+resolution_log:
+  note: >
+    When either issue above is resolved, the resolution should be logged
+    here with a date and a pointer to the file/section that resolved it,
+    rather than simply deleting the entry — this preserves the history
+    of what was uncertain and for how long, which is itself useful
+    documentation of the framework's development.
+  entries: []
+
+---
+
+cross_references:
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "Identification_a (static geometric ratio); ccr-electron-explicit open item"
+  - file: "core/process-physics/commitment-response.yaml"
+    note: "Identification_b (dynamical per-cycle residual); n-sat-from-topological-capacity open item"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "Regime table depends on the saturation form addressed in issue_2"
+  - file: "core/process-physics/alpha-rydberg-z0.yaml"
+    note: "Downstream consumer of α — should not treat either identification as closed"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "ccr_first_derivation_discipline — the methodological stance this file extends to cross-file reconciliation"
