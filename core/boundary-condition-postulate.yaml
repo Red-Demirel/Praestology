@@ -55,21 +55,17 @@ overview: |
 ---
 
 postulate_statement: |
-  Let D be a derivative-level description (continuous fields, standard
-  mathematics, observable projections ρ, ∇S).
-  Let P be the corresponding process-level description (ψ, R(ψ), Π_eff,
-  realization events, saturation dynamics).
+  When a derivative-level description (D) attempts to express a quantity that is 
+  bounded at the process level by a closure mechanism C (R5 selection, saturation ceiling, 
+  realization boundary), but D lacks access to C, it tends to produce non-terminating 
+  or divergent expressions:
 
-  If D attempts to express a quantity Q that is bounded at the process
-  level by a closure mechanism C (R5 selection, saturation, realization
-  ceiling), but D lacks access to C, then D produces a non-terminating
-  expression for Q:
+    — Ratios of discrete process-level quantities may appear as irrationals.
+    — Amplitudes may appear as singularities.
+    — Integrated quantities may diverge to infinity.
 
-    — If Q is a ratio of discrete quantities: D produces an irrational number.
-    — If Q is a field amplitude: D produces a singularity.
-    — If Q is an integrated quantity: D produces an infinity.
-
-  The symptom is not in P. It is in D's attempt to express P without C.
+  These are symptoms of informational incompleteness in the derivative level, not 
+  features of the process level itself.
 
 ---
 
