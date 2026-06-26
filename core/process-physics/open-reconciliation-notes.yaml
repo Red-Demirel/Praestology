@@ -1,21 +1,25 @@
 # /core/process-physics/open-reconciliation-notes.yaml
 name: "Open Reconciliation Notes"
-version: "1.0"
+version: "1.1"
 status: "ACTIVE TRACKING — deliberately surfaced inconsistencies and dependency-of-dependency risks"
 domain: "Core / Process-Physics"
+changes_from_v1.0: >
+  Added issue_3: the 4π geometry factor is a shared upstream dependency
+  of both the α identification (issue_1) and Maxwell's GA grade derivation
+  in emergent-classical-fields.yaml — currently invisible in tracking.
+  Minor wording only elsewhere.
+
 description: >
-  This file exists to track places where recently added process-physics
-  files make claims that have not yet been reconciled with each other,
-  or where a file treats as settled something that is, one or two steps
-  upstream, still an open derivation. These are not hidden or smoothed
-  over elsewhere in the framework — they are tracked here explicitly,
-  precisely because Praestology does not claim closed-form derivation
-  of fundamental constants from first principles. The framework's
+  This file tracks places where recently added process-physics files make
+  claims not yet reconciled with each other, or where a file treats as
+  settled something that is, one or two steps upstream, still an open
+  derivation. These are not hidden elsewhere in the framework — they are
+  tracked here explicitly, because Praestology does not claim closed-form
+  derivation of fundamental constants from first principles. The framework's
   position is structural (what ratios and mechanisms a stable process
   requires), not numerological (fitting formulas to known constants).
-  An itemised, honest account of where that structure is not yet
-  internally reconciled is part of the claim, not a liability to be
-  minimised.
+  An itemised, honest account of where that structure is not yet internally
+  reconciled is part of the claim, not a liability to be minimised.
 
 stance: >
   Praestology is not in the business of presenting a finished derivation
@@ -33,7 +37,7 @@ issue_1_alpha_dual_identification:
   status: "OPEN — two structurally distinct identifications of α, not yet shown equivalent"
   summary: >
     Two process-physics files each claim to identify the process-level
-    origin of the fine-structure constant α, using different objects:
+    origin of the fine-structure constant α, using different objects.
 
   identification_a:
     source: "vortex-stability.yaml"
@@ -50,31 +54,31 @@ issue_1_alpha_dual_identification:
       appear in this definition — it is a ratio of two fixed quantities.
 
   identification_b:
-    source: "commitment-response.yaml"
+    source: "commitment-response-process-physics.yaml"
     framing: "DYNAMICAL PER-CYCLE RESIDUAL"
     statement: >
       α = residual mismatch (Ω_rotor − Ω_embed) / Ω_embed, per rotation cycle
       — the fractional phase correction that accumulates each time the
       rotor completes one cycle, because finite substrate resistance R
-      prevents Ω_rotor and Ω_embed from matching exactly. This is a *rate*:
+      prevents Ω_rotor and Ω_embed from matching exactly. This is a rate:
       a per-cycle imperfection that accumulates over time and is explicitly
       tied to spontaneous emission, decoherence, and the arrow of time.
       Time is intrinsic to this definition — it is a residual that appears
       once per rotation, not a fixed ratio of static quantities.
 
-  why_this_is_not_automatically_resolved: >
-    commitment-response.yaml gestures at a bridge (ccr_connection:
-    "ΔCCR = Wr · δΩ/Ω_embed ... gives α") but this bridge asserts the
-    two quantities are proportional via Wr without independently deriving
-    that the static self-energy ratio (identification_a) and the dynamical
-    per-cycle closure residual (identification_b) must be numerically
-    identical rather than merely analogous. A geometric ratio of two
-    energy scales and a kinetic residual of two frequencies are different
-    *kinds* of quantity (dimensionless ratio of actions vs. fractional
-    rate per cycle) that happen to both be candidates for "the same
-    dimensionless number." They could turn out to be exactly the same
-    quantity viewed two ways — that would be a genuinely strong result —
-    or they could be two different numbers that happen to be of the same
+  why_not_automatically_resolved: >
+    commitment-response-process-physics.yaml gestures at a bridge
+    (ccr_connection: "ΔCCR = Wr · δΩ/Ω_embed ... gives α") but this
+    asserts the two quantities are proportional via Wr without independently
+    deriving that the static self-energy ratio (identification_a) and the
+    dynamical per-cycle closure residual (identification_b) are numerically
+    identical rather than merely analogous.
+
+    A geometric ratio of two energy scales and a kinetic residual of two
+    frequencies are different kinds of quantity (dimensionless ratio of
+    actions vs. fractional rate per cycle). They could turn out to be
+    exactly the same quantity viewed two ways — that would be a genuinely
+    strong result — or they could be two different numbers of the same
     order, in which case at most one is actually α and the other needs
     a different name or a corrected relationship.
 
@@ -83,20 +87,28 @@ issue_1_alpha_dual_identification:
     integrates, in steady state, to exactly identification_a's static
     ratio — i.e. that the rate, accumulated appropriately, reproduces the
     equilibrium self-energy ratio without additional free parameters; or
-    (b) a demonstration that they are answers to different questions
-    (e.g. identification_a is α_int, the bare isolated-vortex value, while
+    (b) a demonstration that they answer different questions — e.g.
+    identification_a is α_int (bare isolated-vortex value), while
     identification_b describes how α_int relates to α_exp or to emission
-    phenomenology) — in which case the files should be edited to make
-    that division of labour explicit rather than each independently
-    claiming to be "the process-level origin of α."
+    phenomenology — in which case the files should be edited to make that
+    division of labour explicit rather than each independently claiming to
+    be "the process-level origin of α."
+
+  upstream_dependency: >
+    Both identifications share the 4π isotropic geometry factor as an
+    unresolved upstream dependency — see issue_3 below. Resolution of
+    issue_3 is a prerequisite for full resolution of issue_1, because
+    the 4π appears in identification_a's denominator and its derivation
+    from the GP Green's function may clarify whether the factor is truly
+    geometric (static) or whether it has a dynamical interpretation
+    that bridges to identification_b.
 
   current_recommendation: >
     Do not treat either file's α claim as settled pending the other.
-    Both vortex-stability.yaml and commitment-response.yaml should retain
-    their own framing, but any future file that cites "α as derived in
-    process-physics" should cite this note alongside whichever file it
-    draws from, rather than presenting either identification as the
-    sole or final one.
+    Both vortex-stability.yaml and commitment-response-process-physics.yaml
+    should retain their own framing. Any future file citing "α as derived
+    in process-physics" should cite this note alongside whichever file it
+    draws from, rather than presenting either identification as sole or final.
 
 ---
 
@@ -109,93 +121,168 @@ issue_2_n_sat_dependency_chain:
     near-saturation limit, and implicitly the weak force's threshold
     crossing). The specific functional FORM of this saturation term —
     not just the value of n_sat — is listed as an open derivation in
-    commitment-response.yaml, which in turn depends on
+    commitment-response-process-physics.yaml, which in turn depends on
     vortex-stability.yaml's own unclosed ccr-electron-explicit item.
 
   the_chain: >
-    emergent-classical-fields.yaml (treats saturation form as given)
-      ← depends on ←
-    commitment-response.yaml: n-sat-from-topological-capacity
-      (status: OPEN, priority 1 — "This would identify the saturation
-      nonlinearity form... whether V ∝ |ψ|²/(1+|ψ|²/n_sat) is correct
-      or requires modification — tanh, log, or other forms")
-      ← depends on ←
+    emergent-classical-fields.yaml
+      (treats saturation form as given input)
+        ← depends on ←
+    commitment-response-process-physics.yaml: n-sat-from-topological-capacity
+      (status: OPEN, priority 1 — "whether V ∝ |ψ|²/(1+|ψ|²/n_sat)
+      is correct or requires modification — tanh, log, or other forms")
+        ← depends on ←
     vortex-stability.yaml: ccr-electron-explicit
       (status: OPEN, priority 1 — equilibrium Möbius shape and writhe
       not yet computed)
 
   why_this_matters: >
-    This is not merely "one open item among several." It means the
-    specific mathematical FORM used in emergent-classical-fields.yaml's
-    regime table — not just unresolved numerical constants within an
-    agreed form — is provisional. If the eventual topological-capacity
-    derivation yields a tanh or logarithmic saturation instead of the
-    rational form g|ψ|²/(1+|ψ|²/n_sat), the qualitative shape of at
-    least the strong-force near-saturation regime (which explicitly
-    relies on dV/d(|ψ|²) → 0 behaviour at the saturation point) and
-    possibly the weak-force threshold-crossing regime would need
-    re-examination — not just re-fitting.
+    This is not merely "one open item among several." The specific
+    mathematical FORM used in emergent-classical-fields.yaml's regime
+    table — not just unresolved numerical constants within an agreed form —
+    is provisional. If the eventual topological-capacity derivation yields
+    a tanh or logarithmic saturation instead of the rational form, the
+    qualitative shape of at least the strong-force near-saturation regime
+    (which explicitly relies on dV/d(|ψ|²) → 0 at the saturation point)
+    and possibly the weak-force threshold-crossing regime would need
+    re-examination, not just re-fitting.
+
+    What is robust regardless of functional form:
+      - Saturation EXISTS at some finite n_sat (topological capacity is finite)
+      - dV/d(|ψ|²) → 0 as |ψ|² → n_sat (derivative vanishes at saturation)
+      - The regime ordering (linear → nonlinear → saturation) is stable
+    What is not robust:
+      - Specific expressions for coupling strengths at intermediate densities
+      - The exact shape of the MOND transition region (gravity regime)
+      - The precise threshold for the weak-force V_c crossing
 
   current_recommendation: >
-    emergent-classical-fields.yaml should carry an explicit note (not
-    currently present) stating that its regime table assumes a specific
-    saturation functional form that is itself two derivation-steps from
-    closed, and that qualitative conclusions drawn from the *shape* of
-    that function (rather than just from saturation existing at all)
-    are correspondingly provisional. This note serves that function
-    until the file itself is updated directly.
+    emergent-classical-fields.yaml should carry an explicit note stating
+    that its regime table assumes a specific saturation functional form
+    that is itself two derivation-steps from closed, and that qualitative
+    conclusions drawn from the SHAPE of that function are correspondingly
+    provisional. What is already robust: the qualitative regime ordering,
+    the existence of saturation, and the grade-projection derivation chain.
+    This tracking note serves that function pending inline update.
+
+---
+
+issue_3_4pi_geometry_factor:
+  status: "OPEN — shared upstream dependency of issue_1 and Maxwell GA grade derivation"
+  summary: >
+    The factor 4π appears in two separate places across the process-physics
+    files, each stated from physical reasoning (R5 substrate isotropy) but
+    neither yet formally derived from the GP field equations:
+
+  appearance_a:
+    source: "vortex-stability.yaml"
+    location: "step 4 (CCR_value) and why_4pi_factor section"
+    role: >
+      The denominator 4π in α = S_burden/(4π · S_cap,sat).
+      Stated as the isotropic geometry factor: the Möbius crossover
+      coupling radiates into 4π steradians of surrounding substrate.
+      Marked as: "Stated from R5 — formal GP field derivation open"
+      Open derivation ID: 4pi-from-GP-geometry (priority 1)
+
+  appearance_b:
+    source: "emergent-classical-fields.yaml"
+    location: "maxwell_emergence, longitudinal_force note"
+    role: >
+      The 4π appears implicitly in the Maxwell equations via the
+      Lorenz gauge derivation from the master equation phase gradient.
+      The grade-1 current J has a 4π coupling to the grade-2 bivector F
+      in SI units (μ₀ = 1/ε₀c²). Whether this 4π is the same geometric
+      factor as in appearance_a — i.e. whether the isotropic substrate
+      coupling of the Möbius crossover and the isotropic radiation field
+      of classical EM are both instances of the same spherical integration
+      of the GP Green's function — is not stated.
+
+  why_this_matters: >
+    If both 4π factors derive from the same GP Green's function integral
+    (the spherical integration of the coupling kernel around a localised
+    source in 3D — standard result: 4π), then resolving 4pi-from-GP-geometry
+    simultaneously closes a part of issue_1 (the denominator in identification_a)
+    and confirms the Maxwell reduction in emergent-classical-fields.yaml.
+    If they are different 4π factors with different derivations, that
+    distinction needs to be made explicit — two coincident factors from
+    different geometry would be notable.
+
+    Either way, the current situation — two files each using a 4π factor
+    from physical reasoning without establishing whether they share a
+    common derivation — is a reconciliation gap that could mislead a
+    reader into thinking the factor is better established than it is.
+
+  what_would_resolve_this: >
+    The GP Green's function in 3D for a point source at the vortex core:
+      G(r) = −1/(4πr)   [standard 3D Laplacian Green's function]
+    The spherical integration of the coupling kernel around the crossover
+    point should yield 4π as the isotropic solid angle normalisation —
+    this is the standard result and is expected to hold. The formal
+    derivation would:
+      (a) confirm the 4π in identification_a is the solid-angle factor
+          from the GP Green's function at the crossover geometry;
+      (b) show this is the same factor that appears in the Maxwell
+          wave equation derivation from the master equation phase gradient;
+      (c) establish whether the two appearances are identical in origin
+          or coincidentally equal.
+
+  current_recommendation: >
+    4pi-from-GP-geometry (priority 1, vortex-stability.yaml) should be
+    noted as a shared prerequisite for both issue_1 resolution and
+    Maxwell regime validation in emergent-classical-fields.yaml.
+    The open derivation priority is confirmed as correct.
 
 ---
 
 methodological_note:
-  why_track_this_separately_rather_than_inline: >
-    Both issues above could be added as inline caveats to the files
-    where they arise. They are tracked here instead, in addition to
-    or pending inline notes, because:
-      (1) issue_1 spans two files neither of which is positioned to
-          unilaterally declare itself correct over the other;
-      (2) issue_2 is a dependency-of-a-dependency that is easy to lose
-          track of as more files cite emergent-classical-fields.yaml
-          without re-checking what it itself rests on;
-      (3) a single visible location for "things we know don't fully
-          fit together yet" is more useful, for collaborators and
-          skeptical readers alike, than the same caveats scattered
-          and easy to miss across multiple files.
+  why_track_separately_rather_than_inline: >
+    All three issues could be added as inline caveats to the files where
+    they arise. They are tracked here in addition, because:
+      (1) issue_1 spans two files neither positioned to unilaterally
+          declare itself correct over the other;
+      (2) issue_2 is a dependency-of-a-dependency easy to lose as more
+          files cite emergent-classical-fields.yaml without re-checking
+          what it rests on;
+      (3) issue_3 is a shared upstream dependency currently invisible
+          in both files that use it;
+      (4) a single visible location for "things we know don't fully fit
+          together yet" is more useful, for collaborators and skeptical
+          readers alike, than caveats scattered across multiple files.
 
   relationship_to_framework_epistemics: >
-    This file is itself an instance of the same discipline already
-    practiced elsewhere in the framework (e.g. vortex-stability.yaml's
-    own honest_assessment, alpha-rydberg-z0.yaml's explicit refusal to
+    This file is itself an instance of the same discipline practiced
+    elsewhere in the framework (e.g. vortex-stability.yaml's own
+    honest_assessment, alpha-rydberg-z0.yaml's explicit refusal to
     present fixed numerical closures). Praestology's claim is structural:
-    it specifies what a stable process must satisfy, and lets the
-    numbers fall out of that structure where the math has actually been
-    done — not the reverse. Tracking unreconciled claims openly, including
-    ones that might look bad next to each other, is consistent with that
-    claim rather than a threat to it. A framework that derived all its
-    constants cleanly on the first pass, with no visible seams, would be
-    more suspicious, not more credible.
+    it specifies what a stable process must satisfy, and lets the numbers
+    fall out of that structure where the math has actually been done —
+    not the reverse. Tracking unreconciled claims openly, including ones
+    that might look bad next to each other, is consistent with that claim
+    rather than a threat to it. A framework that derived all its constants
+    cleanly on the first pass, with no visible seams, would be more
+    suspicious, not more credible.
 
 ---
 
 resolution_log:
   note: >
-    When either issue above is resolved, the resolution should be logged
-    here with a date and a pointer to the file/section that resolved it,
-    rather than simply deleting the entry — this preserves the history
-    of what was uncertain and for how long, which is itself useful
-    documentation of the framework's development.
+    When any issue above is resolved, the resolution should be logged here
+    with a pointer to the file/section that resolved it, rather than
+    deleting the entry — this preserves the history of what was uncertain
+    and for how long, which is itself useful documentation of the
+    framework's development.
   entries: []
 
 ---
 
 cross_references:
   - file: "core/process-physics/vortex-stability.yaml"
-    note: "Identification_a (static geometric ratio); ccr-electron-explicit open item"
-  - file: "core/process-physics/commitment-response.yaml"
-    note: "Identification_b (dynamical per-cycle residual); n-sat-from-topological-capacity open item"
+    note: "Identification_a (static geometric ratio); 4π factor; ccr-electron-explicit"
+  - file: "core/process-physics/commitment-response-process-physics.yaml"
+    note: "Identification_b (dynamical per-cycle residual); n-sat-from-topological-capacity"
   - file: "core/process-physics/emergent-classical-fields.yaml"
-    note: "Regime table depends on the saturation form addressed in issue_2"
-  - file: "core/process-physics/alpha-rydberg-z0.yaml"
-    note: "Downstream consumer of α — should not treat either identification as closed"
+    note: "Regime table: saturation form (issue_2); Maxwell 4π (issue_3)"
   - file: "core/closure-configuration-ratio.yaml"
-    note: "ccr_first_derivation_discipline — the methodological stance this file extends to cross-file reconciliation"
+    note: "ccr_first_derivation_discipline — methodological stance this file extends"
+  - file: "domains/physics/alpha-rydberg-z0.yaml"
+    note: "Downstream α consumer — should not treat either identification as closed"
