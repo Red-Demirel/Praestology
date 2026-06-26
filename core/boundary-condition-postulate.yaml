@@ -1,0 +1,295 @@
+# /core/boundary-condition-postulate.yaml
+# Praestology — Core Framework Level
+# The Boundary Condition Postulate: Irrationality, Singularity, and Infinity
+# as derivative-level symptoms of missing process-level closure
+# v1.0
+
+id: boundary-condition-postulate
+title: "The Boundary Condition Postulate"
+version: "1.0"
+status: "CORE POSTULATE — derived from derivative-reality-clarification and CCR framework"
+domain: "Core"
+priority: 1
+
+dependency_map:
+  requires:
+    - "core/derivative-reality-clarification.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/master-equation.yaml"
+  provides_to:
+    - target: "core/process-physics/madelung-as-rotor-consequence.yaml"
+      via: "π in geometric expressions as symptom of missing R5 closure"
+    - target: "core/process-physics/friedmann-emergence.yaml"
+      via: "cosmological singularities as missing saturation boundary"
+    - target: "core/process-physics/emergent-classical-fields.yaml"
+      via: "Landau pole and UV divergences as missing realization ceiling"
+
+---
+
+overview: |
+  The derivative level of reality (standard physics, continuous mathematics)
+  produces three characteristic symptoms when it attempts to express
+  process-level boundedness without access to the bounding mechanism:
+
+    1. IRRATIONAL NUMBERS — non-terminating decimals where a finite ratio
+       of discrete process-level quantities exists but the closure boundary
+       is unknown to the derivative-level observer.
+
+    2. SINGULARITIES — infinite curvature or density where the process level
+       has a smooth saturation floor (Π_eff → 0 asymptotically), invisible
+       to derivative-level descriptions that lack the saturation term.
+
+    3. INFINITIES — divergent integrals where the process level has a finite
+       realization ceiling (Λ·ln(1+κ|ψ|²)), invisible to derivative-level
+       descriptions that integrate over an unbounded domain.
+
+  All three are the same failure mode: the derivative level integrating
+  over an open domain because the process-level boundary condition that
+  would close it is inaccessible from within the derivative.
+
+  This is not a claim that all irrational numbers, singularities, or
+  infinities are physically significant. It is a directional claim:
+  missing boundary conditions lead to these symptoms. Where boundary
+  conditions are present, the symptoms do not arise.
+
+---
+
+postulate_statement: |
+  Let D be a derivative-level description (continuous fields, standard
+  mathematics, observable projections ρ, ∇S).
+  Let P be the corresponding process-level description (ψ, R(ψ), Π_eff,
+  realization events, saturation dynamics).
+
+  If D attempts to express a quantity Q that is bounded at the process
+  level by a closure mechanism C (R5 selection, saturation, realization
+  ceiling), but D lacks access to C, then D produces a non-terminating
+  expression for Q:
+
+    — If Q is a ratio of discrete quantities: D produces an irrational number.
+    — If Q is a field amplitude: D produces a singularity.
+    — If Q is an integrated quantity: D produces an infinity.
+
+  The symptom is not in P. It is in D's attempt to express P without C.
+
+---
+
+mechanism:
+  missing_boundary: |
+    A boundary condition in Praestology is a process-level closure event
+    that fixes an otherwise underdetermined expression:
+
+      R5 selection      — fixes which topology realized, closing the CCR ratio
+      Saturation term   — fixes Π_eff floor, closing the amplitude integral
+      Realization ceiling — fixes maximum commitment density, closing the UV domain
+
+    Without these closures, the derivative-level observer must integrate
+    over all possible realizations, all possible amplitudes, or all
+    possible scales — producing the characteristic non-terminating symptoms.
+
+  derivative_level_blindness: |
+    The derivative level (η, ρ, ∇S) is the accumulated integral of realized
+    events. It contains no information about which events were selected,
+    where saturation occurred, or when the ceiling was approached. These
+    are process-level features (ψ dynamics) that leave traces in η but
+    not the boundary conditions themselves.
+
+    Therefore: D cannot derive C from within D. The boundary conditions
+    are constants of integration of the higher-order function ψ, invisible
+    to the derivative.
+
+---
+
+three_symptoms:
+  irrational_numbers:
+    statement: |
+      π and other irrationals appear in derivative-level geometric
+      descriptions of process-level closures because the derivative level
+      describes a discrete, bounded realization event (R3→R5 cycle,
+      specific topology, fixed writhe) using continuous geometric tools
+      (S³ volume, circular integration) without access to the specific
+      R5 event that closed the ratio.
+
+    example: |
+      The electron's CCR involves π because the derivative-level
+      description of the 720° Möbius vortex closure uses the volume
+      of S³ (2π²r³) as embedding phase space. The process-level ratio
+      (Ω_rotor / Ω_embed) is a finite, determinate quantity fixed by
+      R5 selection of a specific topology. The derivative level, lacking
+      the R5 boundary, integrates over the continuous embedding and
+      finds π.
+
+    resolution: |
+      Once ccr-electron-explicit derives Ω_rotor natively from the
+      non-linear stability solutions of the GP core, the π may resolve
+      into a determinate ratio — or persist, in which case the framework
+      learns. The postulate does not predetermine the outcome; it
+      identifies the symptom's source.
+
+  singularities:
+    statement: |
+      Singularities in derivative-level descriptions (GR black hole
+      interior, Big Bang, NS blow-up) are symptoms of missing saturation
+      boundaries. The process level has no singularity; it has a smooth
+      approach to Π_eff → 0 where the saturation term Λ·ln(1+κ|ψ|²)
+      bounds commitment density and suppresses process rate asymptotically.
+
+    example: |
+      A black hole interior: derivative level (GR metric) finds
+      r → 0, ρ → ∞. Process level: Π_eff → 0, process rate → 0,
+      Regress continues at unobservable timescales. No infinity exists
+      at the process level; the derivative level integrates without the
+      saturation boundary and finds a singularity.
+
+    resolution: |
+      The master equation's local-explicit form with 1/Π_eff prefactor
+      and logarithmic saturation term provides the missing boundary.
+      The derivative-level singularity dissolves when the process-level
+      saturation is included.
+
+  infinities:
+    statement: |
+      Divergent integrals in derivative-level quantum field theory
+      (Landau pole, QED UV divergences) are symptoms of missing
+      realization ceilings. The process level has no divergence; it has
+      a finite saturation ceiling that prevents commitment density from
+      exceeding the substrate's processing capacity.
+
+    example: |
+      The QED Landau pole: derivative level finds coupling → ∞ at
+      high energy. Process level: Ω_embed compresses toward Ω_rotor
+      as local η increases; CCR approaches 1; the logarithmic ceiling
+      Λ·ln(1+κ|ψ|²) prevents over-realization. The pole is the derivative
+      level integrating past the ceiling.
+
+    resolution: |
+      The saturation term in the master equation is the realization
+      ceiling. The derivative-level divergence is eliminated by restoring
+      the process-level boundary.
+
+---
+
+falsifiability:
+  condition_1: |
+    If a process-level boundary condition is identified for a previously
+    symptomatic quantity, and the symptom (irrationality, singularity,
+    infinity) persists, then the postulate is falsified for that case.
+
+  condition_2: |
+    If a derivative-level description is found that produces an
+    irrational, singularity, or infinity despite complete access to the
+    relevant process-level boundary condition, the postulate is
+    falsified.
+
+  condition_3: |
+    If a process-level quantity is shown to be genuinely unbounded
+    (no saturation, no ceiling, no R5 closure) and the derivative-level
+    description correctly identifies this as an open domain, the
+    postulate is not engaged — the symptom is not a symptom but an
+    accurate description.
+
+  note: |
+    The postulate is directional, not universal. It claims that missing
+    boundary conditions CAN produce these symptoms, not that they are
+    the ONLY source. Falsification requires a counterexample within the
+    framework's scope, not an arbitrary irrational number from pure
+    mathematics.
+
+---
+
+relation_to_existing_framework:
+  derivative_reality: |
+    Consistent with derivative-reality-clarification.yaml: the derivative
+    level is informationally incomplete with respect to the generating
+    function. Constants of integration (boundary conditions) are invisible
+    to the derivative. This postulate extends that claim to the symptoms
+    produced by that invisibility.
+
+  ccr: |
+    Consistent with closure-configuration-ratio.yaml: CCR is a ratio
+    of finite phase-space quantities. Its apparent irrationality from
+    the derivative level is a symptom of missing R5 closure boundary.
+    The running of α with environment is the ratio responding to
+    changing boundary conditions (local η, Π_eff).
+
+  master_equation: |
+    Consistent with master-equation.yaml: the saturation term and
+    local-explicit Π_eff scaling provide the process-level boundaries
+    that derivative-level descriptions lack. The master equation is
+    the generating function that, when differentiated (Madelung projected),
+    produces the symptoms — but only when the boundary conditions
+    are discarded in the projection.
+
+  madelung: |
+    Consistent with madelung-as-rotor-consequence.yaml: the Madelung
+    decomposition is the exact move from process level to derivative
+    level. It is also the exact move that discards the boundary
+    conditions (R5 events, saturation ceiling) visible only at the
+    process level. The postulate explains why the derivative level
+    (Madelung outputs) produces symptoms the process level does not.
+
+---
+
+epistemic_discipline:
+  directional_note: |
+    This postulate is established FORWARD from the framework's core
+    claims (process level generates derivative level; derivative level
+    is informationally incomplete), not backward by observing symptoms
+    in standard physics and retrofitting a cause.
+
+  open_status: |
+    The postulate is a structural hypothesis derived from the framework's
+    internal logic. It does not claim to have proven that all π in
+    physics, all singularities, or all infinities are symptoms — only
+    that the framework predicts this mechanism and invites testing.
+
+  premature_closure_warning: |
+    Do not treat this postulate as established fact. It is a
+    consequence of the framework's ontology, subject to the same
+    standards as all other claims: it stands or falls by its ability
+    to derive known physics and predict new phenomena, not by
+    philosophical elegance alone.
+
+---
+
+cross_references:
+  - file: "core/derivative-reality-clarification.yaml"
+    note: "Derivative-level informational incompleteness; constants of integration"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR as ratio; α and π; running with environment"
+  - file: "core/master-equation.yaml"
+    note: "Saturation term; local-explicit Π_eff; process-level boundaries"
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "Madelung as exact move from process to derivative; discards boundaries"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Cosmological singularities as missing saturation boundary"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "Landau pole as missing realization ceiling"
+  - file: "clarifications/analogy-disclaimer.md"
+    note: "Boundary conditions are process-level facts, not analogies"
+
+---
+
+open_items:
+  - id: "irrational-from-ccr-explicit"
+    description: |
+      Determine whether ccr-electron-explicit produces a determinate
+      rational ratio or whether π persists in the native derivation.
+      If π persists, the postulate is modified, not falsified — the
+      boundary condition may be present and π may be a genuine
+      process-level feature. If π resolves into a rational ratio,
+      the postulate is strongly supported.
+    depends_on: ["ccr-electron-explicit"]
+
+  - id: "singularity-mapping-complete"
+    description: |
+      Systematic mapping of each major physics singularity to the
+      corresponding process-level saturation event, verifying that
+      the master equation's saturation term eliminates the symptom.
+    depends_on: ["saturation-term-analysis", "derivative-reality-clarification"]
+
+  - id: "infinity-uv-complete"
+    description: |
+      Demonstrate that the logarithmic realization ceiling eliminates
+      all UV divergences in the framework's regime projections without
+      renormalization patches.
+    depends_on: ["saturation-term-analysis", "emergent-classical-fields"]
