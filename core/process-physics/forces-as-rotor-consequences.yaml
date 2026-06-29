@@ -1,0 +1,271 @@
+# /core/process-physics/forces-as-rotor-consequences.yaml
+name: "Forces as Consequences of Rotor Properties"
+version: "1.1"
+status: "Structural clarification — core-invariant; extension integrated"
+domain: "Core / Process-Physics"
+changes_from_v1.0: >
+  Integrated gauge field, uncertainty, and pre-gauge extension inline.
+  Removed duplicate cross_references block. Added probe-epistemics
+  caveat to photon coherence prediction. Added unified_gap_statement
+  identifying gauge field, uncertainty, and measurement problem as
+  the same structural restriction expressed at three levels.
+
+statement: >
+  In Cl(3,0), all forces emerge as consequences of rotor interactions
+  with the field. The rotor R = e^{-Iθ/2} encodes orientation, phase,
+  and chirality. Forces are the field's resistance to changes in rotor
+  state under external gradients, saturation, and viability selection.
+  There are no fundamental forces — only rotor reconfiguration resistance
+  under different constraints. CCR sets the coupling strength per channel.
+
+---
+
+force_mapping:
+  - force: "Electromagnetic"
+    rotor_property: "Phase gradient ∇S"
+    mechanism: "Rotor resistance to reorientation under phase gradients"
+    ga_expression: "F = ∇∧A  (grade-2 bivector from rotor phase)"
+    cc_instance: "α (electron Möbius CCR)"
+
+  - force: "Gravitational"
+    rotor_property: "Amplitude and phase curvature"
+    mechanism: "Rotor refraction toward lower Π_eff"
+    ga_expression: "g_μν ∝ R†Π_eff R  (effective metric from rotor action)"
+    cc_instance: "G_eff (cosmic-scale CCR — open)"
+
+  - force: "Strong"
+    rotor_property: "Triality orientation (three winding arcs)"
+    mechanism: "Resistance to breaking phase-lock between three rotors"
+    ga_expression: "SU(3) generators as rotor orientation matrices"
+    cc_instance: "α_s (triality CCR — open)"
+
+  - force: "Weak"
+    rotor_property: "Bivector chirality flip"
+    mechanism: "Resistance to topology-switching transitions"
+    ga_expression: "R → R' (rotor conjugation under chirality change)"
+    cc_instance: "α_w (chiral flip CCR — open)"
+
+  - force: "Inertia"
+    rotor_property: "Reconfiguration cost"
+    mechanism: "Second variation of rotor energy functional"
+    ga_expression: "m_eff = δ²E[R]/δ(displacement)²"
+    cc_instance: "ħ as minimum reconfiguration quantum (open — planck-from-vortex-stability)"
+
+---
+
+unified_gap_statement:
+  statement: >
+    The three major incompleteness symptoms of standard physics — the
+    gauge field, the uncertainty principle, and the measurement problem —
+    are not three separate problems. They are the same structural
+    restriction expressed at three levels: the derivative level is
+    grade-restricted, and each symptom is a different consequence of
+    that restriction.
+
+  three_expressions:
+    gauge_field: >
+      Missing grade-2 phase structure. The derivative level discards
+      the rotor's grade-2 bivector in its first projection onto
+      scalar and vector observables. It must reintroduce the missing
+      phase information artificially as a compensating field A_μ.
+      Resolution: A_μ = ⟨R†∇R⟩₁ — not a new entity, a grade-1
+      shadow of existing rotor structure.
+
+    uncertainty_principle: >
+      Cannot access grade-1 and grade-2 simultaneously. Position
+      (grade-1) and momentum (grade-2) are incompatible grade
+      projections of the same rotor state. The bound Δx·Δp ≥ ħ/2
+      is the minimum information loss from projecting a determinate
+      multivector onto incompatible bases.
+      Resolution: not ontological uncertainty but geometric
+      projection cost — the rotor state is determinate; the
+      measurement basis is grade-restricted.
+
+    measurement_problem: >
+      Cannot see R(ψ) from below. The Realization operator operates
+      at the process level; the derivative level observes only its
+      outputs. Collapse, decoherence, and the Born rule are
+      derivative-level descriptions of R4 commitment viewed through
+      a grade-restricted aperture.
+      Resolution: not solvable from the derivative level — the
+      mechanism is above it.
+
+  the_single_move: >
+    The rotor framework does not solve these three problems separately.
+    It dissolves them from the same move: restoring grade-2 access by
+    working at the process level. A process-level observer with direct
+    access to the full rotor multivector would experience no gauge
+    redundancy, no conjugate uncertainty, and no measurement problem —
+    because none of these are properties of the rotor state; they are
+    properties of the grade-restricted projection of it.
+
+---
+
+gauge_field_as_rotor_projection:
+  statement: >
+    A_μ is the grade-1 projection of the grade-2 rotor bivector onto
+    the derivative-level vector basis. Not a new entity — a compressed
+    representation of existing rotor structure, introduced because the
+    derivative level discards grade-2 information and must reintroduce
+    it artificially.
+  mechanism:
+    standard: "Local U(1) symmetry → gauge field A_μ required to maintain invariance."
+    rotor: >
+      The rotor phase is the physical state. The apparent freedom to
+      redefine phase is the derivative-level observer's inability to
+      access the bivector directly, forcing description through
+      coordinate patches. A_μ is the connection between patches.
+    ga_identification: "A_μ = ⟨R†∇R⟩₁  (grade-1 projection of rotor gradient)"
+    gauge_transformation: "A_μ → A_μ + ∂_μΛ corresponds to local rotor rotation R → e^{IΛ}R"
+  open_derivation:
+    id: "gauge-field-from-rotor"
+    description: >
+      Explicit derivation of A_μ = ⟨R†∇R⟩₁; confirm gauge transformation
+      as local rotor rotation; derive standard gauge Lagrangian as grade-1
+      projection of rotor energy functional.
+    depends_on: ["gauge-symmetry-reinterpretation.yaml", "geometric-algebra-bridge.yaml"]
+
+---
+
+heisenberg_as_projection_artifact:
+  statement: >
+    Δx·Δp ≥ ħ/2 is the minimum information loss from projecting a
+    determinate rotor state onto incompatible grade bases. Not ontological
+    uncertainty — geometric projection cost.
+  grade_assignments:
+    position: "Grade-1 vector — rotor's spatial location"
+    momentum: "Grade-2 bivector — rotor's phase gradient ∇S"
+  mechanism: >
+    The geometric product xp = ⟨xp⟩₀ + ⟨xp⟩₂ contains both scalar
+    and bivector parts. A grade-restricted observer measuring one grade
+    at a time cannot reconstruct the full multivector. The product of
+    projection errors is bounded below by ħ — the minimal discrete step
+    in rotor phase space.
+  implication: >
+    A process-level observer with direct access to both grade-1 and
+    grade-2 components simultaneously would experience no uncertainty.
+    The conjugate variables are unified in the rotor; separated only
+    by derivative-level projection.
+  open_derivation:
+    id: "uncertainty-from-grade-projection"
+    description: >
+      Derive Δx·Δp ≥ ħ/2 from Cl(3,0) grade projection geometry,
+      showing ħ as minimal rotor phase-space step.
+    depends_on: ["planck-from-vortex-stability", "geometric-algebra-bridge.yaml"]
+
+---
+
+pre_gauge_effects:
+  statement: >
+    Gauge symmetry describes the committed state (η). It is silent on
+    the R3→R4 transition where streams explore, curve, and achieve
+    phase-lock before R5 selection confirms viability. These transition-
+    layer effects are structurally necessary but invisible to gauge symmetry.
+
+  probe_epistemics_note: >
+    Observable signatures below are subject to the same constraint as
+    cosmological observables (friedmann-emergence.yaml probe_epistemics):
+    the measurement probe is itself subject to the substrate dynamics
+    being measured. Predictions marked PREDICTIVE assume the probe CCR
+    response is separable from the signal — which requires verification
+    per experimental context.
+
+  effects:
+    counter_rotating_vortex_alignment:
+      name: "Counter-rotating vortex alignment (photon coherence)"
+      description: >
+        Counter-rotating vortices maintain phase coherence via shared
+        Π_eff field coupling their phase gradients — viability-selected,
+        not gauge-enforced. The standard model describes this as photon
+        polarization and quantizes it as a gauge eigenstate. The rotor
+        framework describes it as a viability-selected coupled rotor
+        state existing in the transition layer before R5 commitment.
+      observable_signature: >
+        Prolonged coherence in high-Π_eff, low-ρ_η environments where
+        R5 selection is delayed. Standard physics predicts decoherence
+        on interaction timescales; the rotor framework predicts extended
+        coherence where Π_eff is high enough to sustain the transition
+        layer. Measurement of coherence is itself mediated by the probe's
+        own CCR response to the same Π_eff environment — probe and signal
+        are not independent.
+      status: "PREDICTIVE — testable in high-Π_eff regime; probe separation required"
+
+    mobius_closure_selection:
+      name: "Vortex encircling and closure (720° Möbius formation)"
+      description: >
+        The 720° Möbius closure is the viability-selected outcome of
+        stream dynamics, not a fixed geometric property of spin-½.
+        The stream curves under Π_eff gradients, self-reinforces through
+        g|ψ|², and achieves closure at the angle where the saturation
+        term bounds further commitment. Alternative closures (360°,
+        1080°) are explored (R3) and rejected (R5) as non-viable under
+        standard V_c. The 720° angle is the specific closure satisfying
+        Wr = 1 (minimal stable self-linking) under local V_c.
+      observable_signature: >
+        Deviations from spin-½ behavior in extreme Π_eff gradients
+        (near black hole horizons, dense matter) where V_c shifts and
+        alternative closures may become viable. Standard physics predicts
+        fixed spin; rotor framework predicts environment-dependent
+        effective spin structure.
+      status: "PREDICTIVE — testable in extreme-suppression regime"
+
+    phase_locking_precursor:
+      name: "Phase-locking precursor (pre-R4 bivector coupling)"
+      description: >
+        Before R4 locks a specific phase, the rotor explores multiple
+        orientational phases (R3). During exploration, bivector components
+        of nearby streams can couple transiently, producing correlated
+        phase fluctuations not corresponding to any committed gauge state.
+        Gauge symmetry has no description for this regime — it applies
+        only after commitment.
+      observable_signature: >
+        Anomalous correlations in weak-measurement experiments where
+        measurement is delayed, preventing early R4 commitment. Standard
+        physics predicts no correlation beyond entanglement; rotor
+        framework predicts additional bivector coupling from the
+        pre-commitment regime.
+      status: "PREDICTIVE — testable in weak-measurement regime"
+
+---
+
+open_derivations:
+  - id: "gauge-field-from-rotor"
+    description: >
+      A_μ = ⟨R†∇R⟩₁; gauge transformation as local rotor rotation;
+      gauge Lagrangian as grade-1 projection of rotor energy functional.
+    depends_on: ["gauge-symmetry-reinterpretation.yaml", "geometric-algebra-bridge.yaml"]
+
+  - id: "uncertainty-from-grade-projection"
+    description: >
+      Derive Δx·Δp ≥ ħ/2 from Cl(3,0) grade projection geometry.
+      ħ as minimal rotor phase-space step.
+    depends_on: ["planck-from-vortex-stability", "geometric-algebra-bridge.yaml"]
+
+  - id: "pre-gauge-transition-formalization"
+    description: >
+      Formal description of R3→R4 transition layer in rotor terms:
+      bivector coupling, phase exploration dynamics, viability-selection
+      threshold crossing.
+    depends_on: ["master-equation.yaml", "process-to-observable-hierarchy.yaml"]
+
+---
+
+cross_references:
+  - file: "core/process-physics/gauge-symmetry-reinterpretation.yaml"
+    note: "Gauge symmetry as conservation signature — this file provides the rotor origin"
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "Grade projection as the exact move from process to derivative level"
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "Cl(3,0) grade structure; rotor definition"
+  - file: "core/process-physics/spin-process-rate-ga.yaml"
+    note: "Rotor dynamics, CCR, chirality as grade-3"
+  - file: "core/process-physics/inertia-planck-relation.yaml"
+    note: "ħ as minimal rotor phase-space step; uncertainty bound origin"
+  - file: "core/process-physics/commitment-response-process-physics.yaml"
+    note: "R(ψ) and R_diss; measurement problem as R4 viewed grade-restricted"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Probe epistemics — same constraint applies to pre-gauge predictions"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR as coupling strength per force channel"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "Regime mapping; force channels as regime projections"
