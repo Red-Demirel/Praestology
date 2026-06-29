@@ -1,9 +1,9 @@
 # /core/process-physics/open-reconciliation-notes.yaml
 name: "Open Reconciliation Notes"
-version: "1.1"
+version: "1.2"
 status: "ACTIVE TRACKING — deliberately surfaced inconsistencies and dependency-of-dependency risks"
 domain: "Core / Process-Physics"
-changes_from_v1.0: >
+changes_from_v1.0: > >
   Added issue_3: the 4π geometry factor is a shared upstream dependency
   of both the α identification (issue_1) and Maxwell's GA grade derivation
   in emergent-classical-fields.yaml — currently invisible in tracking.
@@ -286,3 +286,72 @@ cross_references:
     note: "ccr_first_derivation_discipline — methodological stance this file extends"
   - file: "domains/physics/alpha-rydberg-z0.yaml"
     note: "Downstream α consumer — should not treat either identification as closed"
+
+---
+
+issue_4_ccr_well_width_uniformity:
+  status: "OPEN — CCR potential-well structure identified; uniformity unestablished"
+  summary: >
+    spin-as-field-effect.yaml v1.3 replaces the lattice regularization
+    comparison with a CCR-derived potential-well account of inter-commitment
+    tolerance. This is conceptually correct and removes the external/internal
+    distinction cleanly. It surfaces a new specific question: whether the
+    CCR-derived well widths are uniform across the field or vary with local
+    Π_eff and η.
+
+  the_distinction:
+    uniform_wells: >
+      If well widths are Π_eff-independent, the commitment landscape has
+      a fixed resolution everywhere — analogous to a uniform lattice spacing,
+      but derived rather than imposed. The hadron spectrum would be the same
+      in all environments. R_diss rate would be set by well depth alone,
+      not by well width variation.
+    non_uniform_wells: >
+      If well widths vary with local Π_eff and η:
+        Dense matter (high η, depressed Π_eff): narrower wells →
+          tightly spaced energy levels → denser hadron spectrum in
+          nuclear matter than in vacuum. Observationally: in-medium
+          mass shifts of hadrons (known experimentally, attributed
+          to QCD medium effects).
+        Voids (low η, high Π_eff): wider wells → easier tunnelling
+          between stable closures → faster R_diss rate → connects
+          to the void-dominant dissolution in friedmann-emergence.yaml.
+      Non-uniform wells would make the CCR landscape itself
+      environment-dependent — a stronger and more predictive claim
+      than the uniform case.
+
+  why_this_matters: >
+    The su3-from-triality-hadron-spectrum derivation (spin-as-field-effect.yaml
+    open_items) depends on knowing the well structure before the spectrum
+    can be computed. If wells are non-uniform, the vacuum spectrum and
+    the in-medium spectrum are different calculations — and the in-medium
+    shift is a direct prediction of the CCR well-width variation with η.
+    In-medium hadron mass shifts are experimentally accessible (RHIC, LHC,
+    HADES at GSI) — this is a testable consequence, not a speculative one,
+    if the well-width function can be derived.
+
+  connection_to_existing_issues: >
+    Non-uniform well widths feed directly into issue_2 (n_sat dependency
+    chain): if the saturation functional form is tanh or log rather than
+    rational, the well-width variation profile changes. The well-width
+    question cannot be fully settled before issue_2 is resolved.
+    It also feeds into the Friedmann/R_diss cosmological rate
+    (friedmann-emergence.yaml open derivation: regress-rate-cosmological)
+    — void well widths set the R_diss tunnelling rate at cosmic scale.
+
+  what_would_resolve_this: >
+    Explicit computation of the CCR mismatch energy as a function of
+    field configuration between two adjacent stable closures, evaluated
+    at varying Π_eff. If the well width W(Π_eff) is monotonically
+    increasing with Π_eff (wider in high-Π_eff voids, narrower in
+    low-Π_eff dense matter), non-uniformity is confirmed and the
+    in-medium hadron mass shift becomes a quantitative prediction.
+    Depends on: ccr-electron-explicit (well structure for the simplest
+    case — electron Möbius closure) as the template computation.
+
+  current_recommendation: >
+    Add ccr-well-width-uniformity as a priority-2 open derivation in
+    vortex-stability.yaml, dependent on ccr-electron-explicit (priority 1).
+    The connection to in-medium hadron mass shifts should be noted as the
+    primary testable consequence — it is the most experimentally accessible
+    prediction of the CCR potential-well structure.
