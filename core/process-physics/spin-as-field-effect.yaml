@@ -1,0 +1,256 @@
+# /core/process-physics/spin-as-field-effect.yaml
+name: "Spin as Field Effect, not Particle Property"
+version: "1.3"
+status: "Ontological clarification — aligned with core epistemic discipline"
+domain: "Core / Process-Physics"
+changes_from_v1.2: >
+  Replaced lattice_vs_field section: the lattice comparison is superseded
+  by the CCR-derived potential-well account of inter-commitment tolerance.
+  Discreteness is not imposed externally (lattice) but emerges from the
+  topology of stable CCR closures. Well width is the CCR-tolerance range
+  — the field configurations within which CCR mismatch cost stays below
+  V_c. Added ccr-well-width-uniformity to open_items.
+
+description: >
+  Spin is not an intrinsic property of discrete particles embedded in
+  the field. It is a consequence of the field's own continuous rotor
+  dynamics — a field effect, not a particle property. This file is an
+  ontological clarification, not a closed derivation. It is subject to
+  the same open-status discipline as other core physics files.
+
+---
+
+core_distinction:
+  statement: >
+    What is observed as spin (½, 1, etc.) arises from the stable
+    rotational behaviour of committed topological structures (vortices,
+    rotors) within the single ontic field ψ. It is a field effect —
+    the way the field organizes and maintains orientational stability
+    under its own dynamics. There are no fundamental spin-carrying
+    particles with an internal property. The apparent particle is a
+    localized, high-commitment configuration of the field.
+  note: >
+    Ontological clarification of where spin lives in the framework —
+    not a derivation of its values, not a proof that no alternative
+    ontology could produce the same observations. The framework stands
+    or falls by its ability to derive known physics from this starting
+    point.
+
+---
+
+ccr_potential_wells:
+  statement: >
+    What lattice regularization handles by imposing an external discrete
+    structure, the process field handles through CCR-derived potential
+    wells between committed configurations. These wells are consequences
+    of the dynamics, not scaffolding imposed on them.
+
+  mechanism: >
+    Commitment is not binary. Between two realized committed states
+    there is a region of partial commitment — the field has structure
+    but has not reached a stable CCR closure. That region carries a
+    characteristic energy cost (well depth) and a characteristic width
+    (tolerance between adjacent stable configurations).
+
+    The CCR closure condition requires integer or half-integer Lk.
+    The field between two stable closures does not jump discontinuously
+    — it passes through intermediate configurations with non-integer Lk,
+    each carrying a specific CCR mismatch cost. The potential well
+    between two stable committed states is the CCR mismatch energy as
+    a function of field configuration along the path between them:
+      Well minimum:  stable CCR closure (integer or half-integer Lk)
+      Well walls:    cost of deviation from exact CCR closure
+      Well depth:    CCR mismatch energy at the unstable saddle point
+                     between two adjacent stable closures
+
+  tolerance_from_ccr: >
+    The tolerance — the well width — is the range of configurations
+    within which the CCR mismatch cost stays below the viability
+    threshold V_c. Inside that range the topology is stable against
+    small perturbations. Outside it, the field is pushed back toward
+    the nearest stable closure or tunnels to another one.
+
+    This means:
+      - Discreteness is not imposed externally but emerges from the
+        topology of stable CCR closures
+      - The spacing between stable states is not uniform (unlike a
+        lattice) but depends on local Π_eff and η
+      - The well width (tolerance) is directly readable from CCR:
+        it is the CCR mismatch range within which V_c is not exceeded
+      - Tunnelling between stable closures is not a separate postulate
+        — it is the same Tik-driven process as vortex pair
+        formation/dissolution (vortex-stability.yaml), applied at
+        the inter-commitment level
+
+  replaces_lattice: >
+    Lattice regularization imposes a pre-existing discrete structure
+    as a calculational scaffold — external, uniform, removed in the
+    continuum limit. The CCR potential-well structure is internal,
+    non-uniform, and not removed: it is the actual topology of stable
+    field configurations. The "continuum limit" is already present —
+    the field is continuous; the wells are features of its energy
+    landscape, not discretization artifacts.
+
+  non_perturbative_regime: >
+    In the strong-force near-saturation regime (η → n_sat), adjacent
+    CCR closures are closely spaced (the well widths narrow as Π_eff
+    depresses under saturation) and the tunnelling rate between them
+    is high. This is the process-physics analogue of the non-perturbative
+    regime that lattice QCD handles numerically. The hadron mass spectrum
+    emerges from the discrete set of stable triality closures and their
+    well depths — not from a lattice but from the CCR landscape of the
+    near-saturation GP field. Whether this reproduces the observed
+    spectrum requires the su3-from-triality-hadron-spectrum derivation
+    (open_items below).
+
+  open_question: >
+    Whether CCR-derived well widths are Π_eff-uniform or vary
+    systematically with local substrate conditions is not yet established.
+    If non-uniform, the effective "resolution" of the commitment landscape
+    varies across the field — denser regions have narrower wells, voids
+    have wider wells. This has implications for the hadron spectrum
+    (narrow wells → tightly spaced energy levels → dense spectrum in
+    nuclear matter) and for the cosmological commitment landscape
+    (wide wells in voids → easier tunnelling → faster R_diss).
+    See open-reconciliation-notes.yaml issue_4.
+
+---
+
+relation_to_ga:
+  statement: >
+    In Cl(3,0), spin corresponds to the behaviour of rotors (bivector
+    components) and their 720° closure. Half-integer values emerge from
+    the double-cover property of the rotation group — a geometric feature
+    of the rotor algebra, not an imposed quantization rule.
+  status: >
+    Structural mapping established. Explicit derivation of spin-½ from
+    Möbius vortex stability in the GP limit remains open —
+    see ccr-electron-explicit and spin-process-rate-ga.yaml.
+
+---
+
+state_transition_epistemics:
+  statement: >
+    Space itself is a consequence of realization, not a pre-existing arena.
+    The pre-realization level is coordinate-free — no metric distance,
+    radius, or position. The Friedmann scale factor a(t) and all geometric
+    quantities are realized-level objects absent at the process level until
+    after R4 commitment. Metric is emergent in a strong sense.
+  pre_realization: >
+    Coordinate-free. No metric. ψ evolves under the master equation in
+    the relational structure of the field itself, not in a background space.
+  realization_event: >
+    Nonlinear saturation threshold where uncommitted phase potential
+    condenses into local configuration — governed by R(ψ), not geometric
+    postulate.
+  realized_state: >
+    Metric emerges. Topological protection, rotor dynamics, and spatial
+    parameters (spin orientation) become accessible to measurement.
+  open: >
+    Exact mechanism of metric emergence from rotor dynamics —
+    see metric-emergence-from-rotor (open_items) and
+    emergent-classical-fields.yaml gravity_emergence.
+
+---
+
+uncertainty_reframing:
+  statement: >
+    The uncertainty principle is reframed as a derivative-level symptom,
+    not a fundamental axiom. Position (grade-1 vector) and momentum
+    (grade-2 bivector phase gradient) are projections of the same rotor
+    multivector onto incompatible grade bases. The bound Δx·Δp ≥ ħ/2
+    is the minimum information loss from these incompatible projections —
+    a projection artifact, not an ontological property.
+  caution: >
+    This reframing does not claim uncertainty relations are wrong in their
+    predictions. It claims their interpretation as fundamental indeterminacy
+    is a derivative-level misreading of a process-level state that is fully
+    determinate in its rotor structure but only partially accessible through
+    grade-restricted measurement. Whether the process level is itself
+    deterministic is not decided here — see determinism_note.
+  derivation_reference: >
+    See forces-as-rotor-consequences.yaml#heisenberg_as_projection_artifact
+    for the full derivation path (open: uncertainty-from-grade-projection).
+
+---
+
+determinism_note:
+  statement: >
+    This file does not commit to determinism or indeterminism at the
+    process level. The framework's core claims are structural: ψ is the
+    higher-order regime; η is its committed integral; R(ψ) is the
+    viability selection operator; the master equation governs ψ's dynamics.
+    Whether R(ψ) executes deterministically, stochastically, or otherwise
+    is not specified. Deterministic expressions in earlier versions were
+    premature closure — removed.
+  what_is_claimed: >
+    The uncertainty principle is not needed as an independent axiom.
+    Its predictive content is recovered from grade-projection geometry.
+    Its ontological reading (fundamental indeterminacy) is a derivative-
+    level misattribution. The nature of R(ψ) selection remains open.
+
+---
+
+open_items:
+  - id: "spin-from-vortex-stability"
+    description: >
+      Explicit derivation of spin-½ from Möbius vortex stability in
+      the saturating GP equation, confirming 720° closure and double-cover
+      property from rotor dynamics.
+    depends_on: ["ccr-electron-explicit", "mobius-vortex-stability"]
+
+  - id: "uncertainty-from-grade-projection"
+    description: >
+      Derivation of Heisenberg bound from Cl(3,0) grade projection,
+      showing ħ as minimal rotor phase-space step — structural consequence
+      of multivector geometry, not axiom.
+    depends_on: ["planck-from-vortex-stability", "geometric-algebra-bridge.yaml"]
+
+  - id: "metric-emergence-from-rotor"
+    description: >
+      Derivation of spatial metric from rotor dynamics and Π_eff gradients.
+      Metric emergence is strong (absent at process level) — the derivation
+      must account for this, not just show GR as a limit.
+    depends_on: ["gravity-emergence", "emergent-classical-fields.yaml"]
+
+  - id: "su3-from-triality-hadron-spectrum"
+    description: >
+      Derive discrete hadron mass spectrum from triality-closure dynamics
+      and CCR potential-well structure in the near-saturation regime.
+      Process-physics replacement for lattice QCD's non-perturbative
+      computation. Well widths narrow as Π_eff depresses under saturation
+      — the spectrum density is a function of the CCR landscape, not a
+      lattice spacing.
+    depends_on: ["su3-from-triality", "n-sat-from-topological-capacity",
+                 "ccr-well-width-uniformity"]
+
+  - id: "ccr-well-width-uniformity"
+    description: >
+      Establish whether CCR-derived potential-well widths are uniform
+      across the field or vary systematically with local Π_eff and η.
+      Non-uniformity implies environment-dependent commitment tolerance:
+      narrow wells in dense matter, wide wells in voids. Consequences
+      for hadron spectrum in nuclear matter and R_diss rate in voids.
+    depends_on: ["ccr-electron-explicit", "vortex-stability.yaml"]
+
+---
+
+cross_references:
+  - file: "core/process-physics/forces-as-rotor-consequences.yaml"
+    note: "Heisenberg as grade-incompatibility; unified_gap_statement"
+  - file: "core/boundary-condition-postulate.yaml"
+    note: "Uncertainty as derivative-level symptom of missing process-level boundary"
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "Grade projection as exact move from process to derivative level"
+  - file: "core/process-physics/spin-process-rate-ga.yaml"
+    note: "Rotor dynamics, CCR, spin-½ derivation (open)"
+  - file: "core/derivative-reality-clarification.yaml"
+    note: "Process vs. realized level; metric emergence"
+  - file: "core/master-equation.yaml"
+    note: "Saturation term; R(ψ) dynamics"
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "CCR closure conditions; Tik-driven tunnelling between closures"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "Strong force near-saturation regime; gravity emergence"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "Issue_2 (n_sat form); Issue_4 (CCR well-width uniformity)"
