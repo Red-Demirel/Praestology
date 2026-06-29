@@ -247,6 +247,56 @@ resolution_hierarchy_reference:
     → commitment dynamics. It is kept separate from the main/classical physics
     treatment to preserve substrate-agnostic parsimony.
 
+# ═══════════════════════════════════════════════════════════════════
+# ONTOLOGICAL ORIENTATION — READ BEFORE APPLYING R1-R5
+# ═══════════════════════════════════════════════════════════════════
+
+ontological_disclaimer:
+  statement: |
+    The rules R1-R5 below operate at the PROCESS LEVEL (ψ, higher-order regime).
+    They are not derivative-level rules about committed observables (η, ρ, ∇S).
+    Applying them without understanding this distinction produces category errors
+    that render the framework unintelligible or misinterpreted as "another physics theory."
+  
+  required_reading:
+    - file: "core/derivative-reality-clarification.yaml"
+      reason: "Establishes ψ as higher-order reality, η as first derivative. Prevents the Copenhagen inversion."
+    - file: "core/process-to-observable-hierarchy.yaml"
+      reason: "Maps the realization chain ψ → R3 → R4 → R5 → η → {ρ, u}. Shows directionality of causation."
+    - file: "core/closure-configuration-ratio.yaml"
+      reason: "CCR as the ψ→η translation ratio. Constants are realization costs, not free parameters."
+  
+  critical_distinction: |
+    R1-R5 govern the GENERATING PROCESS (ψ), not the GENERATED OUTPUT (η).
+    
+    — R1 (Existence): The process exists as ongoing resolution, not as committed structure.
+    — R2 (Distinction): Distinctions emerge from process dynamics, not from pre-existing entities.
+    — R3 (Tension): Tension is unresolved potential in the process, not conflict between committed objects.
+    — R4 (Progress): Commitment is the process selecting viable configurations, not accumulation of static things.
+    — R5 (Viability): Selection is the process filtering for coupled sustainability, not survival of the fittest.
+    
+    If you read R1-R5 as rules about particles, forces, or organisms, you are reading them
+    at the derivative level — which is precisely the category error Praestology corrects.
+  
+  consequence_of_ignoring: |
+    Without this orientation, readers will:
+    — Treat R5 as "survival of the fittest" (Darwinian misreading)
+    — Treat R4 as "accumulation of matter" (thermodynamic misreading)
+    — Treat R3 as "conflict between entities" (mechanical misreading)
+    — Miss the entire point: R1-R5 are process-level dynamics, not derivative-level descriptions.
+    
+    The framework will appear to be "just another theory" rather than the generating function
+    behind all theories. This is the most common failure mode in engaging with Praestology.
+  
+  epistemic_status: |
+    This disclaimer is navigational metadata. It does not modify R1-R5.
+    It positions the reader to understand R1-R5 correctly.
+    The specifications below remain locked at v1.5.
+
+# ═══════════════════════════════════════════════════════════════════
+# CORE SPECIFICATIONS — R1-R5 (LOCKED v1.5)
+# ═══════════════════════════════════════════════════════════════════
+
 # ─────────────────────────────────────────────
 # VITALITY AND INSIDE-OUT EMERGENCE
 # ─────────────────────────────────────────────
