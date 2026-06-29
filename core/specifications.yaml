@@ -247,51 +247,107 @@ resolution_hierarchy_reference:
     → commitment dynamics. It is kept separate from the main/classical physics
     treatment to preserve substrate-agnostic parsimony.
 
+
+# ═══════════════════════════════════════════════════════════════════
+# WHY GA IS CO-NATURAL WITH R1-R5
+# ═══════════════════════════════════════════════════════════════════
+
+  ga_conatural_with_r_rules:
+    statement: >
+      The GA expressions for R1-R5 above are not a translation of the rules
+      into a mathematical language. They show that the rules describe what
+      any non-trivial multivector field necessarily does under its own dynamics.
+      GA is co-natural with R1-R5 because both are accounts of the same thing:
+      the behaviour of a field with grade structure.
+
+    reading_of_each_rule:
+      R1: >
+        ψ ≠ 0 — a multivector field either exists or it does not.
+        No additional structure required to state R1.
+      R2: >
+        ∇ψ ≠ 0 — grade structure varying across space is what
+        distinction means for a multivector field. A uniform field
+        has no grade variation; it makes no distinctions.
+      R3: >
+        ψ = Σᵢ cᵢ·Rᵢ — a linear combination of rotors is a generic
+        multivector that has not reduced to a single dominant rotor.
+        Multiple bivector orientations held simultaneously is not a
+        quantum postulate imposed on the geometry — it is what the
+        field looks like before nonlinearity drives it toward one.
+        R3 is the default state of a multivector under linear evolution.
+      R4: >
+        R → R₀ — the GP nonlinearity drives the field toward
+        self-reinforcing configurations. Phase-locking to a single
+        dominant rotor is what a saturating nonlinearity does to a
+        superposition. R4 is not imposed; it follows from R3 plus
+        nonlinear dynamics.
+      R5: >
+        ℛ(ψ) = −γψ + D·∇²ψ + μ·σ(𝓥−Vc)·ψ — rotor damping,
+        spatial diffusion, and a viability gate. All three are natural
+        operations on a multivector field. R5 is the only rule that
+        introduces a threshold (V_c); the operations themselves are
+        generic field dynamics.
+
+    consequence: >
+      R1 through R4 are descriptions of what any non-trivial multivector
+      field under nonlinear dynamics necessarily exhibits. R5 adds the
+      viability selection that distinguishes Praestology from a generic
+      field theory. The surprise would be if GA did not work — that would
+      require the framework's ontology to concern something other than
+      oriented magnitudes in space, which is precisely what multivectors are.
+      GA does not fit the framework. The framework is a field theory,
+      and GA is the algebra of fields with grade structure.
+
+    cross_reference: >
+      See core/process-physics/madelung-as-rotor-consequence.yaml for the
+      formal consequence: the master equation IS a GA equation, and the
+      Madelung decomposition reveals rather than imposes its grade structure.
+
 # ═══════════════════════════════════════════════════════════════════
 # ONTOLOGICAL ORIENTATION — READ BEFORE APPLYING R1-R5
 # ═══════════════════════════════════════════════════════════════════
 
-ontological_disclaimer:
-  statement: |
-    The rules R1-R5 below operate at the PROCESS LEVEL (ψ, higher-order regime).
-    They are not derivative-level rules about committed observables (η, ρ, ∇S).
-    Applying them without understanding this distinction produces category errors
-    that render the framework unintelligible or misinterpreted as "another physics theory."
+  ontological_disclaimer:
+    statement: |
+      The rules R1-R5 below operate at the PROCESS LEVEL (ψ, higher-order regime).
+      They are not derivative-level rules about committed observables (η, ρ, ∇S).
+      Applying them without understanding this distinction produces category errors
+      that render the framework unintelligible or misinterpreted as "another physics theory."
   
-  required_reading:
-    - file: "core/derivative-reality-clarification.yaml"
-      reason: "Establishes ψ as higher-order reality, η as first derivative. Prevents the Copenhagen inversion."
-    - file: "core/process-to-observable-hierarchy.yaml"
-      reason: "Maps the realization chain ψ → R3 → R4 → R5 → η → {ρ, u}. Shows directionality of causation."
-    - file: "core/closure-configuration-ratio.yaml"
-      reason: "CCR as the ψ→η translation ratio. Constants are realization costs, not free parameters."
+    required_reading:
+      - file: "core/derivative-reality-clarification.yaml"
+        reason: "Establishes ψ as higher-order reality, η as first derivative. Prevents the Copenhagen inversion."
+     - file: "core/process-to-observable-hierarchy.yaml"
+        reason: "Maps the realization chain ψ → R3 → R4 → R5 → η → {ρ, u}. Shows directionality of causation."
+      - file: "core/closure-configuration-ratio.yaml"
+        reason: "CCR as the ψ→η translation ratio. Constants are realization costs, not free parameters."
   
-  critical_distinction: |
-    R1-R5 govern the GENERATING PROCESS (ψ), not the GENERATED OUTPUT (η).
+    critical_distinction: |
+      R1-R5 govern the GENERATING PROCESS (ψ), not the GENERATED OUTPUT (η).
+   
+      — R1 (Existence): The process exists as ongoing resolution, not as committed structure.
+      — R2 (Distinction): Distinctions emerge from process dynamics, not from pre-existing entities.
+      — R3 (Tension): Tension is unresolved potential in the process, not conflict between committed objects.
+      — R4 (Progress): Commitment is the process selecting viable configurations, not accumulation of static things.
+      — R5 (Viability): Selection is the process filtering for coupled sustainability, not survival of the fittest.
     
-    — R1 (Existence): The process exists as ongoing resolution, not as committed structure.
-    — R2 (Distinction): Distinctions emerge from process dynamics, not from pre-existing entities.
-    — R3 (Tension): Tension is unresolved potential in the process, not conflict between committed objects.
-    — R4 (Progress): Commitment is the process selecting viable configurations, not accumulation of static things.
-    — R5 (Viability): Selection is the process filtering for coupled sustainability, not survival of the fittest.
-    
-    If you read R1-R5 as rules about particles, forces, or organisms, you are reading them
-    at the derivative level — which is precisely the category error Praestology corrects.
+      If you read R1-R5 as rules about particles, forces, or organisms, you are reading them
+      at the derivative level — which is precisely the category error Praestology corrects.
   
-  consequence_of_ignoring: |
-    Without this orientation, readers will:
-    — Treat R5 as "survival of the fittest" (Darwinian misreading)
-    — Treat R4 as "accumulation of matter" (thermodynamic misreading)
-    — Treat R3 as "conflict between entities" (mechanical misreading)
-    — Miss the entire point: R1-R5 are process-level dynamics, not derivative-level descriptions.
+    consequence_of_ignoring: |
+      Without this orientation, readers will:
+      — Treat R5 as "survival of the fittest" (Darwinian misreading)
+      — Treat R4 as "accumulation of matter" (thermodynamic misreading)
+      — Treat R3 as "conflict between entities" (mechanical misreading)
+      — Miss the entire point: R1-R5 are process-level dynamics, not derivative-level descriptions.
     
-    The framework will appear to be "just another theory" rather than the generating function
-    behind all theories. This is the most common failure mode in engaging with Praestology.
+      The framework will appear to be "just another theory" rather than the generating function
+      behind all theories. This is the most common failure mode in engaging with Praestology.
   
-  epistemic_status: |
-    This disclaimer is navigational metadata. It does not modify R1-R5.
-    It positions the reader to understand R1-R5 correctly.
-    The specifications below remain locked at v1.5.
+    epistemic_status: |
+      This disclaimer is navigational metadata. It does not modify R1-R5.
+      It positions the reader to understand R1-R5 correctly.
+      The specifications below remain locked at v1.5.
 
 # ═══════════════════════════════════════════════════════════════════
 # CORE SPECIFICATIONS — R1-R5 (LOCKED v1.5)
