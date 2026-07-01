@@ -30,11 +30,14 @@ praestology:
 
     - id: "R2"
       identity: "Structure"
-      statement: "Perfect uniformity cannot be sustained; distinction emerges inevitably from the logical substrate's stochastic floor."
+      statement: "Perfect uniformity cannot be sustained; distinction emerges inevitably from the logical substrate's stochastic floor, as a consequence of indeterminism."
       rescue: "Homogeneity — infinite precision would be required to maintain sameness, which is logically unavailable."
       derives: "The necessary emergence of difference; the 'grain' of reality."
       failure_without: "Existence would remain a perfectly uniform blob, indistinguishable from nothing and incapable of generating further rules."
-      note: "The stochastic floor is the residual noise inherent in any logical substrate—the 'probability shift' that prevents exact repetition. Reality clusters in the 'Middle' (the Gaussian Plateau) between extremes, making distinction the default state."
+      note: "The stochastic floor is not residual noise in a deterministic system
+      — it is the direct expression of intrinsic process indeterminism
+      meeting environmental gradient. The floor is not noise added to
+      signal; it is the ground state of the process itself."
 
     - id: "R3"
       identity: "Motion"
@@ -302,6 +305,111 @@ resolution_hierarchy_reference:
       See core/process-physics/madelung-as-rotor-consequence.yaml for the
       formal consequence: the master equation IS a GA equation, and the
       Madelung decomposition reveals rather than imposes its grade structure.
+
+# Also: R2 note (line 37) should be updated — see r2_note_update below.
+
+# ═══════════════════════════════════════════════════════════════════
+# INDETERMINISM AS ONTOLOGICAL GROUND
+# ═══════════════════════════════════════════════════════════════════
+
+  indeterminism_as_ground:
+    statement: >
+      Indeterminism is the intrinsic character of the process level
+      (ψ, R1–R3), not a property added to explain stochastic behaviour.
+      The process is indeterminate by nature. This is the parsimonious
+      position: stochasticity requires a mechanism; indeterminism
+      requires none. It is the ground state of the process, not a
+      special condition.
+    logical_basis: >
+      R1 establishes existence without structure — pure unresolved
+      potential. Pure potential has no preferred state. An entity
+      with no preferred state is indeterminate by definition.
+      Determinism would require a pre-given preference structure,
+      which contradicts R1's minimality. Indeterminism is therefore
+      not derived from R1 — it is what R1 is.
+
+  r2_as_environmental_resolution:
+    statement: >
+      R2 (Distinction) is the moment when indeterminate process (R1)
+      enters relation with environmental constraints. R1 is isolated
+      indeterminism — pure unresolved potential with no structure.
+      R2 is indeterminism in relation to environmental gradient, and
+      that relation produces distinction. The stochastic floor is the
+      process navigating environmental constraints while maintaining
+      its indeterminate character. This navigation is the structural
+      origin of R3 tension.
+    praegress_regress_origin: >
+      R2 is where the Praegress/Regress dynamic begins. Before R2
+      the process has no environment to relate to — no inside/outside
+      distinction. R2 establishes the two-way coupling:
+        Praegress: environmental constraints act into the indeterminate
+          process, producing resolution pressure.
+        Regress: the process's resolution has consequences back on
+          the environment, producing dissolution.
+      Distinction emerges from this relation, not from the process
+      alone or the environment alone.
+
+  uncertainty_dissolution:
+    statement: >
+      The Heisenberg uncertainty principle (Δx·Δp ≥ ħ/2) has two
+      components in this framework — a HOW and a WHY — which were
+      previously only partially addressed.
+    how: >
+      Grade-projection mechanism (forces-as-rotor-consequences.yaml,
+      unified_gap_statement): position is grade-1, momentum is grade-2;
+      simultaneous access is geometrically impossible from a
+      grade-restricted measurement basis. This shows how uncertainty
+      appears at the derivative level.
+    why: >
+      Intrinsic indeterminism (this section): the process is indeterminate
+      by nature, so the committed topology (η) cannot contain the full
+      information of the generating process (ψ). The derivative level
+      is informationally incomplete not by accident but because ψ is
+      intrinsically indeterminate. Uncertainty at the derivative level
+      is the shadow of process-level indeterminism filtered through
+      grade-projection.
+    consequence: >
+      The uncertainty principle is not needed as an independent axiom.
+      Its predictive content is recovered from grade-projection geometry
+      (how) grounded in process indeterminism (why). Its ontological
+      reading — fundamental indeterminacy of nature — is correct at
+      the process level and a misattribution at the derivative level.
+      Nature is not uncertain; the process is indeterminate, and the
+      derivative level cannot contain that indeterminism fully.
+
+  measurement_dissolution: >
+    Collapse is not mysterious. It is R4 commitment — the process
+    resolving its intrinsic indeterminism into determinate topology
+    under viability selection (R5). The measurement problem dissolves
+    when the observer is recognized as operating at the derivative
+    level, where the resolution mechanism (R(ψ)) is not visible.
+    There is no collapse of a wave function; there is R4 commitment
+    of an indeterminate process, viewed through a grade-restricted
+    aperture that sees only the output, not the mechanism.
+
+  ccr_as_resolution_cost: >
+    CCR measures the cost of resolving a specific committed topology
+    from the full orientational phase space of indeterminate ψ.
+    This cost exists because indeterminism is the ground state —
+    realization is the selection of one determinate configuration
+    from an indeterminate field, and CCR is the accounting of that
+    selection relative to the embedding substrate's natural frequency.
+    The smallness of α (~1/137) reflects how much of the full
+    indeterminate phase space is committed per Möbius cycle —
+    most of ψ remains unresolved; only the CCR fraction is locked
+    into determinate topology per interaction.
+
+  free_will_note:
+    status: "Extension — outside physics core; flagged for consciousness domain"
+    statement: >
+      Conscious agents (Ξ > 1) operate at the process level with
+      sufficient recursive depth to participate in R3→R4 resolution
+      rather than merely observing its outputs. Free will is not
+      override of deterministic laws — the process level has none.
+      It is navigation within intrinsic indeterminism: the agent's
+      Ξ-depth determines how many simultaneous tension axes can be
+      held and resolved in a single cycle.
+    domain_reference: "consciousness domain — not promoted to physics core"
 
 # ═══════════════════════════════════════════════════════════════════
 # ONTOLOGICAL ORIENTATION — READ BEFORE APPLYING R1-R5
