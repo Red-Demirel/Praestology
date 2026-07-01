@@ -1,9 +1,9 @@
 # /core/process-physics/spin-as-field-effect.yaml
 name: "Spin as Field Effect, not Particle Property"
-version: "1.3"
+version: "1.4"
 status: "Ontological clarification — aligned with core epistemic discipline"
 domain: "Core / Process-Physics"
-changes_from_v1.2: >
+changes_from_v1.3: >
   Replaced lattice_vs_field section: the lattice comparison is superseded
   by the CCR-derived potential-well account of inter-commitment tolerance.
   Discreteness is not imposed externally (lattice) but emerges from the
@@ -175,19 +175,23 @@ uncertainty_reframing:
 ---
 
 determinism_note:
+  status: "RESOLVED — indeterminism established as ontological ground"
   statement: >
-    This file does not commit to determinism or indeterminism at the
-    process level. The framework's core claims are structural: ψ is the
-    higher-order regime; η is its committed integral; R(ψ) is the
-    viability selection operator; the master equation governs ψ's dynamics.
-    Whether R(ψ) executes deterministically, stochastically, or otherwise
-    is not specified. Deterministic expressions in earlier versions were
-    premature closure — removed.
-  what_is_claimed: >
-    The uncertainty principle is not needed as an independent axiom.
-    Its predictive content is recovered from grade-projection geometry.
-    Its ontological reading (fundamental indeterminacy) is a derivative-
-    level misattribution. The nature of R(ψ) selection remains open.
+    The process level (ψ, R1-R3) is intrinsically indeterminate.
+    This is not stochasticity (which requires a mechanism) but the
+    ground state: pure unresolved potential has no preferred state
+    by definition. Determinism would require a pre-given preference
+    structure, which contradicts R1 minimality.
+    See specifications.yaml#indeterminism_as_ground for the full
+    logical basis. Earlier versions of this file left this open as
+    "not specified" — that position is now closed in one direction.
+  consequence_for_uncertainty: >
+    The uncertainty principle has both a HOW (grade-projection geometry,
+    forces-as-rotor-consequences.yaml) and a WHY (process indeterminism,
+    specifications.yaml#uncertainty_dissolution). Both are now established.
+    The principle is not needed as an independent axiom; its ontological
+    reading as fundamental indeterminacy is correct at the process level
+    and a misattribution at the derivative level.
 
 ---
 
