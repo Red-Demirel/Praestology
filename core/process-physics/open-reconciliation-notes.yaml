@@ -1,6 +1,6 @@
 # /core/process-physics/open-reconciliation-notes.yaml
 name: "Open Reconciliation Notes"
-version: "1.2"
+version: "1.3"
 status: "ACTIVE TRACKING — deliberately surfaced inconsistencies and dependency-of-dependency risks"
 domain: "Core / Process-Physics"
 changes_from_v1.0: > >
@@ -355,3 +355,28 @@ issue_4_ccr_well_width_uniformity:
     The connection to in-medium hadron mass shifts should be noted as the
     primary testable consequence — it is the most experimentally accessible
     prediction of the CCR potential-well structure.
+
+---
+
+resolution_1_determinism_question:
+  status: "RESOLVED — previously open in spin-as-field-effect.yaml v1.3"
+  resolved_by: "specifications.yaml v1.6 #indeterminism_as_ground"
+  summary: >
+    The question "whether R(ψ) executes deterministically, stochastically,
+    or otherwise" (spin-as-field-effect.yaml v1.3 determinism_note) is now
+    closed. Indeterminism is the ontological ground of the process level —
+    not stochasticity (which requires a mechanism) but the null state:
+    pure unresolved potential has no preferred state by definition.
+  logical_basis: >
+    Stochasticity requires a generative mechanism for the random element.
+    Indeterminism requires none — it is what an entity with no preferred
+    state is. The parsimonious position for a process-level ontology is
+    indeterminism as ground state. This closes the question in one direction
+    without requiring a new derivation: it follows from R1 minimality.
+  downstream_updates:
+    - "spin-as-field-effect.yaml v1.4: determinism_note updated to RESOLVED"
+    - "specifications.yaml v1.6: indeterminism_as_ground section added"
+    - "uncertainty_dissolution in specifications.yaml now has both HOW and WHY"
+  note: >
+    This entry moves to resolution_log rather than issue tracking.
+    Logged here to preserve the history of what was open and when closed.
