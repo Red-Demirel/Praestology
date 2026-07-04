@@ -107,6 +107,23 @@ which it earns an exception the other metaphors don't.
 
 ---
 
+### Linguistic Grade‑Restriction
+
+Language is a derivative‑level tool. It evolved to track committed structures (objects, agents, actions) because survival required naming the predator, the tool, the threat. It did not evolve to describe the ongoing, indeterminate process (ψ) from which those structures emerge.
+
+This creates a **linguistic grade‑restriction**: most languages default to Subject‑Verb‑Object structures that enforce:
+- Uni‑directional causality (agent → patient) rather than mutual coupling (ρ)
+- Static identities (nouns) rather than ongoing processes
+- Hierarchical relations (subject over object) rather than bidirectional resolution
+
+When we try to describe process‑level reality using derivative‑level language, we are fighting the grammatical gravity of our own descriptive tool. This is not a failure of the reader or the framework. It is a structural consequence of the fact that language is a committed‑topology technology being asked to describe pre‑commitment dynamics.
+
+The framework can be *pointed at* through language, but it cannot be *fully expressed* in language. Direct engagement with the mathematical formalism (GA, the master equation) is necessary because mathematics—while also a descriptive tool—is less bound to derivative‑level intuitions than natural language.
+
+**Remedy**: When the framework feels counterintuitive, when expressions feel awkward, when concepts resist easy summary—this is the linguistic grade‑restriction doing exactly what the framework predicts it will do. The remedy is better engagement with the structure those words are pointing toward before drawing conclusions.
+
+---
+
 ## What This Means for Reading Praestology
 
 Every picture in these posts — the river, the dam, the vortex, the wave — is doing
