@@ -39,6 +39,22 @@ recursive_note:
                      bounded rather than diverging to chaos or collapsing
                      to a point."
 
+linguistic_constraint:
+  statement: >
+    Language is a derivative‑level tool. It evolved to track committed
+    topology (η) and defaults to Subject‑Verb‑Object structures that
+    encode uni‑directional causality, static identities, and hierarchical
+    relations. This creates a structural grade‑restriction: communication
+    about process‑level dynamics (ψ) is always partial and requires
+    conscious effort to avoid smuggling in derivative‑level assumptions.
+  implication: >
+    Phase‑locking (ρ) is the mechanism by which meaning transfer
+    occurs despite linguistic grade‑restriction. Shared hysteresis
+    (h) allows participants to align their derivative‑level descriptions
+    with the underlying process. Without ρ, communication about the
+    framework degrades into derivate‑level misinterpretation.
+  cross_reference: "analogy-disclaimer.md#linguistic-grade-restriction"                     
+
 shannon_mapping:
   description: >
     Shannon's information theory (1948) maps cleanly onto Praestology's
