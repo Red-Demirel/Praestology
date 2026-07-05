@@ -1,16 +1,18 @@
 # /core/process-physics/forces-as-rotor-consequences.yaml
 name: "Forces as Consequences of Rotor Properties"
-version: "1.2"
+version: "1.3"
 status: "Structural clarification — core-invariant; extension integrated"
 domain: "Core / Process-Physics"
-changes_from_v1.1: >
-  Added gauge_symmetries_emergence: U(1)/SU(2)/SU(3) as regime-specific
-  multi-rotor collective patterns, not fundamental symmetries.
-  Added higgs_as_field_effect: condensate (grade-0 vacuum, stable) vs.
-  excitation (grade-0 ripple, transient) distinction. Corrected Higgs
-  GA grade from pseudoscalar (grade-3) to scalar (grade-0) — spin-0
-  is grade-0 in Cl(3,0), not grade-3. Added higgs-as-condensate-ripple
-  open derivation including Yukawa hierarchy as CCR topology problem.
+changes_from_v1.2: >
+  Added higgs_probe_artifact: 125 GeV as stressed-environment measurement,
+  not bare condensate energy. Environmental dependence prediction for
+  Pb-Pb vs p-p Higgs mass shift (testable at LHC). Particle ontology
+  consequence: colliders probe near-saturation excitations, not new
+  stable topologies. Added yukawa_as_ccr_topology to higgs_as_field_effect:
+  Yukawa hierarchy as ordered CCR values of fermion topologies —
+  derivable, not fitted. Added yukawa-from-fermion-ccr-topology open
+  derivation. Removed convergence_with_critical_opinions block —
+  external authority citations do not belong in structural arguments.
 
 statement: >
   In Cl(3,0), all forces emerge as consequences of rotor interactions
@@ -332,15 +334,112 @@ higgs_as_field_effect:
       triality-topology CCR mapping.
     status: "Transient excitation — decays via R_diss to condensate ground state"
 
+  yukawa_as_ccr_topology:
+    statement: >
+      The Yukawa hierarchy — fermion masses spanning ~six orders of
+      magnitude with no standard model explanation — is a CCR topology
+      problem, not a set of free parameters. Each fermion's Yukawa
+      constant is its CCR coupling to the grade-0 condensate, determined
+      by the fermion's rotor topology: its writhe Wr, its Ω_rotor/Ω_embed
+      ratio, its self-linking geometry. Different stable fermion topologies
+      produce different CCR values; the hierarchy is the ordered set of
+      those values.
+    implication: >
+      The Yukawa constants are in principle derivable from fermion topology,
+      not fitted to data. Once fermion topologies are characterised
+      (ccr-electron-explicit as the template, then extending to quarks and
+      heavier leptons), the Yukawa hierarchy becomes a prediction.
+      The top quark's anomalously large mass (~173 GeV, Yukawa ~1) reflects
+      a topology with near-maximal CCR coupling to the condensate —
+      the tightest self-linking of any stable fermion.
+    status: "OPEN — requires fermion topology characterisation beyond electron"
+    open_derivation_id: "yukawa-from-fermion-ccr-topology"
+
   open_derivation:
     id: "higgs-as-condensate-ripple"
     description: >
       Formal identification of the Higgs condensate as grade-0 vacuum
       expectation value of ψ in the SU(2) orientation space; derive
       W/Z mass from CCR of orientation-switching against the condensate
-      background; connect Yukawa hierarchy to fermion CCR topology differences.
+      background; connect Yukawa hierarchy to fermion CCR topology
+      differences. Yukawa constants are CCR values, not free parameters.
     depends_on: ["su2-from-rotor-orientation", "ccr-electron-explicit",
-                 "gauge-field-from-rotor"]
+                 "gauge-field-from-rotor", "yukawa-from-fermion-ccr-topology"]
+
+---
+
+higgs_probe_artifact:
+  statement: >
+    The Higgs boson mass (~125 GeV) is not a fundamental property of
+    the condensate. It is the energy cost of exciting the condensate
+    under collider conditions — high local commitment density, extreme
+    stress, far from vacuum. That cost depends on:
+      1. The local potential-well depth at excitation (CCR well structure).
+      2. The commitment density of the collision environment (η at the
+         interaction point is not zero — it is the nuclear matter of
+         two colliding Pb or p beams).
+      3. The probe's own CCR response — not accounted for in the
+         standard model treatment.
+    The observed 125 GeV is therefore a measurement of the condensate
+    excited under stressed conditions, not the bare condensate energy.
+
+  probe_environment_note: >
+    The standard model treats the collider vacuum as empty. It is not:
+    the interaction region has elevated η from the colliding nuclei, which
+    depresses local Π_eff and compresses the potential well. Exciting the
+    condensate in a compressed well costs more than in true vacuum.
+    The bare condensate excitation energy (in zero-η vacuum) would differ
+    by the Π_eff depression correction — the same correction that shifts
+    α from α_int to α_exp (vortex-stability.yaml, step 5). Unquantified
+    without the CCR well-width derivation, but structurally predicted
+    to be nonzero.
+
+  environmental_dependence:
+    statement: >
+      The Higgs excitation energy should vary with local η and Π_eff.
+      In dense matter the potential well is compressed; the excitation
+      energy shifts upward. This is the same mechanism as in-medium
+      hadron mass shifts (spin-as-field-effect.yaml, ccr_potential_wells)
+      applied to the grade-0 condensate.
+    prediction: >
+      Heavy-ion runs at LHC (Pb-Pb collisions) produce a dense nuclear
+      environment where η is significantly elevated. If the Higgs
+      excitation energy is environment-dependent, its effective mass
+      in Pb-Pb should differ measurably from p-p. Current LHC data
+      has limited Higgs statistics in Pb-Pb — this is a prediction
+      for higher-luminosity heavy-ion runs.
+    status: "PREDICTIVE — testable at LHC with increased Pb-Pb luminosity"
+
+  particle_ontology_consequence: >
+    The Higgs detection confirmed the field exists and that its grade-0
+    condensate can be locally excited under extreme stress. It did not
+    confirm a fundamental particle in the process-physics sense — it
+    confirmed a field excitation. The absence of predicted "new physics"
+    at collider energies follows structurally: collider experiments probe
+    the stressed near-saturation regime of the commitment field, where
+    the expected outputs are short-lived excitations of existing
+    committed topology, not new stable topologies. New stable topologies
+    require new CCR-stable closure conditions — which are not produced
+    by brute-force energy injection but by specific substrate conditions.
+
+  open_derivations:
+    - id: "higgs-mass-environmental-shift"
+      description: >
+        Derive expected shift in Higgs excitation energy as a function
+        of local η and Π_eff using CCR potential-well structure.
+        Compare to existing p-p vs Pb-Pb LHC data; predict magnitude
+        for high-luminosity Pb-Pb runs.
+      depends_on: ["higgs-as-condensate-ripple", "ccr-well-width-uniformity"]
+
+    - id: "yukawa-from-fermion-ccr-topology"
+      description: >
+        Characterise rotor topology for each standard model fermion
+        (electron, muon, tau, up/down/strange/charm/bottom/top quarks).
+        Derive CCR coupling to grade-0 Higgs condensate for each.
+        Show the resulting CCR hierarchy matches the observed Yukawa
+        hierarchy without free parameters.
+      depends_on: ["ccr-electron-explicit", "higgs-as-condensate-ripple",
+                   "su3-from-triality"]
 
 ---
 
