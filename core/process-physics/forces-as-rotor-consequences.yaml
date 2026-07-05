@@ -1,14 +1,16 @@
 # /core/process-physics/forces-as-rotor-consequences.yaml
 name: "Forces as Consequences of Rotor Properties"
-version: "1.1"
+version: "1.2"
 status: "Structural clarification — core-invariant; extension integrated"
 domain: "Core / Process-Physics"
-changes_from_v1.0: >
-  Integrated gauge field, uncertainty, and pre-gauge extension inline.
-  Removed duplicate cross_references block. Added probe-epistemics
-  caveat to photon coherence prediction. Added unified_gap_statement
-  identifying gauge field, uncertainty, and measurement problem as
-  the same structural restriction expressed at three levels.
+changes_from_v1.1: >
+  Added gauge_symmetries_emergence: U(1)/SU(2)/SU(3) as regime-specific
+  multi-rotor collective patterns, not fundamental symmetries.
+  Added higgs_as_field_effect: condensate (grade-0 vacuum, stable) vs.
+  excitation (grade-0 ripple, transient) distinction. Corrected Higgs
+  GA grade from pseudoscalar (grade-3) to scalar (grade-0) — spin-0
+  is grade-0 in Cl(3,0), not grade-3. Added higgs-as-condensate-ripple
+  open derivation including Yukawa hierarchy as CCR topology problem.
 
 statement: >
   In Cl(3,0), all forces emerge as consequences of rotor interactions
@@ -225,6 +227,120 @@ pre_gauge_effects:
         framework predicts additional bivector coupling from the
         pre-commitment regime.
       status: "PREDICTIVE — testable in weak-measurement regime"
+
+---
+
+gauge_symmetries_emergence:
+  statement: >
+    Gauge symmetries are stable collective patterns emerging from multi-rotor
+    interactions in the single field at different commitment regimes. They are
+    not fundamental — they are the derivative-level catalogue of what rotor
+    topology does at each density scale. The generative mechanism is
+    multi-rotor dynamics and commitment gradients of ψ.
+
+  u1_electromagnetic:
+    regime: "Low-η, linear phase gradient"
+    mechanism: >
+      Coherent phase gradients of chiral rotors — simple bivector dynamics.
+      U(1) is the residual symmetry of phase rotation when the rotor's
+      grade-2 bivector is projected onto a single complex phase.
+      It appears as a symmetry because the projection discards the
+      bivector's orientation, leaving only the phase angle free.
+    ga_origin: "Grade-2 bivector → grade-1 phase gradient projection"
+
+  su2_weak:
+    regime: "Moderate-η, topology-switching near V_c"
+    mechanism: >
+      Paired rotor reorientations near commitment thresholds — the orientation
+      space of the SU(2) spinor rotor. When two rotor orientations are
+      energetically close (near V_c), the field explores both before R5
+      selects. The SU(2) doublet structure is the two-dimensional orientation
+      space of that exploration. Topology-switching instabilities (chirality
+      flips) are the W/Z excitations.
+    ga_origin: "Grade-2 bivector orientation space; rotor conjugation R → R'"
+
+  su3_strong:
+    regime: "High-η, near-saturation, triality closure"
+    mechanism: >
+      Flux confinement and phase-locking in triple-vortex ensembles.
+      Three winding arcs must close mutually — each arc's orientation
+      is constrained by the other two. The SU(3) structure is the
+      orientation space of three mutually-constrained grade-2 bivectors.
+      Colour charge is which of the three orientation axes is active.
+      Confinement is topological necessity: partial arc separation
+      increases CCR mismatch cost without bound.
+    ga_origin: "Three mutually-constrained grade-2 bivectors; triality closure"
+
+  derivative_level_note: >
+    The gauge formalism (U(1), SU(2), SU(3)) is an effective derivative-level
+    catalogue. It correctly describes the symmetry structure of the committed
+    outputs. It does not describe the generating mechanism — the multi-rotor
+    dynamics and commitment gradients that produce those symmetries.
+    gauge-symmetry-reinterpretation.yaml covers this transition in detail.
+
+---
+
+higgs_as_field_effect:
+  statement: >
+    The Higgs is not a fundamental particle. It has two distinct
+    process-physics identities that must not be conflated: the condensate
+    (stable, vacuum-level) and the excitation (unstable, observed boson).
+
+  higgs_condensate:
+    identity: "Grade-0 commitment density at the SU(2) orientation threshold"
+    mechanism: >
+      Below the electroweak scale, the SU(2) rotor orientation space has
+      a preferred ground-state orientation — the field settles into a
+      stable grade-0 commitment density that breaks the SU(2)×U(1)
+      orientation symmetry to U(1). This is not a transient event;
+      it is the stable vacuum configuration of the weak-force rotor
+      orientation space. The condensate is what gives W/Z bosons their
+      mass: their orientation-switching cost (α_w CCR) is now measured
+      against a committed background, not free potential.
+    ga_expression: >
+      ⟨ψ⟩ = v (grade-0 scalar vacuum expectation value).
+      The SU(2) orientation space acquires a preferred direction;
+      the massless Goldstone modes become the longitudinal W/Z polarizations.
+    status: "Stable — this is the vacuum, not an excitation"
+
+  higgs_boson:
+    identity: "Ripple in the grade-0 condensate — amplitude oscillation"
+    mechanism: >
+      Under high local stress (extreme commitment pressure at collider
+      energies), the grade-0 condensate is locally disturbed. The
+      disturbance propagates as an amplitude oscillation of the condensate
+      field — a ripple in the grade-0 background. It is meta-stable:
+      the condensate wants to return to its ground state, so the ripple
+      decays via R_diss and coupling to lower-grade modes (W/Z, fermions).
+      The observed short lifetime (~1.6×10⁻²² s) and decay channels
+      are the condensate's return to ground state via available
+      commitment pathways.
+    ga_expression: >
+      h(x) = δ|ψ| — grade-0 amplitude perturbation above the condensate v.
+      Not grade-3 (pseudoscalar) — the Higgs is spin-0, which in GA is
+      grade-0 (scalar), not grade-3. Grade-3 (pseudoscalar I = e₁e₂e₃)
+      is the parity-odd object; the Higgs is parity-even.
+    mass_giving_reinterpretation: >
+      "Mass-giving" is the condensate setting the CCR baseline for weak
+      interactions. Fermion masses arise from Yukawa coupling — the
+      fermion rotor's CCR to the condensate background. The coupling
+      strength (Yukawa constant) is the CCR between the fermion's
+      Möbius topology and the grade-0 condensate orientation.
+      Larger Yukawa = tighter CCR coupling to the condensate = larger
+      committed mass. This is an open derivation — the Yukawa hierarchy
+      (why top quark couples ~10⁶ × electron) requires the full
+      triality-topology CCR mapping.
+    status: "Transient excitation — decays via R_diss to condensate ground state"
+
+  open_derivation:
+    id: "higgs-as-condensate-ripple"
+    description: >
+      Formal identification of the Higgs condensate as grade-0 vacuum
+      expectation value of ψ in the SU(2) orientation space; derive
+      W/Z mass from CCR of orientation-switching against the condensate
+      background; connect Yukawa hierarchy to fermion CCR topology differences.
+    depends_on: ["su2-from-rotor-orientation", "ccr-electron-explicit",
+                 "gauge-field-from-rotor"]
 
 ---
 
