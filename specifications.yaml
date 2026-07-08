@@ -28,10 +28,10 @@ praestology:
       The Five Rules form a dependency chain. Each rule is the minimal rescue 
       of the previous one from a specific failure mode. Remove any rule and 
       all subsequent rules collapse.
-  chain: "Existence → Compulsion → Integration → Constraint → Fixation"
+  chain: "Existence → Distinction → Integration → Constraint → Fixation"
   operational_chain: "Existence → Structure → Motion → Progress → Optimisation"
   note: >
-    The ontological chain (Compulsion/Integration/Constraint/Fixation)
+    The ontological chain (Distinction/Integration/Constraint/Fixation)
     describes the mechanism. The operational chain (Structure/Motion/
     Progress/Optimisation) describes the observable consequence.
     See mapping table below.
@@ -45,13 +45,13 @@ praestology:
       failure_without: "No substrate for any further rule to operate on."
 
     - id: "R2"
-      identity: "Compulsion"
+      identity: "Distinction"
       operational_identity: "Structure"
       statement: >
-        The logical impossibility of absolute nothingness forces the
-        resolution of potential into differentiation. Distinction
-        emerges inevitably — not by preference, but by structural
-        necessity.
+        The first distinction emerges from indeterminate potential —
+        not by preference, but by structural necessity. Perfect
+        uniformity cannot be sustained; differentiation is the only
+        alternative to the paradox of nothingness.
       operational_statement: >
         Perfect uniformity cannot be sustained; distinction emerges
         inevitably from the logical substrate's stochastic floor.
@@ -63,14 +63,17 @@ praestology:
         The stochastic floor is the residual indeterminacy that
         prevents exact repetition.
       failure_without: >
-        Existence would remain a perfectly uniform blob,
+        Existence would remain a perfectly uniform field,
         indistinguishable from nothing and incapable of generating
         further rules.
       note: >
-        The ontology frames this as Compulsion: differentiation is
-        forced by the "Is not not" logic, not merely probable. The
-        stochastic floor is the expression of this compulsion at
-        the operational level. See order-ontology.md#recursive-development.
+        "Distinction" names the act — the primordial drawing of a
+        first difference within indeterminate potential (cf. Spencer-
+        Brown: drawing a distinction is the foundational act prior to
+        any structure). The logical necessity belongs to R1 (nothingness
+        excluded); R2 is what that necessity produces: the first
+        asymmetry. The stochastic floor is the expression of this
+        at the operational level. See order-ontology.md#recursive-development.
 
     - id: "R3"
       identity: "Motion"
@@ -134,10 +137,10 @@ praestology:
         physics: "ψ ≠ 0 (non-zero field)"
         mechanism: "Logical compulsion — non-existence is self-defeating"
       - r_id: "R2"
-        ontology: "Compulsion (Differentiation)"
+        ontology: "Distinction (Differentiation)"
         operation: "Structure"
         physics: "∇ψ ≠ 0 (gradients)"
-        mechanism: "Forced distinction — uniformity implies nothingness"
+        mechanism: "First distinction — uniformity implies nothingness"
       - r_id: "R3"
         ontology: "Integration (Relational)"
         operation: "Motion"
