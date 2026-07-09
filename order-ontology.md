@@ -15,7 +15,9 @@ The subject of the theory is the emergence of order.
 # Basic Assumptions
 
 ## 1. Absolute nothingness is logically excluded.
-A complete non-being possesses no consistent description. The minimal consistent basis is therefore maximal indeterminacy, not emptiness. This proto-logic ("Is not not") requires no further justification.
+A complete non-being possesses no consistent description. The minimal consistent basis is therefore maximal indeterminacy, not emptiness.
+This proto-logic ('Is not not') is self-justifying, as its negation results in the logical paradox of absolute nothingness.
+
 
 ## 2. Indeterminacy
 Fundamental existence initially possesses no distinguishable structures. In particular, the following do not yet exist:
