@@ -106,8 +106,14 @@ Context growth is not an additive "stacking" of independent events. Because the 
 * **Time:** "Time" is the *update-rate*—the metric of how rapidly successive differentiations can be integrated into the existing context.
 * **Dynamics:** Motion and change are the descriptive consequence of the sequential realization of structural constraints.
 
-## 9. Inertia as Contextual Friction
-Because the past acts as structure, altering a highly integrated context requires overcoming structural resistance. This resistance is experienced as **inertia**. A dense, complex web of differentiations (e.g., "mass") presents high friction against new adaptations, inherently slowing down the update-rate. Therefore, what we perceive as time dilation in the presence of mass is the direct consequence of the realization process facing increased contextual resistance.
+9. Inertia as Contextual Friction and Gravitational Effect
+Because the past acts as structure, altering a highly integrated context requires overcoming structural resistance. This resistance is experienced as inertia. A dense, complex web of differentiations (e.g., "mass") presents high friction against new adaptations, inherently slowing down the update-rate.
+
+But the effect is not only local. A dense web of differentiations consumes local Π_eff (free potential), creating a gradient where Π_eff is lower near the mass and higher farther away. Since the process-rate is 1/Π_eff, differentiations in the depressed region iterate more slowly — this is time dilation.
+
+The Π_eff gradient also causes "refraction": differentiations moving through the region are biased toward lower Π_eff because the slower process-rate creates a kind of optical density effect. This refraction of trajectories toward the mass is what we experience as gravitational attraction.
+
+Therefore, what we perceive as time dilation and gravitational attraction in the presence of mass are both consequences of the same mechanism: a dense web of differentiations creates a local Π_eff depression, which slows the process-rate (time dilation) and bends trajectories toward the mass (gravity).
 
 ---
 
