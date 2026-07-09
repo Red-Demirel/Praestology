@@ -1,0 +1,260 @@
+# /core/process-physics/quanta-as-ccr-cost.yaml
+name: "Quanta as Indivisible Units of CCR Cost – R3→R5 Closure Events"
+version: "2.1"
+status: "Structural clarification — core-invariant; grade assignment corrected"
+domain: "Core / Process-Physics"
+changes_from_v2.0: >
+  Corrected grade assignments in heisenberg_as_conjugate_grade_projection:
+  position and momentum grades are level-dependent — Madelung projection
+  gives grade-0/grade-1; full GA rotor gives grade-1/grade-2. Both are
+  correct at their respective levels; the file now states which level
+  each assignment belongs to, consistent with forces-as-rotor-consequences.yaml
+  and madelung-as-rotor-consequence.yaml. Added precision caveat to ħ
+  constancy implication: predicted variation is at or below current
+  measurement precision in laboratory environments; the 2.2 ppm α
+  discrepancy is the scale template.
+
+description: >
+  A quantum is the indivisible unit of CCR cost per R3→R5 closure event.
+  It is the minimum rotor phase-space reconfiguration that crosses the
+  viability threshold V_c and writes a permanent increment to hysteresis (η).
+  The unit itself is invariant — it does not vary with environment. What
+  varies is the observable projection: the local Π_eff, η density, inertia
+  (Praegress stress), and tension (Regress release) profile at the moment
+  R5 fires. The statistical distribution of quanta in observation is a map
+  of local projection conditions, not of uncertainty in the quantum itself.
+
+dependency_map:
+  requires:
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/inertia-planck-relation.yaml"
+    - "core/process-physics/spin-process-rate-ga.yaml"
+    - "core/process-physics/forces-as-rotor-consequences.yaml"
+    - "core/process-physics/madelung-as-rotor-consequence.yaml"
+    - "core/specifications.yaml (R5 scoping_note; indeterminism_as_ground)"
+  provides_to:
+    - target: "core/process-physics/forces-as-rotor-consequences.yaml"
+      via: "Quantum as R3→R5 closure event; action as integrated CCR cost"
+    - target: "core/process-physics/spin-process-rate-ga.yaml"
+      via: "Spin as phase iteration rate of the same quantum unit"
+
+---
+
+definition:
+  statement: >
+    A quantum is the smallest discrete change in rotor phase space that
+    crosses the viability threshold V_c and writes a permanent increment
+    to hysteresis (η). It is the indivisible unit of reconfiguration cost
+    per realisation event, determined by the CCR and the local processing
+    capacity Π_eff. R5 fires as a threshold event, not continuously.
+    The unit itself does not vary with environment.
+  what_varies: >
+    The committed medium at the moment R5 fires: local Π_eff, η density,
+    inertia (Praegress stress) and tension (Regress release) profile.
+    The same quantum of action closing under different local conditions
+    produces different observable signatures in η — different energies,
+    momenta, positions. The variance is in the projection conditions,
+    not in the unit.
+
+---
+
+mechanism:
+  statement: >
+    A quantum is:
+      - A discrete step in orientational phase space of the rotor,
+        corresponding to a change in CCR state by exactly one unit
+        of winding or phase-lock.
+      - The minimum action required to change commitment state of a
+        topology from one stable configuration to another.
+      - A realisation event that crosses V_c and writes a permanent
+        increment to η.
+    The quantum is not a particle. It is the indivisible unit of process
+    realisation — the smallest change the field can undergo while remaining
+    topologically stable.
+  r3_character: >
+    The quantum is a discrete unit of action within the R3 regime —
+    the minimum rotor closure that R5 can fire against. The R3 regime
+    is pre-metric and pre-spatial; quanta are the process-level currency
+    of resolution before commitment fixes them into determinate observables.
+  r4_character: >
+    When R5 fires, the quantum is committed irreversibly to η. The
+    committed record (position, momentum, energy) is the projection of
+    the quantum onto the derivative level. The same quantum unit, committed
+    under different local conditions, produces different observable signatures.
+
+---
+
+statistical_distribution:
+  statement: >
+    Quanta of the same type appear statistically distributed in observation
+    because the committed medium varies locally across R5 events. The
+    distribution in η is a map of local projection conditions, not of
+    uncertainty in the quantum itself. The Born rule emerges from the
+    statistical distribution of R5 closure events under varying local
+    conditions — not from intrinsic randomness of the quantum. Probabilities
+    are descriptive summaries of local projection variance, not ontological.
+  connection_to_indeterminism: >
+    The process is indeterminate (specifications.yaml#indeterminism_as_ground)
+    — R3 holds multiple rotor orientations without preference. The Born
+    rule statistics describe which committed output (η projection) each
+    R5 closure produces under local conditions. The indeterminism is at
+    the process level; the statistics are at the projection level. These
+    are not the same thing: indeterminism does not require probabilistic
+    ontology — it requires only that no preferred state exists before R5.
+
+---
+
+relation_to_action_and_inertia:
+  statement: >
+    The action principle is the integrated sum of quanta over a trajectory.
+    Inertia is the local cost per quantum — the stiffness of the potential
+    well at that point in the field. Both arise from the field's resistance
+    to rotor reconfiguration. The action is the integrated cost; inertia
+    is the cost density.
+  implication: >
+    The principle of least action is a consequence of process dynamics,
+    not a fundamental axiom. The path of least action is the path of
+    fewest R5 closure events above V_c — the trajectory that minimises
+    total CCR cost. Inertia is the local manifestation of the field's
+    finite processing capacity and the topological cost of reconfiguration.
+
+---
+
+heisenberg_as_conjugate_grade_projection:
+  statement: >
+    Position and momentum are conjugate grade projections of the same
+    rotor field. The grade assignments are level-dependent:
+
+  madelung_projection_level:
+    position: "Grade-0 — commitment density ρ = |ψ|²"
+    momentum: "Grade-1 — phase gradient ∇S (projected vector)"
+    context: >
+      At the Madelung decomposition level (madelung-as-rotor-consequence.yaml),
+      ψ = √ρ·exp(iS) separates into grade-0 amplitude and grade-1 phase
+      gradient. Committing ρ more precisely (tighter R5 closure on grade-0)
+      leaves ∇S less determined in the committed record, and vice versa.
+      The uncertainty is in the projection geometry of the Madelung
+      decomposition.
+
+  full_ga_rotor_level:
+    position: "Grade-1 — rotor's spatial location vector"
+    momentum: "Grade-2 — rotor's bivector phase gradient (∇S before projection)"
+    context: >
+      At the full Cl(3,0) rotor level (forces-as-rotor-consequences.yaml,
+      heisenberg_as_projection_artifact), ∇S is a grade-2 bivector before
+      it is projected onto grade-1 coordinates. Position is the grade-1
+      spatial vector; momentum is the grade-2 phase gradient. The
+      uncertainty bound Δx·Δp ≥ ħ/2 is the minimum information loss
+      from projecting a determinate multivector onto incompatible grade
+      bases.
+
+  reconciliation: >
+    Both assignments are correct at their respective levels. The Madelung
+    level is the post-projection description (what the committed η field
+    shows); the full GA level is the pre-projection description (what the
+    rotor ψ contains). The Madelung decomposition is itself a grade
+    projection — it maps grade-2 bivector phase onto grade-1 gradient
+    by projecting onto the coordinate basis. This is the same move
+    described in madelung-as-rotor-consequence.yaml: the decomposition
+    reveals, not imposes, what was already there.
+    For the Heisenberg bound: the full GA level is the correct one for
+    the derivation (the bound is a property of the rotor geometry);
+    the Madelung level is the correct one for the physical interpretation
+    (the bound appears as ρ vs ∇S incompatibility in observation).
+
+  open_derivation: >
+    Formal derivation of ΔxΔp ≥ ħ/2 from grade projection constraints
+    in Cl(3,0) — showing the bound as a consequence of projection geometry,
+    not an axiom. Algebra not yet completed.
+    See: uncertainty-from-grade-projection (forces-as-rotor-consequences.yaml)
+
+---
+
+consistency_vs_variance:
+  summary: >
+    Three distinct phenomena currently conflated under "quantum uncertainty":
+      1. Invariant at source: R3 unit, consistent V_c threshold.
+         The quantum itself does not vary.
+      2. Variable in projection: η projection under local Π_eff and η
+         conditions at R5 firing. Same quantum, different observable outputs.
+      3. Uncertain in conjugate observables: grade projection geometry.
+         Position and momentum cannot be simultaneously sharp because
+         they are incompatible grade projections of the same rotor state.
+    Standard physics treats all three as one phenomenon. They have
+    different origins, different scales, and different implications.
+
+---
+
+implications:
+  hbar_constancy: >
+    The observed constancy of ħ across experiments is a consequence of
+    the similarity of local projection conditions in laboratory environments,
+    not a fundamental property of the quantum unit itself. Predicted
+    variation in sufficiently different environments (near saturation,
+    strong fields, dense matter) would be at or below current measurement
+    precision — the 2.2 ppm α discrepancy is the scale template for
+    Π_eff-dependent projection effects. Detectable ħ variation requires
+    environments significantly more extreme than current laboratories,
+    or measurement precision improvements of several orders of magnitude
+    beyond current capability.
+  least_action: >
+    The principle of least action is a consequence of process dynamics —
+    the path minimising total CCR cost per R5 closure event. Not an axiom.
+  born_rule: >
+    The Born rule is a statistical summary of local projection variance,
+    not an ontological law. Probabilities describe the distribution of
+    committed outputs under varying local conditions.
+  deviations: >
+    Deviations from least-action behaviour should appear in regimes where
+    the CCR cost structure is non-uniform (near saturation, dense matter,
+    strong fields). These are the same regimes where the Higgs mass
+    environmental shift is predicted (forces-as-rotor-consequences.yaml,
+    higgs_probe_artifact). Consistent prediction across multiple phenomena.
+
+---
+
+falsification:
+  - condition: >
+      Direct measurements of ħ found to vary with local conditions
+      beyond what projection variance accounts for — unit itself varies.
+    note: >
+      Requires distinguishing unit variation from projection variation.
+      The 2.2 ppm α discrepancy is a projection effect (α_int vs α_exp),
+      not a unit variation. Any claimed ħ variation must pass the same
+      distinction test.
+  - condition: >
+      No deviations from least-action behaviour observed in regimes
+      where CCR cost structure should be non-uniform — interpretation weakened.
+  - condition: >
+      Formal derivation of ΔxΔp ≥ ħ/2 from grade projection geometry
+      cannot be completed, or yields a different bound — Heisenberg
+      reinterpretation falsified at the derivation level.
+
+---
+
+cross_references:
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR as coupling strength; CCR cost per quantum"
+  - file: "core/process-physics/inertia-planck-relation.yaml"
+    note: "ħ as minimal rotor phase-space step; planck-from-vortex-stability"
+  - file: "core/process-physics/spin-process-rate-ga.yaml"
+    note: "Spin as phase iteration rate of the quantum unit"
+  - file: "core/process-physics/forces-as-rotor-consequences.yaml"
+    note: "Full GA grade assignments; unified gap statement; action as integrated cost"
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "Madelung grade assignments; grade-0/grade-1 as post-projection level"
+  - file: "core/specifications.yaml"
+    note: "indeterminism_as_ground; R5 scoping_note; Born rule connection"
+  - file: "core/derivative-reality-clarification.yaml"
+    note: "Process vs. realized level; projection variance"
+  - file: "core/process-physics/forces-as-rotor-consequences.yaml"
+    note: "higgs_probe_artifact — same Π_eff regime where ħ variation predicted"
+
+reading_order:
+  - "core/specifications.yaml"
+  - "core/closure-configuration-ratio.yaml"
+  - "core/process-physics/quanta-as-ccr-cost.yaml  — this file"
+  - "core/process-physics/inertia-planck-relation.yaml"
+  - "core/process-physics/spin-process-rate-ga.yaml"
+  - "core/process-physics/forces-as-rotor-consequences.yaml"
+  - "core/process-physics/madelung-as-rotor-consequence.yaml"
