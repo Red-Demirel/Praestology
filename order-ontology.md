@@ -101,19 +101,19 @@ Context growth is not an additive "stacking" of independent events. Because the 
 
 ## 8. The Emergence of Time and Dynamics
 * **The Future (The Probabilistic):** Represents the state of indeterminacy relative to the current context. It possesses no preference and is purely potential.
-* **The Past (The Contextual Frame):** Represents the fully integrated context. Once a differentiation is realized, it becomes a persistent structural constraint — an active, shaping force on the present, subject to continuous re-integration and Regress.
+* **The Past (The Contextual Frame):** Represents the fully integrated context. Once a differentiation is realized, it rigidifies as a persistent structural constraint. It is not subject to internal erosion or regress; its structural role is exclusively maintained, reshaped, or superseded by the forward integration of subsequent realization cycles.
 * **The Now (The Realization Process):** The boundary where probabilistic potential is forced to adapt to the accumulated constraints of the context. 
 * **Time:** "Time" is the *update-rate*—the metric of how rapidly successive differentiations can be integrated into the existing context.
 * **Dynamics:** Motion and change are the descriptive consequence of the sequential realization of structural constraints.
 
-9. Inertia as Contextual Friction and Gravitational Effect
-Because the past acts as structure, altering a highly integrated context requires overcoming structural resistance. This resistance is experienced as inertia. A dense, complex web of differentiations (e.g., "mass") presents high friction against new adaptations, inherently slowing down the update-rate.
+## 9. Inertia as Contextual Friction and Gravitational Effect
+Because the past acts as structure, altering a highly integrated context requires overcoming structural resistance. This resistance is experienced macroscopically as inertia.
 
-But the effect is not only local. A dense web of differentiations consumes local Π_eff (free potential), creating a gradient where Π_eff is lower near the mass and higher farther away. Since the process-rate is 1/Π_eff, differentiations in the depressed region iterate more slowly — this is time dilation.
+If we map this ontological friction to physical observation, a dense, complex web of differentiations (which we call "mass") presents high friction against new adaptations, inherently slowing down the local update-rate. This maps directly to observed time dilation.
 
-The Π_eff gradient also causes "refraction": differentiations moving through the region are biased toward lower Π_eff because the slower process-rate creates a kind of optical density effect. This refraction of trajectories toward the mass is what we experience as gravitational attraction.
+Furthermore, this localized slowing of the update-rate creates a gradient across space. Differentiations propagating through this region experience a shift in their relational integration, bending toward the area of slower integration. In physical terms, this manifests as an "optical density" effect where trajectories curve toward mass—what we experience as gravitational attraction.
 
-Therefore, what we perceive as time dilation and gravitational attraction in the presence of mass are both consequences of the same mechanism: a dense web of differentiations creates a local Π_eff depression, which slows the process-rate (time dilation) and bends trajectories toward the mass (gravity).
+Therefore, under this ontological lens, time dilation and gravity are not fundamental forces, but the macroscopic shadows cast by variations in contextual integration friction.
 
 ---
 
