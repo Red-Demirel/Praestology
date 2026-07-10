@@ -1,5 +1,3 @@
----
-
 ### Praestology – Core Summary
 
 **Version:** 1.5 Functional Core  
