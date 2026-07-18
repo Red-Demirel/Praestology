@@ -1,0 +1,240 @@
+# /core/process-physics/thermodynamics-and-heat-emergence.yaml
+name: "Thermodynamics and Heat Emergence from Process-Physics"
+version: "0.2"
+status: "DRAFT DERIVATION — structure established; Carnot correction applied;
+         biological and chemical extensions flagged as domain predictions"
+domain: "Core / Process-Physics"
+changes_from_v0.1: >
+  Toned down register throughout. Corrected bypassing_limits: phase-anchoring
+  approaches Carnot limit, does not exceed it — the limit is structural, not
+  statistical. Removed "ledger" metaphor — η is the committed integral, not
+  a ledger. Removed "spacetime-impedance control" — replaced with direct
+  Π_eff language. Biological and chemical extensions flagged as domain
+  predictions with epistemic status. Modified Eyring-Polanyi equation
+  retained as the strongest concrete content.
+
+dependency_map:
+  requires:
+    - "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    - "core/inside-out-channeling.yaml"
+    - "core/quantum-zeno-as-commitment.yaml"
+
+---
+
+core_claim:
+  statement: >
+    Thermodynamics and heat are macroscopic expressions of the local process
+    rate (Π_eff) and the CCR transaction cost of R5 commitment events.
+    Temperature is Π_eff — the local R3 exploration rate. Heat generation
+    is channel overload: forced Praegress flow through restricted pathways
+    releasing Regress tension. Heat transfer is constraint equalisation
+    across adjacent regions of varying Π_eff. The Carnot limit is the
+    irreducible CCR cost of irreversible R5 closures — structural, not
+    statistical.
+
+  connection_to_prior_files: >
+    This file develops the thermodynamics pointer flagged in
+    gravity-inertia-equivalence-from-r5.yaml. The mechanism is the same
+    inside-out channeling of Π_eff by accumulated η — here applied to
+    thermal phenomena. The Quantum Zeno cooling connection
+    (quantum-zeno-as-commitment.yaml) is the bridge between deliberate
+    R5 forcing and temperature reduction.
+
+---
+
+fundamental_definitions:
+
+  temperature:
+    definition: >
+      Temperature is the local R3 exploration rate — the Π_eff of the
+      substrate at that location. High T: wide pathway width, rapid R3
+      phase exploration, high R5 commitment frequency per unit committed
+      time. Low T: narrow pathway width, restricted R3 updates, low R5
+      firing rate.
+    absolute_zero: >
+      Asymptotic limit where Π_eff → 0. Local R3 exploration ceases;
+      t = ∫Π_eff dτ stops accumulating; committed topology is frozen
+      against further reconfiguration. Not a violation of uncertainty —
+      uncertainty is grade-projection cost (forces-as-rotor-consequences.yaml),
+      which remains at zero Π_eff as a geometric property of the rotor
+      field, not a dynamic one.
+    note: >
+      Temperature ↔ Π_eff is directionally established from
+      gravity-inertia-equivalence-from-r5.yaml #thermodynamics_pointer.
+      Formal derivation connecting the statistical mechanics temperature
+      parameter to Π_eff is open.
+
+  heat_generation:
+    definition: >
+      Heat generation is channel overload: Praegress flow forced through
+      a restricted local channel meets high impedance. The channel dilates
+      (local Π_eff transiently widens) to pass the excess potential,
+      spiking R5 firing rate and releasing accumulated Regress tension as
+      thermal kinetic energy — disordered commitment events propagating
+      outward into the surrounding substrate.
+    connection: >
+      Same mechanism as fluid turbulence in emergent-classical-fields.yaml:
+      when the viability threshold is not reached by ordered flow, the field
+      explores multiple configurations (R3 cascade) — disordered R5 events
+      are thermal noise at the molecular scale.
+
+  heat_transfer:
+    definition: >
+      Heat transfer is Π_eff equalisation across adjacent substrate regions.
+      Regress tension propagates outward from high-Π_eff (high T) regions
+      to low-Π_eff (low T) regions until the constraint landscape is uniform.
+      Same directionality as inside-out-channeling.yaml: tension flows from
+      wide channels to narrow channels, widening them.
+
+  cooling:
+    definition: >
+      Cooling is local Π_eff suppression — narrowing of the R3 pathway width.
+      Passive: η accumulation from ambient committed topology narrows pathways
+      over time (standard radiative cooling).
+      Active: forced R5 commitment events deposit η rapidly, depressing Π_eff
+      by inside-out channeling. This is the Zeno cooling mechanism from
+      quantum-zeno-as-commitment.yaml: high-frequency forced R5 firing → rapid
+      η accumulation → Π_eff depression → T reduction.
+    zeno_cooling_status: >
+      Structural prediction — the mechanism is identified from the Zeno
+      unification. Whether deliberate electromagnetic forcing at the right
+      frequency can produce measurable Zeno cooling beyond standard laser
+      cooling is an open experimental question. Candidate: optical cavity
+      QED systems where photon-mediated R5 events can be rate-controlled.
+
+---
+
+efficiency_and_carnot:
+  carnot_reinterpretation: >
+    The Carnot efficiency limit η_C = 1 − T_cold/T_hot = 1 − Π_eff,cold/Π_eff,hot
+    is the structural consequence of irreversible R5 closures carrying Regress cost.
+    Every conversion of thermal Praegress flow into directed macroscopic work requires
+    some R5 events to commit irreversibly into η — this Regress cost cannot be
+    recovered. The Carnot limit is the minimum unavoidable CCR transaction cost
+    per conversion cycle.
+
+  phase_anchoring:
+    statement: >
+      If incoming R3 proposals (reactant rotor orientations) are pre-aligned
+      before the R5 gate — coherent phase orientation rather than random —
+      the CCR mismatch cost at R5 is reduced. Less Regress is shed per
+      commitment event → higher conversion efficiency → approaches Carnot
+      limit from below.
+    correction_from_v0.1: >
+      Phase-anchoring approaches but does not exceed the Carnot limit.
+      The limit is structural: irreversible R5 closures always carry some
+      Regress cost. Perfect phase alignment would reach Carnot efficiency;
+      it cannot exceed it without violating R5 irreversibility. Claims of
+      "exceeding classical efficiency limits" are not supported by the
+      framework's own structure.
+    status: >
+      Structural prediction — pre-alignment reducing CCR cost is consistent
+      with established quantum thermodynamics results (coherence-enhanced
+      efficiency in quantum heat engines, Scully et al. 2003 et seq.).
+      The process-physics mechanism provides a generative account of why
+      coherence helps. Formal derivation connecting phase alignment to
+      CCR cost reduction is open.
+
+---
+
+biological_chemical_extensions:
+  epistemic_status: >
+    The following are domain-level predictions derived from the thermal
+    mechanism above. They are structurally consistent with the framework
+    but extend into biology and chemistry where the process-physics
+    connection requires additional derivation steps. Flagged as predictions,
+    not established results.
+
+  vascular_regulation:
+    statement: >
+      Vasoconstriction increases local tissue impedance — vessel geometry
+      restriction narrows surrounding R3 pathway width, depressing local
+      Π_eff (lower T, reduced metabolic rate). Vasodilation reduces
+      impedance — opens pathway width, increasing Π_eff (higher T,
+      elevated metabolic rate).
+    process_mechanism: >
+      The vascular system actively modulates local η via geometry:
+      a narrower vessel forces flow through a higher-impedance channel,
+      which by inside-out channeling reduces the surrounding Π_eff.
+      This is the biological analog of Zeno cooling (narrowing channel)
+      and thermal dilation (widening channel) at the tissue scale.
+    status: "DOMAIN PREDICTION — mechanism consistent; quantitative connection open"
+
+  chemical_kinetics:
+    modified_eyring_polanyi:
+      formula: "k_R5 = Π_eff · exp(−(V_c − Φ_proposals) / I_sub)"
+      variables:
+        k_R5: "Process-level reaction rate (R5 commitment events per unit time)"
+        Π_eff: "Local pathway width — substrate R3 exploration rate"
+        V_c: "Viability threshold for R5 selection"
+        Phi_proposals: "Coherent phase alignment of incoming R3 reactant rotors"
+        I_sub: "Substrate impedance — CCR transaction cost per R5 event"
+      interpretation: >
+        Standard Eyring-Polanyi k = (k_BT/h)·exp(−ΔG‡/RT) maps to this as:
+          k_BT/h ↔ Π_eff (thermal exploration rate = local Π_eff)
+          ΔG‡/RT ↔ (V_c − Φ_proposals)/I_sub (activation cost = CCR mismatch
+            between reactant phase alignment and viability threshold)
+        Pre-exponential factor (transmission coefficient κ) ↔ rotor orientation
+        match between reactant topology and transition-state CCR.
+      predictions: >
+        Testable signatures at the chemistry level:
+          - Non-Markovian memory in transition states: if Φ_proposals retains
+            phase coherence longer than standard thermal decoherence predicts,
+            the reaction rate shows memory effects — correlated fluctuations
+            in k_R5 over multiple cycles.
+          - Suppressed activation energy in phase-aligned reactions: coherent
+            reactant preparation (Φ_proposals → V_c) reduces effective ΔG‡,
+            measurable as rate enhancement above standard Arrhenius prediction.
+          - Enzymatic coherence: enzymes may function by maintaining local
+            high-Π_eff pockets that preserve Φ_proposals — consistent with
+            observed quantum coherence in biological catalysis (Fleming et al.,
+            FMO complex; Klinman, hydrogen tunneling in enzymes).
+      status: "DOMAIN PREDICTION — formula structurally motivated; numerical
+               calibration of I_sub and V_c against experimental rates open"
+
+---
+
+open_derivations:
+  - id: "temperature-as-pi-eff-formal"
+    description: >
+      Formal derivation connecting statistical mechanics temperature parameter
+      to Π_eff. Should recover equipartition theorem as the equal distribution
+      of Π_eff across available R3 degrees of freedom. Recover Boltzmann
+      distribution as the R5 viability-weighted distribution of committed
+      states under given Π_eff.
+    depends_on: ["pi-eff-from-channeling-density", "gp-from-r3-selection"]
+    priority: 2
+
+  - id: "carnot-from-r5-irreversibility"
+    description: >
+      Formal derivation of Carnot efficiency as minimum CCR transaction cost
+      per R5 commitment cycle. Show that phase-aligned (coherent) conversion
+      approaches but does not exceed Carnot. Connect to quantum thermodynamics
+      coherence-efficiency results.
+    depends_on: ["temperature-as-pi-eff-formal"]
+    priority: 3
+
+  - id: "eyring-polanyi-from-ccr"
+    description: >
+      Derive modified Eyring-Polanyi formula from CCR mismatch cost at R5
+      gate. Calibrate I_sub against known activation energies for simple
+      reactions. Predict non-Markovian signature magnitude for coherent
+      reactant preparation.
+    depends_on: ["temperature-as-pi-eff-formal", "ccr-electron-explicit"]
+    priority: 3
+
+---
+
+cross_references:
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Thermodynamics pointer — Carnot as CCR cost; T as process rate"
+  - file: "core/inside-out-channeling.yaml"
+    note: "Π_eff suppression mechanism; void vs dense channel widths"
+  - file: "core/quantum-zeno-as-commitment.yaml"
+    note: "Zeno cooling — forced R5 → η accumulation → Π_eff depression"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "Navier-Stokes turbulence as disordered R3 cascade — thermal analog"
+  - file: "core/process-physics/commitment-response-process-physics.yaml"
+    note: "R_diss timescales — geological/cosmological thermal relaxation"
+  - file: "core/process-physics/vortex-stability-process-physics.yaml"
+    note: "Thermal Tik — U-shaped stability curve; T_optimal for vortex sustain"

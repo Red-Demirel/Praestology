@@ -1,0 +1,200 @@
+# /core/process-physics/ga-elements-engineering.yaml
+name: "Geometric Algebra Elements – Mapping to Phenomena and Engineering Possibilities"
+version: "1.0"
+status: "Structural mapping – core-invariant; applications outlined, not yet engineered"
+domain: "Core / Process-Physics"
+
+description: >
+  This file identifies the roles of Geometric Algebra (Cl(3,0)) elements
+  in known quantum phenomena and suggests how their manipulation could
+  enable substrate engineering. It provides a systematic mapping from
+  GA grade to physical effect, and from physical effect to potential
+  technological application.
+
+dependency_map:
+  requires:
+    - "core/process-physics/spin-as-field-effect.yaml"
+    - "core/process-physics/forces-as-rotor-consequences.yaml"
+    - "core/process-physics/madelung-as-rotor-consequence.yaml"
+    - "core/process-physics/quanta-as-ccr-cost.yaml"
+  provides_to:
+    - target: "core/process-physics/quantum-behaviour-as-process-regimes.yaml"
+      via: "GA grade mapping for wave/particle regimes"
+    - target: "intersectional/computational-convergence.yaml"
+      via: "GA as native computational language for quantum computing"
+
+# ─────────────────────────────────────────────
+# GEOMETRIC ALGEBRA GRADE DEFINITIONS (PROCESS-PHYSICS)
+# ─────────────────────────────────────────────
+
+grade_definitions:
+  grade_0_scalar:
+    symbol: "ρ or η"
+    process_meaning: "Commitment density – the 'now' of resolved structure."
+    derivative_observable: "Position, mass, energy density."
+    field_role: "The local intensity of realised commitment. R4's accumulated record."
+    ga_operator: "Multiplication by scalar – sets the amplitude of rotor action."
+
+  grade_1_vector:
+    symbol: "∇S or u"
+    process_meaning: "Phase gradient – directional flow of unresolved potential."
+    derivative_observable: "Momentum, velocity, phase."
+    field_role: "The orientation of propagation; the 'flow' of the field."
+    ga_operator: "Outer product with scalar – produces directional changes."
+
+  grade_2_bivector:
+    symbol: "I or Ω"
+    process_meaning: "Oriented plane – the circulation plane of a rotor."
+    derivative_observable: "Spin, angular momentum, field strength (F)."
+    field_role: "The plane in which the rotor winds; chirality and orientation."
+    ga_operator: "Rotor action R = e^{-Iθ/2} – generates phase rotation in the plane."
+
+  grade_3_pseudoscalar:
+    symbol: "I (e₁e₂e₃)"
+    process_meaning: "Oriented volume – the full 3D embedding space."
+    derivative_observable: "Chirality, parity, helicity."
+    field_role: "The ambient relational manifold; the 'stage' for rotor dynamics."
+    ga_operator: "Duality – maps bivectors to vectors via multiplication by I."
+
+# ─────────────────────────────────────────────
+# MAPPING TO QUANTUM PHENOMENA
+# ─────────────────────────────────────────────
+
+phenomena_mapping:
+  - phenomenon: "Spin-½"
+    ga_element: "Grade-2 bivector (I) with 720° rotor closure."
+    process_mechanism: >
+      The rotor R = e^{-Iθ/2} requires two full cycles (720°) to return to +1.
+      This is the double-cover property of the rotation group, giving half-integer spin.
+    derivative_observable: "Spin quantum number s = ½."
+    engineering_handle: "Modulate the rotor's plane orientation (grade-2) to alter effective spin state without changing the rotor's energy."
+
+  - phenomenon: "Entanglement"
+    ga_element: "Shared grade-0/grade-2 coupling across multiple rotors."
+    process_mechanism: >
+      Two rotors share a common unresolved mode (Praegress reservoir, grade-0 scalar correlation).
+      Their bivector planes (grade-2) are phase-locked (ρ) without direct trail commitment.
+      The correlation is not local; it is in the shared substrate mode.
+    derivative_observable: "Non-separable state; Bell correlations."
+    engineering_handle: "Control the shared grade-0 mode to initiate phase-locking; manipulate one rotor's grade-2 plane to induce coordinated state change in the other."
+
+  - phenomenon: "Qubit (Quantum Bit)"
+    ga_element: "Rotor state (even subalgebra Cl₃⁺)."
+    process_mechanism: >
+      A qubit is a superposition of two rotor states (spin-up and spin-down).
+      In GA, a qubit is a rotor parameterised by two angles (θ, φ) on the Bloch sphere.
+      The rotor's action on a reference vector encodes the qubit state.
+    derivative_observable: "Bloch sphere coordinates; probability amplitudes."
+    engineering_handle: "Apply rotor operations (rotations) to perform quantum gates; manipulate grade-2 bivector to implement logic operations."
+
+  - phenomenon: "Quantum Computing"
+    ga_element: "Multi-rotor states; bivector interactions (entangling gates)."
+    process_mechanism: >
+      Quantum gates are rotor operations (rotations) acting on qubits.
+      Entangling gates (CNOT, etc.) couple bivector planes of multiple rotors,
+      effectively sharing grade-2/grade-0 correlation.
+    derivative_observable: "Circuit outputs; measurement probabilities."
+    engineering_handle: "Design rotor sequences to perform computations; manipulate phase-locking to reduce decoherence."
+
+  - phenomenon: "Measurement (R5 closure)"
+    ga_element: "Projection from grade-2 to grade-0/grade-1."
+    process_mechanism: >
+      R5 fires, committing the rotor's orientation to a specific grade-0 density
+      (position) or grade-1 gradient (momentum). The projection is irreversible.
+    derivative_observable: "Collapse to eigenstate; Born rule."
+    engineering_handle: "Delay or accelerate R5 firing by modulating V_c; control which grade is projected by altering the measurement basis."
+
+  - phenomenon: "Decoherence"
+    ga_element: "Loss of grade-2 phase coherence due to Regress (h)."
+    process_mechanism: >
+      Environmental commitment density (η) fluctuations disrupt the rotor's
+      phase-locking. The bivector plane loses orientation coherence.
+    derivative_observable: "Loss of interference; mixed states."
+    engineering_handle: "Isolate the rotor from η fluctuations (high-Π_eff environment); use phase-locking reinforcement to maintain coherence."
+
+# ─────────────────────────────────────────────
+# ENGINEERING POSSIBILITIES
+# ─────────────────────────────────────────────
+
+engineering_applications:
+  - application: "Coordinated State Transfer (via Entanglement)"
+    ga_handle: "Manipulate grade-2 plane of one rotor to induce coordinated reconfiguration of another rotor sharing the same unresolved mode."
+    process_step: >
+      1. Establish phase-locking (ρ) between two rotors via shared grade-0/grade-2 coupling.
+      2. Modulate the first rotor's bivector plane (grade-2) using an external rotor operation.
+      3. The second rotor's phase-locked plane reconfigures in response, without local interaction.
+    precondition: "Requires control over the shared unresolved mode; requires ability to apply rotor operations at the process level."
+
+  - application: "Inertial Modulation"
+    ga_handle: "Adjust the CCR cost landscape by varying local grade-0 commitment density (η)."
+    process_step: >
+      1. Increase local η (commitment density) to raise the CCR cost, effectively increasing inertia.
+      2. Decrease local η to lower the CCR cost, reducing effective mass and enabling faster reconfiguration.
+    precondition: "Requires ability to locally modulate commitment density, i.e., to induce or suppress R5 closure events in a controlled region."
+
+  - application: "Phase-Locking Communication"
+    ga_handle: "Use grade-2/grade-0 phase-locking (ρ) to establish direct, non-local coupling between separated rotors."
+    process_step: >
+      1. Phase-lock two rotors via shared substrate mode (pre-R5).
+      2. Modulate one rotor's phase (grade-1 gradient) to produce a corresponding phase change in the other rotor, without signal lag.
+    precondition: "Requires ability to sustain phase-locking over distance; requires low decoherence environment."
+
+  - application: "Viability Threshold Engineering"
+    ga_handle: "Modulate V_c (viability threshold) by altering the CCR cost landscape."
+    process_step: >
+      1. Increase V_c to make R5 closure more difficult, delaying commitment and allowing longer exploration of R3.
+      2. Decrease V_c to facilitate faster commitment, enabling rapid state changes.
+    precondition: "Requires ability to locally modulate the Regress rate (h) or the CCR mismatch cost."
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS AND ENGINEERING ROADMAP
+# ─────────────────────────────────────────────
+
+open_derivations:
+  - id: "rotor-state-manipulation"
+    description: >
+      Develop a mathematical framework for applying controlled rotor operations
+      to manipulate grade-2 bivector planes and grade-1 phase gradients.
+      This would be the basis for quantum gate implementation.
+    depends_on: ["geometric-algebra-bridge.yaml", "forces-as-rotor-consequences.yaml"]
+
+  - id: "phase-locking-over-distance"
+    description: >
+      Determine the conditions under which phase-locking (ρ) can be maintained
+      over macroscopic distances, and identify the decoherence mechanisms
+      that limit it.
+    depends_on: ["quantum-entanglement.yaml", "commitment-response.yaml"]
+
+  - id: "ccr-cost-modulation"
+    description: >
+      Derive the functional dependence of CCR cost on local Π_eff and η,
+      and identify how to modulate these parameters at the process level.
+    depends_on: ["closure-configuration-ratio.yaml", "ccr-well-width-uniformity"]
+
+  - id: "engineering-falsification-conditions"
+    description: >
+      Define specific experimental signatures for substrate engineering
+      (e.g., altered decoherence rates, modified gate fidelities, observable
+      shifts in entanglement correlations) that would confirm or refute
+      the framework's predictions.
+    depends_on: ["quantum-foundations.yaml", "emergent-classical-fields.yaml"]
+
+# ─────────────────────────────────────────────
+# CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+cross_references:
+  - file: "core/process-physics/spin-as-field-effect.yaml"
+    note: "Spin as field effect; CCR potential-well structure"
+  - file: "core/process-physics/forces-as-rotor-consequences.yaml"
+    note: "Forces as rotor reconfiguration resistance; gauge sym. emergence"
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "Grade-0/grade-1 as position/momentum conjugate pair"
+  - file: "core/process-physics/quanta-as-ccr-cost.yaml"
+    note: "Quantum as indivisible unit of CCR cost per R3→R5 event"
+  - file: "core/process-physics/quantum-behaviour-as-process-regimes.yaml"
+    note: "Wave/particle duality and R3 regime character"
+  - file: "core/process-physics/praegress-regress-temporal-inaccessibility.yaml"
+    note: "R3 as pre-metric, pre-spatial regime"
+  - file: "intersectional/computational-convergence.yaml"
+    note: "GA as native computational language; CliffordNet"

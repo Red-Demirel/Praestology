@@ -1,0 +1,281 @@
+# /core/process-physics/gravity-inertia-equivalence-from-r5.yaml
+name: "Gravity, Inertia, and the Equivalence Principle from R5"
+version: "0.3"
+status: "STRUCTURAL DERIVATION — inside-out channeling mechanism integrated;
+         Friedmann homogeneity scope clarified; formal metric derivation open"
+domain: "Core / Process-Physics"
+changes_from_v0.2: >
+  Integrated inside-out-channeling.yaml as the mechanism for WHY constraint
+  narrowing occurs — the two files were describing the same process from
+  different angles. Added Friedmann scope clarification: homogeneity/isotropy
+  applies to the explorative regime's orientational freedom (R3 is isotropic
+  in process sense) but NOT to committed output structure (η is generically
+  inhomogeneous by R5 locality). Alexander et al. 2026 result supported by
+  this clarification. Added friedmann-emergence.yaml qualification note.
+
+dependency_map:
+  requires:
+    - "core/inside-out-channeling.yaml"
+    - "core/gp-as-derivative-layer.yaml"
+    - "core/process-physics/inertia-planck-relation.yaml"
+    - "core/process-physics/emergent-classical-fields.yaml"
+    - "core/specifications.yaml (R5 scoping_note)"
+
+---
+
+friedmann_scope_clarification:
+  statement: >
+    The Friedmann equations assume homogeneity and isotropy as a
+    starting condition applied to the committed derivative layer (η).
+    This assumption has two distinct statuses in the framework:
+
+  explorative_regime_isotropy:
+    status: "Correct — but misapplied"
+    statement: >
+      The explorative regime (R3) IS isotropic: before R5 selection,
+      all rotor orientations are equally available — no committed
+      direction is preferred. R3 has orientational symmetry by
+      construction (indeterminism as ground state, specifications.yaml
+      #indeterminism_as_ground). This is the isotropy that Friedmann
+      actually captures — but it is an isotropy of process, not of
+      committed structure.
+
+  committed_layer_homogeneity:
+    status: "Derivative-level idealisation — generically incorrect"
+    statement: >
+      After R5 fires locally, the committed η field is inhomogeneous
+      by construction: each R5 event is a local commitment that builds
+      structure outward from that point (inside-out-channeling.yaml).
+      A homogeneous committed background requires that all R5 events
+      fired simultaneously and uniformly — which contradicts both R5
+      locality and the inside-out character of commitment. Homogeneity
+      of η is not a consequence of the framework; it is an idealisation
+      imposed on top of it for tractability.
+
+  alexander_et_al_connection: >
+    Alexander, Temple & Vogler (2026) prove mathematically that all
+    Friedmann spacetimes are unstable to radial perturbation at every
+    order — perfect homogeneity is a measure-zero idealisation, any
+    deviation grows. This is what the framework predicts from the
+    process level: local R5 commitment events produce inhomogeneous
+    η by construction; the homogeneous Friedmann background is the
+    wrong starting point for the committed layer. Alexander et al.
+    reach this conclusion from within GR; the framework reaches it
+    from R5 locality. Independent derivation, same structural result.
+
+  friedmann_file_qualification: >
+    friedmann-emergence.yaml should be read as deriving the large-scale
+    average behaviour of the committed η field — a coarse-grained
+    description valid at Hubble scales where local inhomogeneity
+    averages out. It is not a description of what the derivative
+    layer looks like locally. The Friedmann equations are the
+    homogeneous, isotropic LIMIT of the master equation, not its
+    generic solution. This qualification should be added to
+    friedmann-emergence.yaml in the next update.
+
+---
+
+core_claim:
+  statement: >
+    Gravity and inertia are not two phenomena that happen to be equivalent
+    (the equivalence principle, empirically confirmed but never derived).
+    They are the same mechanism described from opposite sides of R5:
+    gravity is the shape of the constraint landscape in the explorative
+    regime — the narrowing of available R3 paths toward regions of high
+    η density (inside-out channeling). Inertia is what that same locked
+    potential looks like once R5 has fired: the committed structure's
+    resistance to reconfiguration, proportional to the depth of the R5
+    commitment event that produced it.
+
+  equivalence_principle_derived: >
+    Gravitational mass (how strongly a structure depresses local Π_eff
+    and narrows the constraint landscape) and inertial mass (how much
+    reconfiguration resistance that structure carries) are equal because
+    they are not two independent properties. They are two readings of
+    the same quantity: the depth of the R5 commitment event, measured
+    from opposite sides of the commitment boundary.
+      Pre-R5 (explorative): depth manifests as Π_eff depression →
+        constraint narrowing → refraction of new R3 paths → gravity
+      Post-R5 (committed): depth manifests as η increment →
+        reconfiguration resistance → inertia
+    The equivalence principle is not a postulate; it is a structural
+    consequence of R5 being the single event that generates both effects.
+
+---
+
+constraint_narrowing_mechanism:
+  reference: "core/inside-out-channeling.yaml — full mechanism there"
+  summary: >
+    High η density → low local Π_eff (viable R3 pathway width suppressed)
+    → R5 threshold V_c relatively easier to cross in that region
+    → R3 paths propagating through varying Π_eff refract toward lower
+    Π_eff → committed structure attracts more commitment → self-reinforcing.
+    No repulsive counterpart at classical scale: gravity is always attractive
+    because constraint narrowing always reduces Π_eff further — there is no
+    process mechanism that would widen pathways by adding commitment.
+
+  time_dilation: >
+    t = ∫Π_eff(τ)dτ (gp-as-derivative-layer.yaml #t_emergence).
+    Dense η depresses Π_eff → R5 fires less frequently → t accumulates
+    slower locally → gravitational time dilation. Not a geometric effect
+    of curved spacetime but suppressed R5 cycle rate from inside-out
+    channeling. The metric quantity g₀₀ ∝ Π_eff² encodes the same
+    suppression at the derivative level.
+
+---
+
+impedance_as_universal_mechanism:
+  statement: >
+    The constraint-narrowing → increased impedance → slowed throughput
+    structure is scale-invariant. Same mechanism at every commitment depth:
+  instances:
+    electromagnetic: "Narrowed conductor → increased resistance → heat as Regress release"
+    fluid: "Narrowed tube → increased viscous resistance → turbulence at saturation analog"
+    gravitational: "High η → narrowed R3 paths via ∇Π_eff → time dilation + inertial resistance"
+    quantum: "Beam splitter impedance → reduced amplitude per split → decoherence"
+  not_analogy: >
+    These are not engineering analogies. They are the same Praegress/stress
+    and Regress/tension mechanism at different commitment depths. Engineering
+    intuition transfers exactly because it IS the same process.
+
+---
+
+direction_reversal:
+  statement: >
+    The standard problem has been to quantize gravity — to make it compatible
+    with quantum mechanics. This framework proposes the opposite direction:
+    gravity is downstream of the quantum/explorative regime, not parallel to
+    it or incompatible with it.
+  mechanism: >
+    Gravity is what the R3 constraint-narrowing landscape looks like from
+    the η side, once R5 has committed potential into structure. You don't
+    quantize gravity because it was never a separate force — it is the
+    macroscopic shadow of quantum constraint dynamics, projected onto the
+    derivative layer through R5.
+  infinities_dissolved: >
+    Non-renormalizable infinities in quantum gravity arise from treating
+    gravity as a quantum field on top of committed spacetime — the wrong
+    level. The divergences are derivative-level symptoms of process-level
+    saturation. The master equation's saturation term provides the UV
+    regulator at the process level. Nothing to renormalize because the
+    boundary is a process-level condition, not a field interaction.
+
+---
+
+thermodynamics_pointer:
+  status: "FLAGGED — structural connections identified, dedicated file pending"
+  arrow_of_time: >
+    R5 closures write permanently; Regress degrades but does not reverse.
+    Thermodynamic arrow = arrow of R5 commitment. Time-asymmetry is not
+    in microscopic laws but in the R5/η structure of the process.
+  temperature_as_process_rate: >
+    Temperature ↔ local Π_eff: higher T = faster R3 exploration, more R5
+    events per committed time, more configurations sampled. Heat transfer =
+    Regress propagation of tension from high-η to low-η, equalising
+    the constraint landscape.
+  carnot_limit: >
+    No perfect efficiency: every thermal→work conversion requires
+    irreversible R5 closures carrying Regress cost. Same impedance
+    principle as no-cloning. Full derivation pending dedicated file.
+
+---
+
+alexander_et_al_2026:
+  reference: >
+    Alexander, Temple & Vogler (2026). "The instability of critical and
+    underdense Friedmann spacetimes at the Big Bang as an alternative to
+    dark energy." Proceedings of the Royal Society A, 482(2338): 20250912.
+  summary: >
+    Mathematical proof that all Friedmann spacetimes are unstable to radial
+    perturbation at every order. Homogeneity is measure-zero; any deviation
+    grows. Proposed mechanism: self-similar expanding wave solution to
+    Einstein-Euler equations, seeded at the Big Bang, producing apparent
+    acceleration as an observational effect of inhomogeneous local structure —
+    no cosmological constant required.
+  alignment:
+    confidence: "STRUCTURAL CONSISTENCY — not confirmation of mechanism"
+    statement: >
+      Both frameworks conclude: locally-seeded inhomogeneous structure-building
+      is the generic physical case. Alexander et al. derive this from within GR;
+      Praestology derives it from R5 locality and inside-out commitment.
+      Independent starting points, same structural result.
+    what_cannot_be_claimed: >
+      The framework does not predict their specific wave solution; their
+      mathematics does not confirm Praegress/Regress or constraint-narrowing.
+  copernican_note: >
+    Alexander et al.'s "special place" tension does not arise here: every
+    participant has an outward-directed view from their own committed position
+    (participant-centric-ontology.yaml). No view from nowhere, no privileged
+    center paradox — each R5 event defines its own relational geometry.
+  difference: >
+    Alexander et al. identify that the homogeneous background is unstable
+    without identifying what generates the inhomogeneous replacement.
+    The framework provides the candidate generating mechanism: R5 commitment
+    events firing locally under constraint narrowing, building committed
+    structure outward. Compatible but independent claims at different levels.
+
+---
+
+prior_art_landscape:
+  common_gap: >
+    All prior approaches (Verlinde entropic gravity, Jacobson thermodynamic
+    gravity, Padmanabhan, Vopson infodynamics, ZPF inertia approaches) share
+    one structural limitation: they work at the derivative/committed level
+    and treat space and/or time as pre-given arena. None identifies a
+    pre-metric, pre-committed mechanism in which the constraint landscape
+    of the explorative regime generates both gravity and inertia as
+    opposite-side readings of the same R5 commitment depth. That is the
+    specific contribution here.
+  details: "See v0.2 for individual summaries — preserved in git history"
+
+---
+
+open_derivations:
+  - id: "pi-eff-gradient-to-metric-well-formal"
+    description: >
+      Explicit derivation mapping ∇Π_eff constraint landscape in the
+      explorative regime to committed-level metric well. Should recover
+      Newtonian limit and point toward GR field equations as the
+      committed-level projection. Connects to t = ∫Π_eff dτ from
+      gp-as-derivative-layer.yaml and g₀₀ ∝ Π_eff² from
+      emergent-classical-fields.yaml.
+    depends_on: ["emergent-classical-fields.yaml",
+                 "ccr-electron-explicit", "gp-from-r3-selection"]
+    priority: 2
+
+  - id: "equivalence-principle-quantitative"
+    description: >
+      Formal demonstration that gravitational mass (Π_eff depression
+      per unit committed structure) equals inertial mass (reconfiguration
+      resistance per unit committed structure) to precision of current
+      experimental tests (~10⁻¹⁵).
+    depends_on: ["inertia-planck-relation.yaml",
+                 "pi-eff-gradient-to-metric-well-formal"]
+    priority: 2
+
+  - id: "friedmann-homogeneity-scope-formal"
+    description: >
+      Formal statement of the scope of the Friedmann equations within
+      the framework: show that the homogeneous isotropic limit is a
+      coarse-grained average of locally inhomogeneous R5 commitment
+      events, valid at Hubble scales but not locally. Connect to
+      Alexander et al. instability result as the GR-level expression
+      of the same scope limitation.
+    depends_on: ["friedmann-emergence.yaml", "gp-from-r3-selection"]
+    priority: 2
+
+---
+
+cross_references:
+  - file: "core/inside-out-channeling.yaml"
+    note: "Mechanism for constraint narrowing — the WHY of Π_eff suppression"
+  - file: "core/gp-as-derivative-layer.yaml"
+    note: "t = ∫Π_eff dτ; r emergence from dominant phase gradient"
+  - file: "core/process-physics/inertia-planck-relation.yaml"
+    note: "Inertia as reconfiguration resistance — the R5-side reading"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "∇Π_eff refraction; g₀₀ ∝ Π_eff² identification"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Homogeneous limit — scope qualification needed (friedmann-homogeneity-scope-formal)"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "Stress/tension coupling; inertia/gravity as two sides of R5"
