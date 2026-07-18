@@ -1,0 +1,250 @@
+# /core/gp-as-derivative-layer.yaml
+name: "GP–Madelung as the Derivative-Level Integral of GA Dynamics"
+version: "1.1"
+status: "Structural clarification — core-invariant; derivation mechanism identified, not yet closed"
+domain: "Core"
+changes_from_v1.0: >
+  Identified the orientational phase space integral as the R3 superposition
+  sum — the collapse of Σᵢ cᵢ·Rᵢ under R5 selection is the mechanism that
+  generates the derivative layer. r and t emergence paths made explicit.
+  Separated what is established from what is open. Added explorative-regime
+  derivation path as the process-level route to the same result.
+
+statement: >
+  The nonlinear GP equation with Madelung decomposition is the derivative-level
+  expression of the GA master equation, obtained by:
+    (1) projecting the multivector dynamics onto grade-0 (scalar) and grade-2
+        (bivector → phase gradient) observables — the Madelung split
+    (2) collapsing the R3 orientational superposition Σᵢ cᵢ·Rᵢ under R5
+        viability selection to the dominant rotor R₀
+    (3) reading off the emergent coordinates r and t from the dominant
+        phase gradient and accumulated R5 cycle count respectively
+  The GP–Madelung equations are not a separate postulate. They are the
+  effective description of process-level rotor dynamics in terms of the
+  coordinates that emerge from R3→R4→R5 completion.
+
+---
+
+what_is_established:
+  madelung_projection_exact: >
+    The Madelung decomposition ψ = √ρ·exp(iS) is an exact grade projection
+    of the GA multivector field — grade-0 gives √ρ, grade-2 (bivector phase)
+    gives exp(iS). No approximation is made; the structure is already present
+    in the GA master equation. This is established in
+    madelung-as-rotor-consequence.yaml.
+  gp_as_madelung_limit: >
+    The GP equation with saturating nonlinearity is the Madelung system
+    with R_forward as the self-interaction term. When R_diss is negligible
+    (strongly protected topology, QM timescales), the GP equation is exact
+    at the derivative level. Established in commitment-response-process-physics.yaml.
+  coordinates_are_emergent: >
+    r and t do not exist at the process level. Space is a consequence of
+    realization, not a pre-existing arena. Established in
+    spin-as-field-effect.yaml #state_transition_epistemics and
+    derivative-reality-clarification.yaml.
+
+what_is_open:
+  emergence_mechanism: >
+    The exact mechanism by which the coordinate-free process level (ψ, R1–R5)
+    generates the coordinates r and t that appear in the GP–Madelung equations
+    is not yet formally derived. The mechanism is identified (see below) but
+    the algebra is not closed. This is the core gap this file tracks.
+  open_derivation_id: "metric-emergence-from-rotor"
+  depends_on: ["ccr-electron-explicit", "n-sat-from-topological-capacity"]
+
+---
+
+emergence_mechanism:
+
+  r3_as_orientational_integral:
+    statement: >
+      The R3 superposition ψ = Σᵢ cᵢ·Rᵢ is the orientational phase space
+      integral. Each Rᵢ is a rotor with a specific bivector orientation;
+      cᵢ is its amplitude. Before R5 selection, the field holds all
+      orientations simultaneously — this is not a mathematical convenience
+      but the physical content of R3: the indeterminate process exploring
+      all viable orientations before committing.
+      The "integral over orientational phase space" in the derivation path
+      is this sum — computed over the full set of rotor orientations weighted
+      by their viability amplitudes |cᵢ|².
+    consequence: >
+      When R5 fires and selects R₀ (the dominant viable rotor), the sum
+      collapses. The non-selected orientations (i ≠ 0) do not vanish —
+      they contribute to the residual field structure around the committed
+      topology. Their collective phase gradient pattern is what becomes
+      the coordinate r at the derivative level.
+
+  r_emergence:
+    statement: >
+      r is the relational pattern of the dominant phase gradient ∇S after
+      R3 collapse to R4. More precisely:
+        Before R5: ψ = Σᵢ cᵢ·Rᵢ — no preferred spatial direction
+        After R5:  ψ ≈ c₀·R₀ + residual — dominant rotor R₀ establishes
+                   a preferred phase gradient direction ∇S₀
+      The coordinate r emerges as the relational distance measured along ∇S₀
+      — it is the accumulated phase gradient of the committed rotor, not a
+      pre-existing spatial dimension. Different committed topologies establish
+      different ∇S₀ directions; r is relational between them, not absolute.
+    status: >
+      Directionally established from derivative-reality-clarification.yaml
+      and state_transition_epistemics. Formal derivation showing how ∇S₀
+      after R5 collapse generates a metric structure is open.
+
+  t_emergence:
+    statement: >
+      t is the accumulated R5 cycle count — the number of completed
+      R3→R4→R5 events weighted by their local Π_eff. More precisely:
+        t = ∫ Π_eff(τ) dτ   (integral of local processing rate over cycles)
+      Each R5 firing event increments t by Π_eff at that location. In a
+      uniform substrate (constant Π_eff), t is a uniform cycle counter.
+      In a depressed-Π_eff region (dense matter, near committed topology),
+      t runs slower — gravitational time dilation is the derivative-level
+      expression of locally depressed R5 firing rate.
+    status: >
+      Consistent with Π_eff as the master equation's clock rate and with
+      GR time dilation as Π_eff depression. Formal derivation connecting
+      the R5 cycle count to the metric time coordinate t is open.
+    connection_to_gtr: >
+      The Π_eff → g₀₀ ∝ Π_eff² identification (emergent-classical-fields.yaml,
+      gravity_emergence) connects t emergence to GR time dilation directly:
+      regions of depressed Π_eff have slower R5 cycle rates → slower t →
+      gravitational time dilation. This is not postulated; it follows from
+      t = ∫Π_eff dτ if the identification g₀₀ ∝ Π_eff² is confirmed.
+
+---
+
+derivation_paths:
+
+  standard_path:
+    description: "Top-down: GA master equation → Madelung projection → GP"
+    steps:
+      - "1. Start with GA master equation in multivector form (Cl(3,0))"
+      - "2. Apply Madelung projection: ψ ↦ √ρ·exp(iS) — grade-0/grade-2 split (EXACT)"
+      - "3. Collapse R3 orientational superposition under R5 selection: Σᵢ cᵢRᵢ → R₀ + residual"
+      - "4. Read off emergent r from dominant phase gradient ∇S₀ (OPEN — metric emergence)"
+      - "5. Read off emergent t from accumulated Π_eff-weighted R5 cycle count (OPEN)"
+      - "6. Result: GP–Madelung equations in emergent coordinates r, t"
+    status: "Steps 1–2 exact and closed. Steps 3–6 identified, algebra open."
+
+  explorative_path:
+    description: "Bottom-up: R3 exploration → R5 selection → derivative layer"
+    statement: >
+      The explorative regime (R3) provides an alternative entry to the same
+      derivation. Rather than starting from the master equation and projecting
+      down, start from the R3 superposition and ask: what structure does R5
+      selection impose on the residual field?
+    steps:
+      - "1. R3 state: ψ = Σᵢ cᵢ·Rᵢ — full orientational superposition, pre-metric"
+      - "2. Viability weighting: |cᵢ|² weighted by R5 viability V(Rᵢ) — not all
+            orientations equally likely; V_c threshold suppresses non-viable rotors"
+      - "3. R5 selection: dominant rotor R₀ = argmax V(Rᵢ) commits to η"
+      - "4. Residual field: ψ_res = Σᵢ≠₀ cᵢ·Rᵢ — non-selected orientations
+            remain as substrate fluctuations around the committed topology"
+      - "5. Coordinate emergence: the pattern of ψ_res around R₀ defines the
+            relational structure that becomes r; the R5 firing rate defines t"
+      - "6. GP–Madelung: the dynamics of R₀ in the ψ_res background is the GP
+            equation — R₀ is ψ in the GP sense; ψ_res provides the effective
+            potential V_ext and self-interaction g|ψ|² terms"
+    advantage: >
+      The explorative path shows why the GP equation takes the form it does:
+      the self-interaction term g|ψ|² is R₀'s coupling to ψ_res — the
+      committed topology's interaction with the residual orientational field
+      around it. The saturation n_sat is the point where ψ_res is fully
+      committed (no residual orientational freedom left). This connects
+      n_sat directly to R3 exhaustion — the saturation limit is when R3
+      has no remaining unexplored orientations.
+    status: "Conceptually identified. Formal derivation connecting V(Rᵢ) to
+             the GP nonlinearity g|ψ|²/(1+|ψ|²/n_sat) is open."
+    open_derivation_id: "gp-from-r3-selection"
+
+  convergence: >
+    Both paths must converge on the same GP–Madelung equations. The standard
+    path approaches from the field equation downward; the explorative path
+    approaches from the selection mechanism upward. Their convergence would
+    constitute a complete derivation of the derivative layer from R1–R5 —
+    closing the mechanism gap that this file tracks.
+
+---
+
+n_sat_connection:
+  statement: >
+    The explorative path provides a new interpretation of n_sat:
+    n_sat = the orientational capacity of the substrate — the maximum number
+    of distinct R3 orientations that can be held simultaneously per grain
+    volume ξ³ before the R3 phase space is exhausted.
+    At |ψ|² = n_sat: R3 has no remaining unexplored orientations in ξ³ →
+    every new commitment displaces an existing one → saturation.
+    This is consistent with n-sat-from-topological-capacity (open derivation
+    in commitment-response-process-physics.yaml) but provides a more direct
+    R3-grounded interpretation: n_sat is not just a topological capacity count
+    but the R3 orientational phase space volume per grain.
+  status: >
+    Interpretive addition — does not replace the topological capacity
+    derivation but may simplify it: counting R3 orientational degrees of
+    freedom per ξ³ may be more tractable than counting stable winding
+    configurations directly.
+
+---
+
+implications:
+  gp_completeness: >
+    The GP–Madelung equations are correct and complete for the derivative level.
+    They do not reach the process level — r and t are emergent, not fundamental.
+    Using them to ask process-level questions (what is r at the process level?)
+    is a category error.
+  r3_as_vacuum: >
+    The residual field ψ_res after R5 selection is what QFT calls the vacuum.
+    It is not empty — it is the non-selected orientational superposition of the
+    R3 field around committed topology. Vacuum fluctuations are ψ_res fluctuations
+    — real in the R3 sense (indeterminate substrate), not virtual particles
+    briefly existing. This connects to excitation-distinctions.yaml: pre-R5
+    fluctuations are ψ_res dynamics, not committed states.
+  dark_energy_connection: >
+    ψ_res in voids (low committed topology, high Π_eff) has large orientational
+    freedom — wide R3 phase space. R_diss acting on weakly-protected ψ_res
+    configurations returns them to Praegress reservoir. This is the void-dominant
+    R_diss mechanism from friedmann-emergence.yaml, now grounded in the R3
+    orientational structure: voids have more R3 freedom → more ψ_res → more
+    R_diss activity → faster apparent expansion.
+
+---
+
+open_derivations:
+  - id: "gp-from-r3-selection"
+    description: >
+      Formal derivation connecting the R3 viability weighting V(Rᵢ) to
+      the GP nonlinearity g|ψ|²/(1+|ψ|²/n_sat). Show that the self-interaction
+      term is R₀'s coupling to ψ_res, and that n_sat is the R3 orientational
+      phase space volume per grain ξ³.
+    depends_on: ["ccr-electron-explicit", "n-sat-from-topological-capacity"]
+    priority: 1
+
+  - id: "metric-emergence-from-rotor"
+    description: >
+      Show that the dominant phase gradient ∇S₀ after R5 collapse generates
+      a metric structure — that r is the relational distance along ∇S₀ and
+      that the metric tensor emerges from the pattern of committed rotors.
+      Show that t = ∫Π_eff dτ reproduces the GR time coordinate including
+      gravitational time dilation.
+    depends_on: ["gp-from-r3-selection", "gravitational-ccr-mapping"]
+    priority: 2
+
+cross_references:
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "Madelung projection exact — grade-0/grade-2 split established"
+  - file: "core/process-physics/commitment-response-process-physics.yaml"
+    note: "R_forward/R_diss; GP as commitment-response field equation"
+  - file: "core/derivative-reality-clarification.yaml"
+    note: "r and t as emergent; process level coordinate-free"
+  - file: "core/process-physics/spin-as-field-effect.yaml"
+    note: "state_transition_epistemics; metric absent pre-realization"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "g₀₀ ∝ Π_eff² — t emergence connection to GR time dilation"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "ψ_res in voids → void-dominant R_diss — grounded here in R3 structure"
+  - file: "core/excitation-distinctions.yaml"
+    note: "Pre-R5 fluctuations = ψ_res dynamics — vacuum is not empty"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "n_sat functional form (issue_2) — R3 interpretation may simplify"
+  - file: "core/specifications.yaml"
+    note: "R3 as orientational superposition; R5 as viability selection"

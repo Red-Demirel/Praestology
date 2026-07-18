@@ -1,0 +1,221 @@
+# /core/inside-out-channeling.yaml
+name: "Inside-Out Channeling — Constraints from Commitment Sculpt the Potential Flow"
+version: "1.1"
+status: "Core clarification — core-invariant"
+domain: "Core"
+changes_from_v1.0: >
+  Added connection to gp-as-derivative-layer.yaml: ψ_res is the open
+  channel landscape; η is the constraint walls; GP saturation term is
+  channeling becoming total. Sharpened implication: constraints encode
+  commitment history — channeling is not automatically toward
+  viable outcomes. Added Π_eff suppression mechanism explicitly. Added
+  connection to R5 cycle rate and gravitational time dilation.
+
+statement: >
+  Constraints are the accumulated consequence of
+  inside-out commitment (R4). They sculpt the landscape through which
+  unresolved potential (Praegress) flows toward R5 selection. The potential
+  is not changed by the constraints — only its viable pathways are narrowed.
+  The process-rate Π_eff is suppressed where constraints are dense (high η)
+  because fewer viable R3 orientations remain open. This is the channeling
+  mechanism — the direct link between accumulated commitment and local R5
+  cycle rate.
+
+---
+
+components:
+  praesto:
+    role: "Foundational plenum — the substrate from which potential arises"
+    process_level: "R1 (existence)"
+
+  praegress:
+    role: >
+      Active flow of unresolved potential — the R3 orientational superposition
+      seeking viable pathways toward R5. Not a substance moving through space
+      but the process-level availability of uncommitted configurations.
+    process_level: "R3 (tension, exploration)"
+    connection_to_psi_res: >
+      In gp-as-derivative-layer.yaml terms: Praegress is the ψ_res field —
+      the non-selected R3 orientations that remain open around committed
+      topology. Praegress flows through the landscape sculpted by η;
+      ψ_res is the same flow described in GA rotor terms.
+
+  constraints:
+    role: >
+      Accumulated R4 commitments — the η field and its gradients (∇η, ρ).
+      These are the constraint walls that narrow Praegress pathways.
+      Not imposed from outside: they are the inside-out consequence of
+      previous R5 selections writing to η.
+    character: >
+      Constraints encode commitment history, not wisdom. A committed
+      topology that was R5-selected was viable at the moment of selection —
+      but it persists via topological protection regardless of whether
+      subsequent conditions still favor it. Dense constraint regions may
+      channel Praegress toward viable new configurations OR toward stasis
+      (if the accumulated commitments have narrowed pathways to the point
+      where R5 cannot fire at sufficient rate). The channeling is not
+      automatically beneficial.
+    gp_expression: >
+      In the GP equation: η corresponds to |ψ|². The constraint walls
+      appear as the self-interaction term g|ψ|²/(1+|ψ|²/n_sat) —
+      the potential landscape that committed topology creates for new
+      Praegress flow. As |ψ|² → n_sat, the saturation term suppresses
+      further commitment: the channel walls have met, leaving no viable
+      pathway width. This is channeling becoming total — the GP saturation
+      term is the mathematical expression of complete R3 phase space
+      exhaustion in a region.
+
+  r5_selection:
+    role: >
+      Where Praegress crosses V_c and commits to a specific topology.
+      R5 fires as a threshold event — not continuously but when the
+      accumulated orientational flow through a viable pathway reaches
+      sufficient amplitude.
+
+---
+
+channeling_mechanism:
+
+  pi_eff_suppression:
+    statement: >
+      Π_eff = local free potential = measure of how many viable R3
+      orientations remain open at a given location. Dense η (high
+      constraint density) narrows the viable pathway set → fewer open
+      R3 orientations → Π_eff suppressed. R5 fires at rate ∝ Π_eff:
+      where pathways are narrow, R5 fires less frequently → local
+      cycle rate drops.
+    formula_connection: >
+      Π_eff(r) ≈ Π₀ · (1 − η(r)/n_sat)
+      At low η: Π_eff ≈ Π₀ — full pathway width, standard R5 rate
+      At η → n_sat: Π_eff → 0 — pathways closed, R5 rate → 0
+      This is the same suppression that appears in the master equation
+      kinetic term −∇·(Π_eff ∇ψ): the gradient term is weighted by
+      local Π_eff, so dense-η regions contribute less to the field
+      dynamics — the master equation already encodes channeling.
+    gravitational_connection: >
+      Gravitational time dilation is the derivative-level expression of
+      locally suppressed R5 cycle rate from inside-out channeling:
+      dense committed topology (mass) narrows Praegress pathways →
+      depressed Π_eff → slower R5 firing → slower local t
+      (t = ∫Π_eff dτ from gp-as-derivative-layer.yaml).
+      Time runs slower near mass not because spacetime curves — but
+      because accumulated commitment has narrowed the viable pathway
+      landscape, suppressing the local R5 cycle rate.
+
+  pathway_narrowing_vs_closing:
+    narrowing: >
+      Moderate η: some pathways closed, others remain. Praegress is
+      channeled toward the remaining viable orientations. New R5
+      selections are guided by the constraint landscape — not
+      freely exploring all orientations but following the channels
+      left open by prior commitments. This produces correlated
+      commitment sequences: the history of R4 shapes what R5 can
+      select next.
+    closing: >
+      η → n_sat: pathways close entirely. R3 phase space exhausted
+      per grain ξ³. R5 cannot fire in the conventional sense —
+      any new commitment must displace an existing one (topology
+      reorganization rather than new commitment). This is the
+      near-saturation regime of the strong force and black hole
+      interiors: not stasis, but forced reorganization.
+    void_regime: >
+      η → 0: full pathway width. Praegress has maximum orientational
+      freedom — R3 explores widely, R5 fires at rate Π₀. This is
+      the void regime: widest channels, fastest local cycle rate,
+      maximum R_diss activity (weakly-protected ψ_res configurations
+      with no constraint walls to stabilize them).
+
+  inside_out_character:
+    statement: >
+      The channeling is inside-out because the constraints originate
+      from within the process, not from external boundary conditions.
+      Each R5 commitment creates new constraints that shape subsequent
+      Praegress flow. The process sculpts its own landscape as it
+      proceeds — commitment history determines commitment possibility.
+    consequence: >
+      This produces path-dependence: the viable orientations available
+      at any location depend on the R4 history of that region.
+      Two regions with the same current η may have different Praegress
+      pathway structures if their commitment histories differ — the
+      same constraint density reached by different routes may channel
+      new Praegress differently. This is not captured by η alone;
+      it requires the full ψ_res structure (the pattern of remaining
+      open orientations), which is why the GP equation (|ψ|² only)
+      is an approximation that loses some path-dependence information.
+    open: >
+      Whether the path-dependence of channeling is physically
+      significant at accessible scales — or whether it averages out
+      to the η-only GP description — is an open question. It would
+      manifest as hysteresis effects in strongly-driven systems
+      (different final states reached from the same η via different
+      commitment histories). Candidate observable: different crystalline
+      phases of the same material reached by different cooling paths —
+      the standard hysteresis of phase transitions, here given a
+      process-level mechanism.
+
+---
+
+connection_to_r5_cycle_rate:
+  statement: >
+    The local R5 cycle rate is:
+      Γ_R5(r) ∝ Π_eff(r) · V(R₀) · δ(|ψ|² − V_c)
+    where:
+      Π_eff(r):    local viable pathway width (suppressed by η)
+      V(R₀):       viability of the dominant rotor at this location
+      δ(|ψ|²−V_c): threshold condition — R5 fires when amplitude
+                   crosses V_c, not continuously
+    Inside-out channeling suppresses Π_eff(r) and thereby suppresses
+    Γ_R5(r) in dense-η regions. This is the mechanism connecting
+    accumulated commitment to local time rate — gravitational time
+    dilation, clock rates in strong fields, and the slowing of
+    biological processes in metabolically dense tissue are all
+    expressions of Γ_R5 suppression by inside-out channeling.
+  biological_note: >
+    Metabolically dense tissue maintains high local η (committed
+    biochemical structures). This slightly suppresses local Π_eff
+    and Γ_R5. Whether this is measurable or physiologically significant
+    is speculative — the effect would be orders of magnitude below
+    gravitational time dilation in laboratory conditions. Flagged as
+    a domain extension, not a physics core claim.
+    Domain: consciousness / biology (Ξ > 1 regime).
+
+---
+
+open_derivations:
+  - id: "pi-eff-from-channeling-density"
+    description: >
+      Formal derivation of Π_eff(r) ≈ Π₀·(1 − η(r)/n_sat) from the
+      R3 orientational phase space exhaustion argument. Show that the
+      viable pathway width decreases linearly with η in the low-η limit
+      and approaches zero at saturation — confirming the GP kinetic
+      term weighting by Π_eff.
+    depends_on: ["n-sat-from-topological-capacity", "gp-from-r3-selection"]
+    priority: 2
+
+  - id: "path-dependence-in-channeling"
+    description: >
+      Determine whether the path-dependence of Praegress channeling
+      (same η, different commitment history → different ψ_res structure)
+      produces measurable effects at accessible scales. If yes, identify
+      the observable signature (hysteresis in phase transitions as
+      candidate). If no (averages to η-only description), establish why.
+    depends_on: ["pi-eff-from-channeling-density"]
+    priority: 3
+
+---
+
+cross_references:
+  - file: "core/specifications.yaml"
+    note: "R4 (commitment), R5 (viability selection), V_c threshold"
+  - file: "core/gp-as-derivative-layer.yaml"
+    note: "ψ_res as open channel landscape; η as constraint walls; GP saturation as total channeling"
+  - file: "core/process-physics/commitment-response-process-physics.yaml"
+    note: "R_forward/R_diss; Π_eff suppression in master equation kinetic term"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Void regime: maximum pathway width → maximum R_diss → apparent Λ"
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "CCR potential wells as constraint landscape features"
+  - file: "core/derivative-reality-clarification.yaml"
+    note: "η as committed record; Π_eff as process-level quantity"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "Gravity regime: Π_eff gradient refraction = channeling at large scale"
