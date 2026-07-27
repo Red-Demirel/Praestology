@@ -1,0 +1,198 @@
+# /domains/physics/higgs-as-probe-artifact.yaml
+name: "Higgs Boson as Probe Artifact – Environmental Stress and Falsifiability"
+version: "1.0"
+status: "Structural hypothesis – testable via in-medium mass shifts and probe-response analysis"
+domain: "physics"
+description: >
+  The Higgs boson is not a fundamental particle. It is a transient ripple
+  in the grade-0 condensate, excited by the brute-force application of
+  high-energy collisions in an environment where the potential well is
+  already under stress. The observed mass (~125 GeV) is not a property
+  of the field but a measurement of the stressed environment.
+
+  This hypothesis is falsifiable. It makes specific, testable predictions
+  about the environment-dependence of the Higgs boson mass and the
+  interpretation of collider data.
+
+dependency_map:
+  requires:
+    - "core/process-physics/forces-as-rotor-consequences.yaml (higgs_as_field_effect)"
+    - "core/process-physics/spin-as-field-effect.yaml (CCR potential-well structure)"
+    - "core/process-physics/friedmann-emergence.yaml (probe epistemics)"
+  provides_to:
+    - target: "domains/physics/collider-physics-critique.yaml"
+      via: "Structural explanation for the absence of 'new physics'"
+
+# ─────────────────────────────────────────────
+# CORE HYPOTHESIS
+# ─────────────────────────────────────────────
+
+core_hypothesis:
+  statement: >
+    The Higgs boson is a transient ripple in the grade-0 condensate,
+    created by the brute-force application of high-energy collisions in
+    an environment where the potential well is already under stress.
+    Its mass (~125 GeV) is not a fundamental property of the condensate
+    but the energy cost of excitation under those specific conditions.
+
+    The search for the Higgs was a systematic exploration of the field's
+    response to ever-higher stress, not a hunt for a fundamental particle.
+    The LHC found it at 125 GeV because that was the energy required to
+    excite the condensate under the stress of a hadron collider collision.
+
+  historical_progression: >
+    The decades of collider experiments (LEP → Tevatron → LHC) were a
+    systematic process of ruling out mass ranges and building machines
+    capable of creating enough stress to excite the ripple. Each exclusion
+    narrowed the viable window; each energy increase was necessary to
+    explore the remaining territory. The discovery proved the field exists
+    (the condensate), not that the particle is fundamental.
+
+# ─────────────────────────────────────────────
+# TESTABLE PREDICTIONS
+# ─────────────────────────────────────────────
+
+testable_predictions:
+  - prediction: "In-medium Higgs mass shift"
+    statement: >
+      The Higgs boson mass should shift in dense matter or strong-field
+      environments where the potential well is compressed. In heavy-ion
+      collisions (Pb-Pb at LHC), the condensate is already under stress
+      from the dense nuclear environment. The effective mass of the Higgs
+      boson produced in such environments should be different from the
+      vacuum value (~125 GeV). The sign and magnitude of the shift depend
+      on the local Π_eff and η.
+    experimental_context: >
+      Heavy-ion runs at LHC (Pb-Pb collisions) produce a dense, high-η
+      environment where the potential well is compressed. Existing data
+      from these runs can be re-analysed for evidence of a mass shift.
+    falsification: >
+      If the Higgs boson mass is found to be identical (within experimental
+      uncertainty) in heavy-ion collisions and in proton-proton collisions,
+      the environmental stress hypothesis is falsified.
+
+  - prediction: "Probe-dependent mass measurement"
+    statement: >
+      The measured Higgs boson mass should depend on the probe used to
+      excite the condensate. The probe's own CCR response (its coupling
+      to the potential well) affects the energy cost of excitation.
+      Measurements using different probes (e.g., different decay channels,
+      different collision energies) should show systematic variations
+      in the measured mass.
+    experimental_context: >
+      The Higgs boson has been measured in multiple decay channels
+      (γγ, ZZ*, WW*, ττ, bb). If the probe's CCR response varies,
+      the mass measured in each channel should show slight systematic
+      variations beyond statistical uncertainty.
+    falsification: >
+      If all decay channels produce exactly the same mass (within
+      experimental precision) and this is confirmed across different
+      collision energies, the probe-dependence hypothesis is falsified.
+
+  - prediction: "No 'new physics' because none is needed"
+    statement: >
+      The rotor framework predicts that no "new physics" beyond the
+      standard model will be found at colliders. The standard model's
+      gauge symmetries and particle content are derivative-level
+      descriptions of the same field dynamics. What appears as "new
+      physics" (supersymmetry, extra dimensions, etc.) is not absent
+      but unnecessary—the existing structures are already explained by
+      the rotor dynamics.
+    experimental_context: >
+      Current and future collider experiments (HL-LHC, FCC, etc.) will
+      continue to search for deviations from the standard model.
+      The rotor framework predicts that none will be found; only more
+      precise measurements of the existing structure.
+    falsification: >
+      If any deviation from the standard model that cannot be explained
+      by known physics is discovered at a collider, and if that deviation
+      is confirmed by independent experiments, the rotor framework's
+      prediction is falsified.
+
+# ─────────────────────────────────────────────
+# CONVERGENCE WITH EXISTING CRITIQUES
+# ─────────────────────────────────────────────
+
+convergence:
+  statement: >
+    This hypothesis converges with several critical perspectives on
+    collider physics:
+      - "The LHC only found what was reliably predicted (the Higgs);
+         no 'new physics'." — Sabine Hossenfelder, others
+      - "Future colliders are a 'waste of money' with 'no discovery
+         guarantee'." — Sabine Hossenfelder, others
+      - "The physics community has never split like this over a
+         proposed collider." — Halina Abramowicz, Nature
+      - "Collider experiments cannot test locality or entanglement."
+         — Steven Abel et al.
+
+    The rotor framework provides the structural explanation for these
+    critiques: collider experiments are brute-force applications in an
+    already stressed environment. The absence of "new physics" is not
+    a failure of nature but a consequence of expecting to find fundamental
+    particles that do not exist.
+
+# ─────────────────────────────────────────────
+# FALSIFICATION CONDITIONS
+# ─────────────────────────────────────────────
+
+falsification:
+  condition_1: >
+    If the Higgs boson mass is found to be identical (within
+    experimental uncertainty) in heavy-ion collisions and in
+    proton-proton collisions, the environmental stress hypothesis
+    is falsified.
+
+  condition_2: >
+    If all decay channels produce exactly the same mass (within
+    experimental precision) and this is confirmed across different
+    collision energies, the probe-dependence hypothesis is falsified.
+
+  condition_3: >
+    If any deviation from the standard model that cannot be explained
+    by known physics is discovered at a collider, and if that deviation
+    is confirmed by independent experiments, the rotor framework's
+    prediction that no "new physics" is needed is falsified.
+
+  note: >
+    These falsification conditions are concrete and experimentally
+    testable. They distinguish the rotor framework from unfalsifiable
+    philosophical interpretations.
+
+# ─────────────────────────────────────────────
+# OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+  - id: "higgs-mass-environmental-shift"
+    description: >
+      Derive the expected shift in Higgs boson mass as a function of
+      local η and Π_eff, using the CCR potential-well structure from
+      spin-as-field-effect.yaml. Compare to existing data from heavy-ion
+      runs at LHC (Pb-Pb collisions) where the condensate is under stress
+      from the dense nuclear environment.
+    depends_on: ["higgs-as-condensate-ripple", "ccr-well-width-uniformity"]
+
+  - id: "probe-ccr-response-correction"
+    description: >
+      Derive the correction to Higgs boson mass measurements as a function
+      of the probe's CCR response. Show that the mass measured in each
+      decay channel is the true mass plus a probe-dependent offset.
+      This would explain systematic variations if observed.
+    depends_on: ["gauge-field-from-rotor", "ccr-electron-explicit"]
+
+# ─────────────────────────────────────────────
+# CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+cross_references:
+  - file: "core/process-physics/forces-as-rotor-consequences.yaml"
+    note: "Higgs as condensate and transient ripple (higgs_as_field_effect)"
+  - file: "core/process-physics/spin-as-field-effect.yaml"
+    note: "CCR potential-well structure; well-width uniformity"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Probe epistemics — same constraint applies to collider measurements"
+  - file: "core/derivative-reality-clarification.yaml"
+    note: "Process vs. realized level; grade-restriction in measurement"
+  - file: "language-is-derivative.md"
+    note: "Linguistic grade-restriction as analogue of probe epistemics"
