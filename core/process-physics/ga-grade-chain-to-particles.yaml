@@ -1,0 +1,346 @@
+# /core/process-physics/ga-grade-chain-to-particles.yaml
+name: "GA Grade Chain: From Phase Configuration Space to Particles"
+version: "0.2"
+status: "STRUCTURAL DERIVATION — photon, electron, proton structures established
+         as natural GA outcomes; quantitative CCR and three-fold binding algebra open.
+         Circular dependency resolved: this file depends on ga-grades-as-process-stages,
+         not the reverse. geometric-algebra-bridge-amendment-cl30.yaml reference
+         corrected to geometric-algebra-bridge.yaml."
+domain: "Core / Process-Physics"
+changes_from_v0.1: >
+  Resolved circular dependency with ga-grades-as-process-stages.yaml.
+  Replaced geometric-algebra-bridge-amendment-cl30.yaml references.
+  Added explicit cross-references to existing session files that cover
+  the same content: photon-mass-and-proton-excess.yaml (inward/outward
+  closure), vortex-stability.yaml (CCR derivation), forces-as-rotor-
+  consequences.yaml (Higgs, Yukawa). Added quark confinement connection
+  to excitation-distinctions.yaml (pre-R5 fluctuations around partial
+  closures). Noted that neutron/isospin open derivation connects to
+  photon-mass-and-proton-excess.yaml nuclear binding extension.
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/geometric-algebra-bridge.yaml"
+    - "core/process-physics/madelung-as-rotor-consequence.yaml"
+    - "core/process-physics/photon-mass-and-proton-excess.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/vortex-stability.yaml"
+  provides_to:
+    - target: "core/process-physics/emergent-classical-fields.yaml"
+      via: "Particle content derived from GA chain rather than assumed"
+    - target: "core/process-physics/forces-as-rotor-consequences.yaml"
+      via: "Force carriers and matter as specific GA configurations"
+
+---
+
+orientation_note:
+  statement: >
+    This file traces the evolution from phase configuration space
+    (grade-1 potential flows) through progressive GA operations to
+    stable committed particle structures. What standard physics calls
+    a "particle" is a specific stable configuration at a particular
+    point in the grade progression of Cl(3,0). From the process side
+    there are no particles — only rotor configurations at different
+    stages of the grade chain. The particle is the η-side description
+    of whatever stable topology the chain has produced.
+  key_result: >
+    One orientation parameter difference in the same GA operation
+    produces completely different physical character — force carrier
+    vs matter, zero rest mass vs non-zero rest mass, spin-1 vs spin-½.
+    This is not a postulate. It is what Cl(3,0) rotor algebra does.
+
+---
+
+grade_chain:
+
+  grade_1_potential_flows:
+    stage: "R2/R3 — first distinctions"
+    ga_object: "Grade-1 vector: v = v₁e₁ + v₂e₂ + v₃e₃"
+    description: >
+      The first distinctions from indeterminate potential are grade-1
+      vector flows — directed gradients with no closure, no rotational
+      structure, no commitment. Orientation without topology. Maximum
+      freedom — all rotation planes available.
+    committed_analog: "None — pre-metric, pre-vortex"
+
+  grade_2_vortex_formation:
+    stage: "R3 — vorticity interface"
+    ga_object: "Grade-2 bivector: B = a∧b"
+    description: >
+      Intersection of grade-1 flows produces oriented rotation planes —
+      bivectors. The curl of the grade-1 flow: ∇∧u = B. First rotational
+      structure — a directed plane of rotation with specific orientation
+      but not yet closed into a stable loop.
+    committed_analog: "Incipient field vortex — not yet particle-like"
+
+  rotor_formation:
+    stage: "R3/R4"
+    ga_object: "Rotor R = exp(-Bθ/2) in even subalgebra of Cl(3,0)"
+    description: >
+      The bivector exponentiated into a stable spinning configuration.
+      Encodes both the plane of rotation (B) and the phase angle (θ).
+      The fundamental process-level object from which all particle
+      structures are built.
+    double_cover: >
+      Under 2π rotation: R → -R (sign flip).
+      Under 4π rotation: R → +R (returns to identity).
+      Double-cover intrinsic to Cl(3,0) — not a quantum postulate.
+      The algebraic origin of spin-½. See vortex-stability.yaml for
+      the physical derivation of why the 720° closure is the stable
+      Möbius topology.
+
+---
+
+particle_structures:
+
+  photon:
+    configuration: "Two counter-oriented rotors in the same bivector plane"
+    ga_operation: >
+      R · R† = exp(-Bθ/2) · exp(+Bθ/2) = 1
+      (R† is the reverse of R — same plane B, opposite phase orientation)
+    grade_residue: >
+      Grade-2 components cancel completely. Product collapses to scalar
+      identity, leaving only a propagating grade-1 residual — the phase
+      gradient ∇S in the Madelung decomposition.
+    physical_character:
+      propagates: "Grade-1 flow — yes"
+      phase_structure: "Counter-orientation → travelling wave pattern"
+      stable_closure: "No stable self-referential grade-2 residue"
+      inward_closure: "Zero — Regress-dominant, outward only"
+      rest_mass: "Zero — zero inward Praegress self-closure"
+      connection: "photon-mass-and-proton-excess.yaml #inward_vs_outward_closure"
+    polarisation: >
+      Left circular: R · R† (R leads)
+      Right circular: R† · R (R† leads)
+      Linear: superposition of both
+      All from the same GA operation and its orderings. No separate
+      postulate for polarisation.
+    why_natural: >
+      Counter-oriented rotor pairs always cancel grade-2 character
+      in Cl(3,0). The photon is the inevitable GA outcome of two
+      counter-oriented vortices in the same rotation plane.
+
+  electron:
+    configuration: "Two co-oriented rotors in the same bivector plane"
+    ga_operation: >
+      R · R = exp(-Bθ/2) · exp(-Bθ/2) = exp(-Bθ)
+    grade_residue: >
+      Grade-2 component deepens rather than cancelling. Product is a
+      rotor with double the phase — a stable grade-2 structure with
+      self-referential topological closure.
+    physical_character:
+      spin_half: >
+        720° periodicity: a 360° rotation of R·R corresponds to 180°
+        rotation of each constituent R — requires 720° to return to
+        original state. Spin-½ without postulation.
+      writhe: >
+        The merged double-rotor has non-zero self-linking of its phase
+        path (Calugareanu-White Wr ≠ 0). This writhe enters the CCR
+        calculation directly — α = (Wr·Ω_rotor)/Ω_embed is the CCR
+        of this configuration. Full derivation: vortex-stability.yaml
+        #ccr_derivation_path (open — priority 1).
+      inward_closure: "Non-zero — self-referential grade-2 loop"
+      rest_mass: "Non-zero CCR cost of the inward closure"
+      topological_protection: >
+        The double-phase winding cannot be continuously unwound without
+        passing through a singularity — the algebraic ground of particle
+        stability. f(topological_protection) ≈ 0 for the electron
+        (vortex-stability-process-physics.yaml).
+    chirality: >
+      Co-oriented in plane B = +e₁∧e₂: left-handed electron
+      Co-oriented in plane B = -e₁∧e₂: right-handed electron
+      (positron: opposite orientation — same grade-2 structure,
+      opposite bivector sign)
+    why_natural: >
+      Co-oriented rotor pairs always deepen grade-2 character in Cl(3,0).
+      Spin-½, chirality, and topological stability are not postulates —
+      they are what co-oriented rotor merger produces in this algebra.
+
+  contrast_table:
+    description: "One parameter difference, completely different physical character"
+    entries:
+      - config: "Counter-oriented: R · R†"
+        grade_residue: "Grade-0/1 only (cancellation)"
+        character: "Photon: propagating, zero rest mass, Regress-dominant, spin-1"
+      - config: "Co-oriented: R · R"
+        grade_residue: "Grade-2 stable (deepening)"
+        character: "Electron: spin-½, non-zero CCR, rest mass, topologically protected"
+    significance: >
+      Same algebra. Same bivector plane. One orientation parameter.
+      The entire distinction between force carriers and matter falls
+      out of one sign difference in the GA operation. Particle character
+      is derived, not postulated.
+
+  quarks:
+    configuration: "Single rotor with fractional grade-2 closure"
+    description: >
+      Quarks are intermediate configurations — single rotors that have
+      undergone partial topological closure but cannot reach stable
+      independent R5 commitment without binding partners. Fractional
+      charges (1/3, 2/3) reflect partial writhe values — fractions of
+      the full Möbius winding that completes only in three-fold binding.
+    confinement_reading: >
+      A single rotor with fractional closure has incomplete grade-2
+      structure. It cannot stabilise independently because remaining
+      open grade components require binding partners to reach stable
+      commitment. Attempting separation requires more energy than
+      producing a new rotor pair to complete the closure locally —
+      exactly what quark pair production demonstrates.
+      The pre-R5 fluctuations around partial closures are the gluon
+      field (excitation-distinctions.yaml #pre_r5_fluctuations) —
+      the virtual particle carpet of QCD is the grade-1 phase-drag
+      around incomplete grade-2 closures.
+    status: "STRUCTURAL HYPOTHESIS — fractional writhe calculation open:
+             quark-fractional-writhe open derivation"
+
+  proton:
+    configuration: "Three co-oriented rotors in mutually orthogonal bivector planes"
+    ga_operation: >
+      R₁ · R₂ · R₃ = exp(-B₁θ/2) · exp(-B₂θ/2) · exp(-B₃θ/2)
+      where B₁ = e₁∧e₂, B₂ = e₂∧e₃, B₃ = e₁∧e₃
+    grade_residue: >
+      Three-rotor product in mutually orthogonal planes involves the
+      pseudoscalar I = e₁e₂e₃ — the grade-3 element of Cl(3,0).
+      Full 3D committed volume: a metric well with spatial extent.
+    physical_character:
+      spatial_extent: "Grade-3 pseudoscalar fills committed volume — proton is not point-like"
+      mass_excess: >
+        Three-fold binding is a new topological structure in its own
+        right — its own CCR, not the sum of three quark CCR values.
+        Proton mass >> quark sum because the binding topology is a
+        distinct committed structure at higher depth.
+        See photon-mass-and-proton-excess.yaml #proton_mass_excess.
+      self_dual: >
+        I² = -1 in Cl(3,0). The bound state has no external grade
+        components left to propagate colour force outward.
+        Colour confinement is algebraically exact: the pseudoscalar
+        is its own dual — no external face.
+      asymptotic_freedom: >
+        At high Π_eff, three-fold binding cost drops relative to
+        available phase space — rotors partially decouple, quarks
+        behave nearly free. Low Π_eff: binding dominant, confinement.
+        Same CCR freedom-reduction mechanism at different Π_eff values.
+    su3_colour: >
+      Before three rotors fully commit to mutual orthogonality, three
+      orientational degrees of freedom remain (which rotor occupies
+      which plane). These are the colour degrees of freedom — the
+      residual freedom of the three-fold configuration before binding
+      locks. SU(3) is the symmetry of this residual freedom, consistent
+      with freedom-reduction-as-unified-principle.yaml: gauge symmetry
+      as residual freedom, not generator of physics.
+    why_natural: >
+      Three co-oriented rotors in mutually orthogonal Cl(3,0) planes
+      inevitably produce a grade-3 pseudoscalar. Proton 3D extent,
+      mass excess, confinement, and asymptotic freedom all follow
+      from this algebraic necessity.
+
+---
+
+grade_chain_summary:
+  statement: >
+    The full chain from phase configuration space to committed particles:
+
+      Grade-1 flows    →  first distinctions, directed potential (R2)
+           ↓ intersection and wedging (R3)
+      Grade-2 bivector →  oriented rotation plane, vortex structure
+           ↓ exponentiation (R4)
+      Single rotor     →  stable spinning configuration, pre-particle
+           ↓ counter-oriented merger (R·R†)
+      Photon           →  grade-1 residual only — zero rest mass, spin-1
+           ↓ co-oriented merger (R·R)
+      Electron         →  grade-2 deepened — spin-½, CCR, rest mass
+           ↓ fractional closure
+      Quark            →  incomplete grade-2 — confined, fractional charge
+           ↓ three-fold orthogonal binding (R₁·R₂·R₃)
+      Proton           →  grade-3 pseudoscalar — 3D, massive, confined
+           ↓ R5 commitment
+      η                →  committed metric well, observable matter
+
+    Each arrow is a specific GA operation in Cl(3,0).
+    No new postulate enters at any step.
+    Particle character is the grade structure of the committed topology.
+
+---
+
+extension_to_weak_force:
+  statement: >
+    The W/Z bosons and Higgs fit the chain:
+  w_z_bosons: >
+    SU(2) orientation-switching modes — topology-switching between
+    two co-oriented rotor configurations at the weak commitment depth.
+    The switching cost (W/Z mass) is the CCR of the SU(2) orientation
+    space transition. High mass because the switching propagates
+    through committed structure (high restriction cost at weak depth).
+    See forces-as-rotor-consequences.yaml #weak_force_emergence.
+  higgs_condensate: >
+    Stable grade-0 vacuum expectation value — the scalar component of
+    the SU(2) orientation space settling into a preferred orientation.
+    It is the grade-0 scalar (R1-level) acting as a background field
+    that biases subsequent rotor orientation closures. Yukawa coupling
+    is each fermion topology's scalar overlap s = ⟨L_fermion · L_higgs⟩₀
+    (the relation from ga-dynamic-theory.yaml) — the CCR of the fermion
+    rotor against the grade-0 Higgs background.
+    See forces-as-rotor-consequences.yaml #higgs_as_field_effect.
+
+---
+
+open_derivations:
+  - id: "electron-ccr-from-double-rotor-writhe"
+    description: >
+      Explicit calculation of writhe Wr of the R·R double-rotor
+      Möbius configuration using CWF, recovering α = (Wr·Ω_rotor)/Ω_embed.
+      This is the same as ccr-electron-explicit in vortex-stability.yaml —
+      the GA and GP formulations should converge on the same answer.
+    depends_on: ["vortex-stability.yaml#ccr-electron-explicit"]
+    priority: 1
+
+  - id: "quark-fractional-writhe"
+    description: >
+      Fractional charge values (1/3, 2/3) as fractional writhe of
+      incomplete single-rotor closure in Cl(3,0).
+    depends_on: ["electron-ccr-from-double-rotor-writhe"]
+    priority: 2
+
+  - id: "proton-grade3-mass-from-binding-ccr"
+    description: >
+      Explicit calculation of three-fold binding CCR from R₁·R₂·R₃
+      pseudoscalar product, recovering proton mass excess (~929 MeV).
+      Same as proton-mass-from-su3-binding-ccr in photon-mass-and-
+      proton-excess.yaml — the GA route to the same result.
+    depends_on: ["quark-fractional-writhe", "su3-from-triality"]
+    priority: 2
+
+  - id: "neutron-isospin-from-rotor-configuration"
+    description: >
+      Neutron as distinct three-fold rotor configuration — same orthogonal
+      planes, different orientation assignment — recovering mass difference
+      and isospin from GA. Connects to nuclear-binding-energy-from-depth-ccr
+      in photon-mass-and-proton-excess.yaml.
+    depends_on: ["proton-grade3-mass-from-binding-ccr"]
+    priority: 3
+
+---
+
+cross_references:
+  - file: "core/process-physics/ga-grades-as-process-stages.yaml"
+    note: "Grade structure foundation — this file depends on that one"
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "Lock primitives; closure mechanics; null vector (photon) treatment"
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "Cl(3,0) grade structure — authoritative reference"
+  - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "Inward/outward closure (photon); proton mass non-additivity"
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "Rotor as fundamental object; grade-0/grade-2 decomposition"
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "CCR derivation path — ccr-electron-explicit is priority 1"
+  - file: "core/process-physics/forces-as-rotor-consequences.yaml"
+    note: "Higgs condensate; Yukawa as CCR; gauge symmetry emergence"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "SU(3) as residual freedom; gauge structure from grade chain"
+  - file: "core/excitation-distinctions.yaml"
+    note: "Pre-R5 fluctuations around partial closures = QCD virtual particles"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR as writhe cost of each committed rotor configuration"
