@@ -1,0 +1,352 @@
+# /core/process-physics/ga-dynamic-theory.yaml
+name: "GA Dynamic Theory: Fundamental Layer"
+version: "0.2"
+status: "FOUNDATIONAL — algebraic primitives only; no vortex, fluid,
+         or informational language; downstream descriptions derive from this.
+         Forward references to ga-grades-as-process-stages.yaml and
+         ga-grade-chain-to-particles.yaml flagged as not yet written."
+domain: "Core / Process-Physics"
+changes_from_v0.1: >
+  Added null vector note connection to photon-mass-and-proton-excess.yaml:
+  null vectors are the algebraic form of outward-only closure (zero inward
+  restriction cost).
+  Added time_index connection to gp-as-derivative-layer.yaml: transition
+  count is the pre-metric form of t = ∫Π_eff dτ. Added heat_measure and
+  inertia_measure as grounding for Π_eff: Π_eff is the rate version of
+  the dim(open)/dim(closed) ratio, not the reverse.
+
+dependency_map:
+  requires:
+    - "core/process-physics/geometric-algebra-bridge.yaml"
+    - "core/specifications.yaml (R1–R5)"
+  forward_references_not_yet_written:
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/ga-grade-chain-to-particles.yaml"
+  provides_to:
+    - target: "core/process-physics/thermodynamics-and-heat-emergence.yaml"
+      via: "heat_measure and inertia_measure as algebraic grounding for T and mass"
+    - target: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+      via: "Closure as the algebraic form of freedom reduction"
+    - target: "core/gp-as-derivative-layer.yaml"
+      via: "Time index as pre-metric transition count — precursor to t = ∫Π_eff dτ"
+
+---
+
+purpose:
+  statement: >
+    This file establishes the algebraic primitives of the framework
+    in Cl(3,0) without introducing downstream language (vortex,
+    fluid, force, particle, information). Those descriptions are
+    correct at their respective levels but emerge from the primitives
+    here — they are not primitive. This layer is the algebraic
+    ground from which all downstream descriptions are derived.
+
+  what_precedes_this_layer: >
+    R1–R5 (specifications.yaml) establish the process rules.
+    This file establishes the algebraic objects that instantiate
+    those rules in Cl(3,0). The rules are ontological; the GA
+    objects are their mathematical expression. Neither the rules
+    nor the algebra are derived from each other — they are co-natural
+    (specifications.yaml #ga_conatural_with_r_rules).
+
+---
+
+primitives:
+  lock:
+    definition: >
+      A vector, bivector, or trivector configuration in Cl(3,0) that
+      has undergone sufficient grade progression to resist further
+      reconfiguration. Locks are the fundamental committed objects —
+      not particles, not fields, not information units. Particle
+      structures are specific stable lock configurations (pending:
+      ga-grade-chain-to-particles.yaml).
+    invertibility: >
+      The relative geometric product G = L₁L₂⁻¹ requires L₂ to be
+      invertible. Invertibility is guaranteed for:
+        Even-subalgebra elements (rotors: RR† = 1) — always invertible
+        Grade-1 vectors with non-zero norm (v⁻¹ = v/v² when v² ≠ 0)
+      Null vectors (v² = 0) are not invertible in this sense. They
+      require separate treatment — see null_vector_note below.
+    grades:
+      grade_1: "Open lock — directed, not yet self-referential"
+      grade_2: "Oriented lock — planar commitment (bivector B = a∧b)"
+      grade_3: "Closed lock — full volumetric commitment (trivector)"
+      rotor: "Stable spinning lock — even-subalgebra, self-referential loop"
+
+  null_vector_note:
+    statement: >
+      Null vectors (v² = 0, lightlike configurations) are the algebraic
+      form of outward-only closure — configurations that propagate
+      their geometric product outward without producing a non-zero
+      scalar self-product. They are not invertible because they have
+      no self-overlap (⟨vv⟩₀ = v² = 0). This corresponds precisely
+      to the photon (photon-mass-and-proton-excess.yaml): zero inward
+      Praegress closure, zero self-referential loop, zero rest mass.
+      The photon's separate treatment in that file is the physical
+      expression of null vectors requiring separate algebraic treatment here.
+    connection: >
+      Non-null vectors (v² ≠ 0) → non-zero inward closure → rest mass.
+      Null vectors (v² = 0) → zero inward closure → zero rest mass.
+      The algebraic distinction is exact; the physical distinction is
+      inward vs outward closure from photon-mass-and-proton-excess.yaml.
+
+  relation:
+    definition: >
+      Scalar overlap between two locks:
+        s = ⟨L₁L₂⟩₀
+      The grade-0 projection of their geometric product — how much their
+      configurations agree in orientation and magnitude. Maximum s:
+      identical configurations. Zero s: orthogonal configurations.
+      Negative s: opposed configurations.
+    process_reading: >
+      s is the algebraic form of CCR alignment — how well two committed
+      configurations close against each other. s = 1: perfect closure,
+      zero CCR mismatch. s = 0: no closure, maximum mismatch.
+      The CCR is a specific instance of s for rotor configurations.
+
+  gradient:
+    definition: >
+      Directional tendency arising from scalar overlap variation:
+        g = ∇s
+      Not a spatial force. The rate of change of configurational
+      agreement across the relational neighbourhood — how strongly
+      adjacent lock configurations are misaligned and in which
+      direction realignment would reduce mismatch.
+    process_reading: >
+      g is the algebraic form of Praegress flow direction — the
+      tendency of uncommitted configurations to align with the
+      local lock neighbourhood. What downstream descriptions call
+      a "force" is g at a specific commitment depth and grade.
+
+  bivector_gradient:
+    definition: >
+      Orientational mismatch between neighbouring locks:
+        ⟨G⟩₂ = ⟨L₁L₂⁻¹⟩₂
+      The grade-2 component of the relative geometric product —
+      the rotational discrepancy between two adjacent committed
+      configurations. Pure orientational mismatch; no spatial
+      metric required.
+    process_reading: >
+      ⟨G⟩₂ is what downstream descriptions call a field gradient,
+      shear field, or force field — here expressed purely as
+      orientational mismatch between adjacent locks, without
+      importing spatial or force language at this layer.
+
+---
+
+dynamics:
+  closure:
+    statement: >
+      Grade progression toward self-referential configuration.
+      Closure is not automatic — it occurs when grade progression
+      produces an even-subalgebra element (rotor) whose phase path
+      self-links into a topologically stable loop.
+
+    three_steps:
+      step_1:
+        from: "Grade-1 (open vector)"
+        to: "Grade-2 (bivector B = a∧b)"
+        mechanism: "Orientational intersection — two grade-1 vectors
+                    combine into an oriented plane. Not yet closed;
+                    the plane has orientation but no phase loop."
+        reversibility: "Reversible — no threshold crossed yet"
+
+      step_2:
+        from: "Grade-2 (bivector)"
+        to: "Rotor R = exp(-Bθ/2)"
+        mechanism: "Exponentiation of the bivector plane into a
+                    stable spinning loop. The phase path winds around
+                    the oriented plane. Closure threshold (V_c) is
+                    crossed here — this is the R5 event at the
+                    algebraic level."
+        reversibility: "Irreversible — R5 threshold crossed, η incremented"
+        note: "720° winding (Möbius topology) produces R² = -1 before
+               returning to R = 1 — the algebraic origin of spin-½.
+               360° winding produces R = 1 after one cycle — spin-1."
+
+      step_3:
+        from: "Rotor (grade-2 even-subalgebra)"
+        to: "Grade-3 (trivector / pseudoscalar)"
+        mechanism: "Three-fold binding of rotor configurations into
+                    a committed volume. The full lock — maximum
+                    restriction, minimum remaining freedom."
+        note: "This step corresponds to triality closure (SU(3)
+               three-fold vortex binding). Not all rotors proceed
+               to grade-3; most stable particle structures are
+               grade-2 rotors (electron, photon-equivalent) or
+               grade-3 composites (hadrons)."
+
+  shear_resolution:
+    statement: >
+      Bivector mismatch (⟨G⟩₂ ≠ 0) drives reconfiguration toward
+      alignment (mismatch reduction) or dissolution (lock release back
+      to lower grade). Direction of resolution is determined by g = ∇s.
+    connection_to_r5: >
+      Shear resolution is R5 at the algebraic level: the field evolves
+      to reduce ⟨G⟩₂ by either (a) committing adjacent configurations
+      to the same orientation (η increment, Praegress commitment), or
+      (b) releasing the lock back to grade-1 (Regress, R_diss).
+      Which occurs depends on whether s exceeds V_c (algebraic form
+      of the viability threshold).
+
+  arrow:
+    statement: >
+      Closure is irreversible: locked configurations accumulate into η;
+      freedom migrates to background potential. Directionality is not
+      imposed — it is the structural consequence of closure being a
+      threshold event (R5) rather than a continuous process. Once a
+      configuration crosses the closure threshold, its grade-2 or
+      grade-3 structure cannot spontaneously revert to grade-1 without
+      sufficient counter-gradient from the neighbourhood (Regress).
+    connection_to_r4: >
+      This is R4 at the algebraic level: commitment is permanent.
+      The grade transition at the R5 threshold writes irreversibly
+      to the lock record — the algebraic form of η accumulation.
+
+---
+
+algebraic_measures:
+  heat_measure:
+    formula: "T_alg = dim(span{open grade-1 vectors}) / dim(span{closed rotors})"
+    reading: >
+      Ratio of unclosed grade-1 degrees of freedom to closed
+      (locked) ones in a local neighbourhood. High ratio: many
+      open vectors, high configurational mobility. Low ratio:
+      predominantly locked configurations, low mobility.
+    connection_to_pi_eff: >
+      Π_eff is the rate version of this ratio — how fast new grade-1
+      vectors are produced relative to the closure rate. T_alg is
+      the static snapshot; Π_eff is the dynamic rate. Π_eff = dT_alg/dt
+      (rate of change of the open/closed ratio). This grounds Π_eff
+      in the algebraic primitive rather than introducing it as a
+      separate quantity.
+    connection_to_thermodynamics: >
+      temperature-as-pi-eff-formal (thermodynamics-and-heat-emergence.yaml
+      open derivation) should proceed via this connection: derive
+      T ∝ T_alg from the statistical mechanics of lock configurations,
+      then show Π_eff = dT_alg/dt recovers the equipartition theorem.
+
+  inertia_measure:
+    formula: "m_alg = rank(closure matrix) / total grade-1 vector count"
+    reading: >
+      Fraction of available vector degrees of freedom that have
+      undergone closure. High rank: most freedom locked — high
+      resistance to reconfiguration. Low rank: predominantly open
+      — low resistance.
+    closure_matrix: >
+      The closure matrix M_ij encodes which grade-1 vectors (i) have
+      committed to which grade-2 planes and rotors (j). rank(M) is
+      the number of independent closures — the dimension of the
+      committed subspace of the local lock neighbourhood.
+    connection_to_ccr: >
+      The CCR (Wr·Ω_rotor/Ω_embed) is the rate version of m_alg for
+      specific stable rotor topologies. m_alg is the algebraic measure;
+      CCR is the dynamic ratio when applied to rotor phase rates.
+      Inertial mass = CCR × Π_eff scale-setter follows from
+      m_alg × (rate of closure per unit time).
+
+  time_index:
+    formula: "t_alg = Σ closure events in local neighbourhood (weighted)"
+    reading: >
+      Count of closure events — a local ordering of before/after
+      without a global clock. Not a coordinate in a pre-given temporal
+      dimension. Time is what closure events accumulate.
+    connection_to_intrinsic_time: >
+      t_alg is the pre-metric form of t = ∫Π_eff dτ from
+      gp-as-derivative-layer.yaml. When closure events are weighted
+      by local Π_eff (the rate of open/closed ratio change), the
+      discrete count t_alg becomes the continuous integral t = ∫Π_eff dτ.
+      The intrinsic time of the framework is the metric version of
+      this pre-metric count. Gravitational time dilation is
+      suppressed Π_eff → fewer closure events per external time unit
+      → slower t_alg accumulation in dense-η regions.
+
+  gradient_field:
+    formula: "G = L₁L₂⁻¹ (where L₂ invertible)"
+    reading: >
+      The full relative configuration between two locks — encodes
+      both scalar agreement (grade-0 component, = s = ⟨G⟩₀) and
+      orientational mismatch (grade-2 component, = ⟨G⟩₂) simultaneously.
+      The gradient field across a neighbourhood is the collection of
+      pairwise relative products.
+    decomposition: >
+      G = ⟨G⟩₀ + ⟨G⟩₂ + (higher grades if non-invertible)
+      = s + ⟨G⟩₂
+      The scalar part drives magnitude equalisation (pressure-like).
+      The bivector part drives orientational alignment (force-like).
+      All downstream force descriptions emerge from ⟨G⟩₂ at specific
+      commitment depths and grade projections.
+
+---
+
+what_this_layer_does_not_introduce:
+  statement: >
+    This file deliberately avoids:
+      — Vortex language (specific stable rotor configurations — derived
+        in ga-grade-chain-to-particles.yaml, not yet written)
+      — Fluid or flow language (borrowed from committed-level phenomena
+        — derived in fluid-universality-from-r3-r5.yaml)
+      — Informational language (derivative-level bookkeeping)
+      — Spatial metric (emergent from committed lock structure —
+        derived in gp-as-derivative-layer.yaml)
+      — Force language (emergent from ⟨G⟩₂ gradient dynamics —
+        derived in forces-as-rotor-consequences.yaml)
+      — Particle names (specific stable lock configurations —
+        pending ga-grade-chain-to-particles.yaml)
+    These all emerge from the lock dynamics described here. This file
+    provides the algebraic primitives; downstream files derive the
+    physical language.
+
+---
+
+open_derivations:
+  - id: "ga-grades-as-process-stages"
+    description: >
+      Map each R1–R5 stage to its GA grade expression systematically.
+      Should establish the full grade progression table from grade-0
+      (scalar commitment density η) through grade-3 (full trivector
+      closure), with each grade corresponding to a specific process
+      stage. This file assumes that mapping; the formal file is pending.
+    priority: 1
+    status: "PENDING — required for ga-grade-chain-to-particles.yaml"
+
+  - id: "ga-grade-chain-to-particles"
+    description: >
+      Derive specific stable lock configurations (electron, photon,
+      quarks, etc.) as specific rotor and trivector configurations
+      in Cl(3,0). Should show that the particle spectrum is the set
+      of stable lock configurations under the closure dynamics of
+      this file, without additional postulation.
+    depends_on: ["ga-grades-as-process-stages", "ccr-electron-explicit"]
+    priority: 2
+    status: "PENDING — depends on ga-grades-as-process-stages"
+
+  - id: "temperature-as-pi-eff-from-t-alg"
+    description: >
+      Derive T ∝ T_alg (dim open / dim closed) from the statistical
+      mechanics of lock configurations, then show Π_eff = dT_alg/dt
+      recovers the equipartition theorem. This closes
+      temperature-as-pi-eff-formal (thermodynamics-and-heat-emergence.yaml)
+      via the algebraic route rather than the statistical route.
+    depends_on: ["ga-grades-as-process-stages"]
+    priority: 2
+
+---
+
+cross_references:
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "Cl(3,0) grade structure — this file adds dynamic lock rules"
+  - file: "core/specifications.yaml"
+    note: "R1–R5 co-natural with GA — this file is the algebraic instantiation"
+  - file: "core/process-physics/madelung-as-rotor-consequence.yaml"
+    note: "Rotor as the closure object — grade-2→rotor transition established here"
+  - file: "core/process-physics/thermodynamics-and-heat-emergence.yaml"
+    note: "heat_measure grounds T = Π_eff; inertia_measure grounds mass"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "Closure is the algebraic form of freedom reduction"
+  - file: "core/gp-as-derivative-layer.yaml"
+    note: "t_alg is the pre-metric form of t = ∫Π_eff dτ"
+  - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "Null vectors as the algebraic form of outward-only closure"
+  - file: "core/clarifications/fluid-universality-from-r3-r5.yaml"
+    note: "⟨G⟩₂ gradient dynamics as the algebraic ground of force/flow"
