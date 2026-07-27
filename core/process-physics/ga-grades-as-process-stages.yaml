@@ -1,0 +1,295 @@
+# /core/process-physics/ga-grades-as-process-stages.yaml
+name: "GA Grades as Process Stages: The R1–R5 Cascade as Topological Grade Progression"
+version: "0.3"
+status: "STRUCTURAL MAPPING — grade/process correspondence established;
+         circular dependency with ga-grade-chain-to-particles resolved;
+         geometric-algebra-bridge-amendment-cl30.yaml reference corrected
+         to geometric-algebra-bridge.yaml (content already there)"
+domain: "Core / Process-Physics"
+changes_from_v0.2: >
+  Resolved circular dependency: this file is the foundation (grade structure
+  only); ga-grade-chain-to-particles.yaml depends on this, not the reverse.
+  Replaced geometric-algebra-bridge-amendment-cl30.yaml references with
+  geometric-algebra-bridge.yaml. Flagged order-ontology.md as external
+  reference not yet in file set. Added cross-references to existing session
+  files covering the same mechanisms: quantum-zeno-as-commitment.yaml for
+  grade-1 stutter/QZE, forces-as-rotor-consequences.yaml for gauge force
+  mechanism, fluid-universality-from-r3-r5.yaml for grade-1 flow dynamics.
+
+dependency_map:
+  requires:
+    - "core/specifications.yaml (R1–R5; indeterminism_as_ground)"
+    - "core/process-physics/geometric-algebra-bridge.yaml"
+    - "core/process-physics/ga-dynamic-theory.yaml"
+  provides_to:
+    - target: "core/process-physics/ga-grade-chain-to-particles.yaml"
+      via: "Grade structure and closure mechanics as foundation for particle taxonomy"
+    - target: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+      via: "Grade progression as the physical engine of freedom reduction"
+  external_references_not_in_file_set:
+    - "order-ontology.md — referenced as the logical cascade foundation;
+       not yet in repository"
+
+---
+
+core_mapping:
+  statement: >
+    The R1–R5 cascade is a grade progression in Cl(3,0). The five rules
+    are not independently postulated — they are the natural topological
+    stages of a grade-0 to grade-3 progression in three-dimensional
+    geometric algebra, driven by an independent relational progress count (dN).
+    What R1–R5 specifies logically, GA expresses geometrically: the same
+    sequence, two languages.
+  single_axiom_consequence: >
+    The logical exclusion of nothingness (R1) produces a grade-0 scalar —
+    something rather than nothing, with magnitude but no direction. The grade
+    progression from 0 to 3 in Cl(3,0) necessarily follows: each grade
+    represents a degree of topological closure required to prevent the
+    previous stage from collapsing back into the uncommitted state.
+  decoupling_principle:
+    statement: >
+      Progress (the discrete operational update count dN) is strictly
+      decoupled from spatial direction (the grade-1 vector v). Progress
+      is the intrinsic clock — the count of R5 closure events. Spatial
+      vectors represent orientation and open propagation across the
+      uncommitted phase space.
+    connection_to_intrinsic_time: >
+      dN is the pre-metric form of t = ∫Π_eff dτ from
+      gp-as-derivative-layer.yaml and t_alg from ga-dynamic-theory.yaml.
+      When dN events are weighted by local Π_eff, the count becomes the
+      continuous intrinsic time. Decoupling dN from spatial vectors
+      eliminates artificial paradoxes of time: time is not a spatial
+      dimension but the count of closure events.
+
+---
+
+grade_to_process_mapping:
+
+  grade_0_scalar:
+    r_stage: "R1 — Existence"
+    ga_object: "Scalar: α (pure magnitude / scalar potential)"
+    character: >
+      Something rather than nothing. Magnitude without direction,
+      without orientation, without rotation. Indeterminate but present.
+      Maximum freedom — all grades still available.
+    process_reading: >
+      R1 (indeterminism as ground, specifications.yaml) produces this:
+      a scalar field of indeterminate potential. No preferred direction
+      (indeterminism = no preferred state = no preferred orientation).
+      No spatial container. No time coordinate. The null space of the
+      commitment operator — the kernel of ga-dynamic-theory.yaml.
+    freedom: "Maximum — all directions, orientations, rotations uncommitted"
+
+  grade_1_vector:
+    r_stage: "R2/R3 — Distinction / Open Vector Flow"
+    ga_object: "Vector: v = v₁e₁ + v₂e₂ + v₃e₃"
+    character: >
+      Directional displacement and open interaction gradients. The first
+      distinction establishes a spatial orientation — unclipped directional
+      momentum moving through uncommitted phase space.
+    decoupled_reading:
+      progress_clock: >
+        dN ticks independently of spatial direction — the operational
+        update rate along any path, not the direction of that path.
+      directional_vector: >
+        Open spatial orientation: linear gradient flow or force-propagation.
+        A pure grade-1 vector represents radiation or uncommitted force
+        steps — massless photon propagation, null-vector paths. No
+        internal closure, no localised mass.
+    vector_stutter: >
+      When unconstrained, a grade-1 vector may form transient uncommitted
+      micro-loops that re-open before completing closure — "vector stutter."
+      Frequent environmental interruptions reset the phase before full
+      closure occurs. This is the GA primitive expression of the Quantum
+      Zeno Effect (quantum-zeno-as-commitment.yaml): frequent R5 events
+      (environmental interruptions) reset the grade-1 → grade-2 progression
+      before bivector formation, suppressing transition. Grade-1 stutter
+      is also the GA form of vacuum fluctuations — pre-R5 substrate
+      fluctuations (excitation-distinctions.yaml #pre_r5_fluctuations)
+      in algebraic terms.
+    freedom: "Reduced — spatial line established; rotation planes open"
+
+  grade_2_bivector:
+    r_stage: "R3 — Motion / Vorticity"
+    ga_object: "Bivector: B = a∧b (oriented plane)"
+    character: >
+      Circulation and area closure. The plane of rotation defined by two
+      intersecting grade-1 vectors. Encodes local circulation and oriented
+      area — the first rotational structure.
+    gauge_force_mechanism: >
+      Forces emerge as the phase-drag and shear created when grade-1
+      vector flows propagate around partially or fully closed bivector
+      loops. This is the GA ground of what forces-as-rotor-consequences.yaml
+      describes at the process level: forces are not abstract fiber bundles
+      but the physical phase-drag of open grade-1 vectors flowing past
+      closed grade-2 structures. The gauge groups (U(1), SU(2), SU(3))
+      are the residual freedom of the partial closure at each depth
+      (freedom-reduction-as-unified-principle.yaml #gauge_structure_as_residual_freedom).
+    partial_closures: >
+      Partial bivector closures (incomplete grade-1 → grade-2 transition)
+      act as obstacles in uncommitted phase space, deflecting surrounding
+      open vectors and producing observable field effects — the GA form
+      of virtual particle interactions (pre-R5 fluctuations around
+      partial closures, excitation-distinctions.yaml).
+    process_reading: >
+      Grade-1 flows intersecting and wedging: ∇∧u = B (bivector).
+      Progressive restriction — rotation plane fixed, phase angle still open.
+    freedom: "Further reduced — rotation plane fixed; internal phase open"
+
+  rotor_even_subalgebra:
+    r_stage: "R4 — Commitment / Gyroscopic Inertia"
+    ga_object: "Rotor: R = exp(-Bθ/2) in even subalgebra of Cl(3,0)"
+    character: >
+      Sustained, locked rotation. The bivector plane exponentiated into
+      a stable spinning configuration — a persistent rotational loop
+      encoding plane (B) and phase angle (θ).
+    gyroscopic_inertia: >
+      Mass/inertia is the gyroscopic resistance of a closed bivector rotor.
+      Accelerating or reorienting a rotor requires deforming its circulating
+      plane against its intrinsic progress-rate (dN/dτ). The locked rotor
+      reduces environmental compliance, yielding rest mass (m > 0).
+      This is inertia as reconfiguration resistance — the R5-side reading
+      from gravity-inertia-equivalence-from-r5.yaml, here given its GA
+      algebraic form: rank(closure matrix) / total vector count
+      (ga-dynamic-theory.yaml #inertia_measure).
+    double_cover: >
+      Under 2π rotation: R → -R (sign flip).
+      Under 4π rotation: R → +R (returns to identity).
+      Double-cover property intrinsic to Cl(3,0) rotors — geometric fact,
+      not quantum postulate. The GA origin of spin-½
+      (ga-grade-chain-to-particles.yaml derives particle structures from this).
+    freedom: "Substantially reduced — plane, phase, and internal clock locked"
+
+  grade_3_pseudoscalar:
+    r_stage: "R5 — Optimisation / Committed Volume"
+    ga_object: "Pseudoscalar: I = e₁e₂e₃ (oriented 3D volume)"
+    character: >
+      Completed volume. Full three-dimensional committed structure —
+      simultaneous saturation of all three spatial directions.
+      The metric well of committed reality.
+    self_duality: >
+      In Cl(3,0): I² = -1. The pseudoscalar is self-dual — no external
+      open-grade components left to propagate outward. Fully committed
+      3D structures (colour-neutral hadrons, complete metric wells) do
+      not radiate open force gradients because their topological boundary
+      is fully closed. Confinement is algebraically exact here.
+    process_reading: >
+      R5 closes the final topological degree of freedom. Three orthogonal
+      rotation planes commit simultaneously, writing a stable volume into η.
+      Space (∇η), time (stroboscopic dN/dτ count), and mass (accumulated
+      closure cost) emerge as derivative observable properties.
+    freedom: "Minimum — all local spatial grades committed; residual degrees = gauge symmetries"
+
+---
+
+unified_table:
+  entries:
+    - r_stage: "R1"
+      grade: "0"
+      ga_object: "Scalar α"
+      character: "Magnitude without direction"
+      topological_state: "Uncommitted potential / null space"
+      physical_manifestation: "Quantum vacuum"
+      freedom: "Maximum"
+
+    - r_stage: "R2"
+      grade: "1 (static/open)"
+      ga_object: "Vector v — orientation"
+      character: "Open direction / linear gradient"
+      topological_state: "Open propagation / vector stutter"
+      physical_manifestation: "Forces, photon propagation, vacuum fluctuations"
+      freedom: "Reduced"
+
+    - r_stage: "R3"
+      grade: "1→2 (transition)"
+      ga_object: "Vector v → Bivector B"
+      character: "Open flow wedging into area"
+      topological_state: "Partial vector-closure"
+      physical_manifestation: "Gauge fields, partial closures, pre-particle"
+      freedom: "Further reduced"
+
+    - r_stage: "R4"
+      grade: "even subalgebra"
+      ga_object: "Rotor R = exp(-Bθ/2)"
+      character: "Sustained rotation, phase locked"
+      topological_state: "Closed loop rotor"
+      physical_manifestation: "Bound matter, leptons, gyroscopic inertia"
+      freedom: "Substantially reduced"
+
+    - r_stage: "R5"
+      grade: "3"
+      ga_object: "Pseudoscalar I = e₁e₂e₃"
+      character: "Completed 3D volume"
+      topological_state: "Saturated 3D committed knot"
+      physical_manifestation: "Colour-neutral hadrons, metric wells"
+      freedom: "Minimum (residual = gauge symmetry)"
+
+---
+
+what_this_establishes:
+  for_ga_dynamic_theory: >
+    ga-dynamic-theory.yaml established the algebraic primitives (lock,
+    relation, gradient, bivector-gradient, closure, arrow). This file
+    maps those primitives to the R1–R5 stages: the lock IS the grade
+    progression; closure IS the R4→R5 threshold event; the arrow IS
+    the irreversibility of grade commitment.
+  for_downstream_files: >
+    ga-grade-chain-to-particles.yaml derives specific stable particle
+    structures from the grade chain established here. That file depends
+    on this one — not the reverse. The grade structure is the foundation;
+    the particle derivations are the application.
+  for_existing_session_files: >
+    The mechanisms described here at the algebraic level are described
+    at the process-physics level in existing files:
+      Grade-1 stutter / QZE: quantum-zeno-as-commitment.yaml
+      Gauge force as phase-drag: forces-as-rotor-consequences.yaml
+      Grade-1 flow dynamics: fluid-universality-from-r3-r5.yaml
+      Freedom reduction: freedom-reduction-as-unified-principle.yaml
+      Null space: ga-dynamic-theory.yaml #null_space equivalent
+    This file provides the GA algebraic grounding for those descriptions.
+
+---
+
+open_derivations:
+  - id: "r1r5-as-cl30-grade-necessity"
+    description: >
+      Formal proof that the grade-0 to grade-3 progression in Cl(3,0)
+      is the minimum sequence following from the logical exclusion of
+      nothingness — R1–R5 as necessary consequences of the single axiom
+      rather than five independent postulates. Requires order-ontology.md
+      (not yet in file set).
+    depends_on: ["core/specifications.yaml#R1",
+                 "order-ontology.md (external — not yet in repository)"]
+    priority: 1
+
+  - id: "gauge-forces-from-partial-closure"
+    description: >
+      Mathematical formulation showing how SU(3) non-Abelian gauge fields
+      and colour charges emerge as shear gradients between fractional
+      (1/3, 2/3) bivector closures in Cl(3,0). Connects to
+      gauge-from-residual-freedom-formal in freedom-reduction file.
+    depends_on: ["ga-grade-chain-to-particles.yaml",
+                 "su3-from-triality"]
+    priority: 2
+
+---
+
+cross_references:
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "Algebraic primitives (lock, closure, arrow) — this file maps them to R1–R5"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Particle structures from this grade chain — depends on this file"
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "Cl(3,0) grade structure — foundation (replaces geometric-algebra-bridge-amendment-cl30.yaml reference)"
+  - file: "core/process-physics/quantum-zeno-as-commitment.yaml"
+    note: "Grade-1 stutter as QZE mechanism — process-level description of same"
+  - file: "core/process-physics/forces-as-rotor-consequences.yaml"
+    note: "Gauge force as phase-drag — process-level description of same"
+  - file: "core/clarifications/fluid-universality-from-r3-r5.yaml"
+    note: "Grade-1 flow as Praegress flow — same dynamics, fluid framing"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "Grade progression as freedom reduction — residual freedom as gauge symmetry"
+  - file: "core/specifications.yaml"
+    note: "R1–R5 definitions; indeterminism as ground (grade-0 character)"
+  - file: "core/gp-as-derivative-layer.yaml"
+    note: "dN as pre-metric form of t = ∫Π_eff dτ"
