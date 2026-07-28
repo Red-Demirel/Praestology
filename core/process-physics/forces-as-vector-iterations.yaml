@@ -1,0 +1,317 @@
+# /core/process-physics/forces-as-vector-iterations.yaml
+name: "Forces as Higher-Iteration Vector Expressions"
+version: "0.2"
+status: "STRUCTURAL DERIVATION — iteration hierarchy established;
+         gravity/inertia relationship made precise; formal grade-transition
+         algebra for each force open"
+domain: "Core / Process-Physics"
+changes_from_v0.1: >
+  Corrected forces-as-rotor-consequence.yaml → forces-as-rotor-consequences.yaml
+  throughout. Flagged quantum-behaviour-as-process-regimes.yaml as not yet
+  in file set. Added gravity/inertia precision: gravity is ∇s from outside
+  (neighbourhood pull); inertia is rank(M) from inside (structure resisting).
+  Equal because both measure the same R5 commitment depth — one reading.
+  Added graviton category-error note: quantizing gravity fails because it
+  treats first-order ∇s as if it were second-order ⟨G⟩₂.
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/ga-grade-chain-to-particles.yaml"
+    - "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+  not_yet_in_file_set:
+    - "core/process-physics/quantum-behaviour-as-process-regimes.yaml"
+    - "core/process-physics/weak-force-higgs.yaml"
+  bridges_to:
+    - file: "core/process-physics/forces-as-rotor-consequences.yaml"
+      via: "Vector iteration structure → specific rotor configurations;
+            this file provides the iteration logic, that file provides
+            the rotor algebra"
+
+---
+
+foundational_vocabulary:
+  statement: >
+    Resonance, dissonance, and interference are the fundamental vector
+    interaction vocabulary from which forces emerge as higher-iteration
+    expressions. All derivable from the scalar overlap s = ⟨L₁L₂⟩₀
+    and bivector gradient ⟨G⟩₂ = ⟨L₁L₂⁻¹⟩₂ (ga-dynamic-theory.yaml).
+
+  resonance:
+    definition: >
+      High scalar overlap (s → maximum), zero bivector gradient (⟨G⟩₂ → 0).
+      Lock configurations aligned — geometric products reinforce in grade-0.
+      Phase relationships constructively add; no mismatch to resolve;
+      maximum mutual stability.
+    wave_regime: "Constructive interference — amplitude reinforcement"
+    committed_regime: "Binding — stable coupled lock configurations
+                       (electron pairs, three-fold proton binding)"
+    same_condition: "Both are s → maximum at different closure states"
+
+  dissonance:
+    definition: >
+      Low scalar overlap (s → 0 or negative), high bivector gradient
+      (⟨G⟩₂ large). Configurations misaligned — geometric products
+      produce predominantly grade-2 output, minimal grade-0 component.
+      Maximum neighbourhood stress; shear_resolution strongly driven.
+    wave_regime: "Destructive interference — amplitude cancellation"
+    committed_regime: "Repulsion — like-charge configurations;
+                       Pauli exclusion between identical lock states"
+    same_condition: "Both are s → 0 at different closure states"
+
+  interference:
+    definition: >
+      Superposition of multiple lock configurations in the open regime
+      before closure. Scalar overlaps and bivector gradients of all
+      contributing configurations sum across the neighbourhood.
+    constructive: >
+      Where s values add: local configuration space deepens toward
+      closure — higher R5 firing probability. Bright fringe.
+    destructive: >
+      Where s values cancel: local phase space flattens — R5 suppressed.
+      Dark fringe.
+    pattern: >
+      The interference pattern IS the gradient field ∇s across the
+      neighbourhood before any R5 event fires. The spatial map of
+      scalar overlap variation is the interference pattern — the direct
+      expression of the relational configuration state in the open regime.
+      Not a derived consequence; the ∇s field is the interference pattern.
+
+---
+
+gravity_inertia_as_one_r5_event:
+  statement: >
+    Gravity and inertia are the same R5 commitment depth read from
+    two different positions: the neighbourhood reads it as ∇s (gravity);
+    the structure reads it as rank(M) (inertia). Their equality —
+    the equivalence principle — is the algebraic statement that one
+    R5 event produces the same quantity from both sides.
+
+  gravity_first_order:
+    statement: >
+      Gravity is the first-order scalar gradient ∇s operating directly
+      on committed grade-3 lock density. No carrier configuration —
+      the gradient propagates through the open neighbourhood as the
+      direct expression of scalar overlap variation between committed
+      structures. The neighbourhood is pulled toward higher s.
+    what_it_is_not: >
+      Gravity is NOT a second-iteration force with a carrier (graviton).
+      Attempting to quantize gravity as a second-iteration interaction
+      fails because it treats the first-order ∇s as if it were a
+      second-order bivector gradient ⟨G⟩₂ — applying the iteration
+      logic of EM/weak/strong to an interaction that operates at one
+      level below. This is the category error that produces
+      non-renormalizable infinities: second-order quantization machinery
+      applied to a first-order gradient produces divergences that have
+      no process-level regulator because the regulator (finite Π_eff)
+      operates at the process level, not at the derivative-level
+      perturbative expansion around a fixed background ∇s.
+    connection: "gravity-inertia-equivalence-from-r5.yaml — full mechanism"
+
+  inertia_inside_reading:
+    statement: >
+      Inertia is the resistance of a committed structure's own lock state
+      to reconfiguration — rank(M) of the closure matrix (ga-dynamic-theory.yaml
+      #inertia_measure) resisting change. When an external ∇s gradient
+      acts on a committed structure, the structure's own inward closure
+      resists the implied reconfiguration. The resistance is proportional
+      to how many degrees of freedom have already been locked — how deep
+      the R5 commitment was.
+    equality_with_gravity: >
+      Gravitational mass (how strongly a structure generates ∇s in its
+      neighbourhood, proportional to its grade-3 lock density) and
+      inertial mass (how strongly it resists external ∇s gradients,
+      proportional to rank(M)) are equal because:
+        Grade-3 lock density ∝ rank(M) — the same committed degrees
+        of freedom that generate the gradient also resist being changed.
+        One R5 event, one commitment depth, two readings.
+      The equivalence principle is not a coincidence requiring explanation —
+      it is the algebraic identity between the outside-reading and the
+      inside-reading of the same closure depth.
+
+---
+
+iteration_principle:
+  statement: >
+    Forces are second-order vector interactions: open-regime mismatch
+    propagation (grade-1/2) between configurations that have already
+    undergone one round of closure (grade-2/3 locks). The force is
+    the open-regime echo of closed-regime mismatch.
+
+  first_iteration: >
+    Grade-1 flows producing grade-2 bivector structure through
+    orientational intersection. The R3 vorticity interface — first
+    closure round producing locked orientational planes. No forces yet;
+    this is the wave/pre-particle regime.
+
+  second_iteration: >
+    Mismatch between already-closed grade-2/3 configurations generates
+    a propagating open-regime gradient. The closed configurations cannot
+    simply realign (high inertia_measure); instead their mismatch drives
+    a grade-1/2 propagation through the surrounding open neighbourhood.
+    This propagating mismatch gradient is the force. The force carrier
+    is the propagating pattern itself — an open-regime vector interaction
+    between closed-regime structures.
+
+  why_em_is_the_template: >
+    EM is the second-iteration vector interaction at the lowest closure
+    grade (grade-2 rotors), with the simplest carrier (photon: fully open,
+    massless — counter-oriented rotors cancel all grade-2 character,
+    leaving pure grade-1 propagation). EM was described first and most
+    completely in vector/field terms because it is the most direct
+    translation of second-iteration GA structure into committed-level
+    observables. Other forces required QFT because their carriers have
+    closure costs (mass) or self-interactions — not failures of the
+    vector approach but consequences of operating at higher closure grades.
+
+---
+
+force_iteration_table:
+
+  gravity:
+    iteration_order: "First order — scalar gradient, no carrier"
+    closed_config: "Grade-3 committed volume (η density)"
+    mismatch_type: "Scalar overlap gradient g = ∇s directly"
+    carrier: "None — gradient IS the interaction"
+    range: "Infinite — no carrier closure cost"
+    why_different: >
+      First-order scalar gradient between committed structures —
+      not quantizable by rotor-exchange mechanism. Graviton is
+      not a configuration in this algebra: no partial-closure
+      carrier exists for a first-order gradient. The graviton
+      would be a second-iteration carrier for a first-order
+      interaction — a category mismatch.
+
+  electromagnetism:
+    iteration_order: "Second order — lowest closure grade"
+    closed_config: "Grade-2 rotor (phase-locked orientation)"
+    mismatch_type: "Grade-2 bivector gradient ⟨G⟩₂ between rotors"
+    carrier: "Photon — counter-oriented rotor pair R·R†, pure grade-1,
+              zero closure cost (no inward closure — zero rest mass)"
+    range: "Infinite — massless carrier"
+    residual_freedom: "U(1) phase rotation — what remains open after
+                       grade-2 phase-locking in one plane"
+    rotor_expression: "forces-as-rotor-consequences.yaml #maxwell_emergence"
+
+  weak_force:
+    iteration_order: "Second order — higher closure grade"
+    closed_config: "Grade-2 topology-committed structure (specific
+                    quark/lepton rotor configuration)"
+    mismatch_type: "Topology-switching bivector gradient — during
+                    identity reconfiguration (flavour change)"
+    carrier: "W/Z bosons — partially-closed rotor configurations
+              with their own closure cost (non-zero rest mass)"
+    range: "Short — carrier closure cost limits propagation"
+    residual_freedom: "SU(2) — two remaining orientation degrees of
+                       freedom during topology switching"
+    rotor_expression: "forces-as-rotor-consequences.yaml #weak_force_emergence"
+
+  strong_force:
+    iteration_order: "Second order — maximum closure grade"
+    closed_config: "Grade-3 partial closure (three-fold rotor binding)"
+    mismatch_type: "Grade-2/3 binding gradient between partially-
+                    closed three-fold configurations"
+    carrier: "Gluons — partial-closure rotor pairs carrying residual
+              grade-2 mismatch (colour charge). Self-interacting because
+              the carrier is not fully open — it participates in the
+              grade-2 mismatch it mediates."
+    range: "Confined — gluon self-interaction produces increasing
+            binding gradient with separation"
+    self_interaction_reading: >
+      Gluons carry colour charge because they are partial-closure
+      configurations, unlike photons (fully open). Non-Abelian SU(3)
+      vs Abelian U(1) is the algebraic expression of this: gluons
+      participate in what they mediate; photons do not.
+      The partial-closure carrier is the reason strong force is
+      non-Abelian — the carrier grade structure generates the
+      self-coupling automatically.
+    residual_freedom: "SU(3) — three orientation degrees of freedom
+                       before full pseudoscalar commitment"
+    rotor_expression: "forces-as-rotor-consequences.yaml #strong_force_emergence"
+
+---
+
+resonance_to_force_chain:
+  statement: >
+    The complete chain from fundamental vector interactions to forces:
+
+      Scalar overlap s = ⟨L₁L₂⟩₀
+           ↓ variation across neighbourhood
+      Gradient g = ∇s                →  GRAVITY (first order)
+      Bivector gradient ⟨G⟩₂         →  RESONANCE / DISSONANCE
+           ↓ between grade-2 closed configurations
+      Grade-1 open carrier           →  EM (second order)
+           ↓ topology-switching mismatch, grade-2 partial carrier
+      Grade-2 partial-closure carrier →  WEAK (second order, higher)
+           ↓ three-fold binding mismatch, self-interacting carrier
+      Grade-2/3 self-interacting     →  STRONG (second order, maximum)
+
+    Resonance and dissonance are the open-regime expressions of the
+    same scalar overlap and bivector gradient that produce forces
+    in the closed-regime. Wave behaviour and forces are not categorically
+    different — they are the same vector interaction algebra at different
+    closure states.
+
+  inertia_position: >
+    Inertia sits outside this chain — it is not a force but the
+    resistance of closed configurations to being moved through the
+    chain by external ∇s (gravity). The chain describes forces between
+    committed structures; inertia describes why those structures resist
+    being affected by forces. Inertia is rank(M); force is ∇s or ⟨G⟩₂;
+    the equivalence principle is rank(M) ∝ grade-3 lock density.
+
+---
+
+open_derivations:
+  - id: "interference-pattern-as-gradient-field-formal"
+    description: >
+      Formal identification of double-slit interference pattern as the
+      ∇s field across the neighbourhood — showing the observed intensity
+      distribution is the direct spatial map of scalar overlap variation
+      before R5 fires.
+    depends_on: ["ga-dynamic-theory.yaml"]
+    priority: 3
+
+  - id: "force-range-from-carrier-closure-cost"
+    description: >
+      Formal derivation of force range as function of carrier closure
+      cost — recovering infinite range for massless carriers (photon)
+      and Yukawa-type range ~exp(-mr)/r for massive carriers (W/Z)
+      from the carrier's lock threshold.
+    depends_on: ["ga-grade-chain-to-particles.yaml",
+                 "photon-mass-and-proton-excess.yaml"]
+    priority: 2
+
+  - id: "non-abelian-from-partial-closure-carrier"
+    description: >
+      Formal derivation of non-Abelian gauge structure (SU(2), SU(3))
+      as the consequence of partial-closure carriers participating in
+      their own mediated interaction — recovering gluon self-interaction
+      and W/Z self-coupling from carrier grade structure without postulation.
+    depends_on: ["su3-from-triality", "forces-as-rotor-consequences.yaml"]
+    priority: 2
+
+---
+
+cross_references:
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "s, ⟨G⟩₂, g = ∇s — algebraic primitives for all entries"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Photon as fully-open carrier; electron/quark/proton as
+           closed configurations generating force mismatch"
+  - file: "core/process-physics/ga-grades-as-process-stages.yaml"
+    note: "Grade-1 stutter as QZE; gauge force as phase-drag of grade-1
+           vectors around closed grade-2 structures"
+  - file: "core/process-physics/forces-as-rotor-consequences.yaml"
+    note: "Specific rotor algebra per force — this file provides
+           iteration logic; that file provides rotor expressions"
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Gravity as first-order ∇s; inertia as rank(M) — full mechanism"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "Force hierarchy as closure-grade hierarchy; gauge = residual freedom"
+  - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "Carrier closure cost → force range; photon zero rest mass"
+  - file: "core/clarifications/markov-correspondence-note.yaml"
+    note: "Graviton category error = external-observer mistake applied to
+           first-order gradient — same structural gap"
