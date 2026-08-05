@@ -1,6 +1,6 @@
 # /core/process-physics/open-reconciliation-notes.yaml
 name: "Open Reconciliation Notes"
-version: "1.3"
+version: "1.4"
 status: "ACTIVE TRACKING — deliberately surfaced inconsistencies and dependency-of-dependency risks"
 domain: "Core / Process-Physics"
 changes_from_v1.0: > >
@@ -380,3 +380,51 @@ resolution_1_determinism_question:
   note: >
     This entry moves to resolution_log rather than issue tracking.
     Logged here to preserve the history of what was open and when closed.
+
+---
+
+issue_5_ccr_as_connes_dirac_index:
+  status: "OPEN — significant open derivation with external mathematical support"
+  summary: >
+    baum-connes-assembly-map-correspondence.yaml identifies the CCR
+    (Wr·Ω_rotor/Ω_embed) as the Connes-Dirac index of the 720° Möbius
+    rotor geometric cycle under the Baum-Connes assembly map. If this
+    identification holds formally, the CCR has independent mathematical
+    grounding from outside the framework — the assembly map has to produce
+    a topological invariant of the geometric cycle, and the CCR would be
+    that invariant. This would constitute external confirmation that the
+    CCR is the right quantity, not merely consistent with the framework
+    but required by the geometry.
+
+  what_would_resolve_this: >
+    Explicit computation of the Connes-Dirac index for the 720° Möbius
+    rotor configuration in Cl(3,0), showing it equals the CCR value
+    Wr·Ω_rotor/Ω_embed — and therefore recovering α from the assembly
+    map index without free parameters. This computation requires:
+      (1) ccr-electron-explicit (priority 1, vortex-stability.yaml) —
+          establishing the Möbius rotor equilibrium shape and Wr value
+      (2) The formal identification of the Möbius rotor as a geometric
+          cycle in the relevant equivariant K-homology group
+      (3) Computing the Connes-Dirac index of that specific cycle
+
+  if_identification_fails: >
+    If the Connes-Dirac index of the Möbius rotor ≠ CCR value,
+    the correspondence in baum-connes-assembly-map-correspondence.yaml
+    is weakened from STRUCTURAL CORRESPONDENCE to ANALOGY. The file
+    status should be downgraded accordingly, and the issue should be
+    logged here with the specific numerical discrepancy. This would not
+    invalidate the CCR as a framework concept — it would only remove
+    the Baum-Connes external support.
+
+  significance: >
+    Unlike issues 1–4 which track internal inconsistencies, issue_5
+    tracks a potential external mathematical confirmation. Resolution
+    in the positive direction would be the strongest result so far —
+    an independently motivated mathematical structure pointing to the
+    same invariant as the framework's structural argument. Resolution
+    in the negative direction would be informative about where the
+    correspondence breaks.
+
+  depends_on:
+    - "ccr-electron-explicit (priority 1, vortex-stability.yaml)"
+    - "Baum-Connes conjecture status for the relevant group G"
