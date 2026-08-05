@@ -1,0 +1,307 @@
+# /core/process-physics/baum-connes-assembly-map-correspondence.yaml
+name: "Baum-Connes Assembly Map: Correspondence with the Framework"
+version: "0.2"
+status: "STRUCTURAL CORRESPONDENCE — logical architecture isomorphism established;
+         formal proof dependent on Baum-Connes holding for relevant groups (open);
+         matter-antimatter and E=0 reframings established; added to
+         open-reconciliation-notes.yaml as issue_5"
+domain: "Core / Process-Physics"
+changes_from_v0.1: >
+  Filed as-is with two additions: (1) connection to blog post — the gravity/
+  inertia derivation in blog-forces-inertia-gravity.md is independently
+  supported by the K₀/K₁ balance here; gravity as K₁ first-order gradient
+  vs K₀ topological closure gives independent mathematical grounding for
+  the equivalence principle derivation. (2) Issue_5 added to open-reconciliation-
+  notes.yaml tracking CCR-as-Connes-Dirac-index as the key open derivation.
+
+confidence_note: >
+  This file establishes a structural correspondence between the logical
+  architecture of the Baum-Connes conjecture and the framework's R1–R5
+  structure. The correspondence is stated as isomorphism of logical
+  architecture, not as a proof. Where the correspondence provides
+  independent mathematical support for framework claims, this is noted
+  explicitly. The standard Baum-Connes conjecture (without coefficients)
+  is used throughout — the with-coefficients version has known
+  counterexamples and is not the basis of any claim here.
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/forces-as-vector-iterations.yaml"
+    - "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/specifications.yaml (R1–R5)"
+
+---
+
+baum_connes_in_brief:
+  statement: >
+    The Baum-Connes conjecture asserts that the assembly map
+      μᵢ: Kᵢ^top(G) → Kᵢ(C*_r(G))  (i = 0, 1)
+    is an isomorphism. It bridges:
+      Left side:  equivariant K-homology K^top(G) — the geometric side,
+                  classifying proper group actions and elliptic operators.
+                  Well-understood; geometric cycles are tractable.
+      Right side: K-theory of the reduced group C*-algebra K(C*_r(G)) —
+                  the analytic side, encoding committed spectral data.
+                  Historically opaque; hard to compute directly.
+    The assembly map μ is defined by taking the index of the
+    Connes-Dirac operator on each geometric cycle — mapping
+    geometric potential to analytic committed structure.
+  status_note: >
+    Injectivity of μ established for all connected groups and groups
+    acting properly on CAT(0) spaces. Surjectivity remains open for
+    many groups. The conjecture without coefficients is the form used
+    here; the with-coefficients version has known counterexamples
+    (Higson, Lafforgue, Skandalis 2002) and is excluded throughout.
+
+---
+
+framework_correspondence:
+
+  geometric_side_as_explorative_regime:
+    bc_object: "K^top(G) — equivariant K-homology"
+    framework_object: "Explorative regime (R3/R4) — open potential,
+                       phase configuration space"
+    mapping: >
+      Equivariant K-homology classes are represented by geometric
+      cycles — generalisations of the Connes-Dirac operator on proper
+      G-manifolds. In the framework: explorative-regime rotor
+      configurations are the geometric cycles, each a specific
+      grade-1/grade-2 potential state in the phase configuration space.
+      The classifying space EG of proper G-actions corresponds to the
+      full open multivector space of Cl(3,0) before closure — all
+      proper (viability-satisfying) configurations available for R5.
+    confidence: "STRUCTURAL — the well-understood geometric side maps
+                 cleanly to the tractable explorative regime"
+
+  analytic_side_as_committed_regime:
+    bc_object: "K(C*_r(G)) — K-theory of reduced group C*-algebra"
+    framework_object: "Committed regime (η) — accumulated R5 closures,
+                       locked topological structures"
+    mapping: >
+      The reduced C*-algebra C*_r(G) encodes the actual spectral
+      properties of the group's action — the committed analytic reality.
+      Its K-theory classifies stable isomorphism classes of projections
+      (K₀) and unitaries (K₁). In the framework: η encodes the
+      committed record of R5 closures whose spectral properties (mass,
+      charge, spin) are exactly what C*-algebra K-theory classifies.
+      The historically opaque character of C*-algebra K-theory maps
+      precisely to the framework's claim that the derivative level
+      cannot derive its own constants — they are encoded at the process
+      level, inaccessible from within η.
+    confidence: "STRUCTURAL — the historically opaque analytic side maps
+                 to the derivative-level η whose opacity the framework explains"
+
+  assembly_map_as_r5_commitment:
+    bc_object: "μ: K^top(G) → K(C*_r(G)) — the assembly map"
+    framework_object: "R5 commitment event — threshold crossing mapping
+                       explorative-regime configurations to committed η"
+    mapping: >
+      The assembly map μ takes a geometric cycle (explorative-regime
+      configuration) and maps it to its analytic index (committed
+      spectral datum) by computing the index of the Connes-Dirac
+      operator. In the framework: R5 takes an open-potential rotor
+      configuration and commits it to η by crossing V_c. The
+      Connes-Dirac index is the CCR — the specific numerical invariant
+      that each committed configuration carries.
+      μ being an isomorphism means:
+        Surjectivity: every committed structure has a geometric origin
+          in the explorative regime — no η structure without a
+          process-level source
+        Injectivity: no two distinct explorative configurations
+          produce the same committed structure — no information loss
+          in R5 commitment
+    active_maintenance: >
+      μ is not a one-time mapping but the active maintenance engine:
+      the continuous R1–R5 loop keeps the geometric side generating
+      new cycles that μ maps to committed structures, while R_diss
+      releases committed structures back to the geometric side.
+      The isomorphism is dynamically maintained — an active equilibrium.
+    confidence: "STRONG STRUCTURAL — CCR as Connes-Dirac index is the
+                 most precise alignment in this correspondence"
+
+  ccr_as_connes_dirac_index:
+    statement: >
+      The CCR (Wr · Ω_rotor / Ω_embed) is the specific numerical
+      invariant that the assembly map computes at each committed
+      configuration. This provides independent mathematical support
+      for the CCR as a well-defined topological invariant of committed
+      configurations — the assembly map has to produce a topological
+      invariant of the geometric cycle, and the CCR is that invariant
+      for the Möbius rotor configuration. This existence argument
+      comes from outside the framework.
+    confidence: "STRUCTURAL SUPPORT — formal identification requires
+                 explicit computation of Connes-Dirac index for Möbius
+                 rotor configuration; tracked as issue_5 in
+                 open-reconciliation-notes.yaml"
+    independent_support: >
+      The assembly map independently motivates the CCR as a topological
+      invariant without requiring the framework's own structural argument.
+      If the Connes-Dirac index of the Möbius rotor geometric cycle
+      equals the CCR value, this constitutes external mathematical
+      confirmation that the CCR is the right quantity — not just
+      consistent with the framework but required by the geometry.
+
+  k0_k1_as_closure_field_balance:
+    statement: >
+      The assembly map has two components, indexed by i = 0, 1:
+        K₀: classifies projections — even-dimensional cycles,
+             even-grade GA configurations (scalar, bivector, rotor).
+             Topological closures: committed lock structures.
+        K₁: classifies unitaries — odd-dimensional cycles,
+             odd-grade GA configurations (vector, pseudoscalar).
+             Field propagation effects: open-vector gradient structures,
+             first-order scalar overlap gradient ∇s, gravity.
+    mapping: >
+      K₀ ↔ topological closures (committed grade-0/2/rotor — matter)
+      K₁ ↔ field effects / gravity (open-vector grade-1/3 propagation)
+      μ₀ and μ₁ ↔ R5 commitment acting on even and odd grade
+                   configurations respectively
+    connection_to_equivalence_principle: >
+      Gravity as K₁ (first-order ∇s propagation) vs inertia as K₀
+      (topological closure rank) gives the equivalence principle an
+      independent mathematical grounding: K₀ and K₁ are balanced by
+      the assembly map isomorphism — the same μ that maps geometric
+      cycles to committed indices enforces that the even-grade (matter)
+      and odd-grade (field/gravity) sectors are commensurate. The
+      equivalence principle is the physical expression of the K₀/K₁
+      balance maintained by μ.
+
+---
+
+matter_antimatter_reframing:
+  standard_picture: >
+    Matter and antimatter created in equal amounts; observed matter
+    excess requires CP violation beyond Standard Model predictions;
+    mechanism unknown — major unsolved cosmological problem.
+  framework_reframing: >
+    The apparent dichotomy misidentifies the balance. Matter and
+    antimatter are both K₀ (even-grade committed closures,
+    distinguished only by rotor orientation sign — chirality).
+    The actual balance is:
+      K₀ (weight): topological closures — matter AND antimatter
+                   together, all even-grade committed configurations
+      K₁ (counterweight): field effects and gravity — open-vector
+                   gradient propagation, first-order ∇s field
+  matter_excess_consequence: >
+    The observed matter excess over antimatter is not a
+    symmetry-breaking problem. It is a consequence of the local
+    rotor orientation history of the explorative regime — whichever
+    chirality the first distinction broke toward propagated
+    consistently through subsequent R5 closures in the local
+    neighbourhood. No initially symmetric state that then broke;
+    always a specific orientation in the geometric cycle, preserved
+    through μ into the committed regime. The asymmetry is encoded
+    in K₀ class structure.
+  what_antimatter_is: >
+    Antimatter is K₀ classes with opposite rotor orientation sign —
+    same geometric cycle with B → -B (bivector sign flip). Both
+    matter and antimatter are K₀ — complement pairs within the
+    even-grade sector, not opposites of the full K₀/K₁ balance.
+    Annihilation (matter + antimatter → photons) is K₀ complement
+    pairs cancelling grade-2 character and releasing grade-1
+    propagating gradients — exactly the counter-oriented rotor pair
+    producing the photon (ga-grade-chain-to-particles.yaml #photon).
+    Not destruction of matter by antimatter but even-grade closure
+    pairs converting to odd-grade propagation.
+
+---
+
+zero_energy_universe_reframing:
+  standard_picture: >
+    Tryon (1973), Hawking, Vilenkin: positive energy of matter exactly
+    cancels negative gravitational potential energy, giving E=0.
+    Problem: gravitational potential energy being "negative" is
+    coordinate-dependent in GR; exact cancellation has no derivation
+    from first principles.
+  framework_reframing: >
+    E=0 is the K₀/K₁ balance maintained by the assembly map:
+      K₀ (positive): committed lock structures — CCR transaction
+                     costs of all R5 closures, stored in committed topology
+      K₁ (counterweight): open-vector gradient propagation — the
+                     first-order ∇s field maintaining explorative-regime
+                     potential from which closures draw
+  why_more_precise: >
+    The K₀/K₁ balance is:
+      — Not coordinate-dependent (topological invariants are
+        coordinate-free by construction)
+      — Not a static cancellation (the assembly map actively
+        maintains the isomorphism through the R1–R5 loop)
+      — Not dependent on matter/antimatter symmetry (K₀ includes both)
+      — Derivable from μ being an isomorphism — if the assembly map
+        is an isomorphism, K₀ and K₁ content are balanced by structural
+        necessity, not empirical coincidence
+  consequence: >
+    The universe has zero net topological charge (K₀ closures balanced
+    by K₁ field effects) maintained dynamically by the R1–R5 assembly
+    process. The gravitational potential energy being "negative" in the
+    standard picture is the derivative-level description of K₁ field
+    effects being the counterweight to K₀ closures — correctly signed
+    from outside the committed regime but misleadingly framed as
+    matter vs gravity rather than closure vs propagation.
+
+---
+
+open_derivations:
+  - id: "connes-dirac-index-as-ccr"
+    description: >
+      Explicit computation of the Connes-Dirac index for the 720°
+      Möbius rotor geometric cycle in Cl(3,0), showing it equals
+      the CCR value Wr·Ω_rotor/Ω_embed — recovering α from the
+      assembly map index without free parameters. Tracked as
+      issue_5 in open-reconciliation-notes.yaml.
+    depends_on: ["vortex-stability.yaml#ccr-electron-explicit",
+                 "ga-grade-chain-to-particles.yaml#electron"]
+    priority: 1
+    note: >
+      This is the highest-leverage derivation in this file: if it
+      closes, the CCR has independent mathematical grounding from
+      outside the framework. If it fails (index ≠ CCR), the
+      correspondence is weakened and the file's status should be
+      downgraded to ANALOGY rather than STRUCTURAL CORRESPONDENCE.
+
+  - id: "k0-k1-balance-from-r1r5"
+    description: >
+      Formal derivation showing K₀/K₁ balance maintained by the
+      assembly map corresponds to the R1–R5 loop's dynamic equilibrium
+      — recovering E=0 as a structural consequence of μ being an
+      isomorphism.
+    depends_on: ["connes-dirac-index-as-ccr"]
+    priority: 2
+
+  - id: "matter-antimatter-from-k0-orientation"
+    description: >
+      Formal derivation showing matter/antimatter as K₀ complement
+      pairs (opposite bivector orientation) within the even-grade
+      sector — recovering matter excess from local rotor orientation
+      history rather than CP violation of a symmetric initial state.
+    depends_on: ["k0-k1-balance-from-r1r5"]
+    priority: 2
+
+---
+
+cross_references:
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "Scalar overlap s and bivector gradient ⟨G⟩₂ — algebraic
+           primitives that the Connes-Dirac operator indexes"
+  - file: "core/process-physics/ga-grades-as-process-stages.yaml"
+    note: "Even/odd grade structure — foundation of K₀/K₁ mapping"
+  - file: "core/process-physics/forces-as-vector-iterations.yaml"
+    note: "K₁ as first-order ∇s propagation — the counterweight to K₀"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Matter/antimatter as K₀ complement pairs; photon as K₀→K₁"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR as Connes-Dirac index — the invariant μ computes"
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Gravity as K₁; equivalence principle as K₀/K₁ balance"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "K₀ closures as freedom reduction; K₁ as residual open-vector freedom"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "Issue_5: CCR-as-Connes-Dirac-index tracked as significant
+           open derivation with external mathematical support"
+  - file: "summaries/blog-forces-inertia-gravity.md"
+    note: "Accessible account of gravity/inertia equivalence — K₀/K₁
+           balance provides independent mathematical grounding for
+           the equivalence principle derivation in that text"
