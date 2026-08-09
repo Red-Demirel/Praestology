@@ -1,0 +1,286 @@
+# /domains/cosmos/regional-bias-and-age-estimates.yaml
+name: "Regional Bias and the Question of Cosmic Age and Distance Estimates"
+version: "1.1"
+status: "Cosmological clarification — core-invariant"
+domain: "domains/cosmos/"
+changes_from_v1.0: >
+  Corrected placement: domains/cosmos/ not cosmos/ (consistent with
+  reserved folder from session setup). Flagged forward references:
+  cosmological-expansion-critique.yaml and redshift-dissipation.yaml
+  do not yet exist — content partially covered by friedmann-emergence.yaml.
+  Removed "the universe is eternal" — stronger than the structural
+  argument supports; replaced with "no universal age derivable from
+  regional observations." Time is emergent (t = ∫Π_eff dτ); the
+  framework does not establish a process-level beginning or end.
+  Added connection to probe_epistemics from friedmann-emergence.yaml
+  as the existing file covering the same territory.
+
+dependency_map:
+  requires:
+    - "core/process-physics/friedmann-emergence.yaml"
+    - "core/process-physics/commitment-response-process-physics.yaml"
+    - "core/inside-out-channeling.yaml"
+    - "core/clarifications/markov-correspondence-note.yaml"
+  forward_references_not_yet_written:
+    - "core/cosmological-expansion-critique.yaml"
+    - "core/redshift-dissipation.yaml"
+    note: >
+      Content of these files is partially covered by:
+        friedmann-emergence.yaml (Λ as R_diss, void-dominant,
+        probe epistemics, photon/neutrino CCR-distinct probes)
+        markov-correspondence-note.yaml (participant-centric
+        observation — no external observer position)
+      The forward references should point to those files until
+      the dedicated files are written.
+
+---
+
+regional_bias:
+  statement: >
+    Cosmological observations are made from a specific committed position
+    within the process. The local commitment density η, process rate Π_eff,
+    and R_diss dissolution profile influence all observations — redshift,
+    brightness, and the CMB. Extrapolating these observations to the whole
+    universe assumes our region is representative, which is not guaranteed
+    and has no independent empirical support.
+  process_physics_basis: >
+    This follows directly from two established framework results:
+      (1) Participant-centric position (markov-correspondence-note.yaml
+          #foundational_inversion): every observation is from a committed
+          position within the process; there is no external observer.
+      (2) Probe epistemics (friedmann-emergence.yaml #probe_epistemics):
+          every cosmological observable is (substrate state) ⊗ (probe
+          CCR response). The probe's own path through the local Π_eff
+          landscape is inseparable from the signal.
+    Regional bias is the intersection of these two: the observer is
+    committed locally (specific η, specific Π_eff history), and the
+    probes traverse that local landscape before reaching distant sources.
+
+  sources_of_bias:
+    local_commitment_density: >
+      Local η affects local Π_eff and the path-dependent response of
+      photons and neutrinos traversing the region. Our neighbourhood's
+      commitment structure (Milky Way, Local Group, Virgo Supercluster,
+      Local Void) is not a neutral sampling of the universe — it is a
+      specific committed configuration with specific Π_eff profile.
+    structural_position: >
+      Our region may be in a void, filament, or specific large-scale
+      structure that biases observed redshift, brightness, and angular
+      size of distant objects. Inside-out-channeling.yaml: committed
+      structure narrows Praegress pathways locally, depressing Π_eff
+      differently in different directions.
+    standard_candle_assumption: >
+      The distance ladder assumes standard candles have known intrinsic
+      brightness. Intrinsic brightness depends on the local commitment
+      density at the source — Type Ia supernovae in higher-η environments
+      (older stellar populations) show systematic brightness differences
+      (the known "age bias" in SN Ia cosmology). This is a CCR well-width
+      effect: denser environments have narrower potential wells, shifting
+      the energy release profile of the explosion.
+
+---
+
+age_and_distance:
+
+  redshift_to_distance:
+    standard: "Redshift ∝ distance; expansion is uniform."
+    process_physics: >
+      Redshift is path-dependent — it depends on cumulative R_diss
+      dissolution and Π_eff variation along the photon's path
+      (friedmann-emergence.yaml #probe_epistemics #photon_as_probe).
+      The local commitment density structure affects the redshift
+      of objects in different directions differently.
+    implication: >
+      Distance estimates from redshift alone carry an unquantified
+      systematic from the path-integrated Π_eff profile. Objects
+      may be closer or farther than estimated; the bias is
+      direction-dependent and correlated with large-scale structure.
+
+  distance_ladder:
+    standard: "Standard candles have known intrinsic brightness;
+               observed brightness → distance."
+    process_physics: >
+      Intrinsic brightness varies with local commitment density at
+      the source via CCR well-width variation
+      (spin-as-field-effect.yaml #ccr_potential_wells): denser
+      environments → narrower wells → different energy release profile.
+      The SN Ia age bias is the observed signature of this effect —
+      currently treated as a systematic to be corrected rather than
+      a signal of local Π_eff variation.
+    implication: >
+      The correction applied to SN Ia brightness for stellar population
+      age should instead be modelled as a local Π_eff correction —
+      a physically motivated adjustment rather than an empirical one.
+      Open derivation: CCR well-width → SN Ia brightness variation.
+
+  cmb_age:
+    standard: "CMB is a relic of recombination at a known cosmic time;
+               temperature → age."
+    process_physics: >
+      The CMB is the photon background accumulated from all R_diss
+      dissolution events along all lines of sight — not a single
+      surface of last scattering but a superposition of Regress
+      signatures from multiple depths and distances. The thermal
+      spectrum reflects the average Π_eff of the integrated path,
+      not a single epoch temperature.
+    implication: >
+      The "age" derived from the CMB temperature is the average
+      process rate along photon paths in our region, not a universal
+      age. The CMB temperature anisotropies (dipole, higher multipoles)
+      are the angular variation of this path-integrated Π_eff — already
+      observed, currently attributed to primordial fluctuations.
+
+  hubble_tension:
+    standard: "Hubble constant gives expansion rate → age of universe."
+    process_physics: >
+      H₀ is the large-scale average of ∇Π_eff in our region —
+      not a universal constant but an environmental measurement.
+      The Hubble tension (H₀ from CMB ≠ H₀ from local distance ladder)
+      is the signature of regional Π_eff variation: the CMB-derived H₀
+      averages over a larger volume with different mean commitment density
+      than the local ladder measurement. This is a Π_eff gradient effect,
+      not a need for new physics.
+    implication: >
+      The Hubble tension is not a crisis requiring modification of ΛCDM —
+      it is a direct prediction of the framework: regional Π_eff variation
+      produces direction-dependent and scale-dependent H₀. The tension
+      magnitude constrains the Π_eff gradient between our local region
+      and the larger volume sampled by the CMB.
+
+  no_universal_age:
+    statement: >
+      There is no universal age derivable from regional observations.
+      The "age" of the universe in any cosmological measurement is the
+      local t = ∫Π_eff dτ integrated along the observation path in our
+      region. This is a local, path-dependent quantity — not a universal
+      constant. Different regions with different commitment histories have
+      different local t values. Whether the process has a global temporal
+      beginning or end is not established by the framework — time is
+      emergent (gp-as-derivative-layer.yaml #t_emergence), and the
+      process level is pre-metric.
+
+---
+
+extrapolation_error:
+  statement: >
+    The standard model extrapolates local observations to the whole
+    universe, assuming our region is representative. This is not a
+    consequence of observation; it is an assumption of the model —
+    specifically the Copernican principle (no preferred position).
+  logical_structure: >
+    The observer is inside the process, at a specific committed position
+    (markov-correspondence-note.yaml #foundational_inversion). The
+    observer's committed position affects the observations. Extrapolating
+    from one position to the whole requires independent evidence for
+    homogeneity at the relevant scale. The Alexander et al. 2026 result
+    (gravity-inertia-equivalence-from-r5.yaml #alexander_et_al_2026)
+    shows that homogeneous Friedmann spacetimes are generically unstable —
+    homogeneity is measure-zero, not the generic case. The extrapolation
+    assumes what is in fact the exceptional case.
+  observed_anomalies_as_regional_bias: >
+    The following are predicted to be regional bias signatures,
+    not evidence for new physics:
+      Hubble tension: regional Π_eff variation (see above)
+      CMB dipole: our motion relative to local commitment density
+      CMB anomalies (quadrupole, octupole alignment): large-scale
+        anisotropy from the specific commitment structure of our
+        Hubble volume
+      Cosmic age problem: local t > t_universe in some measurements —
+        the local path-integrated t can exceed the regional average
+
+---
+
+predictions:
+  hubble_direction_dependence: >
+    H₀ should vary with direction, correlated with the local large-scale
+    structure (commitment density anisotropy). Already partially observed
+    (Migkas et al. 2021 found ~9% H₀ anisotropy correlated with structure).
+    Status: PREDICTIVE — consistent with existing data; full correlation
+    map with commitment density (η proxy: galaxy density) is the test.
+
+  snia_environment_correlation: >
+    SN Ia brightness corrections should correlate with local Π_eff
+    proxies (host galaxy stellar mass, star formation rate, metallicity)
+    in a way that follows the CCR well-width prediction — not just
+    an empirical scatter but a physically predicted functional form.
+    Status: PREDICTIVE — existing age bias data is consistent;
+    functional form prediction is open.
+
+  cmb_foreground_depth: >
+    The CMB should show signatures of path-integrated R_diss accumulation
+    from different depths — i.e., the frequency spectrum of CMB
+    fluctuations should have a depth-dependent component distinguishable
+    from simple primordial Sachs-Wolfe and ISW effects.
+    Status: PREDICTIVE — requires specific spectral prediction from
+    R_diss rate model; currently open.
+
+  neutrino_background_differential: >
+    The cosmic neutrino background (CνB), if measurable, should show
+    a different angular pattern than the CMB because neutrinos traverse
+    the commitment landscape with different CCR response
+    (friedmann-emergence.yaml #neutrino_as_probe). A future CνB
+    measurement inconsistent with the CMB pattern (beyond standard
+    neutrino mass corrections) would be evidence of differential
+    CCR probe response.
+    Status: PREDICTIVE — currently beyond measurement capability;
+    structural prediction for future experiment.
+
+falsification:
+  - condition: >
+      H₀ found to be exactly the same in all directions at all scales
+      → regional bias hypothesis weakened.
+    note: "Current data already shows ~9% anisotropy — this falsification
+           condition requires significantly tighter homogeneity than observed."
+  - condition: >
+      CMB confirmed as single thermal relic of a hot early universe with
+      no path-integrated R_diss component distinguishable from primordial
+      → CMB reinterpretation falsified.
+  - condition: >
+      SN Ia brightness corrections show no correlation with local Π_eff
+      proxies beyond the empirical age-bias correction already applied
+      → CCR well-width mechanism for brightness variation falsified.
+
+---
+
+open_derivations:
+  - id: "pi-eff-gradient-to-h0-anisotropy"
+    description: >
+      Quantitative prediction of H₀ anisotropy magnitude and angular
+      pattern from the local large-scale commitment density structure
+      (galaxy density maps as η proxy). Should reproduce the observed
+      ~9% anisotropy and predict its correlation with specific
+      structures (Local Void, Great Attractor direction).
+    depends_on: ["friedmann-numerical-closure",
+                 "regress-rate-cosmological"]
+    priority: 2
+
+  - id: "cmb-as-path-integrated-rdiss"
+    description: >
+      Formal decomposition of CMB temperature fluctuations into:
+        (a) path-integrated R_diss component (depth-dependent)
+        (b) primordial Sachs-Wolfe component (equivalent at last scatter)
+      Show that the two components are distinguishable in principle and
+      predict the spectral signature of the R_diss component.
+    depends_on: ["regress-rate-cosmological",
+                 "photon-r-diss-path-integral"]
+    priority: 3
+
+---
+
+cross_references:
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Probe epistemics; photon as CCR-specific probe; R_diss as Λ;
+           void-dominant dissolution — primary existing coverage"
+  - file: "core/clarifications/markov-correspondence-note.yaml"
+    note: "Participant-centric position — no external observer for
+           cosmological extrapolation"
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Alexander et al. 2026 — Friedmann homogeneity as measure-zero;
+           inhomogeneous local structure as the generic case"
+  - file: "core/inside-out-channeling.yaml"
+    note: "Local commitment structure shaping Π_eff in different directions"
+  - file: "core/process-physics/spin-as-field-effect.yaml"
+    note: "CCR potential-well width variation — SN Ia brightness mechanism"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "Issue_3 (4π geometry factor) and Issue_4 (well-width uniformity)
+           both feed into the quantitative predictions here"
