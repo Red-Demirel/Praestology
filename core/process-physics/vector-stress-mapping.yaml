@@ -1,0 +1,373 @@
+# /core/process-physics/vector-stress-mapping.yaml
+name: "Vector Stress Mapping: Grade Closures as Sources of Praesto Restriction"
+version: "0.3"
+status: "STRUCTURAL CORRESPONDENCE — gauge theory as description of grade-restriction
+         effects; Hestenes observables mapped to CCR components in Cl(3,0);
+         SR bridging stated; scale nesting corrected to non-additive CCR"
+domain: "Core / Process-Physics"
+changes_from_v0.2: >
+  Replaced geometric-algebra-bridge-amendment-cl30.yaml references with
+  geometric-algebra-bridge.yaml throughout. Added sr_bridging section:
+  Cl(3,0) does not conflict with SR — Lorentz boosts correspond to changes
+  in local Π_eff profile; time dilation is suppressed R5 cycle rate from
+  relative velocity, same mechanism as gravitational time dilation.
+  Hestenes STA→Cl(3,0) substitution stated explicitly: γ₀ → Π_eff·e_τ
+  (requires formal derivation). Corrected scale_nesting: CCR costs at
+  different depths are non-additive — binding topology at each depth has
+  its own CCR cost not reducible to sum of the depth below (consistent
+  with photon-mass-and-proton-excess.yaml #proton_mass_excess).
+
+dependency_map:
+  requires:
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/geometric-algebra-bridge.yaml"
+    - "core/process-physics/photon-mass-and-proton-excess.yaml"
+    - "core/gp-as-derivative-layer.yaml"
+    - "core/specifications.yaml (R1–R5)"
+  correspondence_with:
+    - "Hestenes observables (Dirac-Hestenes equation, rotor bilinears)"
+    - "Yang-Mills field strength and gauge potential"
+  important_note: >
+    These are derivative-level descriptions that correctly describe what
+    the process produces. They are not adopted as foundations. The process
+    (R1–R5) generates configurations whose residual freedom and stress
+    happen to be described by gauge theory and the Dirac-Hestenes equation.
+    All expressions are in Cl(3,0) strictly.
+
+---
+
+sr_bridging:
+  statement: >
+    Cl(3,0) has no timelike basis vector. Special relativity requires
+    Lorentz invariance — physics unchanged under boosts. The apparent
+    conflict is a bridging issue, not a missing parameter. Time in this
+    framework is not a geometric direction in the algebra; it is the
+    accumulated count of R5 closure events weighted by local process rate
+    (t = ∫Π_eff dτ, gp-as-derivative-layer.yaml #t_emergence).
+
+  lorentz_boosts_in_cl30: >
+    In Cl(3,1) (spacetime algebra, Hestenes), Lorentz boosts are rotations
+    into the timelike direction γ₀. In Cl(3,0), there is no γ₀ — boosts
+    correspond instead to changes in the local Π_eff profile:
+      A stationary observer accumulates t at rate Π_eff(local).
+      A boosted observer accumulates t at a different rate — their local
+      Π_eff is modified by the relative velocity (kinematic Π_eff
+      suppression, distinct from gravitational Π_eff suppression from η
+      density, same mechanism).
+    Time dilation under a boost is the boosted frame's suppressed R5
+    cycle rate relative to the stationary frame — the same inside-out
+    channeling mechanism as gravitational time dilation
+    (gravity-inertia-equivalence-from-r5.yaml), driven by relative
+    velocity rather than by η density.
+
+  hestenes_sta_to_cl30_substitution:
+    statement: >
+      Hestenes uses Cl(3,1) with timelike basis vector γ₀. The
+      substitution to Cl(3,0) is:
+        γ₀ → Π_eff · e_τ
+      where e_τ is the intrinsic time direction — the direction of
+      t = ∫Π_eff dτ accumulation. The Π_eff factor encodes the
+      local process rate that γ₀ encodes as a fixed unit vector in
+      Cl(3,1). Under this substitution:
+        γ₀ψγ₀ (STA reversal) → Π_eff·e_τ·ψ·Π_eff·e_τ
+        The Π_eff² factor encodes local time-rate — consistent with
+        g₀₀ ∝ Π_eff² from emergent-classical-fields.yaml #gravity_emergence
+    status: >
+      Substitution stated from structural consistency. Formal derivation
+      showing all Cl(3,1) Hestenes observables transform correctly under
+      this substitution is open — see sta-to-cl30-substitution-formal
+      (open_derivations below).
+    why_not_a_problem: >
+      SR is not violated because Lorentz invariance in Cl(3,0) is
+      the statement that physics is independent of which Cl(3,0) frame
+      you use — the three spatial directions are symmetric. The time
+      direction is not a fourth spatial direction but the intrinsic
+      rate variable Π_eff. Lorentz boosts change the Π_eff profile;
+      spatial rotations are already handled by Cl(3,0) rotors. The
+      full Lorentz group SO(3,1) acts on the (three spatial) × (one
+      process-rate) structure, which is exactly what Cl(3,0) × Π_eff
+      provides.
+
+---
+
+core_principle:
+  statement: >
+    Vectors and higher-grade elements, together with the degree to which
+    they are locked (closed), are the elementary sources of local
+    restriction — stress — in the Praesto field. What Hestenes and Dirac
+    treat as energy, mass, and spin, and what Yang-Mills treats as gauge
+    field strength, are derivative-level descriptions of that stress and
+    of the residual freedom remaining after partial or full grade closure.
+    The process generates the appearance of gauge symmetry; gauge symmetry
+    does not generate the process.
+  direction: >
+    R1–R5 process → grade closures → freedom differentials →
+    stress gradients → residual symmetries → gauge theory description.
+    Never the reverse.
+
+---
+
+grade_differentiation_as_first_stress:
+  grade_0:
+    state: "R1 pure potential — full multivector, no grade preferred"
+    stress: "Zero — maximum orientational freedom"
+  grade_1:
+    state: "First distinction — directed potential, one grade stabilised"
+    stress: "Primordial — freedom differential between stabilised grade
+             and surrounding open potential"
+  grade_2:
+    state: "Oriented rotation plane — restricted but not saturated"
+    stress: "Intermediate — residual freedom inside grade still open"
+  rotor:
+    state: "Stable spinning configuration — maximum commitment at grade-2"
+    stress: "High — stable source of restriction for surrounding field;
+             CCR cost is the quantitative measure"
+  grade_3:
+    state: "Full 3D committed volume — R5 closure complete"
+    stress: "Maximum inward — self-dual (I²=-1 in Cl(3,0)); no external
+             grade components remaining; neighbour coupling via ∇s only"
+
+---
+
+hestenes_observables_to_ccr:
+  algebra_note: >
+    All observables are expressed in Cl(3,0). Hestenes STA expressions
+    using γ₀ are translated via γ₀ → Π_eff·e_τ (see sr_bridging above).
+    The rotor ψ ∈ even subalgebra of Cl(3,0); ψ̃ is its reverse.
+
+  correspondence_table:
+    - hestenes_observable: "Scalar ⟨ψψ̃⟩₀ = ρ"
+      cl30_expression: "Grade-0 projection of ψψ̃"
+      framework_reading: "Commitment density magnitude"
+      ccr_component: "Denominator Ω_embed — embedding volume, proportional
+                       to local ρ at committed level"
+
+    - hestenes_observable: "Pseudoscalar ⟨ψψ̃⟩₃ = ρ·sin(β)"
+      cl30_expression: "Grade-3 projection of ψψ̃"
+      framework_reading: >
+        Closure completeness — the Yvon-Takabayashi β-angle encodes
+        how far the grade-2 winding has progressed toward full Möbius
+        closure (see beta_angle_significance below)
+      ccr_component: "Phase of rotor relative to I = e₁e₂e₃"
+
+    - hestenes_observable: "Vector current J (STA)"
+      cl30_expression: "J = ψe₁ψ̃ — grade-1 projection of rotor sandwich"
+      framework_reading: "Committed flow direction — phase gradient ∇S
+                          in the Madelung decomposition"
+      ccr_component: "Grade-1 output of Madelung decomposition; direction
+                       of commitment density flow"
+
+    - hestenes_observable: "Spin bivector S (STA)"
+      cl30_expression: "S = ψ(e₁∧e₂)ψ̃/2 — grade-2 projection"
+      framework_reading: "Committed rotation plane — the locked bivector
+                          orientation of the rotor configuration"
+      ccr_component: "Ω_rotor — the rotor phase space volume; numerator of
+                       the CCR ratio (Wr·Ω_rotor/Ω_embed)"
+
+    - hestenes_observable: "Energy-momentum tensor T(n)"
+      cl30_expression: "Stress bivector field across neighbourhood directions n"
+      framework_reading: "Local stress distribution — how the committed
+                           structure restricts surrounding open-vector
+                           configurations in each direction"
+      ccr_component: "Gradient of CCR cost across neighbourhood: ∇(CCR)"
+
+---
+
+gauge_theory_as_description:
+  statement: >
+    Gauge theory describes the residual freedom remaining after grade
+    closures and the stress produced by its spatial variation. A derivative-
+    level language that correctly captures the effects without identifying
+    their origin. Each gauge group is the symmetry group of the residual
+    freedom at the corresponding closure depth.
+
+  correspondence_table:
+    - gauge_term: "Gauge potential A"
+      framework_reading: "Residual orientational freedom surviving after
+                           grade closure — what has not been restricted"
+      direction_note: "A is not fundamental — derivative-level description
+                        of what the closure left open"
+
+    - gauge_term: "Field strength F = dA + A∧A"
+      framework_reading: "Stress produced by spatial variation of residual
+                           freedom — bivector gradient ⟨G⟩₂ from
+                           ga-dynamic-theory.yaml"
+      direction_note: "F correctly describes the stress pattern; does not
+                        explain why the stress exists"
+
+    - gauge_term: "U(1) symmetry"
+      framework_reading: "Residual phase rotation freedom after grade-2
+                           rotor phase-locking (EM commitment depth)"
+      coupling: "α = CCR of the phase-locked rotor"
+
+    - gauge_term: "SU(2) symmetry"
+      framework_reading: "Residual orientation freedom — two remaining
+                           orientation degrees after topology-switching closure"
+      coupling: "CCR of the topology-switching transition — open"
+
+    - gauge_term: "SU(3) symmetry"
+      framework_reading: "Residual colour freedom — three orientation degrees
+                           before full pseudoscalar commitment"
+      coupling: "CCR of three-fold binding — open"
+
+    - gauge_term: "Coupling constants (g, g', g_s)"
+      framework_reading: "CCR ratios at each closure depth"
+      direction_note: "Not free parameters — CCR instances at successive
+                        closure depths"
+
+---
+
+stress_propagation:
+  local_effect: >
+    A locked grade structure raises the restriction cost for neighbouring
+    open potential, biasing subsequent closures and producing the effective
+    forces observed at larger scales. This is the second-iteration vector
+    interaction of forces-as-vector-iterations.yaml expressed in stress
+    language.
+
+  environmental_feedback: >
+    Surrounding Π_eff modulates both the maintenance cost of an existing
+    lock and the residual freedom it leaves behind. Stress is intrinsically
+    relational — the same closure configuration has different effective
+    stress in different neighbourhood density environments. This is the
+    GA reading of coupling constant running: effective CCR ratio varies
+    with local Π_eff (energy scale), producing renormalization group
+    behaviour without renormalization as a separate procedure.
+
+  scale_nesting:
+    statement: >
+      Elementary vector/bivector locks generate the first stress layer.
+      Composite topologies (particles, atoms, condensed matter) are nested
+      full-amplitude closures whose cumulative CCR cost appears as
+      macroscopic inertia and gravitational-type gradients.
+    non_additivity: >
+      IMPORTANT: CCR costs at different closure depths are NOT simply
+      additive. The binding topology at each depth has its own CCR cost
+      as a distinct committed structure in its own right — not reducible
+      to the sum of the depth below. The proton mass vastly exceeds the
+      sum of quark masses because the three-fold binding topology is a
+      new committed structure at a higher depth with its own CCR, not
+      a container for three separate quarks (photon-mass-and-proton-excess
+      .yaml #proton_mass_excess #why_non_additive). The total inertia of
+      a composite structure is the CCR cost of each closure depth present,
+      where each depth's cost is evaluated as an independent topological
+      binding structure — not a sum but a nested hierarchy of CCR costs,
+      each irreducible to the depths below.
+    nuclear_example: >
+      Nuclear binding: the nucleon-binding topology has its own CCR cost
+      at the nuclear depth, partially offsetting the sum of nucleon
+      rest masses (binding energy release). The offset is not predictable
+      from the nucleon CCR values alone — it requires the nuclear binding
+      topology's own CCR, which is a distinct calculation at the next depth.
+
+---
+
+beta_angle_significance:
+  statement: >
+    The Yvon-Takabayashi β-angle — ⟨ψψ̃⟩₃/⟨ψψ̃⟩₀ = sin(β) — has no
+    clear physical interpretation in standard Dirac theory and is often
+    treated as a gauge artifact or as related to particle/antiparticle
+    mixing. In the framework it is the process variable encoding closure
+    progress in the grade chain:
+      β = 0:    fully committed rotor — R5 fired, maximum CCR,
+                stable committed structure. The rotor is fully
+                in the even subalgebra with no grade-3 contamination.
+      0<β<π/2: partial closure — R4 stage, rotor progressing through
+                grade chain. β measures fractional Möbius winding
+                completion — how far the grade-2 structure has wound
+                toward the self-referential loop of full closure.
+      β = π/2:  maximally uncommitted — R3 stage, maximum phase
+                space freedom, minimum CCR cost, no stable lock.
+  significance: >
+    β is the single observable that most directly encodes the process-
+    level position of a configuration in the R1–R5 grade chain. Its
+    apparent mystery in standard theory is because derivative-level
+    Dirac theory has no concept of a commitment process — it sees a
+    phase variable with no geometric meaning. In Cl(3,0) with the
+    process reading, β is the closure progress indicator: the ratio of
+    grade-3 to grade-0 content in the rotor bilinear is exactly how
+    much of the Möbius winding has closed relative to total available
+    amplitude. This gives a concrete physical interpretation of a
+    previously mysterious quantity — and a prediction: β should
+    correlate with the R4 stage position, vanishing for stable
+    committed particles and non-zero for superpositions or partially
+    committed states.
+
+---
+
+open_derivations:
+  - id: "sta-to-cl30-substitution-formal"
+    description: >
+      Formal derivation showing all Cl(3,1) Hestenes observables
+      transform correctly under γ₀ → Π_eff·e_τ — recovering SR
+      Lorentz invariance as Cl(3,0) spatial rotation symmetry combined
+      with Π_eff profile transformation under velocity change.
+    depends_on: ["gp-as-derivative-layer.yaml#t_emergence",
+                 "gravity-inertia-equivalence-from-r5.yaml"]
+    priority: 2
+
+  - id: "stress-ccr-dictionary-formal"
+    description: >
+      Explicit quantitative map from grade-projected rotor bilinears
+      to CCR values and local stress density.
+    depends_on: ["vortex-stability.yaml#ccr-electron-explicit",
+                 "ga-grade-chain-to-particles.yaml#electron"]
+    priority: 2
+
+  - id: "beta-angle-as-closure-progress"
+    description: >
+      Formal derivation showing β-angle equals fractional Möbius
+      winding completion — recovering it as a process variable encoding
+      R4 stage position in the grade chain.
+    depends_on: ["stress-ccr-dictionary-formal"]
+    priority: 2
+
+  - id: "su2-su3-ccr-from-residual-freedom"
+    description: >
+      Derive SU(2) and SU(3) coupling constants as CCR ratios of
+      residual-freedom sectors at successive closure depths.
+    depends_on: ["geometric-algebra-bridge.yaml#su3-from-rotors",
+                 "stress-ccr-dictionary-formal"]
+    priority: 2
+
+  - id: "coupling-running-from-pi-eff"
+    description: >
+      Derive renormalization group running of coupling constants as
+      effective CCR variation with local Π_eff — recovering asymptotic
+      freedom and electroweak running without renormalization as a
+      separate procedure.
+    depends_on: ["su2-su3-ccr-from-residual-freedom"]
+    priority: 3
+
+---
+
+cross_references:
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "Scalar overlap s and bivector gradient ⟨G⟩₂ — algebraic
+           primitives underlying all stress and gauge descriptions here"
+  - file: "core/process-physics/forces-as-vector-iterations.yaml"
+    note: "Force carriers as second-iteration vector interactions —
+           gauge potential A is the derivative-level description of
+           the same residual freedom"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "Gauge symmetry as residual freedom — this file provides
+           the Hestenes/Yang-Mills correspondence"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Particle structures as specific CCR instances — stress table
+           provides observable bilinear expressions for each"
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "Cl(3,0) grade structure — authoritative reference"
+  - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "Non-additive CCR nesting — binding topology CCR is distinct
+           from sum of constituent CCR values"
+  - file: "core/gp-as-derivative-layer.yaml"
+    note: "t = ∫Π_eff dτ — intrinsic time; γ₀ substitution basis"
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Time dilation as suppressed R5 cycle rate — SR boost
+           uses same mechanism as gravitational time dilation"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR as quantitative restriction cost — this file maps
+           Hestenes observables to specific CCR components"
