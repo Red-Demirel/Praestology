@@ -1,0 +1,222 @@
+# /core/process-physics/closure-types-nesting.yaml
+name: "Closure Types and Nesting: Elementary Stress Generators"
+version: "0.2"
+status: "STRUCTURAL CLASSIFICATION — four modification pathways established;
+         non-additive CCR nesting confirmed; quantitative CCR values for
+         n-fold and nested composite open"
+domain: "Core / Process-Physics"
+changes_from_v0.1: >
+  Replaced geometric-algebra-bridge-amendment-cl30.yaml references with
+  geometric-algebra-bridge.yaml. Added connection to open-reconciliation-notes
+  v2.0: non_additivity_formal provides algebraic precision for issue_4
+  (CCR well-width) and issue_9 (Baum-Connes K₀ layers). Added cross-reference
+  to baum-connes-assembly-map-correspondence.yaml: nesting depths as
+  successive K₀ closure layers — CCR_binding at each depth as a new
+  assembly map index.
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/rotor-to-ccr-transition.yaml"
+    - "core/closure-configuration-ratio.yaml"
+  provides_to:
+    - target: "core/process-physics/vector-stress-mapping.yaml"
+      via: "Four elementary stress generators as the complete basis"
+    - target: "core/process-physics/ga-grade-chain-to-particles.yaml"
+      via: "Particle spectrum as closure type instances and combinations"
+    - target: "core/process-physics/photon-mass-and-proton-excess.yaml"
+      via: "Non-additive CCR nesting — formal basis for proton mass excess"
+
+---
+
+core_principle:
+  statement: >
+    An open vector admits four distinct modification pathways. Each generates
+    a characteristic stress signature and residual-freedom structure. These
+    are the elementary stress generators from which all particle structures
+    and gauge freedoms are built. Nested closures are non-additive: each
+    deeper lock carries its own irreducible CCR cost — total restriction
+    cost of a nested structure is not the sum of its parts but a new CCR
+    layer at the binding depth.
+  open_vector_baseline: >
+    Unrestricted directed potential — zero local stress, maximum phase-space
+    freedom, CCR = 0. The starting state from which all four modifications depart.
+
+---
+
+modification_1_open_spiraling:
+  name: "Open Spiraling — Propagating Wave Regime"
+  geometry: >
+    Continuous phase advance, non-saturating circular/spiral trajectory.
+    Phase plane advances without looping back. Topological self-interaction zero.
+  rotor_form: >
+    R_open(x,t) = exp(-½ B̂(ωt-kx))
+    Propagating bivector wave in Cl(3,0) — see rotor-to-ccr-transition.yaml
+  ccr_regime: "CCR < CCR_crit (< 1)"
+  rest_mass: 0
+  residual_freedom: "Dual helicity / phase freedom — U(1)-like residual"
+  stress_character: "Propagating, non-local, minimal restriction"
+  particle_instances: >
+    Photon (counter-oriented pair of modification_1 states —
+    ga-grade-chain-to-particles.yaml #photon)
+  wavelength_reading: >
+    Wavelength is spatial capacity per phase cycle — operates above the
+    capacity threshold (rotor-to-ccr-transition.yaml #wavelength_as_capacity).
+
+---
+
+modification_2_nfold_combinatorial:
+  name: "N-fold Combinatorial — Discrete Topological Lock"
+  geometry: >
+    Discrete n-fold (especially 2-fold, 3-fold) topological lock. Multiple
+    rotor planes binding in specific combinatorial configurations — discrete
+    orientational commitment at n binding points.
+  ccr_regime: "Partial to full saturation at combinatorial depth"
+  rest_mass: "Finite, set by binding CCR of the n-fold topology"
+  residual_freedom: "Colour-like or flavour-like residual orientations —
+                      n remaining degrees before full orthogonal commitment
+                      (SU(n) residual symmetry)"
+  stress_character: "Confining when residual freedom is maximally restricted"
+  particle_instances:
+    twofold: "Quark pairs — partial 2-fold binding, fractional CCR"
+    threefold: "Proton/neutron — 3-fold orthogonal binding in mutually
+                 orthogonal bivector planes, grade-3 pseudoscalar closure"
+  confinement_reading: >
+    When residual freedom reaches maximum restriction, the n-fold
+    configuration has no external grade components to propagate force
+    outward (pseudoscalar self-duality I²=-1 for 3-fold). Confinement
+    is maximally restricted residual freedom.
+  non_additivity_note: >
+    The 3-fold binding CCR is not the sum of three 1-fold CCR values.
+    The binding topology at depth 3 is a new committed structure with its
+    own writhe and embedding geometry — an irreducible CCR layer. Formal
+    basis for proton mass excess (photon-mass-and-proton-excess.yaml
+    #proton_mass_excess).
+
+---
+
+modification_3_moebius_720:
+  name: "Möbius 720° — Spinorial Mass-Lock"
+  geometry: >
+    Spinorial double-cover lock. Open spiraling folds into a self-referential
+    4π-periodic closed loop when CCR → 1. Spatial propagation vector k
+    folds into Π_eff-rate precession ω_z at the Compton capacity threshold
+    r₀ = ħ/mc.
+  ccr_regime: "CCR = 1 (full amplitude)"
+  rest_mass: "m = ħω_z/c² — trapped Π_eff-rate rotational energy (rotor-to-ccr-transition.yaml)"
+  residual_freedom: "Minimal inside locked plane; spin bivector B̂_spin remains"
+  stress_character: "Localised, stable source of inertial restriction"
+  particle_instances: "Electron (co-oriented pair), positron (counter-oriented)"
+  boundary_conditions:
+    at_2pi: "R → -1, ψ → -ψ (phase flip, topological barrier)"
+    at_4pi: "R → +1, Q* = R_k[Q*] (self-identity, R5 fires)"
+  boundary_condition_significance: >
+    The 2π sign flip creates topological stability: the electron cannot
+    decay into modification_1 without passing through a singularity.
+    Topological protection is a consequence of the boundary condition,
+    not a separately postulated stability rule.
+
+---
+
+modification_4_nested_composite:
+  name: "Nested Composite — Higher-Order Binding"
+  geometry: >
+    Higher-order binding of any combination of modifications 1–3. Each
+    nesting level introduces a new commitment depth with its own CCR cost layer.
+  ccr_regime: "Non-additive hierarchy — each depth contributes irreducible CCR cost"
+  rest_mass: "Dominated by deepest binding (proton ≫ quark sum); nuclear
+               binding partially offsets nucleon masses"
+  residual_freedom: "Inherited from component closures, further restricted
+                      by nesting configuration"
+  stress_character: "Macroscopic inertia and long-range gradients"
+  recursiveness: >
+    Nesting is R4 applied at successively deeper commitment depths.
+    Steiner-type enumeration could count viable nesting patterns at fixed
+    depth over combinatorial configurations in Cl(3,0) grade structure.
+
+---
+
+non_additivity_formal:
+  statement: >
+    For a nested composite of modifications M₁ at depth d₁ and M₂ at
+    depth d₂ > d₁:
+      CCR_total ≠ CCR(M₁) + CCR(M₂)
+    Instead:
+      CCR_total = CCR(M₁) + CCR(M₂) + CCR_binding(d₁,d₂)
+    where CCR_binding(d₁,d₂) is the irreducible binding topology cost
+    at the interface between depths d₁ and d₂. Not derivable from the
+    individual CCR values alone — requires the binding topology's own
+    writhe and embedding geometry at depth d₂.
+  consequence: >
+    The Standard Model's 13 Yukawa coupling parameters are each a
+    CCR_binding instance at a specific nesting depth and topology —
+    not free parameters but irreducible binding costs of specific
+    nesting topologies. Recovering them from first principles requires
+    computing CCR_binding for each topology. Same open derivation as
+    proton-mass-from-su3-binding-ccr.
+  baum_connes_connection: >
+    Each nesting depth corresponds to a new K₀ closure layer in the
+    Baum-Connes assembly map (baum-connes-assembly-map-correspondence
+    .yaml). CCR_binding(d₁,d₂) is the Connes-Dirac index increment
+    at the d₂ nesting layer — a new assembly map index that is
+    irreducible to the d₁ index. This gives the non-additivity an
+    independent mathematical characterisation from K-theory.
+
+---
+
+particle_spectrum_as_closure_taxonomy:
+  massless: "modification_1 (photon, gluon at asymptotic freedom limit)"
+  spin_half_massive: "modification_3 (electron, muon, tau — same topology
+                       at different ω_z precession rates)"
+  hadrons: "modification_2 (mesons — 2-fold) and modification_2/4
+             (baryons — 3-fold with nesting)"
+  composite: "modification_4 (atoms, nuclei, condensed matter)"
+
+---
+
+open_derivations:
+  - id: "nfold-ccr-from-combinatorial-topology"
+    description: >
+      Quantitative CCR values for n-fold combinatorial binding (n=2: meson;
+      n=3: baryon) from the writhe of the n-fold binding topology in Cl(3,0).
+    depends_on: ["rotor-to-ccr-transition.yaml#ccr-crit-from-master-equation",
+                 "ga-grade-chain-to-particles.yaml#quark-fractional-writhe"]
+    priority: 2
+
+  - id: "binding-ccr-at-atomic-nuclear-depth"
+    description: >
+      CCR_binding values at atomic (eV) and nuclear (MeV) nesting depths —
+      recovering atomic and nuclear binding energies from the non-additive
+      CCR hierarchy without free parameters.
+    depends_on: ["nfold-ccr-from-combinatorial-topology"]
+    priority: 3
+
+  - id: "steiner-enumeration-of-viable-nestings"
+    description: >
+      Enumeration of topologically viable nesting patterns at each depth
+      using Steiner-type combinatorial counting over Cl(3,0) grade
+      configurations — establishing which nestings produce stable committed
+      structures vs unstable resonances.
+    depends_on: ["nfold-ccr-from-combinatorial-topology"]
+    priority: 3
+
+---
+
+cross_references:
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "Transition mechanics for modification_3; CCR threshold"
+  - file: "core/process-physics/vector-stress-mapping.yaml"
+    note: "Four modifications as elementary stress generators"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Particle structures as specific instances of the four types"
+  - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "Non-additivity formal basis for proton mass excess"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "Non-additive CCR nesting as freedom reduction at successive depths"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "Nesting depths as successive K₀ closure layers; CCR_binding
+           as new assembly map index at each depth"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "issue_4 (CCR_binding feeds well-width question);
+           issue_9 (Baum-Connes K₀ layers)"
