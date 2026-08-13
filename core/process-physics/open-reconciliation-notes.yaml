@@ -1,430 +1,257 @@
 # /core/process-physics/open-reconciliation-notes.yaml
 name: "Open Reconciliation Notes"
-version: "1.4"
-status: "ACTIVE TRACKING — deliberately surfaced inconsistencies and dependency-of-dependency risks"
+version: "2.0"
+status: "ACTIVE TRACKING — session and repository versions merged;
+         issues 1,2,3,4,7,8,9,10 open; issues 5,6 resolved"
 domain: "Core / Process-Physics"
-changes_from_v1.0: > >
-  Added issue_3: the 4π geometry factor is a shared upstream dependency
-  of both the α identification (issue_1) and Maxwell's GA grade derivation
-  in emergent-classical-fields.yaml — currently invisible in tracking.
-  Minor wording only elsewhere.
+changes_from_v1.4: >
+  Merged session version (issues 1-5, resolution_1) with repository
+  version (issues 1-7). Renumbered to avoid collision. Retained all
+  unique issues from both versions. Repository issue_5 (Praegress/Regress
+  three-way collision) carried forward as RESOLVED. Added partial closure
+  notes: rotor-to-ccr-transition.yaml partially closes ccr-electron-explicit
+  (threshold condition established); closure-types-nesting.yaml formalises
+  CCR non-additivity (progress on proton-mass and Yukawa hierarchy).
 
 description: >
-  This file tracks places where recently added process-physics files make
-  claims not yet reconciled with each other, or where a file treats as
-  settled something that is, one or two steps upstream, still an open
-  derivation. These are not hidden elsewhere in the framework — they are
-  tracked here explicitly, because Praestology does not claim closed-form
-  derivation of fundamental constants from first principles. The framework's
-  position is structural (what ratios and mechanisms a stable process
-  requires), not numerological (fitting formulas to known constants).
-  An itemised, honest account of where that structure is not yet internally
-  reconciled is part of the claim, not a liability to be minimised.
+  Tracks places where process-physics files make claims not yet reconciled
+  with each other, or where a file treats as settled something that is
+  upstream still open. Honest accounting of unresolved structure is part
+  of the framework's claim, not a liability.
 
 stance: >
-  Praestology is not in the business of presenting a finished derivation
-  of α, G, ħ, or any other constant as a solved problem. Where two files
-  each propose a process-level identification of the same quantity, both
-  are kept visible until reconciled — neither is quietly retired in favour
-  of the other without an explicit note explaining why. Where a file's
-  derivation chain depends on an upstream file's still-open item, that
-  dependency is named here even if the downstream file does not repeat
-  the caveat inline.
+  Praestology does not claim closed-form derivation of fundamental constants.
+  Where two files propose process-level identifications of the same quantity,
+  both are kept visible until reconciled. Where a derivation chain depends on
+  an upstream open item, the dependency is named here.
 
 ---
 
 issue_1_alpha_dual_identification:
-  status: "OPEN — two structurally distinct identifications of α, not yet shown equivalent"
-  summary: >
-    Two process-physics files each claim to identify the process-level
-    origin of the fine-structure constant α, using different objects.
-
+  status: "OPEN — two structurally distinct identifications of α"
   identification_a:
     source: "vortex-stability.yaml"
     framing: "STATIC GEOMETRIC RATIO"
-    statement: >
-      α = S_burden / (4π · S_cap,sat)
-      — the self-energy of the stable Möbius 720° vortex relative to the
-      capacitative (photon) saturation threshold. This is a property of
-      the equilibrium topology: a ratio of two energy/action scales,
-      evaluated once the equilibrium shape and its writhe Wr are known.
-      Depends on solving a calculus-of-variations problem (equilibrium
-      Möbius shape in the GP field) and then a topological integral
-      (Calugareanu-White-Fuller writhe of that shape). Time does not
-      appear in this definition — it is a ratio of two fixed quantities.
-
+    statement: "α = S_burden / (4π · S_cap,sat) — equilibrium topology ratio"
   identification_b:
     source: "commitment-response-process-physics.yaml"
     framing: "DYNAMICAL PER-CYCLE RESIDUAL"
-    statement: >
-      α = residual mismatch (Ω_rotor − Ω_embed) / Ω_embed, per rotation cycle
-      — the fractional phase correction that accumulates each time the
-      rotor completes one cycle, because finite substrate resistance R
-      prevents Ω_rotor and Ω_embed from matching exactly. This is a rate:
-      a per-cycle imperfection that accumulates over time and is explicitly
-      tied to spontaneous emission, decoherence, and the arrow of time.
-      Time is intrinsic to this definition — it is a residual that appears
-      once per rotation, not a fixed ratio of static quantities.
-
-  why_not_automatically_resolved: >
-    commitment-response-process-physics.yaml gestures at a bridge
-    (ccr_connection: "ΔCCR = Wr · δΩ/Ω_embed ... gives α") but this
-    asserts the two quantities are proportional via Wr without independently
-    deriving that the static self-energy ratio (identification_a) and the
-    dynamical per-cycle closure residual (identification_b) are numerically
-    identical rather than merely analogous.
-
-    A geometric ratio of two energy scales and a kinetic residual of two
-    frequencies are different kinds of quantity (dimensionless ratio of
-    actions vs. fractional rate per cycle). They could turn out to be
-    exactly the same quantity viewed two ways — that would be a genuinely
-    strong result — or they could be two different numbers of the same
-    order, in which case at most one is actually α and the other needs
-    a different name or a corrected relationship.
-
-  what_would_resolve_this: >
-    Either (a) a derivation showing identification_b's per-cycle residual
-    integrates, in steady state, to exactly identification_a's static
-    ratio — i.e. that the rate, accumulated appropriately, reproduces the
-    equilibrium self-energy ratio without additional free parameters; or
-    (b) a demonstration that they answer different questions — e.g.
-    identification_a is α_int (bare isolated-vortex value), while
-    identification_b describes how α_int relates to α_exp or to emission
-    phenomenology — in which case the files should be edited to make that
-    division of labour explicit rather than each independently claiming to
-    be "the process-level origin of α."
-
-  upstream_dependency: >
-    Both identifications share the 4π isotropic geometry factor as an
-    unresolved upstream dependency — see issue_3 below. Resolution of
-    issue_3 is a prerequisite for full resolution of issue_1, because
-    the 4π appears in identification_a's denominator and its derivation
-    from the GP Green's function may clarify whether the factor is truly
-    geometric (static) or whether it has a dynamical interpretation
-    that bridges to identification_b.
-
-  current_recommendation: >
-    Do not treat either file's α claim as settled pending the other.
-    Both vortex-stability.yaml and commitment-response-process-physics.yaml
-    should retain their own framing. Any future file citing "α as derived
-    in process-physics" should cite this note alongside whichever file it
-    draws from, rather than presenting either identification as sole or final.
+    statement: "α = (Ω_rotor − Ω_embed) / Ω_embed per cycle"
+  upstream_dependency: "Both share the 4π geometry factor — see issue_3"
+  what_would_resolve: >
+    Either show identification_b integrates in steady state to exactly
+    identification_a; or assign them to α_int vs α_exp respectively with
+    explicit division of labour.
+  recommendation: >
+    Do not treat either as settled. Any file citing process-level α should
+    cite this note alongside whichever identification it draws from.
 
 ---
 
 issue_2_n_sat_dependency_chain:
-  status: "OPEN — multiple regime derivations rest on an unclosed functional form"
-  summary: >
-    emergent-classical-fields.yaml uses the saturating nonlinearity
-    g·|ψ|²/(1+|ψ|²/n_sat) as a settled input across at least three
-    regime derivations (Maxwell's low-η limit, the strong force's
-    near-saturation limit, and implicitly the weak force's threshold
-    crossing). The specific functional FORM of this saturation term —
-    not just the value of n_sat — is listed as an open derivation in
-    commitment-response-process-physics.yaml, which in turn depends on
-    vortex-stability.yaml's own unclosed ccr-electron-explicit item.
-
-  the_chain: >
-    emergent-classical-fields.yaml
-      (treats saturation form as given input)
-        ← depends on ←
-    commitment-response-process-physics.yaml: n-sat-from-topological-capacity
-      (status: OPEN, priority 1 — "whether V ∝ |ψ|²/(1+|ψ|²/n_sat)
-      is correct or requires modification — tanh, log, or other forms")
-        ← depends on ←
-    vortex-stability.yaml: ccr-electron-explicit
-      (status: OPEN, priority 1 — equilibrium Möbius shape and writhe
-      not yet computed)
-
-  why_this_matters: >
-    This is not merely "one open item among several." The specific
-    mathematical FORM used in emergent-classical-fields.yaml's regime
-    table — not just unresolved numerical constants within an agreed form —
-    is provisional. If the eventual topological-capacity derivation yields
-    a tanh or logarithmic saturation instead of the rational form, the
-    qualitative shape of at least the strong-force near-saturation regime
-    (which explicitly relies on dV/d(|ψ|²) → 0 at the saturation point)
-    and possibly the weak-force threshold-crossing regime would need
-    re-examination, not just re-fitting.
-
-    What is robust regardless of functional form:
-      - Saturation EXISTS at some finite n_sat (topological capacity is finite)
-      - dV/d(|ψ|²) → 0 as |ψ|² → n_sat (derivative vanishes at saturation)
-      - The regime ordering (linear → nonlinear → saturation) is stable
-    What is not robust:
-      - Specific expressions for coupling strengths at intermediate densities
-      - The exact shape of the MOND transition region (gravity regime)
-      - The precise threshold for the weak-force V_c crossing
-
-  current_recommendation: >
-    emergent-classical-fields.yaml should carry an explicit note stating
-    that its regime table assumes a specific saturation functional form
-    that is itself two derivation-steps from closed, and that qualitative
-    conclusions drawn from the SHAPE of that function are correspondingly
-    provisional. What is already robust: the qualitative regime ordering,
-    the existence of saturation, and the grade-projection derivation chain.
-    This tracking note serves that function pending inline update.
+  status: "OPEN — regime derivations rest on unclosed saturation functional form"
+  chain: >
+    emergent-classical-fields.yaml (saturation form as given)
+      ← commitment-response-process-physics.yaml: n-sat-from-topological-capacity (OPEN)
+      ← vortex-stability.yaml: ccr-electron-explicit (OPEN, priority 1)
+  what_is_robust: >
+    Saturation EXISTS; dV/d(|ψ|²) → 0 at n_sat; regime ordering.
+  what_is_provisional: >
+    Specific coupling strengths at intermediate densities; MOND transition
+    shape; weak-force V_c crossing form.
+  recommendation: >
+    emergent-classical-fields.yaml needs a scope note: saturation functional
+    form is two derivation steps from closed; qualitative conclusions from
+    the shape are provisional.
 
 ---
 
 issue_3_4pi_geometry_factor:
-  status: "OPEN — shared upstream dependency of issue_1 and Maxwell GA grade derivation"
-  summary: >
-    The factor 4π appears in two separate places across the process-physics
-    files, each stated from physical reasoning (R5 substrate isotropy) but
-    neither yet formally derived from the GP field equations:
-
-  appearance_a:
-    source: "vortex-stability.yaml"
-    location: "step 4 (CCR_value) and why_4pi_factor section"
-    role: >
-      The denominator 4π in α = S_burden/(4π · S_cap,sat).
-      Stated as the isotropic geometry factor: the Möbius crossover
-      coupling radiates into 4π steradians of surrounding substrate.
-      Marked as: "Stated from R5 — formal GP field derivation open"
-      Open derivation ID: 4pi-from-GP-geometry (priority 1)
-
-  appearance_b:
-    source: "emergent-classical-fields.yaml"
-    location: "maxwell_emergence, longitudinal_force note"
-    role: >
-      The 4π appears implicitly in the Maxwell equations via the
-      Lorenz gauge derivation from the master equation phase gradient.
-      The grade-1 current J has a 4π coupling to the grade-2 bivector F
-      in SI units (μ₀ = 1/ε₀c²). Whether this 4π is the same geometric
-      factor as in appearance_a — i.e. whether the isotropic substrate
-      coupling of the Möbius crossover and the isotropic radiation field
-      of classical EM are both instances of the same spherical integration
-      of the GP Green's function — is not stated.
-
-  why_this_matters: >
-    If both 4π factors derive from the same GP Green's function integral
-    (the spherical integration of the coupling kernel around a localised
-    source in 3D — standard result: 4π), then resolving 4pi-from-GP-geometry
-    simultaneously closes a part of issue_1 (the denominator in identification_a)
-    and confirms the Maxwell reduction in emergent-classical-fields.yaml.
-    If they are different 4π factors with different derivations, that
-    distinction needs to be made explicit — two coincident factors from
-    different geometry would be notable.
-
-    Either way, the current situation — two files each using a 4π factor
-    from physical reasoning without establishing whether they share a
-    common derivation — is a reconciliation gap that could mislead a
-    reader into thinking the factor is better established than it is.
-
-  what_would_resolve_this: >
-    The GP Green's function in 3D for a point source at the vortex core:
-      G(r) = −1/(4πr)   [standard 3D Laplacian Green's function]
-    The spherical integration of the coupling kernel around the crossover
-    point should yield 4π as the isotropic solid angle normalisation —
-    this is the standard result and is expected to hold. The formal
-    derivation would:
-      (a) confirm the 4π in identification_a is the solid-angle factor
-          from the GP Green's function at the crossover geometry;
-      (b) show this is the same factor that appears in the Maxwell
-          wave equation derivation from the master equation phase gradient;
-      (c) establish whether the two appearances are identical in origin
-          or coincidentally equal.
-
-  current_recommendation: >
-    4pi-from-GP-geometry (priority 1, vortex-stability.yaml) should be
-    noted as a shared prerequisite for both issue_1 resolution and
-    Maxwell regime validation in emergent-classical-fields.yaml.
-    The open derivation priority is confirmed as correct.
-
----
-
-methodological_note:
-  why_track_separately_rather_than_inline: >
-    All three issues could be added as inline caveats to the files where
-    they arise. They are tracked here in addition, because:
-      (1) issue_1 spans two files neither positioned to unilaterally
-          declare itself correct over the other;
-      (2) issue_2 is a dependency-of-a-dependency easy to lose as more
-          files cite emergent-classical-fields.yaml without re-checking
-          what it rests on;
-      (3) issue_3 is a shared upstream dependency currently invisible
-          in both files that use it;
-      (4) a single visible location for "things we know don't fully fit
-          together yet" is more useful, for collaborators and skeptical
-          readers alike, than caveats scattered across multiple files.
-
-  relationship_to_framework_epistemics: >
-    This file is itself an instance of the same discipline practiced
-    elsewhere in the framework (e.g. vortex-stability.yaml's own
-    honest_assessment, alpha-rydberg-z0.yaml's explicit refusal to
-    present fixed numerical closures). Praestology's claim is structural:
-    it specifies what a stable process must satisfy, and lets the numbers
-    fall out of that structure where the math has actually been done —
-    not the reverse. Tracking unreconciled claims openly, including ones
-    that might look bad next to each other, is consistent with that claim
-    rather than a threat to it. A framework that derived all its constants
-    cleanly on the first pass, with no visible seams, would be more
-    suspicious, not more credible.
-
----
-
-resolution_log:
-  note: >
-    When any issue above is resolved, the resolution should be logged here
-    with a pointer to the file/section that resolved it, rather than
-    deleting the entry — this preserves the history of what was uncertain
-    and for how long, which is itself useful documentation of the
-    framework's development.
-  entries: []
-
----
-
-cross_references:
-  - file: "core/process-physics/vortex-stability.yaml"
-    note: "Identification_a (static geometric ratio); 4π factor; ccr-electron-explicit"
-  - file: "core/process-physics/commitment-response-process-physics.yaml"
-    note: "Identification_b (dynamical per-cycle residual); n-sat-from-topological-capacity"
-  - file: "core/process-physics/emergent-classical-fields.yaml"
-    note: "Regime table: saturation form (issue_2); Maxwell 4π (issue_3)"
-  - file: "core/closure-configuration-ratio.yaml"
-    note: "ccr_first_derivation_discipline — methodological stance this file extends"
-  - file: "domains/physics/alpha-rydberg-z0.yaml"
-    note: "Downstream α consumer — should not treat either identification as closed"
+  status: "OPEN — shared upstream dependency of issue_1 and Maxwell derivation"
+  appearances:
+    a: "vortex-stability.yaml: denominator 4π in α = S_burden/(4π·S_cap,sat)"
+    b: "emergent-classical-fields.yaml: Maxwell wave equation derivation"
+  expected_resolution: >
+    GP Green's function G(r) = −1/(4πr) in 3D — standard result expected
+    to hold; formal derivation needed to confirm both appearances share
+    the same origin.
+  priority: 1
 
 ---
 
 issue_4_ccr_well_width_uniformity:
   status: "OPEN — CCR potential-well structure identified; uniformity unestablished"
-  summary: >
-    spin-as-field-effect.yaml v1.3 replaces the lattice regularization
-    comparison with a CCR-derived potential-well account of inter-commitment
-    tolerance. This is conceptually correct and removes the external/internal
-    distinction cleanly. It surfaces a new specific question: whether the
-    CCR-derived well widths are uniform across the field or vary with local
-    Π_eff and η.
-
-  the_distinction:
-    uniform_wells: >
-      If well widths are Π_eff-independent, the commitment landscape has
-      a fixed resolution everywhere — analogous to a uniform lattice spacing,
-      but derived rather than imposed. The hadron spectrum would be the same
-      in all environments. R_diss rate would be set by well depth alone,
-      not by well width variation.
-    non_uniform_wells: >
-      If well widths vary with local Π_eff and η:
-        Dense matter (high η, depressed Π_eff): narrower wells →
-          tightly spaced energy levels → denser hadron spectrum in
-          nuclear matter than in vacuum. Observationally: in-medium
-          mass shifts of hadrons (known experimentally, attributed
-          to QCD medium effects).
-        Voids (low η, high Π_eff): wider wells → easier tunnelling
-          between stable closures → faster R_diss rate → connects
-          to the void-dominant dissolution in friedmann-emergence.yaml.
-      Non-uniform wells would make the CCR landscape itself
-      environment-dependent — a stronger and more predictive claim
-      than the uniform case.
-
-  why_this_matters: >
-    The su3-from-triality-hadron-spectrum derivation (spin-as-field-effect.yaml
-    open_items) depends on knowing the well structure before the spectrum
-    can be computed. If wells are non-uniform, the vacuum spectrum and
-    the in-medium spectrum are different calculations — and the in-medium
-    shift is a direct prediction of the CCR well-width variation with η.
-    In-medium hadron mass shifts are experimentally accessible (RHIC, LHC,
-    HADES at GSI) — this is a testable consequence, not a speculative one,
-    if the well-width function can be derived.
-
-  connection_to_existing_issues: >
-    Non-uniform well widths feed directly into issue_2 (n_sat dependency
-    chain): if the saturation functional form is tanh or log rather than
-    rational, the well-width variation profile changes. The well-width
-    question cannot be fully settled before issue_2 is resolved.
-    It also feeds into the Friedmann/R_diss cosmological rate
-    (friedmann-emergence.yaml open derivation: regress-rate-cosmological)
-    — void well widths set the R_diss tunnelling rate at cosmic scale.
-
-  what_would_resolve_this: >
-    Explicit computation of the CCR mismatch energy as a function of
-    field configuration between two adjacent stable closures, evaluated
-    at varying Π_eff. If the well width W(Π_eff) is monotonically
-    increasing with Π_eff (wider in high-Π_eff voids, narrower in
-    low-Π_eff dense matter), non-uniformity is confirmed and the
-    in-medium hadron mass shift becomes a quantitative prediction.
-    Depends on: ccr-electron-explicit (well structure for the simplest
-    case — electron Möbius closure) as the template computation.
-
-  current_recommendation: >
-    Add ccr-well-width-uniformity as a priority-2 open derivation in
-    vortex-stability.yaml, dependent on ccr-electron-explicit (priority 1).
-    The connection to in-medium hadron mass shifts should be noted as the
-    primary testable consequence — it is the most experimentally accessible
-    prediction of the CCR potential-well structure.
+  question: >
+    Whether CCR-derived well widths are Π_eff-uniform or vary with local
+    Π_eff and η. Non-uniformity implies: narrower wells in dense matter
+    (in-medium hadron mass shifts), wider wells in voids (faster R_diss).
+  significance: >
+    su3-from-triality-hadron-spectrum depends on knowing the well structure.
+    Friedmann void-dominant R_diss rate depends on void well widths.
+  connection: >
+    closure-types-nesting.yaml#non_additivity_formal provides the algebraic
+    form CCR_total = CCR(M₁) + CCR(M₂) + CCR_binding(d₁,d₂) — the binding
+    term CCR_binding is the per-depth contribution that would vary with Π_eff
+    if well widths are non-uniform.
+  recommendation: >
+    Add ccr-well-width-uniformity as priority-2 open derivation in
+    vortex-stability.yaml, dependent on ccr-electron-explicit.
 
 ---
 
-resolution_1_determinism_question:
-  status: "RESOLVED — previously open in spin-as-field-effect.yaml v1.3"
-  resolved_by: "specifications.yaml v1.6 #indeterminism_as_ground"
+issue_5_praegress_regress_terminology:
+  status: "OPEN — terminology supersession not yet propagated to source file"
   summary: >
-    The question "whether R(ψ) executes deterministically, stochastically,
-    or otherwise" (spin-as-field-effect.yaml v1.3 determinism_note) is now
-    closed. Indeterminism is the ontological ground of the process level —
-    not stochasticity (which requires a mechanism) but the null state:
-    pure unresolved potential has no preferred state by definition.
-  logical_basis: >
-    Stochasticity requires a generative mechanism for the random element.
-    Indeterminism requires none — it is what an entity with no preferred
-    state is. The parsimonious position for a process-level ontology is
-    indeterminism as ground state. This closes the question in one direction
-    without requiring a new derivation: it follows from R1 minimality.
-  downstream_updates:
-    - "spin-as-field-effect.yaml v1.4: determinism_note updated to RESOLVED"
-    - "specifications.yaml v1.6: indeterminism_as_ground section added"
-    - "uncertainty_dissolution in specifications.yaml now has both HOW and WHY"
-  note: >
-    This entry moves to resolution_log rather than issue tracking.
-    Logged here to preserve the history of what was open and when closed.
+    spin-as-field-effect.yaml introduced Praegress/Regress informally as
+    pre/post realization states. praegress-regress-temporal-inaccessibility
+    .yaml supersedes this with the intended definition: intrinsic and
+    extrinsic DIRECTIONS of R3/R4, simultaneous not sequential.
+  what_remains: >
+    spin-as-field-effect.yaml has not been corrected. A reader encountering
+    it first would pick up the superseded before/after framing.
+  recommendation: >
+    Treat praegress-regress-temporal-inaccessibility.yaml as authoritative.
+    Add forward pointer in spin-as-field-effect.yaml when next updated.
 
 ---
 
-issue_5_ccr_as_connes_dirac_index:
+issue_6_stress_tension_coupling:
+  status: "STRUCTURALLY ANSWERED — formal/quantitative form still open"
+  answer: >
+    Stress (Praegress/intrinsic) and tension (Regress/extrinsic) are related,
+    not independent: stress corresponds to inertia (local reconfiguration
+    resistance); tension corresponds to gravitational field effect (outward
+    propagation). Two readings of the same coupling at opposite sides of R5.
+  what_remains: >
+    No explicit mathematical relation written showing inertia (local stress)
+    and gravitational effect (field tension) as two projections of one
+    coupling term in the GA master equation. Named but not derived.
+  recommendation: >
+    inertia-planck-relation.yaml and emergent-classical-fields.yaml should
+    cross-reference this framing once praegress-regress-formal-ga-expression
+    is attempted.
+
+---
+
+issue_7_aeodynamics_provisional_term:
+  status: "PROVISIONAL — replaced by established expressions; term preserved"
+  summary: >
+    "Aeodynamics (Æ)" appeared in working documents as a candidate term for
+    the rotor/hydrodynamic closure mechanism — more specific than "fluid
+    dynamics" (implies substance in container) or "rotor dynamics" (GA
+    description of object, not process of forming). Currently replaced by
+    "rotor dynamics" in all locked files.
+  recommendation: >
+    Draft aeodynamics.yaml once Möbius closure derivations have progressed
+    enough to give the term precise content. Until then use "rotor dynamics"
+    for GA-level description.
+
+---
+
+issue_8_e0_notation_cl31_residue:
+  status: "OPEN — notational correction required; physics unaffected"
+  summary: >
+    rotor-to-ccr-transition.yaml uses e₀ as timelike basis vector in the
+    Dirac operator — Cl(3,1) STA notation. Framework commits to Cl(3,0).
+  correction: >
+    e₀ → Π_eff process-rate encoding per vector-stress-mapping.yaml
+    #sr_bridging. Dirac operator in Cl(3,0):
+      ∇ψIe₃ - (mΠ_eff/ħ)ψ = 0
+    Mass term's timelike component carried by local Π_eff.
+    Physics unchanged — threshold condition, 720° boundary conditions,
+    rest mass as trapped rotational energy all unaffected.
+  wavelength_consequence: >
+    λ becomes spatial capacity parameter, not spacetime interval.
+    λ_Compton = ħ/mc is the minimum spatial capacity for one full
+    720° closure cycle — capacity threshold, not geometric boundary.
+  open_derivation: "dirac-cl30-full-reexpression (rotor-to-ccr-transition.yaml)"
+
+---
+
+issue_9_ccr_as_connes_dirac_index:
   status: "OPEN — significant open derivation with external mathematical support"
   summary: >
-    baum-connes-assembly-map-correspondence.yaml identifies the CCR
-    (Wr·Ω_rotor/Ω_embed) as the Connes-Dirac index of the 720° Möbius
-    rotor geometric cycle under the Baum-Connes assembly map. If this
-    identification holds formally, the CCR has independent mathematical
-    grounding from outside the framework — the assembly map has to produce
-    a topological invariant of the geometric cycle, and the CCR would be
-    that invariant. This would constitute external confirmation that the
-    CCR is the right quantity, not merely consistent with the framework
-    but required by the geometry.
+    baum-connes-assembly-map-correspondence.yaml identifies the CCR as the
+    Connes-Dirac index of the 720° Möbius rotor geometric cycle under the
+    Baum-Connes assembly map. If confirmed, the CCR has independent
+    mathematical grounding from outside the framework.
+  what_would_resolve: >
+    Explicit computation of the Connes-Dirac index for the Möbius rotor in
+    Cl(3,0), showing it equals Wr·Ω_rotor/Ω_embed. Requires
+    ccr-electron-explicit (priority 1) as prerequisite.
+  if_fails: >
+    File status drops from STRUCTURAL CORRESPONDENCE to ANALOGY. Log the
+    specific numerical discrepancy.
+  depends_on: ["ccr-electron-explicit"]
 
-  what_would_resolve_this: >
-    Explicit computation of the Connes-Dirac index for the 720° Möbius
-    rotor configuration in Cl(3,0), showing it equals the CCR value
-    Wr·Ω_rotor/Ω_embed — and therefore recovering α from the assembly
-    map index without free parameters. This computation requires:
-      (1) ccr-electron-explicit (priority 1, vortex-stability.yaml) —
-          establishing the Möbius rotor equilibrium shape and Wr value
-      (2) The formal identification of the Möbius rotor as a geometric
-          cycle in the relevant equivariant K-homology group
-      (3) Computing the Connes-Dirac index of that specific cycle
+---
 
-  if_identification_fails: >
-    If the Connes-Dirac index of the Möbius rotor ≠ CCR value,
-    the correspondence in baum-connes-assembly-map-correspondence.yaml
-    is weakened from STRUCTURAL CORRESPONDENCE to ANALOGY. The file
-    status should be downgraded accordingly, and the issue should be
-    logged here with the specific numerical discrepancy. This would not
-    invalidate the CCR as a framework concept — it would only remove
-    the Baum-Connes external support.
+issue_10_ccr_threshold_partial_closure:
+  status: "PARTIAL CLOSURE — threshold condition established; writhe calculation open"
+  summary: >
+    rotor-to-ccr-transition.yaml establishes CCR_crit = 1 as the threshold
+    condition, identifying the closure radius r₀ = ħ/mc as the reduced
+    Compton wavelength. This partially closes ccr-electron-explicit (priority
+    1 in vortex-stability.yaml): the THRESHOLD CONDITION is now derived
+    (CCR = 1 at r₀ = ħ/mc), but the WRITHE VALUE Wr that determines what
+    the CCR evaluates to at that threshold remains uncalculated.
+  what_is_closed: >
+    The CCR threshold value (CCR_crit = 1) and the capacity scale (r₀ = ħ/mc)
+    are derived from the 720° boundary condition Q* = R_k[Q*] — not fitted.
+    This is the structural closure of the threshold: we know where the
+    transition happens and why.
+  what_remains_open: >
+    The writhe Wr of the equilibrium Möbius configuration from the GP equation
+    via Calugareanu-White-Fuller — this determines the actual CCR value at
+    threshold and connects to α. The threshold tells us CCR = 1 there; the
+    writhe calculation tells us what specific topology achieves CCR = 1.
+  update_to_priority_items: >
+    ccr-electron-explicit should be split into two sub-derivations:
+      (a) ccr-threshold-from-720-boundary: PARTIALLY CLOSED by
+          rotor-to-ccr-transition.yaml — threshold condition r₀ = ħ/mc derived
+      (b) ccr-writhe-from-cwf: OPEN — Wr computation from equilibrium GP shape
+    The priority-1 status should remain on (b); (a) is structurally resolved.
 
-  significance: >
-    Unlike issues 1–4 which track internal inconsistencies, issue_5
-    tracks a potential external mathematical confirmation. Resolution
-    in the positive direction would be the strongest result so far —
-    an independently motivated mathematical structure pointing to the
-    same invariant as the framework's structural argument. Resolution
-    in the negative direction would be informative about where the
-    correspondence breaks.
+---
 
-  depends_on:
-    - "ccr-electron-explicit (priority 1, vortex-stability.yaml)"
-    - "Baum-Connes conjecture status for the relevant group G"
+resolution_log:
+  entries:
+    - issue: "Repository issue_5 — Praegress/Regress three-way definition collision"
+      status: "RESOLVED"
+      resolution: >
+        Three definitions are the same concept at different scopes:
+        def_b (intrinsic/extrinsic directions, no time, single-event scale)
+        accumulates into def_a (temporal asymmetry, forward/backward,
+        at the accumulated-sequence scale). R5 scoping: fires locally at
+        each commitment event; 'now' is R5 actively firing; past is
+        accumulated η; future is open R3/R4 potential.
+      recorded: ["core/specifications.yaml#R5_scoping_note"]
+
+    - issue: "Session resolution_1 — determinism question"
+      status: "RESOLVED"
+      resolution: >
+        Indeterminism established as ontological ground (specifications.yaml
+        v1.6 #indeterminism_as_ground). Stochasticity requires a mechanism;
+        indeterminism requires none — it is the ground state of R1.
+      recorded: ["core/specifications.yaml#indeterminism_as_ground",
+                    "core/process-physics/spin-as-field-effect.yaml v1.4"]
+
+---
+
+cross_references:
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "issue_1 identification_a; issue_2 ccr-electron-explicit; issue_10"
+  - file: "core/process-physics/commitment-response-process-physics.yaml"
+    note: "issue_1 identification_b; issue_2 n-sat chain"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "issue_2 saturation form; issue_3 Maxwell 4π"
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "issue_8 e₀ notation; issue_10 threshold partial closure"
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "issue_4 CCR_binding formal; CCR non-additivity"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "issue_9 CCR as Connes-Dirac index"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "ccr_first_derivation_discipline — methodological stance"
+  - file: "core/specifications.yaml"
+    note: "Praegress/Regress resolution; indeterminism resolution"
