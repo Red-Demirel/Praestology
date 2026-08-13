@@ -1,0 +1,247 @@
+# /core/process-physics/rotor-to-ccr-transition.yaml
+name: "Rotor-to-CCR Transition: Open Wave to Mass-Lock"
+version: "0.2"
+status: "STRUCTURAL DERIVATION — transition mechanics and mass emergence established;
+         full Cl(3,0) re-expression of Dirac operator open (issue_8,
+         open-reconciliation-notes.yaml v2.0); physics unaffected by notation"
+domain: "Core / Process-Physics"
+changes_from_v0.1: >
+  Replaced geometric-algebra-bridge-amendment-cl30.yaml references with
+  geometric-algebra-bridge.yaml. Updated open-reconciliation-notes reference
+  to v2.0 issue_8. Added cross-reference to vector-stress-mapping.yaml
+  #sr_bridging for the Cl(3,0) notation context. Added cross-reference
+  to praestology-and-blackbody-spectrum.yaml: Compton wavelength as capacity
+  threshold is the same mechanism as UV cutoff (Π_eff finite → R5 cannot
+  fire at arbitrarily high frequency).
+
+notation_disclaimer: >
+  The source document uses e₀ as a timelike basis vector in the Dirac
+  operator — Cl(3,1) STA notation. The framework commits strictly to
+  Cl(3,0). In all expressions below, e₀ is replaced by Π_eff process-rate
+  encoding per vector-stress-mapping.yaml #sr_bridging. The transition
+  mechanics, boundary conditions, and mass emergence formula are unaffected;
+  only the notation is corrected. Full Cl(3,0) re-expression is open
+  (issue_8, open-reconciliation-notes.yaml v2.0).
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/geometric-algebra-bridge.yaml"
+    - "core/process-physics/vector-stress-mapping.yaml"
+  provides_to:
+    - target: "core/process-physics/ga-grade-chain-to-particles.yaml"
+      via: "Explicit transition mechanics from open wave to committed electron"
+    - target: "core/process-physics/closure-types-nesting.yaml"
+      via: "modification_3 Möbius 720° as the endpoint of this transition"
+
+---
+
+ccr_as_transition_parameter:
+  definition: >
+    CCR = ‖⟨RR†⟩_closed‖ / ‖Ω_total‖
+    Ratio of rotor topological self-coupling norm to total available
+    phase-space energy density. Governs the transition between open
+    propagating wave and committed mass-lock.
+      CCR < CCR_crit: open wave regime, zero rest mass
+      CCR → 1:        critical threshold, phase-folding transition
+      CCR = 1:        full 720° mass-lock, R5 committed
+  ccr_crit: >
+    CCR_crit = 1.  Transition occurs when the Compton wavelength equals
+    2π times the closure radius: λ_Compton = 2πr₀, i.e. r₀ = ħ/mc
+    (the reduced Compton wavelength).
+  key_prediction: >
+    The closure radius r₀ = ħ/mc is the reduced Compton wavelength —
+    the scale at which QFT becomes non-perturbative and classical
+    mechanics breaks down. This identification connects the quantum scale
+    (ħ/mc) to the topological closure scale (r₀) through a single
+    threshold condition. Not a fitted parameter — derived from the
+    720° boundary condition Q* = R_k[Q*] (see level_4_mass_lock below).
+  partial_closure_of_ccr_electron_explicit: >
+    This establishes the threshold value CCR_crit = 1 and the capacity
+    scale r₀ = ħ/mc from first principles. This partially closes the
+    ccr-electron-explicit open derivation (issue_10,
+    open-reconciliation-notes.yaml v2.0): the threshold condition is
+    derived; the writhe Wr from CWF remains open as the second step.
+  uv_cutoff_connection: >
+    The Compton wavelength as minimum spatial capacity for 720° closure
+    is the same mechanism as the UV cutoff in
+    praestology-and-blackbody-spectrum.yaml: Π_eff is finite → R5 cannot
+    fire at arbitrarily high frequency → wave cannot propagate below
+    the capacity threshold. Both are expressions of R5 being a
+    rate-limited gate (quantum-zeno-as-commitment.yaml #unification_table).
+
+---
+
+level_2_open_wave:
+  description: "Open, propagating bivector wave — CCR < CCR_crit"
+  rotor_equation: >
+    R_open(x,t) = exp(-½ B(ωt - kx))
+                = cos((ωt-kx)/2) - B̂·sin((ωt-kx)/2)
+    where B = e₁∧e₂ is the propagation bivector plane in Cl(3,0)
+  phase_trajectory: >
+    Continuous phase advance along spatial path x. The wave does not
+    loop back on itself; topological self-interaction is zero:
+    ∮_space R_open dx = 0 → CCR < CCR_crit
+  mass_condition: >
+    Rest mass = 0: phase generator carries linear momentum P = ħk
+    without a localised fixed point. No self-referential closure.
+  wavelength_reading: >
+    Wavelength is spatial capacity: how far the committed medium advances
+    between phase cycles. λ = c/f = structural unit / phase cycles per
+    Π_eff unit. Not a spacetime interval in a pre-given manifold — a
+    measure of local processing capacity per phase cycle.
+
+---
+
+critical_threshold:
+  description: "CCR → 1: spatial propagation folds into temporal precession"
+  mechanism: >
+    As local line-impedance spikes (high η or high-energy field interaction),
+    the spatial propagation vector k folds inward by nonlinear self-coupling
+    feedback. The continuous phase advance θ(t,x) = ωt - kx undergoes
+    topological phase-lock transition: the linear spatial derivative ∂_x R
+    folds entirely into localised Π_eff-rate precession ∂_t R, constraining
+    the spatial wave-vector to a closed circular rotor boundary of radius
+    r₀ = ħ/mc.
+  wavelength_at_threshold: >
+    At CCR → 1, wavelength reaches its minimum sustainable value —
+    the spatial capacity required to sustain the 720° closure. Below
+    this capacity, the open wave cannot propagate without folding into
+    closure. The Compton wavelength is the capacity threshold.
+  cl30_reading: >
+    The 'temporal' precession is Π_eff-rate precession — the local
+    iteration rate of the master equation. The folding of spatial k
+    into 'temporal' ω_z is the folding of spatial propagation into
+    Π_eff-relative phase rotation. No timelike basis vector required.
+    See vector-stress-mapping.yaml #sr_bridging for the full Cl(3,0)
+    treatment of what STA calls the timelike direction.
+
+---
+
+level_4_mass_lock:
+  description: "CCR = 1: 720° spinorial mass-lock, R5 committed"
+  rotor_equation: >
+    ψ(t) = √ρ · R_locked(t) · exp(Iβ/2)
+    where I = e₁e₂e₃ (Cl(3,0) pseudoscalar), β is the
+    Yvon-Takabayashi angle (closure progress indicator,
+    vector-stress-mapping.yaml #beta_angle_significance),
+    and R_locked(θ) = exp(-θ/2 · B̂_spin) with θ(t) = ∫₀ᵗ ω_z dt'
+  boundary_conditions:
+    at_2pi: >
+      R_locked(2π) = exp(-π B̂_spin) = -1  →  ψ(2π) = -ψ(0)
+      State is phase-flipped. Spatial loop complete but internal
+      spinor carries negative topological sign — prevents spatial decay.
+      This is why the electron does not spontaneously collapse:
+      the 360° sign flip creates a topological barrier requiring
+      a full 720° traversal for self-identity.
+    at_4pi: >
+      R_locked(4π) = exp(-2π B̂_spin) = +1  →  ψ(4π) = +ψ(0)
+      → Q* = R_k[Q*]: exact self-identity achieved.
+      The 720° Möbius loop closes completely. R5 lock fires —
+      this is the commitment event. The configuration has found
+      a fixed point of its own reconfiguration operator and
+      commits permanently to η.
+  significance: >
+    The 2π sign flip is not a postulate — it is what exp(-π B̂_spin)
+    computes in Cl(3,0). The 720° requirement for self-identity is the
+    double-cover property of rotors in Cl(3,0), derived from the algebra.
+    Spin-½ falls out of the closure condition.
+
+---
+
+mass_emergence:
+  dirac_operator_cl30: >
+    In strict Cl(3,0) with Π_eff encoding (replacing e₀):
+      ∇ψIe₃ - (mΠ_eff/ħ)ψ = 0
+    The mass term's timelike component is carried by local Π_eff
+    rather than a geometric timelike basis vector.
+  mass_formula: >
+    m = ħ/c² · ‖dR_locked/dt · R_locked†‖ = ħω_z/c²
+    Rest mass is the trapped rotational energy of the 720° phase-rotation
+    inside the saturated CCR=1 topological boundary, expressed in
+    committed-level units via c² = (structural unit / Π_eff unit)².
+  interpretation: >
+    Mass is not a coupling to an external Higgs field. It is the trapped
+    rotational energy of the topological lock — the Π_eff-rate precession
+    ω_z that can no longer propagate spatially because the CCR=1 boundary
+    has folded spatial translation into internal rotation. The Higgs
+    field's vacuum expectation value is the baseline Π_eff density of
+    the committed medium that all new closure events fold into.
+
+---
+
+wavelength_as_capacity:
+  open_regime: >
+    λ = c/f = structural unit / phase cycles per Π_eff unit.
+    Measures spatial commitment sustained per phase cycle.
+  compton_as_threshold: >
+    λ_Compton = ħ/mc = minimum spatial capacity for one full 720°
+    closure cycle. Below this capacity, open propagation cannot be
+    sustained — the wave folds into mass-lock. The Compton wavelength
+    is the capacity threshold, not a spacetime geometric boundary.
+  gravitational_redshift: >
+    Near a massive committed structure, local Π_eff is suppressed
+    (inside-out-channeling.yaml). Lower Π_eff → lower spatial capacity
+    per phase cycle → longer observable wavelength. Gravitational
+    redshift is capacity reduction, not spacetime curvature stretching.
+  high_energy_blueshift: >
+    High Π_eff (high temperature, low η) → higher spatial capacity →
+    shorter wavelength. Consistent with temperature as Π_eff
+    (thermodynamics-and-heat-emergence.yaml).
+
+---
+
+transition_summary:
+  open_wave: "R(x,t) = exp(-½ B̂(ωt-kx)) → CCR < 1 → m = 0"
+  threshold: "k → 1/r₀ (spatial translation → Π_eff-rate curvature)"
+  mass_lock: "R(θ+4π) = +R(θ), Q* = R_k[Q*] → CCR = 1 → m = ħω_z/c²"
+
+---
+
+open_derivations:
+  - id: "dirac-cl30-full-reexpression"
+    description: >
+      Complete re-expression of Dirac-Hestenes equation in strict Cl(3,0)
+      with Π_eff process-rate encoding replacing e₀, showing mass term
+      emergence from ħω_z·Π_eff/c² without timelike basis.
+    depends_on: ["vector-stress-mapping.yaml#sta-to-cl30-substitution-formal"]
+    priority: 2
+
+  - id: "ccr-crit-from-master-equation"
+    description: >
+      Formal derivation of CCR_crit = 1 from the master equation's
+      saturation term — showing the threshold condition emerges from
+      Λ·ln(1+κ|ψ|²) rather than being independently postulated.
+    depends_on: ["vortex-stability.yaml#ccr-electron-explicit",
+                 "commitment-response-process-physics.yaml#n-sat-from-topological-capacity"]
+    priority: 1
+
+  - id: "wavelength-capacity-spectrum"
+    description: >
+      Formal derivation of the full wavelength-as-capacity spectrum:
+      from open-regime propagation through the Compton threshold to
+      mass-lock, recovering de Broglie wavelength, Compton wavelength,
+      and gravitational redshift as capacity expressions of Π_eff.
+    depends_on: ["dirac-cl30-full-reexpression"]
+    priority: 2
+
+---
+
+cross_references:
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "modification_3 (Möbius 720°) is this transition's endpoint"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Electron as co-oriented rotor pair — transition mechanics here"
+  - file: "core/process-physics/vector-stress-mapping.yaml"
+    note: "β-angle as closure progress indicator; Cl(3,0) SR bridging"
+  - file: "core/process-physics/praestology-and-blackbody-spectrum.yaml"
+    note: "Compton wavelength as capacity threshold = UV cutoff mechanism"
+  - file: "core/quantum-zeno-as-commitment.yaml"
+    note: "R5 as rate-limited gate — unification table includes UV cutoff"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "issue_8 (e₀ notation); issue_10 (threshold partial closure)"
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Gravitational redshift as capacity reduction — consistent here"
