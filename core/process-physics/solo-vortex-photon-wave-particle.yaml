@@ -1,0 +1,313 @@
+# /core/process-physics/solo-vortex-photon-wave-particle.yaml
+name: "Solo-Vortex, Photon, and the Wave-Particle Transition"
+version: "1.1"
+status: "Structural clarification — refinements applied; solo-vortex/neutrino
+         identification flagged as structural hypothesis not established fact;
+         photon post-decoherence corrected (no mass-lock); GA notation
+         made consistent with ga-grade-chain-to-particles.yaml"
+domain: "Core / Process-Physics"
+changes_from_v1.0: >
+  Solo-vortex = neutrino identification downgraded from assertion to
+  structural hypothesis — neutrino has nonzero rest mass and nonzero CCR,
+  which places it above CCR_crit in some sense; relationship to solo-vortex
+  needs derivation. Corrected photon post-decoherence: photon does not
+  acquire mass-lock after measurement — it commits to a polarisation state
+  but remains a grade-1 propagating structure. Replaced ψ_γ = ψ_L + ψ_R
+  additive notation with R·R† geometric product consistent with
+  ga-grade-chain-to-particles.yaml. Flagged solo-vortex-spin-entanglement
+  .yaml as not yet in file set.
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/rotor-to-ccr-transition.yaml"
+    - "core/process-physics/quantum-zeno-as-commitment.yaml"
+    - "core/process-physics/ga-grade-chain-to-particles.yaml"
+    - "core/process-physics/closure-types-nesting.yaml"
+  forward_references_not_yet_written:
+    - "core/process-physics/solo-vortex-spin-entanglement.yaml"
+
+---
+
+solo_vortex:
+  description: >
+    A partial closure — grade-1/2 configuration with net chirality but
+    sub-threshold commitment. CCR < CCR_crit: the phase plane has acquired
+    orientational structure (grade-2 bivector) but has not completed a
+    self-referential 720° loop. No stable mass-lock; propagates as a
+    partially wound rotor.
+  ga_expression: >
+    R_partial(x,t) = exp(-½ B̂(ωt - kx)) with net chirality ≠ 0
+    (single-handed rotation, unlike the photon's counter-oriented pair)
+  properties:
+    weak_em_field: >
+      The bivector phase flow of the partial closure — a wave of unresolved
+      potential. Not a committed EM field but the substrate expression of
+      a partially wound rotor propagating through the commitment landscape.
+    chirality_oscillation: >
+      The partial closure can oscillate between chiral states when CCR
+      fluctuates near the closure threshold — the process-level account
+      of flavour oscillation. Not a discrete particle switching between
+      species but a partial rotor winding shifting its orientation.
+    low_interaction: >
+      Near-zero CCR → minimal coupling to the commitment landscape.
+      The partially wound rotor passes through potential wells without
+      significant interference because it has insufficient self-coupling
+      to trigger R5 commitment under standard environmental conditions.
+    no_intrinsic_chirality: >
+      The solo-vortex has no absolute up/down/left/right. Its handedness
+      is relational — defined only by interaction with an external structure
+      (local commitment density η, magnetic field, matter distribution).
+      The apparent observation that neutrinos are exclusively left-handed
+      on Earth is, in this framework, an environmental selection effect:
+      the local commitment density of ordinary matter selects which
+      chirality state the partial closure commits to when forced to
+      interact. This is a structural prediction, not a claim that
+      handedness is purely an illusion.
+
+  neutrino_hypothesis:
+    status: "STRUCTURAL HYPOTHESIS — not established identification"
+    statement: >
+      The neutrino is a candidate for the solo-vortex structure. However,
+      the neutrino has nonzero rest mass (established from oscillation
+      experiments) and therefore nonzero CCR. This places it above
+      the massless propagation regime (CCR = 0) but potentially below
+      the full 720° mass-lock (CCR = 1). The neutrino may be a partial
+      self-integral topology — some inward Praegress closure, between
+      zero (photon) and full (electron) — as described in
+      friedmann-emergence.yaml #probe_epistemics and
+      photon-mass-and-proton-excess.yaml #neutrino_comparison.
+    what_needs_derivation: >
+      Whether the solo-vortex (modification_1/2, sub-threshold CCR,
+      net chirality) and the neutrino (partial self-integral, small but
+      nonzero rest mass, three generations) are the same structure
+      requires the neutrino-ccr-characterisation open derivation —
+      establishing the degree of partial inward closure and whether it
+      maps to the solo-vortex topology. Three neutrino generations would
+      then be three degrees of partial inward closure, each with its own
+      CCR value above zero but below CCR_crit.
+    open_derivation: "neutrino-ccr-characterisation (friedmann-emergence.yaml)"
+
+---
+
+photon:
+  description: >
+    A dipole pair of two counter-oriented partial rotors in the same
+    bivector plane — one left-handed (L), one right-handed (R) referencing
+    each other. The geometric product R·R† cancels grade-2 character,
+    leaving a pure grade-1 propagating residual.
+  ga_expression: >
+    ψ_γ = R · R†  (geometric product, not additive superposition)
+    where R = exp(-½ B̂θ) and R† = exp(+½ B̂θ) — same plane B, opposite
+    phase orientation. The grade-2 bivector components cancel; the
+    product collapses to a scalar + grade-1 phase gradient residual.
+    See ga-grade-chain-to-particles.yaml #photon for the full derivation.
+  notation_note: >
+    The additive notation ψ_γ = ψ_L + ψ_R is an approximation that
+    loses the GA structure. The geometric product R·R† is the correct
+    expression — it is what produces the grade-2 cancellation and the
+    grade-1 residual. These are not the same operation.
+  properties:
+    net_zero_chirality: >
+      The L and R components have exactly opposite bivector orientation:
+      χ_L = -χ_R. Grade-2 cancels in the geometric product.
+      Net charge = 0 because net chirality = 0.
+    massless: >
+      Zero inward Praegress closure — the counter-orientation prevents
+      the self-referential loop from forming. The photon cannot reach
+      CCR = 1 because its two components cancel any tendency toward
+      self-coupling. Zero rest mass is structurally guaranteed, not
+      empirically assumed.
+    polarisation: >
+      Left circular: R · R† (R leads — left component dominant)
+      Right circular: R† · R (R† leads — right component dominant)
+      Linear: superposition of both orderings.
+      All three follow from the same GA operation and its orderings.
+  decoherence_of_photon: >
+    When a photon is measured (polariser, detector), the external
+    interaction (3rd body R5 event) commits the system to a specific
+    relative orientation of the L/R pair — a specific polarisation state.
+    This is not mass-lock: the photon after measurement remains a
+    grade-1 propagating structure with zero rest mass. It commits to a
+    polarisation (grade-2 orientation of the pair) but does not acquire
+    inward self-closure. CCR remains below CCR_crit.
+    What commits is the phase relationship between L and R, not the
+    overall loop structure.
+
+---
+
+wave_particle_transition:
+  statement: >
+    Wave-particle duality is not a fundamental mystery. It is the
+    consequence of grade-structured dynamics: the same rotor configuration
+    behaves as a wave (open regime, grade-2 bivector phase flow, no R5
+    commitment) or as a particle (committed regime, R5 fired, stable
+    lock) depending on whether decoherence has occurred.
+  pre_decoherence: >
+    Bivector wave in the open regime — grade-2 phase flow, unresolved
+    potential, multiple orientational states superposed. The R3
+    orientational superposition is maintained: ψ = Σᵢ cᵢ·Rᵢ.
+    The system explores all viable pathways without committing.
+  decoherence: >
+    Loss of phase coherence due to 3rd body influence — an external
+    R5 event (measurement, environmental interaction) that forces a
+    specific orientation to commit. This is the Quantum Zeno mechanism
+    from quantum-zeno-as-commitment.yaml applied to the wave regime:
+    external R5 forcing narrows the R3 exploration and drives commitment.
+  post_decoherence:
+    solo_vortex_case: >
+      The partial rotor commits to a specific chirality state — a specific
+      grade-2 orientation. If sufficient environmental stress is present,
+      CCR → CCR_crit and mass-lock may follow. Under standard conditions,
+      it remains sub-threshold but with fixed chirality.
+    photon_case: >
+      The L/R pair commits to a specific relative orientation (polarisation).
+      No mass-lock — the photon remains grade-1 propagating after
+      polarisation commitment. What changes is the phase relationship
+      between components, not the topology.
+    electron_case: >
+      If the configuration is a co-oriented rotor pair (modification_3),
+      the 720° boundary condition Q* = R_k[Q*] is reached — full mass-lock,
+      CCR = 1, R5 fires permanently. This is the particle in the strong sense.
+  key_distinction: >
+    "Particle" means different things for the photon (committed polarisation,
+    no mass) and the electron (committed 720° lock, rest mass). Wave-particle
+    duality is not one phenomenon but two: photon detection commits phase
+    relationship; electron detection commits topology. Only the latter
+    involves mass-lock.
+
+---
+
+decoherence_as_3rd_body:
+  statement: >
+    Decoherence is triggered by a 3rd body influence — an external
+    interaction that introduces a new reference frame and forces an R5
+    commitment event, breaking phase-locking of the partial closure or
+    the L/R pair.
+  mechanism:
+    step_1: >
+      The solo-vortex or photon is in pre-decoherence state: bivector
+      wave in R3 superposition, no fixed chirality or polarisation.
+    step_2: >
+      A 3rd body (magnetic field, detector, matter) interacts — introducing
+      a new committed topology into the local neighbourhood. The committed
+      topology's Π_eff profile creates a new constraint landscape.
+    step_3: >
+      The interaction fires R5 locally — an η increment is deposited.
+      This narrows the local Π_eff and breaks phase-locking.
+    step_4: >
+      The system resolves to the specific orientation that minimises CCR
+      mismatch with the new constraint landscape — a specific chirality
+      or polarisation is realised.
+  2_body_character: >
+    A solo-vortex or photon in isolation is a 2-body system — the L/R
+    components or the partial rotor and the substrate reference each
+    other. Chirality or polarisation is undefined relative to an external
+    frame until a 3rd body provides one. This is why quantum systems
+    appear to "not have" properties before measurement — they genuinely
+    lack a reference frame against which the relational property is defined.
+  connection_to_zeno: >
+    The 3rd body decoherence mechanism is the same as the Quantum Zeno
+    Effect (quantum-zeno-as-commitment.yaml): the 3rd body forces R5
+    events, depositing η, narrowing local Π_eff, and suppressing further
+    R3 exploration. Measurement is not passive observation but active
+    R5 forcing by the measurement apparatus's committed topology.
+
+---
+
+neutrino_left_handedness_prediction:
+  statement: >
+    The observed exclusive left-handedness of neutrinos in ordinary matter
+    is, in this framework, an environmental selection effect — not a
+    fundamental asymmetry of the solo-vortex topology itself.
+  mechanism: >
+    Ordinary matter is composed of right-handed quarks and left-handed
+    electrons (from electroweak symmetry breaking — the Higgs condensate
+    sets a preferred grade-0 orientation). This committed environment has
+    a specific chirality bias in its local Π_eff profile. When a solo-vortex
+    interacts with this environment (3rd body R5 event), the commitment
+    landscape's chirality bias selects the left-handed orientation as the
+    lower CCR mismatch state — the orientation that minimises conflict
+    with the surrounding committed topology.
+  prediction: >
+    In a right-handed matter environment (antimatter), the same solo-vortex
+    would appear right-handed. This is consistent with the CPT symmetry
+    of the framework: the intrinsic topology of the solo-vortex is not
+    chiral, but its committed expression in an environment always carries
+    the environment's chirality bias.
+  status: "STRUCTURAL PREDICTION — falsifiable if right-handed neutrinos
+           are observed in a specific high-energy environment where the
+           local commitment density chirality is reversed"
+
+---
+
+summary_table:
+  - concept: "Solo-vortex (neutrino candidate)"
+    pre_decoherence: "Partial rotor, grade-2 bivector wave, net chirality but no fixed orientation"
+    decoherence: "3rd body R5 event; environment selects chirality state"
+    post_decoherence: "Fixed chirality committed; CCR remains sub-threshold (no mass-lock under standard conditions)"
+    note: "Mass-lock possible under extreme environmental stress (CCR → CCR_crit)"
+
+  - concept: "Photon"
+    pre_decoherence: "R·R† counter-oriented pair; grade-1 propagating; L/R phase relationship undefined"
+    decoherence: "3rd body R5 event; specific polarisation (L/R relative orientation) commits"
+    post_decoherence: "Fixed polarisation; grade-1 propagating; NO mass-lock; CCR unchanged"
+    note: "Detection commits polarisation not topology — photon remains massless after detection"
+
+  - concept: "Electron (for contrast)"
+    pre_decoherence: "Co-oriented R·R pair; grade-2 deepened; multiple orientations in R3"
+    decoherence: "3rd body R5 event forces orientation commitment"
+    post_decoherence: "720° lock triggered; Q* = R_k[Q*]; CCR = 1; mass-lock permanent"
+    note: "This is the particle in the strong sense — commitment is topological"
+
+  - concept: "Wave-particle duality"
+    pre_decoherence: "Wave = R3 orientational superposition (bivector phase flow)"
+    decoherence: "3rd body breaks phase-locking; specific orientation commits"
+    post_decoherence: "Particle = committed orientation/topology (grade dependent)"
+
+---
+
+open_derivations:
+  - id: "neutrino-ccr-characterisation"
+    description: >
+      Establish the degree of partial inward closure of the neutrino topology.
+      Map it to a specific CCR value between 0 (photon) and 1 (electron).
+      Three generations as three degrees of partial closure. Determine whether
+      the solo-vortex (modification_1/2, no inward closure) or a distinct
+      partial self-integral topology best describes the neutrino.
+    depends_on: ["ccr-electron-explicit", "vortex-stability.yaml topology"]
+    priority: 2
+    note: "Also tracked in friedmann-emergence.yaml open_derivations"
+
+  - id: "chirality-selection-from-environment-ccr"
+    description: >
+      Formal derivation showing that the chirality selected by a solo-vortex
+      upon 3rd body interaction is determined by the CCR mismatch minimisation
+      against the local commitment density chirality. Recover the observed
+      exclusive left-handedness of neutrinos in ordinary matter from the
+      electroweak Higgs condensate orientation of the local η field.
+    depends_on: ["neutrino-ccr-characterisation",
+                 "freedom-reduction-as-unified-principle.yaml#higgs_condensate"]
+    priority: 3
+
+---
+
+cross_references:
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Photon as R·R† (authoritative); electron as R·R — notation standard"
+  - file: "core/process-physics/ga-grades-as-process-stages.yaml"
+    note: "Grade-2 as oriented plane; grade-1 as open vector flow"
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "CCR threshold; mass-lock mechanics; wavelength as capacity"
+  - file: "core/process-physics/quantum-zeno-as-commitment.yaml"
+    note: "3rd body as R5 forcing; decoherence = Zeno mechanism"
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "Solo-vortex as modification_1/2; photon as dipole pair"
+  - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "Neutrino as partial self-integral — neutrino_comparison section"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Neutrino as CCR-distinct probe; probe epistemics"
+  - file: "core/process-physics/excitation-distinctions.yaml"
+    note: "Wave = pre-R5 R3 exploration; particle = committed post-R5 structure"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "Higgs condensate chirality bias — neutrino left-handedness mechanism"
