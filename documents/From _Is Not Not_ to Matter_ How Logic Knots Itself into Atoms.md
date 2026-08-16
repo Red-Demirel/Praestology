@@ -26,7 +26,7 @@ $$N = \frac{1}{2}(1 + I)$$
 
 where $I = e_1 e_2 e_3$ is the unit pseudoscalar of $Cl(3,0)$.
 
-**$N$ is an idempotent projection operator:** $N^2 = N$. This means applying the operation repeatedly yields the exact same subspace as applying it once — it does not accumulate or deepen. $N$ defines an algebraically stable uncommitted channel: a projection onto the open potential subspace before any topological closure occurs. It is built purely from unit directional capacity in $Cl(3,0)$, spanning scalar (Grade-0) and pseudoscalar (Grade-3) without introducing any preferred vector direction.
+**$N$ expresses neutral orientation** — built purely from unit directional capacity in $Cl(3,0)$, spanning scalar (Grade-0) and pseudoscalar (Grade-3) with no preferred vector direction. Every orientation is equally available; none is selected. It holds full rotational and spatial capacity without committing any of it.
 
 Until an active rotor $R$ introduces a specific orientation via $R N R^\dagger$, $N$ exerts zero directional stress on any coordinate axis. It is the algebraic expression of maximum freedom — the null space of the commitment operator.
 
@@ -117,6 +117,8 @@ Not a coupling to an external Higgs field. The trapped kinetic energy of the $72
 
 The $\beta$ angle ($e^{I\beta/2}$) — the Yvon-Takabayashi angle — encodes closure progress: $\beta = 0$ is full commitment (R5 complete); $\beta = \pi/2$ is maximum openness (R3 stage). A variable with no clear interpretation in standard Dirac theory; here it is the process-level position indicator in the grade chain.
 
+CCR = 1 is the minimum stable closure — the single Möbius winding with writhe $\text{Wr} = 1$. The Calugareanu-White-Fuller theorem guarantees that the writhe of any closed curve is always an integer, so for topologies where the phase-space geometry is symmetric enough for the rotor volume ratio $\Omega_\text{rotor}/\Omega_\text{embed} = 1$, the CCR takes discrete integer values $\text{CCR} = N$, $N \in \mathbb{N}$. Higher integer-writhe closures ($N = 2, 3, \dots$) correspond to multi-wound topological locks with proportionally higher mass: $m_N = N \cdot \hbar\omega_z/c^2$. Whether these higher-$N$ single-topology states are stable or rapidly decay to $N = 1$ via Regress is an open question — the known stable particles do not obviously map to higher integer CCR values, suggesting they are either short-lived resonances or that composite structures involve non-symmetric topologies whose CCR values are not simple integers. Fractional CCR values (quarks) and non-additive binding costs (proton mass excess) arise precisely in these non-symmetric cases.
+
 ---
 
 ## Step 4: Condensation into Stable Matter — Topological Solitons (Tony Skyrme)
@@ -135,7 +137,7 @@ In Praestology the saturation term $\Lambda \cdot \ln(1 + \kappa|\psi|^2)$ in th
 
 ## Summary: The Assembly Pipeline
 
-$$\text{Logic }(\neg\neg A) \xrightarrow{\;\text{Isham}\;} \text{Uncommitted Potential — } N = \tfrac{1}{2}(1+I), \; N^2 = N$$
+$$\text{Logic }(\neg\neg A) \xrightarrow{\;\text{Isham}\;} \text{Uncommitted Potential — } N = \tfrac{1}{2}(1+I)$$
 
 $$\downarrow$$
 
