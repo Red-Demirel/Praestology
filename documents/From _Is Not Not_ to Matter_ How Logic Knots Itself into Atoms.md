@@ -131,13 +131,13 @@ In Praestology the saturation term $\Lambda \cdot \ln(1 + \kappa|\psi|^2)$ in th
 
 **Protons and neutrons** are three quarks in mutually orthogonal bivector planes — a new topological commitment at a deeper nesting level. The binding topology is a distinct committed structure in its own right, with its own irreducible CCR cost. This is why the proton (~938 MeV) weighs approximately 100 times more than the sum of its constituent quark masses (~9 MeV): the three-fold binding CCR cost far exceeds the sum of the individual quark CCR values. Non-additivity is not a correction term — it is the primary contribution.
 
-**Atoms** are nested composites: electrons ($720°$ Möbius locks, modification_3) bound to nuclear structures ($n$-fold combinatorial bindings, modification_2/4), each nesting level contributing its own irreducible CCR layer.
+**Atoms** are nested composites: electrons (spin-½ Möbius locks, CCR = 1, modification_3) bound to nuclear structures ($n$-fold combinatorial bindings, modification_2/4). The atom's overall spin — integer or half-integer depending on how constituent spins combine — is a property of the composite topology, not of any single constituent winding. Each nesting level contributes its own irreducible CCR layer; the atom's inertia is the cumulative restriction cost of all closure depths present in its structure.
 
 ---
 
 ## Summary: The Assembly Pipeline
 
-$$\text{Logic }(\neg\neg A) \xrightarrow{\;\text{Isham}\;} \text{Uncommitted Potential — } N = \tfrac{1}{2}(1+I)$$
+$$\text{Logic }(\neg\neg A) \xrightarrow{\;\text{Isham}\;} \text{Uncommitted Potential — } N = \tfrac{1}{2}(1+I)\text{, neutral orientation}$$
 
 $$\downarrow$$
 
@@ -149,15 +149,15 @@ $$\text{Closure Spectrum} \xrightarrow{\;\text{Praestology/CCR}\;} \text{Progres
 
 $$\downarrow$$
 
-$$\text{Algebra }(Cl(3,0)\text{ rotors}) \xrightarrow{\;\text{Hestenes/CCR}\;} \text{720° spinorial mass-lock}, \; m = \hbar\omega_z/c^2$$
+$$\text{Algebra }(Cl(3,0)\text{ rotors}) \xrightarrow{\;\text{Hestenes/CCR}\;} \text{Spin-}{\tfrac{1}{2}}\text{ spinorial mass-lock (CCR}=1\text{)}, \; m = \hbar\omega_z/c^2$$
 
 $$\downarrow$$
 
-$$\text{Matter }(\text{Skyrmions}) \xrightarrow{\;\text{Skyrme}\;} \textbf{Stable Atom}$$
+$$\text{Matter }(\text{Skyrmions}) \xrightarrow{\;\text{Skyrme}\;} \textbf{Stable composite structure}$$
 
 ### The Takeaway
 
-An atom is not a mechanical machine made of physical bricks. It is a **self-trapped, $720°$ topological knot combination** — open configurations of logical potential ($\neg\neg A$) progressively closing inward, each stage adding a layer of restriction, until the configuration reached a fixed point of its own self-reference and committed permanently.
+An atom is not a mechanical machine made of physical bricks. It is a **self-trapped, topological knot combination** — open configurations of logical potential ($\neg\neg A$) progressively closing inward, each stage adding a layer of restriction, until the configuration reached a fixed point of its own self-reference and committed permanently.
 
 Matter is committed, self-referential potential, knotted by logic into stable structure.
 
