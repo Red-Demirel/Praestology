@@ -26,6 +26,8 @@ The **Process Series** is a foundational trilogy designed to guide the reader st
    3. From "Is Not Not" to Matter
       └── Topos Logic (¬¬A) • CCR Threshold (CCR = 1) • 720° Topological Locks
 
+   Companion Expansion — The Relational Quantum: Solo-Vortices, Entanglement, and What Quantum Computing Is Actually Doing
+
 ```
 
 ---
@@ -66,7 +68,8 @@ The **Process Series** is a foundational trilogy designed to guide the reader st
 
 * **Emergent Properties:** Rest mass emerges directly as the trapped rotational kinetic energy of the lock ($m = \hbar\omega_z / c^2$), while physical forces represent the restorative elastic tension gradients of the background field attempting to heal around a local depletion.
 
-
+#### Companion Expansion — The Relational Quantum
+Extends the framework from single-node topological mass-locks to multi-body relational dynamics. It demonstrates how quantum entanglement, uncertainty bounds, and pilot-wave behaviors resolve without nonlocality or hidden variables when treated as shared $\eta$ records and non-commuting 3rd-body R5 reference frames in $Cl(3,0)$.
 
 ---
 
@@ -74,10 +77,17 @@ The **Process Series** is a foundational trilogy designed to guide the reader st
 
 To get the most out of the series, read the papers in their sequential order:
 
-1. **Start with *Time as Process Order*** to internalize the operational update loop ($n$) and unlearn the concept of background spacetime and external spectators.
+1. **Start with *Time as Process Order***  to internalize the operational update loop ($n$) and unlearn the concept of background spacetime and external spectators.
+Time as Process Order_ A Geometric Algebra Perspective.md
 
 
 2. **Proceed to *Thermodynamics as Process*** to see how the engine of process generates directional entropy, heat, and collective fluid dynamics without external coordinates.
+Thermodynamics as Process_ A Geometric Algebra Perspective.md
 
 
 3. **Conclude with *From "Is Not Not" to Matter*** to see the full assembly pipeline fold open potential into stable, quantized atoms.
+From _Is Not Not_ to Matter_ How Logic Knots Itself into Atoms.md
+
+
+4. **The Relational Quantum** Builds on the prior parts and extends the framework and some of its implications.
+The Relational Quantum_ Solo-Vortices, Entanglement, and What Quantum Computing Is Actually Doing.md
