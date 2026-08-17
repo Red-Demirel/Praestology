@@ -78,14 +78,17 @@ Extends the framework from single-node topological mass-locks to multi-body rela
 To get the most out of the series, read the papers in their sequential order:
 
 1. **Start with *Time as Process Order***  to internalize the operational update loop ($n$) and unlearn the concept of background spacetime and external spectators.
+
 Time as Process Order_ A Geometric Algebra Perspective.md
 
 
 2. **Proceed to *Thermodynamics as Process*** to see how the engine of process generates directional entropy, heat, and collective fluid dynamics without external coordinates.
+
 Thermodynamics as Process_ A Geometric Algebra Perspective.md
 
 
 3. **Conclude with *From "Is Not Not" to Matter*** to see the full assembly pipeline fold open potential into stable, quantized atoms.
+
 From _Is Not Not_ to Matter_ How Logic Knots Itself into Atoms.md
 
 
