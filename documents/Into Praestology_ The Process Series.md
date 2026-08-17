@@ -93,4 +93,5 @@ From _Is Not Not_ to Matter_ How Logic Knots Itself into Atoms.md
 
 
 4. **The Relational Quantum** Builds on the prior parts and extends the framework and some of its implications.
+
 The Relational Quantum_ Solo-Vortices, Entanglement, and What Quantum Computing Is Actually Doing.md
