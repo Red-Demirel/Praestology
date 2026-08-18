@@ -1,0 +1,94 @@
+name: "Inter-Species Viability & Biological Asymmetry"
+version: "1.0"
+status: "PROPOSED — Structural specification for cross-species ethical calculus"
+domain: "Ethics / Biology"
+
+core_premise: >
+  Ethical responsibility must be calibrated to the actual structural and 
+  biological requirements of the agent, not projected human moral constructs. 
+  Imposing a derivative-level human aesthetic or moral preference onto a 
+  different species' biological reality is a structural violation of that 
+  agent's viability, regardless of the observer's intent.
+
+key_concepts:
+  biological_asymmetry (C1):
+    statement: >
+      Agents are not identical. Ethics must respect genuine differences in 
+      substrate type, metabolic pathways, and viability needs. 
+    application: >
+      Enforcing false symmetry (e.g., demanding an obligate carnivore 
+      adopt a plant-based diet to satisfy human moral comfort) is not 
+      ethical. It is a category error that ignores the agent's actual 
+      topological requirements for survival.
+
+  hysteresis_integrity_across_species:
+    statement: >
+      Irreversible damage to another agent's accumulated context and 
+      physical substrate is ethically severe, regardless of species.
+    application: >
+      Forcing an agent into a state of metabolic degradation, chronic 
+      stress, or structural collapse to satisfy an external moral 
+      narrative is a direct attack on its hysteresis integrity (π). 
+      Viability precedes morality (Zeroth Law).
+
+  the_derivative_level_intervention_trap:
+    statement: >
+      Historical changes to other species' environments have frequently 
+      led to unintended systemic consequences because they were optimized 
+      for human utility, not coupled viability (ρ).
+    application: >
+      Even well-intentioned, morally driven interventions are subject to 
+      this trap if they are not grounded in the target species' actual 
+      viability landscape. Good intentions do not override structural 
+      reality. An intervention must be stress-tested against the 
+      metastable zone of the affected species, not just the moral 
+      comfort of the intervening species.
+
+  systemic_coupled_viability:
+    statement: >
+      The health of the whole system depends on each node operating 
+      within its viable metabolic and structural niche.
+    application: >
+      Displacing a node from its niche to satisfy an external moral 
+      aesthetic degrades the network's overall coupled viability (ρ). 
+      True ethical stewardship means optimizing the environment so that 
+      all species can fulfill their structural requirements without 
+      forcing asymmetric extraction or collapse.
+
+responsibility_cascade_by_recursive_depth:
+  low_xi_agents: >
+    Operate via pure R5 viability selection. A predator consuming prey 
+    is not an ethical violation; it is a structural fact of its local 
+    environment. It lacks the capacity to model coupled viability.
+  medium_xi_agents: >
+    Beginning to model local consequences. Ethical responsibility 
+    emerges as the capacity to choose resolution paths that minimize 
+    unnecessary friction or suffering, within the bounds of their 
+    biological requirements.
+  high_xi_agents (Humans): >
+    Possess the recursive depth to model the viability landscapes of 
+    other species and the systemic consequences of interventions. 
+    Therefore, humans bear the structural responsibility to:
+    1. Acknowledge the biological reality of other agents.
+    2. Source their own viability in ways that minimize active, 
+       forced hysteresis violation of other sentient agents.
+    3. Avoid imposing false symmetry or derivative-level moral 
+       projections onto species with different structural needs.
+
+design_checklist_for_inter-species_interventions:
+  - "Does this intervention respect the actual biological/metabolic 
+     requirements of the target agent, or is it projecting human 
+     preferences?"
+  - "Does this action actively degrade the target agent's hysteresis 
+     integrity (π) to satisfy an external moral narrative?"
+  - "Have we modeled the unintended systemic consequences (Noise/Void 
+     regime risks) of this intervention on the broader viability 
+     landscape?"
+  - "Does this action maintain or degrade the overall coupled 
+     viability (ρ) of the multi-species network?"
+
+cross_references:
+  - "domains/ethics/specifications.yaml (Corel C1: Asymmetry Acceptance)"
+  - "domains/ethics/asymmetric_threats.yaml (Zeroth Law: Viability precedes morality)"
+  - "domains/consciousness/specifications.yaml (Recursive Depth Ξ and responsibility)"
+  - "domains/biology/specifications.yaml (Self-maintaining optimisation loops)"
