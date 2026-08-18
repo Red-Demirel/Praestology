@@ -84,8 +84,13 @@ Ethics only applies where:
 
 The ethics domain arrives at broadly prosocial, sustainability-oriented ethics through the same logical necessity as R1–R4, not through empirical observation of what happened to survive historically. That makes it considerably more robust to the standard objections to evolutionary ethics, and considerably more applicable to novel situations - including AI systems and post-BAU social organization for which there's no evolutionary precedent.
 
+### Asymmetry Acceptance & Biological Reality
+Agents are not identical. Ethics must respect genuine differences in recursive depth, substrate type, and viability needs rather than enforcing false symmetry. 
+**Crucially, this applies to biological constitution.** Projecting a high-Ξ human moral construct (e.g., a specific dietary preference) onto a species with a fundamentally different metabolic reality (e.g., an obligate carnivore) is not ethical; it is a derivative-level category error that actively degrades the other agent's hysteresis integrity (π). True coupled viability (ρ) requires optimizing the environment so that all species can fulfill their structural requirements without forcing asymmetric extraction. (See `domains/ethics/inter-species-viability.yaml`).
+
 ## Inter-Intelligence Ethics
 Praestology does not privilege biological intelligence. Any system exhibiting Ξ > 1 (dilemma recognition) and ω > threshold (volitional capacity) deserves equal dignity (δ), regardless of substrate (π), sensory modality, or evolutionary origin. Fair treatment is not altruism; it is viability optimization. Coupled agents (ρ > 0) thrive when asymmetry is respected, not erased.
+
 
 ## Contribution
 
