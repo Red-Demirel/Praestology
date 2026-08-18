@@ -218,6 +218,7 @@ foundational_principles:
       structure. Consistent with low-Ξ agency without recursive
       self-modelling.
 
+
 # ─────────────────────────────────────────────
 # DOMAIN RULES
 # ─────────────────────────────────────────────
@@ -405,6 +406,16 @@ domain_rules:
       one pathway to higher agency, not the only possible one.
       Silicon or other substrates could in principle provide
       equivalent Ξ amplification — substrate-neutral claim.
+
+  inter_species_ethical_boundary:
+    statement: >
+      Biological constitution and metabolic requirements are not derivative-level 
+      variables; they are the physical instantiation of an agent's viability 
+      landscape. Any ethical framework applied to biological systems must 
+      respect substrate asymmetry. Imposing human moral aesthetics onto the 
+      obligate biological requirements of other species is a structural 
+      violation of their hysteresis integrity.
+    cross_reference: "domains/ethics/inter-species-viability.yaml"
 
 # ─────────────────────────────────────────────
 # SUBDOMAIN STRUCTURE
