@@ -1,0 +1,37 @@
+---
+config:
+  layout: elk
+---
+graph TD;
+    A["Praestology: The Process Series"] --> B["Part 1: Time as Process Order"];
+    A --> C["Part 2: Thermodynamics as Process"];
+    A --> D["Part 3: From 'Is Not Not' to Matter"];
+
+    B -->|"Internal order of transformations (n)"| E["Operational Time"];
+    B -->|"Process rate (Π_eff)"| E;
+    B -->|"Participatory Observer"| E;
+
+    C -->|"R1–R3: Static configuration"| F["Thermodynamic Engine"];
+    C -->|"R4: Relational succession"| F;
+    C -->|"Irreversibility (R5)"| F;
+    C --> G["QHD & MHD as collective expressions"];
+
+    D -->|"Topos Logic (¬¬A)"| H["Logical Potential"];
+    D -->|"CCR Threshold (CCR = 1)"| I["Topological Closure"];
+    D -->|"720° Möbius Locks"| J["Stable Atoms"];
+
+    E --> F;
+    F --> I;
+    I --> J;
+
+    classDef framework stroke:#818cf8,fill:#eef2ff;
+    classDef process stroke:#2dd4bf,fill:#f0fdfa;
+    classDef output stroke:#a78bfa,fill:#f5f3ff;
+    classDef logic stroke:#fb923c,fill:#fff7ed;
+    classDef endpoint stroke:#4ade80,fill:#f0fdf4;
+
+    class A framework;
+    class B,C,D process;
+    class E,F,G output;
+    class H,I logic;
+    class J endpoint;
