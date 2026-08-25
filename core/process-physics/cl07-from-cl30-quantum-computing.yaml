@@ -1,0 +1,345 @@
+# /core/process-physics/cl07-from-cl30-quantum-computing.yaml
+name: "Cl(0,7) from Cl(3,0): Quantum Computing and Biological Processing
+       in the Derivative Regime"
+version: "0.2"
+status: "STRUCTURAL DERIVATION — derivation chain and four-purpose mapping
+         established; biology/neuroscience extension added; Steane code
+         CCR identification and formal gate realisability constraints open"
+domain: "Core / Process-Physics"
+changes_from_v0.1: >
+  Added biology_neuroscience_extension: the four-purpose Cl(0,7) mapping
+  applies to biological information processing at the Ξ > 1 commitment
+  depth, not only to engineered qubits. T₁/T₂ mapped to synaptic weight
+  decay and neural coherence timescales respectively. T₂ ≤ 2T₁ as
+  structural constraint on neural dynamics. Zeno stabilisation as
+  process-level mechanism for selective attention. Replaced
+  geometric-algebra-bridge-amendment-cl30.yaml dependency with
+  geometric-algebra-bridge.yaml.
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/rotor-to-ccr-transition.yaml"
+    - "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/geometric-algebra-bridge.yaml"
+  scope: >
+    This file addresses operations on committed or near-committed rotor
+    configurations in η — the derivative regime. Quantum computing exploits
+    R3 superposition (pre-commitment coherence) on committed physical or
+    biological substrates (R5/η structures). The algebra of this boundary
+    regime is Cl(0,7), derived from Cl(3,0) via the qubit correspondence
+    below. The same algebra applies to biological systems at the Ξ > 1
+    commitment depth.
+
+---
+
+motivation:
+  statement: >
+    Cl(3,0) is the process-level algebra. Quantum computing and biological
+    processing both operate in the derivative regime: exploiting pre-commitment
+    superposition (R3) on committed physical or biological substrates (R5/η).
+    The algebra of operations on committed qubit or neural configurations
+    in this regime is Cl(0,7) — a natural consequence of the orientation
+    degrees of freedom available in a 7-unit committed rotor system derived
+    from Cl(3,0).
+  four_purposes: >
+    This file covers four purposes applicable to both quantum computing
+    and biological processing:
+      1. Transformations of a process-state (unitary gates / neural updates)
+      2. Relations among local perspectives (entanglement / coherence)
+      3. Compositional patterns among events (circuits / neural assemblies)
+      4. Constraints determining which transitions are allowed
+         (error correction / viability thresholds)
+
+---
+
+derivation_chain:
+
+  step_1_qubit_from_rotor:
+    statement: >
+      Each committed rotor in Cl(3,0) carries a grade-2 bivector plane
+      with two orientation degrees of freedom — the two spin states of
+      the committed configuration. These two degrees of freedom are a
+      qubit: a two-dimensional complex vector space spanned by the two
+      orientation eigenstates.
+    basis: >
+      Single rotor R = exp(-B̂θ/2) in Cl(3,0):
+        Orientation +B̂ eigenstate ↔ |0⟩
+        Orientation -B̂ eigenstate ↔ |1⟩
+
+  step_2_three_qubits_from_cl30:
+    statement: >
+      Cl(3,0) has three independent bivector planes:
+        B₁ = e₁∧e₂, B₂ = e₂∧e₃, B₃ = e₁∧e₃
+      Each plane contributes one qubit. A single Cl(3,0) rotor system
+      naturally encodes 3 qubits. The 3-qubit Hilbert space ℂ⁸ = 2³
+      is the spinor space of Cl(3,0).
+
+  step_3_complexification:
+    statement: >
+      To describe quantum states (complex amplitudes), Cl(3,0) is complexified:
+        Cl(3,0) ⊗ ℂ ≅ M(4,ℂ)
+      The imaginary unit i is the pseudoscalar I = e₁e₂e₃ acting on
+      the spinor space — no new algebraic elements, consistent with the
+      Madelung decomposition where I encodes the phase S in ψ = √ρ·exp(IS).
+
+  step_4_extension_to_7:
+    statement: >
+      Extending to 7 qubits requires 7 independent orientation degrees of
+      freedom. The natural algebra is Cl(0,7) — Clifford algebra with 7
+      basis vectors squaring to -1 (negative signature, consistent with
+      the phase/imaginary character of qubit orientation in the complexified
+      setting).
+    dimension: >
+      Cl(0,7) is 2⁷ = 128-dimensional.
+      Grade-2 sector: C(7,2) = 21 — the 21 independent pairwise orientation
+      correlations among 7 qubits (full entanglement landscape).
+      Spinor space: ℂ⁸ — encoding logical qubit amplitudes.
+    derivation_status: >
+      Cl(0,7) is not independently postulated. It is the natural extension
+      of Cl(3,0)'s orientation-degree-of-freedom structure to 7 units via
+      the qubit-as-rotor correspondence. Negative signature follows from
+      complexification: orientation degrees of freedom square to -1
+      (phase operators, not spatial vectors).
+
+---
+
+four_purposes:
+
+  purpose_1_state_transformations:
+    name: "Transformations — Unitary Gates / Neural Updates"
+    statement: >
+      Unitary gates on qubits are rotors in Cl(0,7) — elements of Spin(7).
+      Each gate is a rotation in the 7-dimensional orientation space.
+      Rotor structure identical to Cl(3,0): R = exp(-B̂θ/2), where B̂
+      is now a bivector in the 7-dimensional orientation space.
+    ccr_constraint: >
+      A gate rotation is physically realisable if its CCR cost remains
+      within the local viability threshold V_c. Gates exceeding V_c force
+      unwanted R5 events (decoherence / error). The universal gate set
+      is the minimal rotor generating set of Spin(7) bounded by V_c.
+    biological_reading: >
+      Neural weight updates (synaptic plasticity, learning rules) are
+      rotations in the orientation space of the committed neural assembly's
+      rotor configuration. Long-term potentiation (LTP) and depression (LTD)
+      are grade-2 rotor rotations in the synaptic bivector plane — changes
+      in the committed orientation of the synaptic weight configuration.
+      The CCR constraint maps to the homeostatic plasticity bound: updates
+      that would force the neural assembly past its viability threshold
+      trigger compensatory (Regress) processes rather than committing.
+
+  purpose_2_local_perspectives:
+    name: "Relations Among Local Perspectives — Entanglement / Coherence"
+    statement: >
+      The 21 bivectors of Cl(0,7) encode the full entanglement landscape
+      of a 7-unit system — the 21 possible pairwise orientation correlations.
+      Zero bivector mismatch (s → max): maximally correlated pair.
+      Maximum bivector mismatch (⟨G⟩₂ → max): maximally anti-correlated.
+    shared_eta_record: >
+      Entangled qubits share a committed relational record in η from their
+      joint preparation event. The 21-dimensional bivector space is the
+      algebraic structure within which that shared record is encoded.
+      Measurement decoheres specific bivector components, revealing entries
+      in the shared record without altering others.
+    biological_reading: >
+      Neural coherence (synchronised oscillation of neural assemblies)
+      is resonance (s → max) in the derivative regime — committed neural
+      configurations with maximum scalar overlap, sustained against Regress
+      by ongoing rhythmic input (thalamic pacemakers, gamma oscillations).
+      The 21-dimensional bivector space for a 7-assembly system encodes
+      the full functional connectivity landscape — which assemblies are
+      coherent with which. Phase-locking between assemblies is the
+      biological expression of shared η record: the joint commitment
+      history of coordinated neural firing events.
+
+  purpose_3_compositional_patterns:
+    name: "Compositional Patterns — Circuit Structure / Neural Assembly"
+    statement: >
+      Quantum circuits are sequential rotor products in Cl(0,7):
+        ψ_out = Rₙ···R₁ ψ_in R₁†···Rₙ†
+      Gate grade structure:
+        Grade-2: single-qubit gates (one bivector plane)
+        Grade-4: two-qubit gates (coupling two bivector planes)
+        Grade-6: three-qubit gates
+        Grade-7: global phase (full orientation volume — unobservable)
+    ccr_accumulation: >
+      Circuit depth is bounded by V_c / CCR_gate_cost. Circuits whose
+      total CCR cost exceeds V_c for any intermediate state are physically
+      unrealisable — they force decoherence before completion.
+    biological_reading: >
+      Neural computation sequences (sensory processing chains, working memory
+      maintenance, motor planning) are sequential rotor products at the
+      neural assembly level. The grade structure maps to hierarchical
+      processing depth: grade-2 operations are local (single-assembly),
+      grade-4 operations are inter-regional (binding two assemblies),
+      grade-6 operations are network-wide (integrative). The CCR
+      accumulation bound corresponds to the capacity limit of working
+      memory: a processing sequence exceeding V_c / CCR_step_cost
+      overwhelms the neural assembly's viability threshold (cognitive
+      overload).
+
+  purpose_4_transition_constraints:
+    name: "Transition Constraints — Error Correction / Viability Thresholds"
+    statement: >
+      Physically allowed transitions are determined by two nested constraints:
+        (a) CCR viability: transitions exceeding V_c are forbidden
+        (b) Code constraints: transitions mapping logical states to error
+            states are forbidden by the stabiliser structure
+    steane_code:
+      statement: >
+        The Steane [[7,1,3]] code encodes 1 logical qubit in 7 physical
+        qubits. Its 6 stabiliser generators live in the grade-2 sector
+        of Cl(0,7). The logical qubit corresponds to the grade-7
+        pseudoscalar sector — rotations of the full orientation volume
+        that commute with all stabiliser generators, making them immune
+        to single-qubit (grade-2) errors.
+      ccr_reading: >
+        Code distance 3 = minimum CCR cost to cause a logical error:
+        a chain of 3 correlated physical errors, each incurring CCR cost.
+        Error threshold = V_c / 3 as a rate condition.
+      status: "STRUCTURAL IDENTIFICATION — formal stabiliser CCR values open"
+    biological_reading: >
+      Biological neural systems use population coding (many neurons encoding
+      one variable) as an analog of error-correcting codes — redundancy
+      protects against individual neuron failure. The stabiliser structure
+      maps to the constraint structure of population codes: which firing
+      patterns are consistent with a given represented variable, and which
+      are errors to be suppressed. The CCR viability bound corresponds to
+      the gain control mechanisms that prevent runaway activation — neural
+      homeostasis as fault tolerance.
+
+---
+
+regress_in_derivative_processing:
+
+  decoherence_as_regress: >
+    Decoherence is Regress acting on the pre-commitment R3 superposition
+    of a qubit or neural state. Each environmental interaction is a 3rd
+    body R5 event depositing η, narrowing local Π_eff, and eroding the
+    residual orientation freedom.
+
+  t1_t2_as_regress_rates:
+    t1_relaxation: >
+      Regress of grade-0 amplitude — committed occupation returning to
+      ground state. Rate set by η density of the environment.
+      Biology: synaptic weight decay rate — the timescale over which
+      committed synaptic strength returns to baseline without reinforcement.
+    t2_dephasing: >
+      Regress of grade-2 phase coherence — bivector orientation becoming
+      random relative to measurement reference frame. Rate set by Π_eff
+      fluctuation rate.
+      Biology: neural coherence timescale — how long synchronised
+      oscillations persist without active maintenance.
+    structural_inequality: >
+      T₂ ≤ 2T₁ always: phase coherence (grade-2) regresses at least
+      as fast as amplitude coherence (grade-0), because grade-2 is more
+      sensitive to orientation fluctuations in the restriction landscape.
+      This is a structural consequence of grade ordering, not an empirical
+      observation. Biology: neural coherence (T₂) cannot persist longer
+      than twice the synaptic weight timescale (T₁) — a testable constraint
+      on neural dynamics derivable from grade structure.
+
+  zeno_as_pi_eff_control:
+    quantum: >
+      Repeated measurement suppressing transitions is active Π_eff
+      management: each measurement deposits η, narrows local Π_eff,
+      and slows Regress of specific grade components. Not freezing a
+      state by observation — engineering the local restriction landscape.
+    biological: >
+      Selective attention is Zeno stabilisation at the neural level:
+      deliberate attention drives R5 events in specific pathways (active
+      neural firing), depositing η, narrowing local Π_eff in attended
+      circuits, and suppressing Regress of those orientation states.
+      This gives a process-level mechanism for selective attention that
+      doesn't require a separate cognitive theory: attention IS Zeno
+      stabilisation of specific bivector orientations in the neural
+      assembly's Cl(0,7) orientation space.
+      Prediction: attention should prolong T₂ in attended circuits
+      relative to unattended circuits by the same mechanism as Zeno
+      stabilisation prolongs qubit coherence — testable against
+      neural coherence data from attention paradigms.
+
+  biological_quantum_coherence: >
+    The quantum biology effects from thermodynamics-and-heat-emergence.yaml
+    (FMO complex photosynthesis, enzyme hydrogen tunneling, avian
+    magnetoreception) are pre-commitment R3 superposition effects in
+    biological systems — the same exploited resource as quantum computing,
+    occurring naturally in high-Π_eff biological pockets where R5 is
+    sufficiently suppressed to maintain coherence. These systems are
+    not "quantum computers" in the engineered sense but they exploit
+    the same Cl(0,7) structure at the molecular commitment depth.
+
+---
+
+open_derivations:
+  - id: "steane-stabiliser-ccr-values"
+    description: >
+      Explicit computation of the CCR cost of each Steane code stabiliser
+      generator as a specific Cl(0,7) bivector — identifying which grade-2
+      elements correspond to which physical error syndromes.
+    depends_on: ["rotor-to-ccr-transition.yaml#ccr-crit-from-master-equation",
+                 "ga-grade-chain-to-particles.yaml#electron-ccr-from-double-rotor-writhe"]
+    priority: 3
+
+  - id: "gate-realisability-from-ccr"
+    description: >
+      Formal derivation of the universal gate set as the minimal Spin(7)
+      generating set bounded by CCR viability condition V_c — recovering
+      the standard gate set (Hadamard, phase, CNOT) as minimum-CCR-cost
+      rotor generators of Cl(0,7).
+    depends_on: ["steane-stabiliser-ccr-values"]
+    priority: 3
+
+  - id: "t2-leq-2t1-from-grade-ordering"
+    description: >
+      Formal derivation of T₂ ≤ 2T₁ from grade ordering of Regress rates —
+      showing phase decoherence (grade-2) cannot be slower than amplitude
+      relaxation (grade-0) as a structural consequence. Apply to neural
+      coherence vs synaptic weight timescales for biological prediction.
+    depends_on: ["thermodynamics-and-heat-emergence.yaml#temperature-as-pi-eff-formal"]
+    priority: 2
+
+  - id: "cl07-from-cl30-explicit-construction"
+    description: >
+      Explicit algebraic construction showing Cl(0,7) as the natural
+      extension of Cl(3,0)'s orientation-degree-of-freedom structure
+      to 7 units via complexification and the qubit-as-rotor correspondence.
+    depends_on: ["geometric-algebra-bridge.yaml"]
+    priority: 2
+
+  - id: "attention-as-zeno-stabilisation-prediction"
+    description: >
+      Quantitative prediction that selective attention prolongs neural T₂
+      in attended circuits relative to unattended circuits by the same
+      factor as Zeno measurement rate suppresses decoherence in qubits.
+      Derive the expected T₂ prolongation from the attention-driven R5
+      firing rate and compare to neural coherence data from attention
+      paradigms (EEG gamma coherence, fMRI BOLD signal).
+    depends_on: ["t2-leq-2t1-from-grade-ordering"]
+    priority: 2
+
+---
+
+cross_references:
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "s and ⟨G⟩₂ extend to Cl(0,7) as entanglement/coherence measures"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "Steane logical qubit as grade-7 pseudoscalar consistent with
+           K₀/K₁ closure/field balance"
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "CCR threshold — gate realisability and error threshold"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Qubit-as-rotor from the same grade-2 orientation structure
+           as the electron's committed rotor configuration"
+  - file: "core/process-physics/quantum-zeno-as-commitment.yaml"
+    note: "Zeno stabilisation as Π_eff control — biological attention mechanism"
+  - file: "core/process-physics/thermodynamics-and-heat-emergence.yaml"
+    note: "Biological quantum coherence in high-Π_eff pockets"
+  - file: "core/process-physics/solo-vortex-photon-wave-particle.yaml"
+    note: "3rd body decoherence = R5 forcing — same mechanism as
+           qubit/neural decoherence here"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "Population coding as biological error correction — redundancy
+           as residual freedom protection"
