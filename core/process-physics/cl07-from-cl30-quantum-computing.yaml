@@ -31,7 +31,11 @@ dependency_map:
     biological substrates (R5/η structures). The algebra of this boundary
     regime is Cl(0,7), derived from Cl(3,0) via the qubit correspondence
     below. The same algebra applies to biological systems at the Ξ > 1
-    commitment depth.
+    commitment depth. The derivation from Cl(3,0)
+    via the qubit-as-rotor correspondence was initially intended as a
+    demonstrative consistency check. It subsequently revealed a broader
+    structural applicability across quantum computing, neural dynamics,
+    and transformer architectures.
 
 ---
 
@@ -44,6 +48,10 @@ motivation:
     in this regime is Cl(0,7) — a natural consequence of the orientation
     degrees of freedom available in a 7-unit committed rotor system derived
     from Cl(3,0).
+  note: >
+    Preference is given to maintaining the process-level nature of the
+    framework over any commitment to a particular higher algebra or
+    octonionic construction. Cl(0,7) remains provisional.
   four_purposes: >
     This file covers four purposes applicable to both quantum computing
     and biological processing:
