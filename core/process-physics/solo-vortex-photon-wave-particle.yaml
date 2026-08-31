@@ -215,6 +215,37 @@ decoherence_as_3rd_body:
 
 ---
 
+chirality_level_distinction:
+  statement: >
+    A precision point applicable throughout this file: "chirality" means
+    different things at the process level and the derivative level.
+    These must not be conflated.
+  topological_chirality: >
+    Process level (grade-2 rotor): the sign of the bivector plane — which
+    way the rotor winds. This is intrinsic to the committed topology,
+    frame-independent. The solo-vortex has net topological chirality
+    (one winding direction dominant); the photon has zero net topological
+    chirality (L and R cancel in R·R†).
+  electroweak_chirality: >
+    Derivative level (grade-1 projection): the helicity — projection of
+    spin onto the momentum direction. Left-handed means spin anti-parallel
+    to momentum. Relational and frame-dependent: a left-handed neutrino
+    moving away from you is right-handed to an observer it approaches.
+    The weak interaction couples to this projection, filtered by the
+    Higgs condensate orientation.
+  consequence: >
+    The solo-vortex's "net topological chirality" is not the same as the
+    "left-handedness" observed in weak interactions. The exclusive
+    left-handedness of neutrinos in weak interactions is the Higgs
+    condensate selection effect described below — not the solo-vortex
+    topology being intrinsically left-chiral in the electroweak sense.
+    Similarly, the electron's L+L co-orientation (topological) does not
+    mean the electron is purely left-chiral — both chirality projections
+    are present in its wavefunction; the Higgs condensate selects which
+    couples to the weak force.
+
+---
+
 neutrino_left_handedness_prediction:
   statement: >
     The observed exclusive left-handedness of neutrinos in ordinary matter
