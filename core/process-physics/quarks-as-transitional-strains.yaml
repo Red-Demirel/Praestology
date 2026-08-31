@@ -1,0 +1,264 @@
+# /core/process-physics/quarks-as-transitional-strains.yaml
+name: "Quarks as Transitional Single-Rotor Strains — Grounding Feynman's Partons"
+version: "1.1"
+status: "STRUCTURAL HYPOTHESIS — recovers Feynman parton model; unifies QCD with
+         GA rotor physics. Fractional charge values (1/3, 2/3) are the TARGET
+         of the open derivation, not established results. Structural argument
+         for fractional writhe from truncated S³ path is sound; specific
+         fractions require single-rotor-s3-geodesic-volume computation."
+domain: "Core / Process-Physics"
+changes_from_v1.0: >
+  Downgraded fractional charge values from established results to target values
+  of the open derivation — the specific fractions 2/3 and 1/3 follow from the
+  S³ geodesic computation (open), not from the structural argument alone. The
+  structural argument (single rotor stops at 2π sign-flip, fractional writhe
+  results) is sound. Added explicit connection to forces-as-vector-iterations
+  .yaml: gluons as grade-1 phase-drag around partial closures (second-iteration
+  vector interaction), not as a separate force mechanism. Replaced "charge is
+  not a coupling constant" with more precise statement.
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-grade-chain-to-particles.yaml"
+    - "core/process-physics/rotor-to-ccr-transition.yaml"
+    - "core/process-physics/closure-types-nesting.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    - "core/process-physics/forces-as-vector-iterations.yaml"
+  provides_to:
+    - target: "core/process-physics/photon-mass-and-proton-excess.yaml"
+      via: "Parton strains as source of fractional charge; binding CCR as proton mass excess"
+    - target: "core/process-physics/vector-stress-mapping.yaml"
+      via: "Stress generator topology for fractional (1/3, 2/3) grades"
+
+---
+
+ontology_shift:
+  statement: >
+    Quarks are not fundamental constituents. They are single-rotor (R)
+    transitional strain states — an open wave that has initiated R3→R5
+    closure but cannot independently satisfy the 720° self-identity
+    boundary condition (Q* = R_k[Q*]).
+
+  standard_model_reading: >
+    Electron  = successful R·R co-oriented 720° Möbius lock (stable, R5 fired)
+    Quark     = single-rotor R, stopped at 2π sign-flip (unstable, confined)
+    Proton    = three single-rotor strains bound orthogonally to create a
+                stable grade-3 pseudoscalar volume (R5 fired at the binding depth)
+
+  key_image: >
+    Quarks are the "failed attempts" of single-rotor closure that could not
+    find a co-oriented partner to complete the 4π loop. They exist only as
+    pre-commitment topological defects inside a larger viable volume.
+
+---
+
+core_principle:
+  statement: >
+    An open wave (modification_1) that attempts self-closure follows the
+    double-cover path in S³. For a single rotor R, the trajectory stops
+    at the 2π sign-flip barrier: R(2π) = -1. To achieve the 4π self-identity
+    required for R5 commitment, R requires a co-oriented partner (R·R) to
+    extend the path. Without that partner, R remains a fractional,
+    self-conflicting strain — a quark.
+  why_confined: >
+    The single rotor carries the trapped 2π sign flip in its grade-2 bivector
+    plane. It cannot propagate away (like a photon) because it has a non-zero
+    writhe residue from the incomplete path. It cannot persist independently
+    (like an electron) because its writhe is fractional — it doesn't satisfy
+    Q* = R_k[Q*] on its own. It must bind to other strains to complete the
+    topological requirement.
+
+---
+
+fractional_writhe_as_charge:
+  structural_argument:
+    statement: >
+      For the full electron (co-oriented doublet R·R), the centreline winds
+      twice around S³ (Lk = 2), with one twist (Tw = 1), yielding Wr = 1.
+      The phase-space occupancy is Ω_rotor(electron) = 4π³ + π² + π (candidate
+      — the pi-series from vortex-stability.yaml, not yet formally derived).
+
+      For the single rotor (quark), the centreline winds once but does not
+      close on itself. The path is a truncated geodesic in S³ — it traverses
+      half the double-cover path. The self-linking (writhe) is therefore
+      fractional relative to the full electron writhe.
+
+  charge_as_grade1_projection:
+    statement: >
+      Charge is the grade-1 projection of the fractional writhe of the rotor
+      strain onto the embedding space's grade-1 directional structure. It
+      represents how much of the incomplete 720° phase mismatch propagates
+      outward into the grade-1 potential field.
+    precision: >
+      This is more precise than "charge is not a coupling constant" — charge
+      IS a structural quantity (grade-1 projection of writhe), but it is not
+      an independently postulated coupling. It emerges from the topology of
+      the truncated S³ path.
+
+  target_values:
+    status: "TARGET OF OPEN DERIVATION — not established results"
+    statement: >
+      The specific fractional values are the target of the
+      single-rotor-s3-geodesic-volume computation (open_derivations below):
+        Up-type quark (u, c, t):   Wr_target = +2/3
+        Down-type quark (d, s, b): Wr_target = -1/3
+      These values are required to satisfy:
+        (a) Proton charge: 2/3 + 2/3 + (-1/3) = +1 ✓ (topological closure)
+        (b) Neutron charge: 2/3 + (-1/3) + (-1/3) = 0 ✓
+        (c) Quark-antiquark pair: 2/3 + (-2/3) = 0 ✓ (photon production)
+      Whether the truncated S³ geodesic computation produces exactly these
+      values is the content of the open derivation — it is a prediction to
+      be checked, not a result already in hand.
+
+---
+
+confinement_as_geometric_necessity:
+  statement: >
+    Confinement is not a force mediated by gluons. It is a topological
+    constraint of the Cl(3,0) pseudoscalar I = e₁e₂e₃.
+
+  mechanism: >
+    Three single-rotor strains (R₁, R₂, R₃) bind in mutually orthogonal
+    bivector planes. The product R₁·R₂·R₃ yields the grade-3 pseudoscalar.
+    Because I² = -1, the grade-3 volume is self-dual — it has no external
+    grade components to propagate a grade-1 or grade-2 potential outward.
+    The pseudoscalar is its own dual; it is topologically closed.
+
+  extraction_impossibility: >
+    Extracting a single rotor from the grade-3 volume would require
+    annihilating the pseudoscalar — collapsing a 3D committed volume to a
+    1D line. This violates the R5 viability condition of the proton. When
+    forced by high-energy collision, the field instead produces a
+    complementary rotor pair (R·R†) to satisfy the fractional writhe
+    locally — yielding quark-antiquark pair production and hadronisation
+    (jet formation). Confinement is geometric necessity, not a separately
+    postulated colour force.
+
+  gluons_as_phase_drag: >
+    Gluons are not a separate force carrier mediating confinement. They are
+    the second-iteration vector interaction of forces-as-vector-iterations
+    .yaml applied to the strong-force regime: the grade-1/2 phase-drag of
+    open vectors flowing around the partially-closed single-rotor strains
+    (the modification_2 partial closures of closure-types-nesting.yaml).
+    Because gluons are themselves partial-closure carriers (they carry
+    colour charge), they self-interact — the non-Abelian SU(3) character
+    of QCD is the algebraic consequence of partial-closure carriers
+    participating in what they mediate (forces-as-vector-iterations.yaml
+    #strong_force #self_interaction_reading).
+
+---
+
+feynman_parton_grounding:
+  statement: >
+    Feynman's 1969 parton model described hadrons as composed of quasi-free
+    point-like constituents revealed in Deep Inelastic Scattering (DIS).
+    The Praestology reading grounds this as a process-level phenomenon.
+
+  mechanism: >
+    In DIS, the high-momentum transfer (high Π_eff probe) momentarily
+    overcomes the binding CCR of the proton's grade-3 pseudoscalar. The
+    probe resolves the *unbound* single-rotor strains before they have time
+    to re-bind into the grade-3 volume. The "parton" is the single-rotor
+    strain observed during the brief interval when the grade-3 volume is
+    effectively transparent to the high-Π_eff probe.
+
+  asymptotic_freedom: >
+    CCR_binding ∝ 1/Π_eff → 0 at high momentum transfer. At high Π_eff,
+    the restriction landscape opens (freedom-reduction-as-unified-principle
+    .yaml #asymptotic_freedom): the binding CCR cost drops relative to the
+    available phase space, allowing single-rotor strains to behave nearly
+    free during the interaction. This is the same CCR running that produces
+    the renormalization group running of α_s (coupling-running-from-pi-eff,
+    open in vector-stress-mapping.yaml).
+
+  key_identities: >
+    Feynman's parton      = Praestology's single-rotor transitional strain
+    Feynman's sea quarks  = pre-R5 fluctuations around partial closures
+                            (excitation-distinctions.yaml #pre_r5_fluctuations)
+                            — transient modification_2 pairs forming and
+                            dissolving without achieving stable commitment
+    Feynman's gluons      = second-iteration vector phase-drag around partial
+                            closures (forces-as-vector-iterations.yaml)
+
+---
+
+derivation_chain:
+  entries:
+    - step: "Open wave (R) attempts 720° closure"
+      ga_form: "R = exp(-½ B̂θ)"
+      result: "Stops at θ=2π — sign flip R(2π)=-1, no self-identity"
+
+    - step: "Partial closure yields fractional writhe"
+      ga_form: "Wr = fraction of full electron writhe (target: ±1/3 or ±2/3)"
+      result: "Quark — fractional charge, no independent propagation; open derivation"
+
+    - step: "Three partial closures bind orthogonally"
+      ga_form: "R₁·R₂·R₃ in mutually orthogonal B₁,B₂,B₃ planes → grade-3 pseudoscalar"
+      result: "Confinement (I²=-1, self-dual), proton"
+
+    - step: "High Π_eff weakens binding"
+      ga_form: "CCR_binding ∝ 1/Π_eff → 0 at high momentum"
+      result: "Asymptotic freedom (parton regime, DIS)"
+
+    - step: "Forced extraction fails; field responds"
+      ga_form: "Produces R·R† to satisfy fractional writhe locally"
+      result: "Jet formation, hadronisation (quark-antiquark pair production)"
+
+---
+
+open_derivations:
+  - id: "single-rotor-s3-geodesic-volume"
+    description: >
+      Compute Ω_rotor(quark) as the volume of the truncated geodesic from
+      θ=0 to θ=2π in S³ (quaternion space). Show that the projection of
+      this volume onto the grade-1 embedding space yields exactly ±1/3 and
+      ±2/3 fractional charges. This is the central open computation — if
+      it succeeds, fractional charge is derived; if it yields different values,
+      the model requires revision.
+    depends_on: ["rotor-to-ccr-transition.yaml#ccr-crit-from-master-equation",
+                 "closure-configuration-ratio.yaml#ccr-electron-explicit"]
+    priority: 1
+    falsification_condition: >
+      If the S³ geodesic truncation yields fractional writhe values other
+      than ±1/3 and ±2/3, or if the projection does not produce values that
+      satisfy the proton charge sum rule (+1), the single-rotor-strain
+      hypothesis for quarks is falsified and the charge identification
+      requires a different mechanism.
+
+  - id: "proton-binding-ccr-from-three-strains"
+    description: >
+      Compute the non-additive CCR_binding for stitching three single-rotor
+      geodesics into a complete 3D pseudoscalar volume. Recover proton mass
+      excess (~929 MeV) from the binding topology's writhe in the grade-3
+      embedding volume.
+    depends_on: ["single-rotor-s3-geodesic-volume"]
+    priority: 2
+
+---
+
+cross_references:
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Single-rotor strain extends the quark interpretation in that file;
+           electron as R·R is the successful closure; quark as R is the failed one"
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "modification_2 (n-fold combinatorial) explicitly defined as binding
+           three transitional strains; modification_3 is the successful R·R"
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "720° boundary condition Q*=R_k[Q*] — quark is the state that
+           cannot reach this condition independently"
+  - file: "core/process-physics/forces-as-vector-iterations.yaml"
+    note: "Gluons as second-iteration phase-drag around partial closures;
+           non-Abelian SU(3) from partial-closure carriers self-interacting"
+  - file: "core/process-physics/freedom-reduction-as-unified-principle.yaml"
+    note: "Asymptotic freedom = high Π_eff suppressing CCR_binding;
+           SU(3) as residual freedom of three-fold orientation"
+  - file: "core/excitation-distinctions.yaml"
+    note: "Sea quarks = pre-R5 fluctuations around partial closures;
+           gluons = grade-1 phase-drag (same category)"
+  - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "Proton mass excess as non-additive CCR_binding of three strains;
+           this file provides the strain model underlying that claim"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "Each quark strain as a K₀ partial closure; three-strain binding
+           as the K₀ depth-3 nesting layer with its own CCR_binding index"
