@@ -148,11 +148,46 @@ particle_structures:
         passing through a singularity — the algebraic ground of particle
         stability. f(topological_protection) ≈ 0 for the electron
         (vortex-stability-process-physics.yaml).
-    chirality: >
-      Co-oriented in plane B = +e₁∧e₂: left-handed electron
-      Co-oriented in plane B = -e₁∧e₂: right-handed electron
-      (positron: opposite orientation — same grade-2 structure,
-      opposite bivector sign)
+    chirality:
+      topological_orientation: >
+        Co-oriented in plane B = +e₁∧e₂: one electron orientation
+        Co-oriented in plane B = -e₁∧e₂: opposite orientation
+        Positron: opposite bivector sign — same grade-2 structure,
+        opposite winding direction.
+        The bivector sign is a grade-2 property of the rotor pair —
+        intrinsic to the committed topology.
+      precision_note: >
+        IMPORTANT: the co-orientation (L+L or R+R) of the rotor pair
+        is NOT the same as the electroweak left-chirality of the electron.
+        These operate at different levels:
+
+        Topological co-orientation (grade-2, this file):
+          Specifies that this is an electron-type topology — Möbius 720°
+          lock, spin-½, nonzero mass, specific charge sign. The full
+          committed wavefunction contains BOTH left-handed AND right-handed
+          chirality projections. The topology itself is not purely chiral
+          in the electroweak sense.
+
+        Electroweak chirality (grade-1 projection, derivative level):
+          The projection of the grade-2 rotor orientation onto the grade-1
+          momentum direction — relational and frame-dependent. Left-handed
+          means spin anti-parallel to momentum; right-handed means parallel.
+          This requires a momentum direction to be defined and is not
+          intrinsic to the L+L topology.
+
+        Higgs condensate as the filter:
+          The electroweak interaction couples preferentially to the
+          left-handed projection because the Higgs condensate (grade-0
+          vacuum expectation value) has broken SU(2) orientation symmetry,
+          selecting a preferred orientation that aligns with that projection.
+          The topology is not left-chiral; the committed environment
+          selects which projection couples to the weak force.
+          See freedom-reduction-as-unified-principle.yaml #higgs_condensate.
+
+        Summary: L+L identifies the structure as electron-type and
+        determines its spin-½ and charge sign. It does not mean the
+        electron is purely left-chiral — that is a derivative-level
+        projection filtered by the environmental Higgs condensate.
     why_natural: >
       Co-oriented rotor pairs always deepen grade-2 character in Cl(3,0).
       Spin-½, chirality, and topological stability are not postulates —
