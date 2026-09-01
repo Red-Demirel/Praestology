@@ -142,20 +142,25 @@ Praestology is an open ontology. Contributions should:
 
 ---
 
+---
+
 ## ⚡ Open Computational Challenges
 
-We actively invite mathematical physicists and numerical programmers to test or falsify core derivations of the framework.
+We actively invite mathematical physicists, students, and numerical programmers to test or falsify core derivations of the framework.
 
-* **[Issue #SIM-001-v3: Truncated $S^3$ Rotor Writhe for Fractional Charge](./issues/foundational/test-spec-s3-quark-writhe-simulation.yaml)**
-  * **Objective:** Compute the CWF writhe ratio $Wr(\text{quark}) / Wr(\text{electron})$ on $S^3 \cong SU(2)$.
-  * **Falsification Threshold:** Target ratio must resolve strictly to exact rational fractions ($\pm 1/3, \pm 2/3$) satisfying the proton sum rule. Continuous irrationals falsify the model.
+* **[Priority 1: SIM-004-v2 — Electron CCR & GP Equilibrium](./issues/foundational/test-spec-electron-ccr-gp-equilibrium.yaml)**
+  * **Objective:** Solve the Gross-Pitaevskii energy functional under $720^\circ$ Möbius topology to extract equilibrium CWF writhe ($Wr$) and $\Omega_{\text{rotor}}$.
+  * **Falsification Threshold:** $\Omega_{\text{rotor\_numerical}}$ must reproduce $\alpha^{-1} \approx 137.036$ dynamically from the phase gradient. *(See [Methodological Note on Numerology](./issues/foundational/NUMEROLOGY_VS_DERIVATION.md))*.
 
-* **[Issue #SIM-005-v2: Non-Additive Proton Binding & Mass Ratio](./issues/foundational/test-spec-proton-binding-ccr.yaml)**
-  * **Objective:** Compute the mutual Gauss linking integral $Lk(\gamma_i, \gamma_j)$ for three orthogonal rotor paths in $S^3$.
-  * **Falsification Threshold:** Must yield the dimensionless mass ratio $m_p / m_e \approx 1836$ from pure binding topology without fitting free parameters.
+* **[Priority 2: SIM-001-v3 — Truncated $S^3$ Rotor Writhe for Quarks](./issues/foundational/test-spec-s3-quark-writhe-simulation.yaml)**
+  * **Objective:** Compute the open-arc CWF writhe ratio $Wr(\text{quark}) / Wr(\text{electron})$ using the equilibrium path from SIM-004.
+  * **Falsification Threshold:** Target ratio must resolve to exact rational fractions ($\pm 1/3, \pm 2/3$) satisfying the proton sum rule.
 
-> See [`/issues`](./issues) for the full queue of open topological stability checks and geometric derivations.
+* **[Priority 3: SIM-005-v2 — Non-Additive Proton Binding & Mass Ratio](./issues/foundational/test-spec-proton-binding-ccr.yaml)**
+  * **Objective:** Integrate the Gauss mutual linking $Lk(\gamma_i, \gamma_j)$ across three orthogonal rotor paths in $S^3$.
+  * **Falsification Threshold:** Must yield $m_p / m_e \approx 1836$ from pure binding geometry without tuning free parameters.
 
+> See [`/issues/foundational/`](./issues/foundational) for full specification files and prerequisites.
 ## License
 
 This work is licensed under **CC-BY-SA 4.0**. You are free to share and adapt, provided you attribute the source and share alike.
