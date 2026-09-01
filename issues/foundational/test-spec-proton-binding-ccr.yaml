@@ -139,7 +139,7 @@ cross_references:
     note: "Non-additivity formal: CCR_total = CCR(M₁) + CCR(M₂) + CCR_binding"
   - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
     note: "Structural argument for proton mass excess; this provides the computation"
-  - file: "issues/test-spec-s3-quark-writhe-simulation.yaml"
+  - file: "issues/foundational/test-spec-s3-quark-writhe-simulation.yaml"
     note: "SIM-001-v3 — prerequisite computation (single-rotor writhe)"
   - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
     note: "CCR_binding as new K₀ assembly map index at binding depth"
