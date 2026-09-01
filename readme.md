@@ -138,6 +138,19 @@ Praestology is an open ontology. Contributions should:
 2.  Clearly map new **Domains** to the Core Parameters (Ambiguity, Consistency, Contradiction, Resistance).
 3.  Maintain substrate-agnostic language in the Core.
 
+---
+
+## ⚡ Open Computational Challenges
+
+We actively invite mathematical physicists and numerical programmers to test or falsify core derivations of the framework.
+
+* **[Issue #SIM-001-v3: Truncated $S^3$ Rotor Writhe for Fractional Charge](./issues/test-spec-s3-quark-writhe-simulation.yaml)**
+  * **Objective:** Compute the Calugareanu-White-Fuller (CWF) writhe ratio $Wr(\text{quark}) / Wr(\text{electron})$ on $S^3 \cong SU(2)$.
+  * **Falsification Threshold:** Target ratio must resolve strictly to exact rational fractions ($\pm 1/3, \pm 2/3$) satisfying the proton sum rule. Irrational continuous values falsify the single-rotor strain model.
+  * **Status:** Open for contributors / Python script implementation (`derivations/s3_quark_writhe_cwf.py`)[cite: 1].
+
+> See [`/issues`](./issues) for the full queue of open topological stability checks and geometric derivations[cite: 1].
+
 ## License
 
 This work is licensed under **CC-BY-SA 4.0**. You are free to share and adapt, provided you attribute the source and share alike.
