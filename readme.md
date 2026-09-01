@@ -150,7 +150,7 @@ We actively invite mathematical physicists, students, and numerical programmers 
 
 * **[Priority 1: SIM-004-v2 — Electron CCR & GP Equilibrium](./issues/foundational/test-spec-electron-ccr-gp-equilibrium.yaml)**
   * **Objective:** Solve the Gross-Pitaevskii energy functional under $720^\circ$ Möbius topology to extract equilibrium CWF writhe ($Wr$) and $\Omega\_{\text{rotor}}$.
-  * **Falsification Threshold:** $\Omega\_{\text{rotor\_numerical}}$ must reproduce $\alpha^{-1} \approx 137.036$ dynamically from the phase gradient. *(See [Methodological Note on Numerology](./issues/foundational/NUMEROLOGY_VS_DERIVATION.md))*.
+  * **Falsification Threshold:** $\Omega_{\text{rotor, numerical}}$ must reproduce $\alpha^{-1} \approx 137.036$ dynamically from the phase gradient. *(See [Methodological Note on Numerology](./issues/foundational/NUMEROLOGY_VS_DERIVATION.md))*.
 
 * **[Priority 2: SIM-001-v3 — Truncated $S^3$ Rotor Writhe for Quarks](./issues/foundational/test-spec-s3-quark-writhe-simulation.yaml)**
   * **Objective:** Compute the open-arc CWF writhe ratio $Wr(\text{quark}) / Wr(\text{electron})$ using the equilibrium path from SIM-004.
