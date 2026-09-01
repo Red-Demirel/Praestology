@@ -1,4 +1,4 @@
-# /issues/test-spec-proton-binding-ccr.yaml
+# /issues/foundational/test-spec-proton-binding-ccr.yaml
 issue_id: "SIM-005-v2"
 title: "Proton Mass Excess: Non-Additive CCR_binding from Orthogonal Three-Strain Closure"
 type: "COMPUTATIONAL_DERIVATION"
