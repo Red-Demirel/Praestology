@@ -1,0 +1,174 @@
+/issues/test-spec-s3-quark-writhe-simulation.yaml
+issue_id: "SIM-001-v3"
+title: "Explicit Numerical Computation of Truncated S³ Rotor Writhe for Fractional Charge"
+type: "COMPUTATIONAL_DERIVATION"
+status: "OPEN_FOR_CONTRIBUTORS"
+difficulty: "ADVANCED — Clifford Algebra / CWF Writhe Integral on S³"
+target_script: "derivations/s3_quark_writhe_cwf.py"
+supersedes: "SIM-001-v2"
+
+correction_note: >
+  v2 proposed the integral P(B, θ_max) = ∫⟨R(θ)·Γ·R†(θ)⟩₁ dθ as the
+  charge computation. This is incorrect: R(θ)·e₁·R†(θ) traces a circle
+  in the e₁-e₂ plane and the integral vanishes exactly over any complete
+  multiple of 2π (verified analytically and numerically). The ratio 0/0
+  is undefined — the v2 test cannot produce 2/3 or -1/3 by any value
+  of the parameters.
+
+  The correct computation is the Calugareanu-White-Fuller writhe of the
+  rotor path as a curve on S³ ≅ SU(2). Writhe is a property of a curve's
+  self-linking geometry, not the cumulative projection of the rotated
+  reference vector. See mathematical_formulation below.
+
+---
+
+description: >
+  Compute the writhe Wr of the truncated single-rotor path (θ ∈ [0, 2π])
+  as a curve on S³ using the Calugareanu-White-Fuller decomposition:
+    Lk = Wr + Tw
+  For the full 4π electron path: Lk = 2 (established), Tw = ½ (Möbius),
+  Wr = Lk - Tw = 2 - ½ = 3/2 (open — CWF at equilibrium shape needed).
+  For the truncated 2π quark path: compute Lk and Tw, derive Wr,
+  then compute Wr(quark) / Wr(electron) and check whether this ratio
+  equals ±1/3 or ±2/3.
+
+  If the ratio is not rational, or not equal to the target fractions,
+  the single-rotor-strain model for fractional charge requires revision.
+
+---
+
+mathematical_formulation:
+  context: >
+    The rotor R(θ) = exp(-½B̂θ) for θ ∈ [0, 4π] traces a closed curve
+    in S³ ≅ SU(2) (the 3-sphere of unit quaternions). The centreline of
+    the Möbius vortex is this curve. For the full 4π electron path, the
+    curve closes on itself — it is a knot in S³.
+
+    For the quark (truncated 2π path), the curve is an open arc in S³
+    that does not close. The writhe of an open arc requires the CWF
+    formulation for curves with boundary.
+
+  cwf_writhe_for_open_curve: >
+    For a smooth curve γ: [0, L] → S³ with unit tangent T(s),
+    the writhe is the double integral:
+
+      Wr = (1/4π) ∫∫ (dγ₁ × dγ₂) · (γ₁ - γ₂) / |γ₁ - γ₂|³
+
+    evaluated over the curve in its ambient space (here S³ embedded in ℝ⁴,
+    or equivalently the quaternion representation).
+
+    For open curves, the CWF theorem decomposes as:
+      Lk = Wr + Tw
+    where Lk is the linking number of γ with a parallel push-off γ_ε
+    (the curve displaced by ε in the normal direction), and Tw is the
+    total twist of the Frenet frame along the curve.
+
+  target_computation: >
+    Step 1: Parameterise the full 4π electron path in S³:
+      γ_e(θ) = cos(θ/2)·1 + sin(θ/2)·B̂  (quaternion coordinates)
+      for θ ∈ [0, 4π]
+    Step 2: Compute Wr(electron) via the Gauss double integral on S³
+    Step 3: Parameterise the truncated 2π quark path:
+      γ_q(θ) = cos(θ/2)·1 + sin(θ/2)·B̂
+      for θ ∈ [0, 2π]
+    Step 4: Compute Wr(quark) via CWF for open curves
+    Step 5: Compute the ratio r = Wr(quark) / Wr(electron)
+    Step 6: Check whether r = 2/3 or r = -1/3 depending on the
+            orientation of B̂ (up-type vs down-type)
+
+  why_not_the_v2_integral: >
+    The v2 integral ∫⟨R(θ)·Γ·R†(θ)⟩₁ dθ computes the cumulative
+    grade-1 projection of the rotated reference vector — the net
+    displacement of a point on S² under the rotor's action. This
+    vanishes over any complete rotor cycle (the point traces a closed
+    circle). It is not a writhe computation. Writhe measures the
+    self-linking of the curve itself, not the displacement of a
+    reference point under the rotor's action.
+
+---
+
+honest_uncertainty: >
+  It is NOT currently known whether the CWF writhe of the truncated 2π
+  path divided by the CWF writhe of the full 4π path equals 2/3 or 1/3.
+  This is the open derivation (quarks-as-transitional-strains.yaml
+  #single-rotor-s3-geodesic-volume). The structural argument gives a
+  reason to expect fractional writhe for a truncated path; the specific
+  fractions are the result to be checked.
+
+  The computation is non-trivial because:
+    (a) Writhe on S³ requires careful treatment of the ambient metric
+    (b) Open curves in S³ have boundary contributions to the CWF integral
+    (c) The "equilibrium shape" of the rotor path (which determines Wr)
+        requires knowing the GP field solution — the same open item as
+        ccr-electron-explicit in vortex-stability.yaml
+
+  A simpler first check: compute the writhe of the full 4π electron
+  path and verify Wr(electron) matches the expected value from the
+  CWF decomposition (Lk=2, Tw=½, Wr=3/2 — if this holds). If the
+  full-path writhe doesn't match, the truncated-path computation
+  cannot be trusted.
+
+---
+
+success_condition: >
+  The numerical CWF computation of the truncated 2π path writhe
+  divided by the full 4π path writhe yields:
+    r_up   = Wr(γ_q, B̂_up) / Wr(γ_e) = +2/3 ± 1e-6
+    r_down = Wr(γ_q, B̂_down) / Wr(γ_e) = -1/3 ± 1e-6
+  And the proton sum rule:
+    r_up + r_up + r_down = 1.0 ± 1e-6
+
+falsification_condition: >
+  The framework is falsified at this point if:
+    1. Wr(γ_q) / Wr(γ_e) yields continuous irrational values
+       (e.g., π/something) rather than exact rational fractions.
+    2. The proton sum rule r₁ + r₂ + r₃ ≠ 1 for mutually orthogonal
+       binding planes — indicating grade-3 pseudoscalar closure cannot
+       be achieved from three fractional writhe strains.
+    3. Wr(γ_e) ≠ 3/2 (the expected value from Lk=2, Tw=½) —
+       indicating the CWF framework does not apply cleanly to S³
+       rotor paths, requiring a different writhe definition.
+
+prerequisite_check: >
+  Before attempting the truncated-path computation, first verify:
+    Wr(γ_e, full 4π) = 3/2
+  This is the simpler check on the full electron path. If it fails,
+  stop — the framework needs revision before the quark computation
+  is meaningful.
+
+---
+
+implementation_protocol:
+  software_requirements:
+    - language: "Python 3.10+"
+    - libraries: "numpy, scipy, clifford (Cl(3,0))"
+    note: >
+      The Gauss double integral on S³ requires numerical quadrature
+      over a 2D domain. Adaptive 2D quadrature (scipy.integrate.dblquad
+      or a custom Gauss-Kronrod implementation) will be needed.
+      The CWF boundary terms for open curves require careful numerical
+      treatment — see Aldinger, Klapper & Tabor (1995) for the
+      open-curve CWF formulation.
+
+  steps:
+    - "1. Parameterise γ_e(θ) as quaternion in ℝ⁴ for θ ∈ [0, 4π]"
+    - "2. Compute Gauss double integral for Wr(γ_e) on S³"
+    - "3. Verify Wr(γ_e) = 3/2 (prerequisite check)"
+    - "4. Parameterise γ_q(θ) for θ ∈ [0, 2π] with boundary handling"
+    - "5. Compute Wr(γ_q) via open-curve CWF"
+    - "6. Compute ratio r = Wr(γ_q) / Wr(γ_e) for B̂_up and B̂_down"
+    - "7. Check proton sum rule"
+
+---
+
+cross_references:
+  - file: "core/process-physics/quarks-as-transitional-strains.yaml"
+    note: "Ontology and derivation chain; target values 2/3 and -1/3"
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "ccr-electron-explicit — full 4π path writhe is the same open item"
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "720° boundary conditions; 2π sign-flip; 4π self-identity"
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "modification_3 (Möbius 720°) vs modification_2 (partial)"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Electron as R·R; quark as single R — the structures being tested"
