@@ -2,11 +2,7 @@
 
 A persistent issue in theoretical physics is the presentation of closed-form
 algebraic expressions — often involving π, e, or simple fractions — that match
-physical constants without an underlying physical mechanism. This note states
-explicitly why the approach taken in this repository is not numerology,
-and what the falsification structure looks like.
-
----
+physical constants without an underlying physical mechanism.
 
 ## The Central Distinction
 
@@ -25,8 +21,6 @@ how elegant it looks.
 as an empirical target to be tested, not as a baseline assumption.**
 
 ---
-
-## Why This Approach Is Not Numerological
 
 ### 1. Independent Variational Extraction
 
@@ -52,7 +46,7 @@ comparison to α⁻¹ = 137.036... is the test.
 
 The mechanism is the GP variational problem under topological boundary
 conditions. If the π-series value emerges from the computation, it is because
-the field geometry requires it — not because it was selected to match the data.
+the field geometry requires it.
 
 ### 2. Strict Falsification Threshold
 
@@ -63,9 +57,6 @@ than 2.22 ppm (the maximum allowed environmental Π_eff correction from the
 established framework), the candidate relation is **falsified**. There is no
 freedom to adjust the formula after the fact — the computation either produces
 the value or it does not.
-
-This is a harder standard than most constant-fitting in the literature, where
-the formula is presented as a success and no falsification condition is stated.
 
 ### 3. Multi-Variable Consistency
 
@@ -79,12 +70,8 @@ must simultaneously:
 - Provide the energy scale for the mutual linking calculation that recovers
   the proton-to-electron mass ratio 1836 (SIM-005-v2)
 
-A numerological formula can be selected to fit one target.
-It cannot simultaneously satisfy three independent geometric constraints
-derived from different physical phenomena without a mechanism.
-
 The multi-variable consistency requirement is the strongest evidence that
-the approach is structural rather than numerological: the same topology must
+the approach is structural: the same topology must
 produce the fine-structure constant, fractional quark charges, and the
 proton-to-electron mass ratio from a single computation without free parameters.
 
@@ -104,15 +91,13 @@ The computation can fail in multiple distinct ways, each informative:
 | SIM-005 gives m_p/m_e ≠ 1836 | Proton mass excess is not from non-additive CCR_binding |
 
 Each failure mode points to a specific structural revision — not a parameter
-adjustment. This is the correct structure for a physical derivation.
+adjustment.
 
 ---
 
 ## Summary
 
-Derivation is achieved through field action and boundary topology — not
-formula matching. The π-series candidate is a prediction to be tested, not
-a solution to be confirmed.
+Derivation is achieved through field action and boundary topology. The π-series candidate is a prediction to be tested.
 
 If it fails, the framework learns something precise about where the mechanism
 breaks down. If it succeeds, the mechanism behind a previously mysterious
