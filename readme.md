@@ -140,16 +140,21 @@ Praestology is an open ontology. Contributions should:
 
 ---
 
+---
+
 ## ⚡ Open Computational Challenges
 
 We actively invite mathematical physicists and numerical programmers to test or falsify core derivations of the framework.
 
 * **[Issue #SIM-001-v3: Truncated $S^3$ Rotor Writhe for Fractional Charge](./issues/test-spec-s3-quark-writhe-simulation.yaml)**
-  * **Objective:** Compute the Calugareanu-White-Fuller (CWF) writhe ratio $Wr(\text{quark}) / Wr(\text{electron})$ on $S^3 \cong SU(2)$.
-  * **Falsification Threshold:** Target ratio must resolve strictly to exact rational fractions ($\pm 1/3, \pm 2/3$) satisfying the proton sum rule. Irrational continuous values falsify the single-rotor strain model.
-  * **Status:** Open for contributors / Python script implementation (`derivations/s3_quark_writhe_cwf.py`)[cite: 1].
+  * **Objective:** Compute the CWF writhe ratio $Wr(\text{quark}) / Wr(\text{electron})$ on $S^3 \cong SU(2)$[cite: 1].
+  * **Falsification Threshold:** Target ratio must resolve strictly to exact rational fractions ($\pm 1/3, \pm 2/3$) satisfying the proton sum rule[cite: 1]. Continuous irrationals falsify the model[cite: 1].
 
-> See [`/issues`](./issues) for the full queue of open topological stability checks and geometric derivations[cite: 1].
+* **[Issue #SIM-005-v2: Non-Additive Proton Binding & Mass Ratio](./issues/test-spec-proton-binding-ccr.yaml)**
+  * **Objective:** Compute the mutual Gauss linking integral $Lk(\gamma_i, \gamma_j)$ for three orthogonal rotor paths in $S^3$[cite: 2].
+  * **Falsification Threshold:** Must yield the dimensionless mass ratio $m_p / m_e \approx 1836$ from pure binding topology without fitting free parameters[cite: 2].
+
+> See [`/issues`](./issues) for the full queue of open topological stability checks and geometric derivations.
 
 ## License
 
