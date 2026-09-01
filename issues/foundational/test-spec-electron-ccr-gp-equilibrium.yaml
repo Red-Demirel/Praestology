@@ -1,0 +1,124 @@
+# /issues/foundational/test-spec-electron-ccr-gp-equilibrium.yaml
+issue_id: "SIM-004-v2"
+title: "Electron CCR from GP Equilibrium: Möbius Vortex Shape and CWF Writhe"
+type: "COMPUTATIONAL_DERIVATION"
+status: "OPEN_FOR_CONTRIBUTORS — priority 1; all downstream CCR derivations depend on this"
+difficulty: "EXPERT — Variational GP + CWF Writhe"
+target_script: "derivations/electron_ccr_gp_cwf.py"
+supersedes: "SIM-004-v1"
+
+changes_from_v1: >
+  One correction: Ω_embed compression formula changed from exponential
+  Ω_embed(0)·exp(-η/η_sat) to linear Ω_embed(0)·(1-η/n_sat) to match
+  the established Π_eff formula from inside-out-channeling.yaml. At
+  η/n_sat=0.9 the forms differ by factor ~4 — significant near saturation.
+  All other content retained unchanged.
+
+note_on_writhe: >
+  Tw=1/2 is fixed by Möbius topology (algebraic consequence of the
+  non-orientable half-integer twist). Wr is geometric — it depends on
+  how the centreline curves through the GP equilibrium configuration.
+  Lk = Wr + Tw with Tw fixed constrains but does not fully determine Wr.
+  The equilibrium GP shape determines Wr. This is the content of the
+  derivation, not a gap.
+
+---
+
+description: >
+  Find the equilibrium Möbius vortex shape by minimising the GP energy
+  functional subject to the 720° Möbius boundary condition. Apply CWF
+  to compute the writhe Wr of the equilibrium centreline. Compute
+  CCR = (Wr·Ω_rotor)/Ω_embed and check whether it reproduces
+  α⁻¹ = 137.035999 (CODATA) within the 2.22 ppm environmental correction.
+  Test whether Ω_rotor_numerical matches the pi-series candidate
+  4π³+π²+π = 137.036304.
+
+priority_justification: >
+  This is the single computation that unlocks all downstream derivations:
+  SIM-001-v3 (quark writhe), SIM-005-v2 (proton binding CCR), Yukawa
+  hierarchy, 4π geometry factor, Connes-Dirac index (issue_9).
+  No other simulation closes before this one succeeds.
+
+---
+
+gp_energy_functional:
+  formula: "E[ψ] = ∫ [ħ²/(2m)|∇ψ|² + g·|ψ|²/(1+|ψ|²/n_sat)] dV"
+  boundary_conditions:
+    - "ψ(r, φ+4π) = ψ(r, φ)   [4π periodicity — 720° return]"
+    - "ψ(r, φ+2π) = -ψ(r, φ)  [sign flip at 2π — Möbius non-orientability]"
+    - "∫|ψ|² dV = 1            [normalisation]"
+
+ccr_formula:
+  formula: "CCR = (Wr · Ω_rotor) / Ω_embed(η_local)"
+  Omega_rotor: >
+    Extract numerically from the GP equilibrium phase gradient at the
+    crossover point. Do NOT assume the pi-series value — compute and compare.
+    Pi-series candidate: 4π³+π²+π = 137.036304 (test, not assumption).
+  Omega_embed: >
+    Ω_embed(η) = Ω_embed(0) · (1 - η/n_sat)
+    LINEAR FORM — consistent with Π_eff ≈ Π₀·(1-η/n_sat) from
+    inside-out-channeling.yaml. Exponential form from v1 is NOT used.
+
+cwf_computation:
+  decomposition: "Lk = Wr + Tw;  Tw = 1/2 (Möbius, fixed);  Wr = Lk - 1/2"
+  gauss_integral: >
+    Wr = (1/4π) ∫∫ (dγ₁×dγ₂)·(γ₁-γ₂)/|γ₁-γ₂|³
+    over the equilibrium centreline γ in ℝ³.
+  prerequisite_checks:
+    - "Verify GP minimiser with Möbius BCs exists and is unique up to rotation"
+    - "Extract centreline from nodal set of |ψ|²"
+    - "Verify Tw=1/2 numerically from Frenet frame — confirms Möbius BC holds"
+
+alpha_check:
+  codata: "α⁻¹ = 137.035999"
+  pi_series_candidate: "4π³+π²+π = 137.036304 (2.22 ppm above CODATA)"
+  gap_interpretation: >
+    Gap predicted as Π_eff depression from measurement environment.
+    Bare CCR (isolated vortex, vacuum Π_eff) should equal pi-series if
+    that candidate is correct. Computation gives α_int; CODATA is α_exp.
+  honest_status: >
+    Pi-series is a numerical conjecture, not a derived result.
+    Computation must produce Ω_rotor numerically and check independently.
+    If Ω_rotor_numerical ≠ pi-series within 2.22 ppm, the candidate is falsified.
+
+---
+
+success_condition: >
+  1. Stable Möbius equilibrium found
+  2. Wr is a well-defined rational or algebraically simple number
+  3. CCR = 137.036... within 0.01% (leaving room for 2.22 ppm correction)
+  4. Ω_rotor_numerical matches 4π³+π²+π within numerical precision
+
+falsification_conditions:
+  - "No stable Möbius equilibrium → GP with this nonlinearity does not support 720° topology"
+  - "Wr is irrational with no algebraic structure → CCR identification requires revision"
+  - "CCR deviates from 137.036 by >1% without environmental correction"
+  - "Ω_rotor_numerical ≠ 4π³+π²+π by >2.22 ppm → pi-series candidate falsified"
+
+implementation_protocol:
+  libraries: "numpy, scipy, clifford, fenics or firedrake (FEM)"
+  steps:
+    - "1. Implement GP functional in cylindrical coordinates"
+    - "2. Enforce Möbius BC: ψ(r, φ+2π, z) = -ψ(r, φ, z)"
+    - "3. Minimise E[ψ] via gradient descent or conjugate gradient"
+    - "4. Extract vortex core centreline from nodal set of |ψ|²=0"
+    - "5. Compute Frenet frame; verify Tw=1/2"
+    - "6. Compute Wr via Gauss double integral"
+    - "7. Extract Ω_rotor from phase gradient at crossover"
+    - "8. Compute Ω_embed(η_core) = Ω_embed(0)·(1-η/n_sat)"
+    - "9. Compute CCR = (Wr·Ω_rotor)/Ω_embed"
+    - "10. Compare to CODATA α⁻¹ and pi-series candidate"
+
+cross_references:
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "ccr-electron-explicit — this simulation IS that open derivation"
+  - file: "core/inside-out-channeling.yaml"
+    note: "Linear Π_eff compression (1-η/n_sat) used for Ω_embed"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR formula and CWF theorem context"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "issue_10 (threshold partial closure); issue_3 (4π factor)"
+  - file: "issues/foundational/test-spec-s3-quark-writhe-simulation.yaml"
+    note: "SIM-001-v3 depends on Wr(electron) from this computation"
+  - file: "issues/foundational/test-spec-proton-binding-ccr.yaml"
+    note: "SIM-005-v2 depends on SIM-001 which depends on this"
