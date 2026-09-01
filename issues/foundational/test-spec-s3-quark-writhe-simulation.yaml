@@ -1,4 +1,4 @@
-/issues/test-spec-s3-quark-writhe-simulation.yaml
+/issues/foundational/test-spec-s3-quark-writhe-simulation.yaml
 issue_id: "SIM-001-v3"
 title: "Explicit Numerical Computation of Truncated S³ Rotor Writhe for Fractional Charge"
 type: "COMPUTATIONAL_DERIVATION"
