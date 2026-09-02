@@ -33,6 +33,59 @@ dependency_map:
 
 ---
 
+iterative_depth_statement:
+  statement: >
+    The proton is not three electrons bound together. It is the next
+    evolutionary expression of the same closure operation, applied at
+    a higher grade depth.
+
+  depth_1_electron: >
+    Two co-oriented rotors in one bivector plane satisfy Q* = R_k[Q*]:
+    R·R achieves 4π self-identity. Grade-2 deepens, CCR = 1, topologically
+    protected. The electron is complete — it has no residual topological
+    motive to combine further.
+
+  depth_1_failure_quark: >
+    A single rotor stopped at the 2π sign flip cannot satisfy Q* = R_k[Q*]
+    independently. It has a residual incompleteness — a half-traversal of
+    S³ that produces fractional writhe but no stable self-identity. The
+    quark is specifically this: an unsuccessful depth-1 closure. Not a
+    particle that happens to be confined; a topological state that requires
+    a higher-depth partner configuration to complete.
+
+  depth_2_proton: >
+    Three depth-1-incomplete rotors bind across three mutually orthogonal
+    bivector planes. R₁·R₂·R₃ achieves a different closure condition —
+    grade-3 self-duality (I² = -1) rather than grade-2 self-identity.
+    The proton satisfies Q* = R_k[Q*] at depth 2, across three planes
+    simultaneously. This is not three electrons added together; it is a
+    closure condition that requires three planes and is unreachable from
+    within any single plane.
+
+  ccr_non_additivity_consequence: >
+    Because depth-2 closure is a new condition (not three depth-1 closures
+    summed), the CCR cost of the proton is not additive from quark CCR
+    values. CCR_binding(d₁,d₂) is the writhe cost of the mutual linking
+    of the three S³ paths — a property of the three-path configuration as
+    a whole. This is why the proton mass vastly exceeds the quark mass sum:
+    the binding is not a container for three quarks but a new committed
+    structure in its own right at depth 2.
+
+  depth_3_extension: >
+    The same logic applies at depth 3: nuclear binding (atomic nuclei) may
+    be the depth-3 expression of the closure operation — multiple depth-2
+    structures binding across yet higher-grade configurations, each with
+    their own irreducible CCR_binding cost. The Bethe-Weizsäcker formula
+    terms (volume, surface, asymmetry, pairing) would then be the CCR
+    landscape of the depth-3 closure condition, not empirically fitted
+    coefficients. Nuclear physics is not a separate domain — it is the
+    same operation one level further.
+    Status: STRUCTURAL EXTENSION — open; depth-3 topology not yet
+    characterised. See closure-types-nesting.yaml #modification_4
+    and photon-mass-and-proton-excess.yaml #nuclear_binding_extension.
+
+---
+
 ontology_shift:
   statement: >
     Quarks are not fundamental constituents. They are single-rotor (R)
