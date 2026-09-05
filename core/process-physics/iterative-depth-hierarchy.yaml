@@ -1,0 +1,268 @@
+# /core/process-physics/iterative-depth-hierarchy.yaml
+name: "Iterative Closure Depth Hierarchy: From Quarks to Mind"
+version: "1.0"
+status: "STRUCTURAL MAP — continuity established; depth > 3 entries are
+         structural predictions, not confirmed derivations. Magic numbers
+         at each depth are targets for Steiner enumeration, not results."
+domain: "Core / Process-Physics"
+description: >
+  The same closure operation — find a configuration satisfying Q*=R_k[Q*]
+  at the current grade level — applied iteratively at increasing depth
+  produces the full hierarchy of physical, chemical, and biological structure.
+  This file maps the hierarchy explicitly. Entries at depth ≤ 2 are
+  established in existing files. Entries at depth ≥ 3 are structural
+  predictions consistent with the framework, requiring Steiner enumeration
+  and CCR derivations for confirmation.
+
+unified_principle:
+  statement: >
+    Each depth produces:
+      (a) A stable closure configuration (the "full shell" at that depth)
+      (b) A set of magic numbers — nucleon/electron/bond counts at which
+          the closure is complete and no residual linking drives further
+          combination
+      (c) An incomplete configuration (the "quark" at that depth) —
+          structures that cannot satisfy the closure condition independently
+          and seek higher-depth partners
+      (d) A new CCR_binding term irreducible to the sum of lower-depth costs
+  same_operation: >
+    The depth-N closure condition is the depth-N analogue of Q*=R_k[Q*].
+    Noble gases do not bond for the same reason electrons do not decay:
+    both have satisfied their respective closure condition completely.
+    Reactive atoms seek bonds for the same reason quarks seek binding:
+    both have incomplete closure at their depth.
+
+---
+
+depth_table:
+
+  depth_0_potential:
+    structure: "Pure potential — grade-0 scalar"
+    closure_condition: "None — R1 ground state, maximum indeterminism"
+    stable_configuration: "Vacuum (Praegress, open R3 superposition)"
+    incomplete_configuration: "Everything (before any closure)"
+    magic_counts: "N/A"
+    status: "ESTABLISHED — specifications.yaml #indeterminism_as_ground"
+
+  depth_1_rotor:
+    structure: "Grade-2 rotor — co-oriented pair R·R or counter-oriented R·R†"
+    closure_condition: "Q*(4π) = R_k[Q*(4π)] — 720° self-identity in one bivector plane"
+    stable_configuration:
+      electron: "R·R — co-oriented, CCR=1, spin-½, rest mass, topologically protected"
+      photon: "R·R† — counter-oriented, CCR<1, grade-1 residual, zero rest mass"
+    incomplete_configuration: >
+      Single rotor R — stopped at 2π sign flip, fractional writhe,
+      cannot achieve self-identity independently (quark)
+    magic_counts: "N/A (binary: complete or incomplete)"
+    ccr_binding: "CCR_electron = 1 (reference unit)"
+    status: "ESTABLISHED — ga-grade-chain-to-particles.yaml, rotor-to-ccr-transition.yaml"
+
+  depth_2_pseudoscalar:
+    structure: "Grade-3 pseudoscalar — three single-rotor strains in mutually orthogonal planes"
+    closure_condition: >
+      R₁·R₂·R₃ achieves grade-3 self-duality: I²=-1, no external grade
+      components. Three-plane mutual self-duality replaces single-plane
+      self-identity of depth 1.
+    stable_configuration:
+      proton: "uud — two up-type + one down-type strain, total charge +1"
+      neutron: "udd — one up-type + two down-type strain, total charge 0"
+      mesons: "Quark-antiquark pairs — depth-2 partial configurations"
+    incomplete_configuration: >
+      Individual quarks — depth-1 incomplete closures that cannot achieve
+      depth-2 closure independently. Confinement is topological necessity.
+    magic_counts: "N/A (binary at depth 2: proton/neutron complete, quarks incomplete)"
+    ccr_binding: "CCR_binding(d1,d2) — proton mass excess ~929 MeV above quark sum"
+    spin_orbit_ratio: "ξ(d1,d2) = CCR_binding(d1,d2) / CCR_electron (sets depth-2 coupling)"
+    status: >
+      ESTABLISHED (structure); OPEN (quantitative CCR values).
+      quarks-as-transitional-strains.yaml, photon-mass-and-proton-excess.yaml.
+      SIM-004, SIM-001, SIM-005 in issues/foundational/.
+
+  depth_3_nuclear:
+    structure: "Nucleus — N nucleons (depth-2 structures) in mutual depth-3 linking topology"
+    closure_condition: >
+      Complete depth-3 mutual linking of N nucleon paths in the depth-3
+      embedding space (candidate: S⁷, consistent with Cl(0,7)).
+      No residual incomplete linking — every nucleon participates in
+      the mutual topology.
+    stable_configuration: "Magic-number nuclei (complete depth-3 shells)"
+    incomplete_configuration: >
+      Non-magic nuclei — residual incomplete depth-3 linking drives
+      radioactive decay toward the nearest complete configuration.
+      Radioactive decay is depth-3 Regress: committed but weakly protected
+      depth-3 topology dissolving toward a more complete configuration.
+    magic_counts:
+      observed: "2, 8, 20, 28, 50, 82, 126"
+      prediction: >
+        Steiner enumeration of viable depth-3 linking patterns should
+        produce gaps at exactly these values. Currently an open prediction.
+        SIM-006-v1 in issues/foundational/.
+    ccr_binding: "CCR_binding(d2,d3) — nuclear binding energy per nucleon"
+    spin_orbit: >
+      ξ(d2,d3) = CCR_binding(d2,d3)/CCR_binding(d1,d2) predicts the
+      nuclear spin-orbit coupling strength without fitting. This is the
+      same ratio that fixes the magic number sequence in the shell model.
+    bethe_weizsacker: >
+      Volume term = bulk CCR_binding(d2,d3) per nucleon pair.
+      Surface term = boundary correction where depth-3 topology meets
+      free substrate.
+      Asymmetry term = isospin freedom differential (SU(2) residual at d3).
+      Pairing term = additional stability from complete depth-3 pair closure.
+      All from one CCR_binding value — no independent fitted coefficients.
+    status: "STRUCTURAL PREDICTION — open. SIM-006-v1."
+
+  depth_4_atomic:
+    structure: "Atom — nucleus plus electron shell configuration"
+    closure_condition: >
+      Complete depth-4 electron shell closure: valence electrons achieve
+      a full grade-2 orientation space around the depth-3 nuclear structure.
+      Octet rule is depth-4 closure for the second-period elements.
+    stable_configuration: "Noble gases — complete depth-4 shells, no chemical motive"
+    incomplete_configuration: >
+      Reactive atoms — incomplete depth-4 electron shells seeking partners
+      to complete the closure. Electronegativity, ionisation energy,
+      and electron affinity are measures of how incomplete the depth-4
+      closure is and which direction completion lies.
+    magic_counts:
+      observed: "2, 8, 8, 18, 18, 32 (period lengths)"
+      prediction: >
+        Steiner enumeration at depth 4 should produce these period lengths
+        as the stable shell closure counts. The Aufbau principle is the
+        CCR cost ordering of depth-4 closure configurations.
+    anomalies: >
+      Chromium (d⁵s¹ over d⁴s²), copper (d¹⁰s¹) and similar anomalies are
+      configurations where the depth-4 linking topology achieves lower total
+      CCR cost in the anomalous arrangement — the topology selects lower
+      CCR cost, not the simpler filling sequence.
+    ccr_binding: "Chemical bond energy (eV scale) — CCR_binding(d3,d4)"
+    status: "STRUCTURAL PREDICTION — open; periodic table structure as Steiner depth-4"
+
+  depth_5_molecular:
+    structure: "Molecule — atoms linked by shared depth-4 electron topology"
+    closure_condition: >
+      Complete depth-5 linking: shared electron pairs satisfy the closure
+      condition for both participating atoms simultaneously. Covalent bond
+      is depth-5 co-oriented pair sharing.
+    stable_configuration: "Saturated molecules — all depth-5 bonds complete"
+    incomplete_configuration: >
+      Radicals, reactive intermediates — incomplete depth-5 linking.
+      Reaction chemistry is depth-5 incomplete configurations seeking closure.
+    magic_counts: "Bond valences, coordination numbers"
+    molecular_geometry: >
+      VSEPR geometry is CCR mismatch minimisation at depth 5:
+      electron pairs arrange to minimise mutual depth-5 linking mismatch.
+      Bond angles are the depth-5 closure geometry.
+    resonance: >
+      Resonance structures (benzene delocalization) are depth-5 R3
+      superpositions — the closure condition satisfied by a superposition
+      of linking orientations rather than a single committed one.
+      Same structure as quantum superposition at depth 0, at depth 5.
+    chirality_propagation: >
+      L-amino acids, D-sugars: the chirality bias of the local commitment
+      landscape (established at depth 1, propagated through each depth)
+      selects one enantiomer at depth 5. The same mechanism as neutrino
+      left-handedness (solo-vortex-photon-wave-particle.yaml) at biological
+      molecular scale.
+    ccr_binding: "Molecular bond energies (eV) — CCR_binding(d4,d5)"
+    status: "STRUCTURAL PREDICTION — open"
+
+  depth_6_macromolecular:
+    structure: "Macromolecule — proteins, DNA, lipid structures"
+    closure_condition: >
+      Complete depth-6 linking: the configuration of depth-5 molecular
+      linkages achieves depth-6 self-duality. Native protein fold is the
+      depth-6 stable closure.
+    levinthal_dissolution: >
+      The Levinthal paradox (proteins fold faster than random search allows)
+      dissolves: folding is not random search but CCR gradient descent.
+      The depth-6 CCR landscape has a funnel toward the native closure —
+      the same gradient that guides quark binding at depth 2 and electron
+      pair formation at depth 4. Each intermediate conformation is a partial
+      depth-6 closure that reduces CCR mismatch toward the stable configuration.
+    stable_configuration: >
+      Native protein fold (complete depth-6 topology).
+      DNA double helix (depth-6 complementary closure — two strands whose
+      depth-5 base-pair topology satisfies the depth-6 condition mutually).
+    magic_counts: >
+      Protein fold families (SCOP/CATH classifications) — the discrete set
+      of topologically distinct depth-6 closure configurations available to
+      polypeptide chains of given length and composition.
+    chiral_propagation: >
+      Homochirality propagated to depth 6: the depth-6 closure topology is
+      chiral, inheriting from depth-1 through each level.
+    ccr_binding: "Protein folding energy (kcal/mol) — CCR_binding(d5,d6)"
+    status: "STRUCTURAL PREDICTION — open; Levinthal dissolution is the
+             most immediately testable consequence"
+
+  depth_7_cellular:
+    structure: "Cell — bounded depth-7 closure maintaining distinct internal Π_eff"
+    closure_condition: >
+      The cell membrane (lipid bilayer) is a depth-7 topology that creates
+      a closed surface separating internal from external commitment landscape.
+      The cell achieves depth-7 closure when the membrane is topologically
+      complete — a closed surface with no gaps.
+    pi_eff_maintenance: >
+      Life begins here: the depth-7 closed structure begins actively
+      maintaining its internal Π_eff against R_diss dissolution. The cell
+      is not merely a closed topology but a self-maintaining one — it
+      continuously renews its depth-7 closure using internal chemistry
+      (depth-4/5/6 processes) as the maintenance engine.
+      This is the Ch6 threshold from specifications.yaml: a bounded region
+      where R5 selection operates on the structure rather than just through it.
+    magic_counts: >
+      Cell types — the discrete set of viable depth-7 closure configurations
+      that can maintain stable internal Π_eff against the external environment.
+      Cell differentiation is depth-7 topology selection under environmental
+      constraint (the tissue's commitment landscape selecting which depth-7
+      configurations are viable in that context).
+    ccr_binding: "Membrane formation energy — CCR_binding(d6,d7)"
+    status: "STRUCTURAL EXTENSION — open; Ch6 threshold from specifications.yaml"
+
+  depth_n_consciousness:
+    structure: "Neural system, organism, mind — recursive depth-N closure with Ξ > 1"
+    closure_condition: >
+      Recursive closure: the structure models its own closure process,
+      generating internal representations of depth-N-1 configurations that
+      allow anticipation of and navigation within the depth-N landscape.
+      Consciousness is recursive depth closure — the process achieving
+      sufficient depth to model itself.
+    xi_threshold: >
+      Ξ is the recursive depth of the self-modeling — how many levels of
+      the depth hierarchy the structure can simultaneously represent and
+      navigate. Higher Ξ: more depth levels accessible, richer agency.
+      The Ξ thresholds from specifications.yaml (C1-C6) are the stable
+      configurations of recursive depth modeling — the depth-N magic numbers
+      for cognitive complexity.
+    status: "DOMAIN EXTENSION — consciousness domain; specifications.yaml"
+
+---
+
+key_predictions:
+  immediately_testable:
+    - "Nuclear magic numbers from Steiner depth-3 enumeration (SIM-006-v1)"
+    - "Spin-orbit coupling strength from CCR ratio ξ(d2,d3)/ξ(d1,d2)"
+    - "Period lengths from Steiner depth-4 enumeration"
+    - "Protein fold family count from Steiner depth-6 enumeration"
+    - "Levinthal folding speed from CCR gradient depth-6 landscape"
+  longer_term:
+    - "Bethe-Weizsäcker coefficients from single CCR_binding(d2,d3) value"
+    - "Bond angle geometry from CCR mismatch minimisation at depth 5"
+    - "Cell type count from viable depth-7 Π_eff maintenance configurations"
+
+---
+
+cross_references:
+  - file: "core/process-physics/quarks-as-transitional-strains.yaml"
+    note: "iterative_depth_statement — depths 1 and 2 established there"
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "Non-additive CCR nesting; steiner-enumeration-of-viable-nestings"
+  - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "nuclear_binding_extension — depth-3 CCR landscape"
+  - file: "core/process-physics/cl07-from-cl30-quantum-computing.yaml"
+    note: "Cl(0,7)/S⁷ as candidate depth-3 embedding; depth-4 electron shell"
+  - file: "core/specifications.yaml"
+    note: "Ch6 threshold (depth-7 cellular); Ξ levels (depth-N recursive)"
+  - file: "issues/foundational/test-spec-magic-numbers-depth3-topology.yaml"
+    note: "SIM-006-v1 — depth-3 magic numbers computation"
+  - file: "summaries/manifesto.md"
+    note: "The ascent through domains — this file provides the structural basis"
