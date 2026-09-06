@@ -1,0 +1,246 @@
+# /core/process-physics/bivector-partial-parameters.yaml
+name: "Bivector Partial Parameter Sets: Continuous Closure Degrees in Cl(3,0)"
+version: "1.0"
+status: "STRUCTURAL CLARIFICATION — partial parameter activation established;
+         connections to quark model, hadron spectrum, and mixed states drawn"
+domain: "Core / Process-Physics"
+description: >
+  The binary assumption (parameters fully set or fully unset) is valid for
+  the committed/uncommitted distinction at a given depth, but within the
+  grade-2 bivector space itself, parameter activation is continuous.
+  A general bivector B = b₁₂(e₁∧e₂) + b₁₃(e₁∧e₃) + b₂₃(e₂∧e₃)
+  has three real coefficients, each independently variable. Partial
+  parameter sets — where one or more coefficients take intermediate values
+  — are valid field configurations whose stability depends on whether the
+  total CCR satisfies the closure condition, not on whether any individual
+  coefficient is binary. This file establishes the consequences.
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/rotor-to-ccr-transition.yaml"
+    - "core/process-physics/quarks-as-transitional-strains.yaml"
+    - "core/closure-configuration-ratio.yaml"
+
+---
+
+general_bivector:
+  statement: >
+    In Cl(3,0), the general grade-2 element is:
+      B = b₁₂(e₁∧e₂) + b₁₃(e₁∧e₃) + b₂₃(e₂∧e₃)
+    Three independent bivector planes, each with a real coefficient bᵢⱼ.
+    The norm is |B|² = b₁₂² + b₁₃² + b₂₃².
+    A rotor formed from B is R = exp(-Bθ/2), which generates a rotation
+    in the plane of B weighted by the relative contributions of each component.
+  parameter_space: >
+    The space of possible bivector configurations is a 3D real vector space
+    (b₁₂, b₁₃, b₂₃) ∈ ℝ³. The unit sphere in this space (|B|² = 1) is
+    the set of unit bivectors — the space of possible rotation planes.
+    Partial parameter sets are configurations where the point
+    (b₁₂, b₁₃, b₂₃) lies anywhere in this space, not only at the
+    six axis-aligned points (±1, 0, 0), (0, ±1, 0), (0, 0, ±1).
+  binary_assumption_scope: >
+    The binary assumption (fully set or unset) is appropriate when asking
+    whether a configuration has undergone depth-N closure: a depth-N
+    closed structure has committed to a specific point in bivector space
+    (its CCR = 1 configuration). It is NOT appropriate when describing
+    the internal structure of that point or the configurations available
+    within depth-N's closure landscape.
+
+---
+
+ccr_threshold_with_partial_parameters:
+  statement: >
+    The CCR threshold condition CCR = 1 applies to the total bivector norm
+    |B|², not to each component independently. A configuration with
+    partial activation across multiple planes can satisfy the threshold:
+      b₁₂ = 0.6, b₁₃ = 0.8, b₂₃ = 0  →  |B|² = 0.36 + 0.64 = 1.0 ✓
+    This configuration satisfies CCR = 1 despite neither b₁₂ nor b₁₃
+    being fully activated (neither = 1). It is a distinct committed
+    structure from the single-plane configurations.
+  consequences:
+    distinct_committed_structures: >
+      Different (b₁₂, b₁₃, b₂₃) distributions on the unit sphere produce
+      different committed structures at the same CCR threshold. These have
+      different:
+        - Chirality profiles (the projection of B onto each basis plane)
+        - Coupling strengths to external fields (how strongly each
+          bivector component couples to the external grade-2 gradient)
+        - Mass (the CCR cost weighted by the specific parameter distribution)
+    mixed_plane_rotors: >
+      A rotor from a mixed-plane bivector B = b₁₂(e₁∧e₂) + b₁₃(e₁∧e₃)
+      rotates in a tilted plane — not one of the three basis planes but
+      an arbitrary orientation in the bivector parameter space. These
+      rotors have all the properties of single-plane rotors (720° closure,
+      spin-½, rest mass) but different coupling symmetries to the external
+      commitment landscape.
+
+---
+
+quarks_as_partial_parameters:
+  statement: >
+    The fractional writhe of quarks (target values ±1/3, ±2/3) is the
+    partial parameter activation of a single-rotor S³ path truncated at 2π.
+    This was implicit in quarks-as-transitional-strains.yaml but is now
+    stated at the level of the bivector parameters themselves.
+  mechanism: >
+    The full electron path (4π) activates the bivector parameter fully
+    — the path traverses the full S³ geodesic, writing Wr = 1 (reference)
+    into the committed parameter. The truncated quark path (2π) activates
+    only a fraction of the full parameter — the path traverses half the
+    S³ geodesic, writing a fractional Wr into the committed parameter.
+    The fractional value ±2/3 or ±1/3 is the specific partial activation
+    produced by the truncated geodesic in each of the three possible planes.
+  three_plane_interpretation: >
+    Three quark flavour types (up/down/strange at low mass) correspond
+    to partial activation in three different bivector planes:
+      Up-type (u, c, t):    dominant activation in B₁ = e₁∧e₂, Wr = +2/3
+      Down-type (d, s, b):  dominant activation in B₂ = e₂∧e₃, Wr = -1/3
+      Strange/mixed:        significant activation across multiple planes
+    The mass hierarchy (u < d < s < c < b < t) is the increasing cost of
+    the specific partial parameter distribution in each case — heavier
+    quarks have more complex partial activations across multiple bivector
+    planes, incurring higher CCR cost per partial closure.
+    Status: STRUCTURAL HYPOTHESIS — requires the S³ geodesic computation
+    (SIM-001-v3) for confirmation.
+
+---
+
+hadron_resonances_as_excited_parameter_distributions:
+  statement: >
+    Standard model hadron resonances (Δ⁺⁺, Σ*, Ξ*, Ω⁻, etc.) are
+    depth-2 closures with non-minimal bivector parameter distributions
+    — the CCR threshold satisfied but with a different combination of
+    partial activations than the ground state proton/neutron.
+  mechanism: >
+    The ground state proton (uud) achieves depth-2 closure with the
+    minimum CCR cost distribution — the three quark paths in mutually
+    orthogonal planes at their minimal fractional writhe values.
+    Resonances are the same depth-2 topology with additional partial
+    parameter activation — rotational excitations of the bivector
+    parameter distribution around the unit sphere in (b₁₂, b₁₃, b₂₃)
+    space.
+  mass_spectrum: >
+    The hadron mass spectrum is the set of CCR costs for all stable
+    partial parameter distributions on the unit sphere that satisfy
+    the depth-2 closure condition. The spacing between ground state
+    and resonance masses is the CCR cost difference between the minimal
+    distribution and the excited distributions.
+    This gives a geometric account of the hadron spectrum without
+    introducing new quantum numbers — spin, isospin, and strangeness
+    are projections of the partial parameter distribution onto different
+    measurement bases.
+  delta_resonance: >
+    The Δ(1232) resonance (proton excited state, mass 1232 MeV vs
+    proton 938 MeV, difference 294 MeV) is a different partial parameter
+    distribution achieving depth-2 closure. The 294 MeV excess is the
+    additional CCR cost of the excited distribution relative to the ground
+    state — derivable in principle from the Steiner enumeration of viable
+    depth-2 configurations (same enumeration as SIM-006 at depth 3).
+  status: >
+    STRUCTURAL HYPOTHESIS — the specific parameter distributions for each
+    resonance require the full Steiner enumeration at depth 2. Currently
+    open. If the enumeration produces the correct mass splittings without
+    free parameters, this confirms the partial parameter model for the
+    hadron spectrum.
+
+---
+
+mixed_states_and_superposition:
+  statement: >
+    The pre-R5 R3 superposition ψ = Σᵢ cᵢ·Rᵢ is a superposition of
+    different partial parameter distributions across the bivector space,
+    weighted by viability amplitudes |cᵢ|². Each Rᵢ is a rotor with
+    specific (b₁₂, b₁₃, b₂₃) values; the superposition is a distribution
+    over the bivector parameter space.
+  r3_as_parameter_distribution: >
+    Before R5 fires, the field is not at a single point in bivector
+    parameter space but distributed across multiple points simultaneously.
+    This is the process-level content of quantum superposition: not a
+    particle "in two places at once" but a field with non-zero probability
+    amplitude distributed across the bivector parameter space, before
+    the closure condition selects a specific point.
+  measurement_as_parameter_projection: >
+    Measurement (3rd body R5 event) projects the distributed parameter
+    state onto a specific subspace — the measurement basis selects which
+    bivector projection is committed. The Born probabilities |cᵢ|² are
+    the squared amplitudes of the parameter distribution in the measurement
+    basis — exactly what quanta-as-ccr-cost.yaml establishes as local
+    projection variance.
+  entanglement_as_correlated_parameters: >
+    Two entangled systems share a correlated bivector parameter distribution —
+    the joint parameter state is not a product of independent distributions
+    but a single distribution over the combined parameter space. Measurement
+    of one system (committing its parameters) simultaneously constrains the
+    joint distribution, appearing as instantaneous correlation with the
+    other system. No signal transmission — just the collapse of a shared
+    parameter distribution to a consistent committed state.
+
+---
+
+trivector_partial_parameters:
+  statement: >
+    The same analysis applies to grade-3 (trivector) configurations.
+    The general grade-3 element in Cl(3,0) is:
+      T = t₁₂₃(e₁∧e₂∧e₃) = t·I
+    where I is the pseudoscalar. Unlike the bivector, the trivector in
+    Cl(3,0) has only ONE independent component — the pseudoscalar coefficient t.
+    There is no partial parameter set for trivectors in Cl(3,0): either
+    t = 0 (no trivector component) or t ≠ 0 (some trivector activation).
+  binary_for_trivector: >
+    The trivector IS binary in Cl(3,0) — not because of an assumption but
+    because the Cl(3,0) trivector space is 1-dimensional. There is no
+    meaningful "partial activation" of the pseudoscalar: a configuration
+    either has a grade-3 component or it does not.
+    This is consistent with the proton being either confined (complete
+    grade-3 closure, I²=-1) or not (no grade-3 component). No partial
+    proton — the depth-2 closure is genuinely binary.
+  partial_activation_at_higher_depths: >
+    At depth 3 and beyond, the embedding space is larger than Cl(3,0)
+    (candidate: Cl(0,7), S⁷), and the higher-grade structures in that
+    space will again have multiple independent components — partial
+    parameter activation returns at depth 3. The binary trivector in
+    Cl(3,0) is specific to the 3-dimensional embedding at depth 2.
+
+---
+
+open_derivations:
+  - id: "bivector-parameter-distribution-to-hadron-spectrum"
+    description: >
+      Steiner enumeration of stable bivector parameter distributions on
+      the unit sphere in (b₁₂, b₁₃, b₂₃) space satisfying the depth-2
+      closure condition. Should produce the ground state quark content
+      (minimal distribution) and excited states (higher distributions)
+      with mass splittings matching the observed hadron spectrum.
+    depends_on: ["SIM-001-v3 (quark fractional writhe)",
+                 "SIM-005-v2 (proton binding CCR)"]
+    priority: 3
+
+  - id: "quark-mass-hierarchy-from-parameter-complexity"
+    description: >
+      Derive the quark mass hierarchy (u < d < s < c < b < t, spanning
+      ~10⁵) from the complexity of partial bivector parameter activation
+      in each case — heavier quarks have more complex multi-plane partial
+      activations with higher CCR cost.
+    depends_on: ["SIM-001-v3", "bivector-parameter-distribution-to-hadron-spectrum"]
+    priority: 3
+
+---
+
+cross_references:
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "General bivector as grade-2 GA primitive; closure mechanics"
+  - file: "core/process-physics/quarks-as-transitional-strains.yaml"
+    note: "Fractional writhe as partial bivector parameter activation — now stated explicitly"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Electron as full parameter activation; quark as partial"
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "Modification_2 n-fold combinatorial — parameter distribution of three strains"
+  - file: "core/process-physics/solo-vortex-photon-wave-particle.yaml"
+    note: "R3 superposition as parameter distribution; measurement as projection"
+  - file: "core/process-physics/quanta-as-ccr-cost.yaml"
+    note: "Born probabilities as local projection variance of parameter distribution"
+  - file: "core/process-physics/iterative-depth-hierarchy.yaml"
+    note: "Partial parameters at each depth; trivector binary at depth 2;
+           partial returns at depth 3 in larger embedding space"
