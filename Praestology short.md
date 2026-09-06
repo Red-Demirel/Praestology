@@ -1,7 +1,12 @@
+# Praestology: The Core Mechanism
+
+*Process Ontology, Topological Closure, and the Recursive Depth Hierarchy*
+
 # Why anything exists at all - and why it never stands still
 *Five conditions that seem to govern everything*
 
 ---
+# Abstract Overview
 
 ## Something always beats nothing
 *Do we exist - is reality 'real'?*
@@ -79,3 +84,60 @@ is self-sustaining - not by accident, but by logical necessity.
 
 Everything else - matter, energy, life, thought, ethics - is what that process
 looks like from the inside.
+
+---
+
+# Technical Overview
+
+### 1. R1: Indeterminism as Ground (Existence)
+
+Absolute nothingness is a logical paradox. The minimal consistent basis of reality is maximal indeterminacy ($R1$)—an unconstrained, coordinate-free field potential ($\text{Praesto}$). Indeterminism is not noise added to deterministic laws; determinism is the accumulated record of resolved commitments ($\eta$) viewed from below.
+
+### 2. R2 & R3: Grade Differentiation and Tension (Motion)
+
+Uniformity is indistinguishable from void. $R2$ introduces distinction across geometric grades in $Cl(3,0)$: scalar potential (grade-0), kinetic flow (grade-1), and rotation planes (grade-2 bivectors). Grade differentiation creates operational tension ($R3$)—a phase-gradient pressure pushing the continuous field $\psi(r,t)$ toward spatial energy minimization.
+
+### 3. R4 & R5: Topological Closure and Viability (Progress)
+
+Field pressure resolves through self-locking vortex configurations. A state commits when it satisfies the Closure Configuration Ratio ($\text{CCR} = 1$), trapping phase gradients in topologically protected $720^\circ$ Möbius loops. Over infinite cycles, paths that sustain topological stability persist ($R5$), while non-viable configurations collapse back into the open potential reservoir ($R_{\text{diss}}$).
+
+---
+
+### The Continuous Bivector Parameter Space
+
+Rather than treating quantum states as binary, the general bivector $B = b_{12}(e_1\wedge e_2) + b_{13}(e_1\wedge e_3) + b_{23}(e_2\wedge e_3)$ allows continuous parameter activation across the unit sphere $\vert{}B\vert{}^2 = 1$.
+
+* **Superposition** is an uncommitted parameter distribution across rotation planes prior to $R5$ projection.
+
+
+* **Entanglement** is a single, joint parameter distribution shared across systems without non-local signaling.
+
+
+
+---
+
+### The Ascent Through Depths ($D_0 \to D_N$)
+
+Iterating the closure condition $Q^* = \mathcal{R}_k[Q^*]$ produces the physical, chemical, and biological spectrum:
+
+* **Depth 1 (Rotor):** $4\pi$ Möbius self-identity $\rightarrow$ Electron ($\text{CCR} = 1$) & Photon.
+
+
+* **Depth 2 (Pseudoscalar):** 3-plane orthogonal mutual linking $\rightarrow$ Quarks ($\pm 1/3, \pm 2/3$) & Proton mass excess ($m_p/m_e \approx 1836$).
+
+
+* **Depth 3 & 4 (Nuclear & Atomic):** $S^7$ linking shells $\rightarrow$ Magic number nuclei & Periodic Aufbau order.
+
+
+* **Depth 6 & 7 (Macromolecular & Cellular):** $\text{CCR}$ gradient descent $\rightarrow$ Native protein folding & Active internal $\Pi_{\text{eff}}$ maintenance (Life).
+
+
+* **Depth N (Mind):** Recursive self-modeling ($\Xi > 1$) navigating intrinsic indeterminism.
+
+
+
+---
+
+### The Essential Truth
+
+Physical constants ($\alpha \approx 1/137$, $m_p/m_e \approx 1836$) aren't tuned inputs; we think they are the exact geometric coupling ratios required for spatial closure. Reality then is a singular, self-consistent continuum expressing progressive depth of order.
