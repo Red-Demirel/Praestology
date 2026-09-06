@@ -145,9 +145,14 @@ wave_particle_transition:
     lock) depending on whether decoherence has occurred.
   pre_decoherence: >
     Bivector wave in the open regime — grade-2 phase flow, unresolved
-    potential, multiple orientational states superposed. The R3
-    orientational superposition is maintained: ψ = Σᵢ cᵢ·Rᵢ.
-    The system explores all viable pathways without committing.
+    potential, continuous distribution over bivector parameter space
+    (b₁₂, b₁₃, b₂₃). The pre-R5 state is an amplitude distribution
+    over the unit sphere in this parameter space, not a discrete sum of
+    orientation states. The notation ψ = Σᵢ cᵢ·Rᵢ is a discretisation
+    of this continuous distribution — each Rᵢ is a point on the unit
+    sphere with amplitude cᵢ. The system explores all viable parameter
+    configurations without committing to any.
+    See bivector-partial-parameters.yaml for the full parameter space account.
   decoherence: >
     Loss of phase coherence due to 3rd body influence — an external
     R5 event (measurement, environmental interaction) that forces a
