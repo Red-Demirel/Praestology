@@ -1,0 +1,144 @@
+# /issues/foundational/test-spec-magic-numbers-depth3-topology.yaml
+issue_id: "SIM-006-v1"
+title: "Nuclear Magic Numbers as Stable Depth-3 Linking Topology Configurations"
+type: "COMPUTATIONAL_DERIVATION"
+status: "OPEN_FOR_CONTRIBUTORS — depends on SIM-005; highly consequential if confirmed"
+difficulty: "EXPERT — Steiner enumeration of viable depth-3 nesting patterns in Cl(3,0)"
+target_script: "derivations/depth3_magic_numbers_steiner.py"
+
+---
+
+description: >
+  Nuclear magic numbers (2, 8, 20, 28, 50, 82, 126) mark anomalously stable
+  nuclei — full shells in the nuclear shell model. The standard explanation
+  requires a phenomenological spin-orbit coupling term added by hand. The
+  depth-3 iterative closure framework predicts these numbers are the nucleon
+  counts at which the depth-3 mutual linking topology achieves a complete
+  closure configuration — topological stability, not energetic shell filling.
+
+  If the Steiner enumeration of viable depth-3 nesting patterns produces
+  exactly the sequence 2, 8, 20, 28, 50, 82, 126 without free parameters,
+  the magic numbers are confirmed as topological closure counts at depth 3.
+
+iterative_depth_context:
+  depth_1: >
+    Co-oriented rotor pair R·R in one bivector plane → electron (CCR=1).
+    Closure condition: Q* = R_k[Q*] in grade-2.
+  depth_2: >
+    Three single-rotor strains in mutually orthogonal planes R₁·R₂·R₃ →
+    proton/neutron (grade-3 pseudoscalar). Closure condition: I²=-1,
+    three-plane mutual self-duality.
+  depth_3: >
+    Multiple depth-2 structures (nucleons) linking mutually in the depth-3
+    embedding space → nucleus. Closure condition: complete depth-3 mutual
+    linking topology. Magic numbers are the counts at which this condition
+    is satisfied with no residual incomplete linking.
+
+---
+
+mathematical_formulation:
+
+  depth3_linking_space: >
+    At depth 2, the proton/neutron is a grade-3 pseudoscalar — a committed
+    3D volume in Cl(3,0). At depth 3, the linking is between these grade-3
+    volumes in the next embedding level. The depth-3 embedding space is
+    the orientation space of configurations of grade-3 objects — analogous
+    to how S³ is the embedding space for the depth-2 linking of grade-2
+    rotors.
+    The depth-3 embedding space requires characterisation before the
+    Gauss linking integral can be written down. Candidate: the 7-sphere S⁷
+    (the next Hopf fibration after S³), consistent with the Cl(0,7) structure
+    established in cl07-from-cl30-quantum-computing.yaml.
+
+  steiner_enumeration: >
+    Count viable nesting patterns of N depth-2 structures at depth 3 over
+    the Cl(3,0) grade configurations. A pattern is viable if:
+      (a) All pairwise depth-3 linking numbers are non-zero
+          (no isolated nucleon — all participate in the mutual linking)
+      (b) The total depth-3 linking topology satisfies the depth-3
+          closure condition (the depth-3 analogue of Q*=R_k[Q*])
+      (c) The configuration has no residual incomplete linking
+          (no nucleon whose linking is not completed by the others)
+    Count the number of viable patterns at each N. Magic numbers are
+    the values of N where the count drops sharply — where adding one
+    more nucleon disrupts an otherwise complete topology.
+
+  spin_orbit_as_cross_term: >
+    The nuclear spin-orbit coupling (l·s term) in process-physics terms:
+    the interference between the nucleon's grade-2 bivector orientation
+    (spin, from its depth-2 rotor structure) and the grade-1 orbital
+    path it traces at depth 3 (angular momentum around the nuclear centre).
+    This cross-term is not a separate interaction — it is the grade-1/grade-2
+    coupling in the depth-3 linking geometry. The coupling strength is:
+      ξ_ls = CCR_binding(d2,d3) / CCR_binding(d1,d2)
+    a ratio of successive depth binding CCR values. If this ratio
+    reproduces the observed spin-orbit splitting without fitting, the
+    coupling is derived.
+    The standard shell model requires ξ_ls to be fitted empirically.
+    This framework predicts it from the CCR hierarchy.
+
+---
+
+honest_uncertainty: >
+  It is not currently known whether:
+    (a) The depth-3 embedding space is S⁷ or a different manifold
+    (b) The Steiner enumeration at depth 3 is computationally tractable
+        without further constraints on the linking topology
+    (c) The sequence produced by the enumeration matches 2,8,20,28,50,82,126
+
+  The structural argument is: magic numbers are topological closure counts.
+  The specific sequence is a prediction to be checked, not a result in hand.
+  A different sequence would falsify the depth-3 topology model for nuclear
+  magic numbers while leaving the depth-1/depth-2 structure intact.
+
+---
+
+success_condition: >
+  Steiner enumeration of viable depth-3 linking patterns produces gaps
+  (sharp drops in viable pattern count) at exactly:
+    N = 2, 8, 20, 28, 50, 82, 126
+  without adjusting any free parameter. The spin-orbit coupling ratio
+  ξ_ls = CCR_binding(d2,d3)/CCR_binding(d1,d2) reproduces the observed
+  spin-orbit splitting in nuclear spectra within experimental uncertainty.
+
+falsification_conditions:
+  - >
+    Steiner enumeration produces a different sequence of gaps — magic numbers
+    are not topological closure counts at depth 3, or the depth-3 embedding
+    space is not correctly characterised.
+  - >
+    The enumeration produces the correct sequence but requires fitting one
+    or more parameters to achieve it — the result is not parameter-free.
+  - >
+    ξ_ls from CCR ratio does not reproduce observed spin-orbit splitting —
+    spin-orbit coupling requires a separate mechanism beyond the CCR hierarchy.
+  - >
+    SIM-005-v2 fails (proton mass ratio not recovered) — depth-3 computation
+    cannot be trusted if depth-2 is not confirmed.
+
+dependency_chain: >
+  SIM-004-v2 (electron CCR, Wr reference)
+    → SIM-001-v3 (quark fractional writhe)
+    → SIM-005-v2 (proton binding CCR, mass ratio)
+    → SIM-006-v1 (magic numbers, depth-3 topology)
+
+---
+
+connection_to_existing_files:
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "steiner-enumeration-of-viable-nestings open derivation — this is it
+           applied specifically to depth-3 nuclear configurations"
+  - file: "core/process-physics/quarks-as-transitional-strains.yaml"
+    note: "iterative_depth_statement — depth-3 explicitly anticipated there"
+  - file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "nuclear_binding_extension — Bethe-Weizsäcker terms as depth-3 CCR landscape"
+  - file: "core/process-physics/cl07-from-cl30-quantum-computing.yaml"
+    note: "Cl(0,7) / S⁷ as candidate depth-3 embedding space"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "Depth-3 as successive K₀ closure layer — magic number gaps as
+           assembly map index structure at depth 3"
+  - file: "issues/foundational/test-spec-proton-binding-ccr.yaml"
+    note: "SIM-005-v2 — immediate prerequisite"
+  - file: "issues/foundational/NUMEROLOGY_VS_DERIVATION.md"
+    note: "Methodological standard — magic number sequence must emerge from
+           topology, not be selected to match the known sequence"
