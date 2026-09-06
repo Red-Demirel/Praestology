@@ -31,11 +31,7 @@ dependency_map:
     biological substrates (R5/η structures). The algebra of this boundary
     regime is Cl(0,7), derived from Cl(3,0) via the qubit correspondence
     below. The same algebra applies to biological systems at the Ξ > 1
-    commitment depth. The derivation from Cl(3,0)
-    via the qubit-as-rotor correspondence was initially intended as a
-    demonstrative consistency check. It subsequently revealed a broader
-    structural applicability across quantum computing, neural dynamics,
-    and transformer architectures.
+    commitment depth.
 
 ---
 
@@ -48,10 +44,6 @@ motivation:
     in this regime is Cl(0,7) — a natural consequence of the orientation
     degrees of freedom available in a 7-unit committed rotor system derived
     from Cl(3,0).
-  note: >
-    Preference is given to maintaining the process-level nature of the
-    framework over any commitment to a particular higher algebra or
-    octonionic construction. Cl(0,7) remains provisional.
   four_purposes: >
     This file covers four purposes applicable to both quantum computing
     and biological processing:
@@ -145,12 +137,36 @@ four_purposes:
       of a 7-unit system — the 21 possible pairwise orientation correlations.
       Zero bivector mismatch (s → max): maximally correlated pair.
       Maximum bivector mismatch (⟨G⟩₂ → max): maximally anti-correlated.
-    shared_eta_record: >
-      Entangled qubits share a committed relational record in η from their
-      joint preparation event. The 21-dimensional bivector space is the
-      algebraic structure within which that shared record is encoded.
-      Measurement decoheres specific bivector components, revealing entries
-      in the shared record without altering others.
+    joint_parameter_distribution: >
+      Entangled systems share a joint bivector parameter distribution over
+      their combined parameter space — not a product of independent
+      distributions but a single distribution that cannot be factored.
+      For two qubits (two grade-2 rotor configurations), the joint
+      parameter space is (b₁₂⁽¹⁾, b₁₃⁽¹⁾, b₂₃⁽¹⁾, b₁₂⁽²⁾, b₁₃⁽²⁾, b₂₃⁽²⁾) ∈ ℝ⁶.
+      A product state lives on the product of two unit spheres S²×S².
+      An entangled state lives on a point outside S²×S² — a configuration
+      in ℝ⁶ that cannot be decomposed into independent sphere points.
+      This is more precise than "shared η record": the shared record IS
+      the joint parameter distribution, and its non-factorisability IS
+      entanglement.
+    what_measurement_does: >
+      Measurement of one system projects the joint distribution onto a
+      subspace — committing one system's parameters forces the joint
+      distribution to a state consistent with the committed values.
+      Because the distribution was non-factorisable, the committed values
+      of the first system constrain the second system's parameter distribution
+      immediately. No signal transmission — the joint distribution was never
+      factorisable; committing one part constrains the other by the algebraic
+      structure of the shared parameter space.
+    21_bivectors_as_entanglement_landscape: >
+      The 21 bivectors of Cl(0,7) are the 21 independent cross-terms in
+      the 7-qubit joint parameter space — the 21 pairwise correlations
+      between the 7 systems' bivector parameters. A fully separable 7-qubit
+      state has all 21 cross-terms zero. A maximally entangled state has
+      all 21 cross-terms at maximum. The entanglement landscape is the
+      geometry of this 21-dimensional correlation space — which cross-terms
+      are activated and at what magnitude. See bivector-partial-parameters
+      .yaml for the general partial parameter framework.
     biological_reading: >
       Neural coherence (synchronised oscillation of neural assemblies)
       is resonance (s → max) in the derivative regime — committed neural
