@@ -214,20 +214,39 @@ pre_gauge_effects:
       status: "PREDICTIVE — testable in extreme-suppression regime"
 
     phase_locking_precursor:
-      name: "Phase-locking precursor (pre-R4 bivector coupling)"
+      name: "Phase-locking precursor (pre-R4 bivector parameter coupling)"
       description: >
-        Before R4 locks a specific phase, the rotor explores multiple
-        orientational phases (R3). During exploration, bivector components
-        of nearby streams can couple transiently, producing correlated
-        phase fluctuations not corresponding to any committed gauge state.
-        Gauge symmetry has no description for this regime — it applies
-        only after commitment.
+        Before R4 locks a specific phase, the rotor explores a continuous
+        distribution over bivector parameter space (b₁₂, b₁₃, b₂₃). During
+        this exploration, the parameter distributions of nearby streams can
+        become correlated — non-factorisable joint distributions across the
+        combined parameter spaces of both streams. When these streams
+        subsequently commit independently via R5, the committed outputs carry
+        the correlations of the joint parameter distribution.
+        This is the mechanism that generates entanglement: the pre-R4
+        parameter coupling establishes a non-factorisable joint distribution;
+        R5 commitment of each stream independently produces correlated
+        committed outputs — what standard physics calls entanglement.
+        Gauge symmetry has no description for this pre-commitment regime —
+        it applies only after commitment.
+      entanglement_clarification: >
+        The rotor framework does not predict correlations BEYOND entanglement.
+        It provides a more precise account of what entanglement IS: a
+        non-factorisable joint bivector parameter distribution established
+        during the pre-R4 exploration phase. Standard physics captures the
+        correlations correctly via the shared Hilbert space formalism; the
+        rotor framework identifies the mechanism — parameter distribution
+        coupling during stream exploration — that produces those correlations.
+        See bivector-partial-parameters.yaml #entanglement_as_correlated_parameters.
       observable_signature: >
-        Anomalous correlations in weak-measurement experiments where
-        measurement is delayed, preventing early R4 commitment. Standard
-        physics predicts no correlation beyond entanglement; rotor
-        framework predicts additional bivector coupling from the
-        pre-commitment regime.
+        In weak-measurement experiments where R4 commitment is delayed,
+        the transient bivector parameter coupling between streams is
+        accessible before full commitment. The signature is not correlations
+        beyond what entanglement predicts but correlations whose angular
+        dependence follows the bivector parameter geometry — measurable
+        as specific deviations in the weak value statistics compared to
+        the predictions of a Hilbert space model that treats the parameter
+        space as discrete rather than continuous.
       status: "PREDICTIVE — testable in weak-measurement regime"
 
 ---
