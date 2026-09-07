@@ -1,7 +1,7 @@
 # Praestology – Physics Domain Summary
 
-**Version:** 2.0  
-**Date:** July 2026  
+**Version:** 2.1  
+**Date:** August 2026  
 **Domain Path:** `domains/physics/` and `core/process-physics/`
 
 ---
@@ -28,6 +28,8 @@ The core substrate picture is intact. Four months of development has sharpened t
 
 - **Lattice regularization replaced.** Discrete structure is not imposed externally. CCR-derived potential wells between stable committed configurations provide internal regularization. Well width (tolerance between adjacent stable closures) is Π_eff-dependent — narrower in dense matter, wider in voids. In-medium hadron mass shifts are a predicted consequence.
 
+- **Integrated GA Translation to Physical Descriptors** Integration of a table/mapping section into the summary to help readers map familiar concepts (*spin*, *chirality*, *gauge vectors*) to the $Cl(3,0)$ multivector framework.
+
 ---
 
 ## Key Concepts
@@ -45,6 +47,29 @@ The core substrate picture is intact. Four months of development has sharpened t
 **Realization (R4→R5):** The process selecting viable configurations from indeterminate R3 superposition. Not collapse — R4 commitment of an indeterminate process, viewed through a grade-restricted aperture that sees only the output.
 
 **Saturation:** The commitment nonlinearity g|ψ|²/(1+|ψ|²/n_sat) prevents infinite density. n_sat is the maximum stable distinct phase-lock configurations per grain volume ξ³. The Planck length is the GP healing length at saturation — not a separately postulated quantum gravity scale.
+
+---
+
+### Geometric Algebra Translation: Vector Language vs. Physical Descriptors
+
+Standard quantum field theory represents physical properties through abstract operators, internal gauge groups, and intrinsic quantum numbers. Geometric Algebra ($Cl(3,0)$) grounds these phenomena in a single continuous multivector field $\psi(r,t)$. The vector/bivector language of GA directly maps process-level rotor dynamics to conventional physics terminology:
+
+| Conventional Descriptor | GA / Process-Level Expression | Physical Mechanism in $Cl(3,0)$ |
+| --- | --- | --- |
+| **Spin ($1/2$, $1$, etc.)** | Rotor Bivector Orientation ($\exp(-\mathbf{B}/2)$) | The geometric plane of internal rotation. Half-integer spin corresponds to the $720^\circ$ ($4\pi$) Möbius boundary condition required to return the rotor to its identity state.
+
+ |
+| **Chirality (Left/Right)** | Orientated Pseudoscalar ($I = e_1 e_2 e_3$) | The intrinsic handedness of a rotor topology relative to its axis of translation. Right- or left-handed orientation determines phase-gradient direction.
+
+ |
+| **Helicity** | Vector-Bivector Projection ($\mathbf{v} \cdot \mathbf{B}$) | The alignment of the linear transport vector ($\text{grade-1}$) with the spatial rotation plane ($\text{grade-2}$). |
+| **Charge ($q$)** | Net Integrated Phase Gradient ($\oint \nabla S \cdot d\mathbf{r}$) | The cumulative topological circulation around a vortex core, acting as a source/sink constraint in the scalar potential.
+
+ |
+| **Gauge Field ($A_\mu$)** | Grade-1 Shadow of the Grade-2 Rotor | The spatial vector projection of a full 3D bivector orientation, introduced when derivative models discard higher-grade information.
+
+ |
+| **Wavefunction Collapse** | Projection $R5$ under Grade Aperture | Resolution of an indeterminate bivector distribution into a localized grade projection upon interaction.
 
 ---
 
@@ -151,8 +176,8 @@ The Friedmann equations emerge as the homogeneous, isotropic, cosmic-scale limit
 
 **Domain files** (`domains/physics/`): specifications, foundations, vortex-stabilization, alpha-rydberg-z0, commitment-response-function, quantum-foundations, nuclear-binding# Praestology – Physics Domain Summary
 
-**Version:** 1.0  
-**Date:** March 2026  
+**Version:** 1.1  
+**Date:** August 2026  
 **Domain Path:** `domains/physics/`
 
 ## Core Idea
