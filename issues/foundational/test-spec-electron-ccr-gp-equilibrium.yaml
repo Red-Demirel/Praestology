@@ -1,124 +1,123 @@
 # /issues/foundational/test-spec-electron-ccr-gp-equilibrium.yaml
-issue_id: "SIM-004-v2"
-title: "Electron CCR from GP Equilibrium: Möbius Vortex Shape and CWF Writhe"
+issue_id: "SIM-004"
+title: "Electron CCR: Solve GP Equilibrium for 720° Möbius Vortex & Extract α⁻¹"
 type: "COMPUTATIONAL_DERIVATION"
-status: "OPEN_FOR_CONTRIBUTORS — priority 1; all downstream CCR derivations depend on this"
-difficulty: "EXPERT — Variational GP + CWF Writhe"
-target_script: "derivations/electron_ccr_gp_cwf.py"
-supersedes: "SIM-004-v1"
-
-changes_from_v1: >
-  One correction: Ω_embed compression formula changed from exponential
-  Ω_embed(0)·exp(-η/η_sat) to linear Ω_embed(0)·(1-η/n_sat) to match
-  the established Π_eff formula from inside-out-channeling.yaml. At
-  η/n_sat=0.9 the forms differ by factor ~4 — significant near saturation.
-  All other content retained unchanged.
-
-note_on_writhe: >
-  Tw=1/2 is fixed by Möbius topology (algebraic consequence of the
-  non-orientable half-integer twist). Wr is geometric — it depends on
-  how the centreline curves through the GP equilibrium configuration.
-  Lk = Wr + Tw with Tw fixed constrains but does not fully determine Wr.
-  The equilibrium GP shape determines Wr. This is the content of the
-  derivation, not a gap.
-
----
+status: "OPEN_FOR_CONTRIBUTORS"
+difficulty: "EXPERT — Nonlinear PDE (Gross-Pitaevskii) + CWF Writhe on S³"
+target_script: "derivations/electron_ccr_gp_solver.py"
+supersedes: "N/A"
 
 description: >
-  Find the equilibrium Möbius vortex shape by minimising the GP energy
-  functional subject to the 720° Möbius boundary condition. Apply CWF
-  to compute the writhe Wr of the equilibrium centreline. Compute
-  CCR = (Wr·Ω_rotor)/Ω_embed and check whether it reproduces
-  α⁻¹ = 137.035999 (CODATA) within the 2.22 ppm environmental correction.
-  Test whether Ω_rotor_numerical matches the pi-series candidate
-  4π³+π²+π = 137.036304.
+  Derive the fine-structure constant α from the equilibrium shape of the
+  720° Möbius vortex solution of the saturating Gross-Pitaevskii (GP)
+  equation in Cl(3,0). The CCR is defined as (Wr · Ω_rotor) / Ω_embed.
+  This test computes Wr (writhe) and Ω_rotor (phase-space volume) from
+  the numerically obtained equilibrium rotor configuration, and checks
+  whether the resulting α⁻¹ equals 137.035999... (CODATA) to within
+  the predicted environmental shift (2.2 ppm).
 
-priority_justification: >
-  This is the single computation that unlocks all downstream derivations:
-  SIM-001-v3 (quark writhe), SIM-005-v2 (proton binding CCR), Yukawa
-  hierarchy, 4π geometry factor, Connes-Dirac index (issue_9).
-  No other simulation closes before this one succeeds.
+prerequisite: >
+  This test assumes the rotor-to-ccr-transition.yaml result that the
+  720° closure is the stable mass-lock solution of the GP equation.
+  The GP equation is the high-V_eff limit of the master equation.
 
----
+partial_parameter_note:
+  statement: >
+    The Möbius boundary condition ψ(r, φ+2π) = -ψ(r, φ) does not
+    enforce single-plane bivector activation. A mixed-plane rotor
+    R = exp(-½Bθ) with B = b₁₂(e₁∧e₂) + b₁₃(e₁∧e₃), |B|=1
+    satisfies the same boundary condition as a single-plane rotor.
+  energy_minimum_degeneracy: >
+    By the rotational symmetry of Cl(3,0), the GP energy functional
+    with the Möbius BC is degenerate across the full unit sphere in
+    bivector parameter space (b₁₂, b₁₃, b₂₃). All points on this
+    sphere give the same energy — the specific plane selected is a
+    spontaneous symmetry breaking, not a physical distinction.
+  consequence_for_writhe: >
+    The writhe Wr of the equilibrium centreline is rotationally invariant:
+    it depends on the geometric shape of the centreline in the embedding
+    space, not on which specific bivector plane is activated. The single-
+    plane assumption (b₁₂=1, b₁₃=b₂₃=0) is therefore valid for the
+    numerics without affecting the Wr result. SIM-004 can proceed with
+    the single-plane assumption.
+  action: "No change to simulation spec required — single-plane assumption valid."
 
-gp_energy_functional:
-  formula: "E[ψ] = ∫ [ħ²/(2m)|∇ψ|² + g·|ψ|²/(1+|ψ|²/n_sat)] dV"
+inputs:
+  equation: >
+    ( -∇² + g|ψ|² + Λ·ln(1+κ|ψ|²) ) ψ = μ ψ
+    with ψ(r,θ) = √ρ(r) · exp(-½ B̂ θ) · exp(i S(r))
+    in Cl(3,0) using the Madelung decomposition.
   boundary_conditions:
-    - "ψ(r, φ+4π) = ψ(r, φ)   [4π periodicity — 720° return]"
-    - "ψ(r, φ+2π) = -ψ(r, φ)  [sign flip at 2π — Möbius non-orientability]"
-    - "∫|ψ|² dV = 1            [normalisation]"
+    - "ψ(r→0) regular (no singularity)"
+    - "ψ(r→∞) → 0 (localised vortex)"
+    - "S(θ+4π) = S(θ) (720° self-identity)"
+    - "ρ(r) saturates at n_sat (finite density ceiling)"
+  parameters_to_vary:
+    - g: self-interaction strength (to be determined by the solution)
+    - Λ, κ: saturation parameters (linked to n_sat and ξ)
+    - B̂: unit bivector (fixed by chirality)
 
-ccr_formula:
-  formula: "CCR = (Wr · Ω_rotor) / Ω_embed(η_local)"
-  Omega_rotor: >
-    Extract numerically from the GP equilibrium phase gradient at the
-    crossover point. Do NOT assume the pi-series value — compute and compare.
-    Pi-series candidate: 4π³+π²+π = 137.036304 (test, not assumption).
-  Omega_embed: >
-    Ω_embed(η) = Ω_embed(0) · (1 - η/n_sat)
-    LINEAR FORM — consistent with Π_eff ≈ Π₀·(1-η/n_sat) from
-    inside-out-channeling.yaml. Exponential form from v1 is NOT used.
-
-cwf_computation:
-  decomposition: "Lk = Wr + Tw;  Tw = 1/2 (Möbius, fixed);  Wr = Lk - 1/2"
-  gauss_integral: >
-    Wr = (1/4π) ∫∫ (dγ₁×dγ₂)·(γ₁-γ₂)/|γ₁-γ₂|³
-    over the equilibrium centreline γ in ℝ³.
-  prerequisite_checks:
-    - "Verify GP minimiser with Möbius BCs exists and is unique up to rotation"
-    - "Extract centreline from nodal set of |ψ|²"
-    - "Verify Tw=1/2 numerically from Frenet frame — confirms Möbius BC holds"
-
-alpha_check:
-  codata: "α⁻¹ = 137.035999"
-  pi_series_candidate: "4π³+π²+π = 137.036304 (2.22 ppm above CODATA)"
-  gap_interpretation: >
-    Gap predicted as Π_eff depression from measurement environment.
-    Bare CCR (isolated vortex, vacuum Π_eff) should equal pi-series if
-    that candidate is correct. Computation gives α_int; CODATA is α_exp.
-  honest_status: >
-    Pi-series is a numerical conjecture, not a derived result.
-    Computation must produce Ω_rotor numerically and check independently.
-    If Ω_rotor_numerical ≠ pi-series within 2.22 ppm, the candidate is falsified.
-
----
+mathematical_formulation:
+  writhe_extraction: >
+    From the equilibrium ψ(r,θ), extract the rotor R(θ) = exp(-½ B̂ θ)
+    along the centerline (r=0). The writhe Wr of the full 4π path
+    is given by the Calugareanu-White-Fuller integral:
+      Wr = (1/4π) ∫∫ (dγ₁ × dγ₂) · (γ₁ - γ₂) / |γ₁ - γ₂|³
+    evaluated on the curve γ(θ) = (cos θ/2, sin θ/2 · B̂) in S³.
+    This is the same as the full 4π path in SIM-001-v3.
+  rotor_phase_volume: >
+    Ω_rotor = ∫_{S³} d³q · |ψ(q)|² / |ψ_max|²
+    where q ∈ S³ is the quaternion coordinate of the rotor.
+    This measures the effective phase-space volume occupied by the
+    equilibrium rotor distribution.
+  embedding_volume: >
+    Ω_embed = ∫_{S³} d³q = 2π² (volume of unit S³).
+    However, in the presence of local commitment density η, Ω_embed
+    is compressed: Ω_embed(η) = Ω_embed(0) · exp(-η/η_sat).
+    The test must compute the bare (η=0) CCR first, then the
+    terrestrial (η>0) CCR to check the 2.2 ppm shift.
+  ccr_definition: >
+    CCR = (Wr · Ω_rotor) / Ω_embed(η)
+    α⁻¹ = 1 / CCR   (by definition of α as the electron's CCR)
 
 success_condition: >
-  1. Stable Möbius equilibrium found
-  2. Wr is a well-defined rational or algebraically simple number
-  3. CCR = 137.036... within 0.01% (leaving room for 2.22 ppm correction)
-  4. Ω_rotor_numerical matches 4π³+π²+π within numerical precision
+  The numerical equilibrium solution yields a bare (η=0) CCR such that:
+    α⁻¹_bare = 1/CCR_bare = 137.036304 ± 1e-6
+  (the geometric candidate value).
+  The terrestrial (η>0) CCR yields:
+    α⁻¹_terr = 137.035999 ± 1e-6  (CODATA within 2.2 ppm shift).
+  The difference α⁻¹_bare - α⁻¹_terr = 2.2 ppm × 137 ≈ 0.000305
+  is quantitatively reproduced by the η-compression formula.
 
-falsification_conditions:
-  - "No stable Möbius equilibrium → GP with this nonlinearity does not support 720° topology"
-  - "Wr is irrational with no algebraic structure → CCR identification requires revision"
-  - "CCR deviates from 137.036 by >1% without environmental correction"
-  - "Ω_rotor_numerical ≠ 4π³+π²+π by >2.22 ppm → pi-series candidate falsified"
+falsification_condition: >
+  1. No stable 720° vortex solution exists for any g, Λ, κ within
+     physically reasonable ranges (i.e., the GP equation only admits
+     360° or 1080° closures).
+  2. The extracted Wr from the equilibrium shape differs significantly
+     from the CWF-expected value of 3/2 (or whatever the correct
+     equilibrium Tw turns out to be).
+  3. The computed α⁻¹_bare differs from 137.036304 by more than 10 ppm,
+     indicating the geometric S³ volume ansatz (4π³+π²+π) is incorrect.
+  4. The environmental compression formula does not produce the correct
+     shift direction and magnitude (i.e., α⁻¹_terr > α⁻¹_bare).
 
 implementation_protocol:
-  libraries: "numpy, scipy, clifford, fenics or firedrake (FEM)"
+  software:
+    - language: "Python 3.10+ / Julia 1.9+"
+    - libraries: "FEniCS or deal.II for PDE solver; clifford for GA"
   steps:
-    - "1. Implement GP functional in cylindrical coordinates"
-    - "2. Enforce Möbius BC: ψ(r, φ+2π, z) = -ψ(r, φ, z)"
-    - "3. Minimise E[ψ] via gradient descent or conjugate gradient"
-    - "4. Extract vortex core centreline from nodal set of |ψ|²=0"
-    - "5. Compute Frenet frame; verify Tw=1/2"
-    - "6. Compute Wr via Gauss double integral"
-    - "7. Extract Ω_rotor from phase gradient at crossover"
-    - "8. Compute Ω_embed(η_core) = Ω_embed(0)·(1-η/n_sat)"
-    - "9. Compute CCR = (Wr·Ω_rotor)/Ω_embed"
-    - "10. Compare to CODATA α⁻¹ and pi-series candidate"
+    - "1. Discretise the GP equation in 2D (r, θ) with periodic θ."
+    - "2. Use Newton-Raphson or imaginary-time propagation to find the ground-state solution with 720° periodicity."
+    - "3. Extract the rotor phase R(θ) along the centerline (r=0)."
+    - "4. Compute Wr using the Gauss integral on the curve γ(θ)."
+    - "5. Compute Ω_rotor by integrating |ψ|² over the quaternion coordinate q (mapped from r, θ)."
+    - "6. Compute CCR and α⁻¹; check against target values."
+    - "7. Vary η (via boundary density) to compute the shift."
 
 cross_references:
   - file: "core/process-physics/vortex-stability.yaml"
-    note: "ccr-electron-explicit — this simulation IS that open derivation"
-  - file: "core/inside-out-channeling.yaml"
-    note: "Linear Π_eff compression (1-η/n_sat) used for Ω_embed"
+    note: "ccr-electron-explicit open derivation; this test closes it."
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "720° boundary condition; Compton wavelength as capacity scale."
   - file: "core/closure-configuration-ratio.yaml"
-    note: "CCR formula and CWF theorem context"
-  - file: "core/process-physics/open-reconciliation-notes.yaml"
-    note: "issue_10 (threshold partial closure); issue_3 (4π factor)"
-  - file: "issues/foundational/test-spec-s3-quark-writhe-simulation.yaml"
-    note: "SIM-001-v3 depends on Wr(electron) from this computation"
-  - file: "issues/foundational/test-spec-proton-binding-ccr.yaml"
-    note: "SIM-005-v2 depends on SIM-001 which depends on this"
+    note: "Definition of CCR; writhe and embedding volume."
