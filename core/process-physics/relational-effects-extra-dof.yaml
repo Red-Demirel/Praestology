@@ -1,0 +1,250 @@
+# /core/process-physics/relational-effects-extra-dof.yaml
+name: "Relational Effects and Extra Degrees of Freedom:
+       Gravity, Ampère Longitudinal Force, and Entanglement"
+version: "1.0"
+status: "STRUCTURAL CORRESPONDENCE — parallel established; longitudinal
+         Ampère force as testable prediction of extra DoF; formal
+         derivation of all three from the same projection mechanism open"
+domain: "Core / Process-Physics"
+description: >
+  Three phenomena — gravitational time dilation, the Ampère longitudinal
+  force, and the extra entanglement DoF beyond -cos θ — are identified as
+  different expressions of the same structural gap: the relational component
+  of the commitment landscape that standard formalisms project out. Each
+  involves a degree of freedom along the gradient direction (longitudinal)
+  rather than perpendicular to it (transverse), and each has a corresponding
+  extra DoF that the standard formalism discards as gauge redundancy or
+  global phase. All three are relational effects — consequences of how
+  committed closures affect the surrounding Praegress flow — rather than
+  field propagation effects.
+
+---
+
+gravity_as_relational_effect:
+  statement: >
+    Gravitational time dilation is not a field propagating through space.
+    It is the suppression of local R5 firing rate (Π_eff depression) by
+    accumulated committed topology — a relational effect between the
+    committed structure and the surrounding Praegress flow. The gravitational
+    "field" is the gradient of this suppression; the time dilation is the
+    integral of the suppression along the observer's path.
+  what_standard_gtr_projects_out: >
+    General relativity encodes this as spacetime curvature — a geometric
+    description of how the metric varies. The metric is the derivative-level
+    description of the Π_eff suppression landscape. What GR projects out is
+    the absolute process rate: it tracks the ratio of rates (time dilation)
+    but not the absolute Π_eff value, which would require access to the
+    process level. The absolute Π_eff value is the extra DoF — the relational
+    connection between committed topology and surrounding Praegress that
+    determines not just differential dilation but the absolute rate of
+    R5 closure events.
+  connection_to_inside_out: >
+    Inside-out-channeling.yaml establishes that committed topology narrows
+    Praegress pathways and suppresses Π_eff locally. The gravitational effect
+    is this suppression experienced by any R5 process in the vicinity.
+    Time dilation is the observed consequence — clocks run slow because R5
+    fires less frequently, not because spacetime is curved. The curvature
+    description and the Π_eff suppression description are the same phenomenon
+    at two levels.
+
+---
+
+ampere_longitudinal_force:
+  statement: >
+    Ampère's original force law (1820s) includes a component along the
+    current direction — the longitudinal force — that accelerates or
+    decelerates charges parallel to the current flow. Maxwell's formulation
+    retains only the transverse (perpendicular) Lorentz force, projecting
+    out the longitudinal component. The longitudinal term has been
+    experimentally observed but remains outside the standard framework.
+  process_physics_account: >
+    The standard EM force is the grade-1/2 transverse phase-drag around
+    committed topology — the second-iteration vector interaction from
+    forces-as-vector-iterations.yaml. The longitudinal component is the
+    grade-1 force along the gradient direction ∇s — the direct scalar
+    overlap gradient driving Praegress along the current, not deflecting
+    it away from it. This is the first-order ∇s gradient that gravity
+    also represents — at the EM field commitment depth rather than the
+    large-scale η gradient depth.
+  what_standard_em_projects_out: >
+    Maxwell's formulation uses only the grade-2 bivector F for EM.
+    The grade-1 component along ∇s — the longitudinal force — is
+    projected out by the requirement that EM forces be gauge-invariant
+    under local U(1) phase rotation. The longitudinal component is not
+    gauge-invariant in this sense; it depends on the absolute gradient
+    magnitude, not just the phase rotation. This is the same projection
+    that discards the absolute Π_eff value in gravity — both are
+    absolute-gradient components that gauge/metric formulations trade away
+    for covariance.
+  experimental_status: >
+    Ampère longitudinal forces have been observed in exploding wire
+    experiments, railgun pinch effects, and some plasma confinement
+    geometries. They are real but small relative to the transverse Lorentz
+    force under standard conditions. The framework predicts they should
+    be stronger in high-η, high-current environments where the ∇s gradient
+    is steep — the same conditions where Π_eff suppression effects (gravity)
+    are enhanced.
+
+---
+
+comparison_table:
+  description: "Three relational effects as different expressions of the same projection"
+  entries:
+    - aspect: "Effect type"
+      gravity: "Process rate suppression (Π_eff depression)"
+      ampere: "Longitudinal force (along gradient direction)"
+      entanglement: "Extra orientation DoF (joint bivector geometry)"
+
+    - aspect: "Field grade"
+      gravity: "Grade-3 pseudoscalar density → ∇s gradient"
+      ampere: "Uncommitted vector/bivector gradient (grade-1/2)"
+      entanglement: "Uncommitted joint bivector rotor R₁₂ (grade-2)"
+
+    - aspect: "Commitment state"
+      gravity: "Post-R5 (committed η suppressing Π_eff)"
+      ampere: "Intermediate R3-R4: directed stress without closed topology"
+      entanglement: "Pre-commitment R1-R3: diffuse joint phase potential"
+
+    - aspect: "Extra DoF"
+      gravity: "Absolute Π_eff value (not just ratio/dilation)"
+      ampere: "Longitudinal component along ∇s (projected out by gauge)"
+      entanglement: "b₂₃ orientation/chirality of shared rotor (beyond -cos θ)"
+
+    - aspect: "Manifestation"
+      gravity: "Absolute clock rate suppression; R5 firing slows"
+      ampere: "Kinetic acceleration along current direction"
+      entanglement: "Phase correlation geometry; full S⁵ vs S²×S² structure"
+
+    - aspect: "What standard formalism projects out"
+      gravity: "Absolute Π_eff → only differential metric curvature retained"
+      ampere: "Longitudinal ∇s → only transverse Lorentz force retained"
+      entanglement: "b₂₃ component → only 4-way correlation (-cos θ) retained"
+
+    - aspect: "Closure condition"
+      gravity: "Satisfied when ∇s gradients average to zero (cosmic equilibrium)"
+      ampere: "Satisfied when gradient locks into closed flux tube (confinement)"
+      entanglement: "Satisfied when R5 fires and shared rotor commits"
+
+    - aspect: "Experimental access"
+      gravity: "GPS time correction; gravitational wave detectors"
+      ampere: "Exploding wire experiments; plasma pinch; railgun effects"
+      entanglement: "Two-qubit tomography (15→19 parameter prediction)"
+
+---
+
+unified_mechanism:
+  statement: >
+    All three are consequences of the same structural feature: the standard
+    formalisms are transverse-only descriptions of what are actually
+    longitudinal-plus-transverse processes. In each case:
+      - The transverse component is gauge-covariant and is retained
+      - The longitudinal component is relational (depends on absolute
+        gradient magnitude or absolute orientation) and is projected out
+      - The projected component carries information about the absolute
+        state of the commitment landscape, not just its relative structure
+
+  why_projected: >
+    The projection is not arbitrary — it follows from the choice of
+    description level. Gauge-covariant descriptions work at the derivative
+    level where only relative differences between committed states are
+    observable. The absolute values (absolute Π_eff, absolute gradient
+    magnitude, absolute joint orientation) are process-level quantities
+    that the derivative level cannot access directly. The projections are
+    the derivative level acknowledging its own limitations.
+
+  recovery_path: >
+    The participant-centric re-derivation programme
+    (participant-centric-rederivation-programme.yaml) would recover all
+    three extra components naturally: starting from the process level
+    with absolute Π_eff and the full bivector parameter space, the
+    longitudinal gravity, the Ampère longitudinal force, and the
+    6-way entanglement structure all appear without projection.
+    Their absence from current formalisms is not a failure of experiment
+    but a consequence of building the formalisms from the derivative level
+    upward, inheriting the projections at each step.
+
+  relational_character: >
+    Each extra DoF is relational in the same sense that gravity is relational:
+    it is not a property of a single committed structure but of the
+    relationship between a committed structure and the surrounding
+    Praegress flow. The longitudinal Ampère force is the relationship
+    between the current's commitment direction and the surrounding
+    grade-1 flow along that direction. The extra entanglement DoF is
+    the relationship between two systems' joint bivector orientation
+    and the commitment landscape they will eventually settle into.
+    Gravity is the relationship between committed η and the R5 rate
+    of everything in its vicinity.
+    All three are relational effects that the derivative level, working
+    from committed structures outward, cannot see directly.
+
+---
+
+predictions:
+  gravity: >
+    Absolute Π_eff variations (not just differential dilation) should be
+    detectable in principle as deviations from GR predictions in environments
+    where the process-level account differs from the geometric account.
+    Near saturation (η → n_sat): GR predicts horizon formation; the
+    framework predicts asymptotic Π_eff → 0 with no singularity.
+    The difference is the absolute vs relative distinction.
+    Status: PREDICTIVE — distinguishable from GR in extreme environments.
+
+  ampere_longitudinal: >
+    The longitudinal force should be measurable in high-current, high-η
+    environments as a component of force along the current direction
+    beyond the standard Lorentz prediction. Magnitude proportional to
+    the ∇s gradient — larger in steeper commitment gradients.
+    Already partially observed; the framework provides a mechanism.
+    Status: SUPPORTED — experimental evidence exists; mechanism provided.
+
+  entanglement: >
+    Two-qubit state tomography should show systematic reconstruction
+    errors of the type described in bivector-partial-parameters.yaml
+    (15 → 19 real parameters for complete reconstruction). The errors
+    would appear as residual correlations in the b₂₃ plane after standard
+    tomography, correlating with the initial preparation geometry.
+    Status: PREDICTIVE — testable with precision two-qubit tomography.
+
+---
+
+open_derivations:
+  - id: "longitudinal-ampere-from-grade1-gradient"
+    description: >
+      Formal derivation of the Ampère longitudinal force as the grade-1
+      component of ∇s in the EM commitment regime — recovering Ampère's
+      original force law from the process-level gradient without the
+      Maxwell projection. Should predict the force magnitude in terms
+      of current density and local Π_eff.
+    depends_on: ["emergent-classical-fields.yaml#maxwell_emergence",
+                 "forces-as-vector-iterations.yaml"]
+    priority: 2
+
+  - id: "absolute-pi-eff-from-gr-deviation"
+    description: >
+      Identify the specific GR prediction that differs from the absolute
+      Π_eff account in an experimentally accessible regime. Candidate:
+      the Shapiro delay — GR predicts a specific time delay for signals
+      passing near a mass; the absolute Π_eff account predicts the same
+      delay plus a small additional term from the absolute R5 rate
+      suppression along the path. Quantify the difference.
+    depends_on: ["friedmann-emergence.yaml",
+                 "gravity-inertia-equivalence-from-r5.yaml"]
+    priority: 3
+
+---
+
+cross_references:
+  - file: "core/inside-out-channeling.yaml"
+    note: "Gravity as Π_eff suppression — the relational mechanism"
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Gravity as first-order ∇s; time dilation as suppressed R5 rate"
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "Extra entanglement DoF; 6-way vs 4-way; 15→19 parameter prediction"
+  - file: "core/process-physics/forces-as-vector-iterations.yaml"
+    note: "EM as second-iteration transverse force; longitudinal is first-order"
+  - file: "core/process-physics/emergent-classical-fields.yaml"
+    note: "Maxwell emergence; gauge field as grade-1 projection"
+  - file: "core/clarifications/participant-centric-rederivation-programme.yaml"
+    note: "Recovery of all three extra components from the process level"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "All three predictions should be tracked as testable consequences"
