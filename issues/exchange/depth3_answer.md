@@ -13,7 +13,7 @@ Three things in the depth-3 closure are well-defined without tuning, and three a
 
 **Not well-defined.** The depth-3 embedding space is a candidate (S⁷, the next Hopf level after S³), not a derived result. The explicit closure condition at depth 3 - what "complete linking" means for N nucleon paths - is not yet written down; this is the load-bearing open item in SIM-006-v1. And the friction functional whose minimizers are candidate closures has no derived form. Whatever you run will therefore be an *ansatz study*, not a derivation, and its output will tell you whether the sequence is robust to the choice of functional, which is exactly what the framework needs to know before trusting any sequence it produces.
 
-**The ansatz.** Use the anticommutator deviation rather than the commutator - in Cl(3,0) the commutator of orthonormal bivectors is \(-2\varepsilon_{ijk}B_k\), not \(I\varepsilon_{ijk}B_k\), so a functional built on the commutator does not vanish at the isotropic fixed point it is meant to detect. The anticommutator deviation
+**The ansatz.** Use the anticommutator deviation rather than the commutator - in Cl(3,0) the commutator of orthonormal bivectors is $(-2\varepsilon_{ijk}B_k)$, not $(I\varepsilon_{ijk}B_k)$, so a functional built on the commutator does not vanish at the isotropic fixed point it is meant to detect. The anticommutator deviation
 
 $[
 F[Q] = \sum_{i<j} \big\| B_iB_j + B_jB_i + 2\delta_{ij} \big\|^2
