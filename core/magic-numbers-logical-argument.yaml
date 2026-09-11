@@ -1,0 +1,152 @@
+# /core/process-physics/magic-numbers-logical-argument.yaml
+name: "Magic Numbers — Logical Argument Before Computation"
+version: "1.0"
+status: "LOGICAL DERIVATION — sequence expected from structural argument;
+         computation (SIM-006-v1) to confirm or falsify specific values"
+domain: "Core / Process-Physics"
+description: >
+  The nuclear magic numbers (2, 8, 20, 28, 50, 82, 126) are expected from
+  the iterative depth closure logic before any numerical computation.
+  This file states the logical argument. SIM-006-v1 provides the
+  computational test. If the Steiner enumeration of the S⁷ linking
+  topology produces these numbers, it confirms the argument. If it
+  produces a different sequence, it identifies precisely where the
+  logical argument fails — which is equally valuable.
+
+relationship_to_sim006: >
+  This file is the logical basis; SIM-006-v1 is the computation.
+  The argument here does not depend on the computation succeeding.
+  The computation either confirms the logic or falsifies it with
+  a specific counter-example. Neither outcome requires revising the
+  iterative depth principle — only the specific claim that S⁷ is
+  the correct depth-3 embedding space and that the Steiner enumeration
+  on S⁷ produces the observed sequence.
+
+---
+
+general_principle:
+  statement: >
+    A stable configuration at depth N is one that exhausts the available
+    closure condition at depth N with no residual incomplete linking.
+    Magic numbers are the integers at which this exhaustion occurs.
+    Adding one more unit disrupts the closed topology — there is no room
+    for it without displacing an existing closure or introducing a partial
+    incompletion. The magic number is the count, not the energy minimum.
+  instances:
+    depth_1_electron: >
+      The stable electron (co-oriented R·R pair) exhausts the depth-1
+      closure condition in one bivector plane — 720° winding, no residual.
+      Two electrons with the same spin in the same orbital cannot coexist
+      not because of an added Pauli exclusion postulate but because the
+      depth-1 closure condition for that orbital is already exhausted.
+    depth_1_noble_gas: >
+      The noble gas electron shell exhausts the depth-4 closure condition —
+      all available linking configurations for that shell are filled, leaving
+      no residual DoF that would provide a motive for additional bonding.
+      He (2), Ne (10), Ar (18): the period lengths are the shell closure
+      counts at depth 4.
+    depth_3_nucleus: >
+      The nuclear magic numbers are the nucleon counts at which the depth-3
+      linking topology is exhausted — all available S⁷ linking configurations
+      are filled, leaving no residual linking that would lower energy by
+      acquiring one more nucleon.
+
+---
+
+logical_argument_for_nuclear_magic_numbers:
+
+  step_1_embedding_space:
+    statement: >
+      Nucleons (depth-2 grade-3 pseudoscalars) link at depth 3 in the
+      next Hopf fibration level after S³. The candidate embedding space
+      is S⁷ — the 7-sphere — for the following reasons:
+        (a) S³ is the depth-2 embedding (quaternions, SU(2))
+        (b) The Hopf fibration tower: S¹ → S³ → S⁷ → S¹⁵
+            Each level is the natural next embedding after the previous
+        (c) S⁷ has 7 independent imaginary directions — consistent with
+            Cl(0,7) from cl07-from-cl30-quantum-computing.yaml
+        (d) The octonions underlie S⁷; octonion multiplication is
+            non-associative, which is why the depth-3 linking topology
+            is richer and produces sub-shell structures absent at depth 2
+    status: "STRUCTURAL HYPOTHESIS — S⁷ is the best candidate; alternative
+             embedding spaces would produce different magic number sequences"
+
+  step_2_closure_condition:
+    statement: >
+      The depth-3 closure condition is the S⁷ analogue of Q*=R_k[Q*]:
+      a configuration of N nucleon paths in S⁷ such that their mutual
+      linking is complete — every nucleon participates in the mutual
+      linking with no residual open connections.
+      On S³ (depth 2), the closure condition is exactly the triality
+      closure of three paths in mutually orthogonal planes.
+      On S⁷ (depth 3), the closure condition involves the octonion
+      multiplication structure — configurations where the N-path mutual
+      linking satisfies the octonion closure identities.
+
+  step_3_counting_argument:
+    statement: >
+      The available linking configurations on S⁷ are the independent
+      octonion imaginary directions and their combinations. S⁷ has:
+        - 7 independent imaginary directions (analogous to 3 in S³)
+        - 21 independent pairwise linking combinations (C(7,2))
+        - Sub-structure from the non-associativity of octonions
+          (which creates intermediate closure conditions not present in S³)
+    filling_sequence: >
+      The magic numbers emerge as the cumulative counts where successive
+      shells of S⁷ octonion linking close completely:
+        N=2:   Simplest closed pair in S⁷ — minimal octonion closure
+        N=8:   First shell complete — 6 additional configurations
+               (the 6 independent imaginary directions beyond the first pair)
+        N=20:  Second shell — 12 additional (consistent with 2l+1 counting
+               for l=0,1,2 sub-shells in 3D, where l counts the octonion
+               sub-algebra depth)
+        N=28:  Sub-shell closure — the non-associativity of octonions
+               creates an intermediate closure at 8 additional beyond 20,
+               before the full second shell completes. This is exactly
+               where the spin-orbit term in the standard shell model
+               produces its first sub-shell gap.
+        N=50:  Full second shell — 22 additional
+        N=82:  Third shell — 32 additional
+        N=126: Full third shell — 44 additional
+      The sub-shell gaps (28, 50 breaking the simpler sequence 2,8,20,40,70...)
+      arise from the Hopf fibration structure of S⁷ over S⁴ with S³ fibers —
+      the octonion sub-algebra creates intermediate closure conditions
+      that a simpler sphere would not have.
+
+  step_4_spin_orbit_as_consequence:
+    statement: >
+      The standard nuclear shell model must add a spin-orbit term by hand
+      to reproduce the sub-shell gaps (28, 50 instead of 40, 70).
+      In the S⁷ account, the sub-shell gaps arise automatically from the
+      non-associativity of octonion multiplication — no additional term needed.
+      The spin-orbit coupling strength ξ_ls is the ratio of the depth-3
+      binding cost to the depth-2 binding cost:
+        ξ_ls = CCR_binding(d2,d3) / CCR_binding(d1,d2)
+      If this ratio reproduces the observed spin-orbit splitting magnitude
+      without fitting, the spin-orbit interaction is derived rather than
+      postulated.
+    status: "PREDICTED — ratio derivable from SIM-005 and SIM-006 results"
+
+  step_5_prediction:
+    statement: >
+      The logical argument predicts: the Steiner enumeration of viable
+      N-path linking configurations on S⁷ under the octonion closure
+      condition will show sharp drops at N = 2, 8, 20, 28, 50, 82, 126.
+      This is the computational test of SIM-006-v1.
+    what_would_falsify: >
+      If the S⁷ Steiner enumeration produces a different sequence —
+      for example, the sequence without sub-shell gaps (2, 8, 20, 40, 70...)
+      that simpler spheres would produce — then either:
+        (a) S⁷ is not the correct depth-3 embedding space, or
+        (b) The octonion closure condition is not the right closure condition
+      Either failure mode is informative and points toward the revision needed.
+    what_would_confirm: >
+      If the S⁷ Steiner enumeration produces exactly 2, 8, 20, 28, 50, 82, 126
+      without fitting, and the spin-orbit ratio ξ_ls matches the observed
+      splitting magnitude, then:
+        (a) The iterative depth logic is confirmed at depth 3
+        (b) The spin-orbit interaction is derived from the CCR hierarchy
+        (c) The Hopf fibration tower (S¹ → S³ → S⁷) is the correct
+            sequence of depth embeddings
+        (d) The depth-4 (atomic) computation should use the next level
+            of the Hopf tower (S¹⁵) as the embedding space
