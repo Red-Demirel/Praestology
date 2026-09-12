@@ -1,0 +1,202 @@
+ /issues/foundational/test-spec-depth2-triality-closure.yaml
+issue_id: "SIM-007-v1"
+title: "Depth-2 Triality Closure: Internal Phase Stress Minimisation Among Three Stalled Paths"
+type: "COMPUTATIONAL_PROOF_OF_CONCEPT"
+status: "ANSATZ STUDY — well-defined algebra, ansatz functional;
+         output shows robustness of closure sequence, not a derivation"
+difficulty: "INTERMEDIATE — Cl(3,0) gradient descent; analytically verifiable"
+target_script: "derivations/depth2_triality_closure.py"
+supersedes: "None — new"
+depends_on: "SIM-004-v2 for CCR reference; SIM-001-v3 for quark fractional writhe"
+
+---
+
+epistemic_status:
+  well_defined:
+    - "Cl(3,0) multivector structure: 8 real components, fixed product tensor"
+    - "Rotor parameterisation R = exp(-½B̂θ) in Cl(3,0)"
+    - "Bivector algebra: B₁=e₂e₃, B₂=e₃e₁, B₃=e₁e₂; BᵢBⱼ=-εᵢⱼₖBₖ-δᵢⱼ"
+    - "Anticommutator functional F[Q]: vanishes exactly at orthonormal closure (verified)"
+    - "Fixed-point concept: configuration invariant under its own closure map"
+  not_well_defined:
+    - "Depth-2 CCR: ratio structure identified but not yet formally derived"
+    - "Correct functional form for internal phase stress (anticommutator is ansatz)"
+    - "Number of binding paths (three is motivated, not derived)"
+  consequence: >
+    Output is an ansatz study showing what closure sequences look like under
+    these assumptions. It cannot be presented as a derivation. It tells us
+    whether the magic-number-like sequence is robust to the choice of functional,
+    which is what the framework needs to know before trusting SIM-006.
+
+---
+
+ccr_at_depth_2:
+  structure: >
+    At depth 2, CCR = (mutual phase stress of N stalled paths) / (grade-3 embedding volume frequency)
+    Numerator: the anticommutator deviation F[Q] — the residual phase mismatch
+                among N partial-writhe paths when they attempt mutual closure
+    Denominator: the natural frequency of the pseudoscalar volume (grade-3 embedding)
+    This is CCR_binding(d1,d2) from closure-types-nesting.yaml, with F[Q] providing
+    the explicit form of the numerator.
+  why_anticommutator: >
+    In Cl(3,0): BᵢBⱼ + BⱼBᵢ = -2δᵢⱼ at orthonormal closure.
+    The anticommutator deviation F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ + 2δᵢⱼ‖² 
+    vanishes exactly when the N paths achieve mutually orthonormal Clifford closure —
+    the depth-2 analogue of Q*=R_k[Q*]. Verified numerically (see verification below).
+    The commutator functional does NOT vanish at this point (gives 12, not 0).
+  why_not_commutator: >
+    In Cl(3,0), [Bᵢ,Bⱼ] = BᵢBⱼ - BⱼBᵢ = -2εᵢⱼₖBₖ, which is non-zero between
+    different bivectors at orthonormal closure. A functional built on the commutator
+    would detect rotation away from the fixed point it is meant to find.
+
+algebra_verification:
+  confirmed: >
+    python3 verification shows:
+      B1*B1 = B2*B2 = B3*B3 = -1  (correct for Cl(3,0))
+      Commutator [B1,B2] = -2*B3   (matches -2*eps_123*B3)
+      Anticommutator {B1,B2} = 0   (correct for i≠j)
+      Anticommutator {B1,B1} = -2  (correct: 2*B1² = -2)
+      F[B1,B2,B3] = 0.0            (functional vanishes at closure)
+      Commutator functional = 12.0 (non-zero: confirms anticommutator is correct choice)
+
+---
+
+functional:
+  definition: >
+    F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ + 2δᵢⱼ‖²
+    where Bᵢ = Σₖ cᵢₖ·eₖₗ (grade-2 elements in Cl(3,0))
+    and ‖·‖² = ⟨A·Ã⟩₀ (scalar part of A times its reverse)
+  parameters: >
+    Optimise over the real generator coefficients (cᵢₖ) for each path i,
+    NOT over the angles θ. The angle parameterisation carries gauge redundancy
+    and drifts during gradient descent.
+  normalisation: >
+    After each gradient descent step: divide each Bᵢ by √⟨BᵢB̃ᵢ⟩₀
+    to maintain the unit constraint ‖Bᵢ‖ = 1.
+  initialisation: >
+    Begin from random unit bivectors in Cl(3,0). Run from multiple
+    random starts to check that the convergence is robust.
+
+---
+
+depth_ccr_iteration_map:
+  statement: >
+    At each depth, CCR has the same ratio structure but different physical content:
+
+  depth_1_electron:
+    numerator: "Writhe Wr of grade-2 rotor path in S³ (phase integration cost)"
+    denominator: "Substrate oscillation frequency Ω_embed"
+    functional: "GP energy E[ψ] under Möbius boundary conditions (SIM-004)"
+    closure_condition: "Q*(4π) = R_k[Q*] — 720° self-identity"
+
+  depth_2_nucleon:
+    numerator: "Mutual phase stress F[Q] among N stalled partial-writhe paths"
+    denominator: "Grade-3 pseudoscalar volume natural frequency"
+    functional: "Anticommutator deviation F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ+BⱼBᵢ+2δᵢⱼ‖²"
+    closure_condition: "Mutually orthonormal Clifford closure: F[Q]=0"
+    note: "N=3 is motivated (three orthogonal planes in Cl(3,0)); not derived"
+
+  depth_3_nucleus:
+    numerator: "Evanescent fringe field coupling — grade-2 residue beyond pseudoscalar boundary"
+    denominator: "Nuclear volume natural frequency at depth-3 embedding"
+    functional: "S⁷ Steiner linking integral (SIM-006)"
+    closure_condition: "Complete mutual linking in S⁷ octonion structure"
+    magic_numbers: "Counts N where Steiner enumeration gaps occur"
+
+  depth_4_atom:
+    numerator: "Electron orbital phase gradient mismatch (quantum number mismatch cost)"
+    denominator: "Nuclear core natural frequency at orbital radius"
+    functional: "Phase-locking condition of depth-1 rotors around depth-3 core"
+    closure_condition: "Complete shell closure — all phase-locking modes occupied"
+    period_lengths: "2, 8, 8, 18, 18, 32 — Steiner enumeration at depth-4"
+
+  depth_6_protein:
+    numerator: "Backbone torsion angle mismatch (dihedral phase stress per residue)"
+    denominator: "Residue coupling bandwidth (local amino acid environment)"
+    functional: "Conformational potential funnel — CCR gradient descent"
+    closure_condition: "Native fold: global minimum of backbone phase stress"
+    levinthal_connection: >
+      The funnel is steep because the CCR gradient is strong — not a flat
+      search space but a directed one. Folding speed ∝ CCR gradient magnitude.
+
+---
+
+simulation_protocol:
+
+  step_1_initialise: >
+    Sample N random unit bivectors B₁,...,Bₙ in Cl(3,0):
+      Bᵢ = (c₁e₁₂ + c₂e₂₃ + c₃e₃₁) / ‖·‖   (three real coefficients, normalised)
+
+  step_2_compute_f: >
+    F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ + 2δᵢⱼ‖²
+    using Cl(3,0) geometric product via clifford library
+
+  step_3_gradient_descent: >
+    ∂F/∂cᵢₖ — numerical gradient (finite difference or autograd)
+    Update: cᵢₖ ← cᵢₖ - η · ∂F/∂cᵢₖ
+    Normalise each Bᵢ after each step
+
+  step_4_detect_closure: >
+    Closure achieved when F[Q] < ε (e.g. ε = 1e-10)
+    Record: N, number of gradient steps to closure, final F value,
+    final bivector configuration (orthonormality check)
+
+  step_5_scan_N: >
+    Run for N = 1, 2, 3, 4, 5, 6, 7 paths
+    For each N: 100 random initialisations
+    Record: convergence rate, mean steps to closure, F_min distribution
+    Look for: sharp changes in convergence behaviour as N increases —
+    N values where F_min cannot reach zero = closure impossible at that N
+
+  step_6_record_gaps: >
+    The N values where convergence fails or F_min > ε constitute the
+    "impossible closure" sequence. Compare to magic numbers.
+    Note: Cl(3,0) has only 3 independent bivector planes — for N > 3,
+    paths must share planes, making F[Q] = 0 impossible. The sequence
+    in Cl(3,0) is therefore limited to N ≤ 3, which is depth-2 only.
+    Depth-3 (N > 3) requires the S⁷ embedding — confirming that
+    SIM-006 is the correct next computation, not an extension of this one.
+
+---
+
+expected_output:
+  n_leq_3: >
+    For N ≤ 3: closure achievable (F → 0). Convergence fastest for N=3
+    (three orthogonal planes are the natural Cl(3,0) closure).
+  n_greater_3: >
+    For N > 3: F[Q] cannot reach zero in Cl(3,0) — more paths than
+    independent bivector planes. This is not a failure of the simulation;
+    it is the correct result: depth-3 nuclear linking cannot be described
+    in Cl(3,0) and requires the S⁷ embedding. The simulation confirms
+    that the Cl(3,0) maximum is N=3 (the proton/neutron), exactly as claimed.
+
+interpretive_constraint: >
+  The output of this simulation CANNOT be presented as:
+    - A derivation of the proton from first principles
+    - A proof that triality requires exactly N=3
+    - A computation of the proton mass
+  It CAN be presented as:
+    - Confirmation that the anticommutator functional correctly detects
+      Clifford orthonormal closure in Cl(3,0)
+    - Confirmation that Cl(3,0) admits closure for N ≤ 3 but not N > 3
+    - Motivation for S⁷ as the depth-3 embedding (the limit of Cl(3,0)
+      is exactly the boundary between depth-2 and depth-3)
+    - An ansatz for what CCR_binding(d1,d2) minimisation looks like
+
+---
+
+cross_references:
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "CCR_binding formal; non-additivity; modification_2 (N-fold combinatorial)"
+  - file: "core/process-physics/quarks-as-transitional-strains.yaml"
+    note: "N stalled paths as the quark model; triality closure"
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "Partial parameter sets; N paths as partial activations"
+  - file: "core/process-physics/magic-numbers-logical-argument.yaml"
+    note: "Cl(3,0) limit N=3 → S⁷ needed for depth-3 → SIM-006"
+  - file: "issues/foundational/test-spec-magic-numbers-depth3-topology.yaml"
+    note: "SIM-006-v1 — the natural sequel when N > 3"
+  - file: "issues/foundational/test-spec-electron-ccr-gp-equilibrium.yaml"
+    note: "SIM-004 — CCR reference at depth-1; same ratio structure"
+  - file: "issues/foundational/NUMEROLOGY_VS_DERIVATION.md"
+    note: "Methodological standard — ansatz study clearly labelled as such"
