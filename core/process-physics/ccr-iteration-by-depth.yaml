@@ -1,0 +1,192 @@
+spec_id: "CCR-ITERATION-v1"
+title: "Depth-Iterated Closure: Recursive CCR with Branching"
+type: "CORE_PROCESS_PHYSICS_SPECIFICATION"
+status: "DRAFT SKELETON — procedure established at d=1; higher depths marked by tier"
+domain: "core/process-physics/"
+depends_on:
+  - "core/closure-configuration-ratio.yaml"
+  - "core/process-physics/closure-types-nesting.yaml"
+  - "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+
+terminology_note: >
+  "Fork" was the working term; the specification uses "branching"
+  (graph-theoretic) and "polymorphism" (crystallographic) instead, since
+  the framework requires a constrained branching relation, not
+  concurrency. "Bifurcation" is reserved for the dynamical-systems case
+  where the solution set changes qualitatively at a threshold.
+
+epistemic_status:
+  statement: >
+    The recursion below is a procedure, not a derivation. The procedure
+    is fully specified at depth 1, where the equilibrium shape and its
+    invariant are known. At depth 2 the equilibrium shape is the open
+    item. At depth 3 and above both the shape and the invariant are
+    open. Nothing here should be read as a computed result.
+
+# ─────────────────────────────────────────────
+# THE OPERATOR / VALUE SPLIT
+# ─────────────────────────────────────────────
+
+recursion:
+  statement: >
+    The depth recursion is a fixed-point iteration. The closure map
+    Φ_d acts on configurations at depth d and returns configurations
+    at depth d. The ratio CCR^d is the value Φ_d computes at each
+    step, not the map itself. Separating the two is what makes
+    D_{d+1} = Fix(Φ_d(D_d)) well-defined.
+
+  closure_map:
+    symbol: "Φ_d"
+    signature: "Configurations(D_d) → Configurations(D_d)"
+    definition: >
+      Φ_d is the gradient descent of the closure functional appropriate
+      to depth d, followed by projection onto the closure constraint.
+      The functional is determined by the equilibrium shape supported
+      at that depth (see shape_equilibrium below).
+
+  closure_ratio:
+    symbol: "CCR^d"
+    form: "CCR^d = (Wr_d · Ω_rotor(T_d)) / Ω_embed(d)"
+    role: >
+      The value Φ_d computes at each iteration step. Closure is achieved
+      when the ratio stabilises — the configuration is invariant under
+      its own closure map, i.e. Φ_d(Q*) = Q*.
+
+  depth_recursion:
+    equation: "D_{d+1} = Fix(Φ_d(D_d))"
+    reading: >
+      The fixed points of the closure map at depth d constitute the
+      domain available at depth d+1. This is the nesting principle
+      applied across depths.
+
+# ─────────────────────────────────────────────
+# SHAPE EQUILIBRIUM — WHAT DETERMINES THE INVARIANT
+# ─────────────────────────────────────────────
+
+shape_equilibrium:
+  statement: >
+    The invariant entering CCR^d is not the same quantity at every depth.
+    It is whatever invariant the equilibrium shape at that depth supports,
+    computed by the same procedure. The scale-invariance is procedural:
+    find the equilibrium shape under the closure functional, compute its
+    invariants, test whether the ratio closes. The procedure is identical
+    at every depth; the invariant is not.
+
+  per_depth:
+    d_1:
+      tier: "ESTABLISHED"
+      equilibrium_shape: "720° Möbius centerline"
+      invariant: "Centerline writhe Wr"
+      value: "Wr = 1 (from Lk = 2, Tw = 1, Wr = Lk − Tw)"
+      closure_value: "CCR¹ = 1"
+      note: >
+        This is the reference case. The shape is the electron's
+        Möbius vortex; the invariant is the writhe of its centerline;
+        the closure value is unity.
+
+    d_2:
+      tier: "OPEN (equilibrium shape) / CANDIDATE (invariant kind)"
+      equilibrium_shape: "Not yet computed."
+      closure_functional: >
+        Anticommutator deviation
+        F[Q] = Σ_{i<j} ||B_iB_j + B_jB_i + 2δ_ij||²,
+        vanishing at orthonormal Clifford closure.
+      candidate_invariant: >
+        A linking matrix over the three bivector planes, or a
+        Spin(7)-invariant of the triality configuration. Not yet
+        determined. The minimizer of F is the open item.
+      closure_value: "Open — whether CCR² = 1 or a different fixed value."
+
+    d_3_and_above:
+      tier: "OPEN"
+      equilibrium_shape: "Not yet specified."
+      note: >
+        S⁷ is a candidate embedding space. The invariant that the
+        equilibrium shape supports at this depth is not known, and
+        the closure condition on S⁷ is not yet written down.
+
+# ─────────────────────────────────────────────
+# BRANCHING — CONSTRAINED POLYMORPHISM ACROSS DEPTHS
+# ─────────────────────────────────────────────
+
+branching:
+  statement: >
+    A single chain — one structure per depth — cannot account for the
+    observed diversity of closures at a given depth. Depth 3 hosts
+    many isotopes; depth 4 hosts 118 elements; depth 5 is effectively
+    unbounded. The recursion therefore admits branching: a closure at
+    depth d+1 may inherit from more than one closure at depth d, or
+    from closures at non-adjacent earlier depths.
+
+  constraint:
+    statement: >
+      Branching is permitted only when it resolves a residual tension
+      that the linear recursion cannot absorb. The residual is the
+      non-additive binding cost CCR_binding(d_i, d_j) already
+      established in closure-types-nesting.yaml — irreducible to the
+      sum of lower depths. A branch is exactly the configuration
+      where that irreducibility appears as an additional degree of
+      freedom.
+
+  structure:
+    type: "Directed acyclic graph"
+    nodes: "Closures indexed by (depth, branch)"
+    edges: "Parent relation: closure at (d+1, b) inherits from one or more closures at depths ≤ d."
+    accessibility: >
+      Which prior depths a closure at depth d may inherit from is an
+      open item. Candidates: adjacent-only (d, d+1) for the simplest
+      case; adjacent-plus-distant for cases where the non-additive
+      binding cost requires it.
+
+  consistency_with_existing_files:
+    - "closure-types-nesting.yaml: CCR_binding as the residual that branching resolves."
+    - "baum-connes-assembly-map-correspondence.yaml: each nested layer is a new K₀ closure, not a continuation of the one below."
+
+  open_items:
+    - id: "branching-conditions"
+      description: >
+        Formal specification of when a configuration at depth d+1 must
+        branch rather than continue linearly. Candidate condition:
+        when the residual closure tension at depth d exceeds the
+        closure capacity of the equilibrium shape at that depth.
+    - id: "accessibility-relation"
+      description: >
+        Formal specification of which prior depths are accessible to
+        a closure at depth d. Requires the depth-2 equilibrium shape
+        to be known before the relation can be constrained.
+    - id: "polymorphism-counts"
+      description: >
+        Predicted number of stable closures at each depth. At depth 4
+        this is the period lengths of the periodic table; at depth 5
+        it is the space of stable molecules. Whether these follow from
+        the branching structure or from the closure condition alone
+        is open.
+
+# ─────────────────────────────────────────────
+# WHAT IS AND IS NOT ESTABLISHED
+# ─────────────────────────────────────────────
+
+established:
+  - "The closure-map / closure-ratio split (Φ_d vs CCR^d)."
+  - "The recursion form D_{d+1} = Fix(Φ_d(D_d))."
+  - "The depth-1 case: Möbius equilibrium, Wr = 1, CCR¹ = 1."
+  - "The non-additive CCR_binding structure from closure-types-nesting.yaml."
+
+candidate:
+  - "That the invariant entering CCR^d is whatever the equilibrium shape supports, computed by the same procedure."
+  - "That S⁷ is the depth-3 embedding space."
+  - "That branching is constrained by residual non-additive tension."
+
+open:
+  - "The depth-2 equilibrium shape (minimizer of the anticommutator functional)."
+  - "The invariant kind at depth 2 and above."
+  - "The closure condition on S⁷."
+  - "The branching condition and accessibility relation."
+  - "Whether higher-depth diversity follows from branching or from the closure condition alone."
+
+cross_references:
+  - file: "core/closure-configuration-ratio.yaml"
+  - file: "core/process-physics/closure-types-nesting.yaml"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+  - file: "core/process-physics/cl07-from-cl30-quantum-computing.yaml"
+  - file: "issues/foundational/test-spec-magic-numbers-depth3-topology.yaml"
