@@ -22,3 +22,30 @@ F[Q] = \sum_{i<j} \big\| B_iB_j + B_jB_i + 2\delta_{ij} \big\|^2
 does vanish exactly at orthonormal Clifford closure, which is the honest statement of what triality closure means. Update the multivector directly by gradient descent on \(F\) with respect to the three real generator coefficients $((c_1, c_2, c_3))$, not with respect to the angles - the angle parameterization carries gauge redundancy and drifts. Normalize after each step by dividing by $(\sqrt{\langle Q\tilde{Q}\rangle_0})$ to keep the rotor on the unit constraint.
 
 The ansatz then can function as an illustrative exercise - showing what a closure sequence "could" look like under a given set of assumptions - but such an output cannot be presented as fact.
+
+Addition 12th of September:
+
+### Transitioning from Depth 2 to Depth 3+: The Iterated Operator Framework
+
+Moving beyond Depth 2 does not require introducing phenomenological parameters or arbitrary coupling constants. Instead, higher-depth physics emerges natively through an iterated, scale-invariant fixed-point procedure.
+
+#### 1. The Closure Map and Ratio Split (Φ_d vs. CCR^d)
+We distinguish the dynamic closure map from the computed ratio value:
+- Φ_d: The gradient descent map executing phase-stress minimization at depth d.
+- CCR^d: The scalar evaluation ratio (Wr_d · Ω_rotor) / Ω_embed(d).
+
+A physical structure achieves stability when it reaches a fixed point under its own closure map:
+D_{d+1} = Fix(Φ_d(D_d))
+
+The topological fixed points of Depth d form the exact embedding substrate Ω_embed(d+1) for Depth d+1.
+
+#### 2. Procedural Scale-Invariance
+The same procedural pipeline applies across all depths, even as the supported topological invariants evolve:
+- Depth 1 (Quanta): Φ_1 minimizes Möbius phase stress → yields centerline writhe Wr = 1.
+- Depth 2 (Nucleons): Φ_2 minimizes the Cl(3,0) anticommutator functional F[Q] → yields pseudoscalar volume closure (I² = -1).
+- Depth 3 (Nuclei): Φ_3 operates on Spin(7)-invariant linking in S⁷ → targets nuclear magic number gaps.
+
+#### 3. Constrained Branching (Isotopes and Periodicity)
+To account for structural polymorphism without parameter proliferation, the iteration admits Directed Acyclic Graph (DAG) branching. A branch opens only when non-additive residual tension (CCR_binding) exceeds the closure capacity of a linear sequence, unlocking a new geometric degree of freedom.
+
+(Cl0,7 derived by qubit correspondence, not octonion)
