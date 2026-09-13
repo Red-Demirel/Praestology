@@ -1,0 +1,228 @@
+# /core/process-physics/gravity-and-ccr-threshold.yaml
+name: "Gravity, CCR, and the Closure Threshold"
+version: "1.1"
+status: "STRUCTURAL CLARIFICATION — ratio remains geometric; environmental
+         dependence located in V_c; monotonicity open"
+domain: "Core / Process-Physics"
+changes_from_v1.0: >
+  Added nucleosynthesis_as_vc_crossing section: the N=4 residual F=8/3
+  from SIM-007 is the concrete example — the same residual tension triggers
+  depth-3 closure in high-P_env (stellar core, V_c lowered) but dissolves
+  in low-P_env (void, V_c raised). This is gravitational catalysis stated
+  precisely without modifying the CCR ratio.
+
+dependency_map:
+  requires:
+    - "core/closure-configuration-ratio.yaml"
+    - "core/inside-out-channeling.yaml"
+    - "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    - "core/process-physics/closure-types-nesting.yaml"
+    - "core/process-physics/ccr-iteration-by-depth.yaml"
+  provides_to:
+    - target: "core/process-physics/gravitational-catalysis.yaml"
+      via: "Threshold mechanism for compression-driven closure"
+    - target: "intersectional/viability-balance-hypothesis.yaml"
+      via: "Non-monotone V_c(P_env) as the formal expression of the band"
+
+---
+
+gravity_role:
+  statement: >
+    Gravity does not adjust the ratio. It adjusts the threshold. The
+    distinction matters because a ratio-level coupling would introduce a
+    free parameter per depth, while a threshold-level dependence leaves the
+    geometric content of CCR untouched.
+
+  local_scale:
+    character: "Reinforcement, not balance"
+    mechanism: >
+      Commitment raises η, lowers Π_eff, narrows the available R3 pathways.
+      A narrower field commits more readily — fewer alternatives for the
+      configuration to resolve among. This is why compression catalyzes
+      closure rather than damping it.
+    reference: "core/inside-out-channeling.yaml"
+
+  global_scale:
+    character: "Conservation, not correction"
+    mechanism: >
+      The assembly map holds K₀ and K₁ commensurate. The balance is what
+      the local reinforcement looks like when read at the scale where
+      reinforcement and its counterweight become one fact under two
+      resolutions — not an opposing force but the same process seen globally.
+    reference: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+
+  what_gravity_is_not:
+    - "Not a force pushing back against closure"
+    - "Not a denominator term in CCR"
+    - "Not an environmental coupling constant per depth"
+
+---
+
+formulation:
+  ccr_geometric:
+    statement: >
+      The Closure Configuration Ratio remains a ratio of geometric quantities.
+      No environmental term enters.
+    form: "CCR^d = (Wr_d · Ω_rotor(T_d)) / Ω_embed(d)"
+    status: >
+      Established at d=1 (Wr=3/2, CCR¹=1). Open above — the equilibrium
+      shape and therefore the invariant entering the numerator are not yet
+      computed for d≥2 (ccr-iteration-by-depth.yaml).
+
+  closure_condition:
+    statement: >
+      Closure is achieved when the configuration is invariant under its own
+      closure map, judged against a threshold that depends on ambient phase
+      pressure.
+    form: "Φ_d(Q*) = Q*,  judged against V_c(d, P_env)"
+    status: "OPEN — functional form of V_c(P_env) is not derived"
+
+  what_changes_with_pressure:
+    statement: >
+      Pressure does not widen the numerator or narrow the denominator. It
+      lowers the bar the numerator must clear — because pressure removes
+      alternatives rather than adding capacity.
+    high_pressure: >
+      Stellar core, planetary interior: V_c lowered → closure more probable
+      at the same geometric ratio. Stellar nucleosynthesis is the canonical
+      case: the residual phase tension of partial closures (quarks, partial
+      bivector activations) can exceed V_c in stellar conditions even when
+      it cannot in free space.
+    low_pressure: >
+      Voids, galactic outskirts: V_c raised → closure less forced, structures
+      more easily dissolved. Consistent with void-dominant dissolution in
+      friedmann-emergence.yaml and regional-bias-and-age-estimates.yaml.
+
+---
+
+nucleosynthesis_as_vc_crossing:
+  statement: >
+    The N=4 residual F=8/3 from SIM-007-v1 (test-spec-depth2-triality-closure
+    .yaml) provides the concrete example of gravitational catalysis as V_c
+    crossing — without modifying the CCR ratio.
+  mechanism: >
+    In Cl(3,0), four partial-writhe paths (quarks) cannot achieve mutual
+    Clifford orthonormal closure — the anticommutator functional F reaches
+    a minimum of 8/3, not zero. This residual tension is the non-additive
+    CCR_binding that requires depth-3 (S⁷ linking) to resolve.
+    Whether this residual triggers depth-3 closure or dissolves back into
+    Regress depends on V_c:
+      Low P_env (void, free space):
+        V_c is high. The residual 8/3 lies below V_c.
+        The partial configuration dissolves — no depth-3 closure.
+        This is why heavy elements do not form spontaneously in free space.
+      High P_env (stellar core):
+        V_c is lowered by the compressed Π_eff environment.
+        The same residual 8/3 now exceeds V_c.
+        Depth-3 closure proceeds — S⁷ linking triggers nuclear binding.
+        This is stellar nucleosynthesis: not that gravity makes the ratio
+        favorable, but that it lowers V_c enough for the existing geometric
+        tension to trigger the next depth's branch.
+  precision: >
+    The CCR ratio is the same in both environments. The geometry of the
+    partial-writhe paths is unchanged by the stellar environment. What
+    changes is V_c — the threshold the geometric tension must exceed to
+    trigger commitment. Gravity catalyzes nucleosynthesis by lowering the
+    bar, not by enhancing the signal.
+
+---
+
+goldilocks_question:
+  statement: >
+    Whether V_c(P_env) is monotone or has a minimum is open. The viability-
+    balance hypothesis predicts a band: both too little and too much pressure
+    destabilize closure.
+  monotone_case:
+    form: "V_c decreases monotonically with P_env"
+    implication: >
+      Compression always catalyzes. Does not explain why extreme compression
+      (degenerate matter, black hole interiors) does not produce runaway closure.
+  band_case:
+    form: "V_c has a minimum at some P_env*, rising at both extremes"
+    implication: >
+      Compression catalyzes up to P_env*, then destabilizes. Matches the
+      viability-balance hypothesis and the frozen-regime account: at Π_eff→0
+      (extreme compression near black hole), the process rate halts — not
+      because V_c is crossed but because the process itself cannot fire.
+      The band case is consistent with the frozen regime as the high-P_env
+      limit of rising V_c.
+  discriminator: >
+    The two cases make different predictions for degenerate matter:
+    monotone → further closure; band → frozen regime. The framework's
+    existing frozen-regime account favours the band case, but this is
+    not yet derived.
+
+---
+
+corrections:
+  - prior: "CCR^d_eff with (1 + γ_macro · P_env) in the denominator"
+    reason: >
+      Introduces a free parameter γ_macro per depth; changes the direction
+      of the effect when configuration starts below CCR=1; duplicates the
+      threshold mechanism that already exists.
+    corrected: "CCR^d unchanged; P_env enters V_c only"
+
+  - prior: "Wr_d, Ω_rotor, Ω_embed evolve along independent trajectories"
+    reason: >
+      Independence voids the constraint — the CCR becomes a bookkeeping
+      identity any three numbers can satisfy.
+    corrected: >
+      Coupled rates. The equilibrium shape determines Wr_d; the shape's
+      phase space is Ω_rotor; the next depth's domain is Ω_embed.
+      Asynchronous, not independent.
+
+  - prior: "Gravity as balancing feedback mechanism"
+    reason: >
+      Balance is correct globally (assembly map conservation) but wrong
+      locally (commitment reinforces commitment, not opposes it).
+    corrected: >
+      Reinforcement locally; conservation globally. Balance is what the
+      two look like as one fact under two resolutions.
+
+---
+
+open_items:
+  - id: "vc-from-pi-eff"
+    description: >
+      Derive V_c(P_env) from the Π_eff dependence in inside-out-channeling
+      .yaml. Candidate: V_c ∝ Π_eff, with Π_eff a function of local η.
+      Would make environmental dependence a consequence of the substrate.
+    priority: 2
+
+  - id: "monotonicity-from-band"
+    description: >
+      Determine whether the viability-balance hypothesis forces a Goldilocks
+      band on V_c(P_env), or whether the band is an additional assumption.
+      The frozen-regime account suggests the band but the derivation is open.
+    priority: 2
+
+  - id: "8-over-3-as-vc-calibration"
+    description: >
+      If V_c can be derived from Π_eff (vc-from-pi-eff), check whether the
+      stellar core Π_eff suppression is quantitatively consistent with
+      V_c dropping below 8/3 — i.e., whether the SIM-007 residual provides
+      a numerical calibration of the V_c(P_env) curve.
+    priority: 3
+    depends_on: ["vc-from-pi-eff", "SIM-007-v1"]
+
+---
+
+cross_references:
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR definition; frozen regime at Π_eff→0"
+  - file: "core/inside-out-channeling.yaml"
+    note: "Π_eff suppression; local reinforcement mechanism"
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Gravity as ∇Π_eff; threshold crossing"
+  - file: "core/process-physics/ccr-iteration-by-depth.yaml"
+    note: "D_{d+1}=Fix(Φ_d); V_c as the threshold judging Φ_d(Q*)=Q*"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "Global K₀/K₁ conservation — reinforcement and counterweight as one fact"
+  - file: "core/process-physics/friedmann-emergence.yaml"
+    note: "Void-dominant dissolution; low-P_env regime"
+  - file: "core/process-physics/regional-bias-and-age-estimates.yaml"
+    note: "Low-P_env environment; V_c raised in voids"
+  - file: "issues/foundational/test-spec-depth2-triality-closure.yaml"
+    note: "SIM-007-v1; N=4 residual F=8/3 as the concrete V_c crossing instance"
+  - file: "intersectional/viability-balance-hypothesis.yaml"
+    note: "Goldilocks band as cross-scale expression of non-monotone V_c"
