@@ -4,7 +4,7 @@ sim4: https://github.com/Red-Demirel/Praestology/blob/main/issues/foundational/t
 
 ---
 
-**Response to the depth-3 request**
+## Response to the depth-3 request
 
 Three things in the depth-3 closure are well-defined without tuning, and three are not. This means it's more a proof-of-concept approach. I'll separate them before giving you the runnable form, because running the second group as if it belonged to the first would produce numbers whose provenance you couldn't defend.
 
@@ -23,13 +23,13 @@ does vanish exactly at orthonormal Clifford closure, which is the honest stateme
 
 The ansatz then can function as an illustrative exercise - showing what a closure sequence "could" look like under a given set of assumptions - but such an output cannot be presented as fact.
 
-Addition 12th of September:
+## Addition 12th of September:
 
 ### Transitioning from Depth 2 to Depth 3+: The Iterated Operator Framework
 
 Moving beyond Depth 2 does not require introducing phenomenological parameters or arbitrary coupling constants. Instead, higher-depth physics emerges natively through an iterated, scale-invariant fixed-point procedure.
 
-#### 1. The Closure Map and Ratio Split (Φ_d vs. CCR^d)
+### 1. The Closure Map and Ratio Split (Φ_d vs. CCR^d)
 We distinguish the dynamic closure map from the computed ratio value:
 - Φ_d: The gradient descent map executing phase-stress minimization at depth d.
 - CCR^d: The scalar evaluation ratio (Wr_d · Ω_rotor) / Ω_embed(d).
@@ -39,7 +39,7 @@ D_{d+1} = Fix(Φ_d(D_d))
 
 The topological fixed points of Depth d form the exact embedding substrate Ω_embed(d+1) for Depth d+1.
 
-#### 2. Procedural Scale-Invariance
+### 2. Procedural Scale-Invariance
 The same procedural pipeline applies across all depths, even as the supported topological invariants evolve:
 - Depth 1 (Quanta): Φ_1 minimizes Möbius phase stress → yields centerline writhe Wr = 1.
 - Depth 2 (Nucleons): Φ_2 minimizes the Cl(3,0) anticommutator functional F[Q] → yields pseudoscalar volume closure (I² = -1).
@@ -49,3 +49,21 @@ The same procedural pipeline applies across all depths, even as the supported to
 To account for structural polymorphism without parameter proliferation, the iteration admits Directed Acyclic Graph (DAG) branching. A branch opens only when non-additive residual tension (CCR_binding) exceeds the closure capacity of a linear sequence, unlocking a new geometric degree of freedom.
 
 (Cl0,7 derived by qubit correspondence, not octonion)
+
+## Addition — September 2026:
+
+Since the earlier response, several results have sharpened what depth-3 computation means and how to interpret its output honestly.
+
+**Depth-1 correction (propagates to depth-3 baseline):** The Möbius centerline writhe is Wr = 3/2, not Wr = 1. The twist Tw = 1/2 follows from the non-orientability of the Möbius surface — an algebraic fact, not an assumption. By CWF: Wr = Lk - Tw = 2 - 1/2 = 3/2. Any depth-3 simulation whose chain runs through the depth-1 electron CCR should use this corrected value. If SIM-4 was computed with Wr = 1, its output is a candidate for re-examination.
+
+**N=3 ceiling confirmed (SIM-007):** The anticommutator functional F[Q] vanishes exactly for N≤3 bivector planes in Cl(3,0) and reaches a structural residual of F = 8/3 for N=4. This is not a fitting result — it follows from the algebraic structure of Cl(3,0)'s grade-2 sector having exactly three independent planes. The forced jump to S⁷ at depth 3 is therefore not a modelling choice but the unique geometric consequence of the N=4 residual. The simulation is not free to choose a different embedding.
+
+**V_c is environmental, not a free parameter:** The viability threshold V_c that determines whether the depth-3 residual triggers closure or dissolves is set by local Π_eff — specifically, it is lowered in high-commitment-density environments (stellar cores) and raised in voids. A simulation that varies V_c is not scanning free parameter space — it is scanning the space of physical environments from void to stellar core. This makes the output defensible: each run corresponds to a specific physical condition, not an arbitrary choice.
+
+**Independent algebraic check via Baum-Connes:** The K₀ branching structure of the C*-algebra at depth 3 should match the sequence of stable configurations the simulation produces. If the Steiner enumeration and the K-theory computation agree on the branching counts (magic numbers 2, 8, 20, 28, 50, 82, 126), that's independent confirmation — two different mathematical frameworks reaching the same sequence from the same structural input. Disagreement would be informative: it would identify where the closure condition and the K-theoretic structure diverge, narrowing the open items precisely.
+
+**What the simulation output means:** A sequence of stable configurations from the ansatz study tells you whether the fixed-point structure is robust to the specific form of the closure functional — which is exactly what the framework needs to know before trusting any sequence it produces. The output is not a prediction of nuclear magic numbers until the depth-2 equilibrium shape is formally confirmed as the unique minimizer of F[Q] and the depth-3 closure condition on S⁷ is written down explicitly. Until then, agreement with known magic numbers is encouraging; disagreement narrows the search for the correct functional form.
+
+## Note on Computational Scaling & Engine Calibration:
+While evaluating the $D_3$ ansatz in $Cl(3,0)$ requires only a fraction of the usually available compute volume, using this step to lock down bit-exact determinism ($\Delta = 0.00000000$) and baseline thread topologies is essential. It establishes the verified PTX kernel pipeline and parameter-sweep libraries needed before the framework scales into the exponential topological complexity and multi-sector linkage of $S^7$ embeddings at higher depths
+
