@@ -1,0 +1,225 @@
+# /core/process-physics/mass-as-plane-independence.yaml
+name: "Mass as Plane Independence: Merge Cost and the Origin of Inertia"
+version: "1.0"
+status: "STRUCTURAL HYPOTHESIS — unifies electron mass, proton mass gap, and N=4
+         residual under a single principle; quantitative confirmation via
+         SIM-004/005/007 open"
+domain: "Core / Process-Physics"
+
+description: >
+  Mass is not a primitive property of particles. It is the energy cost
+  associated with the degree of independence among bivector planes in Cl(3,0).
+  The electron's mass is the trapped phase of a voluntary merge (two rotors
+  into one plane). The proton mass gap is the energy cost of maintaining
+  three orthogonal planes against the tendency toward fewer effective planes.
+  The N=4 residual F=8/3 is the stress of forced sharing when a fourth path
+  cannot find an independent plane. In all cases, mass is the cost of plane
+  independence — and inertia is the resistance to changing that independence.
+
+dependency_map:
+  requires:
+    - "core/process-physics/ga-grade-chain-to-particles.yaml"
+    - "core/process-physics/bivector-partial-parameters.yaml"
+    - "core/process-physics/rotor-to-ccr-transition.yaml"
+    - "core/process-physics/closure-types-nesting.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "issues/foundational/test-spec-depth2-triality-closure.yaml"
+  provides_to:
+    - target: "core/process-physics/iterative-depth-hierarchy.yaml"
+      via: "Unified mass origin across depths 1 and 2"
+    - target: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+      via: "Inertia as plane-independence resistance — one side of the R5 event"
+
+---
+
+structural_principle:
+  statement: >
+    In Cl(3,0), the general bivector B = b₁₂(e₁∧e₂) + b₁₃(e₁∧e₃) + b₂₃(e₂∧e₃)
+    has three independent parameter axes. A configuration's "plane independence"
+    is the number of effectively orthogonal bivector planes it maintains.
+    Mass is the energy cost of that independence.
+  merge_tendency: >
+    Every bivector in Cl(3,0) is simple (decomposable). A multi-axis activation
+    b₁₂(e₁∧e₂) + b₁₃(e₁∧e₃) is algebraically equivalent to a single bivector
+    in a tilted plane. This means two independent axes can always "merge" into
+    one effective axis without changing the algebraic form — the merge is a
+    reduction in parameter space dimension, not a change in grade.
+  mass_as_cost: >
+    Configurations that require high independence (many effectively orthogonal
+    planes) cost more to maintain. Configurations that allow merge are cheaper
+    but cannot satisfy closure conditions that demand independence. The mass
+    spectrum is the set of costs for all stable independence configurations.
+
+---
+
+three_cases:
+
+  electron_voluntary_merge:
+    configuration: "Two co-oriented rotors R·R in the same bivector plane"
+    ga_operation: "R·R = exp(-½Bθ) · exp(-½Bθ) = exp(-Bθ)"
+    merge_status: "Voluntary — the two rotors merge into one effective rotor with double phase"
+    mass_origin: >
+      The doubled phase is trapped rotational energy: the rotor cannot
+      propagate (unlike the photon, where counter-orientation cancels the
+      grade-2 residue) and cannot reduce its phase (the 720° boundary
+      condition locks it). The trapped phase IS the mass.
+    formal_expression: "m_e c² = ħ ω_z — the trapped Π_eff-rate precession"
+    plane_independence: "1 plane, doubled phase"
+    reference: "rotor-to-ccr-transition.yaml #mass_emergence"
+
+  proton_forced_independence:
+    configuration: "Three single-rotor strains R₁·R₂·R₃ in mutually orthogonal planes"
+    closure_condition: "F[Q] = Σ_{i<j} ‖BᵢBⱼ + BⱼBᵢ + 2δᵢⱼ‖² = 0"
+    merge_status: "Forbidden — the closure condition requires orthogonality (F=0)"
+    merge_penalty: >
+      If two planes become parallel (B₁ = B₂ = B):
+        B₁B₂ + B₂B₁ = 2B² = -2
+        Contribution to F: ‖-2 - 0‖² = 4
+      The closure condition forbids this. The three planes must stay independent.
+    mass_gap_origin: >
+      The mass gap (m_p - Σ m_quark) is the energy cost of maintaining
+      three independent planes against the algebraic tendency toward fewer
+      effective axes. The cost is the orthogonality energy — the CCR_binding
+      that cannot be absorbed by any single strain.
+    formal_expression: "m_p c² = (3·CCR_quark + CCR_binding) · E_wr"
+    plane_independence: "3 orthogonal planes, full independence"
+    reference: "test-spec-depth2-triality-closure.yaml"
+
+  n4_forced_sharing:
+    configuration: "Four single-rotor strains attempting closure in Cl(3,0)"
+    closure_condition: "F[Q] = 0 — impossible, only 3 independent planes available"
+    residual: "F[N=4] = 8/3 — algebraic fact, not fitted"
+    merge_status: "Forced — the fourth path must share a plane, creating irreducible stress"
+    mass_origin: >
+      The residual 8/3 is the stress of forced sharing. It cannot be absorbed
+      at depth 2 — this is why depth 3 (S⁷ embedding) is required. The residual
+      is the algebraic signal that a new depth must open.
+    plane_independence: "3 planes, 4 paths — independence impossible"
+    reference: "ccr-iteration-by-depth.yaml #branching"
+
+---
+
+unified_principle:
+  statement: >
+    Mass in all three cases is the energy cost of plane independence. The
+    electron's mass is the trapped phase of a voluntary merge. The proton
+    mass gap is the cost of forced independence. The N=4 residual is the
+    stress of impossible independence. The hierarchy of masses across depths
+    reflects the increasing cost of maintaining independence at higher
+    complexity.
+
+  table:
+    - configuration: "Photon (R·R†)"
+      plane_status: "Counter-oriented — cancels grade-2 residue"
+      independence_cost: "0 — no trapped phase"
+      mass: "0 (zero rest mass)"
+    - configuration: "Electron (R·R)"
+      plane_status: "Co-oriented — merges voluntarily"
+      independence_cost: "Trapped phase of merged rotors"
+      mass: "0.511 MeV"
+    - configuration: "Quark (single R, truncated 2π)"
+      plane_status: "Partial plane activation"
+      independence_cost: "Fractional — incomplete closure"
+      mass: "Fractional (current mass, not constituent)"
+    - configuration: "Proton (R₁·R₂·R₃ orthogonal)"
+      plane_status: "3 independent planes (forced)"
+      independence_cost: "Orthogonality energy + base CCR"
+      mass: "938 MeV"
+    - configuration: "N=4 (four strains in Cl(3,0))"
+      plane_status: "Forced sharing — independence impossible"
+      independence_cost: "F = 8/3 (irreducible residual)"
+      mass: "No stable closure at depth 2 — forces depth 3"
+
+---
+
+inertia_connection:
+  statement: >
+    Inertia is the resistance to changing the plane-independence configuration.
+    A massive particle resists acceleration because changing its velocity requires
+    changing its plane-independence structure — reconfiguring which bivector
+    planes are active and how they are oriented. The cost of that reconfiguration
+    is inertia.
+  formal_expression: >
+    Inertia = second variation of the rotor energy functional with respect to
+    the bivector parameters. It is the local curvature of the CCR landscape
+    at the committed configuration.
+  equivalence: >
+    Gravity and inertia are two sides of the same R5 event (gravity-inertia-
+    equivalence-from-r5.yaml). Gravity is the external Π_eff gradient pulling
+    the configuration toward a new plane-independence state; inertia is the
+    internal resistance to that reconfiguration. Both are costs of changing
+    plane independence.
+
+---
+
+open_derivations:
+  priority_1:
+    - id: "proton-mass-gap-from-orthogonality-energy"
+      description: >
+        Compute the orthogonality energy of the three-plane configuration
+        as the difference between the merged (2-plane) and orthogonal (3-plane)
+        configurations. Confirm this equals the observed mass gap (m_p - Σ m_quark)
+        divided by E_wr.
+      depends_on: ["SIM-005-v2", "SIM-007-v1"]
+      computational_test: "SIM-005-v2"
+
+  priority_2:
+    - id: "hadron-resonances-as-merge-excitations"
+      description: >
+        Compute the mass splittings of hadron resonances as the costs of
+        different partial-merge configurations. The Δ(1232) resonance should
+        correspond to a specific merge-excitation of the three-plane proton
+        configuration.
+      depends_on: ["bivector-partial-parameters.yaml#hadron_resonances",
+                   "proton-mass-gap-from-orthogonality-energy"]
+
+    - id: "electron-mass-from-trapped-phase-integral"
+      description: >
+        Compute the electron mass directly from the trapped phase integral
+        of the 720° Möbius vortex: m_e c² = ħ ω_z where ω_z is the Π_eff-rate
+        precession. Confirm ω_z matches the GP equilibrium frequency.
+      depends_on: ["SIM-004-v2"]
+
+  priority_3:
+    - id: "merge-tendency-from-ccr-landscape"
+      description: >
+        Formally derive the merge tendency from the CCR landscape: show that
+        the gradient of CCR with respect to bivector parameters points toward
+        merge (fewer independent planes) when the closure condition does not
+        forbid it.
+      depends_on: ["proton-mass-gap-from-orthogonality-energy"]
+
+---
+
+epistemic_status:
+  established:
+    - "Photon has zero mass because counter-orientation cancels grade-2 residue"
+    - "Electron mass is trapped rotational energy (m = ħω_z/c²)"
+    - "Proton mass gap is non-additive CCR_binding (closure-types-nesting.yaml)"
+    - "N=4 residual F=8/3 is algebraically forced (SIM-007-v1)"
+    - "Plane independence is the structural variable across all cases"
+  structural_hypothesis:
+    - "Mass is the energy cost of plane independence"
+    - "Proton mass gap = orthogonality energy of the three-plane configuration"
+    - "Hadron resonances = merge excitations of the ground-state configuration"
+    - "Inertia = resistance to plane-independence reconfiguration"
+  open:
+    - "Quantitative derivation of the orthogonality energy"
+    - "Explicit computation of the merge tendency from CCR landscape"
+    - "Hadron resonance mass splittings from merge-excitation enumeration"
+
+---
+
+cross_references:
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "Parameter activation framework; merge as reduction in active axes"
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "Electron mass as trapped phase; 720° boundary condition"
+  - file: "core/process-physics/closure-types-nesting.yaml"
+    note: "Non-additive CCR_binding as the independence cost"
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Inertia as plane-independence resistance — one side of R5"
+  - file: "issues/foundational/test-spec-depth2-triality-closure.yaml"
+    note: "F[Q] functional; N=3 closure; N=4 residual 8/3"
+  - file: "core/process-physics/iterative-depth-hierarchy.yaml"
+    note: "Mass hierarchy as increasing independence costs"
