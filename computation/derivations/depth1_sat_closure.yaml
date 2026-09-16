@@ -18,6 +18,14 @@ computational_validation:
       are not the same objects as the physical particle structures, but
       they exercise the same closure functional.
 
+   regression_policy: >
+      The SAT prototype is a regression test for the closure mechanism.
+      When the framework's algebra changes (new grade assignments, new
+      basis conventions, new partial-parameter structure), the prototype
+      must be re-run. If it fails after an algebra change, the change has
+      broken a mechanism-level invariant and must be reconsidered before
+      it propagates to the physical derivation files.
+
     mechanism_mapping:
       - symbolic_case: "Satisfied instance (F[Q] = 0)"
         physical_analog: "Closed configuration"
