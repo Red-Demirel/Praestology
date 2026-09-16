@@ -7,8 +7,8 @@ domain: "Core"
 
 description: >
   Each physical phenomenon maps to exactly one Praestology term with a
-  specific symbol, SI units, mathematical definition, and an explicit list
-  of ambiguous terminology. This table is the canonical reference.
+  specific symbol, SI units, mathematical definition, and an explicit mapping of conflated standard terms.
+  This table is the canonical reference.
   It is binding for all domain files, summaries, and external communication.
   The purpose is to prevent regression to standard-physics language that
   conflates structurally distinct quantities.
@@ -46,8 +46,7 @@ terms:
     definition: "E_Φ(v) = γ · E_Φ(0),  γ = (1 - v²/c²)^(-1/2)"
     definition_note: >
       Velocity increases ENERGY, not inertia. I_rot is a property of the
-      committed topology, not of motion. This row exists to explicitly
-      forbid "relativistic mass" as a concept.
+      committed topology, not of motion. This row exists to clarify that velocity alters phase energy content rather than expanding static inertia.
     conflated_standard_terms: "relativistic mass, mass increase with velocity"
 
   - phenomenon: "Macro Environmental Force"
