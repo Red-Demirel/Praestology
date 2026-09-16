@@ -1,0 +1,522 @@
+# /issues/foundational/sim004-integrand-structure.yaml
+issue_id: "SIM-004-INTEGRAND"
+title: "Depth-0 and Depth-1 Integrands for the Electron CCR Computation"
+type: "FOUNDATIONAL_SPECIFICATION"
+status: "SPECIFICATION — defines the integrand chain for SIM-004.
+         ρ₀ and ρ₁ are formally defined; Φ₁ is identified with the GP
+         closure map. The numeric evaluation of α⁻¹ from the chain
+         remains the open computational target of SIM-004-v2."
+supersedes: "N/A — corrects the integrand structure of SIM-004-v2"
+
+purpose: >
+  The original SIM-004 spec treated ψ as the primary object and integrated
+  |ψ|² to obtain Ω_rotor. This is the standard-physics move: a floating
+  integrand applied from an unknown prior-state, producing operators and
+  ratios with no process-level anchor. This specification corrects the
+  SIM-004 integrand chain:
+    - The primary object is ρ₀ — the depth-0 distribution over bivector
+      orientations.
+    - The closure map Φ₁ acts on ρ₀ and produces ρ₁ — the depth-1
+      committed distribution.
+    - ψ is the image of ρ₀ under Φ₁ — the position-space representation
+      of the closure result, not the starting point.
+  With this chain, the CCR ratio has both numerator and denominator
+  anchored in concrete geometric objects, and the environmental dependence
+  enters as a well-defined function of the heat content of ρ₀.
+
+dependency_map:
+  requires:
+    - "core/process-physics/bivector-partial-parameters.yaml"
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/rotor-to-ccr-transition.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/thermodynamics-and-heat-emergence.yaml"
+    - "core/terminology-canonical.yaml"
+  provides_to:
+    - target: "issues/foundational/test-spec-electron-ccr-gp-equilibrium.yaml"
+      via: "Corrected integrand chain for the SIM-004-v2 computation"
+
+---
+
+anchor_problem:
+
+  statement: >
+    Standard quantum mechanics takes ψ as fundamental, postulates operators
+    that act on it, and accepts an initial condition that is "given" by
+    preparation. The chain ψ → operators → predictions has no
+    process-level anchor: the integrand floats, the operators are
+    postulated, and the prior state is external input. This is the
+    structural deficiency that the framework identifies in
+    derivative-reality-clarification.yaml and quanta-as-ccr-cost.yaml.
+
+  nch_correction: >
+    NCH anchors the chain in the bivector parameter space of Cl(3,0).
+    The prior state is defined (ρ₀ — the maximally open distribution).
+    The integrand at each depth is the residual of the closure map
+    acting on the previous depth's integrand:
+      ρ_{d+1} = Φ_d(ρ_d)
+    The operators and commutation relations emerge as grade projections
+    of Φ_d, not as independent postulates.
+
+  consequence_for_sim_004: >
+    SIM-004 must compute ρ₁ = Φ₁(ρ₀) and extract α⁻¹ from the ratio of
+    the two distributions' phase-space volumes. ψ is not computed; it is
+    the position-space image of ρ₁. This removes the floating integrand
+    and replaces it with a defined chain.
+
+---
+
+depth_0_integrand:
+
+  symbol: "ρ₀"
+  name: "Open Bivector Parameter Distribution"
+
+  domain: >
+    The unit sphere S² in bivector parameter space:
+      B = b₁₂(e₁∧e₂) + b₁₃(e₁∧e₃) + b₂₃(e₂∧e₃)
+      with b₁₂² + b₁₃² + b₂₃² = 1.
+    Equivalently, the set of unit bivectors in Cl(3,0), which is
+    diffeomorphic to S².
+
+  codomain: "ℝ≥0, integrable, normalised: ∫_{S²} ρ₀(B) dB = 1"
+
+  formal_definition: >
+    ρ₀ is the ground-state distribution of the depth-0 substrate field.
+    It is the measure of uncommitted orientational degrees of freedom
+    before any closure has occurred. At depth 0, no bivector plane is
+    preferred; the distribution reflects the available processing
+    capacity of the local substrate.
+
+  properties:
+    isotropic_limit: >
+      If no environmental bias exists (Π_eff uniform, η = 0),
+      ρ₀(B) = 1/(4π) — the uniform distribution on S².
+      This is the maximally open state: every bivector orientation
+      is equally available.
+    anisotropic_case: >
+      Under a local Π_eff gradient or committed η background,
+      ρ₀ acquires a preferred direction. The distribution is still
+      on S² but peaked toward orientations aligned with the
+      gradient. This is the chirality-bias case discussed in
+      bivector-partial-parameters.yaml #chiral_propagation.
+    entropy: >
+      The Shannon entropy of ρ₀ is the framework's "heat":
+        H₀ = -∫_{S²} ρ₀(B) log ρ₀(B) dB
+      Uniform (hot limit): H₀ = log(4π).
+      Concentrated (cold limit): H₀ → -∞ as ρ₀ → delta function.
+
+  physical_meaning: >
+    ρ₀ is the anchor. It is defined by R1 (existence) and R2 (distinction):
+    the substrate exists (R1) and supports distinct orientations (R2).
+    There is nothing "before" ρ₀, because "before" would require a
+    commitment, and ρ₀ is by definition the state of no commitment.
+    This is the R1 ground state expressed in integrand language.
+
+  epistemic_status: >
+    ESTABLISHED as the correct anchor for the integrand chain.
+    OPEN: the precise functional form of ρ₀ in the presence of a
+    specific Π_eff gradient, which depends on the GP field solution.
+
+---
+
+closure_map_phi_1:
+
+  symbol: "Φ₁"
+  name: "Depth-1 Closure Map"
+
+  domain: "Distributions on S² (bivector parameter space)"
+  codomain: "Distributions on S² (committed bivector parameter space)"
+
+  formal_definition: >
+    Φ₁ is the Gross–Pitaevskii closure map acting on the depth-0
+    distribution. It selects the sub-distribution of ρ₀ that
+    supports a stable 720° Möbius closure, renormalised to unit mass:
+
+      ρ₁(B) = (1/Z) · ρ₀(B) · χ(B)
+
+    where:
+      χ(B) ∈ {0,1}  is the closure indicator — 1 if the bivector
+                    orientation B supports a stable 720° Möbius
+                    closure, 0 otherwise.
+      Z = ∫_{S²} ρ₀(B) · χ(B) dB  is the partition function.
+
+  what_determines_chi: >
+    χ(B) is determined by the GP energy functional: for each unit
+    bivector B, solve the GP equation with the Möbius boundary
+    condition ψ(r, φ + 2π) = -ψ(r, φ) and check whether a stable
+    vortex solution exists with that bivector orientation. If the
+    GP energy is finite and the vortex is topologically protected,
+    χ(B) = 1.
+
+  fixed_point_structure: >
+    The closure map satisfies the NCH fixed-point condition:
+      D₁ = Fix(Φ₁(D₀))
+    where D₀ is the space of all distributions on S² and D₁ is the
+    subspace of distributions supported on the closure indicator
+    set {B : χ(B) = 1}. The closure is idempotent: Φ₁ ∘ Φ₁ = Φ₁.
+
+  symmetry: >
+    By the rotational symmetry of Cl(3,0) and of the GP functional,
+    χ(B) is the same for all B on S² when η = 0 and Π_eff is
+    uniform. That is: without environmental bias, every bivector
+    orientation supports the same Möbius closure. The specific B
+    selected is then a spontaneous symmetry breaking — the GP
+    minimiser picks one orientation from the degenerate ground
+    manifold.
+
+  epistemic_status: >
+    STRUCTURAL DEFINITION — Φ₁ is identified with the GP closure map.
+    OPEN: the explicit numerical form of χ(B) for a given set of
+    GP parameters (g, Λ, κ, n_sat). This is the computational target
+    of SIM-004-v2.
+
+---
+
+depth_1_integrand:
+
+  symbol: "ρ₁"
+  name: "Committed Bivector Distribution"
+
+  domain: "Sub-manifold of S² where χ(B) = 1"
+  codomain: "ℝ≥0, integrable, normalised: ∫ ρ₁(B) dB = 1"
+
+  formal_definition: >
+    ρ₁ is the image of ρ₀ under the closure map Φ₁:
+      ρ₁ = Φ₁(ρ₀)
+    It is the depth-1 committed distribution over bivector
+    orientations. It represents the phase-space volume actually
+    occupied by the electron's closure, weighted by the a priori
+    availability encoded in ρ₀.
+
+  properties:
+    concentration: >
+      ρ₁ is concentrated relative to ρ₀. In the isotropic limit,
+      ρ₁ is supported on the closure indicator set, which is a
+      proper subset of S². The width of ρ₁ measures the sharpness
+      of the closure — narrower means the equilibrium is more
+      tightly defined.
+    equilibrium_center: >
+      The mean orientation B* = ∫ B · ρ₁(B) dB is the equilibrium
+      bivector of the closure. It determines the chirality of the
+      committed configuration (which bivector plane is selected).
+    writhe: >
+      The writhe Wr(B*) of the equilibrium centreline is computed
+      from the GP solution at the equilibrium orientation. By
+      rotational symmetry, Wr is the same for all B in the closure
+      indicator set (if η = 0), so Wr_eq is a single number, not
+      a distribution.
+    entropy: >
+      The Shannon entropy of ρ₁ is the "cold" phase-space measure:
+        H₁ = -∫ ρ₁(B) log ρ₁(B) dB
+      Narrower ρ₁ (lower H₁) means more committed structure.
+
+  relationship_to_psi: >
+    ψ is the position-space image of ρ₁:
+      ψ(r) = √ρ(x) · exp(I S(x))
+    where ρ(x) is the grade-0 commitment density (the Madelung
+    amplitude squared) and S(x) is the grade-2 phase (the bivector
+    orientation projected onto position space). ψ is not computed
+    independently; it is the position-space representation of the
+    committed distribution ρ₁.
+
+  epistemic_status: >
+    STRUCTURAL DEFINITION — ρ₁ is defined as Φ₁(ρ₀).
+    OPEN: the numerical computation of ρ₁ for specific GP parameters.
+
+---
+
+ccr_reformulation:
+
+  statement: >
+    The Closure Configuration Ratio is expressed in integrand terms
+    as the ratio of the total open phase space to the committed
+    phase space, weighted by the equilibrium writhe:
+
+      CCR = (Wr_eq · Ω_rotor) / Ω_embed
+
+    where:
+      Ω_rotor = ∫_{S²} ρ₁(B) dB · V₀   (committed phase-space volume)
+      Ω_embed = ∫_{S²} ρ₀(B) dB · V₀ = V₀   (total open phase-space volume)
+
+    V₀ is a normalisation volume determined by the embedding geometry
+    (for the S² parameter sphere, V₀ = 4π; for the S³ rotor space,
+    V₀ = 2π²).
+
+  normalised_form: >
+    Since ρ₀ is normalised to unit mass, Ω_embed = V₀. Since ρ₁ is
+    also normalised, Ω_rotor = V₀ · (fraction of S² supporting closure).
+    The CCR becomes:
+
+      CCR = Wr_eq · (∫_{S²} χ(B) dB) / (4π)
+
+    In the isotropic limit, the ratio ∫χ(B)dB / (4π) is the
+    fraction of bivector orientations that support a stable 720°
+    Möbius closure. This is a geometric quantity determined entirely
+    by the GP functional.
+
+  environmental_dependence: >
+    When ρ₀ is anisotropic (due to local η or Π_eff gradient),
+    Ω_embed is not V₀ but the effective phase-space volume weighted
+    by the anisotropy. Specifically:
+
+      Ω_embed(η) = V₀ · exp(-H₀(η)/H_max)
+
+    where H₀ is the entropy of ρ₀ and H_max = log(4π) is the
+    maximum entropy (uniform distribution). The environmental
+    suppression of α⁻¹ is the reduction of Ω_embed under
+    environmental commitment density.
+
+  alpha_extraction: >
+    The fine-structure constant is the inverse of the CCR:
+      α⁻¹ = Ω_embed(η) / (Wr_eq · Ω_rotor)
+          = V₀ / (Wr_eq · V₀ · f_closure)
+          = 1 / (Wr_eq · f_closure)
+
+    In the isotropic (void) limit, this evaluates to the geometric
+    value 137.036304 (assuming Wr_eq = 3/2 and f_closure ≈ 1/206
+    from the GP functional). The terrestrial value 137.035999
+    differs by the Ω_embed suppression factor.
+
+  epistemic_status: >
+    STRUCTURAL FORMULA — the CCR is expressed entirely in terms of
+    ρ₀, ρ₁, and Wr_eq. OPEN: the numerical values of f_closure and
+    Wr_eq from the GP solution.
+
+---
+
+heat_as_open_dof:
+
+  statement: >
+    The framework's heat is not the standard thermodynamic heat
+    (mean kinetic energy per microscopic degree of freedom). It is
+    the measure of open vector degrees of freedom — the relational
+    mobility of the substrate before commitment. In integrand terms,
+    heat is the entropy of ρ₀.
+
+  formal_definition: >
+    Heat content H₀ of the depth-0 distribution:
+      H₀ = -∫_{S²} ρ₀(B) log ρ₀(B) dB
+
+    Hot limit (uniform): H₀ = log(4π) ≈ 2.531
+    Cold limit (delta):  H₀ → -∞
+
+  connection_to_pi_eff: >
+    The free potential Π_eff is the substrate's processing capacity.
+    It sets the maximum achievable entropy of ρ₀:
+
+      H₀ ≤ log(4π) · (Π_eff / Π_eff,max)
+
+    High Π_eff → wider exploration → higher H₀ (hotter)
+    Low Π_eff  → restricted exploration → lower H₀ (colder)
+
+  connection_to_eta: >
+    The commitment density η is the accumulated integrated closure
+    events. High η suppresses local Π_eff (inside-out-channeling.yaml),
+    which narrows ρ₀, which lowers H₀. This is why committed
+    environments appear "colder" in the framework's heat language —
+    fewer open DOF remain available.
+
+  role_in_sim_004: >
+    SIM-004 must sample ρ₀ at different heat contents (different
+    widths of the distribution) and compute the corresponding α⁻¹
+    for each. The result is the environmental dependence of the
+    fine-structure constant:
+
+      α⁻¹(H₀) = V₀(H₀) / (Wr_eq(H₀) · Ω_rotor(H₀))
+
+    The cold limit (H₀ → 0, narrow ρ₀) should give α⁻¹ ≈ 137.036304
+    (the void value). The terrestrial value H₀^terr corresponds to
+    the local commitment density at the measurement site.
+
+  epistemic_status: >
+    STRUCTURAL HYPOTHESIS — heat = entropy of ρ₀. The precise
+    functional form H₀(Π_eff) is open. CONNECTION to SIM-004 is
+    the parametric variation of the α⁻¹ computation with H₀.
+
+---
+
+computational_protocol:
+
+  statement: >
+    The SIM-004 computation proceeds in seven steps. Steps 1–2 are
+    definitions (can be done analytically or numerically). Steps
+    3–5 are the closure map computation (the GP solve). Steps 6–7
+    are the α⁻¹ extraction.
+
+  steps:
+
+    - step: 1
+      action: "Define ρ₀ as the isotropic distribution on S²"
+      parameters: "ρ₀(B) = 1/(4π) for the void limit"
+      status: "Analytic — trivial"
+
+    - step: 2
+      action: "Discretise S² and parametrise the GP functional"
+      parameters: "GP parameters g, Λ, κ, n_sat; Möbius boundary condition"
+      status: "Setup — depends on the PDE solver"
+
+    - step: 3
+      action: "For each B ∈ S² (discretised), solve the GP equation with Möbius BC"
+      output: "GP energy E(B) and stability flag χ(B)"
+      status: "PDE solve — the expensive step"
+
+    - step: 4
+      action: "Construct the closure indicator χ(B) from the GP solve"
+      output: "Set {B : E(B) < E_saturation} — the closure indicator set"
+      status: "Post-processing"
+
+    - step: 5
+      action: "Compute ρ₁(B) = (1/Z) · ρ₀(B) · χ(B)"
+      output: "Normalised committed distribution"
+      status: "Analytic given χ(B)"
+
+    - step: 6
+      action: "Extract Wr_eq from the equilibrium centreline at the mean orientation B*"
+      output: "Writhe Wr_eq — a single scalar"
+      status: "CWF integral on the equilibrium curve"
+
+    - step: 7
+      action: "Compute α⁻¹ = Ω_embed / (Wr_eq · Ω_rotor)"
+      output: "α⁻¹ in the void limit"
+      status: "Ratio of phase-space volumes"
+
+  parametric_variation: >
+    To compute the environmental dependence of α⁻¹, repeat steps
+    1–7 with ρ₀ replaced by a narrower (colder) distribution:
+
+      ρ₀^H(B) = N(H) · exp(-θ²(B, B_grad) / (2σ²(H)))
+
+    where θ(B, B_grad) is the angle between B and the local gradient
+    direction B_grad, and σ(H) is the width parameter linked to H₀.
+    The cold limit σ → 0 recovers the void value; wider σ gives the
+    terrestrial value.
+
+---
+
+role_of_psi:
+
+  statement: >
+    ψ is NOT the primary object in the corrected SIM-004 spec. ψ
+    is the position-space image of ρ₁:
+
+      ψ(r) = √ρ(x) · exp(I S(x))
+
+    where:
+      ρ(x) is the grade-0 commitment density (Madelung amplitude squared)
+      S(x) is the grade-2 phase (bivector orientation projected to position space)
+      I is the pseudoscalar (complex structure in Cl(3,0))
+
+  what_this_changes:
+    - ψ is derived from ρ₁, not postulated as the starting point.
+    - |ψ|² = ρ(x) is the spatial projection of ρ₁, not a fundamental probability.
+    - The phase S(x) is the grade-2 bivector orientation mapped to position space.
+    - The Madelung decomposition ψ = √ρ · exp(IS) is the natural
+      grade projection of the depth-1 committed distribution, not
+      an approximation.
+
+  what_this_preserves:
+    - The Schrödinger equation emerges as the grade-2 projection
+      of the GP closure map acting on ρ₁.
+    - The Born rule emerges as the squared overlap of ρ₁ with
+      the measurement basis (see quanta-as-ccr-cost.yaml).
+    - The uncertainty principle emerges from the grade-1/grade-2
+      incompatibility, not as an independent postulate.
+
+  epistemic_status: >
+    STRUCTURAL CLARIFICATION — ψ is the image of ρ₁, not the
+    starting point. The framework's position is that this restores
+    the process-level anchor that standard quantum mechanics lacks.
+
+---
+
+falsification:
+
+  statement: >
+    The integrand chain structure is falsified if:
+
+  conditions:
+    - condition: >
+        The GP closure map Φ₁ does not produce a well-defined
+        indicator χ(B) — i.e., if there is no subset of S² on
+        which the Möbius vortex solution is stable.
+      consequence: "Depth-1 closure does not exist — framework fails at depth 1."
+
+    - condition: >
+        The computed f_closure = ∫χ(B)dB / (4π) does not yield
+        a value consistent with Wr_eq · f_closure ≈ 1/137.036.
+      consequence: >
+        The geometric α⁻¹ cannot be recovered from the integrand
+        chain — the closure map is wrong or the writhe extraction
+        is wrong.
+
+    - condition: >
+        The environmental dependence of α⁻¹ computed from the
+        heat variation of ρ₀ does not match the observed 2.2 ppm
+        shift between void and terrestrial values.
+      consequence: >
+        The heat ↔ Π_eff connection is wrong, or the suppression
+        mechanism is not the entropy of ρ₀.
+
+    - condition: >
+        The position-space image ψ = √ρ · exp(IS) does not
+        satisfy the Schrödinger equation in the appropriate limit.
+      consequence: >
+        The Madelung image of ρ₁ is not the correct quantum
+        state — the integrand chain is disconnected from QM.
+
+---
+
+open_items:
+
+  - id: "explicit-chi-from-gp"
+    description: >
+      Compute χ(B) explicitly by solving the GP equation for each
+      bivector orientation B on S². Requires the PDE solver from
+      SIM-004-v2. Priority: 1.
+
+  - id: "writhe-extraction-from-equilibrium"
+    description: >
+      Extract Wr_eq from the equilibrium Möbius centreline at B*.
+      Verify that Wr_eq = 3/2 (per CWF: Lk = 2, Tw = 1/2). Priority: 1.
+
+  - id: "f-closure-numeric"
+    description: >
+      Compute f_closure = ∫χ(B)dB / (4π) from the GP solution.
+      This is the geometric factor in α⁻¹. Priority: 1.
+
+  - id: "heat-entropy-mapping"
+    description: >
+      Establish the functional relationship H₀(Π_eff) between the
+      entropy of ρ₀ and the substrate's free potential. Priority: 2.
+
+  - id: "terrestrial-rho0-from-local-eta"
+    description: >
+      Model ρ₀^terr as a narrowed distribution under terrestrial
+      commitment density. Compute the corresponding α⁻¹ and check
+      against CODATA. Priority: 2.
+
+  - id: "psi-from-rho1-verification"
+    description: >
+      Verify that the position-space image ψ = √ρ · exp(IS) of
+      ρ₁ satisfies the standard Schrödinger equation in the
+      non-relativistic limit. Priority: 3.
+
+---
+
+cross_references:
+  - file: "issues/foundational/test-spec-electron-ccr-gp-equilibrium.yaml"
+    note: "SIM-004-v2 — this specification corrects its integrand structure"
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "The bivector parameter space; ρ₀ and ρ₁ live on S²"
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "Heat as open DOF; entropy interpretation"
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "720° boundary condition; mass as trapped phase"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR definition; writhe extraction"
+  - file: "core/process-physics/thermodynamics-and-heat-emergence.yaml"
+    note: "Heat as open DOF — the framework's heat concept"
+  - file: "core/terminology-canonical.yaml"
+    note: "I_rot, E_Φ, and other canonical symbols"
+  - file: "core/derivative-reality-clarification.yaml"
+    note: "The anchor problem — why ψ is not fundamental"
