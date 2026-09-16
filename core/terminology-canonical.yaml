@@ -8,7 +8,7 @@ domain: "Core"
 description: >
   Each physical phenomenon maps to exactly one Praestology term with a
   specific symbol, SI units, mathematical definition, and an explicit list
-  of forbidden ambiguous terminology. This table is the canonical reference.
+  of ambiguous terminology. This table is the canonical reference.
   It is binding for all domain files, summaries, and external communication.
   The purpose is to prevent regression to standard-physics language that
   conflates structurally distinct quantities.
@@ -26,7 +26,7 @@ terms:
       Factor of 2 included so that E_Φ = (1/2) I_rot ω_Φ² is consistent.
       The factor is absorbed into the definition rather than into the
       energy relation.
-    forbidden: "rest mass (m₀), matter payload, particle substance, inertial mass"
+    conflated_standard_terms: "rest mass (m₀), matter payload, particle substance, inertial mass"
 
   - phenomenon: "Internal Field Capacity"
     praestology_term: "Phase Energy Capacity"
@@ -37,7 +37,7 @@ terms:
       This is the total committed energy of a configuration. It is NOT
       the "mass-energy" of standard physics — that conflates inertia
       (I_rot) with capacity (E_Φ).
-    forbidden: "static mass-energy, pure matter, relativistic mass"
+    conflated_standard_terms: "static mass-energy, pure matter, relativistic mass"
 
   - phenomenon: "Velocity-Dependent Energy"
     praestology_term: "Phase Energy Content (with velocity)"
@@ -48,7 +48,7 @@ terms:
       Velocity increases ENERGY, not inertia. I_rot is a property of the
       committed topology, not of motion. This row exists to explicitly
       forbid "relativistic mass" as a concept.
-    forbidden: "relativistic mass, mass increase with velocity"
+    conflated_standard_terms: "relativistic mass, mass increase with velocity"
 
   - phenomenon: "Macro Environmental Force"
     praestology_term: "Ambient Phase Pressure"
@@ -60,7 +60,7 @@ terms:
       the phase configuration space. It is NOT a gravitational field
       in the standard sense — it is the environmental gradient that
       drives displacement.
-    forbidden: "gravitational pull, spacetime curvature tensor, attraction force"
+    conflated_standard_terms: "gravitational pull, spacetime curvature tensor, attraction force"
 
   - phenomenon: "Motion Resistance"
     praestology_term: "Phase Impedance"
@@ -71,7 +71,7 @@ terms:
       The specific impedance per unit area. Direct analog of acoustic
       and electromagnetic impedance. The area factor is required for
       dimensional consistency (Z_Φ · v_rel has units of kg/m², not force).
-    forbidden: "inertial drag, passive mass resistance"
+    conflated_standard_terms: "inertial drag, passive mass resistance"
 
   - phenomenon: "Boundary Stability"
     praestology_term: "Closure Viability Band"
@@ -83,7 +83,7 @@ terms:
       environment-dependent (gravity-and-ccr-threshold.yaml): high P_env
       lowers V_c, low P_env raises it. There is no fixed V_c value —
       the band is the range of viable closure conditions.
-    forbidden: "event horizon, particle radius, solid edge"
+    conflated_standard_terms: "event horizon, particle radius, solid edge"
 
   - phenomenon: "Underlying Continuum"
     praestology_term: "Phase Configuration Space"
@@ -96,7 +96,7 @@ terms:
         C_Φ^(1) = Cl(3,0)
         C_Φ^(2) = Cl(3,0) ⊂ S⁷
         C_Φ^(3) = S⁷ ⊂ S¹⁵
-    forbidden: "aether, substrate, spatial background, medium, container"
+    conflated_standard_terms: "aether, substrate, spatial background, medium, container"
 
   - phenomenon: "Gravitational Response"
     praestology_term: "Phase Gradient Coupling"
@@ -108,7 +108,7 @@ terms:
       are manifestations of the same committed topology's response to
       Π_eff gradients. Gravity and inertia are two sides of the same
       R5 event (gravity-inertia-equivalence-from-r5.yaml).
-    forbidden: "gravitational charge, passive mass"
+    conflated_standard_terms: "gravitational charge, passive mass"
 
 ---
 
