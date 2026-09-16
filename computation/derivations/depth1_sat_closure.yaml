@@ -1,0 +1,75 @@
+computational_validation:
+  depth1_sat_closure:
+    file: "computation/derivations/depth1_sat_closure.py"
+    status: "AVAILABLE — runs independently of SIM-004"
+    what_it_tests: >
+      The algebraic closure condition F[Q] = 0 — the same condition that
+      governs depth-1 closure in the physical framework — matches boolean
+      satisfiability exactly in the grade-2 sector of Cl(3,0). This
+      validates the closure functional as a general constraint-satisfaction
+      mechanism, demonstrated in the symbolic domain. It does not depend
+      on the GP equilibrium solution.
+
+    scope_clarification: >
+      The SAT prototype and the physical depth-1 closure share the same
+      algebraic mechanism: encode constraints as bivector factors, multiply,
+      check whether the residual vanishes. The demonstrations are
+      mechanism-level, not identity-level — the symbolic SAT instances
+      are not the same objects as the physical particle structures, but
+      they exercise the same closure functional.
+
+    mechanism_mapping:
+      - symbolic_case: "Satisfied instance (F[Q] = 0)"
+        physical_analog: "Closed configuration"
+        structural_correspondence: >
+          The residual vanishes exactly — no grade-2 components remain
+          unpaired. In the physical case, this is the depth-1 closure
+          condition. Examples at the depth-1 capacity ceiling:
+          the photon (counter-oriented pair, grade-2 cancels) and the
+          electron (co-oriented pair, grade-2 deepens to a closed
+          configuration). Both satisfy F[Q] = 0 in their respective
+          grade sectors.
+
+      - symbolic_case: "Lifted instance (no solution at depth-1, may exist at depth-2)"
+        physical_analog: "Incomplete closure needing higher depth"
+        structural_correspondence: >
+          The residual is non-zero at depth-1 because the subproblem
+          exceeds the capacity of three independent bivector planes.
+          The quark is the physical instance: the truncated 2π path
+          cannot reach a fixed point at depth-1, and its closure requires
+          the three-fold binding at depth-2 (proton/neutron).
+
+      - symbolic_case: "Genuinely unsatisfiable (no solution at any depth)"
+        physical_analog: "Forbidden configuration"
+        structural_correspondence: >
+          Not yet demonstrated in the prototype. A configuration that
+          violates a conservation law (e.g., non-zero total charge for
+          a bound state, or a non-integer total writhe for a closed
+          configuration) would map here. The prototype does not yet
+          produce this case, so it remains an open target.
+
+    capacity_note: >
+      Depth-1 handles ≤3 variables (3 bivector planes in Cl(3,0)).
+      This is not a limitation — it is the algebraic capacity of the
+      grade-2 sector, and it is the same capacity that gives the
+      proton its three-fold structure. The correspondence is exact
+      at the algebraic level: three orthogonal bivector planes in
+      Cl(3,0) is the maximum independent configuration.
+
+    what_it_establishes:
+      - "F[Q] = 0 is a valid algebraic satisfiability criterion for ≤3 constraints in Cl(3,0)"
+      - "The residual F[Q] > 0 correctly identifies subproblems that exceed depth-1 capacity"
+      - "The 3-variable ceiling matches the 3-bivector-plane structure algebraically"
+
+    what_it_does_not_establish:
+      - "The photon's mass (requires SIM-004 GP solution)"
+      - "The quark's fractional charge (requires SIM-001 S³ writhe computation)"
+      - "The proton's binding energy (requires SIM-005 mutual linking)"
+      - "That the SAT domain and the physical domain are the same domain —
+         they share a mechanism, not an ontology"
+
+    cross_references:
+      - "issues/foundational/sim004-integrand-structure.yaml"
+      - "issues/foundational/test-spec-electron-ccr-gp-equilibrium.yaml"
+      - "core/process-physics/quarks-as-transitional-strains.yaml"
+      - "core/process-physics/ga-grade-chain-to-particles.yaml"
