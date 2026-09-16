@@ -1,0 +1,288 @@
+# /issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml
+issue_id: "SIM-004-v2"
+title: "Electron CCR: GP Equilibrium from Integrand Chain, with Non-Circularity Guard"
+type: "COMPUTATIONAL_DERIVATION"
+status: "OPEN_FOR_CONTRIBUTORS — non-circularity conditions explicitly stated;
+         GP parameters require independent anchoring before computation begins"
+difficulty: "EXPERT — Nonlinear PDE (Gross-Pitaevskii) + CWF Writhe on S³"
+target_script: "derivations/electron_ccr_gp_solver.py"
+supersedes: "SIM-004-v1"
+
+purpose: >
+  Compute α⁻¹ from the integrand chain ρ₀ → Φ₁ → ρ₁, using the
+  Gross-Pitaevskii closure map. The specification includes an explicit
+  non-circularity guard: the GP parameters must be independently fixed
+  before the α⁻¹ computation begins. If they are adjusted to match
+  the answer, the derivation is circular and the test fails.
+
+dependency_map:
+  requires:
+    - "issues/foundational/sim004-integrand-structure.yaml"
+    - "core/process-physics/bivector-partial-parameters.yaml"
+    - "core/process-physics/vortex-stability.yaml"
+    - "core/process-physics/rotor-to-ccr-transition.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/thermodynamics-and-heat-emergence.yaml"
+
+---
+
+non_circularity_guard:
+  statement: >
+    The derivation is non-circular only if the GP parameters are fixed
+    independently of the α⁻¹ target. The following table specifies
+    which quantities are inputs, which are derived, and the anchoring
+    condition for each.
+
+  classification:
+    inputs:
+      - parameter: "g (self-interaction strength)"
+        anchor: "BEC scattering length measurement"
+        status: "EXPERIMENTALLY ANCHORED — value determined by BEC experiments"
+        circularity_risk: "LOW — externally measurable"
+
+      - parameter: "n_sat (saturation density)"
+        anchor: "Maximum density of stable phase-locks; CCR ceiling"
+        status: "STRUCTURALLY ANCHORED — set by the topological capacity per grain volume"
+        circularity_risk: "MEDIUM — requires the capacity argument from closure-types-nesting.yaml"
+
+      - parameter: "Λ, κ (saturation coefficients)"
+        anchor: "Determined by n_sat and the healing length ξ"
+        status: "STRUCTURALLY ANCHORED — functional form from the saturation term"
+        circularity_risk: "MEDIUM — depends on the specific functional form"
+
+      - parameter: "ξ (healing length)"
+        anchor: "GP coherence length at saturation"
+        status: "DERIVED — not a free parameter"
+        circularity_risk: "LOW — computed from g and n_sat"
+
+    derived:
+      - quantity: "χ(B) (closure indicator)"
+        derivation: "GP solve for each B ∈ S² with Möbius BC"
+        circularity_risk: "NONE — direct output of the GP solution"
+
+      - quantity: "f_closure"
+        derivation: "∫χ(B)dB / (4π)"
+        circularity_risk: "NONE — computed from χ(B)"
+
+      - quantity: "Wr_eq"
+        derivation: "CWF integral on the equilibrium centreline"
+        circularity_risk: "NONE — topologically fixed at 3/2 (must verify)"
+
+      - quantity: "α⁻¹"
+        derivation: "1 / (Wr_eq · f_closure)"
+        circularity_risk: "NONE — output of the derivation"
+
+  circularity_condition: >
+    The derivation is circular if and only if adjusting the inputs
+    (g, Λ, κ, n_sat) is required to make α⁻¹ match 137.036. This
+    must not happen. If it does, the derivation fails as a
+    non-circular proof.
+
+  pre_registration_requirement: >
+    Before running the computation, the GP parameters must be
+    pre-registered with their anchoring references. The α⁻¹ target
+    must NOT be used to select or adjust them. This mirrors the
+    pre-registration discipline in experimental physics.
+
+  falsification_if_circular: >
+    If the only way to match α⁻¹ = 137.036 is to adjust the GP
+    parameters after seeing the output, the derivation is circular
+    and the test fails. This is a hard failure, not a soft one.
+
+---
+
+anchoring_requirements:
+  statement: >
+    Before the SIM-004-v2 computation can produce a non-circular
+    result, the following anchoring arguments must be made explicit.
+
+  required_arguments:
+    - argument: "g is the BEC self-interaction strength"
+      source: "Low-energy scattering length in dilute BEC"
+      status: "Standard — cited from existing BEC literature"
+
+    - argument: "n_sat is the maximum stable phase-lock density"
+      source: "closure-types-nesting.yaml — topological capacity argument"
+      status: "Framework-internal — must be derived, not assumed"
+
+    - argument: "Λ, κ are fixed by n_sat and ξ"
+      source: "Saturation term functional form"
+      status: "Framework-internal — must be derived, not assumed"
+
+    - argument: "The specific functional form g|ψ|²/(1+|ψ|²/n_sat) is correct"
+      source: "open-reconciliation-notes.yaml — issue_2 (n_sat functional form)"
+      status: "OPEN — the functional form is not yet derived"
+
+  consequence: >
+    Until the anchoring arguments are complete, the SIM-004-v2
+    computation can be run as an EXPLORATION but not as a
+    non-circular DERIVATION. The exploration is useful — it shows
+    what α⁻¹ the current functional form produces. The derivation
+    requires the anchoring first.
+
+---
+
+integrand_chain:
+  statement: >
+    The computation follows the integrand chain defined in
+    sim004-integrand-structure.yaml.
+
+  steps:
+    - step: 1
+      action: "Define ρ₀(B) = 1/(4π) — uniform distribution on S²"
+      output: "Initial state"
+      status: "Analytic"
+
+    - step: 2
+      action: "Set GP parameters (g, Λ, κ, n_sat) from independent anchors"
+      output: "GP parameter set"
+      status: "Depends on anchoring completion"
+
+    - step: 3
+      action: "For each B ∈ S² (discretised), solve GP with Möbius BC"
+      output: "E(B), χ(B) for each orientation"
+      status: "PDE solve — expensive"
+
+    - step: 4
+      action: "Extract ρ₁ = (1/Z) · ρ₀ · χ(B)"
+      output: "Committed distribution"
+      status: "Post-processing"
+
+    - step: 5
+      action: "Extract Wr_eq from equilibrium centreline"
+      output: "Wr_eq — expected 3/2"
+      status: "CWF integral"
+
+    - step: 6
+      action: "Compute f_closure = ∫χ(B)dB / (4π)"
+      output: "f_closure"
+      status: "Ratio of integrals"
+
+    - step: 7
+      action: "Compute α⁻¹ = 1 / (Wr_eq · f_closure)"
+      output: "Fine-structure constant (void limit)"
+      status: "Final ratio"
+
+    - step: 8
+      action: "Compare to 137.036304 (geometric candidate)"
+      output: "Pass/fail"
+      status: "Comparison — no adjustment allowed"
+
+---
+
+success_condition: >
+  The non-circular derivation succeeds if:
+    - Wr_eq = 3/2 is verified from the equilibrium centreline.
+    - f_closure computed from the GP solve yields α⁻¹ = 137.036304 ± 1e-6.
+    - The GP parameters were fixed by independent anchors BEFORE the
+      computation began.
+    - No adjustment of the GP parameters was made after the output
+      was seen.
+
+falsification_condition: >
+  The framework fails at this point if:
+
+  1. No stable 720° vortex solution exists for the anchored GP parameters
+     (the closure map Φ₁ has no fixed point).
+
+  2. Wr_eq differs from 3/2 by more than numerical precision
+     (the equilibrium shape is not the Möbius vortex).
+
+  3. α⁻¹ computed from the anchored GP parameters differs from 137.036
+     by more than 10 ppm.
+
+  4. The only way to match 137.036 requires adjusting the GP parameters
+     after the output is seen — this is the CIRCULARITY FAILURE mode.
+
+exploratory_mode:
+  statement: >
+    If the anchoring arguments are not yet complete, the computation
+    can be run in exploratory mode to see what α⁻¹ the current
+    functional form produces. Exploratory results are informative
+    but not non-circular proofs. They must be labelled as such.
+
+  labelling_requirement: >
+    Any report of an exploratory run must state clearly:
+      - The GP parameters used
+      - Their anchoring status (anchored / assumed / free)
+      - That the result is exploratory until anchoring is complete
+
+---
+
+implementation_protocol:
+  software:
+    - language: "Python 3.10+ / Julia 1.9+"
+    - libraries: "FEniCS or deal.II for PDE; clifford_bridge for GA"
+  steps:
+    - "1. Discretise S² in bivector parameter space (or reduce by symmetry)"
+    - "2. Pre-register GP parameters with anchoring references"
+    - "3. For each B, solve GP with Möbius BC using Newton-Raphson or imaginary-time propagation"
+    - "4. Record E(B), χ(B)"
+    - "5. Extract equilibrium centreline at B*; compute Wr_eq"
+    - "6. Compute f_closure and α⁻¹"
+    - "7. Verify non-circularity (no parameter adjustments)"
+    - "8. Report α⁻¹ against the target"
+
+---
+
+open_items:
+  - id: "n-sat-from-topological-capacity"
+    description: >
+      Derive n_sat from the topological capacity argument (issue_2 in
+      open-reconciliation-notes.yaml). Required for the anchoring chain.
+    priority: 1
+
+  - id: "saturation-functional-form"
+    description: >
+      Establish whether g|ψ|²/(1+|ψ|²/n_sat) is the correct
+      functional form, or whether a tanh/log alternative is needed.
+      Required for the anchoring chain.
+    priority: 1
+
+  - id: "writhe-topology-verification"
+    description: >
+      Verify Wr_eq = 3/2 by CWF decomposition (Lk = 2, Tw = 1/2).
+      This is a topological check that should be independent of the
+      specific GP parameters.
+    priority: 1
+
+  - id: "gp-parameter-battery"
+    description: >
+      Run the computation across a range of GP parameters within
+      their anchoring uncertainty bands. Verify that α⁻¹ remains
+      in the correct range and does not require fine-tuning.
+    priority: 2
+
+---
+
+epistemic_status:
+  established:
+    - "The integrand chain ρ₀ → Φ₁ → ρ₁ is structurally correct"
+    - "ρ₀ is uniquely determined as uniform on S² (void limit)"
+    - "Wr_eq is topologically constrained (must be 3/2 if CWF holds)"
+    - "f_closure is a computed output, not a fitted input"
+  open:
+    - "The anchoring of the GP parameters (g, Λ, κ, n_sat)"
+    - "The functional form of the saturation term"
+    - "The numerical value of f_closure from the GP solve"
+    - "Whether α⁻¹ = 137.036 emerges without fine-tuning"
+  circularity_status: >
+    POTENTIALLY CIRCULAR until the anchoring arguments are complete.
+    The spec must not be run as a derivation until then. Exploratory
+    runs are permitted with explicit labelling.
+
+---
+
+cross_references:
+  - file: "issues/foundational/sim004-integrand-structure.yaml"
+    note: "Integrand definitions; ρ₀, Φ₁, ρ₁ formal structure"
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "ccr-electron-explicit open derivation; this test closes it"
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "720° boundary condition; mass as trapped phase"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR definition; writhe and embedding volume"
+  - file: "core/process-physics/thermodynamics-and-heat-emergence.yaml"
+    note: "Heat as open DOF; entropy of ρ₀"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "Issue_2 (n_sat functional form) — required for anchoring"
