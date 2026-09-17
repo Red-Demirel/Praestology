@@ -169,6 +169,13 @@ electron_instance:
     α is the electron's CCR — the irreducible cost of realizing the
     720° Möbius spinor rotor in the 3D embedding field.
 
+  cumulative_reading: >
+    v2.1: α is the numerical expression of the cumulative preleading
+    integrand-operands — the accumulated cost of the entire integrand
+    sequence ρ₀ → Φ₀ → (grade-1) → Φ₁ → ρ₁. Each step in the chain
+    contributes. α is not extracted from any single stage.
+    See ccr-iteration-by-depth.yaml #alpha_as_cumulative_expression.
+
     This is not a static, retrofitted geometric formula chosen to match
     the CODATA value. CCR is an accounting mechanism: a ratio of realized
     phase space to embedding phase space, derived from the topology's
