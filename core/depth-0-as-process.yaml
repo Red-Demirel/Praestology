@@ -1,0 +1,313 @@
+# /core/depth-0-as-process.yaml
+name: "Depth 0 as Process: The Two-Tier Rule-Set and the First CCR Iteration"
+version: "1.1"
+status: "STRUCTURAL REFRAMING — clarifies what depth 0 is; does not change
+         physical predictions or the depth-table structure. Sub-labels 0a/0b/1a/1b
+         are local to this file and describe the internal cascade within depth-0
+         and depth-1. CCR computations operate on the outputs of full depth levels,
+         not on sub-steps."
+domain: "Core"
+
+description: >
+  Depth 0 is not a static ground state. It is the phase configuration
+  background (C_Φ) with internal mechanisms already running: superposition
+  and entanglement of primitive orientation parameters. The rule-set
+  R1–R5 is not a flat five-step sequence; it is two tiers. R1–R3 are
+  the constitutive rules of the base level — they define what the
+  phase configuration background is. R4–R5 are the operative rules of
+  the closure level — they commit structures from the background.
+
+  The CCR iteration mechanism is present at depth-0 as the constitutive
+  property of the base level — it is not introduced fresh at depth-1.
+  Φ₀ is the first instance of the same mechanism that Φ₁, Φ₂, ... continue.
+  This closes a logical gap: the integrands from depth-0 and depth-1 are
+  genuine active inputs to all subsequent depths, not historical precursors
+  that are superseded. The depth-n structure carries the cumulative integral
+  of all prior depths.
+
+dependency_map:
+  requires:
+    - "core/specifications.yaml"
+    - "core/order-ontology.md"
+    - "core/process-physics/bivector-partial-parameters.yaml"
+    - "core/process-physics/ga-grade-chain-to-particles.yaml"
+    - "core/process-physics/iterative-depth-hierarchy.yaml"
+  provides_to:
+    - target: "core/process-physics/ccr-iteration-by-depth.yaml"
+      via: "Φ₀ added as the first closure map; depth-0 cascade as the
+            CCR mechanism origin"
+    - target: "core/process-physics/ga-grade-chain-to-particles.yaml"
+      via: "Grade-1 flows as first distinctions; grade-2 bivectors as
+            their pairings; mechanism now specified"
+    - target: "core/process-physics/dirac-as-grade-chain-closure.yaml"
+      via: "Colour planes (B₁, B₂, B₃) rooted at 0b→1b pairing, not
+            introduced fresh at depth-1"
+
+---
+
+two_tier_structure:
+
+  statement: >
+    The five rules divide into two tiers by their role in the process,
+    not by their sequence number. Tier 1 (R1–R3) is constitutive: it
+    defines the phase configuration background and its internal mechanisms.
+    Tier 2 (R4–R5) is operative: it acts on the background to produce
+    committed structure. The tiers are not sequential — Tier 2 operates
+    on the output of Tier 1 continuously at every depth.
+
+  tier_1_constitutive:
+    name: "Base Level (Phase Configuration Background)"
+    rules: "R1, R2, R3"
+    role: "Define what the substrate is and how it behaves internally"
+    mechanisms:
+      superposition: >
+        The base level is inherently superposed: distinctions are
+        unresolved, orientations are uncommitted. Not a quantum-specific
+        phenomenon — the constitutive state of a processual background
+        before closure.
+      entanglement: >
+        Correlated unresolved orientations across multiple parameter
+        dimensions. A primitive mechanism of the base level, not a
+        derived quantum feature.
+
+  tier_2_operative:
+    name: "Closure Level (Commitment and Selection)"
+    rules: "R4, R5"
+    role: "Commit structures from the base level and select viable ones"
+    mechanisms:
+      commitment: >
+        R4 selects a specific orientation from the superposed base
+        level — the transition from unset (base) to set (committed).
+      selection: >
+        R5 filters which commitments persist. The viability condition
+        V_eff ≥ V_c determines whether a commitment survives or
+        dissolves via Regress.
+
+---
+
+closure_cascade:
+
+  statement: >
+    The closure mechanism runs continuously from depth-0. The sub-labels
+    0a, 0b, 1a, 1b describe the internal cascade within the existing
+    depth-0 and depth-1 levels. They are descriptive — the depth-table
+    structure is unchanged, and CCR computations operate on the outputs
+    of full depth levels (0b output = depth-0 complete; 1b output =
+    depth-1 complete). The sub-labels make explicit that grade-1 vectors
+    are not discarded when they close into grade-2 bivectors — they
+    persist as active sub-structure within the depth-1 configuration.
+
+  sub_levels:
+
+    level_0a:
+      label: "0a"
+      name: "Base: superposed primitive orientations"
+      grade: "Pre-grade"
+      rules: "R1–R3 (constitutive)"
+      state: >
+        The phase configuration background C_Φ with unresolved orientation
+        parameters. Three independent orientation degrees of freedom
+        are available — not yet directed, not yet paired. Superposition
+        and entanglement are active. No closure map has acted yet.
+      physical_meaning: "The uncommitted field — maximum free potential Π_eff"
+
+    level_0b:
+      label: "0b"
+      name: "First closure: grade-1 vectors"
+      grade: "Grade-1"
+      rules: "R4–R5 (first operative action)"
+      closure_map: "Φ₀: C_Φ → {e₁, e₂, e₃}"
+      action: >
+        Φ₀ closes the superposed background into three directed grade-1
+        vectors. Commitment resolves orientation first — direction is
+        the first thing closure produces. The three vectors e₁, e₂, e₃
+        are the three independent directions available in Cl(3,0).
+      output: "Three grade-1 vectors: e₁, e₂, e₃"
+      physical_meaning: >
+        First expression of committed direction — orientation without
+        topology. These are the primitive impulse/flow directions.
+      cascade_note: >
+        The three vectors from 0b are the direct inputs to 1b. They
+        are not superseded by the bivector closure — they persist as
+        active sub-structure within the depth-1 configuration. This
+        is why depth-3/4 integrands carry grade-1 contributions forward.
+
+    level_1a:
+      label: "1a"
+      name: "Vectors under R3 tension"
+      grade: "Grade-1 (active)"
+      rules: "R3 (tension between directed vectors)"
+      state: >
+        The three grade-1 vectors are present but not yet paired.
+        R3 tension acts between them — unresolved relations between
+        e₁, e₂, e₃ drive toward the next closure. This is the
+        transient state between 0b and 1b: directed but not yet
+        topological.
+      physical_meaning: >
+        Pre-rotor flow: propagating disturbances without stable closure.
+        Corresponds to the grade-1 potential flows in
+        ga-grade-chain-to-particles.yaml.
+
+    level_1b:
+      label: "1b"
+      name: "Second closure: grade-2 bivectors and rotor formation"
+      grade: "Grade-2"
+      rules: "R4–R5 (second operative action)"
+      closure_map: "Φ₁: {e₁, e₂, e₃} → {B₁, B₂, B₃}"
+      action: >
+        Φ₁ closes pairs of grade-1 vectors into grade-2 bivectors:
+          e₁ ∧ e₂ → B₁ = e₁e₂
+          e₂ ∧ e₃ → B₂ = e₂e₃
+          e₁ ∧ e₃ → B₃ = e₁e₃
+        The three bivectors are exactly the three pairings of the
+        three grade-1 vectors from 0b. Φ₁ acts on the 1a vectors
+        and produces the rotor planes. Rotor formation (co-oriented
+        or counter-oriented closure on a bivector plane) is the
+        next step — but the planes themselves are the output of 1b.
+      output: "Three grade-2 bivector planes: B₁, B₂, B₃"
+      physical_meaning: >
+        Spin planes — the oriented areas that rotors act within.
+        The three bivector planes are the three colour planes.
+      colour_charge_note: >
+        The three colour planes B₁, B₂, B₃ are the three pairings
+        of the three grade-1 vectors from 0b. Colour charge is the
+        pairing structure of the 0b→1b cascade — it is rooted at
+        depth-0, not introduced fresh at depth-1. The SU(3) colour
+        symmetry reflects the three independent pairings available
+        in Cl(3,0) given three grade-1 vectors.
+
+  persistence_of_lower_grades:
+    statement: >
+      The grade-1 vectors from 0b are not discarded when 1b closes them
+      into bivectors. The bivector B₁ = e₁e₂ is built from e₁ and e₂ —
+      they are its constitutive sub-structure. At every subsequent depth,
+      the grade-1 and grade-2 contributions are present as active
+      integrands, not historical footnotes.
+    consequence: >
+      The CCR at depth-n is a genuine accumulated integral over all
+      prior closure maps:
+        CCR_n = f(Φ₀, Φ₁, ..., Φ_{n-1})
+      not just f(Φ_{n-1}). This is what makes depth-n+1 the integral
+      of depth-n — the mechanism is cumulative, not sequential.
+    implication_for_sims: >
+      SIM-004 operates on ρ₀ (the grade-2 distribution from 1b output).
+      The grade-1 sub-structure from 0b is embedded in ρ₀ as the
+      constitutive vectors of the bivector planes — it is present in
+      the computation implicitly. No SIM modification required.
+
+---
+
+rule_set_as_emergent:
+
+  statement: >
+    The rules are not postulated. They are the necessary structural
+    properties of any processual background that begins with superposition
+    and progresses through commitment.
+
+  emergence_of_r1_r3:
+    - rule: "R1 (Existence)"
+      emergent_from: "A superposition of nothing is still something."
+      consequence: "ψ ≠ 0 is a structural necessity, not a postulate."
+
+    - rule: "R2 (Structure)"
+      emergent_from: "Superposition requires distinguishable components."
+      consequence: "∇ψ ≠ 0 is the constitutive feature of a superposed background."
+
+    - rule: "R3 (Motion)"
+      emergent_from: "Superposed components have unresolved relations — tension."
+      consequence: "The grade-1 orientation degrees of freedom are live; change is constitutive."
+
+  emergence_of_r4_r5:
+    - rule: "R4 (Progress)"
+      emergent_from: "Superposed states can be resolved — the mechanism exists."
+      consequence: "Commitment is possible; each closure creates new structure."
+
+    - rule: "R5 (Optimisation)"
+      emergent_from: "Not all resolutions are equally viable."
+      consequence: "Selection is the structural filter on commitments."
+
+---
+
+structural_consequences:
+
+  - consequence: "Superposition and entanglement are foundational, not quantum-specific."
+    explanation: >
+      They are the constitutive mechanisms of 0a. Quantum superposition
+      and entanglement are their specific forms in the grade-2 rotor
+      sector — not the only forms.
+
+  - consequence: "Indeterminism is ontological ground, not emergent."
+    explanation: >
+      The base level is superposed by constitution. There is no prior
+      determinate state. Consistent with specifications.yaml
+      #indeterminism_as_ground.
+
+  - consequence: "Colour charge is rooted at depth-0."
+    explanation: >
+      The three colour planes B₁, B₂, B₃ are the three pairings of the
+      three grade-1 vectors from 0b. The SU(3) structure reflects the
+      pairing geometry of the first cascade, not a symmetry introduced
+      at depth-1.
+
+  - consequence: "The CCR mechanism is uniform across all depths."
+    explanation: >
+      Φ₀ is the first instance of the same closure mechanism as Φ₁,
+      Φ₂, ... The mechanism does not change between depths — only the
+      input grade does. This is what justifies treating the depth
+      hierarchy as a genuine integral, not a loose analogy.
+
+  - consequence: "The first distinction takes the form of a vector."
+    explanation: >
+      Φ₀ produces grade-1 expressions because commitment resolves
+      orientation first. The form of the first distinction is
+      determined by the closure mechanism, not postulated.
+
+---
+
+what_this_does_not_change:
+
+  - "The depth-table structure — 0a/0b/1a/1b are sub-labels local to this file."
+  - "Physical predictions — SIM-004 through SIM-007 operate on full depth-level outputs."
+  - "The CCR formula — the ratio structure (Wr · Ω_rotor) / Ω_embed is unchanged."
+  - "The computational program — the sub-labels clarify mechanism, not computation."
+
+---
+
+epistemic_status:
+
+  established:
+    - "R1–R5 divide into constitutive (R1–R3) and operative (R4–R5) tiers."
+    - "The 0b→1b cascade: e₁, e₂, e₃ → B₁=e₁e₂, B₂=e₂e₃, B₃=e₁e₃."
+    - "The three colour planes are the three pairings of the grade-1 vectors."
+    - "Grade-1 sub-structure persists within grade-2 as constitutive components."
+    - "CCR_n = f(Φ₀, Φ₁, ..., Φ_{n-1}) — cumulative, not sequential."
+
+  structural_reframing:
+    - "Depth-0 is processual, not static."
+    - "The CCR mechanism is uniform from depth-0."
+    - "Colour charge is rooted at the 0b→1b pairing, not introduced at depth-1."
+    - "The rule-set emerges from the process, not postulated."
+
+  open:
+    - "The precise functional form of Φ₀ (how superposition closes into grade-1)."
+    - "Whether the 0a→0b transition has a computable CCR value or is pre-CCR."
+    - "The relationship between quantum superposition (grade-2) and base-level
+       superposition (0a pre-grade)."
+
+---
+
+cross_references:
+  - file: "core/specifications.yaml"
+    note: "R1–R5 definitions; indeterminism_as_ground"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Grade-1 flows (1a) and grade-2 rotors (1b output) as particle precursors"
+  - file: "core/process-physics/ccr-iteration-by-depth.yaml"
+    note: "Φ₀ as first closure map; cumulative CCR_n across all Φ"
+  - file: "core/process-physics/dirac-as-grade-chain-closure.yaml"
+    note: "Colour planes rooted at 0b→1b pairing"
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "Superposition as unset parameters; now extended to 0a pre-grade"
+  - file: "core/process-physics/iterative-depth-hierarchy.yaml"
+    note: "Depth table unchanged; 0a/0b/1a/1b are sub-labels within depth-0/1"
+  - file: "core/closure-configuration-ratio.yaml  [repo-only]"
+    note: "CCR_n as cumulative integral over Φ₀...Φ_{n-1}"
