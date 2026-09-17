@@ -1,9 +1,11 @@
 # /core/process-physics/iterative-depth-hierarchy.yaml
-name: "Iterative Closure Depth Hierarchy: From Quarks to Mind"
-version: "1.0"
+name: "Nested Closure Hierarchy (NCH): From Quarks to Mind"
+version: "1.1"
 status: "STRUCTURAL MAP — continuity established; depth > 3 entries are
          structural predictions, not confirmed derivations. Magic numbers
-         at each depth are targets for Steiner enumeration, not results."
+         at each depth are targets for Steiner enumeration, not results.
+         v1.1: depth 0 is processual (not static); grade-1 level explicit;
+         two-tier rule-set (R1–R3 constitutive, R4–R5 operative) noted."
 domain: "Core / Process-Physics"
 description: >
   The same closure operation — find a configuration satisfying Q*=R_k[Q*]
@@ -13,6 +15,12 @@ description: >
   established in existing files. Entries at depth ≥ 3 are structural
   predictions consistent with the framework, requiring Steiner enumeration
   and CCR derivations for confirmation.
+
+  v1.1: depth 0 is not a static ground state. It is the phase configuration
+  background with internal mechanisms (superposition, entanglement) already
+  running. The transition from depth 0 to depth 1 passes through an explicit
+  grade-1 level (vector/impulse expressions). See depth-0-as-process.yaml
+  for the full two-tier rule-set (R1–R3 constitutive, R4–R5 operative).
 
 unified_principle:
   statement: >
@@ -31,18 +39,48 @@ unified_principle:
     both have satisfied their respective closure condition completely.
     Reactive atoms seek bonds for the same reason quarks seek binding:
     both have incomplete closure at their depth.
-
----
+  two_tier_rule_set: >
+    The five rules divide into two tiers. R1–R3 (existence, structure,
+    motion) are constitutive — they define what the phase configuration
+    background is and what mechanisms it supports. R4–R5 (progress,
+    optimisation) are operative — they commit structures from the
+    background and select viable ones. The tiers are not sequential:
+    Tier 2 operates continuously on the output of Tier 1.
+    See depth-0-as-process.yaml for the full statement.
 
 depth_table:
 
-  depth_0_potential:
-    structure: "Pure potential — grade-0 scalar"
-    closure_condition: "None — R1 ground state, maximum indeterminism"
-    stable_configuration: "Vacuum (Praegress, open R3 superposition)"
-    incomplete_configuration: "Everything (before any closure)"
+  depth_0_process:
+    structure: "Phase configuration background (C_Φ) — pre-grade"
+    internal_mechanisms:
+      superposition: "Unresolved orientation of primitive parameters"
+      entanglement: "Correlated unresolved orientations across multiple dimensions"
+    closure_condition: >
+      None yet at the base level. The first closure map Φ₀ operates on
+      the background to produce grade-1 expressions — see the 0→1a
+      transition below.
+    stable_configuration: "The background itself — not a closed structure, but the constitutive substrate"
+    incomplete_configuration: "Everything (before any closure has fired)"
     magic_counts: "N/A"
-    status: "ESTABLISHED — specifications.yaml #indeterminism_as_ground"
+    rule_tier: "R1–R3 constitutive"
+    status: "ESTABLISHED — see depth-0-as-process.yaml; specifications.yaml #indeterminism_as_ground"
+
+  depth_0_to_1a_transition:
+    structure: "First CCR iteration — Φ₀ acting on C_Φ"
+    closure_condition: "Φ₀ closes superposed background into vector/impulse expressions"
+    output: "Grade-1 directed flows without closure topology"
+    mechanism: "Commitment resolves orientation first — the first distinction is directed"
+    rule_tier: "R4–R5 operative"
+    status: "STRUCTURAL — see depth-0-as-process.yaml #first_ccr_iteration"
+
+  depth_1a_vectors:
+    structure: "Grade-1 vector expressions — directed flows"
+    closure_condition: "None at this level — tension (R3) still active"
+    stable_configuration: "None — vectors are transitional, not closed"
+    incomplete_configuration: "All grade-1 expressions — they seek rotor closure at depth 1"
+    magic_counts: "N/A"
+    rule_tier: "R3 tension active"
+    status: "STRUCTURAL — see ga-grade-chain-to-particles.yaml #grade_1_potential_flows"
 
   depth_1_rotor:
     structure: "Grade-2 rotor — co-oriented pair R·R or counter-oriented R·R†"
@@ -55,6 +93,7 @@ depth_table:
       cannot achieve self-identity independently (quark)
     magic_counts: "N/A (binary: complete or incomplete)"
     ccr_binding: "CCR_electron = 1 (reference unit)"
+    closure_map: "Φ₁: grade-1 → grade-2 rotors"
     status: "ESTABLISHED — ga-grade-chain-to-particles.yaml, rotor-to-ccr-transition.yaml"
 
   depth_2_pseudoscalar:
@@ -252,6 +291,8 @@ key_predictions:
 ---
 
 cross_references:
+  - file: "core/depth-0-as-process.yaml"
+    note: "Two-tier rule-set; Φ₀; superposition/entanglement as base-level mechanisms"
   - file: "core/process-physics/quarks-as-transitional-strains.yaml"
     note: "iterative_depth_statement — depths 1 and 2 established there"
   - file: "core/process-physics/closure-types-nesting.yaml"
