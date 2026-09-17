@@ -1,20 +1,21 @@
 # /core/process-physics/ccr-iteration-by-depth.yaml
-spec_id: "CCR-ITERATION-v1"
+spec_id: "CCR-ITERATION-v2"
 title: "Depth-Iterated Closure: Recursive CCR with Branching"
 type: "CORE_PROCESS_PHYSICS_SPECIFICATION"
-status: "DRAFT — procedure established at d=1; higher depths marked by tier"
+status: "DRAFT — procedure established at d=1 (grade-2); base-level iteration (Φ₀) added in v2"
 domain: "core/process-physics/"
 changes_from_source: >
-  Corrected depth-1 Tw value: Tw = 1/2 (Möbius non-orientability, algebraic fact),
-  not Tw = 1. Therefore Wr = Lk - Tw = 2 - 1/2 = 3/2, consistent with
-  magic-numbers-logical-argument.yaml and CWF decomposition.
-  Added depth-2 simulation result: N=4 residual F=8/3 provides concrete numerical
-  instance of the branching condition — the precise residual tension that cannot
-  be absorbed by Cl(3,0) linear sequence, confirming the S⁷ jump is structural.
+  v1 → v2: Added Φ₀ as the base-level closure map (C_Φ → grade-1 expressions).
+  The recursion now begins at the phase configuration background, not at
+  the rotor level. Depth-1 (grade-2 rotor) is Φ₁ acting on the output of Φ₀.
+  Alpha identified as the cumulative numerical expression of the preleading
+  integrand sequence, not a value from any single step.
+  v1 corrections retained: Tw = 1/2; Wr = 3/2; N=4 residual F=8/3.
 depends_on:
   - "core/closure-configuration-ratio.yaml"
   - "core/process-physics/closure-types-nesting.yaml"
   - "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+  - "core/depth-0-as-process.yaml"
 
 terminology_note: >
   "Fork" was the working term; the specification uses "branching"
@@ -44,8 +45,25 @@ recursion:
     The ratio CCR^d is the value Φ_d computes at each step, not the map itself.
     Separating the two is what makes D_{d+1} = Fix(Φ_d(D_d)) well-defined.
 
+    v2: The recursion begins at d=0 with the base-level closure map Φ₀
+    acting on the phase configuration background C_Φ. Φ₀ produces grade-1
+    expressions. Φ₁ acts on grade-1 to produce grade-2 rotors. Higher
+    closure maps continue the recursion. See depth-0-as-process.yaml
+    for the two-tier rule-set (R1–R3 constitutive, R4–R5 operative).
+
+  base_level_iteration:
+    symbol: "Φ₀"
+    domain: "Distributions on the phase configuration background C_Φ"
+    codomain: "Grade-1 vector/impulse expressions"
+    action: >
+      Φ₀ closes the superposed/entangled background parameters into
+      directed quantities. The first distinctions take the form of
+      vectors because commitment resolves orientation first.
+    output_structure: "Grade-1 directed flows without closure topology"
+    reference: "depth-0-as-process.yaml #first_ccr_iteration"
+
   closure_map:
-    symbol: "Φ_d"
+    symbol: "Φ_d (for d ≥ 1)"
     signature: "Configurations(D_d) → Configurations(D_d)"
     definition: >
       Φ_d is the gradient descent of the closure functional appropriate to
@@ -67,6 +85,36 @@ recursion:
       The fixed points of the closure map at depth d constitute the domain
       available at depth d+1. Each depth's fixed points become the next
       depth's embedding substrate Ω_embed(d+1).
+    starting_point: >
+      D₀ = the phase configuration background. Φ₀ produces D_{1a} =
+      grade-1 expressions. Φ₁ produces D₁ = grade-2 rotors. The chain
+      is continuous: each depth's fixed points are the next depth's input.
+
+alpha_as_cumulative_expression:
+  statement: >
+    α is not a value extracted from a single step of the recursion. It is
+    the numerical expression of the cumulative preleading integrand-operands
+    — the accumulated cost of the entire integrand sequence leading up to
+    the committed electron configuration.
+  reading: >
+    The chain ρ₀ → Φ₀ → (grade-1) → Φ₁ → ρ₁ produces α as the ratio of
+    accumulated committed phase-space volume to accumulated open phase-space
+    volume. Each step in the chain contributes to the numerical value.
+    α is the integral of the whole preleading sequence, not the output of
+    any single stage.
+  formal_expression: >
+    α⁻¹ = Ω_embed(η) / (Wr_eq · Ω_rotor)
+    where Ω_embed is the accumulated open phase-space capacity at the
+    point of measurement, Ω_rotor is the accumulated committed phase-space
+    volume produced by the full preleading chain, and Wr_eq is the
+    equilibrium writhe of the closure.
+  environmental_dependence: >
+    Because α depends on the accumulated preleading chain, and because
+    each step in the chain depends on the local Π_eff and η, α is
+    environment-dependent. The 2.2 ppm shift between void and terrestrial
+    measurements is the numerical expression of the difference in the
+    accumulated chain under different local conditions.
+  reference: "issues/foundational/sim004-integrand-structure.yaml"
 
 ---
 
@@ -83,9 +131,18 @@ shape_equilibrium:
     invariants, test whether the ratio closes. The procedure is identical
     at every depth; the invariant is not.
 
-  per_depth:
+   per_depth:
+    d_0_to_1a:
+      tier: "STRUCTURAL"
+      closure_map: "Φ₀"
+      equilibrium_shape: "Not a closed shape — the first commitment of the background"
+      invariant: "Not yet defined — grade-1 expressions are transitional"
+      output: "Grade-1 directed flows"
+      reference: "depth-0-as-process.yaml"
+
     d_1:
       tier: "ESTABLISHED"
+      closure_map: "Φ₁"
       equilibrium_shape: "720° Möbius centerline"
       invariant: "Centerline writhe Wr (CWF theorem)"
       value: >
@@ -97,7 +154,8 @@ shape_equilibrium:
         This is the reference case. The shape is the electron's Möbius vortex;
         the invariant is the writhe of its centerline; the closure value is unity.
         See vortex-stability.yaml #ccr_derivation_path and SIM-004-v2 for the
-        full computation.
+        full computation. Note: the preleading integrand chain (from Φ₀)
+        contributes to the numerical value of α — see alpha_as_cumulative_expression.
 
     d_2:
       tier: "OPEN (equilibrium shape) / CANDIDATE (invariant kind)"
@@ -276,6 +334,8 @@ open:
   - "Whether higher-depth diversity follows from branching or closure condition alone"
 
 cross_references:
+  - file: "core/depth-0-as-process.yaml"
+    note: "Φ₀ and the two-tier rule-set; base-level iteration"
   - file: "core/closure-configuration-ratio.yaml"
     note: "CCR definition and CWF theorem"
   - file: "core/process-physics/closure-types-nesting.yaml"
