@@ -257,6 +257,33 @@ geometric_origin_of_the_recurrence:
     improvement in the epistemic posture — the recurrence is derived
     from a physical requirement, not asserted as a mathematical form.
 
+ccr0_derivation:
+  statement: >
+    CCR⁰ = φ⁻¹ = (√5 - 1)/2 ≈ 0.618 — the retention factor of the
+    decaying transient mode of the Fibonacci recurrence. It is the
+    unique eigenvalue magnitude of the D₋₁ → D₀ transition that lies
+    in the viable CCR band (0, 1), and it stays in ℚ(√5) — no new
+    algebraic content beyond φ.
+  reading: >
+    The φ^k mode is the committed direction (grows without bound).
+    The (−1/φ)^k mode is the undecided/transient direction (decays
+    by φ⁻¹ per cycle). CCR⁰ = φ⁻¹ is the fraction of open phase space
+    that remains after one closure cycle — the carry-forward openness
+    that the next cycle must process.
+  uniqueness: >
+    The two eigenvalues are φ (exceeds the band) and −φ⁻¹ (in the band
+    in absolute value). φ⁻¹ is the unique band-compatible eigenvalue
+    magnitude. The framework's own viability constraint selects it —
+    no additional assumption.
+  epistemic_upgrade: >
+    The open item "CCR⁰ = φ or a simple function of φ" is now
+    closed: CCR⁰ = φ⁻¹, derived from the recurrence, not chosen.
+  alternating_sign_note: >
+    The negative sign of λ₂ = −1/φ means the transient alternates
+    sign each cycle. This is the algebraic signature of the conjugate
+    commitment/depletion relation (see commitment-depletion-duality.yaml).
+    Flagged as a potential structural link, not asserted.
+
 ---
 
 relationship_to_depth_recursion:
@@ -304,15 +331,6 @@ relationship_to_depth_recursion:
 ---
 
 open_items:
-  - id: "ccr0-from-phi"
-    description: >
-      Compute CCR⁰ — the value Φ₀ produces at the D₋₁ → D₀ fixed point.
-      Candidate: CCR⁰ = φ or a simple algebraic function of φ and the
-      Cl(3,0) grade-0/grade-1 embedding geometry. If CCR⁰ = φ, then
-      the depth hierarchy has two confirmed CCR values (CCR⁰ = φ,
-      CCR¹ = 1) and their ratio φ⁻¹ = φ - 1 may carry physical meaning.
-    depends_on: ["SIM-004-v2 (confirms CCR¹ = 1 non-circularly first)"]
-    priority: 2
 
   - id: "ccr2-invariant-type"
     description: >
