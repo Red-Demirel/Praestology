@@ -1,0 +1,131 @@
+# /core/process-physics/depletion-as-absolute-pi-eff.yaml
+
+name: "Depletion as Absolute Π_eff: Unifying Gravity, V_c, and the Projected Extra DoF"
+version: "0.1"
+status: "STRUCTURAL CONNECTION — three-way coherence established; each link
+         documented in its own file; the unification is a reading of the
+         three files together, not a new derivation"
+domain: "Core / Process-Physics"
+
+description: >
+  Three previously separate observations are readings of the same quantity:
+    (1) Commitment depletes Π_eff (commitment-depletion-duality.yaml)
+    (2) The absolute Π_eff is what GR projects out (relational-effects-extra-dof.yaml)
+    (3) V_c depends on the absolute Π_eff (gravity-and-ccr-threshold.yaml)
+  Together they form a closed loop: commitment → depletion → V_c lowering
+  → catalyzed closure → more commitment. This loop is invisible to GR
+  because GR retains only the ratio (metric curvature), not the absolute
+  Π_eff (the depletion magnitude).
+
+unifying_quantity:
+  statement: >
+    The absolute Π_eff is the single quantity that:
+      - Appears as the depletion (positive commitment → negative Π_eff deviation)
+      - Is projected out by GR (only the ratio survives in the metric)
+      - Controls V_c (via P_env at the local scale)
+      - Is the extra DoF identified in relational-effects-extra-dof.yaml
+    It is not four quantities related by equations. It is one quantity
+    with four roles.
+
+three_way_loop:
+  statement: >
+    The three files together describe a closed loop at the process level:
+
+      commitment (accumulated integrand)
+              │
+              ▼
+      depletion of absolute Π_eff
+              │
+              ├─── read externally ─────► gravity (relative metric effect)
+              │                            [GR sees only this branch]
+              │
+              └─── read as threshold ───► V_c lowering
+                                            │
+                                            ▼
+                                    catalyzed closure
+                                            │
+                                            ▼
+                                    more commitment
+                                    (loop closes)
+
+  why_gr_cannot_see_the_loop: >
+    GR tracks the metric — the ratio of Π_eff values across spacetime.
+    It is a differential description. The absolute Π_eff — the depletion
+    magnitude at each point — is not part of the metric. So GR sees the
+    *shape* of the depletion landscape (curvature) but not its *depth*.
+    V_c depends on the depth, not the shape. The loop closes through
+    the depth, so GR cannot close the loop.
+
+  what_the_framework_sees: >
+    The framework works at the process level where the absolute Π_eff
+    is directly available. So the framework can compute V_c(P_env)
+    from first principles — it has the depth, not just the shape.
+    The gravity-threshold file's claim that "gravity adjusts V_c, not
+    the CCR ratio" is precisely the statement that the loop closes
+    through the absolute Π_eff, not through the geometric ratio.
+
+consistency_with_existing_files:
+  commitment_depletion_duality: >
+    This addendum does not revise the depletion duality — it supplies
+    the specific quantity (absolute Π_eff) that the duality operates on.
+    "Commitment depletes Π_eff" is now precise: commitment depletes
+    the absolute Π_eff, and gravity is the negative of that absolute
+    value relative to the baseline.
+  gravity_and_ccr_threshold: >
+    The gravity-threshold file's V_c(P_env) is now identified as
+    V_c(absolute Π_eff). The "P_env" in that file is the environmental
+    expression of the absolute Π_eff — same quantity, different label.
+    A cross-reference should be added.
+  relational_effects_extra_dof: >
+    The extra DoF is now identified as the absolute Π_eff, which is
+    exactly the quantity the depletion loop operates on. The Ampère
+    longitudinal force and extra entanglement DoF remain parallel
+    cases — they are the same projection mechanism applied to different
+    force sectors, not the same quantity as Π_eff.
+
+oscillation_reading_extension:
+  statement: >
+    The oscillation reading of the depletion duality (in the parent file)
+    acquires a spatial as well as temporal meaning under this unification.
+    Temporally: commitment and depletion oscillate around baseline.
+    Spatially: V_c varies with absolute Π_eff across the environment,
+    creating regions where closure is catalyzed (deep depletion) and
+    regions where it dissolves (shallow depletion).
+    The two are the same oscillation read in time and in space.
+
+what_this_establishes:
+  - "The absolute Π_eff is the single quantity underlying depletion, gravity, V_c, and the projected extra DoF"
+  - "The commitment-depletion loop closes through the absolute Π_eff, not through the geometric ratio"
+  - "GR's projection of the absolute Π_eff is why GR cannot compute V_c(P_env) directly"
+  - "The gravity-threshold mechanism has a natural home in the depletion duality"
+  - "The oscillation reading extends from temporal to spatial"
+
+what_this_does_not_establish:
+  - "The functional form of V_c(absolute Π_eff) — still open (vc-from-pi-eff)"
+  - "Whether the absolute Π_eff is directly measurable (it is not, in GR-compatible frames)"
+  - "The precise depletion rate — depends on the depth-chain integrand (open)"
+  - "Whether the loop is stabilizing (negative feedback via R_diss) or destabilizing (positive feedback via catalysis) at all scales"
+
+cross_references:
+  - file: "core/process-physics/commitment-depletion-duality.yaml"
+    note: "Parent file — the duality this addendum specifies"
+  - file: "core/process-physics/relational-effects-extra-dof.yaml"
+    note: "Absolute Π_eff as the projected extra DoF"
+  - file: "core/process-physics/gravity-and-ccr-threshold.yaml"
+    note: "V_c(P_env) as V_c(absolute Π_eff)"
+  - file: "core/inside-out-channeling.yaml"
+    note: "Mechanism of Π_eff suppression by committed topology"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "μ as the algebraic expression of the loop"
+  - file: "core/inside-out-channeling.yaml"
+    note: "Commitment raises η, lowers Π_eff — the local depletion mechanism"
+  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    note: "Gravity and inertia as two sides of the same R5 event"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "μ as the map from geometric side to analytic side; K₀/K₁ balance"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "V_eff = Π_eff / (ρ_η · CCR) — the viability condition that depends on depletion"
+  - file: "core/process-physics/ccr-iteration-by-depth.yaml"
+    note: "The depth chain whose accumulated integrand is the object of this reading"
+  - file: "core/d-minus-one-pre-vector-level.yaml"
+    note: "The integrand chain from D₋₁ upward"
