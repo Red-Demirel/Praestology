@@ -1,0 +1,360 @@
+# /core/d-minus-one-pre-vector-level.yaml
+name: "D₋₁: Pre-Vector Level and the Non-Resonant Scaling Eigenvalue"
+version: "0.3"
+status: "STRUCTURAL CANDIDATE — D₋₁ as the R1/R2 transition restated in
+         vector-iteration language; φ as non-resonant scaling eigenvalue
+         derived from a physical selection principle, not asserted;
+         basis_note establishes φ governs the entire grade-1 basis;
+         algebraic→geometric invariant transition flagged at D₀→D₁;
+         pending SIM-004-v2 confirmation of the full chain
+         D₋₁ → D₀ → D₁ → α⁻¹"
+domain: "Core"
+
+description: >
+  The depth hierarchy extends one level below D₀. D₋₁ is not a new
+  ontological level — it is the R1/R2 transition from specifications.yaml
+  (isotropic scalar potential → first distinction) restated in the
+  vector-iteration language of the depth recursion. Establishing D₋₁
+  formally completes the chain: the same closure map procedure that
+  produces D₁ from D₀ produces D₀ from D₋₁, with the non-resonant
+  scaling eigenvalue φ as the structural invariant of the D₋₁ → D₀
+  transition.
+
+  The D₀ → D₁ transition introduces a qualitative shift in the nature
+  of the scaling invariant: φ at D₋₁ → D₀ is an algebraic eigenvalue
+  of a recurrence; Wr_eq = 3/2 at D₀ → D₁ is a topological invariant
+  of an embedded curve. This transition from algebraic to geometric
+  invariant marks the point where the closure mechanism first produces
+  topology — not merely directed structure.
+
+dependency_map:
+  requires:
+    - "core/specifications.yaml (R1 — existence, R2 — distinction)"
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/ccr-iteration-by-depth.yaml"
+    - "core/process-physics/bivector-partial-parameters.yaml"
+  relationship_to_existing_files: >
+    D₋₁ is NOT a new depth below R1. It is the R1/R2 transition
+    (indeterminate scalar potential → first directed vector) described
+    in the language of the depth recursion rather than the rule language.
+    The two descriptions are the same event at different levels of
+    mathematical precision. Cross-referencing rather than replacing
+    existing files is the correct approach.
+
+---
+
+d_minus_one:
+  identity: "D₋₁ — Isotropic Scalar Phase Potential"
+  relationship_to_r1_r2: >
+    D₋₁ is the R1 ground state: indeterminate scalar potential,
+    no preferred direction, no grade structure beyond grade-0.
+    In the multivector language: D₋₁ = {α·1 : α ∈ ℝ} — the
+    grade-0 subspace of Cl(3,0). Maximum freedom; null space of
+    the commitment operator. Identical to what specifications.yaml
+    calls "pure potential prior to R2 distinction."
+  what_makes_it_a_level: >
+    D₋₁ is a level in the depth recursion because it is the domain
+    on which Φ₀ acts — the closure map whose fixed points are the
+    grade-1 vectors of D₀. The same operator/value split applies:
+      Φ₀: grade-0 configurations → grade-0 configurations
+      CCR⁰: the value Φ₀ computes at convergence
+      D₀ = Fix(Φ₀(D₋₁))
+    The fixed points of Φ₀ acting on D₋₁ are stable directed
+    grade-1 vectors — the first distinctions of R2.
+
+  closure_map_phi_0:
+    statement: >
+      Φ₀ is the phase-relaxation map that finds the stable directional
+      baseline from isotropic scalar noise. The closure condition is:
+      the vector configuration v* is invariant under its own directional
+      locking — it does not precess or drift under the phase dynamics.
+    stability_requirement: >
+      At D₋₁ the phase configuration background is scalar and isotropic.
+      The D₋₁ → D₀ transition must produce a stable directed baseline —
+      a vector configuration that does not drift or decay under the
+      phase dynamics. Stability requires the scaling ratio between
+      successive vector states to be maximally non-resonant: no integer
+      power of the ratio can approximate 1 closely enough to cause
+      destructive interference.
+    non_resonance_condition: >
+      The optimal scaling ratio for non-resonance is the number with
+      the slowest-converging continued fraction — φ = (1+√5)/2.
+      This is the "most irrational" number in the sense of Diophantine
+      approximation: it is the least approximable by rationals, hence
+      the most resistant to periodic resonance.
+    fibonacci_as_consequence: >
+      The Fibonacci recurrence v_{k+1} = v_k + v_{k-1} is the unique
+      linear two-step recurrence whose characteristic equation has φ
+      as a root. It is a consequence of the non-resonance condition,
+      not an independent assumption. If the stability requirement
+      holds, the recurrence follows.
+    basis_note: >
+      The Fibonacci recurrence establishes φ as the scaling eigenvalue
+      for any stable grade-1 direction in Cl(3,0). All three basis
+      vectors e₁, e₂, e₃ of D₀ carry this eigenvalue — φ governs
+      the scaling of the entire grade-1 basis, not a single preferred
+      direction. The three vectors are the three independent applications
+      of the same D₋₁ → D₀ closure in three orthogonal directions,
+      consistent with R5 isotropy. Φ₀ produces {e₁, e₂, e₃}
+      simultaneously precisely because no direction is preferred at D₋₁;
+      the non-resonance condition is satisfied in all three orthogonal
+      directions by the same eigenvalue φ.
+
+---
+
+phi_as_scaling_eigenvalue:
+  statement: >
+    The Fibonacci recurrence v_{k+1} = v_k + v_{k-1} has a scaling
+    eigenvalue λ satisfying:
+      λ·v_k = v_{k+1} = v_k + v_{k-1}  →  λ² - λ - 1 = 0
+    The positive root is φ = (1 + √5)/2 ≈ 1.618...
+    This is the non-resonant scaling eigenvalue of the D₋₁ → D₀
+    transition: the unique ratio at which successive vector states
+    scale without destructive periodic resonance.
+  why_non_resonant: >
+    φ is irrational and not a root of unity — no integer power of
+    φ equals 1. This means a vector sequence scaled by φ never
+    returns exactly to its starting orientation, preventing the
+    phase cancellation (destructive interference) that would
+    collapse the vector baseline back to the D₋₁ isotropic state.
+    φ is the minimum-friction scaling eigenvalue: it maintains
+    directed growth without resonance accumulation.
+  why_not_sqrt_2: >
+    √2 is also irrational but has a periodic continued fraction
+    [1; 2, 2, 2, ...], so it is well-approximable by rationals at
+    certain scales — it resonates. φ has the slowest-converging
+    continued fraction [1; 1, 1, 1, ...], making it the optimal
+    non-resonant scaling. Other recurrences (v_{k+1} = v_k,
+    v_{k+1} = 2v_k - v_{k-1}) either do not scale or scale at
+    resonant ratios; the non-resonance condition singles out φ.
+  connection_to_bivector_folding: >
+    The outer product v_k ∧ v_{k+1} of two consecutive φ-scaled
+    vectors produces a bivector plane B = v_k ∧ v_{k+1} whose
+    area ratio between successive folds is also φ — the bivector
+    plane grows at the same non-resonant rate as the vectors that
+    generate it. This establishes the stable orientational growth
+    that Φ₁ then closes into the Möbius vortex of D₁.
+  epistemic_status: >
+    STRUCTURAL OBSERVATION — φ emerges from the non-resonance
+    condition of the D₋₁ → D₀ transition as a selection principle.
+    The Fibonacci recurrence is its algebraic expression. Its
+    connection to the golden ratio appearing in biological growth
+    patterns, quasicrystals, and optimal packing is noted as
+    convergent structure — all are instances of the same
+    non-resonance condition applied at different commitment depths.
+    This connection is not asserted as a derivation; it is flagged
+    as a structural pattern worth investigating once the D₀ → D₁
+    chain is confirmed by SIM-004-v2.
+
+---
+
+algebraic_to_geometric_invariant_transition:
+  statement: >
+    The two depth transitions in the chain carry structurally
+    different kinds of scaling invariant:
+
+    D₋₁ → D₀:  φ = (1+√5)/2
+      Kind: algebraic eigenvalue of a recurrence relation
+      Origin: the non-resonance condition on iterating vectors
+      Meaning: minimum-friction, non-resonant directional scaling
+      Topology produced: none — grade-1 vectors have direction but
+        no enclosed area, no writhe, no linking
+
+    D₀ → D₁:  Wr_eq = 3/2
+      Kind: topological invariant of an embedded curve
+        (writhe from Calugareanu-White-Fuller applied to the
+        equilibrium Möbius centreline)
+      Origin: the 720° closure of the Möbius vortex in 3D
+      Meaning: the self-linking geometry of the closed curve
+      Topology produced: the first genuine topology — enclosed
+        area (bivector plane), writhe, chirality, spin-½
+
+  significance: >
+    The transition from algebraic to geometric invariant at D₀→D₁
+    is not incidental. It marks the point where the closure mechanism
+    first produces topology rather than merely directed structure.
+    Before D₁: the structures are directed (grade-1 vectors) but not
+    closed — no enclosed area, no linking number, no chirality.
+    At D₁: the Möbius vortex is a closed curve in 3D with
+    well-defined writhe, a topological invariant that cannot be
+    removed by smooth deformation. This is the origin of matter's
+    topological protection — and it arises at exactly the depth
+    where the invariant type changes from algebraic to geometric.
+
+  implication_for_ccr_series: >
+    If the pattern continues, D₁ → D₂ may introduce a third kind
+    of invariant — combinatorial or index-theoretic (the Connes-Dirac
+    spectral index proposed in the session-3 induction). The
+    invariant-type sequence algebraic → geometric → combinatorial
+    would then be a structural signature of the depth hierarchy,
+    not a coincidence. Open: confirm this at D₂.
+
+---
+
+three_level_chain:
+  d_minus_1_to_d0:
+    closure_map: "Φ₀"
+    input: "D₋₁ — isotropic grade-0 scalar potential"
+    output: "D₀ — stable grade-1 basis {e₁, e₂, e₃}, all φ-scaled"
+    scaling_invariant: "φ = (1+√5)/2 — non-resonant algebraic eigenvalue"
+    physical_reading: >
+      R1/R2 transition: indeterminate potential develops first
+      directed distinctions. φ ensures all three basis directions
+      are stable against resonance collapse. R5 isotropy requires
+      all three directions simultaneously — no preferred direction
+      at D₋₁ means the closure applies uniformly in all three.
+    ccr_value: "CCR⁰ — not yet computed; candidate: φ itself or a
+                simple function of φ and the Cl(3,0) geometry"
+
+  d0_to_d1:
+    closure_map: "Φ₁"
+    input: "D₀ — grade-1 basis {e₁, e₂, e₃}, φ-scaled"
+    intermediate: "v_k ∧ v_{k+1} = B — bivector planes from φ-scaled vector pairs"
+    containment: "B² = -1 → unit bivector periodicity → 2π/4π boundary metrics"
+    output: "D₁ — 720° Möbius vortex"
+    topological_invariant: "Wr_eq = 3/2 (CWF on equilibrium centreline)"
+    invariant_type_shift: >
+      Algebraic (φ) → Geometric (Wr_eq): first topology appears here.
+      The bivector plane has enclosed area; the Möbius closure has writhe.
+    geometric_yield: "f_closure = (1/4π) ∫_{S²} χ(B) dB (GP solve)"
+    ccr_value: "CCR¹ = 1 (reference unit — to be confirmed non-circularly
+                by SIM-004-v2)"
+
+  complete_formulation: >
+    α⁻¹ = 1 / (Wr_eq · f_closure)
+         = 1 / (3/2 · f_closure)
+    where f_closure is the only quantity requiring numerical computation
+    (the GP solve over S²). Wr_eq = 3/2 is topologically fixed.
+    The full chain from D₋₁ to α⁻¹:
+      φ (non-resonant algebraic eigenvalue of D₋₁ → D₀)
+      → stable grade-1 basis {e₁, e₂, e₃}, all φ-scaled
+      → bivector planes {B₁, B₂, B₃} via outer products of φ-scaled pairs
+      → 720° Möbius vortex (D₁ fixed point under Φ₁)   [topology first appears]
+      → Wr_eq = 3/2 (topological invariant of D₁)
+      → f_closure (geometric yield of Φ₁ over S²)
+      → α⁻¹ = 1/(Wr_eq · f_closure)
+
+geometric_origin_of_the_recurrence:
+  statement: >
+    The Fibonacci recurrence is not assumed; it is the minimal linear
+    two-step memory relation compatible with non-destructive phase
+    conservation across adjacent bivectors. Two vector states produce
+    one bivector plane (static orientation). Three vector states with
+    a shared boundary produce two adjacent bivectors coupled through
+    the shared state — and this coupling is what requires the memory
+    relation v_{k+2} = v_{k+1} + v_k.
+  two_vs_three_states:
+    two_states: "v_k, v_{k+1} → single bivector plane (static orientation, no process)"
+    three_states: "v_k, v_{k+1}, v_{k+2} with shared boundary → process memory; φ emerges as the scaling eigenvalue"
+  placement_in_depth_table: >
+    φ operates at both D₋₁ → D₀ (algebraic eigenvalue of vector
+    baseline) and D₀ → D₁ (geometric scaling of adjacent bivector
+    chain). Same non-resonance principle, two realizations.
+  direction_of_explanation: >
+    The direction is now: minimal non-destructive coupling of adjacent
+    bivectors → two-step memory relation → φ as eigenvalue. Not:
+    assumption of Fibonacci → consequence of φ. This is a genuine
+    improvement in the epistemic posture — the recurrence is derived
+    from a physical requirement, not asserted as a mathematical form.
+
+---
+
+relationship_to_depth_recursion:
+  notation_note: >
+    This file uses D₋₁ and D₀ for the two levels of the pre-vector
+    transition. depth-0-as-process.yaml uses 0a and 0b for the same
+    two levels. The D₋₁/D₀ indexing is the canonical convention going
+    forward: it allows depths to run from -1 upward without fractional
+    indices. depth-0-as-process.yaml should be updated to use
+    D₋₁ = 0a and D₀ = 0b, or to cross-reference the D₋₁ naming.
+
+  extended_table:
+    - depth: "D₋₁"
+      domain: "Grade-0 scalar potential"
+      closure_map: "Φ₀"
+      invariant: "φ (algebraic — recurrence eigenvalue)"
+      stable_configurations: "Grade-1 basis {e₁, e₂, e₃} (D₀)"
+      topology: "None"
+      status: "ESTABLISHED (R1/R2 in specifications.yaml); φ connection CANDIDATE"
+
+    - depth: "D₀"
+      domain: "Grade-1 vector basis, φ-scaled"
+      closure_map: "Φ₁"
+      invariant: "Wr_eq = 3/2 (geometric — topological writhe)"
+      stable_configurations: "720° Möbius vortex, photon, quark (D₁)"
+      topology: "First topology: bivector plane area, writhe, chirality"
+      status: "ESTABLISHED (structure); PENDING (SIM-004-v2 non-circular)"
+
+    - depth: "D₁"
+      domain: "Rotors, committed vortices"
+      closure_map: "Φ₂"
+      invariant: "CCR² — candidate: combinatorial/index-theoretic (open)"
+      stable_configurations: "Proton, neutron (D₂)"
+      topology: "Grade-3 pseudoscalar, self-dual volume"
+      status: "ESTABLISHED (structure); OPEN (CCR² value and invariant type)"
+
+    - depth: "D₂"
+      domain: "Nucleons"
+      closure_map: "Φ₃ on S⁷"
+      invariant: "CCR³ (open)"
+      stable_configurations: "Nuclei at magic numbers (D₃)"
+      topology: "Open"
+      status: "STRUCTURAL PREDICTION — open"
+
+---
+
+open_items:
+  - id: "ccr0-from-phi"
+    description: >
+      Compute CCR⁰ — the value Φ₀ produces at the D₋₁ → D₀ fixed point.
+      Candidate: CCR⁰ = φ or a simple algebraic function of φ and the
+      Cl(3,0) grade-0/grade-1 embedding geometry. If CCR⁰ = φ, then
+      the depth hierarchy has two confirmed CCR values (CCR⁰ = φ,
+      CCR¹ = 1) and their ratio φ⁻¹ = φ - 1 may carry physical meaning.
+    depends_on: ["SIM-004-v2 (confirms CCR¹ = 1 non-circularly first)"]
+    priority: 2
+
+  - id: "ccr2-invariant-type"
+    description: >
+      Determine whether the D₁ → D₂ invariant (CCR²) is combinatorial
+      or index-theoretic, consistent with the algebraic → geometric →
+      combinatorial pattern. If confirmed, the invariant-type sequence
+      is a structural signature of the depth hierarchy.
+    depends_on: ["SIM-005-v2", "SIM-004-v2"]
+    priority: 2
+
+  - id: "phi-in-biological-growth"
+    description: >
+      Investigate whether φ as the non-resonant eigenvalue of D₋₁ → D₀
+      is the same structural reason for φ's appearance in biological
+      growth patterns (phyllotaxis, shell spirals) and quasicrystal
+      diffraction. If all are instances of the same non-resonance
+      condition at different commitment depths, this is a cross-domain
+      confirmation of the depth hierarchy.
+    priority: 3
+    epistemic_note: >
+      Structural investigation only — not an assertion. Requires
+      D₋₁ → D₀ chain formally confirmed by SIM-004-v2 first.
+
+---
+
+cross_references:
+  - file: "core/specifications.yaml"
+    note: "R1 (existence) and R2 (distinction) — D₋₁ → D₀ in rule language"
+  - file: "core/depth-0-as-process.yaml"
+    note: "0a = D₋₁, 0b = D₀ sub-labels; Φ₀ cascade description;
+           three vectors as simultaneous R5-isotropic output of Φ₀;
+           notation reconciliation to be applied"
+  - file: "core/process-physics/ga-grades-as-process-stages.yaml"
+    note: "Grade-0 → grade-1 transition as process stage — same event"
+  - file: "core/process-physics/ccr-iteration-by-depth.yaml"
+    note: "Depth recursion; CCR as depth-transition parameter;
+           D₋₁ extends the table one level below D₀"
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "v_k ∧ v_{k+1} — bivector from φ-scaled vector pair;
+           partial parameter activation from continuous scaling"
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: "B² = -1 boundary condition; 2π/4π periodicity"
+  - file: "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
+    note: "SIM-004-v2 — confirms or refutes CCR¹ = 1 non-circularly;
+           required before CCR⁰ computation is meaningful"
