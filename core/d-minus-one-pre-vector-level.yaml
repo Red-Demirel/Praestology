@@ -1,13 +1,10 @@
 # /core/d-minus-one-pre-vector-level.yaml
 name: "D₋₁: Pre-Vector Level and the Non-Resonant Scaling Eigenvalue"
-version: "0.3"
-status: "STRUCTURAL CANDIDATE — D₋₁ as the R1/R2 transition restated in
-         vector-iteration language; φ as non-resonant scaling eigenvalue
-         derived from a physical selection principle, not asserted;
-         basis_note establishes φ governs the entire grade-1 basis;
-         algebraic→geometric invariant transition flagged at D₀→D₁;
-         pending SIM-004-v2 confirmation of the full chain
-         D₋₁ → D₀ → D₁ → α⁻¹"
+version: "0.4"
+status: "STRUCTURAL CANDIDATE — geometric origin of the recurrence derived;
+         φ and φ⁻¹ as algebraic consequences of the recurrence; CCR⁰ = φ⁻¹
+         derived as the transient retention factor; pending SIM-004-v2
+         confirmation of the full chain D₋₁ → D₀ → D₁ → α⁻¹"
 domain: "Core"
 
 description: >
@@ -20,12 +17,17 @@ description: >
   scaling eigenvalue φ as the structural invariant of the D₋₁ → D₀
   transition.
 
-  The D₀ → D₁ transition introduces a qualitative shift in the nature
-  of the scaling invariant: φ at D₋₁ → D₀ is an algebraic eigenvalue
-  of a recurrence; Wr_eq = 3/2 at D₀ → D₁ is a topological invariant
-  of an embedded curve. This transition from algebraic to geometric
-  invariant marks the point where the closure mechanism first produces
-  topology — not merely directed structure.
+  v0.4 restructures the derivation in strict direction-of-explanation
+  order: the geometric origin of the recurrence is derived first
+  (§geometric_origin); the algebraic consequences (φ, φ⁻¹, CCR⁰)
+  follow (§algebraic_consequences); interpretive observations are
+  clearly marked as tertiary convergence notes (§interpretive_notes).
+  The root-of-unity argument has been removed as vacuous; the
+  Fibonacci uniqueness claim has been relocated into the derivation
+  where it is provable; the "three directions" count is attributed
+  to co-naturality of Cl(3,0) with 3D, not to non-resonance;
+  φ is characterized as the relaxation rate toward D₀, not a
+  property of the fixed point.
 
 dependency_map:
   requires:
@@ -43,179 +45,269 @@ dependency_map:
 
 ---
 
-d_minus_one:
-  identity: "D₋₁ — Isotropic Scalar Phase Potential"
-  relationship_to_r1_r2: >
-    D₋₁ is the R1 ground state: indeterminate scalar potential,
-    no preferred direction, no grade structure beyond grade-0.
-    In the multivector language: D₋₁ = {α·1 : α ∈ ℝ} — the
-    grade-0 subspace of Cl(3,0). Maximum freedom; null space of
-    the commitment operator. Identical to what specifications.yaml
-    calls "pure potential prior to R2 distinction."
-  what_makes_it_a_level: >
-    D₋₁ is a level in the depth recursion because it is the domain
-    on which Φ₀ acts — the closure map whose fixed points are the
-    grade-1 vectors of D₀. The same operator/value split applies:
-      Φ₀: grade-0 configurations → grade-0 configurations
-      CCR⁰: the value Φ₀ computes at convergence
-      D₀ = Fix(Φ₀(D₋₁))
-    The fixed points of Φ₀ acting on D₋₁ are stable directed
-    grade-1 vectors — the first distinctions of R2.
+# ─────────────────────────────────────────────
+# §1  GEOMETRIC ORIGIN OF THE RECURRENCE
+# ─────────────────────────────────────────────
 
-  closure_map_phi_0:
+geometric_origin:
+
+  purpose: >
+    Derive the two-step memory relation v_{k+2} = v_{k+1} + v_k from
+    the minimal geometric requirements of the D₋₁ → D₀ transition.
+    This is the primary derivation; the eigenvalue consequences in §2
+    follow from it.
+
+  two_vector_states:
     statement: >
-      Φ₀ is the phase-relaxation map that finds the stable directional
-      baseline from isotropic scalar noise. The closure condition is:
-      the vector configuration v* is invariant under its own directional
-      locking — it does not precess or drift under the phase dynamics.
-    stability_requirement: >
-      At D₋₁ the phase configuration background is scalar and isotropic.
-      The D₋₁ → D₀ transition must produce a stable directed baseline —
-      a vector configuration that does not drift or decay under the
-      phase dynamics. Stability requires the scaling ratio between
-      successive vector states to be maximally non-resonant: no integer
-      power of the ratio can approximate 1 closely enough to cause
-      destructive interference.
-    non_resonance_condition: >
-      The optimal scaling ratio for non-resonance is the number with
-      the slowest-converging continued fraction — φ = (1+√5)/2.
-      This is the "most irrational" number in the sense of Diophantine
-      approximation: it is the least approximable by rationals, hence
-      the most resistant to periodic resonance.
-    fibonacci_as_consequence: >
-      The Fibonacci recurrence v_{k+1} = v_k + v_{k-1} is the unique
-      linear two-step recurrence whose characteristic equation has φ
-      as a root. It is a consequence of the non-resonance condition,
-      not an independent assumption. If the stability requirement
-      holds, the recurrence follows.
-    basis_note: >
-      The Fibonacci recurrence establishes φ as the scaling eigenvalue
-      for any stable grade-1 direction in Cl(3,0). All three basis
-      vectors e₁, e₂, e₃ of D₀ carry this eigenvalue — φ governs
-      the scaling of the entire grade-1 basis, not a single preferred
-      direction. The three vectors are the three independent applications
-      of the same D₋₁ → D₀ closure in three orthogonal directions,
-      consistent with R5 isotropy. Φ₀ produces {e₁, e₂, e₃}
-      simultaneously precisely because no direction is preferred at D₋₁;
-      the non-resonance condition is satisfied in all three orthogonal
-      directions by the same eigenvalue φ.
+      Two vector states v_k and v_{k+1} in D₀ generate a single bivector
+      plane B_k = v_k ∧ v_{k+1}. This is the minimal relational closure
+      of two 1D states. It has static geometric orientation — a plane
+      in Cl(3,0) — but no process, no memory, no scale.
+    role: "Baseline: one bivector plane, no recurrence"
+
+  three_vector_states:
+    statement: >
+      A third vector state v_{k+2} generates an adjacent bivector closure
+      B_{k+1} = v_{k+1} ∧ v_{k+2}. The intermediate state v_{k+1} is the
+      shared geometric coupling between B_k and B_{k+1}.
+    role: >
+      This is the minimal configuration that supports process: two
+      bivectors coupled through a shared boundary state. The recurrence
+      appears at this level, not at the two-state level.
+
+  non_destructive_phase_conservation:
+    statement: >
+      Requiring that the coupled bivector chain does not destructively
+      cancel phase across adjacent steps binds the three vector states
+      through a linear two-step memory relation. The relation must
+      express v_{k+2} as a linear combination of v_{k+1} and v_k — the
+      two states available at the boundary of B_{k+1}.
+    minimality: >
+      Among linear two-step recurrences with positive integer coefficients,
+      the relation v_{k+2} = v_{k+1} + v_k is the unique one that:
+        - carries the phase of the shared boundary state v_{k+1}
+        - carries the phase of the prior non-shared state v_k
+        - introduces no additional integer weight (no 2v_{k+1} or 2v_k)
+      The minimality requirement is what makes this recurrence unique
+      in context. It is not unique over all linear recurrences in general.
+
+  derivation_of_uniqueness:
+    statement: >
+      The phase of B_{k+1} has two contributions: the shared boundary
+      v_{k+1} and the newly introduced v_{k+2}. Non-destructive
+      conservation requires that the phase of v_{k+2} not cancel the
+      phase carried by v_{k+1}. The minimal relation with this property,
+      where each integer coefficient is 1 (no multiplicative bias toward
+      either contribution), is v_{k+2} = v_{k+1} + v_k.
+    provable_over: "ℤ⁺ coefficients of minimal total weight"
+    status: >
+      DERIVED given the geometric setup. The uniqueness claim is
+      legitimate here, in context — not as a general claim about
+      recurrences over ℝ.
+
+  what_the_recurrence_produces:
+    statement: >
+      The recurrence is a two-step memory relation whose iteration
+      from an arbitrary initial pair (v_0, v_1) generates the
+      trajectory of the D₋₁ → D₀ transition. Fixed points and
+      eigenvalues are computed in §2.
+    role: "The recurrence is the object; eigenvalues are its algebra"
 
 ---
 
-phi_as_scaling_eigenvalue:
-  statement: >
-    The Fibonacci recurrence v_{k+1} = v_k + v_{k-1} has a scaling
-    eigenvalue λ satisfying:
-      λ·v_k = v_{k+1} = v_k + v_{k-1}  →  λ² - λ - 1 = 0
-    The positive root is φ = (1 + √5)/2 ≈ 1.618...
-    This is the non-resonant scaling eigenvalue of the D₋₁ → D₀
-    transition: the unique ratio at which successive vector states
-    scale without destructive periodic resonance.
-  why_non_resonant: >
-    φ is irrational and not a root of unity — no integer power of
-    φ equals 1. This means a vector sequence scaled by φ never
-    returns exactly to its starting orientation, preventing the
-    phase cancellation (destructive interference) that would
-    collapse the vector baseline back to the D₋₁ isotropic state.
-    φ is the minimum-friction scaling eigenvalue: it maintains
-    directed growth without resonance accumulation.
-  why_not_sqrt_2: >
-    √2 is also irrational but has a periodic continued fraction
-    [1; 2, 2, 2, ...], so it is well-approximable by rationals at
-    certain scales — it resonates. φ has the slowest-converging
-    continued fraction [1; 1, 1, 1, ...], making it the optimal
-    non-resonant scaling. Other recurrences (v_{k+1} = v_k,
-    v_{k+1} = 2v_k - v_{k-1}) either do not scale or scale at
-    resonant ratios; the non-resonance condition singles out φ.
-  connection_to_bivector_folding: >
-    The outer product v_k ∧ v_{k+1} of two consecutive φ-scaled
-    vectors produces a bivector plane B = v_k ∧ v_{k+1} whose
-    area ratio between successive folds is also φ — the bivector
-    plane grows at the same non-resonant rate as the vectors that
-    generate it. This establishes the stable orientational growth
-    that Φ₁ then closes into the Möbius vortex of D₁.
-  epistemic_status: >
-    STRUCTURAL OBSERVATION — φ emerges from the non-resonance
-    condition of the D₋₁ → D₀ transition as a selection principle.
-    The Fibonacci recurrence is its algebraic expression. Its
-    connection to the golden ratio appearing in biological growth
-    patterns, quasicrystals, and optimal packing is noted as
-    convergent structure — all are instances of the same
-    non-resonance condition applied at different commitment depths.
-    This connection is not asserted as a derivation; it is flagged
-    as a structural pattern worth investigating once the D₀ → D₁
-    chain is confirmed by SIM-004-v2.
+# ─────────────────────────────────────────────
+# §2  ALGEBRAIC CONSEQUENCES
+# ─────────────────────────────────────────────
+
+algebraic_consequences:
+
+  characteristic_equation:
+    statement: >
+      The recurrence v_{k+2} = v_{k+1} + v_k has companion matrix
+        M = [[1, 1],
+             [1, 0]]
+      with characteristic polynomial
+        λ² - λ - 1 = 0
+    derived_from: "§geometric_origin"
+
+  eigenvalues:
+    statement: >
+      The two roots of the characteristic equation are:
+        λ₁ = φ   = (1 + √5)/2 ≈  1.618034
+        λ₂ = -1/φ = (1 - √5)/2 ≈ -0.618034
+      These are algebraic in ℚ(√5). No new algebraic content is
+      introduced beyond what the recurrence already requires.
+    reading:
+      lambda_1: "Growth mode — the committed direction"
+      lambda_2: "Decay mode — the transient/undecided direction"
+    band_compatibility: >
+      The viable CCR band is 0 < CCR < 1 (closure-configuration-ratio.yaml:
+      CCR = 1 is the uncommitted limit, CCR → 0 is forbidden by R1).
+      |λ₁| = φ > 1 exceeds the band. |λ₂| = φ⁻¹ ≈ 0.618 lies in the
+      band. φ⁻¹ is therefore the unique eigenvalue magnitude compatible
+      with the framework's own viability constraint.
+
+  general_solution:
+    statement: >
+      The general solution of the recurrence is
+        v_k = α φᵏ u + β (-1/φ)ᵏ w
+      where u and w are the two eigenvectors and α, β are fixed by the
+      initial pair (v_0, v_1). As k → ∞ the φᵏ mode dominates; the
+      transient mode decays at |λ₂| = φ⁻¹ per step.
+    convergence_target: >
+      The D₀ basis vectors are the fixed points of Φ₀ — the configuration
+      the trajectory converges to. φ characterizes the *relaxation toward*
+      those fixed points, not a property of the fixed points themselves.
+
+  ccr_0_derivation:
+    symbol: "CCR⁰"
+    value: "φ⁻¹ = (√5 - 1)/2 ≈ 0.618034"
+    statement: >
+      CCR⁰ is the retention factor of the decaying transient mode of
+      the D₋₁ → D₀ transition. It is the fraction of open phase space
+      carried forward per cycle — the residual openness that the next
+      cycle must process.
+    role: >
+      The φᵏ mode is the committed direction (grows without bound).
+      The (-1/φ)ᵏ mode is the undecided/transient direction (decays
+      by φ⁻¹ per cycle). After one cycle, φ⁻¹ of the transient survives;
+      the complement has been resolved or carried forward.
+    reading_precision: >
+      CCR⁰ is a property of the relaxation trajectory, not of the fixed
+      points. It measures the per-cycle retention of openness during
+      the approach to D₀. It is not attributed to the D₀ basis vectors
+      themselves — fixed points do not scale.
+    uniqueness: >
+      φ⁻¹ is the unique eigenvalue magnitude of the recurrence that
+      lies in the viable CCR band. The framework's own viability
+      constraint selects it without additional assumption.
+    epistemic_status: >
+      DERIVED from the recurrence in §geometric_origin. The open item
+      "CCR⁰ = φ or a simple function of φ" is now closed with a specific
+      value, using only the recurrence's own structure.
+
+  alternating_sign_note: >
+    The decaying eigenvalue is negative (λ₂ = -1/φ). The transient
+    alternates sign each cycle. This is the algebraic signature of a
+    conjugate relation between the committed and transient modes
+    (see commitment-depletion-duality.yaml). Flagged as a potential
+    structural link, not asserted as a derivation.
 
 ---
 
-algebraic_to_geometric_invariant_transition:
-  statement: >
-    The two depth transitions in the chain carry structurally
-    different kinds of scaling invariant:
+# ─────────────────────────────────────────────
+# §3  INTERPRETIVE NOTES (TERTIARY)
+# ─────────────────────────────────────────────
 
-    D₋₁ → D₀:  φ = (1+√5)/2
-      Kind: algebraic eigenvalue of a recurrence relation
-      Origin: the non-resonance condition on iterating vectors
-      Meaning: minimum-friction, non-resonant directional scaling
-      Topology produced: none — grade-1 vectors have direction but
-        no enclosed area, no writhe, no linking
+interpretive_notes:
 
-    D₀ → D₁:  Wr_eq = 3/2
-      Kind: topological invariant of an embedded curve
-        (writhe from Calugareanu-White-Fuller applied to the
-        equilibrium Möbius centreline)
-      Origin: the 720° closure of the Möbius vortex in 3D
-      Meaning: the self-linking geometry of the closed curve
-      Topology produced: the first genuine topology — enclosed
-        area (bivector plane), writhe, chirality, spin-½
+  purpose: >
+    Interpretive observations that motivate or contextualize the
+    derivation in §1–§2. None of these are premises of the derivation;
+    they are consequences, contextual notes, or convergent patterns.
+    Clearly separated from the algebraic content.
 
-  significance: >
-    The transition from algebraic to geometric invariant at D₀→D₁
-    is not incidental. It marks the point where the closure mechanism
-    first produces topology rather than merely directed structure.
-    Before D₁: the structures are directed (grade-1 vectors) but not
-    closed — no enclosed area, no linking number, no chirality.
-    At D₁: the Möbius vortex is a closed curve in 3D with
-    well-defined writhe, a topological invariant that cannot be
-    removed by smooth deformation. This is the origin of matter's
-    topological protection — and it arises at exactly the depth
-    where the invariant type changes from algebraic to geometric.
+  hurwitz_non_resonance:
+    statement: >
+      φ is the least-approximable irrational number in the sense of
+      Diophantine approximation — its continued fraction [1;1;1,1,...]
+      converges more slowly than any other irrational. This is the
+      Hurwitz/Lagrange extremal property.
+    role: >
+      This is *why* the recurrence's growth eigenvalue is the optimal
+      non-resonant scaling: a vector chain scaled by φ never returns
+      to its starting orientation closely enough to cause destructive
+      interference. But this is a consequence of the algebraic
+      derivation in §1–§2, not an argument for it. The recurrence is
+      derived first; φ emerges; its non-resonance is then recognized
+      as the reason the derived scaling is stable.
+    removed_lines: >
+      The earlier "not a root of unity" argument has been removed. Every
+      irrational satisfies "not a root of unity," so the condition
+      selects nothing. The Hurwitz/Lagrange statement is the correct
+      and non-vacuous form.
 
-  implication_for_ccr_series: >
-    If the pattern continues, D₁ → D₂ may introduce a third kind
-    of invariant — combinatorial or index-theoretic (the Connes-Dirac
-    spectral index proposed in the session-3 induction). The
-    invariant-type sequence algebraic → geometric → combinatorial
-    would then be a structural signature of the depth hierarchy,
-    not a coincidence. Open: confirm this at D₂.
+  count_three_from_co_naturality:
+    statement: >
+      The D₀ basis has exactly three independent directions because
+      Cl(3,0) is the co-natural algebra for 3-dimensional space. The
+      count three is a property of the algebra, not of the non-resonance
+      condition.
+    correction_from_v0_3: >
+      v0.3 implied that φ governs the scaling of all three directions
+      in a way that could be read as "φ produces the count three."
+      This is a category error. Non-resonance selects a scale; the
+      count comes from co-naturality. The two facts are independent:
+        - D₀ has three basis directions (from Cl(3,0) ≅ 3D space)
+        - The relaxation toward each of those directions proceeds at
+          rate φ (from the recurrence in §1)
+    what_phi_does_not_produce: >
+      φ does not produce the number three. It does not select which
+      three directions exist. It characterizes the rate at which the
+      trajectory approaches whichever fixed basis the recurrence
+      converges to.
+
+  fixed_points_do_not_scale:
+    statement: >
+      The D₀ basis vectors are the fixed points of Φ₀ — they are
+      invariant under the closure map. Fixed points do not scale.
+      φ characterizes the *relaxation* of the trajectory toward those
+      fixed points, not a property of the fixed points themselves.
+    language_correction: >
+      The earlier adjective "φ-scaled" applied to the D₀ basis was
+      conceptually confused — it attributed to the fixed points what
+      belongs to the trajectory. v0.4 uses "relaxation rate φ" for
+      the trajectory and does not characterize the fixed points by φ.
+      The correction applies to the language of CCR⁰ as well: CCR⁰
+      describes the relaxation, not the endpoint.
+
+  biological_phi_convergence:
+    statement: >
+      φ appears in biological growth patterns (phyllotaxis, shell
+      spirals), quasicrystal diffraction, and optimal packing
+      configurations. If these are instances of the same non-resonance
+      condition applied at higher commitment depths, this would be
+      cross-domain convergence.
+    status: >
+      STRUCTURAL INVESTIGATION — not asserted as derivation. Requires
+      the D₋₁ → D₀ chain to be confirmed by SIM-004-v2 first, and the
+      higher-depth application of the same non-resonance condition to
+      be shown explicitly. Flagged as convergent pattern, not evidence.
 
 ---
+
+# ─────────────────────────────────────────────
+# §4  THE THREE-LEVEL CHAIN
+# ─────────────────────────────────────────────
 
 three_level_chain:
+
   d_minus_1_to_d0:
     closure_map: "Φ₀"
     input: "D₋₁ — isotropic grade-0 scalar potential"
-    output: "D₀ — stable grade-1 basis {e₁, e₂, e₃}, all φ-scaled"
-    scaling_invariant: "φ = (1+√5)/2 — non-resonant algebraic eigenvalue"
+    output: "D₀ — stable grade-1 basis; the three directions are co-natural with 3D"
+    relaxation_rate: "φ per cycle (from the recurrence in §1)"
+    transient_retention: "φ⁻¹ per cycle = CCR⁰"
     physical_reading: >
-      R1/R2 transition: indeterminate potential develops first
-      directed distinctions. φ ensures all three basis directions
-      are stable against resonance collapse. R5 isotropy requires
-      all three directions simultaneously — no preferred direction
-      at D₋₁ means the closure applies uniformly in all three.
-    ccr_value: "CCR⁰ — not yet computed; candidate: φ itself or a
-                simple function of φ and the Cl(3,0) geometry"
+      R1/R2 transition: indeterminate potential develops first directed
+      distinctions. The three directions are the grade-1 subspace of
+      Cl(3,0); the count is from co-naturality. The relaxation toward
+      each fixed direction proceeds at rate φ; the per-cycle retention
+      of openness is φ⁻¹.
+    ccr_value: "CCR⁰ = φ⁻¹ (derived §2)"
 
   d0_to_d1:
     closure_map: "Φ₁"
-    input: "D₀ — grade-1 basis {e₁, e₂, e₃}, φ-scaled"
-    intermediate: "v_k ∧ v_{k+1} = B — bivector planes from φ-scaled vector pairs"
+    input: "D₀ — grade-1 basis; fixed points of Φ₀"
+    intermediate: "v_k ∧ v_{k+1} = B — bivector planes from adjacent vector pairs"
     containment: "B² = -1 → unit bivector periodicity → 2π/4π boundary metrics"
     output: "D₁ — 720° Möbius vortex"
     topological_invariant: "Wr_eq = 3/2 (CWF on equilibrium centreline)"
     invariant_type_shift: >
-      Algebraic (φ) → Geometric (Wr_eq): first topology appears here.
-      The bivector plane has enclosed area; the Möbius closure has writhe.
+      Algebraic (φ, φ⁻¹) → Geometric (Wr_eq): first topology appears
+      at this transition. The bivector plane has enclosed area; the
+      Möbius closure has writhe. The invariant type changes from
+      eigenvalue-of-recurrence to topological-writhe-of-curve.
     geometric_yield: "f_closure = (1/4π) ∫_{S²} χ(B) dB (GP solve)"
     ccr_value: "CCR¹ = 1 (reference unit — to be confirmed non-circularly
                 by SIM-004-v2)"
@@ -226,65 +318,21 @@ three_level_chain:
     where f_closure is the only quantity requiring numerical computation
     (the GP solve over S²). Wr_eq = 3/2 is topologically fixed.
     The full chain from D₋₁ to α⁻¹:
-      φ (non-resonant algebraic eigenvalue of D₋₁ → D₀)
-      → stable grade-1 basis {e₁, e₂, e₃}, all φ-scaled
-      → bivector planes {B₁, B₂, B₃} via outer products of φ-scaled pairs
+      recurrence v_{k+2} = v_{k+1} + v_k   (from §1 geometric origin)
+      → eigenvalues φ (growth), φ⁻¹ (decay)   (§2)
+      → CCR⁰ = φ⁻¹   (transient retention)
+      → D₀ fixed basis (three directions, co-natural with 3D)
+      → bivector planes {B₁, B₂, B₃} via outer products
       → 720° Möbius vortex (D₁ fixed point under Φ₁)   [topology first appears]
       → Wr_eq = 3/2 (topological invariant of D₁)
       → f_closure (geometric yield of Φ₁ over S²)
       → α⁻¹ = 1/(Wr_eq · f_closure)
 
-geometric_origin_of_the_recurrence:
-  statement: >
-    The Fibonacci recurrence is not assumed; it is the minimal linear
-    two-step memory relation compatible with non-destructive phase
-    conservation across adjacent bivectors. Two vector states produce
-    one bivector plane (static orientation). Three vector states with
-    a shared boundary produce two adjacent bivectors coupled through
-    the shared state — and this coupling is what requires the memory
-    relation v_{k+2} = v_{k+1} + v_k.
-  two_vs_three_states:
-    two_states: "v_k, v_{k+1} → single bivector plane (static orientation, no process)"
-    three_states: "v_k, v_{k+1}, v_{k+2} with shared boundary → process memory; φ emerges as the scaling eigenvalue"
-  placement_in_depth_table: >
-    φ operates at both D₋₁ → D₀ (algebraic eigenvalue of vector
-    baseline) and D₀ → D₁ (geometric scaling of adjacent bivector
-    chain). Same non-resonance principle, two realizations.
-  direction_of_explanation: >
-    The direction is now: minimal non-destructive coupling of adjacent
-    bivectors → two-step memory relation → φ as eigenvalue. Not:
-    assumption of Fibonacci → consequence of φ. This is a genuine
-    improvement in the epistemic posture — the recurrence is derived
-    from a physical requirement, not asserted as a mathematical form.
-
-ccr0_derivation:
-  statement: >
-    CCR⁰ = φ⁻¹ = (√5 - 1)/2 ≈ 0.618 — the retention factor of the
-    decaying transient mode of the Fibonacci recurrence. It is the
-    unique eigenvalue magnitude of the D₋₁ → D₀ transition that lies
-    in the viable CCR band (0, 1), and it stays in ℚ(√5) — no new
-    algebraic content beyond φ.
-  reading: >
-    The φ^k mode is the committed direction (grows without bound).
-    The (−1/φ)^k mode is the undecided/transient direction (decays
-    by φ⁻¹ per cycle). CCR⁰ = φ⁻¹ is the fraction of open phase space
-    that remains after one closure cycle — the carry-forward openness
-    that the next cycle must process.
-  uniqueness: >
-    The two eigenvalues are φ (exceeds the band) and −φ⁻¹ (in the band
-    in absolute value). φ⁻¹ is the unique band-compatible eigenvalue
-    magnitude. The framework's own viability constraint selects it —
-    no additional assumption.
-  epistemic_upgrade: >
-    The open item "CCR⁰ = φ or a simple function of φ" is now
-    closed: CCR⁰ = φ⁻¹, derived from the recurrence, not chosen.
-  alternating_sign_note: >
-    The negative sign of λ₂ = −1/φ means the transient alternates
-    sign each cycle. This is the algebraic signature of the conjugate
-    commitment/depletion relation (see commitment-depletion-duality.yaml).
-    Flagged as a potential structural link, not asserted.
-
 ---
+
+# ─────────────────────────────────────────────
+# §5  DEPTH TABLE AND OPEN ITEMS
+# ─────────────────────────────────────────────
 
 relationship_to_depth_recursion:
   notation_note: >
@@ -299,13 +347,21 @@ relationship_to_depth_recursion:
     - depth: "D₋₁"
       domain: "Grade-0 scalar potential"
       closure_map: "Φ₀"
-      invariant: "φ (algebraic — recurrence eigenvalue)"
+      invariant: "None (base level, no structure yet)"
       stable_configurations: "Grade-1 basis {e₁, e₂, e₃} (D₀)"
       topology: "None"
-      status: "ESTABLISHED (R1/R2 in specifications.yaml); φ connection CANDIDATE"
+      status: "ESTABLISHED (R1/R2 in specifications.yaml)"
+
+    - depth: "D₋₁ → D₀"
+      domain: "Relaxation toward the fixed grade-1 basis"
+      closure_map: "Φ₀"
+      invariant: "φ = (1+√5)/2 — algebraic eigenvalue of the recurrence"
+      stable_configurations: "Fixed basis vectors of D₀"
+      transient_retention: "CCR⁰ = φ⁻¹"
+      status: "DERIVED (§1–§2); pending SIM-004-v2 for downstream chain"
 
     - depth: "D₀"
-      domain: "Grade-1 vector basis, φ-scaled"
+      domain: "Grade-1 vector basis (fixed points of Φ₀)"
       closure_map: "Φ₁"
       invariant: "Wr_eq = 3/2 (geometric — topological writhe)"
       stable_configurations: "720° Möbius vortex, photon, quark (D₁)"
@@ -328,10 +384,7 @@ relationship_to_depth_recursion:
       topology: "Open"
       status: "STRUCTURAL PREDICTION — open"
 
----
-
 open_items:
-
   - id: "ccr2-invariant-type"
     description: >
       Determine whether the D₁ → D₂ invariant (CCR²) is combinatorial
@@ -346,13 +399,21 @@ open_items:
       Investigate whether φ as the non-resonant eigenvalue of D₋₁ → D₀
       is the same structural reason for φ's appearance in biological
       growth patterns (phyllotaxis, shell spirals) and quasicrystal
-      diffraction. If all are instances of the same non-resonance
-      condition at different commitment depths, this is a cross-domain
-      confirmation of the depth hierarchy.
+      diffraction.
     priority: 3
     epistemic_note: >
       Structural investigation only — not an assertion. Requires
       D₋₁ → D₀ chain formally confirmed by SIM-004-v2 first.
+
+  - id: "ccr0-experimental-access"
+    description: >
+      CCR⁰ = φ⁻¹ is a process-level quantity. Is there any observable
+      whose value traces back to φ⁻¹ as a derived quantity (rather than
+      φ appearing as a numerological coincidence)? The clearest candidate
+      is the relaxation rate of a physical system whose initial condition
+      is close to D₋₁ isotropic — the approach to fixed directional
+      order. Open.
+    priority: 3
 
 ---
 
@@ -361,7 +422,6 @@ cross_references:
     note: "R1 (existence) and R2 (distinction) — D₋₁ → D₀ in rule language"
   - file: "core/depth-0-as-process.yaml"
     note: "0a = D₋₁, 0b = D₀ sub-labels; Φ₀ cascade description;
-           three vectors as simultaneous R5-isotropic output of Φ₀;
            notation reconciliation to be applied"
   - file: "core/process-physics/ga-grades-as-process-stages.yaml"
     note: "Grade-0 → grade-1 transition as process stage — same event"
@@ -369,10 +429,12 @@ cross_references:
     note: "Depth recursion; CCR as depth-transition parameter;
            D₋₁ extends the table one level below D₀"
   - file: "core/process-physics/bivector-partial-parameters.yaml"
-    note: "v_k ∧ v_{k+1} — bivector from φ-scaled vector pair;
-           partial parameter activation from continuous scaling"
+    note: "v_k ∧ v_{k+1} — bivector from adjacent vector pair"
   - file: "core/process-physics/rotor-to-ccr-transition.yaml"
     note: "B² = -1 boundary condition; 2π/4π periodicity"
+  - file: "core/process-physics/commitment-depletion-duality.yaml"
+    note: "Alternating sign of the transient mode — potential conjugate
+           relation with the commitment/depletion cycle"
   - file: "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
     note: "SIM-004-v2 — confirms or refutes CCR¹ = 1 non-circularly;
-           required before CCR⁰ computation is meaningful"
+           required before the downstream chain is meaningful"
