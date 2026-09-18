@@ -1,0 +1,246 @@
+# /core/process-physics/commitment-depletion-duality.yaml
+name: "Commitment-Depletion Duality: Gravity and Inertia as Two Reads of the Assembly Map"
+version: "0.1"
+status: "STRUCTURAL HYPOTHESIS — commitment and Π_eff depletion as complementary
+         reads of the same integral; assembly-map expression proposed;
+         oscillation framing flagged as a reading, not a derived mechanism"
+domain: "Core / Process-Physics"
+
+description: >
+  Inertia and gravity are not two effects that happen to agree. They are
+  two readings of the same accumulated commitment integral. Inertia is
+  the accumulated commitment read from inside the object (the cost of
+  re-opening the chain). Gravity is the depletion of Π_eff caused by
+  that same commitment, read from outside (the negative of the commitment,
+  as a deviation from the baseline free potential). The two are related
+  by the Baum-Connes assembly map μ, which takes the geometric side
+  (commitment potential) to the analytic side (committed structure),
+  enforcing the K₀/K₁ balance.
+
+dependency_map:
+  requires:
+    - "core/inside-out-channeling.yaml"
+    - "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+    - "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/ccr-iteration-by-depth.yaml"
+  provides_to:
+    - target: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+      via: "Assembly-map expression of the equivalence"
+
+---
+
+structural_claim:
+
+  statement: >
+    Every committed structure carries an accumulated integrand across its
+    depth chain. This integral has two faces:
+      - Read internally: resistance to reconfiguration — inertia I_rot
+      - Read externally: local depletion of Π_eff — gravity
+
+    The two are not independent effects that happen to agree. They are the
+    same integral, read from inside the structure and from the surrounding
+    field respectively.
+
+  sign_convention: >
+    Commitment is a positive deviation from the baseline (higher η,
+    lower local Π_eff). Gravity is the negative deviation — the same
+    commitment viewed as a deficit in free potential. The framework's
+    two-valued cycle (commitment ↔ dissolution) means the positive
+    and negative reads are two phases of one oscillation.
+
+  why_oscillation_framing: >
+    Commitment and its gravitational signature are not static. Regress
+    (R_diss) returns commitment to free potential. In environments where
+    the process rate is non-negligible (high Π_eff), a committed structure
+    gradually dissolves, its gravity weakens, and the free potential
+    recovers. This is the oscillatory reading: +commitment → −gravity →
+    dissolution → +free potential → ...
+
+  connection_to_existing_files: >
+    inside-out-channeling.yaml already establishes that commitment
+    lowers Π_eff locally. gravity-inertia-equivalence-from-r5.yaml
+    already establishes that gravity and inertia are two sides of the
+    same R5 event. This file supplies the specific reading: the two
+    sides are the positive and negative deviations from the baseline,
+    related by the assembly map.
+
+---
+
+assembly_map_expression:
+
+  statement: >
+    The Baum-Connes assembly map μ: K^top → K(C*_r) is the algebraic
+    expression of the commitment-depletion duality. It maps the
+    geometric-potential side (free potential, Π_eff, the "would-be"
+    commitment space) to the analytic side (committed structure,
+    inertia, the "has-committed" configuration).
+
+  k_theory_reading:
+    K_top_side: "The explorative side — free potential, geometric configurations, current Π_eff"
+    K_analytic_side: "The committed side — accumulated η, concrete structure, current I_rot"
+    assembly_map: >
+      μ: K^top(D_{d-1}) → K(C*_r(D_d)) takes the free potential at
+      the previous depth's boundary to the committed structure at the
+      current depth. Commitment is the image of available potential
+      under μ.
+    balance: >
+      The K₀/K₁ balance means every unit of commitment in the analytic
+      side corresponds to a unit of depleted potential in the geometric
+      side. The assembly map is the exact expression of this conservation.
+
+  implication:
+    inertia_from_k0: >
+      I_rot is the accumulated K₀ content of the committed structure —
+      the analytic side, the "has-been-committed" integral.
+    gravity_from_k1_depletion: >
+      The gravitational field is the gradient of the K₁ deficit —
+      the geometric side, read as what has *not* been committed because
+      it has been taken up by the structure.
+    equivalence: >
+      μ identifies them. I_rot and the gravitational effect are the same
+      object under μ. There is no equivalence principle to prove
+      separately — it is the definition of μ.
+
+  what_this_strengthens: >
+    The standard equivalence principle states that gravitational and
+    inertial mass are observationally indistinguishable. This reading
+    states something stronger: they are the *same accounting* read from
+    different vantage points. The distinction between them is not a
+    physical fact that happens to hold; it is a notational artifact of
+    reading the same integral from inside vs. outside.
+
+---
+
+oscillation_reading:
+
+  statement: >
+    The commitment-depletion duality is best read as a driven-damped
+    oscillation. The two conjugate variables are:
+      +commitment (η) — the analytic side
+      −Π_eff (depletion) — the geometric side
+    Regress (R_diss) plays the role of the restoring force: it returns
+    commitment to free potential.
+
+  phases:
+    commitment_phase: >
+      R4 fires, η increases, Π_eff decreases locally, gravity well deepens.
+      The positive deviation and its negative counterpart grow together.
+    peak: >
+      Commitment saturates at the viability threshold V_c. Further
+      commitment would violate the closure condition. The oscillation
+      reaches its maximum amplitude.
+    dissolution_phase: >
+      R_diss drives Regress. Commitment returns to free potential.
+      Π_eff recovers. The gravity well fills. The negative counterpart
+      of the commitment shrinks together with the commitment itself.
+    baseline: >
+      When all commitment has dissolved, η = baseline, Π_eff = baseline,
+      and the oscillation returns to its starting point. Free potential
+      is replenished.
+
+  what_this_is_not: >
+    The oscillation is not a periodic motion in any physical time
+    coordinate. It is a structural reading of the R4/R_diss cycle in
+    terms of conjugate deviations from baseline. Whether the cycle is
+    harmonic, damped, driven, or something else is an open question.
+
+  open_dynamics: >
+    The precise form of the oscillation — its frequency, damping, and
+    driving term — is not yet derived. The framework's R4/R_diss cycle
+    suggests a driven-damped form, but the explicit dynamics requires
+    the depth-chain integrand to be specified (see
+    inertia_as_accumulated_integrand below).
+
+---
+
+inertia_as_accumulated_integrand:
+
+  statement: >
+    I_rot for any committed object is the integral over the depth chain
+    of the per-depth integrand-operands. Each depth contributes its
+    committed phase-space cost, and the total is the object's resistance
+    to reconfiguration.
+
+  per_depth_contribution:
+    D₋₁ → D₀: "φ-scaled algebraic baseline"
+    D₀ → D₁: "Wr_eq · Ω_rotor(1) — the Möbius closure cost"
+    D₁ → D₂: "CCR_binding(d1,d2) — the binding cost"
+    ...
+
+  total_inertia: >
+    I_rot = Σ_d (committed phase-space cost at depth d)
+    or, if back-coupling is present:
+    I_rot = ∫_{chain} ρ_committed(D) dD
+
+  gravity_as_accumulated_eta: >
+    The same integral, read as commitment density η, produces the local
+    suppression of Π_eff. The gradient of Π_eff is the gravitational field.
+    So gravity and inertia are the same integral, one read externally
+    (gravity) and one internally (inertia).
+
+  open: >
+    Whether the integration is a sum or a nested integral;
+    whether commitment at deeper depths back-couples to shallower depths;
+    whether the coupling strength between depths is itself depth-dependent.
+
+---
+
+open_questions:
+
+  - id: "oscillation_dynamics"
+    description: >
+      Is the commitment-depletion relation a harmonic oscillation, a
+      damped one, a driven one, or something else? The framework's
+      R4/R_diss cycle suggests a driven-damped form, but the precise
+      dynamics is open.
+    priority: 2
+
+  - id: "mu_explicit_form"
+    description: >
+      Write the assembly map μ explicitly for the commitment-depletion
+      case: what is the C*-algebra at each depth, and what is μ's action
+      on the relevant K-classes? Requires the depth-2 equilibrium shape
+      to be known.
+    priority: 2
+
+  - id: "deviation_curvature"
+    description: >
+      If commitment is a positive deviation and gravity is the negative,
+      is the relationship exactly linear (harmonic) or does it have
+      curvature? Specifically: is the gravitational potential equal to
+      minus the commitment density, or some function of it?
+    priority: 3
+
+  - id: "regress_as_restoring_force"
+    description: >
+      In the oscillation reading, R_diss (Regress) plays the role of the
+      restoring force — it returns commitment to free potential. Check
+      whether the Regress rate has the form of a restoring force in the
+      oscillation equation (proportional to displacement from baseline).
+    priority: 2
+
+  - id: "back_coupling_between_depths"
+    description: >
+      Does commitment at depth n back-couple to affect the inertia
+      contribution at depth n-1? If yes, the accumulated integrand is
+      a nested integral, not a sum. If no, the depths contribute
+      additively once closed.
+    priority: 2
+
+---
+
+what_this_establishes:
+  - "Inertia and gravity are two readings of the same integral — the commitment accumulated across the depth chain"
+  - "The assembly map μ is the algebraic expression of the equivalence"
+  - "The K₀/K₁ balance in the Baum-Connes correspondence enforces conservation: commitment on one side = depletion on the other"
+  - "The equivalence principle is not a separate postulate — it is the definition of μ in this reading"
+
+what_this_does_not_establish:
+  - "The precise dynamics of the oscillation (harmonic, damped, driven)"
+  - "The explicit form of μ for the commitment-depletion case"
+  - "Whether gravity is exactly the negative of commitment or a nonlinear function of it"
+  - "Whether the K₀/K₁ reading is the only correct reading, or one of several consistent algebraic expressions"
+  - "Whether the depth-chain integrand is additive or nested"
+
+# Addendum to /core/process-physics/commitment-depletion-duality.yaml
