@@ -1,0 +1,429 @@
+# /core/process-physics/ccr-excess-dissipation.yaml
+name: "CCR Excess Dissipation: Over-Commitment and the Origin of Thermal Flux"
+version: "0.1"
+status: "SOPHISTICATED HYPOTHESIS — structurally consistent with the framework;
+         requires the boundary-condition clarification (open item 1) before
+         becoming a derivation. Hawking radiation, Unruh effect, particle
+         decay, and vacuum-energy dissipation identified as parallel
+         candidates for the same mechanism. Falsification conditions stated."
+domain: "Core / Process-Physics"
+
+description: >
+  The framework currently admits CCR in (0, 1) — the viable band for
+  committed topology. This file explores whether the upper boundary is
+  actually CCR = 1 (saturation) rather than CCR = 1 (uncommitted limit),
+  which would open the range (1, ∞) as an over-committed regime. Any
+  configuration pushed above CCR = 1 by environmental compression would
+  then carry an excess δ = CCR − 1 that cannot be held as topological
+  lock and must dissipate. The hypothesis: this excess dissipation is
+  the common mechanism underlying Hawking radiation, the Unruh effect,
+  unstable-particle decay, and several related phenomena that the
+  framework currently treats separately.
+
+  This is a candidate, not a derivation. The prerequisite structural
+  clarification — whether CCR = 1 denotes the uncommitted limit or the
+  saturation limit — must be resolved first.
+
+dependency_map:
+  requires:
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/gravity-and-ccr-threshold.yaml"
+    - "core/inside-out-channeling.yaml"
+    - "core/process-physics/quanta-as-ccr-cost.yaml"
+    - "core/process-physics/relational-effects-extra-dof.yaml"
+    - "core/process-physics/commitment-depletion-duality.yaml"
+  relationship_to_existing_files: >
+    The framework already states that Regress (R_diss) dissolves
+    weakly-protected topology at rates proportional to Π_eff. This
+    file proposes that the *trigger* for Regress at compressed
+    boundaries is the CCR-excess δ, and that the dissipation
+    signature is thermal. The mechanism is compatible with existing
+    files; the specific trigger condition is new.
+
+---
+
+# ─────────────────────────────────────────────
+# §1  PREREQUISITE: BOUNDARY-CONDITION CLARIFICATION
+# ─────────────────────────────────────────────
+
+prerequisite_clarification:
+  statement: >
+    Before the excess-dissipation hypothesis can be evaluated, the
+    framework must clarify the meaning of CCR = 1 in
+    closure-configuration-ratio.yaml. The file currently states:
+
+      CCR = 1  →  topology occupies full phase space = uncommitted field
+                  (impossible for realized committed topology)
+
+    But elsewhere (ccr-iteration-by-depth.yaml) CCR¹ = 1 is used as the
+    reference unit for the electron's equilibrium. These are two
+    different claims about the same value:
+
+      Reading A: CCR = 1 means "uncommitted" — no realized topology
+      Reading B: CCR = 1 means "saturated" — full occupancy of the viable phase space
+
+    The two readings are compatible only if "uncommitted" and "saturated"
+    are the same limit — which they may not be.
+
+  proposed_clarification: >
+    Adopt Reading B: CCR = 1 is the *saturation* boundary. The
+    uncommitted limit is a higher value — call it the phase-space
+    capacity of the embedding, which is ≥ 1 and generally > 1. Under
+    this reading:
+
+      0 < CCR < 1   Under-committed — partial occupancy
+      CCR = 1       Saturated — full occupancy of viable phase space
+      CCR > 1       Over-committed — exceeds viable phase space
+
+    The electron's equilibrium at CCR¹ = 1 becomes "saturated,"
+    which is consistent with the electron being topologically
+    protected (a saturated closure).
+
+  consequence: >
+    If Reading B is adopted, the range (1, ∞) opens as an
+    over-committed regime. Any configuration pushed above 1 by
+    environmental compression carries an excess δ = CCR − 1 which
+    cannot be held as topological lock. The excess must dissipate.
+
+  status: >
+    OPEN — this is the prerequisite structural clarification. Until
+    it is resolved, the excess-dissipation hypothesis is a candidate
+    conditional on Reading B being adopted. The framework should
+    decide between Reading A and Reading B on independent grounds
+    (consistency with the rest of the closure conditions) before
+    evaluating the hypothesis.
+
+---
+
+# ─────────────────────────────────────────────
+# §2  THE EXCESS-DISSIPATION HYPOTHESIS
+# ─────────────────────────────────────────────
+
+hypothesis:
+
+  statement: >
+    When environmental compression (high P_env, high local η) pushes
+    the local CCR above 1, the excess δ = CCR − 1 cannot be stored as
+    committed topology. It dissipates through whatever channels are
+    available at the boundary of the over-committed region. The
+    dissipation is thermal because δ is a scalar over-commitment —
+    no specific orientation is being radiated, only magnitude excess.
+
+  mechanism:
+    trigger: >
+      Local CCR exceeds 1 due to compression. The configuration's
+      writhe-weighted phase-space volume exceeds the locally available
+      embedding capacity.
+    what_the_excess_is: >
+      δ = CCR − 1 is the fraction of the configuration's topological
+      cost that cannot be held by the current embedding. It is a
+      real-valued quantity with units of CCR — dimensionless, but
+      not physically meaningless: it is the magnitude of the mismatch
+      between the intrinsic configuration and the local environment.
+    dissipation_channels:
+      thermal_radiation: >
+        The excess couples to the surrounding Π_eff field and radiates
+        as phase-space quanta (quanta-as-ccr-cost.yaml). The radiation
+        is thermal because δ has no orientational structure — it is a
+        scalar magnitude of over-commitment, radiating equally into
+        whatever channels are open at the boundary.
+      regress: >
+        R_diss (Regress) dissolves weakly-protected committed topology
+        at a rate proportional to Π_eff. Under the excess hypothesis,
+        the trigger for Regress at the boundary is precisely δ > 0 —
+        the local CCR exceeding the viable range.
+      geometry_dependent_coupling: >
+        The relative weight of thermal radiation vs. Regress depends on
+        the geometry of the over-committed region. Small regions
+        dissipate primarily as radiation; large regions dissipate
+        primarily as Regress. The transition scale is the healing
+        length ξ.
+
+  rate_estimate:
+    order_of_magnitude: >
+      Dissipation rate scales as
+        dE/dt  ∝  Π_eff · δ · A_boundary
+      where A_boundary is the area of the over-committed region's
+      boundary. The area scaling (not volume) is a structural
+      prediction of the hypothesis — see §4 on falsification.
+    why_area: >
+      The excess δ is a boundary phenomenon, not a volume phenomenon.
+      The interior of an over-committed region is fully saturated
+      (CCR = 1 at the boundary layer); the excess exists only where
+      CCR transitions from 1 to the interior value. It is the surface
+      where the mismatch between configuration and environment is
+      expressed.
+
+  epistemic_status: >
+    HYPOTHESIS — the mechanism is structurally consistent with
+    existing framework claims (Regress, Π_eff suppression, quanta
+    as CCR cost). The specific trigger condition (δ > 0 at the
+    compressed boundary) is new. The rate formula is an estimate,
+    not a derivation.
+
+---
+
+# ─────────────────────────────────────────────
+# §3  PARALLEL CANDIDATES
+# ─────────────────────────────────────────────
+
+parallel_candidates:
+
+  statement: >
+    Under the excess-dissipation hypothesis, several phenomena the
+    framework currently treats separately become instances of the
+    same mechanism at different scales. This is offered as a
+    structural convergence, not as a claim that the mechanism has
+    been derived.
+
+  hawking_radiation:
+    over_commitment_source: "Infalling matter pushing local CCR above 1 near the horizon"
+    dissipation_signature: "Thermal flux at the horizon"
+    framework_alignment: >
+      Compatible with closure-configuration-ratio.yaml's claim that
+      Hawking radiation is Regress at the horizon. The new content is
+      the *trigger*: Regress activates because δ > 0, not because of
+      a separate horizon condition.
+    standard_reading_mapping:
+      event_horizon: "Surface where infalling matter pushes local CCR above 1"
+      hawking_temperature: "Set by local Π_eff times the excess fraction δ at the horizon"
+      bekenstein_hawking_entropy: "Measure of the phase space the over-committed configuration *would* need — see §4 on area scaling"
+      evaporation: "Continuous dissipation of δ as thermal flux, shrinking the configuration back toward CCR = 1"
+
+  unruh_effect:
+    over_commitment_source: "Accelerated frame locally compresses phase space"
+    dissipation_signature: "Thermal bath in the accelerated frame"
+    framework_alignment: >
+      Acceleration changes the local Π_eff seen by the configuration.
+      In a sufficiently accelerated frame, the effective phase space
+      available to the configuration is compressed, and the intrinsic
+      CCR exceeds the local viable range. The excess dissipates as
+      thermal flux — the Unruh bath.
+    relationship_to_hawking: "The Unruh effect is the local-frame version of the horizon phenomenon."
+
+  unstable_particle_decay:
+    over_commitment_source: "Unstable particles have intrinsic CCR marginally above 1"
+    dissipation_signature: "Decay to products with CCR ≤ 1"
+    framework_alignment: >
+      Some committed configurations may have CCR values that place
+      them marginally above the saturation boundary even in vacuum.
+      These are unstable — they cannot persist because their intrinsic
+      cost exceeds what the environment can sustain. They decay to
+      products whose combined CCR ≤ 1.
+    prediction: >
+      Decay lifetimes should correlate with the excess δ = CCR − 1
+      of the decaying particle. Higher excess → faster decay. This is
+      testable against the existing particle spectrum once CCR values
+      are computed from topology (SIM-001, SIM-005).
+
+  vacuum_energy:
+    over_commitment_source: "Global CCR of the universe near 1"
+    dissipation_signature: "Slow dissipation at cosmic scales (R_diss)"
+    framework_alignment: >
+      The cosmological constant (Λ) is already identified in the
+      framework as R_diss at cosmic scales. Under the excess hypothesis,
+      the global CCR of the universe sits marginally above 1, and the
+      excess dissipates as the observed cosmic acceleration. This is
+      consistent with the framework's existing claim that Λ is not a
+      constant but an environment-dependent dissolution rate.
+    prediction: >
+      The dark energy equation of state should show a small deviation
+      from w = −1 that traces the excess δ. The size of the deviation
+      scales with the current over-commitment fraction — testable in
+      principle, likely below current sensitivity.
+
+  zitterbewegung:
+    over_commitment_source: "Electron CCR marginally close to 1"
+    dissipation_signature: "Local fluctuation of the excess"
+    framework_alignment: >
+      The electron is at CCR¹ = 1 — the saturation boundary. Small
+      fluctuations in local Π_eff will momentarily push the electron
+      either below 1 (under-committed, marginal) or above 1 (excess,
+      which immediately dissipates). Zitterbewegung would then be the
+      observable signature of this boundary-layer fluctuation.
+    status: "SPECULATIVE — offered as a candidate connection, not asserted"
+
+  planck_scale_foam:
+    over_commitment_source: "Local CCR approaches 1 at the Planck scale"
+    dissipation_signature: "Virtual pair production as excess dissipation"
+    framework_alignment: >
+      At the Planck scale, the healing length ξ and the saturation
+      density n_sat approach the same scale. Every local attempt to
+      commit exceeds the phase space locally available. The excess
+      dissipates immediately as virtual pair production. This is
+      compatible with the framework's existing account of pre-R5
+      fluctuations as the vacuum carpet.
+    status: "SPECULATIVE — noted for completeness, not developed"
+
+---
+
+# ─────────────────────────────────────────────
+# §4  FALSIFICATION CONDITIONS
+# ─────────────────────────────────────────────
+
+falsification:
+
+  statement: >
+    The excess-dissipation hypothesis is falsified if any of the
+    following hold. Each condition is specific enough to be checked
+    against observation or derivation once the prerequisite
+    clarification is resolved.
+
+  conditions:
+    - condition: >
+        Black hole evaporation rate is independent of the local Π_eff
+        (contrary to the CCR-excess scaling dE/dt ∝ Π_eff · δ · A).
+      what_would_show_it: >
+        Precise measurements of Hawking-like radiation from analogue
+        systems (BEC horizons, optical horizons) where Π_eff can be
+        varied independently of the geometric horizon.
+      current_status: "Not yet tested; analogue systems are the near-term test bed."
+
+    - condition: >
+        Black hole entropy scales volumetrically rather than with
+        boundary area, contradicting the excess hypothesis's
+        prediction that δ is a boundary phenomenon.
+      what_would_show_it: >
+        Any confirmed volumetric entropy law for black holes. Current
+        theory and observation (Bekenstein-Hawking) favour area scaling,
+        which supports the hypothesis. A volumetric result would falsify it.
+      current_status: "Area scaling is well-established; hypothesis is consistent."
+
+    - condition: >
+        Unstable particle decay lifetimes show no correlation with any
+        topologically-derived excess δ once SIM-001 and SIM-005 close.
+      what_would_show_it: >
+        Comparison of derived CCR values for unstable particles against
+        their measured lifetimes. If no correlation appears, the
+        hypothesis fails at the particle scale.
+      current_status: >
+        Pending SIM-001 and SIM-005 results — this is a downstream
+        test that will become available once the quantitative CCR
+        values are computed.
+
+    - condition: >
+        The boundary-condition clarification is resolved in favour of
+        Reading A (CCR = 1 is the uncommitted limit), which would close
+        the range (1, ∞) and preclude over-commitment entirely.
+      what_would_show_it: >
+        Internal consistency checks in closure-configuration-ratio.yaml
+        and ccr-iteration-by-depth.yaml. If Reading A turns out to be
+        the only consistent reading, this hypothesis is empty.
+      current_status: "Open — the clarification is the prerequisite."
+
+    - condition: >
+        The Unruh effect is measured to be independent of acceleration-
+        induced Π_eff compression in a regime where the hypothesis
+        predicts a specific correction.
+      what_would_show_it: >
+        Precision tests of the Unruh effect in analogue systems
+        (accelerated mirrors, BEC analogues) at sensitivity sufficient
+        to detect deviations from the standard linear-in-acceleration
+        temperature formula.
+      current_status: "Not yet tested at required sensitivity."
+
+---
+
+# ─────────────────────────────────────────────
+# §5  WHAT NEEDS TO BE ESTABLISHED
+# ─────────────────────────────────────────────
+
+open_items:
+
+  - id: "boundary-condition-clarification"
+    description: >
+      Resolve whether CCR = 1 is the uncommitted limit (Reading A) or
+      the saturation limit (Reading B). This is the prerequisite.
+      If Reading A is correct, this file is empty. If Reading B, the
+      hypothesis is live.
+    priority: 1
+    depends_on: ["closure-configuration-ratio.yaml internal consistency"]
+
+  - id: "excess-dissipation-rate-derivation"
+    description: >
+      Derive the dissipation rate dE/dt from the master equation
+      with the CCR-excess as a source term. The current estimate
+      (dE/dt ∝ Π_eff · δ · A) is dimensional analysis, not derivation.
+    priority: 2
+    depends_on: ["boundary-condition-clarification"]
+
+  - id: "hawking-temperature-from-delta"
+    description: >
+      Show that the Hawking temperature is derivable from the local
+      Π_eff and the excess fraction δ at the horizon. Should recover
+      T_H = ℏc³/(8πGMk_B) in the appropriate limit. If the derived
+      formula differs from the standard one, quantify the difference.
+    priority: 2
+    depends_on: ["excess-dissipation-rate-derivation"]
+
+  - id: "area-scaling-from-boundary-delta"
+    description: >
+      Show that the Bekenstein-Hawking entropy (S ∝ A) follows from
+      δ being a boundary phenomenon. If the framework predicts area
+      scaling for black holes, this is a strong internal consistency
+      check. If it predicts volume scaling, the hypothesis is wrong.
+    priority: 2
+    depends_on: ["excess-dissipation-rate-derivation"]
+
+  - id: "particle-lifetime-from-ccr-excess"
+    description: >
+      Once SIM-001 and SIM-005 provide CCR values for unstable particles,
+      check whether decay lifetimes correlate with δ = CCR − 1. If not,
+      the hypothesis fails at the particle scale.
+    priority: 3
+    depends_on: ["SIM-001-v3", "SIM-005-v2"]
+
+---
+
+# ─────────────────────────────────────────────
+# §6  EPISTEMIC STATUS SUMMARY
+# ─────────────────────────────────────────────
+
+epistemic_status:
+
+  established:
+    - "Regress (R_diss) dissolves weakly-protected topology at rates proportional to Π_eff (existing framework)."
+    - "Hawking radiation is compatible with Regress at the horizon (closure-configuration-ratio.yaml)."
+    - "Π_eff suppression by committed topology is the mechanism of local compression (inside-out-channeling.yaml)."
+    - "Quanta are the indivisible units of CCR cost per R3→R5 event (quanta-as-ccr-cost.yaml)."
+
+  hypothesis:
+    - "CCR > 1 is the over-committed regime; δ = CCR − 1 is a real excess that must dissipate."
+    - "The dissipation is thermal because δ is scalar, not orientational."
+    - "Hawking radiation, Unruh effect, unstable decay, Λ, zitterbewegung, and Planck foam are parallel instances of excess dissipation at different scales."
+    - "Dissipation rate scales with boundary area, not volume."
+
+  prerequisite:
+    - "The boundary-condition clarification: is CCR = 1 the uncommitted limit (Reading A) or the saturation limit (Reading B)?"
+
+  what_would_upgrade_the_hypothesis_to_derivation:
+    - "Reading B adopted in closure-configuration-ratio.yaml."
+    - "Explicit derivation of dE/dt from the master equation with δ as source."
+    - "Recovery of T_H and S ∝ A from the derived rate."
+    - "Correlation of unstable-particle lifetimes with derived CCR-excess values."
+
+  what_would_falsify_the_hypothesis:
+    - "Black hole evaporation independent of local Π_eff."
+    - "Volumetric black hole entropy."
+    - "No correlation between unstable-particle lifetime and derived CCR-excess."
+    - "Boundary-condition clarification resolved in favour of Reading A."
+
+---
+
+cross_references:
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR boundary conditions; frozen regime; the file whose clarification is the prerequisite"
+  - file: "core/process-physics/gravity-and-ccr-threshold.yaml"
+    note: "V_c depends on P_env; compression can change which closures are viable"
+  - file: "core/inside-out-channeling.yaml"
+    note: "Committed topology suppresses Π_eff locally; the compression mechanism"
+  - file: "core/process-physics/quanta-as-ccr-cost.yaml"
+    note: "The currency of excess dissipation; thermal radiation as phase-space quanta"
+  - file: "core/process-physics/relational-effects-extra-dof.yaml"
+    note: "Absolute Π_eff as the projected extra DoF; the same quantity that enters δ"
+  - file: "core/process-physics/commitment-depletion-duality.yaml"
+    note: "Commitment depletes Π_eff; gravity and inertia as two reads of the same integral"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "K₀/K₁ balance; the algebraic structure that may constrain δ"
+  - file: "issues/foundational/open-reconciliation-notes.yaml"
+    note: "Register the boundary-condition clarification as a new issue"
