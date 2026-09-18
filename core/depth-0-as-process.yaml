@@ -1,11 +1,11 @@
 # /core/depth-0-as-process.yaml
 name: "Depth 0 as Process: The Two-Tier Rule-Set and the First CCR Iteration"
-version: "1.1"
+version: "1.2"
 status: "STRUCTURAL REFRAMING — clarifies what depth 0 is; does not change
          physical predictions or the depth-table structure. Sub-labels 0a/0b/1a/1b
-         are local to this file and describe the internal cascade within depth-0
-         and depth-1. CCR computations operate on the outputs of full depth levels,
-         not on sub-steps."
+         are local descriptive aliases for D₋₁/D₀/D₀(active)/D₁(pre-closure) —
+         the canonical depth indexing from d-minus-one-pre-vector-level.yaml.
+         CCR computations operate on the outputs of full depth levels, not sub-steps."
 domain: "Core"
 
 description: >
