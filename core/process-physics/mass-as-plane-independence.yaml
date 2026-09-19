@@ -1,9 +1,11 @@
 # /core/process-physics/mass-as-plane-independence.yaml
 name: "Mass as Plane Independence: Merge Cost and the Origin of Inertia"
-version: "1.0"
-status: "STRUCTURAL HYPOTHESIS — unifies electron mass, proton mass gap, and N=4
-         residual under a single principle; quantitative confirmation via
-         SIM-004/005/007 open"
+version: "0.3"
+status: "STRUCTURAL HYPOTHESIS — orders electron mass, proton mass gap, and N=4
+         residual by plane-independence cost; two distinct mechanisms underlie
+         the ordering (trapped phase for electron; orthogonality energy for proton)
+         — unified_principle describes the cost ordering, not a single mechanism;
+         quantitative confirmation via SIM-004/005/007 open"
 domain: "Core / Process-Physics"
 
 description: >
@@ -81,14 +83,30 @@ three_cases:
       three independent planes against the algebraic tendency toward fewer
       effective axes. The cost is the orthogonality energy — the CCR_binding
       that cannot be absorbed by any single strain.
-    formal_expression: "m_p c² = (3·CCR_quark + CCR_binding) · E_wr"
+    formal_expression: >
+      m_p c² = (3·I_rot_quark·ω_Φ²)/(2c²) + CCR_binding
+      where CCR_binding is the orthogonality energy of the three-plane
+      configuration (open: SIM-005-v2). The writhe contribution Wr_eq = 3/2
+      enters via CCR_binding — it is not a separate multiplicative factor.
+      Note: a writhe energy prefactor E_wr is not yet defined independently;
+      do not import it until SIM-005-v2 establishes the functional form.
     plane_independence: "3 orthogonal planes, full independence"
     reference: "test-spec-depth2-triality-closure.yaml"
 
   n4_forced_sharing:
     configuration: "Four single-rotor strains attempting closure in Cl(3,0)"
     closure_condition: "F[Q] = 0 — impossible, only 3 independent planes available"
-    residual: "F[N=4] = 8/3 — algebraic fact, not fitted"
+    residual: >
+      F[N=4] = 8/3 — algebraic fact, not fitted. External theorem anchor:
+      the Welch bound for N=4 unit vectors in ℝ³ gives the minimum achievable
+      sum of squared inner products as N(N-d)/(d(N-1)) = 4/(3·3) = 4/9 per
+      pair; over 6 pairs: F_vector = 6 × (1/3)² = 2/3, achieved uniquely by
+      the regular tetrahedron (all pairwise dot products = −1/3). The framework
+      functional F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ‖² acting on bivectors gives
+      F_bivector = 8/3 = 4 × F_vector, the factor of 4 arising from the
+      anticommutator norm versus the inner product squared. The residual 8/3
+      is therefore the price of the most-democratic sharing mathematically
+      possible in ℝ³ — an external theorem anchor with no free parameters.
     merge_status: "Forced — the fourth path must share a plane, creating irreducible stress"
     mass_origin: >
       The residual 8/3 is the stress of forced sharing. It cannot be absorbed
@@ -101,12 +119,27 @@ three_cases:
 
 unified_principle:
   statement: >
-    Mass in all three cases is the energy cost of plane independence. The
-    electron's mass is the trapped phase of a voluntary merge. The proton
-    mass gap is the cost of forced independence. The N=4 residual is the
-    stress of impossible independence. The hierarchy of masses across depths
-    reflects the increasing cost of maintaining independence at higher
-    complexity.
+    The mass hierarchy is ordered by plane-independence cost: 0 planes
+    (photon) < 1 plane (electron) < 3 planes (proton). The ordering is
+    real and the ledger is consistent. However, two distinct mechanisms
+    underlie successive steps and should not be collapsed into one:
+
+    Photon → Electron: the distinguishing variable is co-orientation
+    (trapped phase from doubled rotor), not plane count. The electron
+    has one plane — minimal independence — yet nonzero mass. The mechanism
+    is topological locking of the phase, not an orthogonality energy.
+
+    Electron → Proton: here plane count is genuinely the mechanism.
+    Three orthogonal planes must be maintained against the algebraic
+    tendency toward fewer effective axes. The mechanism is orthogonality
+    energy (CCR_binding), quantitatively distinct from trapped phase.
+
+    The unified claim is: each step in the mass hierarchy corresponds to
+    a distinct increase in configurational cost — first topological
+    (trapped phase), then geometric (orthogonality energy). The cost
+    ordering 0 < trapped phase < orthogonality energy is preserved;
+    the mechanisms differ. Priority-1 derivations (SIM-005/007) should
+    not assume a single functional form covers both steps.
 
   table:
     - configuration: "Photon (R·R†)"
@@ -154,6 +187,24 @@ inertia_connection:
 
 open_derivations:
   priority_1:
+    - id: "pi-eff-dependence-of-i-rot"
+      description: >
+        The local-explicit Dirac equation has μ = mc/ħ with m = I_rot ω_Φ²/(2c²).
+        If ω_Φ depends on local Π_eff (vortex precession rate slows where Π_eff
+        is low), then effective inertial mass is itself Π_eff-dependent: a particle
+        deep in a gravitational well has lower effective I_rot than in free space.
+        This coupling is implicit in the local-explicit field equation but not yet
+        derived explicitly. It is the bridge between mass-as-plane-independence
+        (this file), commitment-depletion-duality.yaml, and
+        gravity-and-ccr-threshold.yaml — currently owned by none of the three.
+        Equivalence principle holds at first order; the Π_eff correction to I_rot
+        is a strong-field prediction. Derive and assign to owning file.
+      depends_on: ["SIM-004-v2", "commitment-depletion-duality.yaml",
+                   "gravity-and-ccr-threshold.yaml"]
+      priority: 1
+      epistemic_note: "HYPOTHESIS v<1 — follows structurally from the local-explicit
+                       equation; quantitative form of ω_Φ(Π_eff) not yet established"
+
     - id: "proton-mass-gap-from-orthogonality-energy"
       description: >
         Compute the orthogonality energy of the three-plane configuration
@@ -223,3 +274,10 @@ cross_references:
     note: "F[Q] functional; N=3 closure; N=4 residual 8/3"
   - file: "core/process-physics/iterative-depth-hierarchy.yaml"
     note: "Mass hierarchy as increasing independence costs"
+  - file: "core/commitment-depletion-duality.yaml"
+    note: "Gravitational coupling as Π_eff depletion — Track B of mass/gravity duality"
+  - file: "core/gravity-and-ccr-threshold.yaml"
+    note: "CCR threshold as gravitational well depth; Π_eff baseline from D₋₁/D₀"
+  - file: "core/d-minus-one-pre-vector-level.yaml"
+    note: "Π_eff ground-state baseline (φ-scaled grade-1 vectors); no inertial
+           mass contribution at D₋₁/D₀ — relevant to Track B only"
