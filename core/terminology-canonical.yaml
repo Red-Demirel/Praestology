@@ -49,16 +49,18 @@ terms:
       committed topology, not of motion. This row exists to clarify that velocity alters phase energy content rather than expanding static inertia.
     conflated_standard_terms: "relativistic mass, mass increase with velocity"
 
-  - phenomenon: "Macro Environmental Force"
+ - phenomenon: "Macro Environmental Force"
     praestology_term: "Ambient Phase Pressure"
     symbol: "P_env"
-    units: "Pascal (Pa = J/m³)"
-    definition: "P_env ≡ ∂E_Φ/∂V;  F_disp = -∫_Ω ∇P_env dV"
+    units: "Pascal (Pa ≡ J/m³ ≡ kg·m⁻¹·s⁻²)"
+    definition: "P_env = ρ_η · (r_0 · Π_eff)² ;  F_disp = -∫_Ω ∇P_env dV"
     definition_note: >
       P_env is the volumetric energy density derivative with respect to
-      the phase configuration space. It is NOT a gravitational field
-      in the standard sense — it is the environmental gradient that
-      drives displacement.
+      phase space. With Π_eff in units of s⁻¹ (substrate process rate),
+      P_env is constructed via a commitment mass density ρ_η (kg/m³) and
+      a localized phase velocity scale v_Φ = r_0 · Π_eff (m/s). It represents
+      the environmental rate-pressure gradient that drives displacement,
+      rather than standard spacetime curvature.
     conflated_standard_terms: "gravitational pull, spacetime curvature tensor, attraction force"
 
   - phenomenon: "Motion Resistance"
@@ -145,135 +147,3 @@ cross_references:
   - file: "core/closure-configuration-ratio.yaml"
     note: "E_Φ as the total committed energy; CCR as the ratio"
 
-# /core/terminology-canonical.yaml
-name: "Canonical Terminology for Physical Phenomena in Praestology"
-version: "1.0"
-status: "REFERENCE — one term, one symbol, one definition per phenomenon.
-         Prevents semantic dilution across all domains."
-domain: "Core"
-
-description: >
-  Each physical phenomenon maps to exactly one Praestology term with a
-  specific symbol, SI units, mathematical definition, and an explicit mapping of conflated standard terms.
-  This table is the canonical reference.
-  It is binding for all domain files, summaries, and external communication.
-  The purpose is to prevent regression to standard-physics language that
-  conflates structurally distinct quantities.
-
----
-
-terms:
-
-  - phenomenon: "Internal Energy Storage"
-    praestology_term: "Trapped Rotational Inertia"
-    symbol: "I_rot"
-    units: "kg·m² (≡ J·s²)"
-    definition: "I_rot = (2/ω_Φ²) ∫_Ω Tr(T_ij(Φ)) dV"
-    definition_note: >
-      Factor of 2 included so that E_Φ = (1/2) I_rot ω_Φ² is consistent.
-      The factor is absorbed into the definition rather than into the
-      energy relation.
-    conflated_standard_terms: "rest mass (m₀), matter payload, particle substance, inertial mass"
-
-  - phenomenon: "Internal Field Capacity"
-    praestology_term: "Phase Energy Capacity"
-    symbol: "E_Φ"
-    units: "Joule (J)"
-    definition: "E_Φ = ∫_Ω Tr(T_ij(Φ)) dV = (1/2) I_rot ω_Φ²"
-    definition_note: >
-      This is the total committed energy of a configuration. It is NOT
-      the "mass-energy" of standard physics — that conflates inertia
-      (I_rot) with capacity (E_Φ).
-    conflated_standard_terms: "static mass-energy, pure matter, relativistic mass"
-
-  - phenomenon: "Velocity-Dependent Energy"
-    praestology_term: "Phase Energy Content (with velocity)"
-    symbol: "E_Φ(v)"
-    units: "Joule (J)"
-    definition: "E_Φ(v) = γ · E_Φ(0),  γ = (1 - v²/c²)^(-1/2)"
-    definition_note: >
-      Velocity increases ENERGY, not inertia. I_rot is a property of the
-      committed topology, not of motion. This row exists to clarify that velocity alters phase energy content rather than expanding static inertia.
-    conflated_standard_terms: "relativistic mass, mass increase with velocity"
-
-  - phenomenon: "Macro Environmental Force"
-    praestology_term: "Ambient Phase Pressure"
-    symbol: "P_env"
-    units: "Pascal (Pa = J/m³)"
-    definition: "P_env ≡ ∂E_Φ/∂V;  F_disp = -∫_Ω ∇P_env dV"
-    definition_note: >
-      P_env is the volumetric energy density derivative with respect to
-      the phase configuration space. It is NOT a gravitational field
-      in the standard sense — it is the environmental gradient that
-      drives displacement.
-    conflated_standard_terms: "gravitational pull, spacetime curvature tensor, attraction force"
-
-  - phenomenon: "Motion Resistance"
-    praestology_term: "Phase Impedance"
-    symbol: "Z_Φ"
-    units: "kg/(m²·s) (specific impedance per unit area)"
-    definition: "F_drag = Z_Φ · A · v_rel  (A = cross-sectional area)"
-    definition_note: >
-      The specific impedance per unit area. Direct analog of acoustic
-      and electromagnetic impedance. The area factor is required for
-      dimensional consistency (Z_Φ · v_rel has units of kg/m², not force).
-    conflated_standard_terms: "inertial drag, passive mass resistance"
-
-  - phenomenon: "Boundary Stability"
-    praestology_term: "Closure Viability Band"
-    symbol: "V_c"
-    units: "Pascal (Pa)"
-    definition: "∂Ω_closure ⟺ P_int = V_c(P_env)"
-    definition_note: >
-      The threshold internal phase pressure required for closure. V_c is
-      environment-dependent (gravity-and-ccr-threshold.yaml): high P_env
-      lowers V_c, low P_env raises it. There is no fixed V_c value —
-      the band is the range of viable closure conditions.
-    conflated_standard_terms: "event horizon, particle radius, solid edge"
-
-  - phenomenon: "Underlying Continuum"
-    praestology_term: "Phase Configuration Space"
-    symbol: "C_Φ"
-    units: "Dimensionless (algebraic)"
-    definition: "C_Φ = Cl(3,0), with S⁷ as the depth-3 embedding"
-    definition_note: >
-      Not a tensor product — S⁷ is the next Hopf level, not a factor of
-      Cl(3,0). Write as a nested relation:
-        C_Φ^(1) = Cl(3,0)
-        C_Φ^(2) = Cl(3,0) ⊂ S⁷
-        C_Φ^(3) = S⁷ ⊂ S¹⁵
-    conflated_standard_terms: "aether, substrate, spatial background, medium, container"
-
-  - phenomenon: "Gravitational Response"
-    praestology_term: "Phase Gradient Coupling"
-    symbol: "χ_Φ"
-    units: "kg"
-    definition: "F_grav = -χ_Φ · ∇Π_eff"
-    definition_note: >
-      χ_Φ and I_rot are structurally identical in the framework — both
-      are manifestations of the same committed topology's response to
-      Π_eff gradients. Gravity and inertia are two sides of the same
-      R5 event (gravity-inertia-equivalence-from-r5.yaml).
-    conflated_standard_terms: "gravitational charge, passive mass"
-
----
-
-usage_rules:
-  - rule: "Every domain file uses the Praestology term, not the standard-physics term."
-    example: "Write 'I_rot' not 'rest mass'."
-  - rule: "External communication may use standard terms ONLY with explicit translation note."
-    example: "'The electron's rest mass (what we call I_rot) is 0.511 MeV/c².'"
-  - rule: "When a standard term is unavoidable in a quote or citation, mark it explicitly."
-  - rule: "No new terms may be coined without updating this file."
-
----
-
-cross_references:
-  - file: "core/process-physics/mass-as-plane-independence.yaml"
-    note: "I_rot as the cost of plane independence"
-  - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
-    note: "χ_Φ = I_rot structural identity"
-  - file: "core/process-physics/gravity-and-ccr-threshold.yaml"
-    note: "V_c(P_env) environmental dependence"
-  - file: "core/closure-configuration-ratio.yaml"
-    note: "E_Φ as the total committed energy; CCR as the ratio"
