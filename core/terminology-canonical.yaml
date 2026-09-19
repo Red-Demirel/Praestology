@@ -115,6 +115,17 @@ terms:
       coupling dimension. See gravity-inertia-equivalence-from-r5.yaml.
     conflated_standard_terms: "gravitational charge, passive mass"
 
+- phenomenon: "Substrate-Shifted Coupling"
+    praestology_term: "Dirac Phase Parameter"
+    symbol: "μ"
+    units: "m⁻¹ (or dimensionless depending on scaling convention)"
+    definition: "μ = (m · c / ħ) · (Π_eff / ω_Φ)"
+    definition_note: >
+      Measures the modulation of intrinsic characteristic phase clock rate (ω_Φ)
+      by local substrate process rate suppression (Π_eff). Formatted as a direct
+      frequency ratio (Π_eff / ω_Φ) scaled by the Compton wavenumber (m·c / ħ).
+    conflated_standard_terms: "mass-shell shift, rest-mass renormalization, Dirac mass term"
+
 ---
 
 usage_rules:
