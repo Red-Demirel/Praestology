@@ -1,4 +1,4 @@
- /issues/foundational/test-spec-depth2-triality-closure.yaml
+/issues/foundational/test-spec-depth2-triality-closure.yaml
 issue_id: "SIM-007-v1"
 title: "Depth-2 Triality Closure: Internal Phase Stress Minimisation Among Three Stalled Paths"
 type: "COMPUTATIONAL_PROOF_OF_CONCEPT"
@@ -15,7 +15,8 @@ epistemic_status:
   well_defined:
     - "Cl(3,0) multivector structure: 8 real components, fixed product tensor"
     - "Rotor parameterisation R = exp(-½B̂θ) in Cl(3,0)"
-    - "Bivector algebra: B₁=e₂e₃, B₂=e₃e₁, B₃=e₁e₂; BᵢBⱼ=-εᵢⱼₖBₖ-δᵢⱼ"
+    - "Bivector basis convention (lexical order matching clifford_bridge.py): B₁=e₁₂, B₂=e₂₃, B₃=e₁₃"
+    - "Product tensor / commutator: [B₁, B₂] = +2B₃; anticommutator {Bᵢ, Bⱼ} = -2δᵢⱼ"
     - "Anticommutator functional F[Q]: vanishes exactly at orthonormal closure (verified)"
     - "Fixed-point concept: configuration invariant under its own closure map"
   not_well_defined:
@@ -32,28 +33,29 @@ epistemic_status:
 
 ccr_at_depth_2:
   structure: >
-    At depth 2, CCR = (mutual phase stress of N stalled paths) / (grade-3 embedding volume frequency)
+    At depth 2, CCR = (mutual phase stress of N stalled paths) / (grade-3 embedding phase-space volume Ω_embed)
     Numerator: the anticommutator deviation F[Q] — the residual phase mismatch
                 among N partial-writhe paths when they attempt mutual closure
-    Denominator: the natural frequency of the pseudoscalar volume (grade-3 embedding)
+    Denominator: the dimensionless phase-space capacity Ω_embed of the pseudoscalar volume (grade-3 embedding)
     This is CCR_binding(d1,d2) from closure-types-nesting.yaml, with F[Q] providing
     the explicit form of the numerator.
   why_anticommutator: >
     In Cl(3,0): BᵢBⱼ + BⱼBᵢ = -2δᵢⱼ at orthonormal closure.
-    The anticommutator deviation F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ + 2δᵢⱼ‖² 
-    vanishes exactly when the N paths achieve mutually orthonormal Clifford closure —
+    For off-diagonal terms (i < j), δᵢⱼ = 0, so the functional simplifies to:
+    F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ‖² 
+    which vanishes exactly when the N paths achieve mutually orthonormal Clifford closure —
     the depth-2 analogue of Q*=R_k[Q*]. Verified numerically (see verification below).
     The commutator functional does NOT vanish at this point (gives 12, not 0).
   why_not_commutator: >
-    In Cl(3,0), [Bᵢ,Bⱼ] = BᵢBⱼ - BⱼBᵢ = -2εᵢⱼₖBₖ, which is non-zero between
-    different bivectors at orthonormal closure. A functional built on the commutator
-    would detect rotation away from the fixed point it is meant to find.
+    In Cl(3,0), [Bᵢ,Bⱼ] = BᵢBⱼ - BⱼBᵢ = +2εᵢⱼₖBₖ (under lexical basis B₁=e₁₂, B₂=e₂₃, B₃=e₁₃),
+    which is non-zero between different bivectors at orthonormal closure. A functional built on
+    the commutator would detect rotation away from the fixed point it is meant to find.
 
 algebra_verification:
   confirmed: >
-    python3 verification shows:
+    python3 verification against clifford_bridge.py shows:
       B1*B1 = B2*B2 = B3*B3 = -1  (correct for Cl(3,0))
-      Commutator [B1,B2] = -2*B3   (matches -2*eps_123*B3)
+      Commutator [B1,B2] = +2*B3   (matches clifford_bridge.py lexical convention)
       Anticommutator {B1,B2} = 0   (correct for i≠j)
       Anticommutator {B1,B1} = -2  (correct: 2*B1² = -2)
       F[B1,B2,B3] = 0.0            (functional vanishes at closure)
@@ -63,9 +65,10 @@ algebra_verification:
 
 functional:
   definition: >
-    F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ + 2δᵢⱼ‖²
+    F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ‖²
     where Bᵢ = Σₖ cᵢₖ·eₖₗ (grade-2 elements in Cl(3,0))
     and ‖·‖² = ⟨A·Ã⟩₀ (scalar part of A times its reverse)
+    Note: δᵢⱼ dropped since i < j strictly holds for off-diagonal sums.
   parameters: >
     Optimise over the real generator coefficients (cᵢₖ) for each path i,
     NOT over the angles θ. The angle parameterisation carries gauge redundancy
@@ -85,34 +88,36 @@ depth_ccr_iteration_map:
 
   depth_1_electron:
     numerator: "Writhe Wr of grade-2 rotor path in S³ (phase integration cost)"
-    denominator: "Substrate oscillation frequency Ω_embed"
+    denominator: "Substrate phase-space volume Ω_embed"
     functional: "GP energy E[ψ] under Möbius boundary conditions (SIM-004)"
     closure_condition: "Q*(4π) = R_k[Q*] — 720° self-identity"
 
   depth_2_nucleon:
     numerator: "Mutual phase stress F[Q] among N stalled partial-writhe paths"
-    denominator: "Grade-3 pseudoscalar volume natural frequency"
-    functional: "Anticommutator deviation F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ+BⱼBᵢ+2δᵢⱼ‖²"
+    denominator: "Grade-3 pseudoscalar phase-space volume capacity Ω_embed"
+    functional: "Anticommutator deviation F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ+BⱼBᵢ‖²"
     closure_condition: "Mutually orthonormal Clifford closure: F[Q]=0"
     note: "N=3 is motivated (three orthogonal planes in Cl(3,0)); not derived"
 
   depth_3_nucleus:
     numerator: "Evanescent fringe field coupling — grade-2 residue beyond pseudoscalar boundary"
-    denominator: "Nuclear volume natural frequency at depth-3 embedding"
+    denominator: "Nuclear phase-space volume capacity Ω_embed at depth-3 embedding"
     functional: "S⁷ Steiner linking integral (SIM-006)"
     closure_condition: "Complete mutual linking in S⁷ octonion structure"
     magic_numbers: "Counts N where Steiner enumeration gaps occur"
 
   depth_4_atom:
+    status: "CONJECTURAL — pending depth-3 topological specification"
     numerator: "Electron orbital phase gradient mismatch (quantum number mismatch cost)"
-    denominator: "Nuclear core natural frequency at orbital radius"
+    denominator: "Nuclear core phase-space volume capacity Ω_embed at orbital radius"
     functional: "Phase-locking condition of depth-1 rotors around depth-3 core"
     closure_condition: "Complete shell closure — all phase-locking modes occupied"
     period_lengths: "2, 8, 8, 18, 18, 32 — Steiner enumeration at depth-4"
 
   depth_6_protein:
+    status: "CONJECTURAL — macro-scale process-physics hypothesis"
     numerator: "Backbone torsion angle mismatch (dihedral phase stress per residue)"
-    denominator: "Residue coupling bandwidth (local amino acid environment)"
+    denominator: "Residue coupling phase-space capacity (local amino acid environment)"
     functional: "Conformational potential funnel — CCR gradient descent"
     closure_condition: "Native fold: global minimum of backbone phase stress"
     levinthal_connection: >
@@ -125,10 +130,10 @@ simulation_protocol:
 
   step_1_initialise: >
     Sample N random unit bivectors B₁,...,Bₙ in Cl(3,0):
-      Bᵢ = (c₁e₁₂ + c₂e₂₃ + c₃e₃₁) / ‖·‖   (three real coefficients, normalised)
+      Bᵢ = (c₁e₁₂ + c₂e₂₃ + c₃e₁₃) / ‖·‖   (three real coefficients, normalised)
 
   step_2_compute_f: >
-    F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ + 2δᵢⱼ‖²
+    F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ‖²
     using Cl(3,0) geometric product via clifford library
 
   step_3_gradient_descent: >
@@ -144,18 +149,20 @@ simulation_protocol:
   step_5_scan_N: >
     Run for N = 1, 2, 3, 4, 5, 6, 7 paths
     For each N: 100 random initialisations
-    Record: convergence rate, mean steps to closure, F_min distribution
-    Look for: sharp changes in convergence behaviour as N increases —
-    N values where F_min cannot reach zero = closure impossible at that N
+    Evaluate against quantitative Welch residual bounds:
+      F_min(N) = 2N(N - 3) / 3
+      - N=1, 2, 3: F_min = 0 (exact orthonormal closure)
+      - N=4: F_min = 8/3 ≈ 2.667 (regular tetrahedron bound)
+      - N=5: F_min = 20/3 ≈ 6.667 (strict lower bound)
+      - N=6: F_min = 12 (icosahedral line pairs)
+      - N=7: F_min = 56/3 ≈ 18.667 (strict over-saturation bound)
 
   step_6_record_gaps: >
-    The N values where convergence fails or F_min > ε constitute the
-    "impossible closure" sequence. Compare to magic numbers.
-    Note: Cl(3,0) has only 3 independent bivector planes — for N > 3,
-    paths must share planes, making F[Q] = 0 impossible. The sequence
-    in Cl(3,0) is therefore limited to N ≤ 3, which is depth-2 only.
-    Depth-3 (N > 3) requires the S⁷ embedding — confirming that
-    SIM-006 is the correct next computation, not an extension of this one.
+    The quantitative residual jump at N > 3 confirms that Cl(3,0) cannot support
+    orthonormal closure for more than 3 independent bivector planes.
+    Matching the Welch bounds provides a two-sided verification anchor for SIM-007.
+    It confirms that depth-3 (N > 3) requires the S⁷ embedding (SIM-006), rather than
+    representing a numerical optimization failure in Cl(3,0).
 
 ---
 
@@ -164,11 +171,9 @@ expected_output:
     For N ≤ 3: closure achievable (F → 0). Convergence fastest for N=3
     (three orthogonal planes are the natural Cl(3,0) closure).
   n_greater_3: >
-    For N > 3: F[Q] cannot reach zero in Cl(3,0) — more paths than
-    independent bivector planes. This is not a failure of the simulation;
-    it is the correct result: depth-3 nuclear linking cannot be described
-    in Cl(3,0) and requires the S⁷ embedding. The simulation confirms
-    that the Cl(3,0) maximum is N=3 (the proton/neutron), exactly as claimed.
+    For N > 3: F[Q] hits exact Welch non-zero residuals F_min(N) = 2N(N-3)/3.
+    This provides an analytical anchor confirming that Cl(3,0) capacity is exhausted
+    at N=3, cleanly motivating the transition to S⁷ (SIM-006) for depth-3 nuclear linking.
 
 interpretive_constraint: >
   The output of this simulation CANNOT be presented as:
@@ -178,7 +183,8 @@ interpretive_constraint: >
   It CAN be presented as:
     - Confirmation that the anticommutator functional correctly detects
       Clifford orthonormal closure in Cl(3,0)
-    - Confirmation that Cl(3,0) admits closure for N ≤ 3 but not N > 3
+    - Confirmation that Cl(3,0) admits zero-residual closure for N ≤ 3, and obeys
+      the quantitative Welch bounds F_min = 2N(N-3)/3 for N > 3
     - Motivation for S⁷ as the depth-3 embedding (the limit of Cl(3,0)
       is exactly the boundary between depth-2 and depth-3)
     - An ansatz for what CCR_binding(d1,d2) minimisation looks like
