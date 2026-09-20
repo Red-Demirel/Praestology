@@ -67,3 +67,6 @@ Since the earlier response, several results have sharpened what depth-3 computat
 ## Note on Computational Scaling & Engine Calibration:
 While evaluating the $D_3$ ansatz in $Cl(3,0)$ requires only a fraction of the usually available compute volume, using this step to lock down bit-exact determinism ($\Delta = 0.00000000$) and baseline thread topologies is essential. It establishes the verified PTX kernel pipeline and parameter-sweep libraries needed before the framework scales into the exponential topological complexity and multi-sector linkage of $S^7$ embeddings at higher depths
 
+## Computational character
+With documents/Parameter & Variable Cascade.md the computational character seems simplified/constrained.
+Because both V and g are fixed by the framework, and the only remaining geometric unknowns are the equilibrium shape (and the associated phase-space volumes that enter the CCR), the problem is a constrained variational calculation on a relatively low-dimensional space of rotor configurations (or a modest GP discretisation). It does not require heavy sampling or large-scale Monte-Carlo; a well-posed gradient flow or Newton-type relaxation on the shape parameters should be sufficient. The earlier correction Tw = ½ → Wr = 3/2 simply changes the target writhe that the relaxed configuration must satisfy; it does not raise the computational class.
