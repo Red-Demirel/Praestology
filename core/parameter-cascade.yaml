@@ -1,0 +1,140 @@
+# core/process-physics/parameter-cascade.yaml
+spec_id: "SPEC-CCR-EQUILIBRIUM-CASCADE-v1.2"
+title: "Parameter & Variable Cascade — Compact Repository Representation"
+source: "documents/parameter-cascade.md §1–§10"
+role: "Repository entry point; full derivation and narrative in the source document"
+status: "STRUCTURAL SPECIFICATION — taxonomy, units, and depth cascade"
+
+depends_on_for_session:
+  - "core/d-minus-one-pre-vector-level.yaml"
+  - "core/depth-0-as-process.yaml"
+  - "core/process-physics/dirac-as-grade-chain-closure.yaml"
+  - "core/process-physics/mass-as-plane-independence.yaml"
+
+---
+
+governance:
+  rule: "Units and quantity classification live strictly here. Terminology lives in terminology-canonical.yaml."
+  quantity_taxonomy:
+    ratio: "Dimensionless; derived from recurrence, closure, or topology. Zero free parameters."
+    dimensional: "Ratio × Substrate Primitive (ψ, Π_eff,base, c, ħ). Inherits scale."
+    relation: "Generative condition or mapping rule. Produces quantities."
+  declared_units:
+    process_rate: "[Π_eff] = s⁻¹"
+    phase_gradient_coupling: "[χ_Φ] = J·s  # F_grav = -χ_Φ ∇Π_eff"
+    dirac_mass_term: "μ = (mc/ħ) · (Π_eff / ω_Φ)"
+
+---
+
+bivector_stress_potential_engine:
+  concept: >
+    Internal phase stress vs. commitment capacity is represented as a directed flow vector/bivector field J_Φ.
+    The Closure Configuration Ratio (CCR) at depth n operates as the scalar variational potential driving field relaxation.
+  field_equation: "J_Φ = ∇Π_eff + μ · B_commit"
+  relaxation_gradient: "d(J_Φ) / dτ = -∇_Ω(CCR⁽ⁿ⁾)"
+  equilibrium_condition:
+    definition: "CCR⁽ⁿ⁾ ≡ F⁽ⁿ⁾[Q] / Ω_embed⁽ⁿ⁾ → CCR⁽ⁿ⁾*"
+    stationary_state: "∇_Ω(CCR⁽ⁿ⁾) = 0 implies Q* = R_k[Q*]"
+    physical_projection: >
+      At CCR⁽ⁿ⁾*, unabsorbed bivector stress components project externally as conserved observable quantities
+      (intrinsic spin S, trapped rotational inertia I_rot, linear momentum p, gravitational coupling χ_Φ).
+
+trapped_rotational_inertia:
+  symbol: "I_rot"
+  kind: "Dimensional"
+  formula: "2m(ħ/mc)²"
+  status: "STRUCTURAL — formula presumes ω_z = ω_Φ = ω_Compton (candidate; see source §2)"
+
+mu_dimensional_form:
+  symbol: "μ-form"
+  kind: "Dimensional"
+  formula: "(mc/ħ)(Π_eff/ω_Φ)"
+  status: "STRUCTURAL — formula presumes ω_z = ω_Φ = ω_Compton (candidate; see source §2)"
+
+---
+
+depth_cascade_and_equilibrium_map:
+
+  depth_minus_1_to_0:
+    transition: "Pre-Vector Potential → Fixed Basis {e₁, e₂, e₃}"
+    primary_relation: "v_{k+2} = v_{k+1} + v_k"
+    quantities:
+      scaling_eigenvalues: { symbol: "{φ, φ⁻¹}", kind: "Ratio", status: "DERIVED" }
+      transient_retention: { symbol: "CCR⁰", kind: "Ratio", value: "φ⁻¹ ≈ 0.618", role: "Trajectory property" }
+      basis_count: { symbol: "D₀", kind: "Relation", value: "3", basis: "Co-naturality of Cl(3,0)" }
+
+  depth_0_to_1:
+    transition: "Vector Basis → 1-Plane Closures (Electron / Photon)"
+    primary_operation: "Cross-basis pairing eᵢ ∧ eⱼ under B² = -1 boundary condition"
+    quantities:
+      equilibrium_writhe: { symbol: "Wr_eq", kind: "Ratio", value: "3/2", status: "DERIVED" }
+      closure_yield: { symbol: "f_closure", kind: "Ratio", status: "OPEN (SIM-004-v2)" }
+      fine_structure_inv: { symbol: "α⁻¹", kind: "Ratio", formula: "1 / (Wr_eq · f_closure)", status: "DERIVED-CANDIDATE" }
+      trapped_rotational_inertia: { symbol: "I_rot", kind: "Dimensional", formula: "2m(ħ/mc)²", status: "STRUCTURAL" }
+      phase_rate: { symbol: "ω_Φ", kind: "Dimensional", role: "Closure-indexed (type-dependent)", status: "CANDIDATE" }
+      phase_energy_capacity: { symbol: "E_Φ", kind: "Dimensional", formula: "½ I_rot ω_Φ² = mc²", status: "DEFINITIONAL" }
+      coupling_strength: { symbol: "χ_Φ", kind: "Dimensional", units: "J·s", formula: "I_rot · ω_Φ", status: "DEFINITIONAL" }
+      equilibrium_state:
+        ratio_symbol: "CCR⁽¹⁾"
+        condition: "CCR⁽¹⁾ = α (band cost) / CCR_crit = 1 (saturation)"
+        observables_locked: ["Spin ħ/2", "Electron rest mass m_e", "Gravitational response χ_Φ"]
+
+  depth_1_to_2:
+    transition: "Multi-Plane Triality → Nucleons (Proton / Neutron)"
+    primary_operation: "3 bivector strain sum under orthogonality F[Q] = 0"
+    quantities:
+      orthogonality_energy: { symbol: "E_ortho", kind: "Dimensional", formula: "CCR_binding × E_scale(2)", status: "OPEN (SIM-005-v2)" }
+      welch_bound_residual: { symbol: "F_min(4)", kind: "Ratio", value: "8/3", status: "DERIVED (Exact analytical anchor)" }
+      equilibrium_state:
+        ratio_symbol: "CCR⁽²⁾"
+        condition: "F⁽²⁾[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ‖² → 0"
+        observables_locked: ["Color neutrality", "Nucleon mass gap", "Intrinsic angular momentum"]
+
+  depth_2_to_3:
+    transition: "S⁷ Embedding → Heavy Nuclei"
+    primary_operation: "Absorbing F = 8/3 residual via S⁷ Hopf octonionic linking"
+    quantities:
+      environmental_threshold_shift: { symbol: "V̂_c", kind: "Dimensional (reduced)", formula: "V_c · V_ref / E_scale(2)", status: "STRUCTURAL" }
+      magic_numbers: { symbol: "N_magic", kind: "Count", role: "Steiner enumeration on S⁷", status: "OPEN (SIM-006-v1)" }
+      equilibrium_state:
+        ratio_symbol: "CCR⁽³⁾"
+        condition: "Steiner enumeration gap minimization in S⁷"
+        observables_locked: ["Nuclear shell stability", "Total spin J", "Binding energy"]
+
+  depth_3_to_4:
+    status: "CONJECTURAL"
+    transition: "Atomic Shells (Steiner enumeration at depth 4)"
+    equilibrium_state:
+      ratio_symbol: "CCR⁽⁴⁾"
+      observables_locked: ["Period lengths (2, 8, 8, 18, 18, 32)", "Orbital phase locking"]
+
+  depth_5_to_6:
+    status: "CONJECTURAL"
+    transition: "Protein Native Folds (Macro-scale process physics)"
+    equilibrium_state:
+      ratio_symbol: "CCR⁽⁶⁾"
+      observables_locked: ["Native backbone fold minimum", "Directed folding speed ∝ ∇(CCR)"]
+
+---
+
+carrier_adjudication_and_open_items:
+  inertial_mass_carrier:
+    primary_candidate: "Option A: Π_eff enters μ directly: μ = (mc/ħ)·(Π_eff/ω_Φ)"
+    consequence: "m_eff = m · (Π_eff / ω_Φ). Weak Equivalence Principle is exact and structural."
+    over_constraint_check: "Forces Π_eff,base = ω_Φ,electron under full candidate identification."
+  priority_1_open_items:
+    - "Pivotal link: CCR⁰ → f_closure (Pre-committed reading: default absent; √5 indicates link)"
+    - "f_closure computation via SIM-004-v2 (Closes α⁻¹)"
+    - "CCR_binding × E_scale(2) via SIM-005-v2 (Closes proton mass gap)"
+
+required_syncs:
+  - target: "terminology-canonical.yaml row 7"
+    change: "χ_Φ units kg → J·s"
+  - target: "closure-configuration-ratio.yaml v2.x"
+    change: "boundary_conditions sentence: band (0,1); CCR=1 is saturation not uncommitted"
+  - target: "dirac-as-grade-chain-closure.yaml"
+    change: "confirm 4b ownership of carrier adjudication"
+  - target: "mass-as-plane-independence.yaml"
+    change: "proton formula consumes CCR_binding × E_scale(2); remove duplicate carrier entry"
+  - target: "depletion-as-absolute-pi-eff.yaml"
+    change: "cross-reference Π_eff,base/Π_eff,local split"
