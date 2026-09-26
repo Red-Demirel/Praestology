@@ -1,0 +1,261 @@
+# /core/process-physics/saturation-parameters-as-shape-functionals.yaml
+name: "Saturation Parameters as Shape Functionals: g, Λ, κ from the Equilibrium Configuration"
+version: "0.1"
+status: "STRUCTURAL HYPOTHESIS — parameters relational to shape, following
+         the Wr pattern; resolves the external-anchoring requirement in
+         principle; specific functional forms open"
+domain: "Core / Process-Physics"
+
+description: >
+  The Gross-Pitaevskii saturation parameters g, Λ, κ (and the derived
+  quantities n_sat, ξ) are not free parameters requiring external
+  anchoring. They are functionals of the equilibrium configuration —
+  the same configuration that yields Wr_eq and f_closure. Under this
+  reading, they are outputs of the equilibrium-shape computation, not
+  inputs to it. The functional forms are open, but the structural
+  position is clear: parameters depend on shape the same way writhe
+  depends on shape.
+
+dependency_map:
+  requires:
+    - "core/d-minus-one-pre-vector-level.yaml"
+    - "issues/foundational/sim004-integrand-structure.yaml"
+    - "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
+    - "core/process-physics/ccr-iteration-by-depth.yaml"
+    - "core/process-physics/bivector-partial-parameters.yaml"
+  provides_to:
+    - target: "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
+      via: "Replaces external anchoring of g, Λ, κ with shape-functional derivation"
+
+---
+
+structural_pattern:
+
+  writhe_as_template: >
+    Wr_eq = 3/2 is not inserted. It follows from the shape:
+      Lk = 2  (topological, isotopy-invariant)
+      Tw = 1/2 (Möbius framing, algebraic)
+      Wr = Lk - Tw = 3/2 (shape-determined split)
+    The split between Wr and Tw is a functional of the equilibrium
+    centreline γ*, not a free choice. Different shapes would distribute
+    the same Lk differently.
+
+  saturation_as_analogous: >
+    The saturation parameters are functionals of the equilibrium
+    configuration (ρ*, B*), not free constants:
+      g = g[ρ*, B*]     — self-interaction cost per unit density
+      Λ = Λ[ρ*, B*]     — energy scale of the saturation transition
+      κ = κ[ρ*, B*]     — sharpness of the saturation curve
+      n_sat = n_sat[ρ*, B*] — maximum supported density
+      ξ = ξ[ρ*, B*]     — healing length at saturation
+    Each is computed from the equilibrium solution, not anchored
+    externally.
+
+  why_this_is_not_a_new_postulate: >
+    The saturation term in the master equation is itself a coarse-grained
+    description of nonlinear behavior at high density. It is not
+    fundamental. If the nonlinear behavior is shape-determined, then
+    the parameters that summarize it must also be shape-determined.
+    The reading makes explicit what the saturation term already implies:
+    it is a functional, not a constant.
+
+---
+
+self_consistency_structure:
+
+  statement: >
+    If saturation parameters depend on the equilibrium shape, and the
+    equilibrium shape is the fixed point of the GP equation with the
+    saturation term, then the parameters must satisfy a self-consistency
+    condition:
+      (g, Λ, κ) → GP solve → (ρ*, B*)
+      (ρ*, B*) → shape functionals → (g', Λ', κ')
+      (g, Λ, κ) = (g', Λ', κ')  at the fixed point
+
+  fixed_point_reading: >
+    This has the same form as the depth recursion:
+      D_{d+1} = Fix(Φ_d(D_d))
+    The GP parameters within a given depth are the fixed points of the
+    shape-parameter consistency condition at that depth. They are not
+    external inputs; they are the stable self-consistent configurations
+    of the shape-parameter system.
+
+  consequence: >
+    The external anchoring requirements in SIM-004-v2 become
+    requirements for a self-consistent solution, not requirements for
+    external data. The GP parameters are derived from the same
+    equilibrium-shape computation that yields Wr_eq and f_closure.
+
+---
+
+functional_candidates:
+
+  n_sat: >
+    Maximum of the equilibrium density profile:
+      n_sat = max_r ρ*(r)
+    The vortex core density in the un-saturated limit — the highest
+    density the closure can support before the saturation term becomes
+    operative.
+
+  Λ: >
+    Energy scale at the saturation transition:
+      Λ = [∂E_GP/∂ρ]_ρ = n_sat
+    The GP energy gradient evaluated at the saturation density. Sets
+    the amplitude at which nonlinear effects become significant.
+
+  κ: >
+    Sharpness of the saturation curve:
+      κ = [∂²E_GP/∂ρ²]_ρ = n_sat / [∂E_GP/∂ρ]_ρ = n_sat
+    The ratio of second to first derivatives of the GP energy at
+    saturation — a measure of how abruptly the saturation curve
+    turns over.
+
+  g: >
+    Self-interaction cost:
+      g = [∂²E_GP/∂ρ²]_ρ = 0
+    The second variation of the GP functional at zero density — the
+    linear response regime of the self-interaction.
+
+  ξ: >
+    Healing length at saturation:
+      ξ = ħ / sqrt(2 m g n_sat)
+    Derived from g and n_sat once both are computed from ρ*.
+
+  status: >
+    These are candidate functional forms. The specific functionals
+    require the equilibrium solution to be known. SIM-004-v2's
+    GP solve produces the shape; the functionals are then evaluated
+    on that shape.
+
+---
+
+connection_to_pivotal_reading:
+
+  statement: >
+    If the saturation parameters are shape-functionals, and the shape
+    emerges from a recurrence-seeded relaxation (the D₋₁ → D₀
+    trajectory), then the saturation behavior of the shape carries
+    φ-scaling implicitly. The φ-derived initial profile seeds the
+    GP solve at D₀ → D₁; the saturation curve that emerges inherits
+    its structure.
+
+  fingerprint: >
+    √5 (the eigenvalue gap, discriminant of λ² - λ - 1) could surface
+    in f_closure through the saturation curve, if the coupling between
+    the recurrence and the shape functional is tight enough.
+
+  epistemic_status: >
+    SPECULATIVE — offered as a possible mechanism for the pivotal
+    reading (CCR⁰ → f_closure). Not asserted as a derivation.
+    Both readings of the pivotal question (link present / link absent)
+    remain pre-committed in the cascade document; this file adds a
+    candidate mechanism for the "link present" case.
+
+---
+
+what_this_changes:
+
+  sim004_anchoring_requirements: >
+    The anchoring requirements listed in SIM-004-v2 (BEC scattering
+    length for g, topological capacity for n_sat, "determined by"
+    for Λ, κ) become requirements for a self-consistent shape-parameter
+    solution rather than external data. The GP parameters are
+    outputs of the same equilibrium-shape computation that yields
+    Wr_eq and f_closure.
+
+  cascade_classification: >
+    g, Λ, κ are Dimensional quantities (like I_rot and χ_Φ), not
+    substrate primitives. They are ratios composed with the substrate
+    scale (through ρ*, B*), computed at the equilibrium configuration.
+    They belong in the cascade's dimensional-quantity tier, not the
+    primitive tier.
+
+  n_sat_functional_form_issue: >
+    The open item "n_sat functional form" (issue_2 in
+    open-reconciliation-notes.yaml) now has a candidate answer:
+    n_sat is the maximum of ρ*, and the saturation term's functional
+    form is determined by how ρ* saturates against that maximum. The
+    specific form (g|ψ|²/(1+|ψ|²/n_sat) vs alternatives) becomes a
+    question about the equilibrium profile, not about the functional
+    choice made by hand.
+
+---
+
+open_derivations:
+
+  - id: "saturation-parameters-from-equilibrium-profile"
+    description: >
+      Compute g, Λ, κ, n_sat, ξ as functionals of the equilibrium
+      (ρ*, B*) once the GP solve is available. This is a post-processing
+      step on the SIM-004-v2 output.
+    depends_on: ["SIM-004-v2", "ccr-electron-explicit"]
+    priority: 2
+
+  - id: "shape-parameter-self-consistency"
+    description: >
+      Show that the fixed-point condition (g, Λ, κ) = (g[ρ*], Λ[ρ*], κ[ρ*])
+      has a unique solution for the 720° Möbius vortex. Establishes that
+      the shape-functional reading is not merely consistent but uniquely
+      determines the parameters.
+    depends_on: ["saturation-parameters-from-equilibrium-profile"]
+    priority: 2
+
+  - id: "phi-fingerprint-through-saturation"
+    description: >
+      Test the speculative claim that φ-scaling of the D₋₁ → D₀
+      trajectory seeds the saturation curve in a way that surfaces
+      √5 in f_closure. If confirmed, provides a mechanism for the
+      pivotal CCR⁰ → f_closure link.
+    depends_on: ["saturation-parameters-from-equilibrium-profile",
+                 "SIM-004-v2"]
+    priority: 3
+    epistemic_note: "Speculative — offered as a candidate mechanism"
+
+  - id: "delta-vc-from-shape-functional"
+    description: >
+      If the saturation parameters are shape-functionals, then V_c
+      (whose P_env dependence was open) may also be a shape-functional.
+      Check whether V_c = V_c[ρ*, B*] gives the functional form
+      required for the D₂ → D₃ threshold shift.
+    depends_on: ["saturation-parameters-from-equilibrium-profile"]
+    priority: 3
+
+---
+
+epistemic_status:
+
+  established:
+    - "Writhe is a shape-functional of the equilibrium centreline (Wr_eq = 3/2 is not inserted)"
+    - "The saturation term is a coarse-grained description of nonlinear behavior, not fundamental"
+    - "If the nonlinear behavior is shape-determined, the parameters summarizing it must be too"
+
+  structural_hypothesis:
+    - "g, Λ, κ, n_sat, ξ are shape-functionals of (ρ*, B*)"
+    - "The GP parameters satisfy a self-consistency condition at the equilibrium"
+    - "The parameters belong in the dimensional-quantity tier of the cascade, not the primitive tier"
+
+  speculative:
+    - "φ-scaling of the D₋₁ → D₀ trajectory surfaces √5 in f_closure through the saturation curve"
+
+  open:
+    - "Specific functional forms of g[ρ*], Λ[ρ*], κ[ρ*], n_sat[ρ*], ξ[ρ*]"
+    - "Uniqueness of the shape-parameter fixed point"
+    - "Whether V_c is also a shape-functional"
+
+---
+
+cross_references:
+  - file: "core/d-minus-one-pre-vector-level.yaml"
+    note: "The recurrence and φ-scaling that seed the GP solve"
+  - file: "issues/foundational/sim004-integrand-structure.yaml"
+    note: "The integrand chain; ρ* is the equilibrium from Φ₁"
+  - file: "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
+    note: "SIM-004-v2 — its anchoring requirements become self-consistency requirements"
+  - file: "core/process-physics/ccr-iteration-by-depth.yaml"
+    note: "The fixed-point structure; shape-parameter consistency has the same form"
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "B* is the equilibrium rotor configuration"
+  - file: "documents/parameter-cascade.md"
+    note: "Classification update: g, Λ, κ move from implicit-primitive to dimensional tier"
+  - file: "core/process-physics/open-reconciliation-notes.yaml"
+    note: "issue_2 (n_sat functional form) now has candidate answer"
