@@ -1,0 +1,423 @@
+# /core/process-physics/ccr-zeno-as-initial-closure.yaml
+name: "CCR⁰ as Zeno Retention: The D₋₁ → D₀ Transition as Discrete Firing Dynamics"
+version: "0.1"
+status: "STRUCTURAL HYPOTHESIS — revises the pivotal reading default from
+         'link absent' to 'link present'; the revision is conditional on
+         the discrete-firing interpretation of R5 holding at D₋₁ → D₀.
+         The √5 fingerprint prediction becomes a checkable consequence.
+         Not a derivation — the reading is principled but the mechanism
+         is not yet derived from ℛ(ψ)."
+domain: "Core / Process-Physics"
+
+description: >
+  The D₋₁ → D₀ transition is not a continuous relaxation of scalar
+  potential toward a fixed basis. It is a sequence of discrete R5
+  firing events, each committing a step to η. Under this reading, the
+  retention factor φ⁻¹ per firing is not merely "an eigenvalue that
+  happens to be band-compatible" — it is the structural fingerprint of
+  the discrete firing dynamics itself. The D₀ equilibrium then carries
+  the accumulated φ⁻¹ imprint, and the D₀ → D₁ closure inherits it.
+  This revises the pivotal reading in the cascade document's §5.2 from
+  its default (link absent, cascade splits) to a structural expectation
+  that the link is present. The √5-in-f_closure prediction becomes the
+  testable consequence.
+
+dependency_map:
+  requires:
+    - "core/d-minus-one-pre-vector-level.yaml"
+    - "core/core-dynamical-equation.yaml"
+    - "core/process-physics/ccr-zeno-core-reframing.yaml"
+    - "core/process-physics/quantum-zeno-as-commitment.yaml"
+    - "core/process-physics/quanta-as-ccr-cost.yaml"
+    - "documents/parameter-cascade.md §5.2"
+  provides_to:
+    - target: "documents/parameter-cascade.md"
+      via: "Revised pivotal reading — from link-absent default to link-present expectation"
+    - target: "core/process-physics/ccr-zeno-core-reframing.yaml"
+      via: "D₋₁ → D₀ as the base case of the Zeno-locking mechanism"
+
+---
+
+# ─────────────────────────────────────────────
+# §1  THE REVISION TO THE PIVOTAL READING
+# ─────────────────────────────────────────────
+
+pivotal_reading_revision:
+
+  prior_default:
+    statement: >
+      The cascade document (v1.2 §5.2) pre-committed to the default
+      reading that the CCR⁰ → f_closure link is ABSENT — the cascade
+      splits. The reasoning: f_closure is a fixed-point property of
+      Φ₁; φ characterizes the relaxation toward D₀; fixed points carry
+      no relaxation memory. Therefore the φ-scaling of the D₋₁ → D₀
+      trajectory does not feed forward into the equilibrium shape at D₁.
+    fingerprint_for_link_present: "√5 (the discriminant of λ² − λ − 1) surfacing in f_closure."
+
+  revised_default:
+    statement: >
+      On further structural reasoning, the default should be revised to
+      LINK PRESENT, conditional on the discrete-firing interpretation of
+      R5 holding at D₋₁ → D₀. The prior default assumed a continuous
+      relaxation toward a fixed point. But the framework's own R5 dynamics
+      are discrete — firing events, not continuous flow. Each firing
+      commits a step to η. The trajectory is not erased by reaching the
+      fixed point; it is accumulated as committed topology.
+    why_this_is_principled:
+      - "The prior default rested on an assumption (continuous relaxation) that the framework's own R4/R5 dynamics contradict."
+      - "If R5 fires discretely, the trajectory toward D₀ is a committed sequence, not a continuous flow that vanishes at the fixed point."
+      - "The retention factor per firing (φ⁻¹) is not a mathematical curiosity — it is the per-step residual that the next firing processes."
+      - "The equilibrium at D₀ carries the accumulated retention imprint as committed structure."
+    not_a_post_hoc_adjustment: >
+      This is not a relaxation of the pre-commitment after seeing a
+      result. It is a correction of the reasoning that led to the prior
+      default. The prior default was wrong because it applied a
+      continuous-relaxation intuition to a system whose own dynamics
+      are discrete. The revision is structural, and it is stated before
+      the SIM-004-v2 result is known.
+
+  epistemic_status:
+    prior_default: "RETIRED — reasoning error identified"
+    revised_default: "STRUCTURAL EXPECTATION — conditional on discrete-firing R5 at D₋₁ → D₀"
+    consequence: "The √5-in-f_closure prediction becomes a positive test rather than a speculative fingerprint."
+
+---
+
+# ─────────────────────────────────────────────
+# §2  THE ZENO-AS-INITIAL-CLOSURE HYPOTHESIS
+# ─────────────────────────────────────────────
+
+zeno_as_initial_closure:
+
+  statement: >
+    The D₋₁ → D₀ transition is the base case of the framework's
+    Zeno-locking mechanism. What appears at higher depths as a
+    rate-matching condition between R5 firing frequency and R3 rotor
+    rotation frequency appears at D₋₁ → D₀ as a rate-matching condition
+    between R5 firing frequency and the discrete step rate of the
+    scalar potential's phase evolution. The retention factor per firing
+    cycle is φ⁻¹, the transient retention eigenvalue of the two-step
+    recurrence.
+
+  why_D_minus_one:
+    argument: >
+      At D₋₁ there is no rotor — the potential is scalar, isotropic,
+      pre-vector. But there are still R5 firing events: the closure
+      condition Q* = R_k[Q*] applies to the scalar potential as much
+      as to any higher-grade configuration. When an R5 event fires on
+      a scalar configuration, it commits a directed distinction —
+      the first bivector-free direction. Each firing is a discrete
+      step from D₋₁ toward D₀.
+    zeno_mechanism: >
+      The R5 firing rate at D₋₁ is set by the local viability measure
+      (at D₋₁ this is simply 𝓥 = w₀|ψ|²; no gradients yet). When the
+      firing rate is comparable to the intrinsic step rate of the
+      scalar phase evolution, the configuration is Zeno-modulated:
+      free phase evolution is partially suppressed by frequent
+      commitment events. The retention factor per firing is what
+      fraction of the phase evolution survives each commitment.
+
+  retention_factor_from_recurrence:
+    statement: >
+      The recurrence v_{k+2} = v_{k+1} + v_k (d-minus-one-pre-vector-level.yaml
+      §1) is the discrete evolution law for the directional baseline.
+      Its eigenvalues λ₁ = φ (growth) and λ₂ = −φ⁻¹ (decay) characterize
+      the two modes of the discrete evolution.
+    zeno_reading: >
+      The λ₂ = −φ⁻¹ mode is the transient/undecided component. Each
+      firing step retains φ⁻¹ of the transient mode's amplitude. This
+      is the Zeno retention factor: after each commitment event, φ⁻¹
+      of the open phase space survives into the next step. The
+      complement (1 − φ⁻¹ = φ⁻²) has been committed.
+    the_alternating_sign: >
+      λ₂ is negative. The transient alternates sign each cycle. This
+      is the algebraic signature of the Zeno-driven oscillation between
+      commitment and retained openness — a discrete two-phase cycle.
+      The alternating sign is what makes the retention a *ratio* rather
+      than a monotone decay: retention and release alternate, with net
+      retention φ⁻¹ per full two-cycle.
+
+  CCR_0_as_zeno_retention:
+    statement: >
+      CCR⁰ = φ⁻¹ is the Zeno retention factor of the D₋₁ → D₀
+      transition. It is not merely "the band-compatible eigenvalue
+      magnitude" — it is the per-firing-cycle retention of open phase
+      space, structurally identical to the Zeno retention that operates
+      at every higher depth. The D₋₁ → D₀ transition is the base case
+      of the framework's universal Zeno mechanism.
+    consequence: >
+      CCR⁰ is no longer a mathematical fact about a recurrence. It is
+      a *physical* retention factor: the fraction of unresolved phase
+      space carried forward per R5 firing event at the base level.
+
+---
+
+# ─────────────────────────────────────────────
+# §3  DIRECTION CORRECTION: RATE MATCHING, NOT COMPRESSION
+# ─────────────────────────────────────────────
+
+direction_correction:
+
+  prior_language_error:
+    statement: >
+      The earlier drafts (both SIM-004-v2's diagnostic text and the
+      ccr-zeno-core-reframing draft) used directional language —
+      "compression" of R_core, "expansion" of the core — to describe
+      what the discrete dynamics must do to reach the target. This
+      language was misleading.
+    why_wrong: >
+      R_core in the Zeno picture is not a fluid healing boundary that
+      "compresses" or "expands" under different equation forms. It is
+      the radial position where the local R5 firing frequency matches
+      the intrinsic R3 rotation frequency. It is a *rate-matching
+      condition*, not a spatial extent determined by competition
+      between fluid terms.
+
+  correct_formulation:
+    statement: >
+      The core boundary is the surface r = R_core where:
+        f_R5(r) = f_rotor(r)
+      Below this radius, R5 fires more frequently than R3 can rotate
+      (Zeno-locked). Above it, R3 rotates freely (unlocked). The
+      boundary is a resonance condition, not a geometric compression.
+    consequence: >
+      R_core is determined by the local Π_eff and η profile through
+      the rate-matching equation. Whether it comes out large or small
+      depends on the actual functional forms — it is a numerical
+      outcome, not a direction to be prescribed.
+    neither_compress_nor_expand: >
+      The correct language is: the Zeno boundary *locates itself* at
+      the rate-matching radius. If the coupling terms shift the local
+      firing rate, the boundary moves. But it moves to satisfy the
+      rate-matching condition — it is not "compressed" or "expanded"
+      by external pressure.
+
+  what_this_changes:
+    sim004_v2_diagnostic_text: >
+      Replace "must compress R_core to yield f_eq ≈ 65.41" with
+      "must locate the rate-matching boundary at a radius that yields
+      the required f_eq." The direction question is dissolved; only
+      the magnitude question remains.
+    ccr_zeno_core_reframing: >
+      The "emergent_core_boundary" section's "compression toward the
+      required target" language should be revised to rate-matching
+      language. The reframing's structural content is correct; the
+      directional language is not.
+
+---
+
+# ─────────────────────────────────────────────
+# §4  THE √5 FINGERPRINT PREDICTION
+# ─────────────────────────────────────────────
+
+sqrt5_prediction:
+
+  statement: >
+    Under the revised pivotal reading, the √5 fingerprint in f_closure
+    is no longer a speculative fingerprint — it is a *positive
+    prediction* of the Zeno-as-initial-closure hypothesis. If CCR⁰ = φ⁻¹
+    enters the D₀ → D₁ closure through the equilibrium core boundary
+    condition, then f_closure (or its components) should carry a factor
+    in ℚ(√5).
+
+  why_specific:
+    - "φ = (1+√5)/2 and φ⁻¹ = (√5−1)/2 are both in ℚ(√5)."
+    - "If the core-boundary rate-matching condition is set by φ⁻¹ (the Zeno retention factor), the equilibrium shape equation inherits that algebraic structure."
+    - "f_eq = ξ/R_core, evaluated on the φ⁻¹-constrained equilibrium, should therefore carry a √5-dependent factor."
+    - "f_closure = f_geom · f_eq; if f_eq carries √5, f_closure carries √5."
+
+  what_f_geom_lacks: >
+    The currently-cited f_geom = 1/π has no √5 content. If the Zeno
+    reading is right, the √5 must appear in f_eq (or in a corrected
+    f_geom, if the factor-of-2 issue we flagged earlier resolves in a
+    way that introduces √5 — unlikely, but not excluded).
+
+  testable_form:
+    general: "f_closure = (rational/π) × (√5-dependent factor)"
+    specific_candidates:
+      - "f_eq ∝ 1/φ = (√5 − 1)/2 ≈ 0.618"
+      - "f_eq ∝ 1/φ² = (3 − √5)/2 ≈ 0.382"
+      - "f_eq ∝ 1/φⁿ for some integer n"
+      - "f_eq ∝ (φ^N − (−φ⁻¹)^N)/√5 (Binet-type combination)"
+      - "f_eq ∝ some other ℚ(√5) expression"
+    what_the_prediction_commits_to: >
+      Some non-rational factor in ℚ(√5) appears in f_closure.
+      The specific exponent N, or the specific Binet combination,
+      is an open numerical question to be answered by the equilibrium
+      solve.
+
+  falsification:
+    statement: >
+      If a full discrete Zeno simulation at D₋₁ → D₀ produces f_closure
+      with NO ℚ(√5) content — e.g., f_eq is a rational multiple of
+      1/π — then the Zeno-as-initial-closure reading is falsified. The
+      link would be absent after all, and the prior default reading
+      would be reinstated on different grounds.
+    what_remains_open: >
+      Even if the Zeno reading is falsified, the discrete-firing
+      picture of the D₋₁ → D₀ transition might still be correct — the
+      retention factor would simply be a rational number rather than
+      φ⁻¹. The specific identification of φ⁻¹ with Zeno retention is
+      what is tested by the √5 prediction.
+
+---
+
+# ─────────────────────────────────────────────
+# §5  OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+
+  priority_1:
+    - id: "r5-firing-rate-from-master-equation"
+      description: >
+        Derive the R5 firing rate as an explicit functional of local
+        𝓥(ψ) and V_c from the master equation's ℛ(ψ). Currently the
+        commitment-gain term is μ·σ(𝓥 − Vc)·ψ; the firing *rate* is
+        implicit. Needed as the base case for the Zeno rate-matching
+        condition at D₋₁ → D₀.
+      depends_on: ["core/core-dynamical-equation.yaml#resolution_operator"]
+      priority: 1
+
+    - id: "retention-factor-from-firing-dynamics"
+      description: >
+        Derive the per-firing retention factor from the discrete R5
+        dynamics, and check whether it evaluates to φ⁻¹. If it does,
+        the identification is derived, not assumed. If it evaluates
+        to a different algebraic number, the Zeno reading survives
+        but the φ⁻¹ identification is falsified.
+      depends_on: ["r5-firing-rate-from-master-equation",
+                   "core/d-minus-one-pre-vector-level.yaml §1"]
+      priority: 1
+
+    - id: "rate-matching-condition-at-D0"
+      description: >
+        Derive the rate-matching condition f_R5 = f_rotor for the
+        D₋₁ → D₀ transition. Show that the equilibrium basis vectors
+        emerge at the rate-matching radius, and that the equilibrium
+        shape carries the accumulated retention imprint.
+      depends_on: ["retention-factor-from-firing-dynamics"]
+      priority: 1
+
+  priority_2:
+    - id: "sqrt5-in-f-closure"
+      description: >
+        Test the √5 prediction: after SIM-004-v2 is run with the full
+        coupled master equation (not the simplified GP ODE), check
+        whether f_closure carries a factor in ℚ(√5). If yes, the
+        Zeno-as-initial-closure reading is confirmed. If no, it is
+        falsified.
+      depends_on: ["rate-matching-condition-at-D0",
+                   "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"]
+      priority: 2
+
+    - id: "ccr0-environmental-shift"
+      description: >
+        CCR⁰ = φ⁻¹ is the unperturbed retention factor. Under
+        environmental Π_eff compression, does CCR⁰ shift by the same
+        2.2 ppm as α? If yes, the environmental mechanism is the same
+        for both quantities — the compression acts on the shared
+        substrate capacity. If no, the two are environmentally
+        independent, and the "+−" in the user's note reflects a
+        different source of deviation.
+      depends_on: ["rate-matching-condition-at-D0"]
+      priority: 2
+
+  priority_3:
+    - id: "zeno-as-universal-base-case"
+      description: >
+        Show that the D₋₁ → D₀ Zeno mechanism is the base case of the
+        universal Zeno mechanism that operates at every depth. Verify
+        that the rate-matching condition at D₋₁ → D₀ reduces to the
+        higher-depth rate-matching under appropriate coarse-graining.
+      depends_on: ["rate-matching-condition-at-D0",
+                   "core/process-physics/ccr-zeno-core-reframing.yaml"]
+      priority: 3
+
+---
+
+# ─────────────────────────────────────────────
+# §6  EPISTEMIC STATUS
+# ─────────────────────────────────────────────
+
+epistemic_status:
+
+  established:
+    - "The D₋₁ → D₀ recurrence v_{k+2} = v_{k+1} + v_k has eigenvalues φ, −φ⁻¹ (d-minus-one §2)."
+    - "CCR⁰ = φ⁻¹ is the unique band-compatible eigenvalue magnitude (d-minus-one §2)."
+    - "The prior pivotal default (link absent) rested on a continuous-relaxation assumption (cascade §5.2)."
+    - "The framework's R5 dynamics are discrete firing events, not continuous flow (core-dynamical-equation ℛ(ψ))."
+
+  structural_revision:
+    - "The pivotal default is revised from 'link absent' to 'link present, conditional on discrete-firing R5 at D₋₁ → D₀.'"
+    - "The revision is principled — it corrects a reasoning error, not a post-hoc adjustment."
+    - "The √5-in-f_closure fingerprint becomes a positive prediction rather than a speculative candidate."
+
+  structural_hypothesis:
+    - "The D₋₁ → D₀ transition is the base case of the framework's Zeno mechanism."
+    - "φ⁻¹ is the per-firing retention factor of the discrete R5 sequence."
+    - "The equilibrium at D₀ carries the accumulated retention imprint as committed structure."
+    - "R_core is a rate-matching boundary, not a compressed or expanded boundary."
+
+  open:
+    - "The R5 firing rate as an explicit functional from ℛ(ψ)."
+    - "The derivation of φ⁻¹ as the retention factor from firing dynamics (as opposed to assumption)."
+    - "The rate-matching condition at D₋₁ → D₀."
+    - "The specific form of the √5 factor in f_closure."
+    - "The environmental shift of CCR⁰ relative to α."
+
+  what_would_falsify_the_reading:
+    - "A full discrete Zeno simulation producing f_closure with no ℚ(√5) content."
+    - "The per-firing retention factor evaluating to a rational number rather than φ⁻¹."
+    - "The rate-matching condition failing to produce a stable equilibrium basis at D₀."
+
+---
+
+# ─────────────────────────────────────────────
+# §7  CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+cross_references:
+  - file: "core/d-minus-one-pre-vector-level.yaml"
+    note: >
+      §1 gives the recurrence; §2 gives the eigenvalues φ, φ⁻¹; §3
+      notes the biological-φ convergence. This file supplies the
+      physical mechanism for §2's CCR⁰ = φ⁻¹ reading.
+  - file: "core/core-dynamical-equation.yaml"
+    note: >
+      ℛ(ψ) in resolution_operator; the discrete-firing interpretation
+      of R5 needed for the Zeno reading. The commitment-gain term
+      μ·σ(𝓥 − Vc)·ψ is the R5 firing mechanism, but its *rate* is
+      not yet derived from the equation.
+  - file: "core/process-physics/ccr-zeno-core-reframing.yaml"
+    note: >
+      The reframing draft for D₀ → D₁. This file supplies the base
+      case (D₋₁ → D₀) that the reframing presumes. The direction
+      correction (§3 of this file) applies to the reframing's
+      "emergent_core_boundary" section.
+  - file: "core/process-physics/quantum-zeno-as-commitment.yaml"
+    note: >
+      The existing treatment of Zeno-modulated commitment dynamics.
+      This file extends the Zeno picture to the base case at D₋₁.
+  - file: "core/process-physics/quanta-as-ccr-cost.yaml"
+    note: >
+      The quantum as the indivisible unit of CCR cost per R3→R5
+      firing event. The discrete-firing picture is already the
+      framework's claim; this file specifies the retention factor
+      per firing.
+  - file: "documents/parameter-cascade.md"
+    note: >
+      §5.2 pivotal reading — revised by this file from default
+      link-absent to conditional link-present. A revision note
+      should be added to §5.2.
+  - file: "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
+    note: >
+      SIM-004-v2 — the √5-in-f_closure test is the checkable
+      consequence. Requires the full coupled master equation, not
+      the simplified GP ODE.
+  - file: "computation/derivations/sim004_v2_integrated.py"
+    note: >
+      Current implementation uses simplified GP. To test the Zeno
+      prediction, the discrete Zeno algorithm from ccr-zeno-core-
+      reframing.yaml §discrete_simulation_algorithm should be
+      implemented in place of gp_radial_solve.
