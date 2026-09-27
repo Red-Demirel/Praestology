@@ -382,18 +382,16 @@ alpha_geometric_vs_measured:
 ---
 
 unified_triad_pointer:
-  status: "HYPOTHESIS — detailed treatment moved to companion file"
+  status: "STRUCTURAL SYNTHESIS — detailed treatment in companion file"
   statement: |
     Quanta, Zeno locking, Gravity (as Π_eff modulator), and Excess Dissipation
     are four readouts of a single process: the discrete modulation of commitment
-    by local phase capacity. Full development lives in:
-
-      core/process-physics/ccr-unified-triad.yaml
-
-  key_flags:
-    - CCR = 1 is the saturation / closure threshold (Saturation Reading adopted)
-    - CCR > 1 is over-commitment → excess dissipation
-    - CCR⁰ = φ⁻¹ at the D₋₁ → D₀ transition remains a structural hypothesis
+    by local phase capacity (Π_eff). The CCR acts as the invariant ledger.
+  canonical_file: "core/process-physics/zeno-gravity-quantum-unification.yaml"
+  notes:
+    - CCR = 1 is the saturation threshold (Saturation Reading)
+    - CCR > 1 leads to excess dissipation
+    - CCR⁰ = φ⁻¹ at D₋₁ → D₀ remains a structural hypothesis
 
 ---
 
