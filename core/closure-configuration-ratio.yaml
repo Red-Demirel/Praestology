@@ -605,3 +605,157 @@ amendment_cross_references:
     note: "1/Π_eff scaling — process-rate suppression mechanism"
   - file: "navier-stokes-derivation.yaml"
     note: "High-V_eff burst dynamics relate to NS turbulence onset (R3 regime)"
+
+# -----------------------------------------------------------------------------
+# AMENDMENT v2.2: SATURATION READING ADOPTION & THE UNIFIED TRIAD
+# -----------------------------------------------------------------------------
+# This amendment formally adopts the "Saturation Reading" for the CCR=1 
+# boundary, resolves the prior ambiguity, and integrates the unified causal 
+# loop of Quanta, Zeno, Gravity, and Excess Dissipation directly into the 
+# core CCR definition with appropriate epistemic flagging.
+# -----------------------------------------------------------------------------
+
+boundary_conditions: |
+  The CCR defines the viable band for committed topology. 
+  The framework explicitly adopts the Saturation Reading, superseding 
+  the prior Uncommitted Reading.
+  
+  Saturation Reading (ADOPTED):
+  0 < CCR < 1   →  Under-committed: partial occupancy of viable phase space. 
+                   Stable, realized topology maintained against full phase space.
+  CCR = 1       →  SATURATION / CLOSURE THRESHOLD: full occupancy of the 
+                   viable phase space. The topology is maximally locked. 
+                   (e.g., the electron's equilibrium CCR¹ = 1).
+  CCR > 1       →  OVER-COMMITTED: the configuration's writhe-weighted phase-
+                   space volume exceeds the locally available embedding capacity.
+                   This is not a stable topological lock; it is an excess state.
+
+  Uncommitted Reading (SUPERSEDED):
+  The prior v2.0 statement "CCR = 1 → topology occupies full phase space = 
+  uncommitted field" is retired. It incorrectly conflated the saturation 
+  limit with the uncommitted limit, preventing the evaluation of over-
+  commitment dynamics.
+
+unified_triad_and_excess_dissipation:
+  status: "HYPOTHESIS NOW EVALUABLE — structurally consistent with the 
+           framework; prerequisite boundary clarification resolved."
+  statement: >
+    Quanta, Zeno, Gravity, and Excess Dissipation are not four separate 
+    mechanisms. They are four readouts of a single, unified process: 
+    the discrete modulation of commitment by the local phase capacity ($\Pi_{eff}$).
+    The CCR is the invariant ledger that balances the geometric cost against 
+    the environmental capacity.
+  
+  quanta_the_currency:
+    role: "The discrete unit of CCR cost."
+    mechanism: >
+      A quantum is not a particle; it is the indivisible unit of topological 
+      reconfiguration that crosses the viability threshold ($V_c$) and writes 
+      a permanent increment to hysteresis ($\eta$). It is the minimum "payment" 
+      required to move a configuration from an indeterminate R3 superposition 
+      to a committed R4/R5 state. The unit is invariant; only the local 
+      projection conditions ($\Pi_{eff}$, $\eta$) at the moment of R5 firing vary.
+      
+  zeno_the_rhythm:
+    role: "The discrete firing mechanism (rate-matching)."
+    mechanism: >
+      The Zeno boundary $R_{core}$ is the radius where the R5 firing frequency 
+      equals the intrinsic R3 rotation frequency ($f_{R5}(r) = f_{rotor}(r)$). 
+      Inside $R_{core}$, the system is Zeno-locked: frequent R5 firings retain 
+      a fraction of open phase space per cycle. 
+    connection_to_ccr: >
+      This retention factor is identified as $CCR^0 = \phi^{-1}$ at the 
+      $D_{-1} \to D_0$ transition. 
+      EPISTEMIC FLAG: This identification is currently a STRUCTURAL HYPOTHESIS 
+      pending derivation from the master equation's discrete firing dynamics 
+      (see ccr-zeno-as-initial-closure.yaml). 
+    structural_implication: history-dependent-shape: >
+      Because the equilibrium shape carries this accumulated discrete imprint, 
+      the shape is inherently history-dependent. It is not a continuous energy 
+      minimum of a static landscape, but the fossil record of the discrete 
+      commitment process.
+      
+  gravity_the_modulator:
+    role: "The environmental modulator of $\Pi_{eff}$."
+    mechanism: >
+      Gravity is the ambient phase pressure gradient ($\nabla \Pi_{eff}$). 
+      CRITICAL: Gravity does NOT alter the geometric CCR ratio (e.g., $Wr = 3/2$ 
+      remains $3/2$). Instead, it modulates the environmental capacity to hold 
+      that ratio.
+    effects:
+      - >
+        Lowers the viability threshold $V_c$, making it easier for existing 
+        geometric tension (like the $F=8/3$ N=4 residual) to trigger a deeper 
+        closure (e.g., stellar nucleosynthesis).
+      - >
+        Shifts the Zeno rate-matching boundary ($R_{core}$). By altering the 
+        local $\Pi_{eff}$, gravity changes the R5 firing rate relative to the 
+        R3 rotation rate, effectively "squeezing" the Zeno-locked core and 
+        forcing discrete quantum firings that would not occur in free space.
+
+  excess_dissipation_the_release:
+    role: "The thermal signature of over-commitment (CCR > 1)."
+    mechanism: >
+      When gravity (or other environmental compression) pushes a configuration's 
+      local CCR above the saturation boundary of 1, the excess $\delta = CCR - 1$ 
+      cannot be held as topological lock. It must dissipate.
+    dissipation_channels: >
+      The excess couples to the surrounding $\Pi_{eff}$ field and radiates as 
+      phase-space quanta via Regress ($R_{diss}$). The dissipation is thermal 
+      and area-scaled (not volume-scaled) because $\delta$ is a boundary 
+      phenomenon at the Zeno-locked core.
+    unification: >
+      This single mechanism structurally unifies:
+      1. Hawking radiation (horizon excess dissipation)
+      2. The Unruh effect (accelerated-frame phase-space compression excess)
+      3. Unstable particle decay (intrinsic margin $\delta > 0$ in vacuum)
+      4. Zitterbewegung (boundary-layer fluctuation of the electron at CCR¹ ≈ 1)
+
+running_alpha_and_saturation_ceiling: |
+  At higher energy (higher local $\eta$, lower $\Pi_{eff}$), surrounding 
+  realization compresses $\Omega_{embed}$ progressively. CCR increases toward 1.
+  The Landau pole is not a physical divergence to infinity; it is the 
+  logarithmic saturation ceiling $\Lambda \cdot \ln(1 + \kappa|\psi|^2)$ where 
+  CCR approaches 1. The substrate cannot be realized beyond its processing 
+  capacity. If pushed beyond (CCR > 1), the excess $\delta$ dissipates, 
+  preventing over-realization and protecting the framework from singularities.
+
+# -----------------------------------------------------------------------------
+# REQUIRED SYNC NOTES (v2.2)
+# -----------------------------------------------------------------------------
+# 1. This amendment supersedes the v2.0 statement "CCR = 1 → uncommitted field".
+#    That statement represented the "Uncommitted Reading", which is now 
+#    explicitly retired in favor of the "Saturation Reading".
+# 2. The $CCR^0 = \phi^{-1}$ identification is flagged as a STRUCTURAL 
+#    HYPOTHESIS, aligning with the epistemic status in 
+#    ccr-zeno-as-initial-closure.yaml.
+# 3. The "boundary-condition-clarification" open item in 
+#    ccr-excess-dissipation.yaml is now RESOLVED, upgrading that hypothesis 
+#    from "conditional candidate" to "hypothesis now evaluable".
+# -----------------------------------------------------------------------------
+
+open_derivations:
+  priority_1:
+    - id: "r5-firing-rate-from-master-equation"
+      description: >
+        Derive the R5 firing rate $f_{R5}$ as an explicit functional of local 
+        $\mathcal{V}(\psi)$ and $V_c$ from the master equation's resolution 
+        operator $\mathcal{R}(\psi)$. This is the mathematical bridge that 
+        allows Gravity ($\Pi_{eff}$) to modulate the Zeno boundary.
+      depends_on: ["core/core-dynamical-equation.yaml", "ccr-zeno-as-initial-closure.yaml"]
+      
+    - id: "vc-from-pi-eff"
+      description: >
+        Derive the functional dependence of $V_c$ on $\Pi_{eff}$. This is the 
+        bridge that allows Gravity to lower the threshold and trigger the 
+        Zeno-locked quantum firing.
+      depends_on: ["gravity-and-ccr-threshold.yaml", "core/inside-out-channeling.yaml"]
+      
+  priority_2:
+    - id: "regress-emits-quanta"
+      description: >
+        Formal derivation of how $R_{diss}$ (Regress) couples to the surrounding 
+        $\Pi_{eff}$ field to radiate phase-space quanta as the specific 
+        dissipation channel for $\delta > 0$. Confirms the thermal, area-scaled 
+        nature of the excess release.
+      depends_on: ["ccr-excess-dissipation.yaml", "commitment-response.yaml"]
