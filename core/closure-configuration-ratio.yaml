@@ -96,6 +96,17 @@ realization:
 
 ---
 
+topological_anchors_electron:
+  Lk: 2
+  Tw: 1
+  Wr: 1
+  note: |
+    Unified values as of v2.2. 
+    All simulations (including SIM-004), centreline geometry, and downstream 
+    files must use these anchors. Previous Wr = 3/2 / Tw = 1/2 values are retired.
+
+---
+
 formal_definition:
   statement: |
     For any stable committed topology T realized in a field with
@@ -147,35 +158,21 @@ writhe_as_realization_cost:
 
     Writhe is not an imperfection. It is the minimal non-zero cost of
     being a specific realized structure rather than open field.
-    Without writhe, there is no self-linking, no stable closure,
-    no committed topology — only uncommitted potential.
 
   calugareanu_white: |
-    Lk = Wr + Tw    (Calugareanu-White-Fuller invariant)
+    Lk = Wr + Tw    (Calugăreanu–White–Fuller invariant)
 
-    For the electron's 720° Möbius vortex:
-      Lk = 2    (double cover — 720° closure links twice)
-      Tw = 1    (one full twist per 720° cycle)
+    For the electron’s 720° Möbius vortex (locked anchors):
+      Lk = 2
+      Tw = 1
       Wr = Lk - Tw = 1
 
-    Wr = 1 is the minimal non-zero linking number for a stable chiral vortex.
-    It forces the realized topology to occupy a specific fraction of S³ —
-    the orientational phase space of the quaternion rotor.
+    Wr = 1 is the minimal non-zero self-linking for a stable chiral vortex
+    under the double-cover closure.
 
   ga_expression: |
-    In GA terms, the writhe is the grade-2 bivector's self-linking
+    In GA terms, the writhe is the grade-2 bivector’s self-linking
     in the grade-3 pseudoscalar embedding volume.
-
-    The rotor's action on the embedding space creates a bivector field
-    (the circulation plane) that links back to itself.
-    Writhe measures this self-linking — the grade-2 self-interaction
-    term in the rotor's realization of committed closure.
-
-    Grade decomposition of realization:
-      Grade-0: commitment density η — the realized 'now' of each event
-      Grade-1: directional flow — propagation of realization across space
-      Grade-2: circulation plane — the bivector where writhe originates
-      Grade-3: pseudoscalar volume — full embedding orientational space
 
 ---
 
@@ -339,111 +336,64 @@ ccr_family_reading_of_alpha:
 ---
 
 alpha_geometric_vs_measured:
+  status: "PREFERRED READING — depth-aggregate account (adopted v2.2+)"
+
   statement: |
-    α_geometric = CCR¹ of unperturbed Möbius rotor in free field
-                = Wr · Ω_rotor / Ω_embed with no environmental compression
-                = α⁻¹ = 4π³ + π² + π = 137.036304
+    The measured fine-structure constant is not the electron’s isolated CCR¹.
+    It is a committed aggregate:
 
-    α_measured  = committed aggregate of electron self-closure + 3rd-body coupling
-                  sampled within commitment-dense environment
-                = CCR¹ + Σ CCRᵏ + noise(Π_eff)
-                = α⁻¹_measured < α⁻¹_geometric (CODATA: 137.035999)
+      α_measured ≈ CCR¹ + Σ (3rd-body coupling contributions) + environmental noise
 
-    The 2.2 ppm gap is environmental realization density and 3rd-body coupling
-    imprinting on the measurement of a geometric ratio. It is predicted, not anomalous.
+    where:
+      CCR¹            = electron’s own closure-configuration ratio (leading term)
+      3rd-body terms  = coupling contributions from the measurement configuration
+                        (proton, apparatus, mutual closures at higher recursive depth)
+      environmental   = Π_eff compression at the measurement site
+                        (boundary-condition shift, currently ~2.2 ppm)
 
-  running_alpha: |
-    At higher energy (higher local η, lower Π_eff), surrounding realization
-    compresses Ω_embed progressively. CCR increases toward 1.
-    The Landau pole is Ω_embed → Ω_rotor — physically, approach to the
-    logarithmic saturation ceiling Λ·ln(1 + κ|ψ|²).
-    The substrate cannot be realized beyond its processing capacity.
-    The Landau pole is not a physical divergence — it is the saturation
-    ceiling preventing over-realization.
+  free_field_limit: |
+    In the complete absence of 3rd bodies and environmental commitment,
+    α → CCR¹. The current illustrative geometric candidate for this limit is:
 
-  testable_prediction: |
-    α_measured varies systematically with local commitment density and
-    3rd-body probe geometry. Measurements in void environments and with
-    minimal 3rd-body coupling should yield values incrementally
-    closer to 137.036304 than terrestrial measurements.
-    Space-based precision metrology far from mass concentrations is the test.
+      Ω_rotor⁻¹ ≈ 4π³ + π² + π = 137.036304
+
+    Status: EXAMPLE ONLY — pending native derivation from ccr-electron-explicit.
+    This expression must not be treated as a derived result.
+
+  why_aggregate_is_preferred: |
+    The electron is never measured in isolation. Any actual measurement
+    necessarily involves at least one 3rd body. Treating the entire
+    CODATA-to-geometric gap as pure environmental Π_eff distortion
+    under-counts the structural contribution of the measurement configuration.
+    The aggregate reading makes the 3rd body an explicit term.
+
+  relation_to_standard_physics: |
+    Standard physics can treat α as a universal constant because the
+    3rd-body and environmental contributions are extremely small under
+    ordinary laboratory conditions. The leading CCR¹ dominates.
+    Precision comparisons between different 3rd-body systems
+    (e–p, e–μ, e–e) are in principle a testable signature.
+
+  open_items:
+    - Determine the order in α at which 3rd-body contributions enter
+    - Clarify whether the aggregate is a simple sum or a structured combination
+    - Separately quantify environmental Π_eff shift vs structural 3rd-body terms
 
 ---
 
-unified_triad_and_excess_dissipation:
-  status: "HYPOTHESIS NOW EVALUABLE — structurally consistent with the 
-           framework; prerequisite boundary clarification resolved."
-  statement: >
-    Quanta, Zeno, Gravity, and Excess Dissipation are not four separate 
-    mechanisms. They are four readouts of a single, unified process: 
-    the discrete modulation of commitment by the local phase capacity (Π_eff).
-    The CCR is the invariant ledger that balances the geometric cost against 
-    the environmental capacity.
-  
-  quanta_the_currency:
-    role: "The discrete unit of CCR cost."
-    mechanism: >
-      A quantum is not a particle; it is the indivisible unit of topological 
-      reconfiguration that crosses the viability threshold (V_c) and writes 
-      a permanent increment to hysteresis (η). It is the minimum "payment" 
-      required to move a configuration from an indeterminate R3 superposition 
-      to a committed R4/R5 state. The unit is invariant; only the local 
-      projection conditions (Π_eff, η) at the moment of R5 firing vary.
-      
-  zeno_the_rhythm:
-    role: "The discrete firing mechanism (rate-matching)."
-    mechanism: >
-      The Zeno boundary R_core is the radius where the R5 firing frequency 
-      equals the intrinsic R3 rotation frequency (f_R5(r) = f_rotor(r)). 
-      Inside R_core, the system is Zeno-locked: frequent R5 firings retain 
-      a fraction of open phase space per cycle. 
-    connection_to_ccr: >
-      This retention factor is identified as CCR⁰ = φ⁻¹ at the 
-      D_−1 → D_0 transition. 
-      EPISTEMIC FLAG: This identification is currently a STRUCTURAL HYPOTHESIS 
-      pending derivation from the master equation's discrete firing dynamics 
-      (see ccr-zeno-as-initial-closure.yaml). 
-    structural_implication: history-dependent-shape: >
-      Because the equilibrium shape carries this accumulated discrete imprint, 
-      the shape is inherently history-dependent. It is not a continuous energy 
-      minimum of a static landscape, but the fossil record of the discrete 
-      commitment process.
-      
-  gravity_the_modulator:
-    role: "The environmental modulator of Π_eff."
-    mechanism: >
-      Gravity is the ambient phase pressure gradient (∇ Π_eff). 
-      CRITICAL: Gravity does NOT alter the geometric CCR ratio (e.g., Wr = 3/2 
-      remains 3/2). Instead, it modulates the environmental capacity to hold 
-      that ratio.
-    effects:
-      - >
-        Lowers the viability threshold V_c, making it easier for existing 
-        geometric tension (like the F=8/3 N=4 residual) to trigger a deeper 
-        closure (e.g., stellar nucleosynthesis).
-      - >
-        Shifts the Zeno rate-matching boundary (R_core). By altering the 
-        local Π_eff, gravity changes the R5 firing rate relative to the 
-        R3 rotation rate, effectively "squeezing" the Zeno-locked core and 
-        forcing discrete quantum firings that would not occur in free space.
+unified_triad_pointer:
+  status: "HYPOTHESIS — detailed treatment moved to companion file"
+  statement: |
+    Quanta, Zeno locking, Gravity (as Π_eff modulator), and Excess Dissipation
+    are four readouts of a single process: the discrete modulation of commitment
+    by local phase capacity. Full development lives in:
 
-  excess_dissipation_the_release:
-    role: "The thermal signature of over-commitment (CCR > 1)."
-    mechanism: >
-      When gravity (or other environmental compression) pushes a configuration's 
-      local CCR above the saturation boundary of 1, the excess δ = CCR - 1 
-      cannot be held as topological lock. It must dissipate.
-    dissipation_channels: >
-      The excess couples to the surrounding Π_eff field and radiates as 
-      phase-space quanta via Regress (R_diss). The dissipation is thermal 
-      and area-scaled (not volume-scaled) because δ is a boundary 
-      phenomenon at the Zeno-locked core.
-    unification: >
-      This single mechanism structurally unifies:
-      1. Hawking radiation (horizon excess dissipation)
-      2. The Unruh effect (accelerated-frame phase-space compression excess)
-      3. Unstable particle decay (intrinsic margin δ > 0 in vacuum)
-      4. Zitterbewegung (boundary-layer fluctuation of the electron at CCR¹ ≈ 1)
+      core/process-physics/ccr-unified-triad.yaml
+
+  key_flags:
+    - CCR = 1 is the saturation / closure threshold (Saturation Reading adopted)
+    - CCR > 1 is over-commitment → excess dissipation
+    - CCR⁰ = φ⁻¹ at the D₋₁ → D₀ transition remains a structural hypothesis
 
 ---
 
@@ -631,70 +581,19 @@ high_veff_regime:
 ---
 
 ccr_first_derivation_discipline:
-  status: "DIRECTIONAL CORRECTION — methodological note, not a new result"
-  context: |
-    A proposed connection suggested deriving CCR from the Gauss-Bonnet theorem
-    applied directly to the Möbius band as a surface. This is mathematically
-    incorrect as stated: the Möbius band is intrinsically flat (developable),
-    so ∫K dA = 2πχ = 0 for χ(Möbius) = 0 — not 4π³+π²+π. Gauss-Bonnet
-    governs intrinsic surface curvature; it is the wrong tool for an
-    embedding/self-linking question.
+  status: "DIRECTIONAL CORRECTION — methodological note"
+  statement: |
+    Derive geometry from the requirements of the CCR ratio.
+    Do not start from an assumed shape (e.g. Möbius surface) and then
+    search for a theorem that fits it.
 
-  salvaged_intuition: |
-    The underlying instinct is correct and worth preserving: Calugareanu-
-    White-Fuller (Lk = Wr + Tw) IS the appropriate member of the Gauss-Bonnet
-    family for this problem — it is the curve-self-linking analog, decomposing
-    a topological invariant (Lk) into geometric (Wr) and framing (Tw)
-    contributions, structurally parallel to how Gauss-Bonnet decomposes χ
-    into curvature and boundary terms. CWF is already correctly used
-    elsewhere in this file (Wr = 1 for the electron). The error was reaching
-    for the surface-curvature member of the family instead of the
-    curve-linking member, when the electron's structure is a vortex
-    filament, not a surface.
+    Correct direction: CCR structure → necessary topological/geometric properties.
+    Incorrect direction: assumed picture → retrofit invariants.
 
-  directional_correction: |
-    The deeper methodological issue is direction of derivation, not just
-    choice of theorem:
-
-      Backward (incorrect approach): start from an assumed geometric picture
-      of the electron (Möbius surface), then search for a theorem that
-      describes that picture. This fits invariants to shapes already assumed —
-      it can produce numerically suggestive but structurally unjustified results.
-
-      Forward (correct approach): start from CCR as the defining ratio,
-      and ask what geometric/topological structure is NECESSARILY implied
-      by that ratio's required properties (dimensionless, 0 < CCR < 1,
-      writhe-weighted, S³-valued phase space). Let the ratio constrain
-      the topology, rather than retrofitting a theorem onto a presumed shape.
-
-    This directional discipline applies to all future CCR instance derivations
-    (weak, strong, gravitational) — see other_constants_as_ccr above.
-    The geometric terms (4π³ + π² + π) remain a candidate pending
-    ccr-electron-explicit; they should be derived FROM the CCR structure,
-    not justified by retrofitting surface theorems onto an assumed picture.
-
-  epistemic_note: |
-    Consistent with the framework's stated epistemic stance (praestology-recap):
-    "the framework stands or falls by its ability to derive known physics...
-    not by philosophical elegance alone." This is logged as an open
-    directional correction, not forced to premature closure. Future work —
-    plausibly by contributors with more native fluency in geometric algebra —
-    may resolve this further than current derivation permits.
-
-  open_candidates_for_correct_invariant: |
-    Possible correct tools for deriving Ω_rotor from CCR's structural
-    requirements (none yet attempted; listed for future direction only):
-    — Calugareanu-White-Fuller, applied forward from CCR's writhe requirement
-    — Chern-Simons / Chern class on the rotor bundle over S³ (the double-cover
-      is fundamentally a bundle/holonomy structure, possibly more natural
-      than a surface-curvature approach)
-    — Direct volume computation of the rotor's image in S³ under the
-      closure map (note: S³ of radius r has volume 2π²r³ — this should be
-      checked against the claimed 4π³ term for internal consistency
-      before any of these candidates are pursued further)
-
-  status_flag: "Logged, not merged as a derivation. ccr-electron-explicit remains open."
-
+  note: |
+    Calugăreanu–White–Fuller is the appropriate tool for the self-linking question.
+    Gauss-Bonnet applied to the Möbius band as a surface is the wrong instrument
+    (the band is flat; χ = 0).
 ---
 
 open_derivations:
