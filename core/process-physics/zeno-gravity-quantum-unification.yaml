@@ -1,0 +1,177 @@
+/core/process-physics/zeno-gravity-quantum-unification.yaml
+name: "Zeno-Gravity-Quantum Unification: The Discrete Modulation of Commitment"
+version: "0.1"
+status: "STRUCTURAL SYNTHESIS — unifies three previously separate domains into a single causal loop centered on the CCR ledger; bridges open items across quanta-as-ccr-cost, ccr-zeno-as-initial-closure, and gravity-and-ccr-threshold."
+domain: "Core / Process-Physics"
+description: >
+  Quanta, Zeno, and Gravity are not three separate mechanisms. They are three 
+  readouts of a single, unified process: the discrete modulation of commitment 
+  by the local phase capacity ($\Pi_{eff}$). Gravity sets the environmental 
+  capacity ($\Pi_{eff}$, $V_c$), Zeno dictates the discrete rhythm of the 
+  transition (rate-matching, $\phi^{-1}$ retention), and the Quantum is the 
+  indivisible step (CCR cost) taken during that transition. The CCR is the 
+  invariant ledger that balances the geometric cost against the environmental 
+  capacity.
+dependency_map:
+  requires:
+    - "core/process-physics/quanta-as-ccr-cost.yaml"
+    - "core/process-physics/ccr-zeno-as-initial-closure.yaml"
+    - "core/process-physics/gravity-and-ccr-threshold.yaml"
+    - "core/process-physics/mass-as-plane-independence.yaml"
+    - "core/process-physics/ccr-excess-dissipation.yaml"
+    - "core/process-physics/dirac-as-grade-chain-closure.yaml"
+  provides_to:
+    - target: "core/process-physics/open-reconciliation-notes.yaml"
+      via: "Bridges the open items: r5-firing-rate-from-master-equation, vc-from-pi-eff, pi-eff-dependence-of-i-rot"
+
+─────────────────────────────────────────────
+§1  THE UNIFIED TRIAD
+─────────────────────────────────────────────
+unified_triad:
+  statement: >
+    The framework currently treats Quanta, Zeno, and Gravity in separate 
+    domain files. Structurally, they form a closed causal loop centered on 
+    the Closure-Configuration Ratio (CCR) and the local phase capacity ($\Pi_{eff}$).
+  
+  quanta_the_currency:
+    role: "The discrete unit of CCR cost."
+    mechanism: >
+      A quantum is not a particle; it is the indivisible unit of topological 
+      reconfiguration that crosses the viability threshold ($V_c$) and writes 
+      a permanent increment to hysteresis ($\eta$). It is the minimum "payment" 
+      required to move a configuration from an indeterminate R3 superposition 
+      to a committed R4/R5 state.
+    invariance: >
+      The quantum unit itself is invariant. What varies is the observable 
+      projection (local $\Pi_{eff}$, $\eta$) at the moment R5 fires.
+      
+  zeno_the_rhythm:
+    role: "The discrete firing mechanism (rate-matching)."
+    mechanism: >
+      The Zeno boundary $R_{core}$ is the radius where the R5 firing frequency 
+      equals the intrinsic R3 rotation frequency ($f_{R5}(r) = f_{rotor}(r)$). 
+      Inside $R_{core}$, the system is Zeno-locked: frequent R5 firings retain 
+      a fraction ($\phi^{-1}$) of open phase space per cycle. 
+    connection_to_ccr: >
+      This $\phi^{-1}$ is $CCR^0$, the foundational Zeno retention factor. 
+      The equilibrium shape at $D_0$ (and thus $f_{closure}$ at $D_1$) carries 
+      this accumulated discrete imprint.
+      
+  gravity_the_modulator:
+    role: "The environmental modulator of $\Pi_{eff}$."
+    mechanism: >
+      Gravity is the ambient phase pressure gradient ($\nabla \Pi_{eff}$). 
+      It does NOT alter the geometric CCR ratio (e.g., $Wr = 3/2$ remains $3/2$). 
+      Instead, it modulates the environmental capacity to hold that ratio.
+    effects:
+      - >
+        Lowers the viability threshold $V_c$, making it easier for existing 
+        geometric tension (like the $F=8/3$ N=4 residual) to trigger a deeper closure.
+      - >
+        Shifts the Zeno rate-matching boundary ($R_{core}$). By altering the 
+        local $\Pi_{eff}$, gravity changes the R5 firing rate relative to the 
+        R3 rotation rate, effectively "squeezing" the Zeno-locked core and 
+        forcing discrete quantum firings.
+
+─────────────────────────────────────────────
+§2  THE SYNTHESIZED LOOP
+─────────────────────────────────────────────
+synthesized_loop:
+  statement: >
+    Imagine a partial closure configuration (e.g., a quark strain or an 
+    unstable nucleus) in a region of increasing ambient phase pressure (Gravity).
+  steps:
+    1_gravity_acts: >
+      $P_{env}$ rises, locally depleting $\Pi_{eff}$.
+    2_threshold_drops: >
+      The viability threshold $V_c$ lowers. The geometric tension of the 
+      configuration (its unabsorbed CCR cost) now exceeds this lowered $V_c$.
+    3_zeno_boundary_shifts: >
+      The local $\Pi_{eff}$ depression alters the R5 firing rate. The 
+      rate-matching condition $f_{R5} = f_{rotor}$ is met at a new radius. 
+      The system enters a Zeno-locked regime where discrete commitment events are forced.
+    4_quantum_fires: >
+      To resolve the tension, the system pays the discrete CCR cost. An R5 
+      event fires, committing the topology to the next depth, writing to $\eta$, 
+      and locking in the new plane-independence cost ($I_{rot}$).
+  summary: >
+    Gravity sets the stage ($\Pi_{eff}$, $V_c$), Zeno dictates the rhythm 
+    of the transition (discrete rate-matching), and the Quantum is the 
+    indivisible step taken during that transition. The CCR is the invariant 
+    ledger that balances the geometric cost against the environmental capacity.
+
+─────────────────────────────────────────────
+§3  CONSEQUENCES AND PREDICTIONS
+─────────────────────────────────────────────
+consequences:
+  strong_field_mass_shift:
+    statement: >
+      Under the Option A carrier ($\mu = (mc/\hbar)(\Pi_{eff}/\omega_\Phi)$), 
+      effective inertial mass is $\Pi_{eff}$-dependent. A particle deep in a 
+      gravitational well has lower effective $I_{rot}$ than in free space, 
+      because the vortex precession rate $\omega_\Phi$ slows where $\Pi_{eff}$ is low.
+    prediction: >
+      Equivalence principle holds at first order (free fall stays universal), 
+      but effective mass drops in deep wells. This is a strong-field signature 
+      distinct from standard GR.
+      
+  excess_dissipation_unification:
+    statement: >
+      When gravity pushes a configuration's CCR > 1 (over-commitment), the 
+      excess $\delta = CCR - 1$ cannot be held as topological lock. It must 
+      dissipate thermally at the Zeno boundary.
+    unification: >
+      This provides a single mechanism for Hawking radiation (horizon excess), 
+      the Unruh effect (accelerated frame excess), and unstable particle decay 
+      (intrinsic margin > 1). The dissipation is area-scaled because $\delta$ 
+      is a boundary phenomenon at the Zeno-locked core.
+
+─────────────────────────────────────────────
+§4  OPEN DERIVATIONS (THE BRIDGES)
+─────────────────────────────────────────────
+open_derivations:
+  statement: >
+    The pieces of this triad are present in the framework, but the explicit 
+    mathematical bridges between them are currently open. This file registers 
+    them as a unified set.
+    
+  priority_1_bridges:
+    - id: "r5-firing-rate-from-master-equation"
+      description: >
+        Derive the R5 firing rate $f_{R5}$ as an explicit functional of local 
+        $\mathcal{V}(\psi)$ and $V_c$ from the master equation's resolution 
+        operator $\mathcal{R}(\psi)$. This is the mathematical bridge that 
+        allows Gravity ($\Pi_{eff}$) to modulate the Zeno boundary.
+      depends_on: ["core/core-dynamical-equation.yaml", "ccr-zeno-as-initial-closure.yaml"]
+      
+    - id: "vc-from-pi-eff"
+      description: >
+        Derive the functional dependence of $V_c$ on $\Pi_{eff}$. This is the 
+        bridge that allows Gravity to lower the threshold and trigger the 
+        Zeno-locked quantum firing.
+      depends_on: ["gravity-and-ccr-threshold.yaml", "core/inside-out-channeling.yaml"]
+      
+    - id: "pi-eff-dependence-of-omega-phi"
+      description: >
+        Derive $\omega_\Phi(\Pi_{eff})$. If the vortex precession rate slows 
+        where $\Pi_{eff}$ is low, then effective inertial mass is itself 
+        $\Pi_{eff}$-dependent. This bridges mass-as-plane-independence with 
+        gravity-and-ccr-threshold.
+      depends_on: ["mass-as-plane-independence.yaml", "dirac-as-grade-chain-closure.yaml"]
+
+─────────────────────────────────────────────
+§5  EPISTEMIC STATUS
+─────────────────────────────────────────────
+epistemic_status:
+  established:
+    - "Quanta are indivisible units of CCR cost per R3→R5 event."
+    - "Zeno rate-matching ($f_{R5} = f_{rotor}$) defines the core boundary."
+    - "Gravity modulates $\Pi_{eff}$ and $V_c$ without altering the geometric CCR ratio."
+    - "CCR⁰ = $\phi^{-1}$ is the Zeno retention factor at the base level."
+  structural_synthesis:
+    - "Quanta, Zeno, and Gravity are three readouts of the discrete modulation of commitment by $\Pi_{eff}$."
+    - "Gravity sets the stage, Zeno dictates the rhythm, Quanta are the steps."
+  open:
+    - "The explicit functional form of $f_{R5}$ from $\mathcal{R}(\psi)$."
+    - "The explicit functional form of $V_c(\Pi_{eff})$."
+    - "The explicit functional form of $\omega_\Phi(\Pi_{eff})$."
