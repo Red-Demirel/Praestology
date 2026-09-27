@@ -1,15 +1,15 @@
 # core/closure-configuration-ratio.yaml
 # Praestology — Core Framework Level
 # The closure-configuration ratio as a general structural parameter of committed topology
-# v2.0 — writhe section added; realization language throughout
+# v2.3 — ccr-family depth-aggregate reading of alpha integrated; version bumped from v2.2
 
 id: closure-configuration-ratio
 title: "The Closure-Configuration Ratio — Structural Cost of Realized Topology"
-version: "2.0"
-status: "FRAMEWORK LEVEL — ratio structure established; electron's explicit functional form open"
+version: "2.3"
+status: "FRAMEWORK LEVEL — ratio structure established; electron's explicit functional form and aggregate coupling depth open"
 domain: "Core / Physics"
 priority: 1
-supersedes: "closure-configuration-ratio v1.0"
+supersedes: "closure-configuration-ratio v2.2"
 
 ---
 
@@ -113,13 +113,28 @@ formal_definition:
       Ω_embed(d)     = full orientational phase space of the embedding field
                        at commitment depth d (pseudoscalar volume)
 
-  boundary_conditions: |
-    CCR = 1  →  topology occupies full phase space = uncommitted field
-               (impossible for realized committed topology)
-    CCR → 0  →  vanishing phase space occupancy = infinitely rigid
-               (forbidden by R1 — realization requires iteration)
-    0 < CCR < 1  →  stable realized topology, specific orientation subset
-                    maintained against full phase space. Only viable regime.
+---
+
+boundary_conditions: |
+  The CCR defines the viable band for committed topology. 
+  The framework explicitly adopts the Saturation Reading, superseding 
+  the prior Uncommitted Reading.
+  
+  Saturation Reading (ADOPTED v2.2):
+  0 < CCR < 1   →  Under-committed: partial occupancy of viable phase space. 
+                   Stable, realized topology maintained against full phase space.
+  CCR = 1       →  SATURATION / CLOSURE THRESHOLD: full occupancy of the 
+                   viable phase space. The topology is maximally locked. 
+                   (e.g., the electron's equilibrium CCR¹ = 1).
+  CCR > 1       →  OVER-COMMITTED: the configuration's writhe-weighted phase-
+                   space volume exceeds the locally available embedding capacity.
+                   This is not a stable topological lock; it is an excess state.
+
+  Uncommitted Reading (SUPERSEDED):
+  The prior v2.0 statement "CCR = 1 → topology occupies full phase space = 
+  uncommitted field" is retired. It incorrectly conflated the saturation 
+  limit with the uncommitted limit, preventing the evaluation of over-
+  commitment dynamics.
 
 ---
 
@@ -170,7 +185,7 @@ electron_instance:
     720° Möbius spinor rotor in the 3D embedding field.
 
   cumulative_reading: >
-    v2.1: α is the numerical expression of the cumulative preleading
+    α is the numerical expression of the cumulative preleading
     integrand-operands — the accumulated cost of the entire integrand
     sequence ρ₀ → Φ₀ → (grade-1) → Φ₁ → ρ₁. Each step in the chain
     contributes. α is not extracted from any single stage.
@@ -182,8 +197,9 @@ electron_instance:
     writhe and rotor structure. The formula below is a temporary,
     illustrative projection showing how this phase-exclusion ledger maps
     onto classical 3D geometric boundaries — it is not yet the native
-    derivation. The actual value is expected to run dynamically with
-    environmental commitment density (see alpha_geometric_vs_measured).
+    derivation. The actual measured value is an aggregate reading
+    dynamic with environmental commitment density and 3rd-body coupling
+    (see ccr_family_reading_of_alpha).
     The native derivation remains a strictly open, non-linear boundary
     value problem (see ccr-electron-explicit).
 
@@ -228,19 +244,113 @@ electron_instance:
 
 ---
 
+ccr_family_reading_of_alpha:
+  status: "STRUCTURAL HYPOTHESIS — preferred reading over the simpler
+           environmental-only account; the aggregate is a coupling
+           between the electron's own closure (CCR¹) and the 3rd
+           body's closure contributions (CCR², CCR³, ...). The
+           environmental Π_eff distortion is a separate, noise-level
+           effect on the measurement. Not yet quantified; stated here
+           as the framework's preferred interpretation."
+
+  statement: >
+    The measured value of α is not the electron's isolated CCR¹. It is
+    the committed aggregate of the electron's own closure plus the
+    coupling contributions of any 3rd bodies involved in the measurement.
+    The isolated CCR¹ is the leading term. The 3rd-body contributions
+    are higher-depth coupling terms that enter through the electron's
+    interaction with the measurement configuration. The environmental
+    Π_eff distortion is a separate effect — it acts as noise on the
+    boundary condition of the committed aggregate, not as a term in
+    the aggregate itself.
+
+  structure: |
+    α_measured = CCR¹ + Σ (3rd-body coupling contributions)
+                 + environmental distortion (noise level)
+
+    Leading term:  CCR¹ — the electron's isolated closure ratio
+                   (4π³ + π² + π in the void limit)
+
+    3rd-body terms: coupling contributions from the measurement
+                    configuration — the proton's CCR², the
+                    apparatus's higher-depth closures, and the
+                    mutual closure structure between the electron
+                    and the 3rd body
+
+    Environmental:  Π_eff compression at the measurement site —
+                    acts on the boundary condition (V_c) that the
+                    committed aggregate must satisfy; shifts the
+                    value by ~2.2 ppm
+
+  why_not_reading_1: >
+    Reading 1 treats α_measured as CCR¹ evaluated in a different
+    environment. This is cleaner but overlooks the structural fact
+    that the electron is never measured in isolation — the 3rd body
+    is always part of the configuration being committed. Reading 2
+    accounts for the 3rd body as a structural element rather than
+    attributing the entire deviation to environmental conditions.
+
+  why_this_is_consistent_with_standard_physics: >
+    Standard physics treats α as a universal constant because the
+    3rd-body and environmental contributions are extremely small in
+    ordinary conditions. The electron's leading CCR¹ dominates the
+    aggregate, and the higher-depth couplings are suppressed by
+    powers of α (each depth transition contributes at the next order
+    in coupling strength). This is why physics has been able to
+    treat α as a constant to high precision without noticing the
+    aggregate structure: the corrections are below the resolution
+    of standard measurements.
+
+  testable_consequences:
+    - >
+      Precision measurements of α in different 3rd-body configurations
+      (electron-proton vs. electron-electron vs. electron-muon) could
+      reveal differences in the aggregate beyond what the environmental
+      Π_eff shift predicts. The 3rd body's contribution is proportional
+      to its own CCR value (CCR² for a proton), which is much smaller
+      than CCR¹ but nonzero.
+    - >
+      The Lamb shift, g−2, and similar precision QED effects might
+      carry an aggregate-level residual not accounted for by standard
+      QED. Whether current precision reaches the aggregate contribution
+      is an open question.
+    - >
+      If the 3rd-body contribution is at the level of α² (≈ 5×10⁻⁵),
+      it would be below current CODATA precision by ~20x. If it is at
+      the level of α (≈ 7×10⁻³), it would already have been noticed.
+      The aggregate structure predicts the correction is at a specific
+      order in α determined by the depth of the 3rd body's coupling.
+
+  epistemic_notes:
+    - >
+      This reading is stated as the framework's preferred interpretation,
+      not as a derived result. It is consistent with the framework's
+      structural commitments but has not been computationally validated.
+    - >
+      It does not render standard physics false. It renders standard
+      physics a derivative-level approximation of a process-level
+      aggregate — the same status the framework assigns to other
+      "constants" (G, ħ, m_p/m_e).
+    - >
+      The reading's strength is that it explains why α appears constant
+      in ordinary measurements while allowing for principled deviations
+      in specific configurations.
+
+---
+
 alpha_geometric_vs_measured:
   statement: |
-    α_geometric = CCR of unperturbed Möbius rotor in free field
+    α_geometric = CCR¹ of unperturbed Möbius rotor in free field
                 = Wr · Ω_rotor / Ω_embed with no environmental compression
                 = α⁻¹ = 4π³ + π² + π = 137.036304
 
-    α_measured  = CCR sampled within commitment-dense environment
-                = local η partially pre-commits orientational phase space
-                = Ω_embed effectively compressed by surrounding realization
+    α_measured  = committed aggregate of electron self-closure + 3rd-body coupling
+                  sampled within commitment-dense environment
+                = CCR¹ + Σ CCRᵏ + noise(Π_eff)
                 = α⁻¹_measured < α⁻¹_geometric (CODATA: 137.035999)
 
-    The 2.2 ppm gap is environmental realization density imprinting on
-    the measurement of a geometric ratio. It is predicted, not anomalous.
+    The 2.2 ppm gap is environmental realization density and 3rd-body coupling
+    imprinting on the measurement of a geometric ratio. It is predicted, not anomalous.
 
   running_alpha: |
     At higher energy (higher local η, lower Π_eff), surrounding realization
@@ -252,10 +362,88 @@ alpha_geometric_vs_measured:
     ceiling preventing over-realization.
 
   testable_prediction: |
-    α_measured varies systematically with local commitment density.
-    Measurements in void environments should yield values incrementally
+    α_measured varies systematically with local commitment density and
+    3rd-body probe geometry. Measurements in void environments and with
+    minimal 3rd-body coupling should yield values incrementally
     closer to 137.036304 than terrestrial measurements.
     Space-based precision metrology far from mass concentrations is the test.
+
+---
+
+unified_triad_and_excess_dissipation:
+  status: "HYPOTHESIS NOW EVALUABLE — structurally consistent with the 
+           framework; prerequisite boundary clarification resolved."
+  statement: >
+    Quanta, Zeno, Gravity, and Excess Dissipation are not four separate 
+    mechanisms. They are four readouts of a single, unified process: 
+    the discrete modulation of commitment by the local phase capacity (Π_eff).
+    The CCR is the invariant ledger that balances the geometric cost against 
+    the environmental capacity.
+  
+  quanta_the_currency:
+    role: "The discrete unit of CCR cost."
+    mechanism: >
+      A quantum is not a particle; it is the indivisible unit of topological 
+      reconfiguration that crosses the viability threshold (V_c) and writes 
+      a permanent increment to hysteresis (η). It is the minimum "payment" 
+      required to move a configuration from an indeterminate R3 superposition 
+      to a committed R4/R5 state. The unit is invariant; only the local 
+      projection conditions (Π_eff, η) at the moment of R5 firing vary.
+      
+  zeno_the_rhythm:
+    role: "The discrete firing mechanism (rate-matching)."
+    mechanism: >
+      The Zeno boundary R_core is the radius where the R5 firing frequency 
+      equals the intrinsic R3 rotation frequency (f_R5(r) = f_rotor(r)). 
+      Inside R_core, the system is Zeno-locked: frequent R5 firings retain 
+      a fraction of open phase space per cycle. 
+    connection_to_ccr: >
+      This retention factor is identified as CCR⁰ = φ⁻¹ at the 
+      D_−1 → D_0 transition. 
+      EPISTEMIC FLAG: This identification is currently a STRUCTURAL HYPOTHESIS 
+      pending derivation from the master equation's discrete firing dynamics 
+      (see ccr-zeno-as-initial-closure.yaml). 
+    structural_implication: history-dependent-shape: >
+      Because the equilibrium shape carries this accumulated discrete imprint, 
+      the shape is inherently history-dependent. It is not a continuous energy 
+      minimum of a static landscape, but the fossil record of the discrete 
+      commitment process.
+      
+  gravity_the_modulator:
+    role: "The environmental modulator of Π_eff."
+    mechanism: >
+      Gravity is the ambient phase pressure gradient (∇ Π_eff). 
+      CRITICAL: Gravity does NOT alter the geometric CCR ratio (e.g., Wr = 3/2 
+      remains 3/2). Instead, it modulates the environmental capacity to hold 
+      that ratio.
+    effects:
+      - >
+        Lowers the viability threshold V_c, making it easier for existing 
+        geometric tension (like the F=8/3 N=4 residual) to trigger a deeper 
+        closure (e.g., stellar nucleosynthesis).
+      - >
+        Shifts the Zeno rate-matching boundary (R_core). By altering the 
+        local Π_eff, gravity changes the R5 firing rate relative to the 
+        R3 rotation rate, effectively "squeezing" the Zeno-locked core and 
+        forcing discrete quantum firings that would not occur in free space.
+
+  excess_dissipation_the_release:
+    role: "The thermal signature of over-commitment (CCR > 1)."
+    mechanism: >
+      When gravity (or other environmental compression) pushes a configuration's 
+      local CCR above the saturation boundary of 1, the excess δ = CCR - 1 
+      cannot be held as topological lock. It must dissipate.
+    dissipation_channels: >
+      The excess couples to the surrounding Π_eff field and radiates as 
+      phase-space quanta via Regress (R_diss). The dissipation is thermal 
+      and area-scaled (not volume-scaled) because δ is a boundary 
+      phenomenon at the Zeno-locked core.
+    unification: >
+      This single mechanism structurally unifies:
+      1. Hawking radiation (horizon excess dissipation)
+      2. The Unruh effect (accelerated-frame phase-space compression excess)
+      3. Unstable particle decay (intrinsic margin δ > 0 in vacuum)
+      4. Zitterbewegung (boundary-layer fluctuation of the electron at CCR¹ ≈ 1)
 
 ---
 
@@ -273,7 +461,8 @@ other_constants_as_ccr:
       Wr = 1; Ω_rotor/Ω_embed candidate form under examination
       Status: RATIO ESTABLISHED — explicit functional form open (Möbius stability analysis).
       Note: there is no single fixed α to close on; the ratio yields different
-      readouts under different local conditions (see alpha_geometric_vs_measured).
+      readouts under different local conditions and 3rd-body configurations
+      (see ccr_family_reading_of_alpha).
 
     weak_coupling: |
       CCR for topology-switching transitions (chiral flips, decay channels)
@@ -311,90 +500,6 @@ other_constants_as_ccr:
     — Different viability thresholds (V_c sets what realizes stably)
 
 ---
-
-open_derivations:
-  priority_1:
-    - id: "ccr-electron-explicit"
-      description: |
-        Establish the explicit functional form of CCR = (Wr · Ω_rotor) / Ω_embed
-        for the electron's 720° Möbius vortex, from stability analysis of the
-        saturating GP equation. This is not a search for a fixed number —
-        CCR is a ratio between two phase-space quantities, and any numerical
-        readout (geometric/bare, terrestrial-measured, void-measured) is an
-        evaluation of that ratio under stated local conditions, not the goal itself.
-        Confirm Wr = 1 from Lk = 2, Tw = 1 via Calugareanu-White.
-        Establish whether the candidate terms (S³ volume, bivector surface,
-        self-intersection residual) follow natively from vortex topology,
-        or whether the correct functional form differs.
-      depends_on: ["mobius-vortex-stability", "F02"]
-      note: "Presenting the electron's CCR as an explicit relationship — not deriving a single fixed number. Highest priority open item in physics domain."
-
-    - id: "omega-spin-explicit"
-      description: "Derive ω_spin = f(Π_eff, η) from master equation; confirm realization-rate reading"
-      depends_on: ["ccr-electron-explicit"]
-
-  priority_2:
-    - id: "ccr-weak-writhe"
-      description: "Compute Wr for chiral-flip topology-switching; recover weak coupling"
-      depends_on: ["su2-from-rotor-pairs"]
-
-    - id: "ccr-strong-triality"
-      description: "Compute Wr for triality binding; recover αs and its running"
-      depends_on: ["su3-from-triality"]
-
-    - id: "landau-pole-saturation"
-      description: "Show Landau pole = Ω_embed → Ω_rotor compression at saturation ceiling"
-      depends_on: ["saturation-term-analysis"]
-
-    - id: "gravitational-ccr-mapping"
-      description: "Formal mapping of Π_eff depression to CCR framework; derive G"
-      depends_on: ["gravity-emergence"]
-
-    - id: "singularities-as-over-realization"
-      description: |
-        Map each major physics singularity to approach of saturation ceiling:
-        NS blow-up, Landau pole, GR singularities, Big Bang.
-        All are derivative-level descriptions of process-level over-realization
-        prevented by Λ·ln(1 + κ|ψ|²).
-      depends_on: ["saturation-term-analysis", "derivative-reality-clarification"]
-
----
-
-algebra_note: |
-  GA (Cl(3,0)) is the natural descriptive language for writhe, CCR,
-  and the grade decomposition of realization. It is not a new postulate —
-  it arises from the dynamics of ψ and the master equation.
-
-  Standard vector calculus can be used for practical derivations.
-  GA provides the clearest geometric insight into why constants
-  have the values they do — because it makes the orientational
-  phase space and self-linking structure explicit.
-
-  GA remains a tool derived from the process, not the source.
-  The source is always ψ under R(ψ) realization.
-
----
-
-cross_references:
-  - file: "derivative-reality-clarification.yaml"
-    note: "CCR as translation mechanism between process level and realized level; constants as integration constants"
-  - file: "spin-process-rate-ga-v2.yaml"
-    note: "Electron CCR instance; spin as process-rate; realization-rate connection"
-  - file: "fine-structure-constant.yaml"
-    note: "Numerical α — geometric justification now in this file via writhe"
-  - file: "emergent-classical-fields.yaml"
-    note: "Running coupling as environmental CCR; Landau pole as over-realization ceiling"
-  - file: "gauge-symmetry-reinterpretation.yaml"
-    note: "Gauge symmetries as conservation signatures of realized rotor topology"
-  - file: "geometric-algebra-bridge.yaml"
-    note: "Grade structure; S³ as quaternion phase space; bivector self-linking"
-  - file: "chirality-biology.yaml"
-    note: "Grade-3 × grade-1 → grade-2: realization of chirality into observable spin state"
-
----
-# AMENDMENT v2.1 — viability ratio, extreme-suppression regime, high-V_eff regime
-# Note: "frozen" is the external observer's appearance only.
-# Regress is continuous and rate-proportional to Π_eff — never fully absent.
 
 viability_ratio:
   statement: |
@@ -491,8 +596,6 @@ black_hole_interpretation:
                          to free potential incrementally; information is not lost
                          but becomes inaccessible on any finite observation window
 
-  cross_reference: "domains/cosmos/black-hole-extreme-suppression.yaml (to be created)"
-
 ---
 
 high_veff_regime:
@@ -524,8 +627,6 @@ high_veff_regime:
     the direct laboratory analog. Same process, different scale.
     This provides experimental access to high-V_eff dynamics
     without requiring cosmological observation.
-
-  cross_reference: "domains/cosmos/early-universe-high-veff.yaml (to be created)"
 
 ---
 
@@ -595,167 +696,146 @@ ccr_first_derivation_discipline:
   status_flag: "Logged, not merged as a derivation. ccr-electron-explicit remains open."
 
 ---
-# Amendment cross-references
-amendment_cross_references:
-  - file: "derivative-reality-clarification-v2.yaml"
-    note: "Singularities as over-realization / saturation ceiling — consistent with extreme-suppression regime"
-  - file: "emergent-classical-fields.yaml"
-    note: "Gravity as Π_eff gradient — extreme suppression is the asymptotic limit"
-  - file: "master-equation.yaml"
-    note: "1/Π_eff scaling — process-rate suppression mechanism"
-  - file: "navier-stokes-derivation.yaml"
-    note: "High-V_eff burst dynamics relate to NS turbulence onset (R3 regime)"
-
-# -----------------------------------------------------------------------------
-# AMENDMENT v2.2: SATURATION READING ADOPTION & THE UNIFIED TRIAD
-# -----------------------------------------------------------------------------
-# This amendment formally adopts the "Saturation Reading" for the CCR=1 
-# boundary, resolves the prior ambiguity, and integrates the unified causal 
-# loop of Quanta, Zeno, Gravity, and Excess Dissipation directly into the 
-# core CCR definition with appropriate epistemic flagging.
-# -----------------------------------------------------------------------------
-
-boundary_conditions: |
-  The CCR defines the viable band for committed topology. 
-  The framework explicitly adopts the Saturation Reading, superseding 
-  the prior Uncommitted Reading.
-  
-  Saturation Reading (ADOPTED):
-  0 < CCR < 1   →  Under-committed: partial occupancy of viable phase space. 
-                   Stable, realized topology maintained against full phase space.
-  CCR = 1       →  SATURATION / CLOSURE THRESHOLD: full occupancy of the 
-                   viable phase space. The topology is maximally locked. 
-                   (e.g., the electron's equilibrium CCR¹ = 1).
-  CCR > 1       →  OVER-COMMITTED: the configuration's writhe-weighted phase-
-                   space volume exceeds the locally available embedding capacity.
-                   This is not a stable topological lock; it is an excess state.
-
-  Uncommitted Reading (SUPERSEDED):
-  The prior v2.0 statement "CCR = 1 → topology occupies full phase space = 
-  uncommitted field" is retired. It incorrectly conflated the saturation 
-  limit with the uncommitted limit, preventing the evaluation of over-
-  commitment dynamics.
-
-unified_triad_and_excess_dissipation:
-  status: "HYPOTHESIS NOW EVALUABLE — structurally consistent with the 
-           framework; prerequisite boundary clarification resolved."
-  statement: >
-    Quanta, Zeno, Gravity, and Excess Dissipation are not four separate 
-    mechanisms. They are four readouts of a single, unified process: 
-    the discrete modulation of commitment by the local phase capacity ($\Pi_{eff}$).
-    The CCR is the invariant ledger that balances the geometric cost against 
-    the environmental capacity.
-  
-  quanta_the_currency:
-    role: "The discrete unit of CCR cost."
-    mechanism: >
-      A quantum is not a particle; it is the indivisible unit of topological 
-      reconfiguration that crosses the viability threshold ($V_c$) and writes 
-      a permanent increment to hysteresis ($\eta$). It is the minimum "payment" 
-      required to move a configuration from an indeterminate R3 superposition 
-      to a committed R4/R5 state. The unit is invariant; only the local 
-      projection conditions ($\Pi_{eff}$, $\eta$) at the moment of R5 firing vary.
-      
-  zeno_the_rhythm:
-    role: "The discrete firing mechanism (rate-matching)."
-    mechanism: >
-      The Zeno boundary $R_{core}$ is the radius where the R5 firing frequency 
-      equals the intrinsic R3 rotation frequency ($f_{R5}(r) = f_{rotor}(r)$). 
-      Inside $R_{core}$, the system is Zeno-locked: frequent R5 firings retain 
-      a fraction of open phase space per cycle. 
-    connection_to_ccr: >
-      This retention factor is identified as $CCR^0 = \phi^{-1}$ at the 
-      $D_{-1} \to D_0$ transition. 
-      EPISTEMIC FLAG: This identification is currently a STRUCTURAL HYPOTHESIS 
-      pending derivation from the master equation's discrete firing dynamics 
-      (see ccr-zeno-as-initial-closure.yaml). 
-    structural_implication: history-dependent-shape: >
-      Because the equilibrium shape carries this accumulated discrete imprint, 
-      the shape is inherently history-dependent. It is not a continuous energy 
-      minimum of a static landscape, but the fossil record of the discrete 
-      commitment process.
-      
-  gravity_the_modulator:
-    role: "The environmental modulator of $\Pi_{eff}$."
-    mechanism: >
-      Gravity is the ambient phase pressure gradient ($\nabla \Pi_{eff}$). 
-      CRITICAL: Gravity does NOT alter the geometric CCR ratio (e.g., $Wr = 3/2$ 
-      remains $3/2$). Instead, it modulates the environmental capacity to hold 
-      that ratio.
-    effects:
-      - >
-        Lowers the viability threshold $V_c$, making it easier for existing 
-        geometric tension (like the $F=8/3$ N=4 residual) to trigger a deeper 
-        closure (e.g., stellar nucleosynthesis).
-      - >
-        Shifts the Zeno rate-matching boundary ($R_{core}$). By altering the 
-        local $\Pi_{eff}$, gravity changes the R5 firing rate relative to the 
-        R3 rotation rate, effectively "squeezing" the Zeno-locked core and 
-        forcing discrete quantum firings that would not occur in free space.
-
-  excess_dissipation_the_release:
-    role: "The thermal signature of over-commitment (CCR > 1)."
-    mechanism: >
-      When gravity (or other environmental compression) pushes a configuration's 
-      local CCR above the saturation boundary of 1, the excess $\delta = CCR - 1$ 
-      cannot be held as topological lock. It must dissipate.
-    dissipation_channels: >
-      The excess couples to the surrounding $\Pi_{eff}$ field and radiates as 
-      phase-space quanta via Regress ($R_{diss}$). The dissipation is thermal 
-      and area-scaled (not volume-scaled) because $\delta$ is a boundary 
-      phenomenon at the Zeno-locked core.
-    unification: >
-      This single mechanism structurally unifies:
-      1. Hawking radiation (horizon excess dissipation)
-      2. The Unruh effect (accelerated-frame phase-space compression excess)
-      3. Unstable particle decay (intrinsic margin $\delta > 0$ in vacuum)
-      4. Zitterbewegung (boundary-layer fluctuation of the electron at CCR¹ ≈ 1)
-
-running_alpha_and_saturation_ceiling: |
-  At higher energy (higher local $\eta$, lower $\Pi_{eff}$), surrounding 
-  realization compresses $\Omega_{embed}$ progressively. CCR increases toward 1.
-  The Landau pole is not a physical divergence to infinity; it is the 
-  logarithmic saturation ceiling $\Lambda \cdot \ln(1 + \kappa|\psi|^2)$ where 
-  CCR approaches 1. The substrate cannot be realized beyond its processing 
-  capacity. If pushed beyond (CCR > 1), the excess $\delta$ dissipates, 
-  preventing over-realization and protecting the framework from singularities.
-
-# -----------------------------------------------------------------------------
-# REQUIRED SYNC NOTES (v2.2)
-# -----------------------------------------------------------------------------
-# 1. This amendment supersedes the v2.0 statement "CCR = 1 → uncommitted field".
-#    That statement represented the "Uncommitted Reading", which is now 
-#    explicitly retired in favor of the "Saturation Reading".
-# 2. The $CCR^0 = \phi^{-1}$ identification is flagged as a STRUCTURAL 
-#    HYPOTHESIS, aligning with the epistemic status in 
-#    ccr-zeno-as-initial-closure.yaml.
-# 3. The "boundary-condition-clarification" open item in 
-#    ccr-excess-dissipation.yaml is now RESOLVED, upgrading that hypothesis 
-#    from "conditional candidate" to "hypothesis now evaluable".
-# -----------------------------------------------------------------------------
 
 open_derivations:
   priority_1:
+    - id: "ccr-electron-explicit"
+      description: |
+        Establish the explicit functional form of CCR = (Wr · Ω_rotor) / Ω_embed
+        for the electron's 720° Möbius vortex, from stability analysis of the
+        saturating GP equation. This is not a search for a fixed number —
+        CCR is a ratio between two phase-space quantities, and any numerical
+        readout (geometric/bare, terrestrial-measured, void-measured) is an
+        evaluation of that ratio under stated local conditions, not the goal itself.
+        Confirm Wr = 1 from Lk = 2, Tw = 1 via Calugareanu-White.
+        Establish whether the candidate terms (S³ volume, bivector surface,
+        self-intersection residual) follow natively from vortex topology,
+        or whether the correct functional form differs.
+      depends_on: ["mobius-vortex-stability", "F02"]
+      note: "Presenting the electron's CCR as an explicit relationship — not deriving a single fixed number. Highest priority open item in physics domain."
+
     - id: "r5-firing-rate-from-master-equation"
       description: >
-        Derive the R5 firing rate $f_{R5}$ as an explicit functional of local 
-        $\mathcal{V}(\psi)$ and $V_c$ from the master equation's resolution 
-        operator $\mathcal{R}(\psi)$. This is the mathematical bridge that 
-        allows Gravity ($\Pi_{eff}$) to modulate the Zeno boundary.
+        Derive the R5 firing rate f_R5 as an explicit functional of local 
+        V(ψ) and V_c from the master equation's resolution 
+        operator R(ψ). This is the mathematical bridge that 
+        allows Gravity (Π_eff) to modulate the Zeno boundary.
       depends_on: ["core/core-dynamical-equation.yaml", "ccr-zeno-as-initial-closure.yaml"]
-      
+
     - id: "vc-from-pi-eff"
       description: >
-        Derive the functional dependence of $V_c$ on $\Pi_{eff}$. This is the 
+        Derive the functional dependence of V_c on Π_eff. This is the 
         bridge that allows Gravity to lower the threshold and trigger the 
         Zeno-locked quantum firing.
       depends_on: ["gravity-and-ccr-threshold.yaml", "core/inside-out-channeling.yaml"]
-      
+
+    - id: "omega-spin-explicit"
+      description: "Derive ω_spin = f(Π_eff, η) from master equation; confirm realization-rate reading"
+      depends_on: ["ccr-electron-explicit"]
+
   priority_2:
+    - id: "third-body-coupling-order"
+      description: >
+        Determine the order in α at which the 3rd-body contribution
+        enters. If the electron-proton coupling contributes at α², the
+        correction is ~10⁻⁵ and below CODATA precision. If at α^1.5,
+        it becomes accessible. If at α, it contradicts current
+        measurements unless cancelled by other terms.
+      depends_on: ["ccr-electron-explicit", "ccr-family-reading-of-alpha"]
+      priority: 2
+
+    - id: "aggregate-sum-rule"
+      description: >
+        Determine whether the aggregate is a simple sum
+        (CCR¹ + CCR² + ...) or a structured combination (e.g., a
+        K-theoretic sum via the assembly map μ). The Baum-Connes
+        correspondence suggests the latter — the aggregate is the
+        K₀ image of the depth chain, not a naive sum.
+      depends_on: ["core/process-physics/baum-connes-assembly-map-correspondence.yaml"]
+      priority: 2
+
     - id: "regress-emits-quanta"
       description: >
-        Formal derivation of how $R_{diss}$ (Regress) couples to the surrounding 
-        $\Pi_{eff}$ field to radiate phase-space quanta as the specific 
-        dissipation channel for $\delta > 0$. Confirms the thermal, area-scaled 
+        Formal derivation of how R_diss (Regress) couples to the surrounding 
+        Π_eff field to radiate phase-space quanta as the specific 
+        dissipation channel for δ > 0. Confirms the thermal, area-scaled 
         nature of the excess release.
       depends_on: ["ccr-excess-dissipation.yaml", "commitment-response.yaml"]
+
+    - id: "ccr-weak-writhe"
+      description: "Compute Wr for chiral-flip topology-switching; recover weak coupling"
+      depends_on: ["su2-from-rotor-pairs"]
+
+    - id: "ccr-strong-triality"
+      description: "Compute Wr for triality binding; recover αs and its running"
+      depends_on: ["su3-from-triality"]
+
+    - id: "landau-pole-saturation"
+      description: "Show Landau pole = Ω_embed → Ω_rotor compression at saturation ceiling"
+      depends_on: ["saturation-term-analysis"]
+
+    - id: "gravitational-ccr-mapping"
+      description: "Formal mapping of Π_eff depression to CCR framework; derive G"
+      depends_on: ["gravity-emergence"]
+
+  priority_3:
+    - id: "environmental-vs-structural-distinction"
+      description: >
+        Sharpen the distinction between the environmental Π_eff
+        distortion and the structural 3rd-body contribution. Both
+        shift α_measured, but by different mechanisms: Π_eff is a
+        boundary-condition shift; 3rd-body coupling is an aggregate
+        term. Verify the two can be independently quantified.
+      depends_on: ["ccr-family-reading-of-alpha"]
+      priority: 3
+
+    - id: "singularities-as-over-realization"
+      description: |
+        Map each major physics singularity to approach of saturation ceiling:
+        NS blow-up, Landau pole, GR singularities, Big Bang.
+        All are derivative-level descriptions of process-level over-realization
+        prevented by Λ·ln(1 + κ|ψ|²).
+      depends_on: ["saturation-term-analysis", "derivative-reality-clarification"]
+
+---
+
+algebra_note: |
+  GA (Cl(3,0)) is the natural descriptive language for writhe, CCR,
+  and the grade decomposition of realization. It is not a new postulate —
+  it arises from the dynamics of ψ and the master equation.
+
+  Standard vector calculus can be used for practical derivations.
+  GA provides the clearest geometric insight into why constants
+  have the values they do — because it makes the orientational
+  phase space and self-linking structure explicit.
+
+  GA remains a tool derived from the process, not the source.
+  The source is always ψ under R(ψ) realization.
+
+---
+
+cross_references:
+  - file: "derivative-reality-clarification.yaml"
+    note: "CCR as translation mechanism between process level and realized level; constants as integration constants"
+  - file: "spin-process-rate-ga-v2.yaml"
+    note: "Electron CCR instance; spin as process-rate; realization-rate connection"
+  - file: "fine-structure-constant.yaml"
+    note: "Numerical α — geometric justification now in this file via writhe"
+  - file: "emergent-classical-fields.yaml"
+    note: "Running coupling as environmental CCR; Landau pole as over-realization ceiling"
+  - file: "gauge-symmetry-reinterpretation.yaml"
+    note: "Gauge symmetries as conservation signatures of realized rotor topology"
+  - file: "geometric-algebra-bridge.yaml"
+    note: "Grade structure; S³ as quaternion phase space; bivector self-linking"
+  - file: "chirality-biology.yaml"
+    note: "Grade-3 × grade-1 → grade-2: realization of chirality into observable spin state"
+  - file: "core/process-physics/ccr-excess-dissipation.yaml"
+    note: "Excess dissipation mechanism — if the 3rd body contributes an over-committed component, it dissipates"
+  - file: "core/process-physics/ccr-zeno-as-initial-closure.yaml"
+    note: "The Zeno retention reading — CCR⁰ = φ⁻¹ as the base case of the depth-indexed family"
+  - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+    note: "μ as the algebraic form of the aggregate"
+  - file: "core/terminology-canonical.yaml"
+    note: "I_rot and χ_Φ — the dimensional counterparts of the CCR family"
+  - file: "documents/parameter-cascade.md"
+    note: "The CCR family and its depth-indexed structure"
