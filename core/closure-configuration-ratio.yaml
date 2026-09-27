@@ -98,13 +98,14 @@ realization:
 
 topological_anchors_electron:
   Lk: 2
-  Tw: 1
-  Wr: 1
+  Tw: 1/2
+  Wr: 3/2
   note: |
-    Unified values as of v2.2. 
-    All simulations (including SIM-004), centreline geometry, and downstream 
-    files must use these anchors. Previous Wr = 3/2 / Tw = 1/2 values are retired.
-
+    CWF: Lk = Wr + Tw = 2 = 3/2 + 1/2.
+    Tw = 1/2 is the Möbius half-twist (algebraic, from the
+    non-orientability sign flip at 2π).
+    Wr = 3/2 follows.
+    
 ---
 
 formal_definition:
@@ -163,11 +164,11 @@ writhe_as_realization_cost:
     Lk = Wr + Tw    (Calugăreanu–White–Fuller invariant)
 
     For the electron’s 720° Möbius vortex (locked anchors):
-      Lk = 2
-      Tw = 1
-      Wr = Lk - Tw = 1
+      Lk: 2
+      Tw: 1/2
+      Wr = Lk - Tw = 3/2
 
-    Wr = 1 is the minimal non-zero self-linking for a stable chiral vortex
+    Wr = 3/2 is the minimal non-zero self-linking for a stable chiral vortex
     under the double-cover closure.
 
   ga_expression: |
@@ -332,6 +333,100 @@ ccr_family_reading_of_alpha:
       The reading's strength is that it explains why α appears constant
       in ordinary measurements while allowing for principled deviations
       in specific configurations.
+
+---
+
+field_particle_distinction:
+  status: "STRUCTURAL HYPOTHESIS — extends the CCR family reading to the
+           field/particle distinction; the field-mode retention factor is
+           identified as CCR⁰ = φ⁻¹; connection to Poynting/Z_Φ and Born
+           rule flagged as open derivations"
+
+  statement: >
+    The field/particle distinction in quantum mechanics is a CCR-index
+    distinction. CCR⁰ = φ⁻¹ is the universal retention factor of the
+    field-mode (uncommitted R3 superposition) at any depth. CCR^d for
+    d ≥ 1 are the particle-mode costs of committed closures at each
+    depth. The electron has both aspects: field-mode when uncommitted,
+    particle-mode when committed by a 3rd body. The photon is
+    field-mode throughout — it never commits.
+
+  structure: |
+    Field aspect (uncommitted, propagating):
+      CCR⁰ = φ⁻¹ ≈ 0.618  — retention per firing cycle
+      Characterized by: wave-like behavior, alternation between
+      retention (+φ⁻¹) and release (−φ⁻¹) each cycle, superposition
+
+    Particle aspect (committed, localized):
+      CCR^d for d ≥ 1   — closure cost at depth d
+      CCR¹ = α for the electron
+      Characterized by: definite value, no alternation, topological
+      protection
+
+  grade_reading:
+    grade_2_field: "EM field F = E + iB — the closure configuration"
+    grade_0_particle: "CCR — the closure cost"
+    grade_1_flux: "Poynting vector S — transport output of the field aspect"
+
+  poynting_connection: >
+    The Poynting vector is the grade-1 flux output of the field aspect
+    of a D₀ → D₁ closure. Its magnitude at a given field strength is
+    set by the field-mode impedance Z_Φ^(field) ∝ 1/CCR⁰ = φ, not by
+    the particle-mode impedance Z₀ ∝ 1/CCR¹ = 137. The two impedances
+    differ because they read different CCRs. Whether the field-mode
+    impedance is physically distinguishable from the particle-mode
+    impedance in EM experiments is an open derivation.
+
+  born_rule_connection: >
+    If |ψ|² is the amplitude of the field aspect, and the field aspect
+    is characterized by CCR⁰ = φ⁻¹, then the Born probability is the
+    retention coefficient of the field-mode per commitment cycle.
+    This connects to the open derivation in core-dynamical-equation.yaml
+    (Born rule from R5 frequency templating).
+
+  photon_as_pure_field_mode: >
+    The photon is counter-oriented (R·R†) — grade-2 residue cancels,
+    no closure commits. Its CCR is the field-mode value throughout.
+    This is why the photon propagates freely and has zero rest mass:
+    it never transitions from field-mode to particle-mode.
+
+  electron_as_both: >
+    The electron is co-oriented (R·R) — grade-2 deepens, closure is
+    possible. In isolation it is in field-mode (CCR⁰ = φ⁻¹, superposed,
+    indefinite). When a 3rd body commits it, the closure fires and the
+    electron appears in particle-mode (CCR¹ = α, definite). The
+    measured electron is always in particle-mode because measurement
+    is a commitment event.
+
+  consequences:
+    - "Wave-particle duality is a CCR-index duality, not a mysterious switching"
+    - "The Born rule has a natural reading as the field-mode retention coefficient"
+    - "The two impedances Z_Φ^(field) and Z₀^(particle) are distinct"
+    - "The photon's zero rest mass is the statement that it never leaves field-mode"
+
+  open_derivations:
+    - id: "field-mode-impedance-distinguishable"
+      description: >
+        Determine whether Z_Φ^(field) ∝ φ can be measured independently
+        of Z₀ ∝ 137. If yes, this is a new prediction. If no, the two
+        are only distinguished by the CCR-index of the configuration
+        being measured, and the field-mode reading is interpretive.
+      priority: 2
+
+    - id: "born-rule-from-field-mode-retention"
+      description: >
+        Derive |ψ|² as the field-mode retention coefficient per
+        commitment cycle, closing the Born-rule derivation flagged in
+        core-dynamical-equation.yaml.
+      priority: 2
+
+    - id: "photon-ccr-value"
+      description: >
+        Assign a definite CCR value to the photon. Is it CCR⁰ = φ⁻¹
+        (field-mode retention), 0 (rigidity limit, no commitment),
+        or some other value? The current file says "CCR < 1" without
+        specification.
+      priority: 3
 
 ---
 
