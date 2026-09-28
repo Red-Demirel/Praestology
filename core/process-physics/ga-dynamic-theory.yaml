@@ -297,6 +297,29 @@ what_this_layer_does_not_introduce:
     provides the algebraic primitives; downstream files derive the
     physical language.
 
+hyperspace_indifference_principle:
+  statement: >
+    The vector hyperspace (phase configuration space, ψ) is never forced 
+    into a single committed condition prior to R4/R5 threshold crossing. 
+    It remains an indifferent, boundaryless multivector potential space.
+  consequence_for_quantum_phenomena: >
+    Because the hyperspace is not a physical container with classical 
+    exclusions, standard quantum "paradoxes" are resolved as natural 
+    algebraic behaviors of uncommitted states:
+    1. Superposition: The simultaneous presence of multiple uncommitted 
+       bivector parameter distributions.
+    2. Entanglement: Joint, non-factorizable bivector distributions 
+       across separated regions of the indifferent continuum.
+    3. Wave-like interference: The open-regime propagation of scalar 
+       overlap gradients (∇s) and bivector mismatches (⟨G⟩₂) before 
+       R5 forces a local grade-reduction.
+  metric_note: >
+    The spatial metric is a derivative of committed structure (η). 
+    The hyperspace (ψ) is pre-metric. Therefore, the hyperspace can 
+    hold algebraic correlations and superpositions that appear "non-local" 
+    or "contradictory" only when viewed through the exclusive, committed 
+    aperture of the derivative level.
+
 ---
 
 open_derivations:
