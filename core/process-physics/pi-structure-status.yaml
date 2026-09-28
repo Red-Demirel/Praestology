@@ -1,0 +1,499 @@
+# /core/process-physics/pi-structure-status.yaml
+name: "The π-Structure Status: What Is Established, What Is Assumed, What Is Open"
+version: "0.2"
+status: "METHODOLOGICAL CLARIFICATION — audits the status of the π-series
+         candidate (4π³ + π² + π) and the spherical-organization assumption.
+         v0.2 adds: Haar measure entry point for the rotor-measure derivation;
+         depth-bundling note that the CCR integral is a composition from the
+         start, not a sequential derivation; file syncs for sim004_v2_integrated.
+         No new physics; makes the epistemic boundary explicit across all
+         files that reference the π-series."
+domain: "Core / Process-Physics"
+
+description: >
+  The π-series candidate Ω_rotor⁻¹ ≈ 4π³ + π² + π = 137.036304 appears
+  in several framework files as the geometric candidate for the electron's
+  CCR. Its status has drifted: in some files it is marked "EXAMPLE ONLY";
+  in others it is presented as if derived. This file audits its status
+  uniformly, states the spherical-organization assumption that the series
+  presupposes, and identifies the derivation direction that would replace
+  the candidate with a derivation. The expected resolution path is GA:
+  rotor constructions determine the phase-space measure, the measure
+  determines the π-structure, and the π-structure determines whether the
+  candidate is correct.
+
+dependency_map:
+  requires:
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/ccr-zeno-as-initial-closure.yaml"
+    - "core/process-physics/ga-grade-chain-to-particles.yaml"
+    - "core/process-physics/rotor-to-ccr-transition.yaml"
+    - "core/process-physics/bivector-partial-parameters.yaml"
+  provides_to:
+    - target: "core/closure-configuration-ratio.yaml"
+      via: "Uniform status flag for the π-series across all references"
+    - target: "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
+      via: "Clarified derivation direction for the electron CCR"
+
+---
+
+# ─────────────────────────────────────────────
+# §1  CURRENT STATUS OF THE π-SERIES
+# ─────────────────────────────────────────────
+
+pi_series_status:
+
+  candidate:
+    expression: "Ω_rotor⁻¹ ≈ 4π³ + π² + π = 137.036304"
+    role: "Illustrative geometric candidate for the electron's CCR in the void limit"
+
+  epistemic_status: "EXAMPLE ONLY — not derived, not required by the framework"
+
+  what_is_established:
+    - "The D₀ → D₁ closure is a grade-2 rotor configuration in Cl(3,0)."
+    - "The 720° closure fixes the topological class: Lk = 2, Tw = 1/2, Wr = 3/2."
+    - "The phase-space integration over the closure's orientation space is the CCR numerator."
+    - "The integration produces some dimensionless factor times Wr_eq — the specific value depends on the measure on the phase space."
+
+  what_is_not_established:
+    - "That the measure factorizes as 4π³ + π² + π."
+    - "That the three terms correspond to S³ volume, S² interface, and S¹ residual."
+    - "That the spherical decomposition (S³ inside S² inside S¹) is the correct organization of the phase space."
+    - "That the numerical agreement with 137.036304 is confirmation rather than coincidence."
+
+  why_the_flag_matters: >
+    If the π-series appears as settled in some files and as "EXAMPLE ONLY"
+    in others, readers will form inconsistent beliefs about its status.
+    The framework's own methodological commitment (ccr_first_derivation_discipline)
+    requires that candidate expressions be marked as candidates everywhere
+    they appear, not just in the file where they were first introduced.
+
+---
+
+# ─────────────────────────────────────────────
+# §2  THE SPHERICAL-ORGANIZATION ASSUMPTION
+# ─────────────────────────────────────────────
+
+spherical_assumption:
+
+  statement: >
+    The π-series presupposes that the closure's orientation space
+    organizes as nested spheres: S³ for the rotor space, S² for the
+    bivector directions, S¹ for the phase residual. This organization
+    is not derived — it is assumed in the construction of the candidate
+    expression.
+
+  what_makes_it_plausible:
+    - "Rotors in Cl(3,0) are isomorphic to unit quaternions, whose space is S³."
+    - "Unit bivectors in Cl(3,0) form a 2-sphere of directions."
+    - "The phase factor exp(iθ) lives on S¹."
+    - "So spheres are available in the framework's algebra."
+
+  what_makes_it_a_non_sequitur: >
+    Availability is not necessity. The closure condition (720° periodicity,
+    B² = −1, Wr = 3/2, F = 8/3) does not by itself force the phase-space
+    integration to run over these spheres in a way that produces the
+    specific coefficients (4, 1, 1) on π³, π², π. Different measures on
+    the same spaces would give different coefficients. The candidate
+    expression is one of many possible spherical decompositions, and no
+    derivation selects it over the alternatives.
+
+  why_the_terms_dont_match_standard_volumes:
+    - "Unit S³ volume is 2π², not 4π³."
+    - "Unit S² area is 4π, not π²."
+    - "The coefficient 4 on π³ would require a radius R ≈ 1.85 (from 2π²R³ = 4π³), which is not a natural geometric scale."
+    - "The coefficient 1 on π² does not correspond to any standard spherical area for unit radius."
+
+  consequence: >
+    The three terms are not, as written, the standard volumes of nested
+    spheres. The geometric gloss ("S³ volume, S² interface, self-intersection
+    residual") is retroactive labelling, not derivation. This is exactly the
+    direction of derivation the framework's own methodology warns against.
+
+---
+
+# ─────────────────────────────────────────────
+# §3  THE DEPTH-LEVEL BUNDLING ISSUE
+# ─────────────────────────────────────────────
+
+depth_bundling:
+
+  statement: >
+    The depth levels in the cascade document are closure thresholds, not
+    atomic construction steps. Each depth bundles multiple structural
+    facts that co-emerge because they share the same closure condition.
+    Reading the depth index as a fine-grained step counter misleads about
+    what is derived at each depth.
+
+  examples:
+    d_minus_1_to_0:
+      bundles:
+        - "The recurrence v_{k+2} = v_{k+1} + v_k"
+        - "The eigenvalues φ and φ⁻¹"
+        - "Selection of φ⁻¹ as band-compatible"
+        - "Emergence of the three-basis {e₁, e₂, e₃}"
+        - "Π_eff baseline establishment"
+        - "Viability filtering onset (V_c operative)"
+      note: >
+        The recurrence does not come first and then produce the eigenvalues
+        and then produce the basis. All of these are co-established by the
+        same closure condition. The depth index labels the threshold, not
+        a sequence of atomic steps.
+
+    d0_to_1:
+      bundles:
+        - "Cross-basis pairing eᵢ ∧ eⱼ"
+        - "B² = −1 boundary condition"
+        - "720° Möbius closure"
+        - "Wr_eq = 3/2 via CWF"
+        - "f_closure via S² integration"
+        - "α as the CCR value"
+        - "I_rot, E_Φ, χ_Φ, V_c, E_scale"
+      note: >
+        Same structure: multiple facts co-emerge at the same closure
+        threshold. The π-structure of f_closure is one of these facts,
+        and it is the least well-characterized of them.
+
+  consequence_for_pi_structure: >
+    The π-series candidate sits inside the D₀ → D₁ bundle. Its derivation
+    is not "step 3 of the D₀ → D₁ transition" — it is one aspect of the
+    closure condition that must be derived simultaneously with Wr_eq,
+    the Möbius framing, and the cross-basis pairing. The derivation is
+    holistic, not sequential.
+
+  recommendation: >
+    Where the cascade document or other files present depths as sequences
+    of steps, add a note that depth labels index closure thresholds and
+    that multiple facts co-emerge at each. This prevents readers from
+    expecting a step-by-step derivation when the structure is holistic.
+
+---
+
+# ─────────────────────────────────────────────
+# §4  THE EXPECTED RESOLUTION PATH: GA ROTOR CONSTRUCTIONS
+# ─────────────────────────────────────────────
+
+resolution_direction:
+
+  statement: >
+    The π-structure is expected to be derived from the geometric algebra
+    of the closure itself. Rotor constructions in Cl(3,0) determine the
+    phase-space measure on the closure's orientation space, and the measure
+    determines which π-factors appear. The derivation path is:
+
+      closure condition in Cl(3,0)
+        → rotor parametrization of the closure's orientation space
+        → measure on that space (determined by the rotor geometry)
+        → phase-space integration over the measure
+        → π-structure of the result
+        → CCR value
+
+  haar_measure_entry_point: >
+    The natural measure on the rotor space is the Haar measure on SU(2),
+    induced by the group structure of Cl(3,0) rotors — not a separately
+    chosen geometric decomposition. Its total volume for unit radius is
+    2π² (not 4π³). This is why the naive spherical-decomposition reading
+    of 4π³+π²+π fails: unit S³ volume is 2π², not 4π³; the discrepancy
+    requires a non-unit radius with no geometric justification.
+
+    Starting point:
+      dμ_Haar = (1/2π²) · sin²(θ/2) · sin(φ) · dθ dφ dψ
+    where (θ, φ, ψ) are Euler angles on SU(2) ≅ S³.
+    The sin²(θ/2) weighting is a group-structure consequence,
+    not the naive uniform measure on S³.
+
+    The 720° closure condition imposes θ ∈ [0, 4π] (not [0, 2π]).
+    The Möbius framing imposes a self-consistency filter on the
+    bivector direction B̂ — not all of S² is accessible; only
+    directions supporting a stable 720° closure are allowed.
+
+    The π-structure of f_closure emerges from integrating the
+    Haar measure over the θ ∈ [0,4π] domain with the Möbius
+    filter applied to B̂. The specific coefficients that result
+    are what must be computed — they may or may not match the
+    candidate 4π³+π²+π. Either outcome is derivation, not fitting.
+
+  what_the_derivation_must_show:
+    - >
+      The rotor R(θ) = exp(−½B̂θ) for θ ∈ [0, 4π] traces a specific
+      curve in the rotor space S³. The measure on S³ is not the naive
+      uniform measure — it is the measure induced by the closure path
+      and the boundary conditions at θ = 2π (sign flip) and θ = 4π
+      (self-identity).
+    - >
+      The bivector B̂ = b₁₂(e₁∧e₂) + b₁₃(e₁∧e₃) + b₂₃(e₂∧e₃) lives in
+      a two-parameter space (the unit sphere in the bivector parameter
+      space). The measure on this space is determined by the closure's
+      self-consistency — which parameter combinations support a stable
+      720° closure.
+    - >
+      The integration of these measures, weighted by the closure condition,
+      produces the π-factors. The specific coefficients depend on the
+      measure, and the measure is what the derivation must determine.
+
+  why_GA_is_expected_to_supply_the_answer:
+    - >
+      GA provides the natural parametrization of the rotor space: rotors
+      are exponentials of bivectors, and the parametrization (B̂, θ) is
+      canonical in the algebra.
+    - >
+      GA makes the boundary conditions algebraically explicit: the sign
+      flip at 2π and the self-identity at 4π are properties of the rotor
+      algebra, not extra postulates.
+    - >
+      GA naturally couples the rotor construction to the potential:
+      the rotor's action on the substrate field determines the local
+      Π_eff modulation, which determines the cost of the closure. The
+      π-structure should emerge from this coupling rather than from a
+      separately chosen geometric decomposition.
+    - >
+      The connection between rotor construction and Π_eff cost is the
+      bridge that the earlier GP-based derivations were missing. GP
+      treated the closure as a scalar field configuration; GA treats it
+      as a rotor configuration whose action on the potential is the
+      source of the closure cost.
+
+  what_this_changes:
+    prior_direction: >
+      Assume spherical decomposition → construct π-series → retroactively
+      label terms → compare to 137.036. Wrong direction.
+
+    correct_direction: >
+      Derive the rotor measure from the closure condition → integrate →
+      extract π-structure → compare to 137.036. The comparison is a test,
+      not a fit.
+
+---
+
+# ─────────────────────────────────────────────
+# §5  WHAT SHOULD BE CHANGED IN EXISTING FILES
+# ─────────────────────────────────────────────
+
+required_syncs:
+
+  closure_configuration_ratio:
+    - >
+      The section `electron_instance.illustrative_translation_mapping`
+      already carries the "EXAMPLE ONLY" flag correctly. Verify the flag
+      is not weakened by any subsequent edit.
+    - >
+      The section `topological_anchors_electron` (recently corrected to
+      Wr = 3/2, Tw = 1/2, Lk = 2) should not present the π-series as
+      part of the anchors. The anchors are topological; the π-series is
+      a candidate.
+
+  ccr_iteration_by_depth:
+    - >
+      The d_1 entry should note that the π-structure of f_closure is
+      inside the D₀ → D₁ bundle, not a separately derived step.
+
+  documents_parameter_cascade:
+    - >
+      §2 should note that the π-structure of f_closure is a candidate,
+      not a derived value. The table entry for f_closure is correctly
+      "OPEN"; the surrounding prose should be consistent.
+
+  sim004_v2_integrated:
+    - >
+      The constant ALPHA_INV_GEOMETRIC = 137.036304 (the π-series value)
+      is used as a target, not as a derived quantity. The code comments
+      should make this distinction explicit.
+
+  ccr_zeno_as_initial_closure:
+    - >
+      If the Zeno derivation produces an f_eq that matches the π-series
+      target, that is a confirmation test, not a derivation of the
+      π-series. The distinction should be preserved.
+
+---
+
+# ─────────────────────────────────────────────
+# §6  OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+
+  priority_1:
+    - id: "rotor-measure-from-closure-condition"
+      description: >
+        Derive the measure on the rotor phase space (S³ and its bivector
+        sub-spaces) directly from the closure condition: 720° periodicity,
+        sign flip at 2π, B² = −1, and the Möbius framing. The measure is
+        what determines the π-structure; deriving it is the prerequisite
+        for deriving the CCR value from first principles.
+      depends_on: ["ccr-electron-explicit", "ga-grade-chain-to-particles.yaml"]
+      priority: 1
+
+    - id: "pi-structure-from-rotor-measure"
+      description: >
+        Integrate over the rotor measure derived above and extract the
+        π-structure of the result. Check whether the result matches the
+        candidate 4π³ + π² + π, or whether a different π-structure emerges.
+        Either outcome is informative — matching confirms the candidate;
+        not matching falsifies the spherical-organization assumption.
+      depends_on: ["rotor-measure-from-closure-condition"]
+      priority: 1
+
+    - id: "rotor-potential-coupling"
+      description: >
+        Derive the coupling between the rotor construction and the local
+        Π_eff modulation. The closure cost should emerge from the rotor's
+        action on the potential, not from a separately chosen geometric
+        factor. This is the missing bridge between the GA rotor framework
+        and the CCR cost formula.
+      depends_on: ["rotor-measure-from-closure-condition"]
+      priority: 1
+
+  priority_2:
+    - id: "spherical-decomposition-justification"
+      description: >
+        If the rotor-measure derivation supports a spherical decomposition,
+        show why the specific organization is S³ ⊃ S² ⊃ S¹ rather than
+        some other nesting. If it does not, replace the spherical picture
+        with the correct measure structure.
+      depends_on: ["pi-structure-from-rotor-measure"]
+      priority: 2
+
+    - id: "depth-bundle-clarification"
+      description: >
+        Revise the cascade document and other files to state explicitly
+        that depth levels are closure thresholds, not atomic steps, and
+        that multiple structural facts co-emerge at each depth.
+      priority: 2
+
+  priority_3:
+    - id: "coincidence-vs-confirmation"
+      description: >
+        If the rotor-measure derivation produces a π-structure different
+        from 4π³ + π² + π, determine whether the difference matters for
+        the numerical value of α. A close-but-not-equal result would
+        indicate the candidate is approximate rather than exact.
+      depends_on: ["pi-structure-from-rotor-measure"]
+      priority: 3
+
+---
+
+# ─────────────────────────────────────────────
+# §7  EPISTEMIC STATUS
+# ─────────────────────────────────────────────
+
+epistemic_status:
+
+  established:
+    - "The D₀ → D₁ closure is a grade-2 rotor configuration in Cl(3,0)."
+    - "Wr_eq = 3/2 follows from CWF applied to the 720° Möbius framing."
+    - "The phase-space integration over the closure's orientation space is the CCR numerator."
+    - "GA provides natural parametrizations (rotor angle θ, bivector direction) for the orientation space."
+
+  assumed_but_not_derived:
+    - "The closure's orientation space organizes as nested spheres (S³ ⊃ S² ⊃ S¹)."
+    - "The phase-space integration produces the specific π-series 4π³ + π² + π."
+    - "The three terms correspond to S³ volume, S² interface, S¹ residual."
+
+  open:
+    - "The measure on the rotor phase space as determined by the closure condition."
+    - "The π-structure that the measure produces."
+    - "Whether the spherical organization is forced or is one option among many."
+    - "The coupling between rotor construction and Π_eff modulation (the missing bridge)."
+
+  what_would_upgrade_the_candidate_to_a_derivation:
+    - "Explicit derivation of the rotor measure from the closure condition."
+    - "Integration over the measure yielding a specific π-structure."
+    - "Numerical agreement with 137.036304 — at which point the agreement is confirmation, not coincidence."
+    - "Consistency of the derived π-structure with the resolution path in §4."
+
+  what_would_falsify_the_candidate:
+    - "A rotor-measure derivation producing a π-structure different from 4π³ + π² + π."
+    - "Failure to derive the spherical-organization assumption from the closure condition."
+    - "Numerical disagreement beyond the claimed precision."
+
+---
+
+# ─────────────────────────────────────────────
+# §8  CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+cross_references:
+  - file: "core/closure-configuration-ratio.yaml"
+    note: >
+      Primary file for CCR. The π-series candidate appears in
+      electron_instance.illustrative_translation_mapping with the
+      correct "EXAMPLE ONLY" flag. Verify the flag is preserved.
+  - file: "core/process-physics/ccr-zeno-as-initial-closure.yaml"
+    note: >
+      Zeno derivation of the closure. If the Zeno solve produces f_eq
+      matching the π-series target, that is a confirmation test, not
+      a derivation of the π-series.
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: >
+      Rotor constructions and grade chain. The GA derivation of the
+      rotor measure should proceed from this file's framework.
+  - file: "core/process-physics/rotor-to-ccr-transition.yaml"
+    note: >
+      The transition from rotor configuration to CCR. The measure
+      derivation extends this.
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: >
+      The bivector parameter space. The measure on this space is part
+      of the rotor-measure derivation.
+  - file: "core/core-dynamical-equation.yaml"
+    note: >
+      The master equation. The rotor-potential coupling derivation
+      (§4 and §6) should be consistent with the master equation's
+      Π_eff structure.
+  - file: "documents/parameter-cascade.md"
+    note: >
+      §2 should note the candidate status of the π-structure. §5's
+      graph structure should be extended to clarify depth bundling.
+  - file: "core/process-physics/ccr_first_derivation_discipline"
+    note: >
+      The methodological commitment that this file enforces.
+# ─────────────────────────────────────────────
+# §9  COMPOSITION NOTE (v0.2 addition)
+# ─────────────────────────────────────────────
+
+composition_note:
+  statement: >
+    The CCR integral is a composition from the start. The initial integral
+    is not a simple integration over a single pre-chosen space. It is the
+    composition of two co-dependent factors:
+
+      Factor A: The rotor Haar measure on SU(2), restricted by the 720°
+                closure condition (θ ∈ [0,4π]) and the Möbius self-
+                consistency filter on the bivector direction B̂.
+
+      Factor B: The coupling of the rotor action to local Π_eff modulation —
+                how the rotor's phase step depletes or preserves free potential
+                at each point along the closure path.
+
+    Neither factor is independently derivable without the other: the
+    measure restriction depends on which B̂ directions support a stable
+    closure, and stability is determined by the Π_eff coupling. They
+    co-emerge at the D₀ → D₁ closure threshold.
+
+  implication: >
+    Any derivation that treats the π-structure as arising from a single
+    integration over a pre-chosen geometric space (spheres, tori, or
+    any other manifold selected before the closure condition is applied)
+    is repeating the spherical-decomposition error in a different form.
+    The composition must be solved jointly, not factored into two
+    independent steps.
+
+  connection_to_zeno: >
+    The discrete Zeno solve in discrete_zeno_core.py approximates Factor B
+    (the Π_eff depletion per R5 firing cycle, with φ⁻¹ retention) but
+    leaves Factor A (the Haar measure restriction) implicit in the radial
+    lattice geometry. A complete derivation requires both factors to be
+    made explicit and solved simultaneously. The Zeno solve's f_eq result
+    is therefore an approximation whose accuracy depends on how well the
+    radial lattice captures the Haar measure restriction.
+
+  what_a_complete_derivation_looks_like: >
+    1. Parametrise the closure path R(θ,B̂) for θ ∈ [0,4π], B̂ ∈ S².
+    2. Apply the Möbius self-consistency filter: retain only B̂ directions
+       for which R(4π,B̂) = R(0,B̂) (identity closure).
+    3. Compute the Π_eff depletion along each path R(·,B̂) using the
+       master equation's rotor-potential coupling.
+    4. Integrate the depletion cost over the Haar-weighted filtered space.
+    5. The result is f_closure. Its π-structure is the derivation.
+    This is open: rotor-measure-from-closure-condition (priority 1).
