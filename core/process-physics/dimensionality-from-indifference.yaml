@@ -187,6 +187,54 @@ implications:
     (nuclear magic numbers). The dimensionality remains 3D; the embedding 
     space grows to accommodate higher-order topology.
 
+# -----------------------------------------------------------------------------
+# ADDITION TO: dimensionality-from-indifference.yaml
+# -----------------------------------------------------------------------------
+§7  THE INSIDE-OUTSIDE RELATIONAL EQUILIBRIUM
+─────────────────────────────────────────────
+inside_outside_equilibrium:
+  statement: >
+    The termination of the grade chain at Grade-3 is not merely an algebraic 
+    artifact; it is the minimum relational equilibrium required for the 
+    R1–R5 distinction process to successfully define "inside," "outside," 
+    and the "relational boundary" between them, without importing a 
+    pre-existing container ontology.
+  
+  r1_r3_the_leaky_distinction: >
+    At Grade-1 (vector) and Grade-2 (bivector), the distinction has direction 
+    and orientation, but no topological depth. A 2D plane cannot enclose a 
+    volume. It cannot sustain a stable "inside" that is protected from the 
+    "outside" potential. It is a topologically "leaky" distinction that 
+    cannot satisfy the R5 viability selection for long-term commitment.
+  
+  r4_r5_the_grade_3_equilibrium: >
+    Grade-3 (the pseudoscalar $I = e_1e_2e_3$ in Cl(3,0)) is the unique grade 
+    that satisfies the three conditions for a stable, relational distinction:
+    1. Protected Inside: $I^2 = -1$ (self-duality). The committed volume is 
+       algebraically closed, with no external grade components to leak into.
+    2. Distinct Outside: The embedding phase space ($\Omega_{embed}$) remains 
+       distinct from the committed volume ($\Omega_{rotor}$), making the CCR 
+       ratio structurally meaningful.
+    3. Relational Boundary: Despite topological closure, the structure interacts 
+       with the outside via the Grade-1 scalar gradient ($\nabla s$) and 
+       Grade-2 bivector mismatch ($\langle G \rangle_2$). This is the algebraic 
+       ground of gravity and inertia. The structure is closed, but not isolated.
+  
+  why_higher_grades_fail: >
+    In Cl(4,0), the pseudoscalar squares to $+1$ ($I^2 = +1$). It is not 
+    self-dual; it has an "external face" that leaks into higher grades. 
+    This violates the equilibrium of a stable, self-contained commitment. 
+    This is why topological confinement (e.g., color neutrality) is 
+    algebraically exact at Grade-3, and why higher depths require a 
+    Hopf-level embedding (like $S^7$) rather than a simple 4th spatial dimension.
+  
+  conclusion: >
+    3D is the unique equilibrium condition where a distinction can be 
+    simultaneously self-contained (inside), distinct from the potential 
+    (outside), and relationally active (boundary). The cost accumulation 
+    terminates at Grade-3 because it is the minimum grade that achieves 
+    this equilibrium.
+
 ─────────────────────────────────────────────
 §6  EPISTEMIC STATUS
 ─────────────────────────────────────────────
