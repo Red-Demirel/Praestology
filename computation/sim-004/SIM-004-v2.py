@@ -69,9 +69,14 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # ── Physical targets ──────────────────────────────────────────────────────────
-ALPHA_INV_CODATA      = 137.035999   # measured (commitment-dense environment)
-ALPHA_INV_GEOMETRIC   = 137.036304   # bare (4π³ + π² + π — no CCR compression)
-WR_EQ                 = 3.0 / 2.0   # CWF topological invariant
+ALPHA_INV_CODATA      = 137.035999   # measured — lab Π_eff environment
+ALPHA_INV_GEOMETRIC   = 137.036304   # CANDIDATE UNDER TEST — expression 4π³+π²+π
+                                     # fits numerically but the spherical decomp-
+                                     # osition it presupposes (S³/S²/S¹) is NOT
+                                     # derived from the closure condition. Rotor
+                                     # Haar-measure derivation required before this
+                                     # is confirmed. Use as comparison target only.
+WR_EQ                 = 3.0 / 2.0   # CWF topological invariant — established
 
 # ── Section A : Möbius centreline and commutator intensity ────────────────────
 
@@ -402,25 +407,38 @@ def diagnostics(f_geom, f_eq, params):
     print(f"      → CCR⁰ link is NOT the α⁻¹ path;")
     print(f"        α⁻¹ and I_rot are parallel outputs of D₁ geometry")
 
-    # Analytic π-series target (HYPOTHESIS)
+    # Analytic π-series target — CANDIDATE, wrong derivation direction if spherical
     f_eq_analytic = 2.0 / (3.0 * (4.0*np.pi**2 + np.pi + 1.0))
-    print(f"\n    Analytic π-series target (HYPOTHESIS — not yet derived):")
-    print(f"      If α⁻¹_geometric = 4π³+π²+π, then α⁻¹/π = 4π²+π+1")
-    print(f"      → f_eq = 2/(3(4π²+π+1)) = {f_eq_analytic:.8f}")
-    print(f"      Ratio (current f_eq / analytic): {f_eq/f_eq_analytic:.6f}")
-    print(f"      (= 1.0 would confirm both Zeno mechanism and π-series)")
+    print(f"\n    π-series candidate target (CANDIDATE — epistemic status from")
+    print(f"    pi-structure-status.yaml §1-§2):")
+    print(f"      Expression: α⁻¹ = 4π³+π²+π = {4*np.pi**3+np.pi**2+np.pi:.8f}")
+    print(f"      Numerically matches ALPHA_INV_GEOMETRIC but the spherical")
+    print(f"      decomposition (S³/S²/S¹) presupposed is NOT derived from")
+    print(f"      the closure condition. Note: unit S³ volume = 2π², not 4π³;")
+    print(f"      unit S² area = 4π, not π². Coefficients require non-unit")
+    print(f"      radii with no geometric justification.")
+    print(f"      Correct direction: derive rotor Haar measure from 720°")
+    print(f"      closure condition → integrate → extract π-structure.")
+    print(f"      Haar measure on SU(2): dμ = (1/2π²)sin²(θ/2)sin(φ)dθdφdψ")
+    print(f"      with θ ∈ [0,4π] (720° restriction) + Möbius framing filter.")
+    print(f"      If α⁻¹ candidate is correct:")
+    print(f"        f_eq = 2/(3(4π²+π+1)) = {f_eq_analytic:.8f}")
+    print(f"      Ratio (current f_eq / candidate): {f_eq/f_eq_analytic:.6f}")
+    print(f"      (= 1.0 would support candidate — not confirm it;")
+    print(f"       confirmation requires the Haar measure derivation)")
     print()
-    print(f"    Two-stage EM interpretation:")
+    print(f"    Two-stage EM interpretation (established):")
     print(f"      Stage 1 pre-R5 (wave): α_wave⁻¹ = π/Wr_eq = {np.pi/1.5:.4f}")
+    print(f"        f_geom = 1/π is topologically established (PIT integral)")
     print(f"      Stage 2 closure:       factor = 1/f_eq = {1.0/f_eq:.4f}")
-    print(f"      α⁻¹ = α_wave⁻¹ / f_eq / (1/π) = {np.pi/(1.5*f_eq):.4f}")
-    print(f"      The ~65.4 closure factor is the ratio of wave-spread")
-    print(f"      field volume to committed vortex core volume.")
+    print(f"        f_eq from Zeno solve — Haar measure derivation gives exact form")
+    print(f"      α⁻¹ = π/(Wr_eq · f_eq) = {np.pi/(1.5*f_eq):.4f}")
     print()
-    print(f"    OPEN: f_eq ≈ {f_eq_for_geom:.4f} needed from equilibrium.")
-    print(f"    Current ξ/R_core = {params['xi']:.6f}")
-    print(f"    Pivotal test: does Zeno discrete solve yield f_eq_analytic?")
-    print(f"\n    Environmental correction (geometric → CODATA):")
+    print(f"    OPEN (priority 1): rotor-measure-from-closure-condition")
+    print(f"      Derive Haar measure restricted by 720° + Möbius framing.")
+    print(f"      This is the prerequisite for deriving f_eq from first principles.")
+    print(f"    Current ξ/R_core = {params['xi']:.6f}  (Zeno solve result)")
+    print(f"\n    Environmental correction (geometric candidate → CODATA):")
     env_gap = (ALPHA_INV_GEOMETRIC - ALPHA_INV_CODATA) / ALPHA_INV_GEOMETRIC
     print(f"      Δα⁻¹/α⁻¹ = {env_gap:.2e}  "
           f"(2.2 ppm — 3rd-body CCR compression, HYPOTHESIS)")
