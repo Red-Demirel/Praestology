@@ -1,0 +1,222 @@
+/core/process-physics/dimensionality-from-indifference.yaml
+name: "Dimensionality from Indifference: Why 3D Emerges from Cost Termination"
+version: "0.1"
+status: "STRUCTURAL CLARIFICATION — methodological distinction established; 
+dimensionality as cost-termination rather than constructive buildup; 
+3D as minimum for stable chiral self-dual closure"
+domain: "Core / Process-Physics"
+description: >
+  The framework does not build dimensionality constructively (1D → 2D → 3D). 
+  It starts from a dimensionally indifferent phase configuration space and 
+  derives why the grade chain terminates at grade-3. The answer is cost 
+  termination: 3D is the minimum dimension where a stable, chiral, self-dual 
+  closure can form. This is a top-down derivation from the requirement of 
+  stable closure, not a bottom-up construction from lower dimensions.
+dependency_map:
+  requires:
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/process-physics/ga-grade-chain-to-particles.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/geometric-algebra-bridge.yaml"
+  provides_to:
+    - target: "core/process-physics/ga-dynamic-theory.yaml"
+      via: "Dimensionality as emergent from cost structure, not primitive"
+
+─────────────────────────────────────────────
+§1  THE METHODOLOGICAL DISTINCTION
+─────────────────────────────────────────────
+methodological_distinction:
+  statement: >
+    Standard approaches to dimensionality work constructively: start with 
+    1D (a line), add a perpendicular direction to get 2D (a plane), add 
+    another perpendicular direction to get 3D (a volume). This is the 
+    approach of string theory (10D → compactify to 4D), Kaluza-Klein, and 
+    most geometric frameworks.
+  
+  problem_with_constructive: >
+    The constructive approach has no internal reason to stop at 3D. Why not 
+    4D? Why not 10D? The answer is always external: compactification, 
+    symmetry breaking, or anthropic selection. The dimensionality is imposed 
+    from outside, not derived from within.
+  
+  praestology_approach: >
+    Praestology starts from a dimensionally indifferent phase configuration 
+    space (the boundaryless phase continuum, Cl(3,0) vector hyperspace). 
+    There is no preferred dimensionality at the ground. The grade chain 
+    then progresses: scalar → vector → bivector → pseudoscalar. At each 
+    grade, there is a CCR cost. The question is: why does the cost 
+    accumulation terminate at grade-3?
+  
+  key_insight: >
+    The answer must come from the cost structure itself, not from an 
+    external dimensional count. 3D is not built up from 1D; it emerges 
+    as the minimum dimension where a stable, chiral, self-dual closure 
+    can form. This is a top-down derivation from the requirement of 
+    stable closure, not a bottom-up construction from lower dimensions.
+
+─────────────────────────────────────────────
+§2  WHY THE GRADE CHAIN TERMINATES AT GRADE-3
+─────────────────────────────────────────────
+grade_chain_termination:
+  statement: >
+    The grade chain in Cl(n,0) progresses: grade-0 (scalar) → grade-1 
+    (vector) → grade-2 (bivector) → grade-3 (pseudoscalar). The question 
+    is: why does n=3? Why not n=2 or n=4?
+  
+  the_critical_property: >
+    The pseudoscalar I = e₁e₂...eₙ in Cl(n,0) satisfies I² = (-1)^(n(n-1)/2).
+    - n=1: I = e₁, I² = +1 (not self-dual)
+    - n=2: I = e₁e₂, I² = -1 (self-dual, but 2D cannot support chirality)
+    - n=3: I = e₁e₂e₃, I² = -1 (self-dual AND chiral)
+    - n=4: I = e₁e₂e₃e₄, I² = +1 (not self-dual, has external face)
+  
+  why_self_duality_matters: >
+    Self-duality (I² = -1) means the pseudoscalar is its own dual — the 
+    closure has no external face, no open grade components left to propagate 
+    outward. This is why colour confinement is algebraically exact in 
+    Cl(3,0): the proton's grade-3 closure (R₁·R₂·R₃) has no external 
+    grade components to radiate.
+  
+  why_chirality_matters: >
+    Chirality means the algebra can support the Möbius topology — the 720° 
+    double cover required for spin-½. In Cl(2,0), the pseudoscalar is 
+    self-dual but the algebra is 2D — it cannot encode the handedness 
+    required for the Möbius vortex. The Möbius band requires a third 
+    dimension to twist through.
+  
+  the_cost_termination: >
+    3D is the minimum dimension where a committed topology can be both 
+    self-contained (no external face, I² = -1) and chiral (Möbius topology, 
+    spin-½). Any lower dimension cannot achieve both; any higher dimension 
+    introduces an external face (I² = +1 in Cl(4,0)), making stable 
+    confinement impossible.
+  
+  ccr_connection: >
+    The CCR cost of the 3D embedding (pseudoscalar volume) is part of the 
+    rotor's total CCR — but it is the minimum cost that achieves full 
+    self-containment. The cost accumulation terminates at grade-3 because 
+    grade-3 is the minimum grade that achieves full self-containment 
+    (self-duality) while encoding chirality (required for the Möbius 
+    topology).
+
+─────────────────────────────────────────────
+§3  THE NUMBER OF BIVECTOR PLANES
+─────────────────────────────────────────────
+bivector_plane_count:
+  statement: >
+    The number of independent bivector planes in Cl(n,0) is C(n,2) = n(n-1)/2:
+    - n=2: C(2,2) = 1 (one bivector plane, but no chirality)
+    - n=3: C(3,2) = 3 (three bivector planes, self-dual AND chiral)
+    - n=4: C(4,2) = 6 (six bivector planes, but not self-dual)
+  
+  why_three_matters: >
+    The three bivector planes in Cl(3,0) are what allow the proton's 
+    three-fold binding (R₁·R₂·R₃ in mutually orthogonal planes). The 
+    N=4 residual F=8/3 from SIM-007-v1 is the algebraic signal that 
+    four paths cannot find independent planes in Cl(3,0) — the cost 
+    of forced sharing. This residual forces the depth-3 branch (S⁷ 
+    embedding).
+  
+  the_structural_necessity: >
+    The three bivector planes are not an arbitrary choice. They are the 
+    minimum number that allows:
+    1. Self-dual closure (I² = -1)
+    2. Chiral topology (Möbius 720°)
+    3. Three-fold binding (proton/neutron)
+    4. Confinement (no external grade components)
+    
+    Any fewer planes cannot achieve all four; any more planes introduce 
+    an external face (I² = +1) and lose confinement.
+
+─────────────────────────────────────────────
+§4  CONTRAST WITH CONSTRUCTIVE APPROACHES
+─────────────────────────────────────────────
+contrast_with_constructive:
+  string_theory: >
+    String theory starts with 10D (or 11D for M-theory) and compactifies 
+    to 4D. The dimensionality is imposed from outside (supersymmetry, 
+    anomaly cancellation). The question "why 4D?" is answered by 
+    anthropic selection or landscape statistics.
+  
+  kaluza_klein: >
+    Kaluza-Klein starts with 5D and compactifies the fifth dimension to 
+    recover EM. The dimensionality is imposed from outside (unification 
+    of gravity and EM). The question "why 5D?" is answered by the 
+    requirement of unification.
+  
+  praestology: >
+    Praestology starts with dimensionally indifferent phase configuration 
+    space and derives 3D from the cost structure of stable closure. The 
+    dimensionality is not imposed; it emerges. The question "why 3D?" is 
+    answered by the minimum dimension for stable chiral self-dual closure.
+  
+  the_key_difference: >
+    Constructive approaches add dimensions from below and have no internal 
+    reason to stop. Praestology derives dimensionality from above (the 
+    requirement of stable closure) and has an internal reason to terminate 
+    at 3D (the cost structure of self-duality + chirality).
+
+─────────────────────────────────────────────
+§5  IMPLICATIONS AND PREDICTIONS
+─────────────────────────────────────────────
+implications:
+  no_fine_tuning: >
+    The dimensionality is not fine-tuned; it is structurally necessary. 
+    There is no landscape of possible dimensionalities; there is only 
+    the minimum dimension for stable closure.
+  
+  no_compactification: >
+    There are no extra dimensions to compactify. The phase configuration 
+    space is dimensionally indifferent at the ground, but the grade chain 
+    terminates at grade-3 because that is the minimum for stable closure. 
+    Higher depths (S⁷, S¹⁵) are embedding spaces for higher-order closures, 
+    not additional spatial dimensions.
+  
+  testable_prediction: >
+    If the framework is correct, there should be no evidence of extra 
+    spatial dimensions at any energy scale. The LHC should find no 
+    Kaluza-Klein modes, no string resonances, no evidence of compactified 
+    dimensions. The dimensionality is 3D because that is the minimum for 
+    stable closure, not because higher dimensions were compactified.
+  
+  connection_to_n4_residual: >
+    The N=4 residual F=8/3 is the algebraic signal that four paths cannot 
+    find independent planes in Cl(3,0). This residual forces the depth-3 
+    branch (S⁷ embedding). The S⁷ embedding is not a fourth spatial 
+    dimension; it is the next Hopf level for higher-order closures 
+    (nuclear magic numbers). The dimensionality remains 3D; the embedding 
+    space grows to accommodate higher-order topology.
+
+─────────────────────────────────────────────
+§6  EPISTEMIC STATUS
+─────────────────────────────────────────────
+epistemic_status:
+  established:
+    - "The grade chain progresses: scalar → vector → bivector → pseudoscalar"
+    - "The pseudoscalar in Cl(3,0) is self-dual (I² = -1) and chiral"
+    - "The pseudoscalar in Cl(2,0) is self-dual but not chiral"
+    - "The pseudoscalar in Cl(4,0) is not self-dual (I² = +1)"
+    - "3D is the minimum dimension for stable chiral self-dual closure"
+    - "The N=4 residual F=8/3 forces the depth-3 branch (S⁷ embedding)"
+  
+  structural_clarification:
+    - "Dimensionality is not built up from 1D to 3D; it emerges from cost termination"
+    - "3D is the minimum dimension for stable closure, not a constructive accumulation"
+    - "The phase configuration space is dimensionally indifferent at the ground"
+  
+  open:
+    - "Explicit derivation of the CCR cost of the 3D embedding"
+    - "Formal proof that no stable closure exists in Cl(2,0) or Cl(4,0)"
+    - "Connection between the 3D termination and the S⁷ embedding at depth 3"
+
+cross_references:
+  file: "core/process-physics/ga-grades-as-process-stages.yaml"
+  note: "Grade chain progression; R1–R5 as topological stages"
+  file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+  note: "Particle structures from grade chain; proton as grade-3 closure"
+  file: "core/closure-configuration-ratio.yaml"
+  note: "CCR as cost of committed topology; 3D embedding cost"
+  file: "core/process-physics/geometric-algebra-bridge.yaml"
+  note: "Cl(3,0) grade structure; pseudoscalar self-duality"
+  file: "issues/foundational/test-spec-depth2-triality-closure.yaml"
+  note: "SIM-007-v1; N=4 residual F=8/3 as depth-3 forcing"
