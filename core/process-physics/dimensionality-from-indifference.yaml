@@ -34,4 +34,223 @@ methodological_distinction:
     approach of string theory, Kaluza-Klein, and most geometric frameworks.
   
   problem_with_constructive: >
-    The constructive approach has no internal reason to stop at
+    The constructive approach has no internal reason to stop at 3D. Why not 
+    4D? Why not 10D? The answer is always external: compactification, 
+    symmetry breaking, or anthropic selection. The dimensionality is imposed 
+    from outside, not derived from within.
+  
+  praestology_approach: >
+    Praestology starts from a dimensionally indifferent phase configuration 
+    space. There is no preferred dimensionality at the ground (R1). The grade 
+    chain progresses: scalar → vector → bivector → pseudoscalar. At each 
+    grade, there is a CCR cost. The question is: why does the cost 
+    accumulation terminate at grade-3?
+  
+  key_insight: >
+    The answer must come from the cost structure itself. 3D is not built up 
+    from 1D; it emerges as the minimum dimension where a stable, chiral, 
+    self-dual closure can form. This is a top-down derivation from the 
+    requirement of stable closure.
+
+─────────────────────────────────────────────
+§2  WHY THE GRADE CHAIN TERMINATES AT GRADE-3
+─────────────────────────────────────────────
+grade_chain_termination:
+  statement: >
+    The grade chain in Cl(n,0) progresses: grade-0 (scalar) → grade-1 
+    (vector) → grade-2 (bivector) → grade-3 (pseudoscalar). The question 
+    is: why does n=3?
+  
+  the_critical_property: >
+    The pseudoscalar I = e₁e₂...eₙ in Cl(n,0) satisfies I² = (-1)^(n(n-1)/2).
+    - n=1: I = e₁, I² = +1 (not self-dual)
+    - n=2: I = e₁e₂, I² = -1 (self-dual, but 2D cannot support chirality)
+    - n=3: I = e₁e₂e₃, I² = -1 (self-dual AND chiral)
+    - n=4: I = e₁e₂e₃e₄, I² = +1 (not self-dual, has external face)
+  
+  why_self_duality_matters: >
+    Self-duality (I² = -1) means the pseudoscalar is its own dual — the 
+    closure has no external face, no open grade components left to propagate 
+    outward. This is why colour confinement is algebraically exact in 
+    Cl(3,0): the proton's grade-3 closure (R₁·R₂·R₃) has no external 
+    grade components to radiate.
+  
+  why_chirality_matters: >
+    Chirality means the algebra can support the Möbius topology — the 720° 
+    double cover required for spin-½. In Cl(2,0), the pseudoscalar is 
+    self-dual but the algebra is 2D — it cannot encode the handedness 
+    required for the Möbius vortex. The Möbius band requires a third 
+    dimension to twist through.
+  
+  the_cost_termination: >
+    3D is the minimum dimension where a committed topology can be both 
+    self-contained (no external face, I² = -1) and chiral (Möbius topology, 
+    spin-½). Any lower dimension cannot achieve both; any higher dimension 
+    introduces an external face (I² = +1 in Cl(4,0)), making stable 
+    confinement impossible.
+  
+  ccr_connection: >
+    The CCR cost of the 3D embedding (pseudoscalar volume) is part of the 
+    rotor's total CCR — but it is the minimum cost that achieves full 
+    self-containment.
+
+─────────────────────────────────────────────
+§3  THE NUMBER OF BIVECTOR PLANES
+─────────────────────────────────────────────
+bivector_plane_count:
+  statement: >
+    The number of independent bivector planes in Cl(n,0) is C(n,2) = n(n-1)/2:
+    - n=2: C(2,2) = 1 (one bivector plane, but no chirality)
+    - n=3: C(3,2) = 3 (three bivector planes, self-dual AND chiral)
+    - n=4: C(4,2) = 6 (six bivector planes, but not self-dual)
+  
+  why_three_matters: >
+    The three bivector planes in Cl(3,0) are what allow the proton's 
+    three-fold binding (R₁·R₂·R₃ in mutually orthogonal planes). The 
+    N=4 residual F=8/3 from SIM-007-v1 is the algebraic signal that 
+    four paths cannot find independent planes in Cl(3,0) — the cost 
+    of forced sharing. This residual forces the depth-3 branch (S⁷ 
+    embedding).
+  
+  the_structural_necessity: >
+    The three bivector planes are not an arbitrary choice. They are the 
+    minimum number that allows:
+    1. Self-dual closure (I² = -1)
+    2. Chiral topology (Möbius 720°)
+    3. Three-fold binding (proton/neutron)
+    4. Confinement (no external grade components)
+
+─────────────────────────────────────────────
+§4  THE INSIDE-OUTSIDE RELATIONAL EQUILIBRIUM
+─────────────────────────────────────────────
+inside_outside_equilibrium:
+  statement: >
+    The termination of the grade chain at Grade-3 is not merely an algebraic 
+    artifact; it is the minimum relational equilibrium required for the 
+    R1–R5 distinction process to successfully define "inside," "outside," 
+    and the "relational boundary" between them, without importing a 
+    pre-existing container ontology.
+  
+  r1_r3_the_leaky_distinction: >
+    At Grade-1 (vector) and Grade-2 (bivector), the distinction has direction 
+    and orientation, but no topological depth. A 2D plane cannot enclose a 
+    volume. It cannot sustain a stable "inside" that is protected from the 
+    "outside" potential. It is a topologically "leaky" distinction that 
+    cannot satisfy the R5 viability selection for long-term commitment.
+  
+  r4_r5_the_grade_3_equilibrium: >
+    Grade-3 (the pseudoscalar I = e₁e₂e₃ in Cl(3,0)) is the unique grade 
+    that satisfies the three conditions for a stable, relational distinction:
+    1. Protected Inside: I² = -1 (self-duality). The committed volume is 
+       algebraically closed, with no external grade components to leak into.
+    2. Distinct Outside: The embedding phase space (Ω_embed) remains 
+       distinct from the committed volume (Ω_rotor), making the CCR 
+       ratio structurally meaningful.
+    3. Relational Boundary: Despite topological closure, the structure interacts 
+       with the outside via the Grade-1 scalar gradient (∇s) and 
+       Grade-2 bivector mismatch (⟨G⟩₂). This is the algebraic 
+       ground of gravity and inertia. The structure is closed, but not isolated.
+  
+  why_higher_grades_fail: >
+    In Cl(4,0), the pseudoscalar squares to +1 (I² = +1). It is not 
+    self-dual; it has an "external face" that leaks into higher grades. 
+    This violates the equilibrium of a stable, self-contained commitment. 
+    This is why topological confinement is algebraically exact at Grade-3, 
+    and why higher depths require a Hopf-level embedding (like S⁷) rather 
+    than a simple 4th spatial dimension.
+
+─────────────────────────────────────────────
+§5  QUANTUM PHENOMENA FROM DIMENSIONAL INDIFFERENCE
+─────────────────────────────────────────────
+quantum_phenomena:
+  statement: >
+    By refusing to force the vector hyperspace (the phase space continuum, ψ) 
+    into a pre-existing 3D container, the framework naturally accounts for 
+    superposition, wave-particle duality, and entanglement. These are not 
+    anomalies in a 3D world; they are the native behaviors of the dimensionally 
+    indifferent ground interacting with the 3D cost-termination equilibrium.
+
+  superposition_as_indifferent_exploration:
+    mechanism: >
+      Prior to R5 viability selection, the system exists in the indifferent 
+      tri/bivector states of the unconstrained Cl(3,0) hyperspace. It is 
+      not "a particle smeared out in 3D space"; it is a fluid exploration 
+      of all possible relational orientations in the boundaryless continuum.
+    conclusion: >
+      Superposition (R3) is the process-level (ψ) exploring the 
+      dimensionally indifferent ground. The "wave function" is the 
+      probability distribution of these unconstrained bivector/trivector 
+      states attempting to find a viable CCR equilibrium.
+
+  wave_particle_duality_resolved:
+    wave_nature: >
+      The unconstrained fluid of indifferent tri/bivector states exploring 
+      the hyperspace (R3 tension/superposition).
+    particle_nature: >
+      The R5 viability lock into the 3D self-dual chiral equilibrium 
+      (the pseudoscalar cost-termination). 
+    synthesis: >
+      Wave-particle duality is not a paradox; it is the transition between 
+      the unconstrained process-level continuum (ψ) and the locked 
+      derivative-level readout (η).
+
+  entanglement_and_non_locality:
+    redefining_distance: >
+      In Praestology, "distance" is not a primitive spatial metric. It is 
+      a relational potential well — a gradient of depleted free potential 
+      (Π_eff) caused by accumulated commitment density (η).
+    the_entanglement_mechanism: >
+      Entangled structures are not separated by "empty 3D space." They 
+      remain connected through the underlying, dimensionally indifferent 
+      phase continuum (ψ). The indifferent hyperspace does not 
+      recognize the derivative-level 3D distance metric.
+    conclusion: >
+      Entangled particles are non-local in the derivative spatial metric 
+      (η), but strictly local and continuously coupled in the 
+      process-level continuum (ψ). "Spooky action at a distance" 
+      is an artifact of mistaking the derivative 3D metric for the 
+      primitive ground.
+
+  measurement_problem_dissolved:
+    statement: >
+      The measurement problem is dissolved. There is no physical "collapse" 
+      of a 3D wave. There is only the R5 viability selection: the apparatus 
+      (a dense η structure) locally depresses Π_eff, forcing the indifferent 
+      tri/bivector exploration to pay the CCR cost and lock into a specific 3D 
+      equilibrium. The "collapse" is just the derivative-level readout 
+      of a process-level commitment event.
+
+─────────────────────────────────────────────
+§6  EPISTEMIC STATUS & COGNITIVE BLIND SPOT
+─────────────────────────────────────────────
+epistemic_status:
+  established:
+    - "The grade chain progresses: scalar → vector → bivector → pseudoscalar"
+    - "The pseudoscalar in Cl(3,0) is self-dual (I² = -1) and chiral"
+    - "The pseudoscalar in Cl(2,0) is self-dual but not chiral"
+    - "The pseudoscalar in Cl(4,0) is not self-dual (I² = +1)"
+    - "3D is the minimum dimension for stable chiral self-dual closure"
+    - "The N=4 residual F=8/3 forces the depth-3 branch (S⁷ embedding)"
+  
+  structural_clarification:
+    - "Dimensionality is not built up from 1D to 3D; it emerges from cost termination"
+    - "3D is the minimum dimension for stable closure, not a constructive accumulation"
+    - "The phase configuration space is dimensionally indifferent at the ground"
+    - "The human mind struggles to visualize the vector-hyperspace because it is itself an R5-committed derivative structure (η), evolved to navigate relational gradients, not the indifferent ground."
+  
+  open:
+    - "Explicit derivation of the CCR cost of the 3D embedding"
+    - "Formal proof that no stable closure exists in Cl(2,0) or Cl(4,0)"
+    - "Connection between the 3D termination and the S⁷ embedding at depth 3"
+
+cross_references:
+  file: "core/process-physics/ga-grades-as-process-stages.yaml"
+  note: "Grade chain progression; R1–R5 as topological stages"
+  file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+  note: "Particle structures from grade chain; proton as grade-3 closure"
+  file: "core/closure-configuration-ratio.yaml"
+  note: "CCR as cost of committed topology; 3D embedding cost"
+  file: "core/process-physics/geometric-algebra-bridge.yaml"
+  note: "Cl(3,0) grade structure; pseudoscalar self-duality"
+  file: "issues/foundational/test-spec-depth2-triality-closure.yaml"
+  note: "SIM-007-v1; N=4 residual F=8/3 as depth-3 forcing"
