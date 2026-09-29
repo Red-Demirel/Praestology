@@ -1,7 +1,7 @@
 # /core/process-physics/vortex-stability.yaml
 name: "Vortex Stability — Process-Physics Foundation"
-version: "1.0"
-status: "Core derivation — CCR structural basis; numerical closure open"
+version: "1.1"
+status: "Core derivation v1.1 — CCR structural basis; Part VI (chirality/neutrino) and Part VII (electron as interaction event) added; numerical closure open"
 domain: "Core / Process-Physics"
 supersedes:
   - "domains/physics/vortex-stabilization.yaml       (formation and persistence — retained as domain file)"
@@ -530,6 +530,222 @@ open_derivations:
         diffusion. Derive from the GP equation's minimum stable
         vortex energy scale.
       depends_on: ["ccr-electron-explicit"]
+
+# ─────────────────────────────────────────────────────────────
+# PART VI: CHIRALITY STABILITY AND PARTIAL CLOSURES
+# ─────────────────────────────────────────────────────────────
+chirality_stability:
+  statement: >
+    The stability of a committed rotor configuration depends on whether
+    its chirality is topologically protected. The 720° Möbius closure
+    has topological protection; the 360° closure does not. This distinction
+    is the algebraic origin of particle stability and the mechanism behind
+    partial closures (neutrinos).
+
+  the_360_instability:
+    statement: >
+      A 360° rotor closure (R(2π) = -1) is chirally unstable. The rotor
+      does not return to itself after one full cycle — it returns to -R.
+      The chirality (the projection of the bivector onto the pseudoscalar,
+      χ = B·I) is not topologically protected.
+    
+    mechanism: >
+      In a 360° loop, the bivector field B(s) can vary along the centerline
+      parameter s. The effective chirality χ(s) can pass through zero when
+      the loop becomes planar in a different orientation (B·I = 0). At this
+      point, the chirality can flip (χ → -χ) under continuous deformation.
+      There is no topological invariant preventing this flip.
+    
+    consequence: >
+      A 360° loop is "wobbly" — it cannot maintain a stable handedness.
+      It will either dissolve back into open potential (Regress) or
+      reconfigure into a topologically protected closure (720° Möbius).
+      The 360° closure is not a stable particle; it is a transitional
+      configuration that must either commit fully or dissolve.
+
+  the_720_protection:
+    statement: >
+      The 720° Möbius closure (R(4π) = +1) is chirally stable. The rotor
+      returns to itself after two full cycles. The Möbius topology is
+      non-orientable — it has only one side. The half-integer twist
+      (Tw = 1/2) cannot be continuously removed.
+    
+    mechanism: >
+      The Möbius band requires a third dimension to twist through. In 3D,
+      the Möbius topology is stable because you cannot continuously deform
+      it to flip its chirality without passing through a singularity
+      (where the amplitude goes to zero, breaking the closure). The
+      topological invariants (Lk = 2, Tw = 1/2, Wr = 3/2) are protected
+      by the closure condition.
+    
+    consequence: >
+      The 720° Möbius closure is a stable particle (electron). The
+      chirality is locked by the topology. The configuration cannot
+      spontaneously flip its handedness without dissolving.
+
+  partial_closures_and_neutrinos:
+    statement: >
+      Neutrinos are hypothesized to be partial inward closures —
+      configurations with some degree of self-referential topology,
+      but less than the full 720° Möbius closure of the electron.
+      The three neutrino generations correspond to three different
+      degrees of partial inward closure.
+    
+    mechanism: >
+      A partial closure has incomplete grade-2 structure. It has some
+      inward Praegress closure (nonzero rest mass), but the closure
+      is not topologically protected to the same degree as the full
+      Möbius. The chirality is partially protected — stable enough
+      to persist, but not as rigidly locked as the electron.
+    
+    three_generations: >
+      The three neutrino mass eigenstates (ν₁, ν₂, ν₃) correspond to
+      three different degrees of partial inward closure:
+      - ν₁ (lightest): minimal inward closure, closest to photon-like
+      - ν₂ (intermediate): moderate inward closure
+      - ν₃ (heaviest): maximal inward closure short of full Möbius
+      
+      The mass hierarchy reflects the degree of topological protection:
+      more inward closure → more trapped rotational energy → higher mass.
+    
+    connection_to_360_instability: >
+      The 360° loop's chirality instability is the mechanism that
+      prevents partial closures from being fully stable. A partial
+      closure exists in a regime where the topology is not fully
+      locked — it has some inward closure, but the chirality can
+      still fluctuate. This is why neutrinos oscillate between
+      flavours: the partial closure allows the flavour state to
+      evolve as the topology slowly reconfigures.
+    
+    status: >
+      STRUCTURAL HYPOTHESIS — the neutrino-as-partial-closure reading
+      is consistent with the framework's existing claim that neutrinos
+      have small but nonzero rest mass (photon-mass-and-proton-excess.yaml
+      #neutrino_comparison). The specific fractional writhe values for
+      each generation require the SIM-001-v3 computation.
+
+  open_derivations:
+    - id: "fractional-writhe-for-partial-closures"
+      description: >
+        Compute the fractional writhe values for partial closures
+        corresponding to the three neutrino generations. Should
+        recover the mass ratios m₁ : m₂ : m₃ from the degree of
+        inward closure.
+      depends_on: ["SIM-001-v3", "bivector-partial-parameters.yaml"]
+      priority: 2
+    
+    - id: "neutrino-oscillation-from-topology-reconfiguration"
+      description: >
+        Derive neutrino flavour oscillation as the slow reconfiguration
+        of the partial closure topology. The oscillation length should
+        follow from the rate at which the partial closure can reconfigure
+        its flavour state without dissolving.
+      depends_on: ["fractional-writhe-for-partial-closures"]
+      priority: 3
+
+neutrino_precision_note:
+  statement: >
+    Neutrinos are NOT committed particles.
+    They are partial inward closure configurations that exist in the R3
+    exploratory regime (pre-R5) until a 3rd body interaction triggers
+    R5 commitment. What we observe as "neutrino properties" (elusiveness,
+    oscillations, small mass) are consequences of this pre-R5 status.
+  
+  pre_r5_status: >
+    Neutrinos are vector-expressions (partial bivector activations) in
+    the R3 regime. They are not committed to η until a 3rd body interaction
+    forces R5 commitment. This is why they are so hard to detect — they
+    spend most of their existence in the pre-R5 state.
+  
+  oscillation_mechanism: >
+    Neutrino flavour oscillations are the reconfiguration of the partial
+    closure in the R3 regime before R5 fires. The partial closure can
+    shift its bivector parameter distribution as long as commitment has
+    not occurred. Detection (3rd body interaction) forces R5 commitment
+    and locks the flavour.
+    The oscillation is periodic because the phase difference between two
+    partial closure CCR costs accumulates at a rate set by their mass
+    splitting. The oscillation length L_osc = 4πE/Δm² is the distance
+    over which this phase difference reaches 2π — one full cycle of
+    interconversion between partial closure configurations. In framework
+    terms: the CCR cost difference Δ(CCR) between two mass eigenstates
+    sets the spatial frequency of the R3 attractor reconfiguration.
+  
+  mass_origin: >
+    The small but nonzero rest mass of neutrinos is the CCR cost of the
+    partial inward closure — more than zero (photon) but less than the
+    full Möbius 720° lock (electron). The mass hierarchy (ν₁ < ν₂ < ν₃)
+    reflects the degree of partial closure.
+  
+  three_generations: >
+    The three neutrino mass eigenstates are not three different committed
+    particles. They are three different partial closure configurations —
+    three different modes or degrees of partial inward closure in the
+    bivector parameter space.
+  
+  status: >
+    STRUCTURAL HYPOTHESIS — consistent with the framework's pre-R5/post-R5
+    distinction and the partial parameter activation framework. Requires
+    explicit derivation of the partial closure configurations and their
+    CCR costs.
+
+# ─────────────────────────────────────────────────────────────
+# PART VII: THE ELECTRON AS INTERACTION EVENT (PRE-R5 DEFAULT)
+# ─────────────────────────────────────────────────────────────
+electron_default_state:
+  statement: >
+    The electron (and positron) are not permanently locked, post-R5 
+    committed topologies floating in a void. In free space, their 
+    default state is pre-R5: an R3 exploratory vector-expression 
+    (a stable attractor in the bivector parameter space).
+  
+  wave_particle_resolution:
+    wave: >
+      The pre-R5 vector-expression exploring the Möbius attractor. 
+      This is not a "smeared particle"; it is the actual, uncommitted 
+      reality of the configuration.
+    particle: >
+      The transient R5 commitment event triggered by a 3rd-body 
+      interaction. The "collapse" is the vector-expression being 
+      forced across V_c, writing its specific CCR cost to η.
+  
+  mass_as_interaction_cost:
+    statement: >
+      Rest mass (I_rot) is not a permanent intrinsic property of a 
+      solitary object. It is the invariant CCR cost incurred *when* 
+      this specific vector-expression is forced into R5 commitment 
+      by an interaction. The "electron" is the name for the R3/R4 
+      configuration that guarantees this specific CCR cost upon firing.
+  
+  positron_and_annihilation:
+    positron: >
+      The conjugate vector-expression: the same stable R3/R4 attractor, 
+      but with the opposite bivector orientation (opposite chirality).
+    annihilation: >
+      When electron and positron vector-expressions interact, their 
+      opposing bivector orientations are forced into a mutual R5 event. 
+      Their grade-2 residues cancel perfectly (R · R† → grade-0/1 only). 
+      The configuration cannot sustain inward closure, and the CCR cost 
+      is released entirely as outward-propagating grade-1 residuals: photons.
+  
+  zitterbewegung:
+    statement: >
+      The rapid fluctuation is the process-level signature of the 
+      vector-expression hovering at the edge of the R5 viability 
+      threshold, constantly sampling the Möbius attractor geometry 
+      before a full 3rd-body interaction locks it into η.
+
+  epistemic_status: "STRUCTURAL CLARIFICATION — aligns the electron 
+  with the strict process-first, no-container ontology. Prevents 
+  smuggling in derivative-level 'billiard ball' particle ontology."
+
+  cross_references:
+    file: "core/process-physics/photon-mass-and-proton-excess.yaml"
+    note: "Neutrino as partial self-integral topology — this section provides the stability mechanism"
+    file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "Partial parameter activation — the algebraic ground of partial closures"
+    file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Quark as fractional closure — same mechanism at different depth"
 
 cross_references:
   - file: "core/closure-configuration-ratio.yaml"
