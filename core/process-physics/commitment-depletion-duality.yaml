@@ -65,6 +65,85 @@ structural_claim:
     sides are the positive and negative deviations from the baseline,
     related by the assembly map.
 
+
+anchoring_reframing:
+  status: "STRUCTURAL REFINEMENT — sharpens the causal ordering of the
+           duality without changing its content. Consistent with the
+           interaction-event reading in vortex-stability.yaml Part VII
+           and with the assembly-map expression below."
+
+  statement: >
+    Inertia is the anchoring-effect: the commitment of a configuration
+    to a specific location in η. Gravity is its price: the local Π_eff
+    depletion that the anchoring costs the surrounding substrate.
+    These are not two reads of one integral in parallel — they are the
+    event and its cost, in that order.
+
+  causal_ordering:
+    - step: "Vector-expression exists in R3"
+      state: "Superposed, unanchored, no definite location, no committed I_rot"
+    - step: "3rd body forces the interaction event"
+      state: "R5 fires; commitment to η occurs"
+    - step: "Anchoring"
+      state: "The configuration commits to a specific location in η. This IS the inertia I_rot — the internal read of what it costs the configuration to be anchored."
+    - step: "Price"
+      state: "The anchoring restricts local phase-space availability. Π_eff drops locally. This IS the gravitational signature — the external read of what the anchoring costs the environment."
+
+  why_this_is_sharper:
+    prior_reading: >
+      The earlier formulation said inertia and gravity are two reads of
+      the same accumulated integral. Correct, but parallel: it did not
+      specify which reading is primary or how they relate causally.
+    reframed_reading: >
+      Anchoring is primary. The depletion is what the anchoring costs.
+      Inertia is the anchoring read from inside the configuration;
+      gravity is the anchoring read from outside. Same event, causally
+      ordered: event then price.
+
+  equivalence_principle_as_structural:
+    statement: >
+      Under the anchoring framing, gravitational mass and inertial mass
+      are equal because they are the event and its price for the same
+      anchoring. Equality is not an observed coincidence that needs
+      explanation — it is a consequence of the two being the same event
+      with two necessary readings. The standard equivalence principle
+      becomes a structural identity.
+
+  connection_to_interaction_event:
+    statement: >
+      This sharpens the interaction-event reading in vortex-stability.yaml
+      Part VII. The R5 firing is simultaneously:
+        - a mass-commitment (I_rot appears)
+        - an anchoring (the configuration localizes)
+        - a depletion (local Π_eff drops)
+        - a gravitational signature (other configurations experience
+          the gradient)
+      Four names for one firing. The anchoring framing makes this
+      explicit by naming the event (anchoring) and the price
+      (depletion) rather than treating them as parallel quantities.
+
+  what_it_does_not_change:
+    - "The assembly-map expression (μ maps anchoring-side to depletion-side) is unchanged in structure. The reframing clarifies what the map connects: event to price."
+    - "The K₀/K₁ balance still holds: every anchoring in K_analytic is a depletion in K_top."
+    - "The oscillation reading is unchanged — commitment and depletion still oscillate around baseline; the reframing just names the causal arrow."
+    - "I_rot = χ_Φ / ω_Φ from terminology-canonical.yaml still holds. Under the anchoring framing, χ_Φ is the coupling between the anchoring event and its depletion price."
+
+  open_questions_sharpened:
+    - id: "anchoring-price-stoichiometry"
+      description: >
+        Is the price of anchoring exactly proportional to the anchoring
+        (I_rot ∝ depletion), or is there a nonlinear relation? The
+        linear case is the equivalence principle's structural form;
+        a nonlinear case would require a modified statement.
+      priority: 2
+    - id: "multiple-anchorings-interference"
+      description: >
+        When multiple configurations anchor in the same region, do
+        their depletion prices add linearly, or do they interact?
+        This is the graviton self-interaction question, reframed in
+        anchoring language.
+      priority: 3
+
 ---
 
 assembly_map_expression:
