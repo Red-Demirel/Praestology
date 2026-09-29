@@ -26,6 +26,130 @@ dependency_map:
 
 ---
 
+framing_note:
+  name: "Inertia as Anchoring, Gravity as Its Price"
+  status: "STRUCTURAL CLARIFICATION — establishes the causal order
+           between inertia and gravity within the framework. Prevents
+           conflation of the two into a single mechanism."
+
+  core_distinction:
+    inertia:
+      what_it_is: "The anchoring itself"
+      description: >
+        A committed topology maintains its relational position in
+        the phase configuration space by continuously sustaining
+        its CCR closure. This self-maintenance IS inertia: the
+        resistance to change of state is the resistance to
+        disrupting the self-anchoring process. The committed
+        topology is its own center — not located in a background
+        space but defining its relational position through the
+        anchoring process itself.
+      framework_terms: >
+        I_rot (trapped rotational inertia), plane-independence
+        cost (mass-as-plane-independence.yaml), CCR commitment
+        cost of the closure topology.
+      ontological_note: >
+        The object as its own center: the locus of maximum
+        commitment density is self-generated, not assigned by
+        an external reference frame. There is no container;
+        the committed topology defines its own relational
+        position by anchoring to itself — drawing free potential
+        from its surroundings and committing it continuously.
+
+    gravity:
+      what_it_is: "The price of that anchoring"
+      description: >
+        The Π_eff depletion field extending outward from the
+        anchor into the surrounding relational environment.
+        Other committed structures are drawn toward the depletion
+        zone because their own propagation capacity (Π_eff) is
+        lower in that direction — the variable kinetic term
+        −∇·(Π_eff∇) biases their evolution toward the depletion.
+        Gravity is not the anchoring; it is the spatial cost
+        paid by the surrounding substrate for the existence of
+        the anchor.
+      framework_terms: >
+        ∇Π_eff gradient in the local-explicit master equation;
+        the 1/Π_eff prefactor on the time derivative (time
+        dilation at the anchor); commitment-depletion-duality.yaml.
+
+  causal_order:
+    sequence: >
+      (1) Committed topology sustains CCR closure  [inertia — anchoring]
+          ↓
+      (2) Π_eff depletion extends outward from anchor
+          ↓
+      (3) ∇Π_eff gradient in surrounding substrate  [gravity — price]
+          ↓
+      (4) Other structures biased toward depletion zone
+    note: >
+      The two-step structure is essential. Collapsing (1) and (3)
+      into one thing loses the explanatory structure: without the
+      distinction, the equivalence principle requires a separate
+      derivation. With it, the equivalence principle is structurally
+      transparent.
+
+  equivalence_principle:
+    statement: >
+      Inertial mass = gravitational mass because the price is
+      always proportional to the anchoring cost. A stronger
+      anchor (higher I_rot, deeper CCR commitment) depletes
+      more Π_eff — larger price. The proportionality is
+      structural, not coincidental: the same CCR cost that
+      makes a topology resist displacement (inertia) also
+      determines the depth of Π_eff depletion it maintains
+      (gravity). One cost, two observable faces.
+    contrast_with_GR: >
+      General Relativity postulates the equivalence principle
+      as a foundation and builds the geometric machinery around
+      it. Here the equivalence principle is a consequence, not
+      a postulate — it follows from the single-cost structure
+      of the CCR framework without additional assumptions.
+
+  gravitational_waves:
+    statement: >
+      Changes in the anchoring process (accelerating masses,
+      merging topologies) produce changes in the Π_eff depletion
+      field that propagate outward at c_eff = c·Π_eff. These
+      are gravitational waves — ripples in the price field of
+      the anchoring process, not ripples in spacetime geometry.
+      The wave carries information about changes in the anchor's
+      CCR cost, not about geometry.
+    speed: >
+      Propagation at c_eff = c·Π_eff in the local substrate.
+      In the near-vacuum Π_eff ≈ 1, so c_eff ≈ c — consistent
+      with observed gravitational wave speed. Deviation from c
+      is a prediction for strong-field regimes.
+
+  newtonian_limit:
+    statement: >
+      The 1/r² falloff of Newtonian gravity is the spatial
+      geometry of the Π_eff depletion field from a spherically
+      symmetric anchor in the weak-field limit. The point-mass
+      abstraction is valid because the depletion field of a
+      spherically symmetric committed topology has point-source
+      symmetry at large r — not because there is a physical
+      point at the center, but because the committed topology's
+      own center (the locus of maximum commitment density)
+      acts as the effective source of the field at r >> R_core.
+
+  cross_references:
+    - file: "core/commitment-depletion-duality.yaml"
+      note: "Π_eff depletion as the mechanism — this file adds
+             the inertia/gravity distinction to that mechanism"
+    - file: "core/process-physics/mass-as-plane-independence.yaml"
+      note: "I_rot as the anchoring cost — the inertia side"
+    - file: "core/process-physics/dirac-as-grade-chain-closure.yaml"
+      note: "Π_eff dependence of I_rot — anchoring cost varies
+             with local substrate conditions (strong-field correction)"
+    - file: "core/process-physics/vortex-stability.yaml"
+      note: "The committed topology whose anchoring produces gravity"
+    - file: "core/emergent-relational-manifold.yaml"
+      note: "The relational environment into which the price radiates —
+             the manifold is constituted by the connectivity of
+             committed topologies, not a background container"
+
+
 gravity_role:
   statement: >
     Gravity does not adjust the ratio. It adjusts the threshold. The
