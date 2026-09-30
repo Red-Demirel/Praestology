@@ -1,0 +1,217 @@
+/core/process-physics/gravitational-ccr-mapping.yaml
+name: "Gravitational CCR Mapping: G as the Cosmic-Scale Closure Cost"
+version: "0.1"
+status: "STRUCTURAL HYPOTHESIS — establishes G as the grade-0 CCR instance; 
+resolves the hierarchy problem via geometric scaling; equivalence principle 
+framed as structural identity. Quantitative derivation open."
+domain: "Core / Process-Physics"
+description: >
+Newton's gravitational constant G is not a fundamental force parameter. 
+It is the Closure-Configuration Ratio (CCR) of the grade-0 (scalar) 
+depletion volume at the cosmic scale. This file maps the geometric 
+distinction between localized grade-2 coupling (EM, α) and integrated 
+grade-0 coupling (Gravity, G), resolving the hierarchy problem, and 
+establishes the weak-field Poisson equation as a derived limit of the 
+master equation, not a postulate.
+dependency_map:
+  requires:
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/gravity-and-ccr-threshold.yaml"
+    - "core/process-physics/commitment-depletion-duality.yaml"
+    - "core/process-physics/mass-as-plane-independence.yaml"
+    - "core/terminology-canonical.yaml"
+  provides_to:
+    - target: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
+      via: "Quantitative mapping of I_rot to χ_Φ via G"
+
+─────────────────────────────────────────────
+§1  ONTOLOGICAL PREMISE: G AS GRADE-0 CCR
+─────────────────────────────────────────────
+ontological_premise:
+  statement: >
+    Every fundamental constant is a CCR instance — the realization cost 
+    of a specific committed topology at its respective commitment depth. 
+    G is the CCR instance for large-scale commitment density gradients. 
+    It encodes the realization cost of the mean committed topology 
+    averaged across cosmic scales: the universal background CCR.
+  
+  grade_0_vs_grade_2: >
+    The framework resolves the hierarchy problem (~10³⁶ ratio between 
+    EM and gravitational coupling) not through fine-tuning, but through 
+    geometric scaling of the CCR numerator:
+    - Electromagnetism (α): The CCR of a single topological crossover 
+      point (grade-2 bivector). Highly localized, efficient coupling.
+    - Gravity (G): The CCR of the full integrated scalar depletion 
+      volume (grade-0 pseudoscalar). The coupling is diluted across 
+      the entire volumetric commitment history (η_total) of the source.
+  
+  conclusion: >
+    The vast weakness of gravity is not a mystery. It is the geometric 
+    consequence of comparing a point-like grade-2 crossover efficiency 
+    to a volumetric grade-0 integration efficiency. Both are CCR 
+    instances; they operate at different grades and scales.
+
+─────────────────────────────────────────────
+§2  THE EQUIVALENCE PRINCIPLE AS STRUCTURAL IDENTITY
+─────────────────────────────────────────────
+equivalence_principle:
+  statement: >
+    In standard physics, the equivalence of inertial and gravitational 
+    mass is a miraculous coincidence that must be postulated. In 
+    Praestology, it is a structural identity: they are the exact same 
+    R5 commitment cost, read from two different perspectives.
+  
+  inertia_as_anchoring: >
+    Inertia (I_rot) is the internal anchoring cost. A committed topology 
+    maintains its relational position by continuously sustaining its CCR 
+    closure. This self-maintenance IS inertia: the resistance to change 
+    of state is the resistance to disrupting the self-anchoring process.
+  
+  gravity_as_the_price: >
+    Gravity is the first-order relational coupling of this anchoring. 
+    The committed topology depletes the surrounding free potential 
+    (Π_eff), creating a gradient (∇Π_eff). Other structures are drawn 
+    toward this depletion zone because their own propagation capacity 
+    is lower in that direction.
+  
+  structural_identity: >
+    The gravitational response strength is the Phase Gradient Coupling 
+    (χ_Φ = I_rot · ω_Φ). Because χ_Φ is definitionally proportional to 
+    I_rot, the proportionality between inertial and gravitational mass 
+    is structurally guaranteed. One cost (the R5 commitment), two 
+    observable faces (inside resistance and outside depletion).
+
+─────────────────────────────────────────────
+§3  WEAK-FIELD MATHEMATICAL FORM (DERIVED, NOT POSTULATED)
+─────────────────────────────────────────────
+weak_field_derivation:
+  statement: >
+    The Newtonian limit of gravity is not postulated via the Poisson 
+    equation. It is derived from the local-explicit master equation in 
+    the weak-field, slow-motion limit.
+  
+  master_equation_kinetic_term: >
+    The master equation contains the variable kinetic term: 
+    -∇ · (Π_eff ∇ψ)
+    This is the GA statement of anisotropic propagation in a graded 
+    medium. Π_eff(r,t) acts as the inverse refractive index of the 
+    substrate.
+  
+  weak_field_expansion: >
+    Let Π_eff = Π_eff,base - δΠ, where δΠ is the depletion caused by 
+    committed density ρ_η. In the weak-field limit (δΠ << Π_eff,base), 
+    the master equation's time-evolution and spatial gradient terms 
+    decouple to yield:
+      ∇²(δΠ) = 4πG ρ_η
+  
+  the_role_of_G: >
+    In this derived equation, G is not a free parameter. It is the 
+    structural proportionality constant that links the committed 
+    density ρ_η (grade-0 scalar magnitude of η) to the process-rate 
+    depletion δΠ. Its value is determined by the substrate primitives 
+    (ħ, c, Π_eff,base) and the geometric scaling of the grade-0 CCR.
+  
+  two_body_relational_coupling: >
+    For two committed topologies A and B, the shared Π_eff landscape is:
+      ∇²Π_eff = 4πG(ρ_η,A + ρ_η,B)
+    Each topology moves in the gradient of the combined field. The 
+    single-body "gravitational field" is merely the valid approximation 
+    when ρ_η,B << ρ_η,A (test mass negligible). The primary reality is 
+    the mutual, relational coupling of two anchoring scalars.
+
+─────────────────────────────────────────────
+§4  STRONG-FIELD PREDICTION: I_rot IN-SITU VS VOID
+─────────────────────────────────────────────
+strong_field_prediction:
+  statement: >
+    Because inertia and gravity are coupled through the shared Π_eff 
+    landscape, effective inertial mass is environment-dependent.
+  
+  void_baseline: >
+    I_rot^(void) is the intrinsic anchoring cost in an isolated, 
+    un-depleted baseline environment (Π_eff = Π_eff,base).
+  
+  in_situ_effective_mass: >
+    I_rot^(in-situ) is the effective inertia defined against the local 
+    shared landscape. In a gravitational well, local Π_eff is depressed. 
+    Because the vortex precession rate ω_Φ is tied to local Π_eff, the 
+    effective inertial mass of a particle deep in a gravitational well 
+    is slightly lower than its void value.
+  
+  parallel_to_alpha: >
+    This is the exact same mechanism that produces the 2.2 ppm gap 
+    between α_int (void) and α_exp (measured). The environmental 
+    shift is a general feature of any quantity defined against Π_eff.
+  
+  testable_consequence: >
+    Precision inertial-mass measurements in deep wells (e.g., atomic 
+    clocks in varying potentials, spacecraft trajectories, or 
+    gravitational-wave detector test masses) should reveal a fractional 
+    shift in effective mass scaling with the depth of the well, 
+    distinguishable in principle from standard GR predictions.
+
+─────────────────────────────────────────────
+§5  OPEN DERIVATIONS
+─────────────────────────────────────────────
+open_derivations:
+  priority_1:
+    - id: "G-from-substrate-primitives"
+      description: >
+        Derive the explicit functional form of G in terms of substrate 
+        primitives (ħ, c, Π_eff,base) and the grade-0 CCR geometric 
+        scaling factor. This closes the hierarchy problem quantitatively.
+      depends_on: ["closure-configuration-ratio.yaml", "SIM-004-v2"]
+      
+    - id: "poisson-limit-from-master-equation"
+      description: >
+        Formal, step-by-step derivation of ∇²(δΠ) = 4πG ρ_η from the 
+        local-explicit master equation, confirming the exact structural 
+        definition of G within that limit.
+      depends_on: ["core-dynamical-equation.yaml"]
+
+  priority_2:
+    - id: "i-rot-in-situ-quantitative-shift"
+      description: >
+        Compute the leading-order fractional shift (I_rot^(in-situ) / 
+        I_rot^(void) - 1) for a particle in a gravitational well of 
+        given depth. Verify it scales with the same Π_eff deviation 
+        that produces the 2.2 ppm α shift.
+      depends_on: ["G-from-substrate-primitives", "dirac-as-grade-chain-closure.yaml"]
+
+  priority_3:
+    - id: "nonlinear-shared-landscape-leading-order"
+      description: >
+        Solve the master equation to leading order in the nonlinear 
+        coupling between Π_eff and ψ, extracting the shared-landscape 
+        contribution to effective inertia. This moves beyond the 
+        additive weak-field Poisson limit to the full relational coupling.
+      depends_on: ["poisson-limit-from-master-equation"]
+
+─────────────────────────────────────────────
+§6  EPISTEMIC STATUS
+─────────────────────────────────────────────
+epistemic_status:
+  established:
+    - "Gravity is ∇Π_eff, not a force or ratio-warper."
+    - "Inertia (I_rot) and gravitational response (χ_Φ) are two readings of the same R5 commitment cost."
+    - "The hierarchy problem is resolved geometrically: grade-2 point crossover (α) vs. grade-0 volumetric integration (G)."
+  structural_hypothesis:
+    - "G is the cosmic-scale CCR instance, derivable from substrate primitives."
+    - "The weak-field Poisson equation is a derived limit of the master equation's kinetic term."
+    - "Effective inertial mass is Π_eff-dependent (I_rot^(in-situ) < I_rot^(void))."
+  open:
+    - "Explicit quantitative derivation of G from ħ, c, Π_eff,base."
+    - "Formal step-by-step reduction of the master equation to the Poisson limit."
+    - "Quantitative calculation of the I_rot^(in-situ) fractional shift."
+
+cross_references:
+  file: "core/closure-configuration-ratio.yaml"
+  note: "CCR definition; G listed as cosmic-scale CCR instance"
+  file: "core/process-physics/commitment-depletion-duality.yaml"
+  note: "Anchoring reframing; shared landscape mutual coupling"
+  file: "core/process-physics/mass-as-plane-independence.yaml"
+  note: "I_rot as the anchoring cost; plane-independence resistance"
+  file: "core/terminology-canonical.yaml"
+  note: "χ_Φ = I_rot · ω_Φ; units J·s; F_grav = -χ_Φ ∇Π_eff"
+  file: "core/process-physics/gravity-and-ccr-threshold.yaml"
+  note: "Gravity adjusts the threshold V_c, not the CCR ratio"
