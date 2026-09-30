@@ -1,6 +1,6 @@
 # /core/process-physics/gravity-and-ccr-threshold.yaml
 name: "Gravity, CCR, and the Closure Threshold"
-version: "1.1"
+version: "1.2"
 status: "STRUCTURAL CLARIFICATION — ratio remains geometric; environmental
          dependence located in V_c; monotonicity open"
 domain: "Core / Process-Physics"
@@ -27,10 +27,33 @@ dependency_map:
 ---
 
 framing_note:
-  name: "Inertia as Anchoring, Gravity as Its Price"
+  name: "Inertia as Anchoring, Gravity as Its Price — Relational Two-Body Form"
   status: "STRUCTURAL CLARIFICATION — establishes the causal order
-           between inertia and gravity within the framework. Prevents
-           conflation of the two into a single mechanism."
+           between inertia and gravity, and identifies gravity as
+           intrinsically a relational two-body coupling. The single-body
+           gravitational field is a derived approximation valid when
+           m_test << m_source."
+
+  primary_statement:
+    statement: >
+      Gravity is never a property of a single object. It is the first-order
+      relational coupling of two inertia-cost effects. The planet's CCR
+      commitment cost (its anchoring depth η_A) sets the Π_eff landscape
+      that the object's CCR commitment cost (its anchoring depth η_B)
+      responds to. What we call "gravity" is the mutual coupling of two
+      anchoring scalars via their overlapping Π_eff depletion fields.
+    two_body_force: >
+      F_on_B = −I_rot_B · ∇Π_eff_A
+      where ∇Π_eff_A is sourced by ρ_η_A (A's committed density)
+      via the Poisson equation (weak-field limit, derived below).
+      This is the first relational coupling of two inertia-cost effects —
+      not a force from a field radiating into empty space.
+    single_body_abstraction: >
+      The single-body gravitational field (Π_eff field surrounding a
+      mass in empty space) is a valid approximation when m_B << m_A.
+      In that limit B's own depletion field is negligible and B moves
+      in A's Π_eff landscape without back-reaction. The abstraction
+      is not the primary reality — the two-body relational coupling is.
 
   core_distinction:
     inertia:
@@ -121,22 +144,125 @@ framing_note:
       with observed gravitational wave speed. Deviation from c
       is a prediction for strong-field regimes.
 
+  weak_field_mathematical_form:
+    source: "Weak-field_limit.md — derived from local-explicit master equation"
+    poisson_equation: >
+      ∇²Π_eff = 4πG ρ_η
+      Π_eff plays the role of the gravitational potential (inverted:
+      low Π_eff = deep well, high Π_eff = free space). Derived directly
+      from the local-explicit master equation in the weak-field,
+      slow-motion limit — not postulated.
+    two_body_extension: >
+      For two committed topologies A and B, the shared Π_eff landscape is:
+        ∇²Π_eff = 4πG(ρ_η_A + ρ_η_B)
+      Each topology moves in the gradient of the combined field.
+      Superposition is exact in the weak-field limit (linearity of
+      the Poisson equation). The full mutual coupling — each topology's
+      depletion field modifying the other's Π_eff landscape — is the
+      two-body problem's physical content. Gravitational wave emission
+      is the propagating change in the combined field during orbital
+      reconfiguration.
+    single_body_recovery: >
+      When ρ_η_B << ρ_η_A (test mass negligible):
+        ∇²Π_eff ≈ 4πG ρ_η_A
+      Standard Newtonian limit recovered. The 1/r² force law follows
+      from the spherical symmetry of ρ_η_A's depletion field at r >> R_core.
+      The point-mass abstraction is valid at this scale — not because
+      there is a physical point at the center, but because the locus of
+      maximum commitment density acts as the effective source at large r.
+
+  em_parallel:
+    statement: >
+      The gravitational field and the EM field are the same substrate
+      phenomenon at different commitment levels — both intrinsically
+      relational, neither physically meaningful for a single isolated object:
+    table:
+      em_field:
+        source: "Electron in pre-R5 wave state"
+        grade: "Grade-2 (bivector commutator interaction)"
+        character: "Directional — can cancel (charge neutrality = opposite
+                    chirality bivector cancellation)"
+        coupling: "Two pre-R5 wave states coupling via |[B1,B2]|"
+        constant: "α ≈ 1/137 — one topological crossover point"
+      gravitational_field:
+        source: "Committed topology in post-R5 anchoring scalar mode"
+        grade: "Grade-0 (scalar Π_eff depletion)"
+        character: "Isotropic — cannot cancel (scalar depletion always
+                    positive; no topology can add Π_eff, only deplete it)"
+        coupling: "Two post-R5 anchoring scalars coupling via ∇Π_eff"
+        constant: "G — full integrated depletion volume; much smaller
+                   than α because grade-0 coupling spreads over the
+                   entire depletion volume, not one crossover point"
+    hierarchy_note: >
+      The ~10³⁶ ratio between EM and gravitational coupling strengths
+      is the ratio of one topological crossover point (grade-2, f_closure)
+      to the full integrated scalar depletion volume (grade-0, η_total).
+      Not a mystery requiring separate explanation — a geometric consequence
+      of grade-2 vs grade-0 coupling geometry.
+
   newtonian_limit:
     statement: >
-      The 1/r² falloff of Newtonian gravity is the spatial
-      geometry of the Π_eff depletion field from a spherically
-      symmetric anchor in the weak-field limit. The point-mass
-      abstraction is valid because the depletion field of a
-      spherically symmetric committed topology has point-source
-      symmetry at large r — not because there is a physical
-      point at the center, but because the committed topology's
-      own center (the locus of maximum commitment density)
-      acts as the effective source of the field at r >> R_core.
+      The 1/r² falloff of Newtonian gravity is the spatial geometry of
+      the Π_eff depletion field from a spherically symmetric anchor in
+      the weak-field limit. Derived from the Poisson equation above —
+      not postulated. The point-mass abstraction is valid at r >> R_core.
 
-  cross_references:
+  derivation_status:
+    derived_from_master_equation:
+      - "Π_eff variation causes biased propagation: kinetic term −∇·(Π_eff∇)"
+      - "Time dilation as 1/Π_eff prefactor on time derivative"
+      - "Functional form of Poisson equation in weak-field slow-motion limit"
+      - "Linearity → superposition → two-body extension"
+      - "Gravitational lensing geometry and c_eff = c·Π_eff"
+    not_yet_derived:
+      - item: "G — gravitational coupling constant"
+        note: "Requires deriving G from CCR structure, analogous to
+               deriving α from f_closure. Open: sim-gravity-coupling."
+      - item: "Mutual coupling in nonlinear regime"
+        note: "The weak-field Poisson form is the linear approximation.
+               The full shared-landscape coupling (where each topology's
+               Π_eff field makes the joint landscape mutually constitutive
+               rather than merely additive) requires the nonlinear master
+               equation. Open: nonlinear-shared-landscape-leading-order."
+      - item: "I_rot^(void) vs I_rot^(in-situ) quantitative shift"
+        note: "In a shared Π_eff landscape, effective inertia differs from
+               the void-baseline anchoring cost. The fractional shift should
+               scale with local Π_eff deviation — same mechanism as the
+               2.2 ppm α environmental shift. Open: i-rot-in-situ-prediction."
+    source: >
+      Full derivation status in:
+      commitment-depletion-duality.yaml → shared_landscape_anchoring_coupling
+      That section establishes the two-effects table (price vs mutual coupling),
+      the relational_coupling block (replaces prior entanglement_structural_analogy
+      — stays within the framework's own relational vocabulary, no quantum
+      mechanics import), the Mach reading, and the three open derivations
+      with priority rankings.
+
+  machs_principle:
+    statement: >
+      Under the shared-landscape reading, Mach's principle is not a puzzle
+      to explain — it is the natural form of inertia in the framework.
+      The inertia of an object is defined relative to the shared Π_eff
+      landscape that all committed matter contributes to. A hypothetical
+      universe with a single anchored topology and nothing else would have
+      no shared landscape — no second anchoring to define relative to —
+      and the topology's inertia would be undefined. In the actual universe,
+      the landscape is set by the total committed matter distribution, and
+      each object's inertia is defined against that.
+    contrast_with_GR: >
+      GR's field equations do not obviously make local inertia depend on
+      distant matter — Mach's principle is awkward to formulate in GR.
+      Here it is automatic: inertia is landscape-relative by construction.
+      This is a structural advantage, not an additional postulate.
+
+
+    - file: "docs/Weak-field_limit.md"
+      note: "Mathematical derivation of ∇²Π_eff = 4πGρ_η from the
+             local-explicit master equation — the Poisson equation basis
+             for the two-body relational coupling"
     - file: "core/commitment-depletion-duality.yaml"
       note: "Π_eff depletion as the mechanism — this file adds
-             the inertia/gravity distinction to that mechanism"
+             the inertia/gravity distinction and relational framing"
     - file: "core/process-physics/mass-as-plane-independence.yaml"
       note: "I_rot as the anchoring cost — the inertia side"
     - file: "core/process-physics/dirac-as-grade-chain-closure.yaml"
@@ -145,10 +271,24 @@ framing_note:
     - file: "core/process-physics/vortex-stability.yaml"
       note: "The committed topology whose anchoring produces gravity"
     - file: "core/emergent-relational-manifold.yaml"
-      note: "The relational environment into which the price radiates —
-             the manifold is constituted by the connectivity of
-             committed topologies, not a background container"
-
+      note: "The relational environment — constituted by connectivity
+             of committed topologies, not a background container.
+             The two-body coupling is a primary constitutive relation."
+    - file: "computation/sim004_v2_integrated.py"
+      note: "Two-stage α structure: f_geom=1/π (EM, pre-R5 wave) and
+             f_eq=ξ/R_core (closure correction). EM parallel to gravity
+             framing: both fields intrinsically relational, different grades."
+    - file: "core/commitment-depletion-duality.yaml → shared_landscape_anchoring_coupling"
+      note: "Full derivation status, two-effects table, relational_coupling
+             block (mutual constitution of Π_eff landscape by multiple
+             anchorings — within framework's own relational vocabulary),
+             Mach reading, I_rot void vs in-situ distinction, three open
+             derivations. This framing note summarises; that section is
+             authoritative on derivation status."
+    - file: "core/terminology-canonical.yaml"
+      note: "I_rot — void-baseline is canonical reference; in-situ
+             effective inertia differs by local Π_eff deviation.
+             Both should be distinguished where precision matters."
 
 gravity_role:
   statement: >
