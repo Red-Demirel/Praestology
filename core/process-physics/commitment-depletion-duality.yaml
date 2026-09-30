@@ -1,6 +1,6 @@
 # /core/process-physics/commitment-depletion-duality.yaml
 name: "Commitment-Depletion Duality: Gravity and Inertia as Two Reads of the Assembly Map"
-version: "0.1"
+version: "0.2"
 status: "STRUCTURAL HYPOTHESIS — commitment and Π_eff depletion as complementary
          reads of the same integral; assembly-map expression proposed;
          oscillation framing flagged as a reading, not a derived mechanism"
@@ -143,6 +143,443 @@ anchoring_reframing:
         This is the graviton self-interaction question, reframed in
         anchoring language.
       priority: 3
+
+# Add to /core/process-physics/commitment-depletion-duality.yaml
+# Insert after `anchoring_reframing` / before `assembly_map_expression`
+
+shared_landscape_anchoring_coupling:
+  status: "STRUCTURAL READING — extends the anchoring reframing to the
+           mutual coupling of multiple anchorings through the shared
+           Π_eff landscape. Structurally consistent with the framework;
+           not yet derived from the master equation. Distinguished
+           from the single-body gravitational reading, which remains
+           the weak-field approximation."
+
+  statement: >
+    Every anchoring event contributes to the shared Π_eff landscape
+    that defines the inertia of every other anchored object in the
+    region. The inertia of a configuration is not an isolated property
+    of that configuration — it is defined relative to the aggregate
+    landscape that all committed anchorings contribute to. Two effects
+    are therefore distinct:
+
+      (1) Price of anchoring — the local Π_eff drop a commitment
+          costs (established: commitment-depletion-duality.yaml).
+
+      (2) Mutual coupling of anchorings — the way every anchoring
+          contributes to the landscape that others' inertia is
+          defined against. This effect is the subject of the present
+          subsection.
+
+  two_effects_table:
+    price_of_anchoring:
+      what_it_is: "Local Π_eff drop caused by one commitment event"
+      reading: "Source-field-test: source provides the potential, test object responds"
+      regime: "Weak-field / linear / single-source-dominant"
+      status: "Established (Poisson weak-field form, commitment-depletion-duality)"
+
+    mutual_coupling:
+      what_it_is: >
+        Shared landscape that all anchorings jointly constitute and
+        all objects' inertia is defined against
+      reading: >
+        Non-separable joint state: no object's inertia is definable
+        without reference to the aggregate
+      regime: "Full nonlinear master equation (Π_eff ↔ ψ self-coupling)"
+      status: "Structural reading — this subsection"
+
+  relational_coupling:
+    statement: >
+      The inertia of a configuration is defined relative to the local
+      Π_eff landscape. That landscape is constituted by all committed
+      anchorings in the region. Therefore the inertia of A is defined
+      against a landscape that includes B, C, D... and vice versa.
+      The configuration is relational — not a sum of independent
+      intrinsic inertias.
+
+    what_this_is_not:
+      - "Not quantum entanglement — no Bell-violating correlations, no non-local state collapse"
+      - "Not a force between objects — the coupling is structural, not mediated"
+      - "Not a signal — no information is transmitted through the landscape coupling"
+
+    what_this_is:
+      - "Relational determination: each object's inertia is defined against the shared landscape"
+      - "Mutual constitution: the landscape is what all anchorings together constitute"
+      - "Non-additive in the nonlinear regime: Π_eff ↔ ψ self-coupling makes the joint landscape mutually constitutive, not merely additive"
+
+    linear_vs_nonlinear:
+      linear_regime: >
+        In the weak-field limit, the Poisson landscape is additive:
+        contributions from independent sources sum. The inertia of each
+        object depends on the total, but the total is factorizable into
+        independent contributions. The relational structure is present
+        but weak — the landscape is a sum, and each term is independent.
+      nonlinear_regime: >
+        In the full master equation, Π_eff depends on ψ (via η = |ψ|²),
+        and ψ's evolution depends on Π_eff. Each object's anchoring
+        modifies the landscape, which modifies the others' anchoring,
+        which back-modifies the first. The joint landscape is mutually
+        constitutive — not decomposable into independent contributions.
+        This is where the relational reading has its full structural content.
+
+    vocabulary_note: >
+      The framework already uses relational language at multiple levels
+      (relational potential, relational thermodynamics, relational
+      reading of the Poisson equation). This reading extends that
+      vocabulary to the mutual constitution of the Π_eff landscape
+      by multiple anchorings. It is consistent with the framework's
+      existing relational commitments and does not introduce a new
+      category of relation.
+
+  machs_principle_as_natural_reading:
+    statement: >
+      Under the shared-landscape reading, Mach's principle is not a
+      puzzle to be explained — it is the natural form of inertia.
+      The inertia of an object is defined relative to the shared
+      Π_eff landscape that all committed matter contributes to.
+      In a hypothetical universe with a single anchored configuration
+      and nothing else, there would be no shared landscape — no
+      second anchoring to define relative to — and the object's
+      inertia would be undefined (or trivial).
+
+      In the actual universe, the landscape is set by the total
+      committed matter distribution, and each object's inertia is
+      defined against that.
+
+    distinguishing_feature: >
+      This makes the framework's gravitational reading structurally
+      Machian, which GR's is not. In GR, the field equations do not
+      obviously make local inertia depend on distant matter — Mach's
+      principle is awkward to formulate. The anchoring reading makes
+      it automatic: inertia is landscape-relative by construction.
+
+  testable_consequence:
+    i_rot_void_vs_in_situ:
+      statement: >
+        I_rot as currently defined is the intrinsic anchoring cost in
+        void (isolated baseline). In a shared landscape, the effective
+        inertia of an object differs from its void value by an amount
+        set by the local Π_eff deviation from baseline. The two
+        quantities should be distinguished:
+
+          I_rot^(void)     — intrinsic anchoring cost, isolated baseline
+          I_rot^(in-situ)  — effective inertia, defined against the
+                             local shared landscape
+
+      parallel_to_alpha:
+        statement: >
+          This parallels the environmental dependence of α. Just as
+          α_int (void) differs from α_exp (in-situ) by the local Π_eff
+          depression, I_rot^(void) differs from I_rot^(in-situ) by the
+          same mechanism. The 2.2 ppm environmental shift is thus not
+          unique to α — it is a general feature of any quantity defined
+          against Π_eff. I_rot is affected the same way.
+
+      prediction:
+        statement: >
+          The effective inertial mass of a particle in a gravitational
+          well should be slightly lower than its void value, by roughly
+          the same fractional amount as the α shift, scaled by the depth
+          of the well. This is a very small effect (order 10⁻⁶ or smaller
+          for terrestrial gravitational wells), but it is principled and
+          distinguishable from GR's predictions in principle.
+
+      status: >
+        STRUCTURAL PREDICTION — follows from the anchoring-coupling
+        reading; not yet quantified. Requires the nonlinear regime of
+        the master equation to be solved to leading order in the
+        coupling. See open derivation below.
+
+  consequences_for_earlier_sections:
+    - consequence: "The single-body Poisson reading is the linear approximation"
+      detail: >
+        The single-body Poisson form ∇²Π_eff = 4πGρ_η (with ρ_B
+        negligible) is the linear-regime approximation of the full
+        shared-landscape coupling. It is valid when one source
+        dominates and the mutual-constitutive effects are negligible.
+        The two-body extension ∇²Π_eff = 4πG(ρ_A + ρ_B) is already
+        closer to the full reading, but remains additive; the full
+        reading requires the nonlinear master equation.
+    - consequence: "Equivalence principle remains structural"
+      detail: >
+        The equivalence principle (inertial = gravitational mass) still
+        follows from the anchoring-as-event reading. The shared-landscape
+        coupling does not weaken it — it specifies that the equality
+        holds at every configuration of the shared landscape, because
+        inertia and the gravitational response are the same event with
+        two readings in every configuration.
+    - consequence: "I_rot (void) is the void-baseline reference"
+      detail: >
+        The I_rot appearing in the cascade document and in
+        terminology-canonical.yaml is the void-baseline anchoring cost.
+        The in-situ effective inertia differs slightly by the local
+        Π_eff deviation. Both should be distinguished where precision
+        matters; the void-baseline is the canonical reference for
+        framework-internal accounting.
+
+  open_derivations:
+    - id: "nonlinear-shared-landscape-leading-order"
+      description: >
+        Solve the master equation to leading order in the coupling
+        between Π_eff and ψ, extracting the shared-landscape
+        contribution to the effective inertia. This is the
+        quantitative version of the entanglement-structural
+        analogy — the amount by which the joint landscape is not
+        merely additive.
+      depends_on: ["core-dynamical-equation.yaml", "SIM-004-v2"]
+      priority: 2
+
+    - id: "i-rot-in-situ-prediction"
+      description: >
+        Derive the fractional shift I_rot^(in-situ) / I_rot^(void) - 1
+        for a particle in a gravitational well of given depth. Should
+        scale with the same Π_eff deviation that produces the 2.2 ppm
+        α shift. Falsifiable if precision inertial-mass measurements
+        in deep wells (spacecraft, gravitational-wave detectors,
+        atomic clocks in varying potential) reach sufficient precision.
+      depends_on: ["nonlinear-shared-landscape-leading-order"]
+      priority: 3
+
+    - id: "mach-principle-quantitative"
+      description: >
+        Formulate the shared-landscape reading as a quantitative
+        statement relating local inertia to the total committed
+        matter distribution. This is the framework's version of
+        Mach's principle. Should reduce to standard Newtonian
+        inertia in the single-source limit and to a landscape-weighted
+        form in the general case.
+      depends_on: ["nonlinear-shared-landscape-leading-order"]
+      priority: 3
+
+  cross_references:
+    - file: "core/process-physics/commitment-depletion-duality.yaml"
+      note: "Parent file — this subsection extends the anchoring reframing"
+    - file: "core/process-physics/bivector-partial-parameters.yaml"
+      note: "Entanglement as correlated unset parameters — the anchoring-coupling reading extends the same structure to the committed landscape"
+    - file: "core/process-physics/gravity-and-ccr-threshold.yaml"
+      note: "Nonlinear regime of the master equation — the domain where the entanglement-structural analogy has real content"
+    - file: "core/terminology-canonical.yaml"
+      note: "I_rot — the void-baseline is canonical; in-situ value differs"
+    - file: "documents/parameter-cascade.md"
+      note: "I_rot row should note the void-vs-in-situ distinction"
+
+---
+
+shared_landscape_anchoring_coupling:
+  status: "STRUCTURAL READING — extends the anchoring reframing to the
+           mutual coupling of multiple anchorings through the shared
+           Π_eff landscape. Structurally consistent with the framework;
+           not yet derived from the master equation. Distinguished
+           from the single-body gravitational reading, which remains
+           the weak-field approximation."
+
+  statement: >
+    Every anchoring event contributes to the shared Π_eff landscape
+    that defines the inertia of every other anchored object in the
+    region. The inertia of a configuration is not an isolated property
+    of that configuration — it is defined relative to the aggregate
+    landscape that all committed anchorings contribute to. Two effects
+    are therefore distinct:
+
+      (1) Price of anchoring — the local Π_eff drop a commitment
+          costs (established: commitment-depletion-duality.yaml).
+
+      (2) Mutual coupling of anchorings — the way every anchoring
+          contributes to the landscape that others' inertia is
+          defined against. This effect is the subject of the present
+          subsection.
+
+  two_effects_table:
+    price_of_anchoring:
+      what_it_is: "Local Π_eff drop caused by one commitment event"
+      reading: "Source-field-test: source provides the potential, test object responds"
+      regime: "Weak-field / linear / single-source-dominant"
+      status: "Established (Poisson weak-field form, commitment-depletion-duality)"
+
+    mutual_coupling:
+      what_it_is: >
+        Shared landscape that all anchorings jointly constitute and
+        all objects' inertia is defined against
+      reading: >
+        Non-separable joint state: no object's inertia is definable
+        without reference to the aggregate
+      regime: "Full nonlinear master equation (Π_eff ↔ ψ self-coupling)"
+      status: "Structural reading — this subsection"
+
+  relational_coupling:
+    statement: >
+      The inertia of a configuration is defined relative to the local
+      Π_eff landscape. That landscape is constituted by all committed
+      anchorings in the region. Therefore the inertia of A is defined
+      against a landscape that includes B, C, D... and vice versa.
+      The configuration is relational — not a sum of independent
+      intrinsic inertias.
+
+    what_this_is_not:
+      - "Not quantum entanglement — no Bell-violating correlations, no non-local state collapse"
+      - "Not a force between objects — the coupling is structural, not mediated"
+      - "Not a signal — no information is transmitted through the landscape coupling"
+
+    what_this_is:
+      - "Relational determination: each object's inertia is defined against the shared landscape"
+      - "Mutual constitution: the landscape is what all anchorings together constitute"
+      - "Non-additive in the nonlinear regime: Π_eff ↔ ψ self-coupling makes the joint landscape mutually constitutive, not merely additive"
+
+    linear_vs_nonlinear:
+      linear_regime: >
+        In the weak-field limit, the Poisson landscape is additive:
+        contributions from independent sources sum. The inertia of each
+        object depends on the total, but the total is factorizable into
+        independent contributions. The relational structure is present
+        but weak — the landscape is a sum, and each term is independent.
+      nonlinear_regime: >
+        In the full master equation, Π_eff depends on ψ (via η = |ψ|²),
+        and ψ's evolution depends on Π_eff. Each object's anchoring
+        modifies the landscape, which modifies the others' anchoring,
+        which back-modifies the first. The joint landscape is mutually
+        constitutive — not decomposable into independent contributions.
+        This is where the relational reading has its full structural content.
+
+    vocabulary_note: >
+      The framework already uses relational language at multiple levels
+      (relational potential, relational thermodynamics, relational
+      reading of the Poisson equation). This reading extends that
+      vocabulary to the mutual constitution of the Π_eff landscape
+      by multiple anchorings. It is consistent with the framework's
+      existing relational commitments and does not introduce a new
+      category of relation.
+
+  machs_principle_as_natural_reading:
+    statement: >
+      Under the shared-landscape reading, Mach's principle is not a
+      puzzle to be explained — it is the natural form of inertia.
+      The inertia of an object is defined relative to the shared
+      Π_eff landscape that all committed matter contributes to.
+      In a hypothetical universe with a single anchored configuration
+      and nothing else, there would be no shared landscape — no
+      second anchoring to define relative to — and the object's
+      inertia would be undefined (or trivial).
+
+      In the actual universe, the landscape is set by the total
+      committed matter distribution, and each object's inertia is
+      defined against that.
+
+    distinguishing_feature: >
+      This makes the framework's gravitational reading structurally
+      Machian, which GR's is not. In GR, the field equations do not
+      obviously make local inertia depend on distant matter — Mach's
+      principle is awkward to formulate. The anchoring reading makes
+      it automatic: inertia is landscape-relative by construction.
+
+  testable_consequence:
+    i_rot_void_vs_in_situ:
+      statement: >
+        I_rot as currently defined is the intrinsic anchoring cost in
+        void (isolated baseline). In a shared landscape, the effective
+        inertia of an object differs from its void value by an amount
+        set by the local Π_eff deviation from baseline. The two
+        quantities should be distinguished:
+
+          I_rot^(void)     — intrinsic anchoring cost, isolated baseline
+          I_rot^(in-situ)  — effective inertia, defined against the
+                             local shared landscape
+
+      parallel_to_alpha:
+        statement: >
+          This parallels the environmental dependence of α. Just as
+          α_int (void) differs from α_exp (in-situ) by the local Π_eff
+          depression, I_rot^(void) differs from I_rot^(in-situ) by the
+          same mechanism. The 2.2 ppm environmental shift is thus not
+          unique to α — it is a general feature of any quantity defined
+          against Π_eff. I_rot is affected the same way.
+
+      prediction:
+        statement: >
+          The effective inertial mass of a particle in a gravitational
+          well should be slightly lower than its void value, by roughly
+          the same fractional amount as the α shift, scaled by the depth
+          of the well. This is a very small effect (order 10⁻⁶ or smaller
+          for terrestrial gravitational wells), but it is principled and
+          distinguishable from GR's predictions in principle.
+
+      status: >
+        STRUCTURAL PREDICTION — follows from the anchoring-coupling
+        reading; not yet quantified. Requires the nonlinear regime of
+        the master equation to be solved to leading order in the
+        coupling. See open derivation below.
+
+  consequences_for_earlier_sections:
+    - consequence: "The single-body Poisson reading is the linear approximation"
+      detail: >
+        The single-body Poisson form ∇²Π_eff = 4πGρ_η (with ρ_B
+        negligible) is the linear-regime approximation of the full
+        shared-landscape coupling. It is valid when one source
+        dominates and the mutual-constitutive effects are negligible.
+        The two-body extension ∇²Π_eff = 4πG(ρ_A + ρ_B) is already
+        closer to the full reading, but remains additive; the full
+        reading requires the nonlinear master equation.
+    - consequence: "Equivalence principle remains structural"
+      detail: >
+        The equivalence principle (inertial = gravitational mass) still
+        follows from the anchoring-as-event reading. The shared-landscape
+        coupling does not weaken it — it specifies that the equality
+        holds at every configuration of the shared landscape, because
+        inertia and the gravitational response are the same event with
+        two readings in every configuration.
+    - consequence: "I_rot (void) is the void-baseline reference"
+      detail: >
+        The I_rot appearing in the cascade document and in
+        terminology-canonical.yaml is the void-baseline anchoring cost.
+        The in-situ effective inertia differs slightly by the local
+        Π_eff deviation. Both should be distinguished where precision
+        matters; the void-baseline is the canonical reference for
+        framework-internal accounting.
+
+  open_derivations:
+    - id: "nonlinear-shared-landscape-leading-order"
+      description: >
+        Solve the master equation to leading order in the coupling
+        between Π_eff and ψ, extracting the shared-landscape
+        contribution to the effective inertia. This is the
+        quantitative version of the entanglement-structural
+        analogy — the amount by which the joint landscape is not
+        merely additive.
+      depends_on: ["core-dynamical-equation.yaml", "SIM-004-v2"]
+      priority: 2
+
+    - id: "i-rot-in-situ-prediction"
+      description: >
+        Derive the fractional shift I_rot^(in-situ) / I_rot^(void) - 1
+        for a particle in a gravitational well of given depth. Should
+        scale with the same Π_eff deviation that produces the 2.2 ppm
+        α shift. Falsifiable if precision inertial-mass measurements
+        in deep wells (spacecraft, gravitational-wave detectors,
+        atomic clocks in varying potential) reach sufficient precision.
+      depends_on: ["nonlinear-shared-landscape-leading-order"]
+      priority: 3
+
+    - id: "mach-principle-quantitative"
+      description: >
+        Formulate the shared-landscape reading as a quantitative
+        statement relating local inertia to the total committed
+        matter distribution. This is the framework's version of
+        Mach's principle. Should reduce to standard Newtonian
+        inertia in the single-source limit and to a landscape-weighted
+        form in the general case.
+      depends_on: ["nonlinear-shared-landscape-leading-order"]
+      priority: 3
+
+  cross_references:
+    - file: "core/process-physics/commitment-depletion-duality.yaml"
+      note: "Parent file — this subsection extends the anchoring reframing"
+    - file: "core/process-physics/bivector-partial-parameters.yaml"
+      note: "Entanglement as correlated unset parameters — the anchoring-coupling reading extends the same structure to the committed landscape"
+    - file: "core/process-physics/gravity-and-ccr-threshold.yaml"
+      note: "Nonlinear regime of the master equation — the domain where the entanglement-structural analogy has real content"
+    - file: "core/terminology-canonical.yaml"
+      note: "I_rot — the void-baseline is canonical; in-situ value differs"
+    - file: "documents/parameter-cascade.md"
+      note: "I_rot row should note the void-vs-in-situ distinction"
 
 ---
 
