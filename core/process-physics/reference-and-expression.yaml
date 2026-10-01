@@ -1,0 +1,425 @@
+# /core/process-physics/reference-and-expression.yaml
+name: "Reference and Expression: Structural Preconditions for Definite Properties"
+version: "0.1"
+status: "STRUCTURAL CLARIFICATION — separates two axes previously conflated
+         under 'set/unset': (1) whether a property has emerged in the
+         configuration at all, and (2) whether it has an internal reference
+         to be defined against. Term 'reference' adopted as canonical.
+         Not a derivation — a refinement of the framework's vocabulary
+         that sharpens the photon/electron distinction and preserves the
+         existing treatment of superposition and entanglement."
+domain: "Core / Process-Physics"
+
+description: >
+  The earlier framework used "set" and "unset" to describe the state of
+  a vector parameter. That vocabulary conflated two structurally distinct
+  questions:
+
+    (1) Has the property emerged in this configuration at all?
+        A bare R2 phase expression has no spin — not because spin is
+        "unset" but because the configuration has not become structured
+        enough to carry spin. Expression is a threshold, not a state.
+
+    (2) Given that a property has emerged, does the configuration
+        provide an internal reference against which the property can
+        be defined? The property's existence and its internal
+        definability are different facts.
+
+  Separating these two axes clarifies why the photon and the electron
+  are structurally different despite sharing the pair structure and
+  the entanglement. Both have expressed chirality; only the electron
+  has an internal reference for it.
+
+dependency_map:
+  requires:
+    - "core/process-physics/bivector-partial-parameters.yaml"
+    - "core/process-physics/ga-grade-chain-to-particles.yaml"
+    - "core/process-physics/intrinsic-reference-spin-momentum.yaml"
+    - "core/d-minus-one-pre-vector-level.yaml"
+  provides_to:
+    - target: "core/process-physics/ga-grade-chain-to-particles.yaml"
+      via: "Photon/electron distinction as reference-obtaining vs reference-free"
+    - target: "core/process-physics/bivector-partial-parameters.yaml"
+      via: "Refinement of the set/unset vocabulary"
+
+---
+
+# ─────────────────────────────────────────────
+# §1  THE TWO AXES
+# ─────────────────────────────────────────────
+
+two_axes:
+
+  axis_1_expression:
+    question: "Has the property emerged in this configuration?"
+    vocabulary: "Expressed / not-yet-expressed (equivalently: set / unset)"
+    character: "Threshold. A property either has emerged or hasn't."
+    examples:
+      - "Spin — not present in bare R2 phase expression; emerges when the rotor structure is sufficiently expressed."
+      - "Chirality — same: emerges with sufficient rotor structure, not before."
+      - "Phase — present as soon as there is a complex amplitude (early R2)."
+      - "Momentum — emerges with the grade-1 gradient content."
+
+  axis_2_reference:
+    question: "Given that the property has emerged, does the configuration provide an internal frame to define it against?"
+    vocabulary: "Reference-obtaining / reference-free"
+    character: "Structural. Concerns whether the property can be internally defined."
+    examples:
+      - "Electron's chirality sense — has reference (co-oriented pair provides shared bivector plane)."
+      - "Photon's chirality sense — reference-free (counter-oriented pair cancels the shared frame)."
+      - "Phase — internally referenced for both photon and electron (the local oscillation defines itself)."
+      - "Momentum — externally referenced for both (needs spatial direction from outside)."
+
+  why_the_distinction_matters: >
+    The old "set/unset" vocabulary could not distinguish two structurally
+    different situations:
+
+      Case A: The property is expressed but reference-free.
+              (Photon's chirality sense.)
+
+      Case B: The property has not been expressed at all.
+              (Bare R2 phase expression has no spin because spin has
+              not emerged, not because spin is unset.)
+
+    Case A describes a property that exists but cannot be internally
+    defined. Case B describes a property that has no existence yet in
+    the configuration. These require different language and have
+    different structural consequences.
+
+---
+
+# ─────────────────────────────────────────────
+# §2  THE LAYERED STRUCTURE
+# ─────────────────────────────────────────────
+
+layered_structure:
+
+  statement: >
+    Properties emerge progressively as the configuration becomes more
+    structured. Each layer has its own expression threshold; below the
+    threshold, the property is not present at all; above it, the
+    property exists and the reference question arises.
+
+  layers:
+    - layer: "R1 scalar potential"
+      present: "Bare existence (ψ ≠ 0)"
+      not_present: "Any structural property (spin, chirality, phase, momentum)"
+
+    - layer: "Early R2 — first distinctions"
+      present: "Phase (complex amplitude)"
+      not_present: "Spin, chirality, momentum direction"
+
+    - layer: "Expressed rotor configuration"
+      present: "Phase, spin, chirality"
+      reference_question: >
+        Does the configuration provide a shared frame?
+        Electron (co-oriented): yes — chirality sense defined.
+        Photon (counter-oriented): no — chirality sense reference-free.
+
+    - layer: "Grade-1 gradient content"
+      present: "Momentum direction"
+      reference_question: >
+        Internal reference is not available for momentum in any
+        configuration. Momentum is externally referenced for both
+        photon and electron.
+
+  consequence: >
+    "Set" and "unset" are useful only for the expression axis — whether
+    a property is present in the configuration. They should not be used
+    for the reference axis, which is a separate structural question.
+
+---
+
+# ─────────────────────────────────────────────
+# §3  THE PHOTON, STEP BY STEP
+# ─────────────────────────────────────────────
+
+photon_walkthrough:
+
+  internal_to_the_photon:
+    - aspect: "Mirroring"
+      character: "Internal"
+      explanation: "The counter-oriented pair structure (R·R†) is intrinsic to the configuration."
+    - aspect: "Chirality exists"
+      character: "Internal"
+      explanation: "The pair has a handedness structure — chirality is expressed."
+    - aspect: "Chirality sense"
+      character: "Reference-free"
+      explanation: >
+        The photon does not 'know' whether its chirality is up, down,
+        left, or right. Mirroring cancels the internal frame — there
+        is no internal reference that would define a chirality sense.
+        What an external observer calls the photon's chirality is a
+        choice of frame, not an internal fact of the configuration.
+    - aspect: "Phase / amplitude"
+      character: "Internal"
+      explanation: >
+        The photon has a well-defined local oscillation state. Phase
+        defines itself against its own cycle — internal reference for
+        phase is available.
+    - aspect: "Frequency"
+      character: "Internal (conditional)"
+      explanation: >
+        If a time-parameter is admitted, frequency is the local rate
+        of the internal oscillation — internal to the configuration.
+
+  external_to_the_photon:
+    - aspect: "Momentum"
+      character: "External"
+      explanation: "Requires a spatial direction, which the photon does not provide internally."
+    - aspect: "Position"
+      character: "External"
+      explanation: "Requires an anchor, which the reference-free configuration does not have."
+    - aspect: "Absolute propagation direction"
+      character: "External"
+      explanation: "Defined relative to an external frame, not to the photon's own structure."
+    - aspect: "Wavelength"
+      character: "External"
+      explanation: "Related to momentum; externally referenced for the same reason."
+
+  summary: >
+    The photon's internally available properties are: mirroring,
+    chirality-exists, phase, and (conditionally) frequency. Its
+    internally available reference is limited to phase. Chirality
+    is expressed but reference-free. Momentum, position, and
+    direction are externally referenced.
+
+---
+
+# ─────────────────────────────────────────────
+# §4  THE ELECTRON, STEP BY STEP
+# ─────────────────────────────────────────────
+
+electron_walkthrough:
+
+  internal_to_the_electron:
+    - aspect: "Mirroring (agreeing)"
+      character: "Internal"
+      explanation: "The co-oriented pair structure (R·R) is intrinsic to the configuration."
+    - aspect: "Chirality sense"
+      character: "Internally referenced"
+      explanation: >
+        Co-orientation aligns the two rotors into a shared bivector
+        plane, and the plane's orientation defines which way 'up' is
+        along the axis. The electron knows its chirality sense because
+        the pair provides a shared frame.
+    - aspect: "Charge sign"
+      character: "Internal"
+      explanation: "Determined by the chirality sense (Möbius twist direction)."
+    - aspect: "Mass (I_rot)"
+      character: "Internal"
+      explanation: "The trapped rotational cost — internal to the configuration."
+    - aspect: "Phase / amplitude"
+      character: "Internal"
+      explanation: "Same as the photon: the local oscillation state defines itself against its own cycle."
+    - aspect: "Spin axis"
+      character: "Internally referenced"
+      explanation: "Defined by the co-oriented bivector plane."
+
+  external_to_the_electron:
+    - aspect: "Momentum"
+      character: "External"
+      explanation: "The electron does not know its velocity from its internal structure."
+    - aspect: "Position"
+      character: "External"
+      explanation: >
+        The electron does not know where it is until committed to η
+        by a 3rd-body interaction. Prior to commitment it is in the
+        pre-R5 wave state (see vortex-stability.yaml Part VII).
+
+  summary: >
+    The electron's internally referenced properties include phase,
+    chirality sense, charge sign, mass, and spin axis. Its externally
+    referenced properties are momentum and position — the same two
+    that are external for the photon, and for the same structural
+    reason: no configuration provides an internal spatial frame.
+
+---
+
+# ─────────────────────────────────────────────
+# §5  RELATION TO SUPERPOSITION AND ENTANGLEMENT
+# ─────────────────────────────────────────────
+
+superposition_and_entanglement:
+
+  statement: >
+    The refinement preserves the existing treatment of superposition
+    and entanglement, and sharpens it by distinguishing two kinds of
+    openness that the old vocabulary conflated.
+
+  superposition_refined:
+    prior_reading: "Single rotor with unset parameters."
+    refined_reading: >
+      A configuration with an expressed property whose value is not
+      yet committed within an existing reference. The reference is
+      available; the commitment has not happened. This is the
+      quantum superposition the framework discusses.
+    what_changed: >
+      The refinement says: superposition requires the property to
+      be expressed first. A bare R2 phase expression cannot be
+      in superposition with respect to spin — spin has not emerged.
+      Superposition is a relation between possible commitments within
+      a reference structure, not a feature of pre-expressive states.
+
+  entanglement_refined:
+    prior_reading: "Correlated unset parameters across multiple rotors."
+    refined_reading: >
+      Correlated parameters across multiple rotors. Entanglement is
+      preserved intact — both the photon and the electron have it.
+    what_changed: >
+      The refinement separates two questions: (a) are the rotors'
+      parameters correlated? — this is entanglement; (b) do the
+      rotors produce a shared reference frame? — this is reference.
+      The photon is entangled but reference-free; the electron is
+      entangled and reference-obtaining. Both are entangled pairs;
+      only one produces an internal frame.
+
+  why_this_improves_the_approach: >
+    The prior vocabulary could not explain why the photon and the
+    electron differ despite both being entangled pairs of rotors.
+    Under the refinement, the distinction is structural: the
+    counter-oriented pair cancels the shared reference, while the
+    co-oriented pair provides it. Entanglement is one fact; reference
+    is another; the electron has both.
+
+---
+
+# ─────────────────────────────────────────────
+# §6  TERMINOLOGY NOTE
+# ─────────────────────────────────────────────
+
+terminology:
+
+  adopted_term: "Reference"
+  rationale: >
+    The term is used without modifiers — not "quantum reference," not
+    "vector reference," not "internal reference frame." Reference is
+    the structural question of whether the configuration provides a
+    basis for internally defining an expressed property. Adding
+    modifiers would dilute the term.
+
+  related_but_distinct_terms:
+    - term: "Anchor"
+      distinction: >
+        Anchoring is localization in the committed η field. Reference
+        is availability of an internal frame. The electron has
+        anchoring once committed; it has reference from its
+        co-orientation structure prior to that. Anchoring and
+        reference are related but not identical.
+    - term: "Frame"
+      distinction: >
+        A frame is a specific reference configuration (a rotor, a
+        basis, a set of axes). Reference is the structural fact of
+        whether a frame is available. A frame is what a reference-
+        obtaining configuration provides.
+    - term: "Gauge"
+      distinction: >
+        Gauge is about coordinate freedom in a description. Reference
+        is about whether the configuration itself provides a basis
+        for definition, prior to any coordinate choice.
+
+  not_used:
+    - "Internal reference" — redundant; reference is inherently a
+      structural feature of the configuration
+    - "Quantum reference" — misleading; reference is not quantum-specific
+    - "Self-reference" — reserved for the closure-on-its-own-prior-state
+      mechanism in intrinsic-reference-spin-momentum.yaml; a different
+      but related concept
+
+---
+
+# ─────────────────────────────────────────────
+# §7  OPEN QUESTIONS
+# ─────────────────────────────────────────────
+
+open_questions:
+
+  - id: "expression-thresholds"
+    question: >
+      What are the specific thresholds at which each property emerges?
+      Phase appears at early R2. Chirality at rotor structure. Momentum
+      at grade-1 gradient content. Do the thresholds follow from the
+      grade structure, or are they additional facts?
+    status: "OPEN — the layered structure is stated but the threshold
+             derivations are not given"
+
+  - id: "reference-degree"
+    question: >
+      Is reference binary (has it or doesn't), or is it a degree
+      (some configurations more referenced than others)? The photon
+      and electron suggest at least two distinct levels. Are there
+      configurations with intermediate reference structure?
+    status: "OPEN — the photon/electron distinction suggests two levels;
+             higher-order configurations may reveal more"
+
+  - id: "alignment-with-gauge-invariance"
+    question: >
+      Does the internal/external distinction align with standard
+      gauge-invariance classifications? The photon's reference-free
+      chirality sense corresponds to gauge-dependence in some sense;
+      the electron's reference-obtaining chirality sense corresponds
+      to gauge-invariance. Is this parallel exact?
+    status: "OPEN — the parallel is suggestive; formal comparison
+             with gauge theory not yet attempted"
+
+  - id: "extension-to-higher-depths"
+    question: >
+      Do composite systems (protons, nuclei, atoms) inherit reference
+      structure from their constituents, or do they generate new
+      reference levels? The cascade document's depth hierarchy may
+      interact nontrivially with the reference axis.
+    status: "OPEN"
+
+  - id: "reference-and-locality"
+    question: >
+      The electron acquires locality (position) only at commitment
+      (3rd-body interaction). Is locality a property that is
+      reference-free until commitment? The photon never localizes,
+      consistent with reference-free momentum/position. Is this
+      the same mechanism?
+    status: "OPEN — connects to vortex-stability.yaml Part VII"
+
+---
+
+# ─────────────────────────────────────────────
+# §8  EPISTEMIC STATUS
+# ─────────────────────────────────────────────
+
+epistemic_status:
+
+  established:
+    - "The old 'set/unset' vocabulary conflated two structurally distinct questions."
+    - "Expression is a threshold: properties emerge at different structural levels."
+    - "Reference is separate: it concerns whether an expressed property has an internal frame."
+
+  structural_clarification:
+    - "The photon is entangled but reference-free — chirality exists, sense does not."
+    - "The electron is entangled and reference-obtaining — chirality exists and has a sense."
+    - "Both lack internal reference for momentum and position; both are externally referenced there."
+
+  preserved:
+    - "Superposition — refined as 'expressed property not yet committed within an existing reference'."
+    - "Entanglement — unchanged; both photon and electron have it. Reference is a distinct additional fact."
+
+  open:
+    - "Expression thresholds for each property"
+    - "Whether reference is binary or a degree"
+    - "Alignment with gauge-invariance classifications"
+    - "Extension to higher depths and composite systems"
+    - "Relation to locality and commitment"
+
+---
+
+cross_references:
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "The set/unset vocabulary this file refines; to be updated with reference/expression distinction"
+  - file: "core/process-physics/ga-grade-chain-to-particles.yaml"
+    note: "Photon and electron as counter-oriented and co-oriented pairs; reference distinction sharpens the structural difference"
+  - file: "core/process-physics/intrinsic-reference-spin-momentum.yaml"
+    note: "The mutual-reference mechanism; this file situates it within the broader expression/reference framework"
+  - file: "core/d-minus-one-pre-vector-level.yaml"
+    note: "The R2 phase expression as the layer below where spin emerges"
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "Part VII electron pre-R5 default; reference-free momentum/position connects to localization at commitment"
+  - file: "core/process-physics/gravitational-adjustment-in-vector-multispace.yaml"
+    note: "§7 unanchored rotor produces no coherent signal — the reference-free state as the reason"
