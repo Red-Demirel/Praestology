@@ -17,6 +17,27 @@ description: >
 
 terms:
 
+phenomenon: "Process-Level Rotor Precession"
+praestology_term: "Intrinsic Oscillation-Rate"
+symbol: "ω_Φ"
+units: "s⁻¹ (relative to substrate baseline process rate)"
+definition: "The rate of phase precession of a committed rotor configuration relative to the local Π_eff baseline. A property of the topology's mutual grade-1/grade-2 reference lock."
+conflated_standard_terms: "proper frequency, rest-frame oscillation"
+
+phenomenon: "Derivative-Level Cycle Count"
+praestology_term: "Observed Frequency"
+symbol: "ν"
+units: "Hz (cycles per local SI second)"
+definition: "The rate of R5 closure events or phase cycles as measured against local SI time (t = ∫Π_eff dτ). Related to intrinsic rate by ν ∝ ω_Φ / Π_eff,local."
+conflated_standard_terms: "measured frequency, Doppler-shifted frequency"
+
+phenomenon: "Interference of Mutual Reference"
+praestology_term: "Pulse/Beat Rate"
+symbol: "Δω"
+units: "s⁻¹"
+definition: "The modulation or beat frequency arising from the transient shift or interference between the grade-1 directional reference and the grade-2 spin reference (e.g., in counter-oriented photon rotors or unanchored solo-vortex wave states)."
+conflated_standard_terms: "wave frequency, carrier frequency, envelope modulation"
+
   - phenomenon: "Internal Energy Storage"
     praestology_term: "Trapped Rotational Inertia"
     symbol: "I_rot"
