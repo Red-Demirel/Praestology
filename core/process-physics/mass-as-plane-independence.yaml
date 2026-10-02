@@ -237,6 +237,56 @@ plane independence against the natural merge tendency, stabilized by the
 the orthogonality energy required to prevent three distinct wave axes 
 from merging, enforced by the grade-3 pseudoscalar closure.
 
+# ─────────────────────────────────────────────
+# PART: THE DZHANIBEKOV ANALOGY: MULTI-AXIAL WAVES AND MERGE TENSION
+# ─────────────────────────────────────────────
+
+dzhanibekov_process_reading:
+statement: >
+The classical intermediate-axis theorem (Dzhanibekov effect) describes 
+how a rigid body rotating about its intermediate axis of inertia is 
+unstable and will spontaneously tumble. In the framework, this is not 
+a mechanical property of a solid object, but the derivative-level shadow 
+of the process-level "merge tendency" of a multi-axial wave configuration.
+
+wave_axes_as_bivector_planes:
+statement: >
+Historically, the intermediate-axis theorem was formalized without a 
+process-level understanding of what a "wave" is. In Cl(3,0), a committed 
+wave (rotor) is not a 1D scalar oscillation. It is an orientational 
+structure that can have independent activation across up to three 
+bivector planes (e₁∧e₂, e₂∧e₃, e₁∧e₃). These are the process-level "axes" 
+of the configuration.
+
+merge_tension_as_instability:
+statement: >
+Algebraically, any multi-axis bivector activation can "merge" into a 
+single effective bivector plane. A wave configuration maintaining 
+multiple independent planes is under constant merge tension. The 
+algebra naturally seeks to reduce the number of active axes to minimize 
+the CCR cost. The classical "tumbling" is the macroscopic manifestation 
+of this uncancelled bivector variance (⟨G⟩₂) driving the configuration 
+toward a lower-energy, single-axis state (Regress).
+
+topological_stabilization:
+statement: >
+The 720° Möbius closure is the specific geometric structure that 
+topologically protects the multi-axial wave against this merge tendency. 
+The half-integer twist (Tw = 1/2) and resulting writhe (Wr = 3/2) force 
+the wave's phase to traverse a path that cannot be continuously deformed 
+into a single-axis state without passing through a singularity. The R5 
+viability lock makes the merge path topologically forbidden, suppressing 
+the "tumbling" and forcing the wave to maintain its plane independence.
+
+mass_as_stabilization_cost:
+statement: >
+Therefore, rest mass is not merely "trapped rotational energy." It is 
+specifically the CCR cost of forcing a multi-axial wave to maintain its 
+plane independence against the natural merge tendency, stabilized by the 
+720° topological lock. The proton's mass gap is the extreme case of this: 
+the orthogonality energy required to prevent three distinct wave axes 
+from merging, enforced by the grade-3 pseudoscalar closure.
+
 ---
 
 open_derivations:
