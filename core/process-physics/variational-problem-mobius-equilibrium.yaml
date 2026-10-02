@@ -128,6 +128,55 @@ zeno_mechanism:
 # ─────────────────────────────────────────────
 open_derivations:
   priority_1:
+    - id: "euler-to-cl30-perturbation-dzhanibekov"
+      description: >
+        Translate the classical intermediate-axis instability (Dzhanibekov
+        effect) into strict Cl(3,0) process terms. The classical Euler
+        equations are expressed in GA form (euler-to-cl30-translation.yaml);
+        the framework-specific step is replacing the inertia tensor with
+        the CCR cost functional I_CCR. Perturb the multi-axial rotor around
+        the intermediate-plane equilibrium using Tao's second-order scaffold
+        (MathOverflow 2011). Extract the winding number of the resulting
+        phase trajectory from the CWF decomposition Lk = Wr + Tw.
+      hypothesis: >
+        The second-order term of the closure condition ⟨G⟩₂|_closure = 0,
+        expanded around the intermediate-plane equilibrium, natively yields
+        Tw = 1/2. This would prove that the Möbius half-twist is the
+        topological integration of the intermediate-axis instability —
+        not an imported ribbon-topology convention. Tw = 1/2 becomes derived,
+        and the Layer 1 / Layer 2 decomposition is closed from below.
+      ontological_guardrails: >
+        MUST NOT import a fixed background space or rigid-body assumptions.
+        The "tumbling" is the internal merge-tension of the bivector planes,
+        not rotation relative to an external container. The CCR cost
+        functional replaces the classical inertia tensor; its linearity
+        near the equilibrium must be established or the perturbation
+        structure rederived for the nonlinear case.
+      temporal_to_spatial_reading: >
+        The Möbius closure IS the intermediate-axis instability integrated
+        into stable form — not protection against it. The temporal flip
+        (period 2T in classical terms) integrated over one period becomes
+        the spatial double cover (720°). The half-twist Tw = 1/2 is the
+        count of the integrated flip (one per 720° cycle). Under this
+        reading, mass is the cost of integrating the instability, not
+        suppressing it.
+      falsifiability:
+        - "Yields Tw = 1/2 at second order: reading confirmed, derivation complete."
+        - "Yields Tw = 0 or other at second order: reading falsified."
+        - "Neutral at second order, Tw = 1/2 at third: reading confirmed at higher order; framework-specific Zeno structure revealed."
+        - "CCR functional nonlinear in way that breaks perturbation structure: requires new approach."
+      connection_to_sim004: >
+        If the second-order coefficient can be expressed in terms of the
+        shape functionals (g[ψ*], Λ[ψ*], κ[ψ*]), then f_eq = ξ/R_core
+        follows analytically from the perturbation theory. This would give
+        f_closure a closed-form derivation path independent of the Zeno
+        numerical solve — confirming or replacing the π-series candidate.
+      depends_on:
+        - "core/process-physics/euler-to-cl30-translation.yaml"
+        - "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+        - "core/process-physics/saturation-parameters-as-shape-functionals.yaml"
+        - "core/process-physics/vortex-stability.yaml (Part VI: Twist as Stability)"
+
     - id: "ccr-writhe-from-cwf"
       description: >
         Execute Layer 2. Compute the CWF writhe of the self-consistent 
