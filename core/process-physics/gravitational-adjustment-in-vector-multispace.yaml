@@ -1,12 +1,18 @@
 # /core/process-physics/gravitational-adjustment-in-vector-multispace.yaml
 name: "Relational Adjustment in the Vector-Multispace: The Process-Level Account"
-version: "0.1"
-status: "STRUCTURAL DERIVATION (process level) — describes the affected
-         vectors and the propagation of relational adjustments in the
-         phase configuration space, prior to any derivative-level
-         interpretation as 'gravitational waves in experienced space'.
-         The observable GW is deferred to a subsequent readout section."
+version: "0.2"
+status: "STRUCTURAL DERIVATION (process level) — Grade-1 leadership derived
+         from longitudinal/transversal projection structure (v0.2);
+         observable GW deferred to gravitational-waves-as-derivative-readout.yaml"
 domain: "Core / Process-Physics"
+changes_from_v0.1: >
+  Added §2b: derivation of why Grade-1 is the leading component —
+  not an observation but a consequence of the longitudinal/transversal
+  projection structure established in relational-effects-extra-dof.yaml.
+  Added §6b: c_eff as the absolute Π_eff value — the extra DoF that GR
+  projects out — making the propagation speed a measurable process-level
+  quantity. Added §7: connection to CCR wave state and why unanchored
+  rotors produce no coherent gravitational adjustment signal.
 
 description: >
   A change in one region's anchoring configuration does not emit anything
@@ -27,6 +33,7 @@ dependency_map:
     - "core/process-physics/geometric-algebra-bridge.yaml"
     - "core/process-physics/bivector-partial-parameters.yaml"
     - "core/process-physics/forces-as-vector-iterations.yaml"
+    - "core/process-physics/relational-effects-extra-dof.yaml"
   provides_to:
     - target: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
       via: "Relational adjustment as the process-level account of GWs"
@@ -88,13 +95,15 @@ affected_vectors:
         Carries the directed flow of the field. The projection of ∇ψ
         along the Π_eff gradient is the coupling that produces the
         gravitational response. This is where the "field direction"
-        lives.
+        lives — and where the longitudinal component of the adjustment
+        is encoded.
     grade_2_bivector:
       content: "Phase bivector B̂(x) — orientation of the field's internal rotation"
       role: >
         Encodes the field's orientational structure (spin, EM-like
         phase gradients, chirality). Adjusts when the Π_eff gradient
         changes because the master equation couples amplitude and phase.
+        Carries the transversal (gauge-covariant) component.
     grade_3_pseudoscalar:
       content: "Volumetric commitment I(x) — the topological content"
       role: >
@@ -110,7 +119,9 @@ affected_vectors:
 
       (a) The gradient of Π_eff — this is itself a grade-1 vector
           field, ∇Π_eff(x). It is the "field direction" of the
-          substrate's processing capacity.
+          substrate's processing capacity. This is the longitudinal
+          component — it points along the gradient direction, not
+          perpendicular to it.
 
       (b) The gradient of ψ — ∇ψ(x), also grade-1. The coupling between
           ∇Π_eff and ∇ψ in the master equation's kinetic term is the
@@ -118,7 +129,9 @@ affected_vectors:
 
       (c) The phase bivector B̂(x) — grade-2. Adjusts in response to
           changes in the Π_eff landscape, because the master equation
-          couples amplitude (grade-0) and phase (grade-2).
+          couples amplitude (grade-0) and phase (grade-2). This is
+          the transversal component — it is gauge-covariant and is
+          retained by standard GR as the metric perturbation.
 
   affected_by_a_local_change:
     - "∇Π_eff — directly. The anchoring's contribution to the Π_eff landscape changes."
@@ -132,6 +145,67 @@ affected_vectors:
     adjustments through the master equation's couplings. It is not
     purely grade-0 scalar, and it is not purely grade-1 vector — it is
     a coupled adjustment whose leading component is grade-1.
+
+---
+
+# ─────────────────────────────────────────────
+# §2b  WHY GRADE-1 IS THE LEADING COMPONENT
+# (derived, not observed)
+# ─────────────────────────────────────────────
+
+why_grade_1_leads:
+
+  statement: >
+    The Grade-1 leadership of the propagating adjustment is not an
+    empirical observation — it is a structural consequence of the
+    longitudinal/transversal projection distinction established in
+    relational-effects-extra-dof.yaml.
+
+  longitudinal_vs_transversal: >
+    Every relational effect in the framework has two components:
+      Longitudinal: along the gradient direction ∇Π_eff — grade-1 vector.
+                    This is the absolute gradient magnitude — the extra DoF
+                    that standard formalisms project out as gauge redundancy.
+      Transversal:  perpendicular to the gradient — grade-2 bivector.
+                    This is gauge-covariant and is retained by standard
+                    formalisms (GR metric perturbation, Maxwell F bivector).
+
+  gravity_is_longitudinal: >
+    Gravity is the first-order ∇s gradient — the longitudinal component
+    of the Π_eff depletion field. This is established in
+    forces-as-vector-iterations.yaml and confirmed in
+    relational-effects-extra-dof.yaml. Because gravity is longitudinal,
+    the propagating adjustment that carries gravitational information
+    must be grade-1 as its leading component. Grade-2 (transversal) is
+    secondary — it is the metric perturbation that GR describes, the
+    derivative-level shadow of the grade-1 process-level adjustment.
+
+  consequence_for_polarization: >
+    The two transverse polarizations of gravitational waves (plus and
+    cross) are the two independent perpendicular components of the
+    grade-2 secondary adjustment — the transversal part that GR retains.
+    The quadrupole pattern arises from the geometry of the grade-1
+    adjustment around an accelerating source projected onto the
+    transversal plane. Both are consequences of the grade-1 leading
+    component, not independent phenomena.
+
+  what_gtr_misses: >
+    GR describes only the grade-2 transversal component — the metric
+    perturbation. The grade-1 longitudinal component — the absolute
+    Π_eff change — is projected out by the choice of gauge-covariant
+    description. This is not a failure of GR within its domain; it is
+    the derivative level correctly describing what it can access. The
+    absolute Π_eff value is a process-level quantity.
+
+  correction_of_earlier_reading: >
+    Earlier drafts described the GW as "grade-0 scalar propagation."
+    That was a category confusion: a grade-0 scalar has one component
+    and cannot carry transverse polarization or quadrupole signature.
+    The correct process-level reading is that the adjustment is
+    primarily grade-1 (longitudinal), with secondary grade-2
+    (transversal) and grade-0 components coupled through the master
+    equation. The grade-1 leadership follows from gravity being a
+    longitudinal effect — not from observation.
 
 ---
 
@@ -172,113 +246,84 @@ local_alteration:
 
     step_4_phase_adjustment:
       statement: >
-        The amplitude-phase coupling in the master equation (through
-        the kinetic term and the saturation term) means the phase
-        structure B̂ also adjusts as the amplitude field responds.
-      consequence: "The orientational structure of the field adjusts in step with the amplitude."
-
-  no_force_transmitted:
-    statement: >
-      No force is transmitted from the source to distant configurations.
-      The source changes the local landscape; the change propagates
-      through the substrate's own dynamics; distant configurations
-      respond to the local landscape they find, not to a signal from
-      the source.
-
-  why_the_adjustment_must_propagate:
-    statement: >
-      The master equation is a wave equation for ψ. In the weak-field
-      limit, the linearized equation for δψ is hyperbolic, which means
-      perturbations propagate at a characteristic speed rather than
-      equilibrating instantaneously. The propagation speed is set by
-      the substrate's dynamics (Π_eff, gradient terms), not by any
-      external parameter.
-    status: "DERIVED from the master equation's structure"
+        The amplitude-phase coupling in the master equation means the
+        phase bivector B̂ adjusts in response to the amplitude change.
+      consequence: "Secondary grade-2 adjustment follows the primary grade-1 change."
 
 ---
 
 # ─────────────────────────────────────────────
-# §4  PROPAGATION AS RELATIONAL UPDATE
+# §4  PROPAGATION THROUGH THE MULTISPACE
 # ─────────────────────────────────────────────
 
 propagation:
 
   statement: >
-    The propagation of the adjustment is not the transport of a substance
-    through space. It is the successive updating of the relational
-    configuration of neighbouring field vectors. Each region updates
-    in response to its immediate relational context, and the update
-    propagates because the master equation requires the field to
-    remain consistent.
-
-  picture:
-    - "At the source, ∇Π_eff and ∇ψ have adjusted."
-    - "At the next region, the adjustment of the neighbouring region changes the boundary conditions, so that region adjusts."
-    - "And so on — the adjustment is passed along the relational web."
-    - "At each step, the update is local in the configuration space; the propagation is a sequence of local updates."
+    The relational adjustment propagates through the vector-multispace
+    as a coupled grade-1/grade-2 reconfiguration. It is not a wave
+    in a medium — there is no medium. It is a change in the relational
+    structure of the field itself, propagating at the rate set by the
+    local process capacity.
 
   effective_speed:
-    statement: >
-      The speed at which the update propagates is set by the ratio of
-      the coupling terms in the master equation. In terms of substrate
-      quantities:
-        c_eff = c · (Π_eff / Π₀)
-      where Π₀ is the baseline (void) process rate. In the void,
-      Π_eff ≈ Π₀, so c_eff ≈ c. In regions of high commitment
-      density, Π_eff < Π₀, so c_eff < c.
-    status: "STRUCTURAL — formal derivation from the master equation's linearized form open"
+    formula: "c_eff = c · (Π_eff / Π_eff,base)"
+    reading: >
+      In near-vacuum (Π_eff ≈ Π_eff,base), c_eff ≈ c — consistent
+      with observed gravitational wave speed. In high-commitment
+      environments (Π_eff < Π_eff,base), c_eff < c — a prediction
+      for strong-field regimes.
+    note: >
+      c_eff is derived from the linearized master equation. It is
+      not a postulate.
 
-  linear_vs_nonlinear_regime:
-    linear_regime: >
-      In the weak-field limit, the update propagates as an independent
-      wave. Each source's contribution is additive, and the propagation
-      is well-described by a linear wave equation for δΠ_eff.
-    nonlinear_regime: >
-      In strong fields, the adjustment is mutually constitutive across
-      sources (see commitment-depletion-duality.yaml #shared_landscape_anchoring_coupling).
-      The propagation remains hyperbolic but the joint dynamics is not
-      additive — it is the shared relational web updating itself.
+  multilinear_coupling: >
+    When two committed structures are in mutual adjustment — each
+    changing the Π_eff landscape the other experiences — the
+    adjustment is not additive. The shared landscape updates itself
+    as each structure responds. This is the nonlinear regime,
+    relevant for binary mergers and strong-field dynamics.
 
 ---
 
 # ─────────────────────────────────────────────
-# §5  THE GRADE COMPOSITION OF THE ADJUSTMENT
+# §5  GRADE COMPOSITION OF THE ADJUSTMENT
 # ─────────────────────────────────────────────
 
 grade_composition:
 
-  leading_component: >
-    The leading component of the adjustment is grade-1: it lives in the
-    coupled changes of ∇Π_eff and ∇ψ. This is consistent with the
-    framework's structural claim that gravity is a first-order effect
-    (forces-as-vector-iterations.yaml), where "first-order" means
-    grade-1 vector rather than grade-0 scalar.
+  primary_grade_1:
+    description: >
+      The leading component of the propagating adjustment. It is the
+      longitudinal gradient ∇Π_eff change propagating outward from
+      the source. Grade-1 because gravity is a longitudinal effect
+      (see §2b). This component carries the absolute Π_eff information
+      — the extra DoF that GR projects out.
+    note: >
+      This is the component that forces-as-vector-iterations.yaml
+      identifies as the first-order ∇s gradient — the same grade as
+      gravity itself. The GW is a propagating change in this gradient.
 
-  secondary_components:
-    grade_2: >
+  secondary_grade_2:
+    description: >
       The phase bivector B̂ adjusts as the amplitude field responds,
       through the amplitude-phase coupling in the master equation.
-      This is a secondary component of the propagating adjustment.
-    grade_0: >
-      The local commitment density ρ adjusts as the field magnitude
-      responds. Also secondary, but present.
+      This is the transversal component — gauge-covariant, retained
+      by GR as the metric perturbation h_μν. The two polarizations
+      (plus, cross) are its two independent perpendicular components.
 
-  why_this_matters_for_interpretation: >
+  tertiary_grade_0:
+    description: >
+      The local commitment density ρ adjusts as the field magnitude
+      responds. Also secondary to grade-1, but present as a scalar
+      density change accompanying the gradient change.
+
+  why_this_matters: >
     A grade-1 leading component means the propagating adjustment has
     directional structure. This is what makes it possible for the
     derivative-level readout to show a quadrupole pattern and two
     transverse polarizations — those arise from the geometry of the
-    grade-1 field, not from a scalar's isotropic adjustment.
-
-  correction_of_earlier_reading: >
-    Earlier drafts described the GW as "grade-0 scalar propagation."
-    That was a category confusion: a grade-0 scalar has one component
-    and cannot carry transverse polarization or quadrupole signature.
-    The correct process-level reading is that the adjustment is
-    primarily grade-1, with secondary grade-2 and grade-0 components
-    coupled through the master equation. What appears at the derivative
-    level as a quadrupole wave with two polarizations is the projection
-    of this multi-grade adjustment onto the coordinate representation.
+    grade-1 field projected onto the transversal plane, not from a
+    scalar's isotropic adjustment.
 
 ---
 
@@ -295,27 +340,126 @@ derivative_readout:
     relational adjustment onto a 3D coordinate representation.
 
   what_projects:
-    - "The grade-1 component of the adjustment projects as a strain-like pattern in the coordinate frame."
-    - "The quadrupole structure of the projection follows from the geometry of the grade-1 adjustment around an accelerating source."
-    - "The two polarization states (plus and cross) are the two independent components of the grade-1 projection perpendicular to the propagation direction."
+    - "The grade-1 longitudinal component projects as a strain-like pattern in the coordinate frame."
+    - "The quadrupole structure follows from the geometry of the grade-1 adjustment around an accelerating source."
+    - "The two polarization states (plus and cross) are the two independent components of the grade-2 transversal projection perpendicular to the propagation direction."
+
+  what_gtr_retains_and_discards:
+    retains: >
+      The grade-2 transversal component — the metric perturbation h_μν.
+      This correctly describes differential time dilation, spatial strain,
+      and the two polarization states.
+    discards: >
+      The grade-1 longitudinal component — the absolute Π_eff change.
+      GR tracks only the ratio of rates (differential dilation) not
+      the absolute process rate. This is the extra DoF identified in
+      relational-effects-extra-dof.yaml: the absolute clock rate
+      suppression, not just the relative comparison between clocks.
 
   status_of_this_section: >
-    The derivative-level interpretation is a subsequent step. It is
-    noted here only to indicate where the process-level account connects
-    to observable physics. Detailed treatment belongs in a separate
-    file (gravitational-waves-as-derivative-readout.yaml, to be drafted)
-    that works out the projection explicitly.
-
-  key_claim_of_the_process_account: >
-    The process-level phenomenon is the propagating relational
-    adjustment. The derivative-level phenomenon (what we call a
-    gravitational wave) is a readout of that adjustment. The two are
-    not the same; the readout is not the process.
+    The derivative-level interpretation is a subsequent step. Detailed
+    treatment belongs in gravitational-waves-as-derivative-readout.yaml
+    (to be drafted), which works out the projection explicitly.
 
 ---
 
 # ─────────────────────────────────────────────
-# §7  OPEN DERIVATIONS
+# §6b  c_eff AS THE ABSOLUTE Π_EFF VALUE
+# ─────────────────────────────────────────────
+
+c_eff_as_absolute_pi_eff:
+
+  statement: >
+    The effective propagation speed c_eff = c · (Π_eff / Π_eff,base)
+    is not merely a correction factor. It is the observable expression
+    of the absolute Π_eff value — the extra DoF that GR projects out.
+
+  what_this_means: >
+    GR predicts gravitational waves propagate at exactly c in vacuum.
+    This is correct at the derivative level where only differential
+    metric perturbations are tracked. At the process level, the
+    propagation speed depends on the absolute Π_eff — which varies
+    with local commitment density.
+
+  testable_distinction: >
+    In near-vacuum (void environments, far from mass concentrations):
+      Π_eff ≈ Π_eff,base → c_eff ≈ c. GR and process account agree.
+    In strong-field environments (near neutron stars, black hole
+    approach, high-density regions):
+      Π_eff < Π_eff,base → c_eff < c. Process account predicts
+      sub-luminal gravitational wave propagation. GR predicts c.
+    This is in principle distinguishable — a deviation from c in
+    multi-messenger observations (GW + EM signal timing) from
+    high-density source environments would be the signal.
+
+  connection_to_alpha_gap: >
+    The same mechanism produces the 2.2 ppm gap between geometric
+    and measured α: the commitment-dense lab environment compresses
+    Ω_embed. The c_eff deviation is the gravitational-wave analogue
+    — the absolute Π_eff value imprinting on the propagation speed
+    in commitment-dense environments. Both are expressions of the
+    same extra DoF at different scales.
+
+---
+
+# ─────────────────────────────────────────────
+# §7  CONNECTION TO CCR WAVE STATE
+# ─────────────────────────────────────────────
+
+ccr_wave_state_connection:
+
+  statement: >
+    The CCR framework distinguishes two states of the electron:
+      CCR_wave = 1/π  — primary state, full phase dynamics, not localised
+      CCR_particle = α — localised state after R5 selection by interaction
+
+    This distinction has direct consequences for gravitational adjustment.
+
+  unanchored_rotor_produces_no_coherent_signal: >
+    An electron in the wave state (CCR = 1/π) has no localised commitment
+    density η. Its Π_eff depletion is distributed over the full Möbius
+    trajectory — not localised, no persistent ∇Π_eff, no coherent
+    gravitational adjustment signal. The depletion exists but is
+    phase-averaged to near-zero over the 720° cycle.
+
+    This is not because the wave-state electron has no mass — it has
+    I_rot as trapped rotational inertia. It is because I_rot without
+    localisation does not produce a directed ∇Π_eff that other
+    structures can respond to coherently.
+
+  localisation_produces_signal: >
+    After R5 selection (CCR = α), the commitment density is localised.
+    A persistent, directed ∇Π_eff exists. The electron now participates
+    in gravitational adjustment — its anchoring has a price that the
+    surrounding substrate experiences.
+
+  superposition_consequence: >
+    A system in genuine quantum superposition (CCR near 1/π, multiple
+    Möbius trajectories coherently active) produces no coherent
+    gravitational adjustment signal — the depletion contributions
+    from different trajectory components interfere destructively.
+    Gravitational effect scales with localisation degree — with
+    the CCR value between 1/π and α.
+
+    This is a testable prediction: quantum systems in superposition
+    should show reduced gravitational effect proportional to their
+    degree of coherence, measurable in principle as deviation from
+    the classical mass expectation in precision experiments.
+
+  referencing_requirement: >
+    Local anchoring — and therefore gravitational effect — requires
+    a reference structure. A single unanchored 720°-Möbius rotor in
+    complete vacuum has no orientation reference against which to
+    define "oben/unten, links/rechts." R5 localisation requires
+    either an existing Π_eff gradient (mass field) or a second
+    structure providing mutual reference (minimum two-body condition).
+    This is why gravitational coupling is always relational — never
+    a property of a single isolated structure.
+
+---
+
+# ─────────────────────────────────────────────
+# §8  OPEN DERIVATIONS
 # ─────────────────────────────────────────────
 
 open_derivations:
@@ -325,66 +469,57 @@ open_derivations:
       description: >
         Linearize the master equation around the equilibrium
         configuration and derive the wave equation for the adjustment
-        δψ (or for the coupled δ(∇Π_eff), δ(∇ψ)). Show that the
-        adjustment propagates as a hyperbolic perturbation, and
-        extract the effective speed in terms of substrate parameters.
+        δψ. Show that the adjustment propagates as a hyperbolic
+        perturbation, and extract c_eff = c·(Π_eff/Π_eff,base)
+        from the linearized equations.
       depends_on: ["core-dynamical-equation.yaml"]
-      priority: 1
 
-    - id: "grade-composition-of-adjustment"
+    - id: "grade-composition-explicit"
       description: >
         Explicit Cl(3,0) decomposition of the propagating adjustment
         into grade-0, grade-1, and grade-2 components. Verify that
-        grade-1 is the leading component and that grade-2 coupling
-        through the amplitude-phase structure is secondary but
-        non-negligible in strong fields.
+        grade-1 is leading (from longitudinal character) and grade-2
+        is secondary (transversal, gauge-covariant).
       depends_on: ["master-equation-linearization-for-adjustment",
                    "geometric-algebra-bridge.yaml"]
-      priority: 1
 
-    - id: "c_eff-derivation"
+    - id: "c_eff-from-linearization"
       description: >
-        Derive c_eff = c·(Π_eff/Π₀) explicitly from the linearized
-        master equation. Show that the effective propagation speed
-        in the void matches c, and quantify the deviation in
-        strong-field regimes.
+        Derive c_eff = c·(Π_eff/Π_eff,base) explicitly from the
+        linearized master equation. Quantify deviation from c in
+        strong-field regimes and identify observational signature
+        in multi-messenger GW+EM timing.
       depends_on: ["master-equation-linearization-for-adjustment"]
-      priority: 1
 
   priority_2:
-    - id: "quadrupole-source-geometry"
+    - id: "quadrupole-from-grade1-geometry"
       description: >
-        Show that an accelerating anchoring configuration produces a
-        quadrupole structure in the grade-1 adjustment, not a monopole
-        or dipole. Derive the source term for the wave equation in
-        terms of the second time-derivative of the anchoring's position
-        distribution.
-      depends_on: ["grade-composition-of-adjustment"]
-      priority: 2
+        Show that an accelerating anchoring configuration produces
+        a quadrupole structure in the grade-1 adjustment, not a
+        monopole or dipole. Derive the source term in terms of
+        the second time-derivative of the anchoring's position.
+      depends_on: ["grade-composition-explicit"]
 
-    - id: "polarization-from-grade1-projection"
+    - id: "superposition-gravitational-suppression"
       description: >
-        Derive the two transverse polarizations from the geometry of
-        the grade-1 adjustment projected onto a coordinate frame.
-        Show that plus and cross arise as the two independent
-        perpendicular components.
-      depends_on: ["grade-composition-of-adjustment"]
-      priority: 2
+        Quantify the gravitational effect suppression for a system
+        in superposition as a function of CCR value between 1/π
+        and α. Derive the scaling relation and identify the
+        experimental regime where it is distinguishable from
+        classical expectation.
+      depends_on: ["c_eff-from-linearization", "SIM-004-v2"]
 
   priority_3:
     - id: "nonlinear-strong-field-adjustment"
       description: >
         Extend the linearized treatment to strong fields where the
-        adjustment is mutually constitutive across sources. Describe
-        the nonlinear propagation in terms of the shared landscape
-        updating itself.
-      depends_on: ["quadrupole-source-geometry"]
-      priority: 3
+        adjustment is mutually constitutive across sources.
+      depends_on: ["quadrupole-from-grade1-geometry"]
 
 ---
 
 # ─────────────────────────────────────────────
-# §8  EPISTEMIC STATUS
+# §9  EPISTEMIC STATUS
 # ─────────────────────────────────────────────
 
 epistemic_status:
@@ -393,22 +528,25 @@ epistemic_status:
     - "The primitive is ψ in Cl(3,0) with Π_eff as a scalar process-rate field."
     - "Committed anchorings (grade-3 pseudoscalars) deplete Π_eff locally."
     - "The master equation couples ∇Π_eff and ∇ψ through its kinetic term."
-    - "The master equation is a wave equation for ψ; perturbations propagate."
+    - "Gravity is a longitudinal effect (grade-1 ∇s gradient) — from forces-as-vector-iterations.yaml."
+    - "Grade-1 leadership of GW adjustment follows from gravity being longitudinal — derived, not observed."
 
   structural_hypothesis:
-    - "A local change in anchoring propagates as a multi-grade reconfiguration of the field vectors."
-    - "The leading component of the adjustment is grade-1 (∇Π_eff and ∇ψ coupling)."
-    - "The effective propagation speed is c_eff = c·(Π_eff/Π₀)."
-    - "The derivative-level GW readout is the projection of this adjustment onto a coordinate frame."
+    - "A local change in anchoring propagates as a multi-grade reconfiguration, grade-1 leading."
+    - "c_eff = c·(Π_eff/Π_eff,base) — absolute process rate as propagation speed."
+    - "Superposition suppresses gravitational effect proportional to CCR distance from α."
+    - "Grade-2 transversal (GR metric perturbation) is the derivative-level shadow of grade-1 longitudinal."
 
-  corrected:
-    - "Earlier drafts described the adjustment as grade-0 scalar propagation. This was a category confusion — a scalar cannot carry transverse polarization or quadrupole structure. The correction (§5) identifies the adjustment as primarily grade-1, with secondary grade-2 and grade-0 coupling."
+  corrected_from_v0.1:
+    - "Grade-0 scalar propagation reading removed — scalar cannot carry transverse polarization."
+    - "Grade-1 leadership now derived from longitudinal/transversal structure, not observed."
+    - "c_eff identified as the absolute Π_eff extra DoF, not just a correction factor."
 
   open:
     - "Explicit linearization of the master equation for the adjustment."
-    - "Grade decomposition of the propagating adjustment."
-    - "Derivation of c_eff from the linearized equations."
-    - "Quadrupole and polarization structure from grade-1 projection geometry."
+    - "Grade decomposition confirmation from the linearized equations."
+    - "Quantitative c_eff derivation and observational signature."
+    - "Superposition gravitational suppression — scaling relation and experimental regime."
     - "Nonlinear strong-field treatment."
 
 ---
@@ -419,10 +557,14 @@ cross_references:
   - file: "core/process-physics/commitment-depletion-duality.yaml"
     note: "Shared Π_eff landscape; relational coupling of anchorings; nonlinear regime"
   - file: "core/process-physics/forces-as-vector-iterations.yaml"
-    note: "Gravity as first-order (grade-1) effect; the correction from grade-0 scalar reading"
+    note: "Gravity as first-order grade-1 longitudinal effect — basis for §2b"
+  - file: "core/process-physics/relational-effects-extra-dof.yaml"
+    note: "Longitudinal/transversal projection structure; c_eff as absolute Π_eff extra DoF"
   - file: "core/process-physics/geometric-algebra-bridge.yaml"
     note: "Cl(3,0) grade structure; multivector decomposition"
   - file: "core/process-physics/bivector-partial-parameters.yaml"
     note: "Phase bivector B̂ and its coupling to amplitude"
   - file: "core/process-physics/gravity-inertia-equivalence-from-r5.yaml"
     note: "First-order ∇s gradient at large-scale η; consistent with grade-1 leading component"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR wave/particle states; superposition gravitational suppression"
