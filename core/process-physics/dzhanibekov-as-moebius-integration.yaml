@@ -1,0 +1,376 @@
+# /core/process-physics/dzhanibekov-as-moebius-integration.yaml
+name: "Dzhanibekov as Möbius Integration: The Intermediate-Axis Instability
+       as the Origin of the Half-Twist"
+version: "0.1"
+status: "STRUCTURAL READING — the Möbius closure of the electron is
+         identified as the integrated form of the classical
+         intermediate-axis (Dzhanibekov) instability, not as protection
+         against it. The reading is stated and its calculation target
+         identified; neither the Euler → Cl(3,0) translation nor the
+         second-order perturbation calculation has been carried out.
+         Downstream references: mass-as-plane-independence.yaml,
+         vortex-stability.yaml."
+domain: "Core / Process-Physics"
+
+description: >
+  The classical Dzhanibekov effect describes a rigid body rotating about
+  its intermediate principal axis: the rotation is unstable, and the body
+  spontaneously tumbles. The framework's earlier additions treated the
+  720° Möbius closure as topological protection against this instability.
+  This file adopts a stronger reading: the Möbius closure *is* the
+  intermediate-axis instability, integrated into a stable topological
+  form. The half-twist Tw = 1/2 is the count of the integrated flip, not
+  a ribbon-topology convention imposed from outside.
+
+  The reading makes a specific calculation target: translate the classical
+  Euler equations into Cl(3,0), perturb the rotor around the intermediate-
+  plane equilibrium, and check whether the second-order term corresponds
+  to Tw = 1/2. Tao's MathOverflow argument on the tennis-racket problem
+  provides the mathematical scaffold; the translation is the framework's
+  contribution.
+
+dependency_map:
+  requires:
+    - "core/process-physics/mass-as-plane-independence.yaml"
+    - "core/process-physics/vortex-stability.yaml"
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/bivector-partial-parameters.yaml"
+    - "core/process-physics/relational-effects-extra-dof.yaml"
+  provides_to:
+    - target: "core/process-physics/vortex-stability.yaml"
+      via: "Tw = 1/2 derived from the integrated instability, not imported"
+    - target: "core/process-physics/mass-as-plane-independence.yaml"
+      via: "Mass as the specific cost of integrating the instability"
+
+---
+
+# ─────────────────────────────────────────────
+# §1  THE READING
+# ─────────────────────────────────────────────
+
+the_reading:
+
+  statement: >
+    The classical intermediate-axis instability is a *temporal* phenomenon:
+    the body's orientation flips, with some period, repeatedly. The Möbius
+    closure is a *spatial* structure: a 720° double-cover path. The reading
+    is that the temporal flip, integrated over one period, *is* the spatial
+    double cover. The Möbius structure is not a defense erected against the
+    instability; it is the instability expressed in closed form.
+
+  what_this_replaces:
+    prior_reading: >
+      The 720° Möbius lock is a topological protection that stabilizes an
+      otherwise-unstable multi-axial configuration. The instability is
+      present; the lock prevents it from expressing.
+    adopted_reading: >
+      The 720° Möbius lock is the closure of the instability itself. The
+      configuration cannot tumble because tumbling has been integrated
+      into its structure — the flip is not suppressed but *completed* in
+      the topological form.
+
+  why_this_matters: >
+    Under the prior reading, Tw = 1/2 is imported from Möbius ribbon
+    topology and imposed on the configuration. Under the adopted reading,
+    Tw = 1/2 is the count of the integrated flip: one flip per 720° cycle,
+    expressed as the configuration's intrinsic twist. The half-twist
+    becomes a *derived* quantity — if the calculation in §5 succeeds.
+
+---
+
+# ─────────────────────────────────────────────
+# §2  THE TEMPORAL → SPATIAL MAPPING
+# ─────────────────────────────────────────────
+
+temporal_to_spatial:
+
+  statement: >
+    The classical tumbling is a time-parameterized sequence. In the
+    framework, time is not a fundamental parameter — it is an index of
+    configuration transitions (ga-dynamic-theory.yaml). Integrating the
+    transition sequence over one flip period gives a spatial structure.
+    The Möbius closure is that integral.
+
+  correspondence_table:
+    - classical: "Body flips orientation with period 2T (half-period T)"
+      framework: "Rotor traverses two 360° paths in configuration space"
+    - classical: "Reversal point at the end of each half-period"
+      framework: "Sign flip at θ = 2π (R(2π) = −R)"
+    - classical: "Full return to original orientation after 2T"
+      framework: "Self-identity at θ = 4π (R(4π) = +R)"
+    - classical: "Angular momentum L conserved along intermediate axis"
+      framework: "Closure condition Lk = 2 enforced"
+    - classical: "Tumbling can repeat indefinitely"
+      framework: "Topological lock prevents repetition — closure is unique"
+    - classical: "Unstable equilibrium manifold"
+      framework: "Single stable equilibrium at the Möbius configuration"
+
+  consequence: >
+    The two halves of the classical flip period correspond to the two
+    360° traversals of the Möbius path. The reversal point at 2T
+    corresponds to the sign flip at 2π. The Möbius structure *distinguishes*
+    the two traversals by the sign of the rotor — consistent with the
+    classical problem's distinction between "before" and "after" the
+    reversal.
+
+---
+
+# ─────────────────────────────────────────────
+# §3  PREREQUISITE: EULER → Cl(3,0) TRANSLATION
+# ─────────────────────────────────────────────
+
+euler_to_ga:
+
+  statement: >
+    The classical Euler equations for rigid-body rotation are stated in
+    a principal-axis frame with an inertia tensor I. To carry out the
+    instability calculation in the framework's algebra, the Euler
+    formulation must first be translated into Cl(3,0). This translation
+    is a prerequisite for the calculation in §5 and has not yet been
+    carried out.
+
+  classical_euler:
+    equations: |
+      I₁ dω₁/dt = (I₂ − I₃) ω₂ ω₃
+      I₂ dω₂/dt = (I₃ − I₁) ω₃ ω₁
+      I₃ dω₃/dt = (I₁ − I₂) ω₁ ω₂
+    structure:
+      - "Three coupled first-order ODEs for the components of angular velocity."
+      - "Nonlinear (quadratic in ω) — the origin of the intermediate-axis instability."
+      - "Inertia tensor Iᵢ as the axis-specific resistance to angular acceleration."
+
+  ga_translation:
+    angular_velocity: "Ω = Ωᵢ eᵢ — a grade-2 bivector in Cl(3,0)"
+    angular_momentum: "L = I(Ω) — the inertia tensor as a linear map on bivectors"
+    equation_of_motion: "dL/dt + Ω × L = 0  (body frame) or dL/dt = 0  (inertial frame)"
+    rotor_form: "Ṙ = ½ Ω R  (or R Ṙ = ½ Ω depending on convention)"
+
+    note_on_inertia_tensor: >
+      In GA, the inertia tensor is a symmetric linear map I: ⋀²V → ⋀²V
+      taking angular velocity bivectors to angular momentum bivectors.
+      Its principal axes are the eigenvectors (bivectors that map to
+      scalar multiples of themselves). The classical intermediate-axis
+      theorem is a statement about the eigenvalue ordering of this map.
+
+  framework_adaptation:
+    inertia_tensor_replacement: >
+      The classical inertia tensor is replaced by the CCR cost functional
+      on bivector planes: I_CCR: Bᵢⱼ ↦ CCR cost of activating plane Bᵢⱼ.
+      Whether this map has the same linear structure as the classical
+      inertia tensor is an open question — the CCR functional may be
+      nonlinear in bivector activation.
+    angular_velocity_replacement: >
+      The rotor's bivector phase rate — the rate at which the committed
+      configuration traverses its bivector plane. In the framework, this
+      is ∂θ/∂τ where τ is the configuration-transition index.
+    intermediate_axis_replacement: >
+      The bivector plane whose CCR cost is intermediate between the other
+      two. Whether "intermediate" is defined numerically (middle CCR cost)
+      or structurally (e₂₃ by grade-position) is an open question — see §6.
+
+  required_steps:
+    - "Write the classical Euler equations in bivector form using the GA rigid-body formalism (Lasenby et al.)."
+    - "Replace the inertia tensor with the CCR cost functional; verify or derive the linear structure."
+    - "Express the equation of motion in terms of the rotor R and its perturbation δB."
+    - "Identify the intermediate-axis configuration in framework terms."
+
+  epistemic_status: >
+    STRUCTURAL — the translation is well-defined in principle (GA rigid-body
+    mechanics exists), but the framework-specific replacements (CCR for
+    inertia tensor, bivector phase rate for angular velocity) are not yet
+    worked out. This is a prerequisite computation.
+
+---
+
+# ─────────────────────────────────────────────
+# §4  TAO'S ARGUMENT: THE PERTURBATION SCAFFOLD
+# ─────────────────────────────────────────────
+
+tao_scaffold:
+
+  statement: >
+    Tao's argument on the tennis-racket problem (MathOverflow, 2011) is a
+    second-order perturbation analysis around the intermediate-axis
+    equilibrium. The linear term oscillates (neutral stability); the
+    quadratic term is where the instability lives — it couples the
+    perturbation back on itself with the sign that drives exponential
+    growth. The argument is a clean model of what the framework's
+    calculation should look like, translated to Cl(3,0).
+
+  structure_of_the_argument:
+    - "Perturb the angular velocity around the intermediate-axis equilibrium: ω = ω₂ ê₂ + δω."
+    - "Substitute into Euler's equations; the linear term gives neutral oscillation."
+    - "The quadratic term in δω has the wrong sign for stability — it reinforces the perturbation."
+    - "The reinforcement drives exponential growth; the body flips."
+
+  why_second_order_suffices_classically: >
+    The linear term is the stability discriminant; if it's neutral
+    (oscillatory), the sign of the quadratic term decides the outcome.
+    Classical Euler has neutral linear term around the intermediate axis
+    by the intermediate-axis theorem. So second order is the first
+    nontrivial order, and it's where the instability lives.
+
+  translation_to_framework: >
+    In the framework, the perturbation is a bivector perturbation δB of
+    the rotor: R = R₀ · exp(½ δB). The equation of motion is the
+    closure condition ⟨G⟩₂|_closure = 0, expanded to second order in δB
+    around the equilibrium R₀. Whether the second-order term is
+    stabilizing or destabilizing determines whether the configuration
+    tumbles or closes.
+
+---
+
+# ─────────────────────────────────────────────
+# §5  THE CALCULATION TARGET
+# ─────────────────────────────────────────────
+
+calculation_target:
+
+  statement: >
+    Under the reading of §1, the calculation is not "does the Möbius
+    lock stabilize the intermediate-axis instability?" — it is "does
+    the second-order perturbation term *correspond to* Tw = 1/2?"
+    The target is to derive the half-twist from the instability, not
+    to test whether it protects against the instability.
+
+  precise_form:
+    given: "Rotor R = R₀ · exp(½ δB) around the intermediate-plane equilibrium R₀"
+    compute: "Second-order expansion of ⟨G⟩₂|_closure = 0 in δB"
+    extract: "The coefficient of the quadratic term, expressed in the CWF decomposition Lk = Wr + Tw"
+    check: "Whether the coefficient corresponds to Tw = 1/2"
+
+  what_success_would_show:
+    - "Tw = 1/2 is derived from the instability, not imported."
+    - "The Möbius closure is the integrated form of the classical tumbling."
+    - "The two-layer topology/dynamics decomposition (Layer 1 Wr = 3/2 from Layer 2 integrated instability) is backed by a calculation."
+    - "The mass-as-plane-independence reading is quantitatively grounded: mass is the specific cost of integrating the instability."
+
+  what_failure_would_show:
+    - "The second-order term does not correspond to Tw = 1/2 — either the reading is wrong, or Tw is derived at higher order."
+    - "A third-order term is required — suggesting the instability is more subtle than the classical analogue."
+    - "The correspondence is approximate rather than exact — suggesting the reading is directional but not complete."
+
+  possible_outcomes:
+    - "Second order yields Tw = 1/2: reading confirmed, derivation complete."
+    - "Second order yields Tw = 0 or another value: reading falsified."
+    - "Second order is neutral; third order yields Tw = 1/2: reading confirmed at higher order."
+    - "Higher-order terms required in a way the classical problem doesn't exhibit: framework-specific structure."
+
+---
+
+# ─────────────────────────────────────────────
+# §6  OPEN QUESTIONS
+# ─────────────────────────────────────────────
+
+open_questions:
+
+  - id: "which-is-the-intermediate-plane"
+    question: >
+      Is the "intermediate" axis the middle-CCR-cost bivector plane
+      (numerical reading, faithful to the classical problem), or the
+      structurally intermediate plane e₂₃ by grade-position (structural
+      reading, faithful to the framework's grade commitments)? The choice
+      affects which configuration the calculation runs on.
+    status: "OPEN — the two readings give different intermediate-plane
+             identifications; the calculation depends on which is chosen."
+
+  - id: "linear-structure-of-ccr-inertia"
+    question: >
+      Is the CCR cost functional I_CCR on bivector planes linear, like
+      the classical inertia tensor? Or is it nonlinear in the bivector
+      activation, which would change the perturbation structure?
+    status: "OPEN — the classical Euler derivation assumes a linear
+             inertia tensor; if the CCR functional is nonlinear, the
+             translation requires modification."
+
+  - id: "periodicity-mapping-precision"
+    question: >
+      The classical tumbling is periodic; the Möbius closure is closed.
+      Does the correspondence between "one full flip period" and "one
+      720° closure" hold exactly, or approximately? If exactly, the
+      integrated-flip reading is strong. If only approximately, the
+      reading is directional.
+    status: "OPEN — depends on the calculation in §5."
+
+  - id: "role-of-the-viability-lock"
+    question: >
+      The classical body has no viability threshold; it flips freely.
+      The framework's configuration has R5 viability — the closure
+      fires only when ⟨G⟩₂|_closure = 0. Does the viability condition
+      enter the second-order calculation as a constraint, or does it
+      only select which configurations are physically realized?
+    status: "OPEN — connects to the stability mechanism in
+             vortex-stability.yaml Part III."
+
+  - id: "extension-to-proton"
+    question: >
+      The proton is three orthogonal bivector planes, not two. Does
+      the intermediate-axis reading extend to the three-plane case?
+      If the proton is stabilized by grade-3 pseudoscalar closure,
+      is there an analogous "integrated instability" reading of
+      the three-plane configuration?
+    status: "OPEN — would connect to mass-as-plane-independence.yaml
+             §proton_forced_independence."
+
+---
+
+# ─────────────────────────────────────────────
+# §7  EPISTEMIC STATUS
+# ─────────────────────────────────────────────
+
+epistemic_status:
+
+  established:
+    - "The classical Dzhanibekov instability is a second-order phenomenon in the perturbation around the intermediate axis."
+    - "The framework's time is derivative — an index of configuration transitions."
+    - "The Möbius closure has Lk = 2, and Tw = 1/2 if the Möbius framing holds."
+    - "The classical tumbling is periodic with half-period corresponding to reversal."
+
+  structural_reading:
+    - "The Möbius closure *is* the integrated intermediate-axis instability, not protection against it."
+    - "The temporal flip, integrated over one period, becomes the spatial double cover."
+    - "The half-twist Tw = 1/2 is the count of the integrated flip."
+
+  prerequisites_open:
+    - "The Euler → Cl(3,0) translation with CCR replacing the inertia tensor."
+    - "Identification of the intermediate-plane configuration in framework terms."
+    - "Verification of the linearity of the CCR cost functional."
+
+  calculation_target:
+    - "Second-order expansion of the closure condition ⟨G⟩₂ = 0 around the intermediate-plane equilibrium."
+    - "Extraction of the coefficient as it enters the CWF decomposition Lk = Wr + Tw."
+    - "Check: does the coefficient correspond to Tw = 1/2?"
+
+  what_would_confirm_the_reading:
+    - "The second-order term yields Tw = 1/2 (or, if at higher order, the correct order yields it)."
+    - "The viability condition enters naturally as the constraint selecting the closed configuration."
+    - "The classical half-period → sign-flip correspondence holds at the rotor level."
+
+  what_would_falsify_the_reading:
+    - "The second-order term yields a different twist, with no mechanism for correction at higher order."
+    - "The CCR cost functional is fundamentally nonlinear in a way that breaks the classical perturbation structure."
+    - "The intermediate-plane configuration cannot be identified in framework terms."
+
+---
+
+cross_references:
+  - file: "core/process-physics/mass-as-plane-independence.yaml"
+    note: "Mass as plane-independence cost; the reading grounds that cost in the integrated instability"
+  - file: "core/process-physics/vortex-stability.yaml"
+    note: "Part VI (twist as stability requirement); this file provides the derivation direction for Tw = 1/2"
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "Time as configuration-transition index; basis for the temporal → spatial mapping"
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "Bivector parameter space; the intermediate-plane identification operates here"
+  - file: "core/process-physics/relational-effects-extra-dof.yaml"
+    note: "Gradient-driven instability; ⟨G⟩₂ as the variance measure"
+  - file: "core/process-physics/intrinsic-reference-spin-momentum.yaml"
+    note: "Reference structure and the Möbius closure; consistent with the integrated-instability reading"
+
+external_references:
+  - reference: "Tao, T. (2011). 'The tennis-racket problem.' MathOverflow."
+    note: "Second-order perturbation scaffold for the intermediate-axis instability"
+  - reference: "Ashbaugh, M. S., Chicone, C. C., Cushman, R. H. (1991). 'The twisting tennis racket.' Journal of Dynamics and Differential Equations 3(1), 67–85."
+    note: "Detailed classical treatment with geometric phase interpretation"
+  - reference: "Lasenby, A., Doran, C., Gull, S. (1998). 'Gravity, gauge theories and geometric algebra.' Phil. Trans. R. Soc. Lond. A 356, 487–582."
+    note: "GA rigid-body formalism for the Euler → Cl(3,0) translation"
