@@ -1,0 +1,165 @@
+/core/process-physics/variational-problem-mobius-equilibrium.yaml
+name: "Variational Problem Statement: Möbius Equilibrium Shape (Layer 2 Dynamics)"
+version: "0.1"
+status: "STRUCTURAL SCAFFOLD — defines the self-consistent fixed-point problem 
+for ccr-writhe-from-cwf. Explicitly rejects container ontology and continuous 
+energy-minimization assumptions in favor of process-level fixed-point dynamics."
+domain: "Core / Process-Physics"
+description: >
+This file establishes the precise mathematical and ontological framing 
+for deriving the equilibrium writhe (Wr) of the 720° Möbius configuration. 
+It explicitly rejects standard condensed-matter GP minimization framing 
+(no pre-existing medium, no external energy landscape) and replaces it 
+with a self-consistent fixed-point formulation of the R3→R5 commitment 
+dynamics, where saturation parameters are shape-functionals of the 
+equilibrium configuration itself.
+dependency_map:
+  requires:
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/vortex-stability.yaml"
+    - "core/process-physics/saturation-parameters-as-shape-functionals.yaml"
+    - "core/process-physics/ccr-zeno-as-initial-closure.yaml"
+    - "core/process-physics/madelung-as-rotor-consequence.yaml"
+  provides_to:
+    - target: "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
+      via: "Ontological and mathematical guardrails for SIM-004-v2 implementation"
+
+─────────────────────────────────────────────
+§1  ONTOLOGICAL PREMISE (STRICT ENFORCEMENT)
+─────────────────────────────────────────────
+ontological_premise:
+  statement: >
+    There is no pre-existing physical medium, container, or background fluid. 
+    The field $\psi$ IS unresolved potential (R1). The Gross-Pitaevskii-like 
+    equation used here is not modeling a fluid; it is the mathematical form 
+    that commitment dynamics necessarily take when grade-structured expression 
+    emerges under saturation constraints.
+  prohibited_language:
+    - "vortex in a superfluid"
+    - "energy minimization of the medium"
+    - "external boundary conditions"
+    - "free tunable parameters (g, Λ, κ)"
+  required_language:
+    - "grade-2 committed structure in phase-configuration space"
+    - "self-consistent fixed point of the commitment operator"
+    - "topological signature of self-referential return"
+    - "saturation shape-functionals"
+
+─────────────────────────────────────────────
+§2  THE COMMITMENT OPERATOR (NOT AN ENERGY FUNCTIONAL)
+─────────────────────────────────────────────
+commitment_operator:
+  statement: >
+    The equilibrium configuration $\psi^*$ is not the minimum of an external 
+    energy landscape. It is the fixed point of the commitment operator $\mathcal{F}$, 
+    which represents the grade-2 projection of the master equation under 
+    viability selection (R4/R5).
+  formal_structure: >
+    $\psi^* = \mathcal{F}[\psi^*; \, g[\psi^*], \, \Lambda[\psi^*], \, \kappa[\psi^*]]$
+  shape_functionals: >
+    The saturation parameters are NOT inputs. They are functionals of the 
+    equilibrium shape $(\rho^*, B^*)$ itself:
+    - $g[\psi^*]$: self-interaction cost per unit density at equilibrium
+    - $\Lambda[\psi^*]$: energy scale of the saturation transition at equilibrium
+    - $\kappa[\psi^*]$: sharpness of the saturation curve at equilibrium
+    This creates a self-consistency loop: the shape determines the parameters 
+    that produce the shape. (See saturation-parameters-as-shape-functionals.yaml)
+
+─────────────────────────────────────────────
+§3  THE TOPOLOGICAL CONSTRAINT (NOT A BOUNDARY CONDITION)
+─────────────────────────────────────────────
+topological_constraint:
+  statement: >
+    The 720° periodicity is not a boundary condition imposed on a container. 
+    It is the topological signature of the first self-referential return 
+    (the $D_0 \to D_1$ closure).
+  algebraic_form: >
+    $\psi(\theta + 2\pi) = -\psi(\theta)$  (Grade-2 sign flip under 360°)
+    $\psi(\theta + 4\pi) = +\psi(\theta)$  (Self-identity restored under 720°)
+  consequence: >
+    This double-cover property is intrinsic to the Cl(3,0) rotor algebra. 
+    It forces the configuration to be a non-orientable Möbius topology, 
+    which is the prerequisite for the Calugareanu-White-Fuller (CWF) theorem.
+
+─────────────────────────────────────────────
+§4  THE TWO-LAYER DERIVATION PATH
+─────────────────────────────────────────────
+derivation_layers:
+  layer_1_topological:
+    status: "ESTABLISHED — pure topology (vortex-stability.yaml Part VIII)"
+    statement: >
+      The 720° self-referential return condition algebraically forces:
+      - Linking number $Lk = 2$ (isotopy invariant of the double cover)
+      - Twist $Tw = 1/2$ (algebraic consequence of the Möbius framing / 
+        stability requirement against bivector variance)
+      - Therefore, by CWF theorem: Writhe $Wr = Lk - Tw = 3/2$
+    note: >
+      This layer is independent of the specific GP-like operator. It follows 
+      strictly from the grade-2 committed structure's self-referential geometry.
+
+  layer_2_dynamical:
+    status: "OPEN — requires numerical/variational solve (SIM-004-v2)"
+    statement: >
+      Show that the self-consistent fixed point $\psi^*$ of the commitment 
+      operator $\mathcal{F}$ with shape-functional parameters actually 
+      converges to a configuration whose centerline $\gamma^*$ realizes 
+      the topological requirement of Layer 1.
+    requirements:
+      - "Prove (or numerically demonstrate) that the fixed-point map has a stable attractor."
+      - "Show that the attractor's centerline $\gamma^*$ yields $Wr \approx 3/2$ when evaluated via the CWF integral."
+      - "Demonstrate that this fixed point is reached via the accumulated discrete R5 firings (Zeno history), not continuous gradient descent."
+
+─────────────────────────────────────────────
+§5  THE ZENO ACCUMULATION MECHANISM
+─────────────────────────────────────────────
+zeno_mechanism:
+  statement: >
+    The fixed point is not found by smooth, continuous relaxation. It is the 
+    accumulated residue of discrete R5 firing events.
+  process: >
+    At each discrete step, the system retains a fraction $CCR^0 = \phi^{-1}$ 
+    of open phase space (Zeno retention). The equilibrium shape $\psi^*$ 
+    carries the accumulated discrete imprint of this Zeno-locked history. 
+    The shape IS the fossil record of the discrete commitment process.
+  cross_reference: "core/process-physics/ccr-zeno-as-initial-closure.yaml"
+
+─────────────────────────────────────────────
+§6  OPEN DERIVATIONS & SUCCESS CRITERIA
+─────────────────────────────────────────────
+open_derivations:
+  priority_1:
+    - id: "ccr-writhe-from-cwf"
+      description: >
+        Execute Layer 2. Compute the CWF writhe of the self-consistent 
+        equilibrium shape. Confirm $Wr = 3/2$ (or the structurally required 
+        value) emerges natively from the shape-functional fixed point, 
+        without retrofitting.
+      success_criterion: >
+        The computed $Wr$, combined with the phase-space volumes, yields 
+        a bare $\alpha_{int}$ that structurally aligns with the geometric 
+        candidate, with the 2.2 ppm gap cleanly explained as $\Pi_{eff}$ 
+        depression, not a derivation error.
+      depends_on: ["SIM-004-v2", "saturation-parameters-as-shape-functionals.yaml"]
+
+  priority_2:
+    - id: "shape-functional-uniqueness"
+      description: >
+        Prove that the fixed-point condition $(g, \Lambda, \kappa) = (g[\psi^*], \Lambda[\psi^*], \kappa[\psi^*])$ 
+        has a unique, stable solution for the 720° Möbius topology.
+      depends_on: ["ccr-writhe-from-cwf"]
+
+─────────────────────────────────────────────
+§7  EPISTEMIC STATUS
+─────────────────────────────────────────────
+epistemic_status:
+  established:
+    - "No container ontology; $\psi$ is unresolved potential."
+    - "Saturation parameters are shape-functionals, not free inputs."
+    - "720° is a topological signature of self-referential return, not a boundary condition."
+    - "Layer 1 ($Wr = 3/2$) is a topological necessity of the 720° condition and stability requirement."
+  structural_hypothesis:
+    - "The Layer 2 fixed point of the commitment operator natively produces the Layer 1 topology."
+    - "The equilibrium shape is the accumulated imprint of discrete Zeno-locked R5 firings."
+  open:
+    - "Explicit functional forms of the shape-functionals $g[\psi^*], \Lambda[\psi^*], \kappa[\psi^*]$."
+    - "Numerical/variational proof of fixed-point convergence to the required writhe."
