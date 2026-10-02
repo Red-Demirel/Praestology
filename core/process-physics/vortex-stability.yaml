@@ -739,6 +739,73 @@ electron_default_state:
   with the strict process-first, no-container ontology. Prevents 
   smuggling in derivative-level 'billiard ball' particle ontology."
 
+# -----------------------------------------------------------------------------
+# ADDITION TO: vortex-stability.yaml
+# -----------------------------------------------------------------------------
+─────────────────────────────────────────────────────────────
+PART VIII: TWIST AS A STABILITY REQUIREMENT (CHIRALITY BALANCE)
+─────────────────────────────────────────────────────────────
+chirality_stability_requirement:
+  statement: >
+    The half-integer twist ($Tw = 1/2$) of the 720° Möbius configuration 
+    is not an imported topological convention. It is the unique algebraic 
+    stability requirement that prevents the configuration from dissolving 
+    due to uncancelled bivector variance.
+  
+  the_360_instability_problem:
+    statement: >
+      A simple 360° closure ($R(2\pi) = -1$) in Cl(3,0) is chirally unstable. 
+      Because it does not return to self-identity, the local bivector field 
+      $B(s)$ along the centerline can vary continuously. 
+    mechanism: >
+      Without a topological lock, the effective chirality $\chi(s) = B(s) \cdot I$ 
+      can pass through zero (becoming planar in a different orientation) and 
+      flip sign. This "wobble" represents high variance: an uncancelled 
+      bivector gradient $\langle G \rangle_2$ that drives Regress ($R_{diss}$) 
+      rather than sustaining a committed topology.
+  
+  the_720_stability_solution:
+    statement: >
+      The 720° Möbius closure ($R(4\pi) = +1$) requires a half-integer twist 
+      to maintain self-identity while accommodating the non-orientable 
+      geometry. This specific twist balances the bivector field.
+    mechanism: >
+      Variance is defined in the framework as the uncancelled bivector 
+      gradient $\langle G \rangle_2$ across the neighborhood of the vortex 
+      filament. Stability is achieved when the closure structure exactly 
+      cancels this gradient: $\langle G \rangle_2 \big|_{\text{closure}} = 0$.
+    consequence: >
+      For the 720° double-cover, $Tw = 1/2$ is the unique twist that 
+      satisfies this balance condition. It locks the chirality, preventing 
+      continuous deformation from flipping the orientation without passing 
+      through a singularity (amplitude $\rho \to 0$).
+  
+  connection_to_variational_problem:
+    statement: >
+      This reframes the `ccr-writhe-from-cwf` derivation. The equilibrium 
+      shape is not found by minimizing an external energy functional in a 
+      pre-existing container. It is the self-consistent configuration that 
+      minimizes internal stress subject to two constraints:
+      1. The 720° topological closure condition ($R(4\pi) = +1$).
+      2. The chirality balance condition ($Tw = 1/2$ everywhere along the centerline).
+    consequence: >
+      Given $Lk = 2$ (isotopy invariant of the double cover) and the 
+      stability-derived $Tw = 1/2$, the Calugareanu-White-Fuller (CWF) 
+      theorem yields $Wr = Lk - Tw = 3/2$. The writhe is a consequence 
+      of the stability requirement, not an independent input.
+
+  epistemic_status:
+    established:
+      - "A 360° closure in Cl(3,0) lacks topological protection and is chirally unstable."
+      - "The 720° closure requires a half-integer twist for non-orientable self-identity."
+      - "Variance is the uncancelled bivector gradient $\langle G \rangle_2$ driving Regress."
+    structural_hypothesis:
+      - "$Tw = 1/2$ is the unique twist that satisfies the chirality balance condition $\langle G \rangle_2 \big|_{\text{closure}} = 0$."
+      - "The CWF writhe $Wr = 3/2$ follows necessarily from this stability-derived twist."
+    open:
+      - "Explicit mathematical proof that the GP equilibrium shape functional natively yields $Tw = 1/2$ without importing standard ribbon topology assumptions."
+      - "Formal derivation of the stress functional $\mathcal{F}[\gamma, B(s)]$ in strict Cl(3,0) terms."
+
   cross_references:
     file: "core/process-physics/photon-mass-and-proton-excess.yaml"
     note: "Neutrino as partial self-integral topology — this section provides the stability mechanism"
