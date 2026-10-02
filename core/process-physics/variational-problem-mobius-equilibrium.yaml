@@ -24,9 +24,9 @@ dependency_map:
     - target: "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
       via: "Ontological and mathematical guardrails for SIM-004-v2 implementation"
 
-─────────────────────────────────────────────
-§1  ONTOLOGICAL PREMISE (STRICT ENFORCEMENT)
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# §1  ONTOLOGICAL PREMISE (STRICT ENFORCEMENT)
+# ─────────────────────────────────────────────
 ontological_premise:
   statement: >
     There is no pre-existing physical medium, container, or background fluid. 
@@ -45,9 +45,9 @@ ontological_premise:
     - "topological signature of self-referential return"
     - "saturation shape-functionals"
 
-─────────────────────────────────────────────
-§2  THE COMMITMENT OPERATOR (NOT AN ENERGY FUNCTIONAL)
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# §2  THE COMMITMENT OPERATOR (NOT AN ENERGY FUNCTIONAL)
+# ─────────────────────────────────────────────
 commitment_operator:
   statement: >
     The equilibrium configuration $\psi^*$ is not the minimum of an external 
@@ -65,9 +65,9 @@ commitment_operator:
     This creates a self-consistency loop: the shape determines the parameters 
     that produce the shape. (See saturation-parameters-as-shape-functionals.yaml)
 
-─────────────────────────────────────────────
-§3  THE TOPOLOGICAL CONSTRAINT (NOT A BOUNDARY CONDITION)
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# §3  THE TOPOLOGICAL CONSTRAINT (NOT A BOUNDARY CONDITION)
+# ─────────────────────────────────────────────
 topological_constraint:
   statement: >
     The 720° periodicity is not a boundary condition imposed on a container. 
@@ -81,9 +81,9 @@ topological_constraint:
     It forces the configuration to be a non-orientable Möbius topology, 
     which is the prerequisite for the Calugareanu-White-Fuller (CWF) theorem.
 
-─────────────────────────────────────────────
-§4  THE TWO-LAYER DERIVATION PATH
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# §4  THE TWO-LAYER DERIVATION PATH
+# ─────────────────────────────────────────────
 derivation_layers:
   layer_1_topological:
     status: "ESTABLISHED — pure topology (vortex-stability.yaml Part VIII)"
@@ -109,9 +109,9 @@ derivation_layers:
       - "Show that the attractor's centerline $\gamma^*$ yields $Wr \approx 3/2$ when evaluated via the CWF integral."
       - "Demonstrate that this fixed point is reached via the accumulated discrete R5 firings (Zeno history), not continuous gradient descent."
 
-─────────────────────────────────────────────
-§5  THE ZENO ACCUMULATION MECHANISM
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# §5  THE ZENO ACCUMULATION MECHANISM
+# ─────────────────────────────────────────────
 zeno_mechanism:
   statement: >
     The fixed point is not found by smooth, continuous relaxation. It is the 
@@ -123,9 +123,9 @@ zeno_mechanism:
     The shape IS the fossil record of the discrete commitment process.
   cross_reference: "core/process-physics/ccr-zeno-as-initial-closure.yaml"
 
-─────────────────────────────────────────────
-§6  OPEN DERIVATIONS & SUCCESS CRITERIA
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# §6  OPEN DERIVATIONS & SUCCESS CRITERIA
+# ─────────────────────────────────────────────
 open_derivations:
   priority_1:
     - id: "ccr-writhe-from-cwf"
@@ -148,9 +148,9 @@ open_derivations:
         has a unique, stable solution for the 720° Möbius topology.
       depends_on: ["ccr-writhe-from-cwf"]
 
-─────────────────────────────────────────────
-§7  EPISTEMIC STATUS
-─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# §7  EPISTEMIC STATUS
+# ─────────────────────────────────────────────
 epistemic_status:
   established:
     - "No container ontology; $\psi$ is unresolved potential."
@@ -160,6 +160,20 @@ epistemic_status:
   structural_hypothesis:
     - "The Layer 2 fixed point of the commitment operator natively produces the Layer 1 topology."
     - "The equilibrium shape is the accumulated imprint of discrete Zeno-locked R5 firings."
+
+  reference_expression_connection:
+    statement: >
+      The Layer 2 fixed point has a unique stable attractor because the
+      electron's co-oriented rotor pair is reference-obtaining
+      (reference-and-expression.yaml §4): the configuration has an
+      internally defined chirality sense, which means the variational
+      problem selects a preferred orientation. A reference-free
+      configuration (photon, counter-oriented pair) has no preferred
+      orientation and hence no unique fixed point — which is why the
+      photon has no rest-frame and no mass. The reference/expression
+      distinction is not only vocabulary: it is the structural reason
+      the electron variational problem has a unique stable attractor
+      and the photon's does not.
   open:
     - "Explicit functional forms of the shape-functionals $g[\psi^*], \Lambda[\psi^*], \kappa[\psi^*]$."
     - "Numerical/variational proof of fixed-point convergence to the required writhe."
