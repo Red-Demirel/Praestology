@@ -1,0 +1,497 @@
+# /core/process-physics/euler-to-cl30-translation.yaml
+name: "Euler → Cl(3,0): Rigid-Body Rotation as Bivector Dynamics"
+version: "0.1"
+status: "TECHNICAL TRANSLATION — the classical Euler equations for rigid-body
+         rotation are expressed in Cl(3,0) form, with framework-specific
+         replacements for the inertia tensor (CCR cost functional),
+         time (configuration-transition index), and the principal-axis
+         structure (bivector planes). GA rigid-body mechanics is
+         well-established (Hestenes, Lasenby, Doran, Gull); the
+         framework-specific replacements are not yet derived. The
+         intermediate-axis theorem is stated in GA form; the electron's
+         stability calculation is deferred to the target file."
+domain: "Core / Process-Physics"
+
+description: >
+  Classical rigid-body mechanics is the derived-reality description of
+  a process-level phenomenon: the dynamics of an orientational configu-
+  ration in three-dimensional space. The Euler equations state that
+  dynamics in a particular coordinate frame (the principal-axis frame),
+  with an inertia tensor summarizing the body's resistance to angular
+  acceleration. They work, but they take the coordinate frame, the
+  inertia tensor, and time as given.
+
+  Geometric algebra formulates the same dynamics without these imports:
+  angular velocity is a bivector, angular momentum is a bivector, the
+  inertia tensor is a symmetric linear map on bivectors, and the
+  equation of motion is a single commutator relation. The principal
+  axes emerge as eigenvectors of the inertia map, not as a pre-existing
+  frame. The framework extends this further: replacing the classical
+  inertia tensor with the CCR cost functional, and time with the
+  configuration-transition index, produces a version of the same
+  dynamics that lives entirely within the process-level commitments.
+
+dependency_map:
+  requires:
+    - "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+    - "core/process-physics/ga-dynamic-theory.yaml"
+    - "core/process-physics/geometric-algebra-bridge.yaml"
+    - "core/process-physics/mass-as-plane-independence.yaml"
+    - "core/process-physics/bivector-partial-parameters.yaml"
+  provides_to:
+    - target: "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+      via: "The Euler → Cl(3,0) translation prerequisite"
+    - target: "core/process-physics/mass-as-plane-independence.yaml"
+      via: "CCR cost functional as the inertia tensor analogue"
+
+---
+
+# ─────────────────────────────────────────────
+# §1  SCOPE AND STANCE
+# ─────────────────────────────────────────────
+
+scope:
+
+  statement: >
+    The classical Euler equations are a correct description of rigid-body
+    rotation at the derivative level. The GA reformulation is not a
+    correction of that description — it is the same dynamics expressed
+    without the derivative-level imports (principal-axis frame, scalar
+    inertia tensor, time parameter). The framework-specific replacements
+    go further: they substitute process-level quantities for the
+    derivative-level ones, producing a version of the dynamics that is
+    consistent with the framework's other commitments.
+
+  what_this_file_does:
+    - "States the classical Euler equations."
+    - "Translates them into Cl(3,0) form using standard GA rigid-body mechanics."
+    - "Replaces the inertia tensor with the CCR cost functional, time with the configuration-transition index, and the principal-axis frame with bivector eigenstructure."
+    - "States the intermediate-axis theorem in GA form."
+    - "Identifies the target: the electron's second-order stability calculation."
+
+  what_this_file_does_not_do:
+    - "Derive the CCR cost functional's linearity or nonlinearity."
+    - "Carry out the electron's stability calculation (deferred to the target file)."
+    - "Prove the correspondence between the classical and framework-specific forms — only state it."
+
+  stance: >
+    The GA form is more foundational than the Euler form because it does
+    not import a coordinate frame or an inertia tensor as primitives.
+    Improvements to the derived reality — corrections, refinements,
+    new predictions — follow from the more foundational form. The
+    framework claims that the classical Euler equations are recovered
+    as a limit of the GA form; the framework-specific replacements
+    give the corrected version in regimes where the classical
+    assumptions (linear inertia, fixed frame) do not hold.
+
+---
+
+# ─────────────────────────────────────────────
+# §2  CLASSICAL EULER IN COMPONENT FORM
+# ─────────────────────────────────────────────
+
+classical_euler:
+
+  statement: >
+    In the body frame (rotating with the rigid body), with principal
+    axes ê₁, ê₂, ê₃ and principal moments of inertia I₁, I₂, I₃, the
+    classical Euler equations for the components ω₁, ω₂, ω₃ of angular
+    velocity are:
+
+      I₁ dω₁/dt = (I₂ − I₃) ω₂ ω₃
+      I₂ dω₂/dt = (I₃ − I₁) ω₃ ω₁
+      I₃ dω₃/dt = (I₁ − I₂) ω₁ ω₂
+
+  structure:
+    - "Three coupled first-order ODEs — nonlinear (quadratic) in ω."
+    - "The nonlinear terms are the origin of the intermediate-axis instability."
+    - "Principal-axis frame is assumed to pre-exist; the inertia tensor is diagonal in this frame."
+
+  what_is_imported:
+    - "The principal-axis frame ê₁, ê₂, ê₃."
+    - "The inertia tensor as a diagonal matrix I = diag(I₁, I₂, I₃)."
+    - "Time as the independent variable t."
+    - "The three-dimensional spatial container in which the body rotates."
+
+---
+
+# ─────────────────────────────────────────────
+# §3  GA FORM OF THE SAME DYNAMICS
+# ─────────────────────────────────────────────
+
+ga_form:
+
+  statement: >
+    In Cl(3,0), a rotor R describes the body's orientation. The angular
+    velocity is a bivector Ω, defined by the kinematic relation between
+    R and its rate of change. The angular momentum is a bivector L. The
+    inertia tensor is a symmetric linear map I: ⋀²V → ⋀²V. The equation
+    of motion is a single commutator relation.
+
+  kinematic_relation:
+    body_frame: "Ṙ = ½ Ω R  (Ω is the body-frame angular velocity bivector)"
+    inertial_frame: "Ṙ = −½ R Ω_inertial  (relation between frames)"
+    note: >
+      The two forms differ by how Ω is attached to R. For the classical
+      Euler problem, the body-frame form is standard.
+
+  angular_velocity_bivector:
+    expression: "Ω = Ω₁ B₁ + Ω₂ B₂ + Ω₃ B₃"
+    basis: "B₁ = e₂e₃, B₂ = e₃e₁, B₃ = e₁e₂ — the bivector basis of Cl(3,0)"
+    components: "Ωᵢ are the body-frame components of angular velocity"
+    note: >
+      The bivector Ω is the GA representation of the classical angular
+      velocity vector. It differs from the vector by a duality
+      transformation (multiplication by the pseudoscalar I or its inverse,
+      depending on convention). The bivector form is more natural for
+      rigid-body mechanics because it composes multiplicatively (rotors)
+      rather than additively (vectors).
+
+  inertia_tensor:
+    definition: >
+      A symmetric linear map I: ⋀²V → ⋀²V taking angular velocity
+      bivectors to angular momentum bivectors. In a principal-axis
+      frame, it acts as:
+        I(Bᵢ) = Iᵢ Bᵢ
+      for the principal bivectors Bᵢ, where Iᵢ are the principal moments.
+    symmetric: "I(A)·B = A·I(B) for all bivectors A, B (the defining property of a symmetric map)"
+    positive_definite: "I(B)·B > 0 for B ≠ 0 (any real inertia tensor)"
+    eigenstructure: >
+      The principal axes are the eigenvectors of I. The principal moments
+      are the corresponding eigenvalues. There are generically three
+      (since ⋀²V is 3-dimensional in Cl(3,0)), and the intermediate-axis
+      theorem is a statement about the eigenvalue ordering.
+
+  angular_momentum:
+    expression: "L = I(Ω)"
+    components: "L = L₁ B₁ + L₂ B₂ + L₃ B₃ with Lᵢ = Iᵢ Ωᵢ in the principal frame"
+
+  equation_of_motion:
+    body_frame: "dL/dτ + Ω × L = 0"
+    commutator_form: "dL/dτ = L × Ω = ½(LΩ − ΩL)"
+    note: >
+      The symbol × denotes the commutator product on bivectors:
+      A × B = ½(AB − BA). For bivectors in Cl(3,0), the commutator
+      product is itself a bivector, and it satisfies the same
+      antisymmetry and Jacobi identity as the vector cross product.
+      The classical cross-product structure emerges as the bivector
+      commutator in GA.
+
+  derivation_of_classical_from_ga:
+    statement: >
+      In the principal-axis frame, if L = Σ Lᵢ Bᵢ and Ω = Σ Ωᵢ Bᵢ,
+      the commutator L × Ω = Σᵢⱼ Lᵢ Ωⱼ (Bᵢ × Bⱼ). Using Bᵢ × Bⱼ = εᵢⱼₖ Bₖ
+      (the standard bivector commutator structure in Cl(3,0)), the
+      equation becomes:
+        dLₖ/dτ = −Σᵢⱼ εᵢⱼₖ Lᵢ Ωⱼ
+      With Lᵢ = Iᵢ Ωᵢ and the identification of the spatial components,
+      this recovers the classical Euler equations exactly. The GA form
+      is not a new dynamics — it is the classical dynamics without the
+      derivative-level imports.
+
+---
+
+# ─────────────────────────────────────────────
+# §4  FRAMEWORK-SPECIFIC REPLACEMENTS
+# ─────────────────────────────────────────────
+
+framework_replacements:
+
+  inertia_tensor_replacement:
+    classical: "I: ⋀²V → ⋀²V — symmetric linear map, fixed for a rigid body"
+    framework: "I_CCR: bivector plane ↦ CCR cost of activating that plane"
+    what_changes:
+      - "The classical inertia tensor is fixed; the CCR cost functional may vary with configuration."
+      - "The classical map is linear by construction; whether I_CCR is linear in bivector activation is open."
+      - "The classical eigenvalues are the principal moments; the framework's eigenvalues (if linear) would be the principal CCR costs."
+    what_stays: >
+      If I_CCR is linear (or if its linearization around the equilibrium
+      is well-defined), the classical analysis applies: eigenvectors give
+      the principal planes, eigenvalues give the CCR costs, and the
+      intermediate-axis theorem follows from the eigenvalue ordering.
+    status: "OPEN — linearity of I_CCR not yet established"
+
+  time_replacement:
+    classical: "t — the independent time parameter"
+    framework: "τ — the configuration-transition index"
+    what_changes:
+      - "Classical time is fundamental; framework τ is derivative (ga-dynamic-theory.yaml)."
+      - "The rate d/dτ is a rate per transition, not per unit of coordinate time."
+      - "Frequency, period, and rate are all derivative-level readings of the underlying transition index."
+    what_stays: >
+      The equation of motion dL/dτ + Ω × L = 0 has the same form.
+      The interpretation of τ changes; the algebra does not.
+
+  frame_replacement:
+    classical: "Principal-axis frame ê₁, ê₂, ê₃ — pre-existing, chosen by the analyst"
+    framework: "Bivector eigenstructure B₁, B₂, B₃ of I_CCR — emergent from the inertia map"
+    what_changes:
+      - "The classical frame is chosen; the framework's eigenstructure is intrinsic to the map."
+      - "The 'intermediate axis' is not chosen by the analyst; it is the middle eigenvalue of I_CCR."
+      - "The three bivector planes are structurally distinguished (B₁ = e₂e₃, etc.) but the analysis does not depend on the labels — only on the eigenvalue ordering."
+
+  angular_velocity_replacement:
+    classical: "ωᵢ — components of angular velocity vector"
+    framework: "Ωᵢ — bivector phase-rate components of the rotor"
+    note: >
+      The bivector phase rate is the rate at which the committed
+      configuration traverses its Möbius path. It is measured in
+      transitions per cycle rather than radians per unit time. In the
+      void limit, the two coincide; in commitment-dense environments,
+      the framework's rate differs from the classical rate by the
+      Π_eff factor.
+
+---
+
+# ─────────────────────────────────────────────
+# §5  INTERMEDIATE-AXIS THEOREM IN GA FORM
+# ─────────────────────────────────────────────
+
+intermediate_axis_theorem:
+
+  classical_statement: >
+    A rigid body rotating about its intermediate principal axis is
+    unstable: perturbations grow exponentially, and the body tumbles.
+
+  ga_statement: >
+    Consider I: ⋀²V → ⋀²V with principal eigenvalues I₁ < I₂ < I₃.
+    Perturb the equilibrium Ω = Ω₂ B₂ by δΩ. The linearized equation of
+    motion has a neutral (oscillatory) linear term and a quadratic term
+    whose sign determines stability. For I₂ intermediate between I₁ and
+    I₃, the quadratic term is destabilizing.
+
+  ga_derivation_sketch:
+    linearization: >
+      Write Ω = Ω₂ B₂ + δΩ. Substitute into dL/dτ = L × Ω (with L = I(Ω)).
+      The linearization of the right-hand side around the equilibrium
+      gives a linear map on δΩ whose eigenvalues determine the linear
+      stability.
+    neutral_linear_term: >
+      For the intermediate axis (I₂ between I₁ and I₃), the linear map
+      has purely imaginary eigenvalues — the linear term oscillates.
+      This is the intermediate-axis theorem's linear part.
+    quadratic_term: >
+      The second-order term in δΩ is where the instability lives. Its
+      coefficient is proportional to (I₁ − I₃) and has a sign that
+      reinforces the perturbation rather than opposing it.
+
+  framework_specific_form:
+    statement: >
+      Under the replacement I → I_CCR, the intermediate-axis theorem
+      becomes: a configuration whose equilibrium bivector plane has
+      intermediate CCR cost is unstable to merge toward the plane of
+      lower cost. The classical instability is the derivative-level
+      shadow of the merge tendency (mass-as-plane-independence.yaml
+      #structural_principle).
+
+    which_plane_is_intermediate:
+      numerical_reading: >
+        The middle of the three CCR costs. Faithful to the classical
+        problem (which is genuinely about numerical ordering).
+      structural_reading: >
+        The plane e₂e₃ by grade-position (the middle of the three
+        bivector planes in the canonical basis ordering). Faithful to
+        the framework's grade commitments.
+      status: "OPEN — the framework may adopt either; the choice determines
+               which plane is the unstable one."
+
+---
+
+# ─────────────────────────────────────────────
+# §6  WHAT THE GA FORM IMPROVES
+# ─────────────────────────────────────────────
+
+improvements:
+
+  - improvement: "No principal-axis frame is imported"
+    what_it_replaces: "The analyst's arbitrary choice of body frame"
+    consequence: >
+      The principal axes emerge as eigenvectors of I (or I_CCR). No
+      arbitrary frame choice enters the derivation. This matters when
+      the inertia tensor is not fixed — for configurations that
+      reconfigure, the eigenstructure evolves, and the GA form handles
+      this naturally.
+
+  - improvement: "Inertia tensor can be nonlinear"
+    what_it_replaces: "The classical assumption of a fixed linear map"
+    consequence: >
+      If I_CCR is nonlinear (which the framework's CCR cost functional
+      may be), the classical derivation must be replaced by the
+      perturbative expansion of the nonlinear map. The GA form is
+      the right starting point for this extension.
+
+  - improvement: "Time is not fundamental"
+    what_it_replaces: "The classical dt parameter"
+    consequence: >
+      The equation is a relation between configuration-transition rates,
+      not between coordinate-time rates. This is consistent with the
+      framework's reading of time as an index. The classical form is
+      recovered in the limit where transitions are uniform.
+
+  - improvement: "Rotors compose multiplicatively"
+    what_it_replaces: "The additive vector form of angular velocity"
+    consequence: >
+      Multiple rotations compose as rotor products, not as vector
+      additions. This avoids the non-commutativity artefacts that
+      appear in vector-based treatments of the classical problem. It
+      is also the natural language for the Möbius closure structure,
+      where the 720° double-cover is a property of rotors rather than
+      vectors.
+
+  - improvement: "Bivector commutator unifies with the framework's other algebras"
+    what_it_replaces: "The vector cross product as an isolated structure"
+    consequence: >
+      The commutator L × Ω = ½(LΩ − ΩL) is the same algebraic
+      structure that appears in the framework's other bivector
+      dynamics — the electromagnetic field tensor, the spin bivector,
+      the phase-gradient coupling. The framework's translation is not
+      a foreign structure imported from classical mechanics; it is the
+      same algebraic form as its other process-level dynamics.
+
+---
+
+# ─────────────────────────────────────────────
+# §7  THE TARGET: ELECTRON STABILITY CALCULATION
+# ─────────────────────────────────────────────
+
+target:
+
+  statement: >
+    With the translation in place, the electron's stability calculation
+    from dzhanibekov-as-moebius-integration.yaml becomes well-posed:
+    identify the equilibrium bivector configuration of the electron
+    (co-oriented pair in a single plane), perturb it by a bivector
+    perturbation δB, expand the closure condition to second order, and
+    check whether the quadratic coefficient corresponds to the half-
+    twist Tw = 1/2.
+
+  prerequisites:
+    - "The CCR cost functional I_CCR must be defined (at least locally, near the equilibrium)."
+    - "The electron's equilibrium bivector B* must be identified (from the GP solve at ccr-electron-explicit)."
+    - "The closure condition (from vortex-stability.yaml) must be expressible as a constraint on the perturbed rotor."
+
+  calculation_steps:
+    - "Write Ω = Ω* + δΩ where Ω* is the equilibrium bivector phase rate."
+    - "Write L = I_CCR(Ω) — nonlinear if I_CCR is nonlinear."
+    - "Substitute into dL/dτ + Ω × L = 0 and expand to second order in δΩ."
+    - "Extract the quadratic coefficient."
+    - "Express the coefficient in the CWF decomposition Lk = Wr + Tw."
+    - "Check whether the coefficient corresponds to Tw = 1/2."
+
+  what_the_calculation_would_show:
+    if_matches:
+      - "Tw = 1/2 is derived from the intermediate-axis instability."
+      - "The Möbius closure is the integrated form of the tumbling."
+      - "The reading in dzhanibekov-as-moebius-integration.yaml §1 is confirmed."
+    if_does_not_match:
+      - "Either the reading is wrong, or Tw = 1/2 is derived at higher order."
+      - "The three-plane extension (proton) may have a different structure."
+      - "The classical analogy is directional but not exact."
+
+---
+
+# ─────────────────────────────────────────────
+# §8  OPEN QUESTIONS
+# ─────────────────────────────────────────────
+
+open_questions:
+
+  - id: "linearity-of-ccr-inertia"
+    question: >
+      Is the CCR cost functional linear in bivector activation? If yes,
+      the classical derivation applies directly. If no, the perturbative
+      expansion must be re-derived for the nonlinear case.
+    status: "OPEN — prerequisite for the target calculation."
+
+  - id: "ccr-inertia-from-gp"
+    question: >
+      Can the CCR cost functional be derived from the GP equation's
+      second variation around the equilibrium? The classical inertia
+      tensor comes from an integral over the body (∫ ρ r² dV); the
+      CCR cost functional should have an analogous derivation.
+    status: "OPEN — connects to ccr-electron-explicit."
+
+  - id: "which-plane-is-intermediate"
+    question: >
+      Numerical reading (middle CCR cost) or structural reading
+      (middle bivector by grade-position)?
+    status: "OPEN — affects the choice of equilibrium configuration."
+
+  - id: "role-of-the-viability-condition"
+    question: >
+      Does the R5 viability condition enter the second-order expansion
+      as a constraint (limiting admissible perturbations), or does it
+      only select which configurations are physically realized?
+    status: "OPEN — connects to vortex-stability.yaml Part III."
+
+  - id: "extension-to-three-plane-proton"
+    question: >
+      The proton has three orthogonal planes; the classical rigid body
+      has three axes. Does the intermediate-axis analysis extend
+      naturally, or does the grade-3 closure impose additional structure?
+    status: "OPEN — connects to mass-as-plane-independence.yaml
+               §proton_forced_independence."
+
+---
+
+# ─────────────────────────────────────────────
+# §9  EPISTEMIC STATUS
+# ─────────────────────────────────────────────
+
+epistemic_status:
+
+  established_ga_standard:
+    - "Angular velocity, angular momentum, and inertia tensor in Cl(3,0) have the forms stated (Hestenes, Lasenby, Doran, Gull)."
+    - "The equation of motion is dL/dτ + Ω × L = 0, where × is the bivector commutator."
+    - "The classical Euler equations are recovered in the principal-axis frame."
+    - "The intermediate-axis theorem has the stated linear/quadratic structure."
+
+  framework_specific:
+    - "The inertia tensor is replaced by the CCR cost functional I_CCR."
+    - "Time is replaced by the configuration-transition index τ."
+    - "The principal-axis frame is replaced by the bivector eigenstructure of I_CCR."
+
+  open:
+    - "Linearity of I_CCR."
+    - "Derivation of I_CCR from GP (or equivalent)."
+    - "Which bivector plane is the intermediate one."
+    - "Role of the R5 viability condition."
+    - "Extension to three-plane configurations (proton)."
+
+  what_this_file_accomplishes:
+    - "States the classical Euler equations."
+    - "Translates them into Cl(3,0) form."
+    - "Identifies the framework-specific replacements."
+    - "States the intermediate-axis theorem in GA form."
+    - "Sets up the electron stability calculation as the target."
+
+  what_this_file_does_not_accomplish:
+    - "Deriving the framework-specific replacements from first principles."
+    - "Carrying out the electron stability calculation."
+    - "Proving the correspondence at higher orders."
+
+---
+
+cross_references:
+  - file: "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+    note: "The reading this file supplies the prerequisite translation for"
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "Time as configuration-transition index; rotor dynamics; basis for the τ replacement"
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "Cl(3,0) conventions; bivector basis; commutator structure"
+  - file: "core/process-physics/mass-as-plane-independence.yaml"
+    note: "CCR cost functional as the inertia tensor analogue; merge tendency"
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "Bivector parameter space; partial activation; basis for CCR cost functional"
+
+external_references:
+  - reference: "Hestenes, D. (1986). 'New Foundations for Classical Mechanics.' Reidel."
+    note: "Chapters 3–5 give the GA formulation of rigid-body mechanics used here"
+  - reference: "Lasenby, A., Doran, C., Gull, S. (1998). 'Gravity, gauge theories and geometric algebra.' Phil. Trans. R. Soc. Lond. A 356, 487–582."
+    note: "GA rotors, inertia tensor as a bivector map, the Euler equation in GA form"
+  - reference: "Doran, C., Lasenby, A. (2003). 'Geometric Algebra for Physicists.' Cambridge University Press."
+    note: "Chapter 3 gives the rigid-body formulation; Chapter 8 covers the relativistic extension"
+  - reference: "Tao, T. (2011). 'The tennis-racket problem.' MathOverflow."
+    note: "The second-order perturbation scaffold that the electron stability calculation applies"
+  - reference: "Ashbaugh, M. S., Chicone, C. C., Cushman, R. H. (1991). 'The twisting tennis racket.' Journal of Dynamics and Differential Equations 3(1), 67–85."
+    note: "Detailed classical treatment; geometric phase interpretation relevant to the temporal → spatial mapping"
