@@ -415,7 +415,22 @@ open_questions:
     status: "OPEN — would connect to mass-as-plane-independence.yaml
              §proton_forced_independence."
 
+  - id: "steiner-enumeration-as-shape-functional-evaluation"
+    question: >
+      Is the Steiner enumeration at each depth a combinatorial count of
+      viable configurations, or a shape-functional evaluation over the
+      configurations, with the magic numbers being the counts where the
+      shape-functional achieves its minima? If the latter, the SIM-006
+      computation is coupled to the GP solve rather than being a separate
+      combinatorial task.
+    status: "OPEN — connects to saturation-parameters-as-shape-functionals.yaml
+             and the c₂ shape-functional in §5."
+
 ---
+
+# ─────────────────────────────────────────────
+# §6b Quark as indermediary strain
+# ─────────────────────────────────────────────
 
 
   quark_as_intermediary_strain:
@@ -446,6 +461,10 @@ open_questions:
       force between quarks, but a shared phase-closure requirement that
       cannot be satisfied by any individual quark configuration.
 
+# ─────────────────────────────────────────────
+# §6c Proton coupled phase
+# ─────────────────────────────────────────────
+
   proton_coupled_geometric_phase:
     statement: >
       The proton's closure condition is NOT the sum of three individual quark
@@ -462,16 +481,32 @@ open_questions:
       orientation of R₂ and R₃. The joint path in configuration space is
       not a product of three independent paths — it is a correlated path
       in the three-fold product space with inter-rotor coupling at each step.
-    pseudoscalar_resolution: >
-      The grade-3 pseudoscalar closure I = e₁e₂e₃ = B₁B₂B₃ is the product
-      of the three rotor generators. Its self-duality in Cl(3,0):
-        I² = (e₁e₂e₃)² = −1
-      acts as a 2π phase in the grade-3 sector. This is not three separate
-      π phases summing additively — it is one 2π phase produced by the
-      pseudoscalar product of three mutually orthogonal grade-2 planes.
-      The coupling IS the closure: the orthogonality of the three planes
-      enforces the pseudoscalar product structure, which produces the 2π
-      joint geometric phase that individual quarks cannot each supply.
+
+  pseudoscalar_resolution: >
+    The three orthogonal bivector planes generate the even subalgebra
+    Cl⁺(3,0), which is isomorphic to the quaternions ℍ. In this
+    subalgebra:
+      B_i² = -1  for each i
+      B_i B_j = -B_j B_i  for i ≠ j
+      B₁B₂B₃ = ±1  (the quaternionic central element)
+    The product B₁B₂B₃ is not the pseudoscalar I = e₁e₂e₃ — it is a
+    scalar. But it is the "2π element" of the quaternion subalgebra:
+    multiplying any rotor by ±1 corresponds to a full 2π winding in the
+    quaternionic sense. This ±1 is what forces the double cover.
+    The joint closure of the three rotors is governed by this
+    quaternionic structure, not by the grade-3 pseudoscalar directly.
+    The pseudoscalar I = e₁e₂e₃ enters the proton story elsewhere — as
+    the volume element of the three-plane configuration, as the grade-3
+    content that distinguishes a proton closure from a meson. But the
+    closure condition on the three-rotor product is a condition on the
+    even subalgebra's central element.
+    This is is one
+    2π phase produced by the quaternionic product of three mutually
+    orthogonal bivectors. The coupling IS the closure: the orthogonality
+    of the three planes enforces the quaternionic product structure,
+    which produces the 2π joint phase that individual quarks cannot
+    each supply.
+  
     orthogonality_requirement: >
       The joint geometric phase equals 2π if and only if the three bivector
       planes are mutually orthogonal. This is not imposed — it is the
@@ -547,6 +582,7 @@ epistemic_status:
     - "The second-order term yields a different twist, with no mechanism for correction at higher order."
     - "The CCR cost functional is fundamentally nonlinear in a way that breaks the classical perturbation structure."
     - "The intermediate-plane configuration cannot be identified in framework terms."
+
 
 ---
 
