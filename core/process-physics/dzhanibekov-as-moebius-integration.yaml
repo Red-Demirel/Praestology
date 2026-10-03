@@ -256,6 +256,45 @@ calculation_target:
     - "Second order is neutral; third order yields Tw = 1/2: reading confirmed at higher order."
     - "Higher-order terms required in a way the classical problem doesn't exhibit: framework-specific structure."
 
+  second_order_coefficient_as_shape_functional:
+    statement: >
+      The second-order coefficient of the closure condition expansion is a
+      shape-functional of the equilibrium configuration B*:
+        c₂ = ∂²⟨G⟩₂/∂(δB)²|_{B*}
+      It is not a free parameter — it is determined by the GP equilibrium
+      solve via the self-consistent shape-functional chain.
+    evaluation_path: >
+      GP equilibrium solve → ρ*(r), B*(r)
+          ↓ shape-functionals (saturation-parameters-as-shape-functionals)
+          g[ρ*], Λ[ρ*], κ[ρ*], R_core, ξ
+          ↓ second-order expansion of ⟨G⟩₂ = 0 around B*
+          c₂ = c₂[ρ*, B*]
+          ↓ framing determined by second-order response
+          Tw from c₂ in CWF decomposition: Tw = Lk − Wr
+          check: Tw = 1/2?
+    framing_from_response: >
+      The Möbius framing is not imposed externally — it is the framing
+      selected by the second-order stability structure. The perturbation
+      δB breaks the symmetry; the preferred framing (the one for which c₂
+      has the sign that drives closure rather than dissolution) is the
+      Möbius framing with Tw = 1/2. Under this reading, Tw = 1/2 is the
+      framing that the equilibrium configuration selects for itself through
+      the second-order response. It is derived, not imported.
+    connection_to_f_eq: >
+      If c₂[ρ*, B*] can be computed analytically from the shape functionals,
+      then f_eq = ξ/R_core is not a separate numerical result — it is an
+      aspect of the same second-order coefficient. The two quantities (Tw
+      from the framing, f_eq from the shape functionals) are faces of one
+      second-order structure. A closed-form evaluation of c₂ would give
+      f_closure analytically, independent of the Zeno numerical solve,
+      confirming or replacing the π-series candidate (4π³+π²+π).
+    epistemic_status: >
+      STRUCTURAL PREDICTION — the shape-functional chain is established
+      (saturation-parameters-as-shape-functionals.yaml); the connection
+      of c₂ to the GP shape functionals is the open computation. Priority
+      is tied to SIM-004-v2: the GP equilibrium must be solved first to
+      supply ρ* and B* for the evaluation.
+
   third_order_geometric_phase:
     statement: >
       The third-order term of the perturbation expansion is expected to
@@ -377,6 +416,100 @@ open_questions:
              §proton_forced_independence."
 
 ---
+
+
+  quark_as_intermediary_strain:
+    statement: >
+      The 360° truncation (quark) and the 360° instability share the same
+      third-order phase mismatch: both accumulate π of geometric phase over
+      their cycle rather than 2π. The quark is therefore structurally
+      prevented from closing alone — not by an energy barrier but by a
+      topological obstruction of the same kind that prevents the 360° path
+      from satisfying R(2π) = +R₀.
+    phase_structure: >
+      360° path geometric phase = π
+        → R(2π) = −R₀  (sign flip, not self-identity)
+        → closure condition ⟨G⟩₂ = 0 cannot be satisfied independently
+        → third-order term drives the configuration toward completion
+        → but completing one 360° traversal returns −R₀, not +R₀
+        → the configuration is constitutively open
+      The quark is stable as a local attractor (a partial closure minimum
+      of the merge-tension functional) but constitutively incomplete:
+      regardless of how the CCR parameters are tuned, the phase mismatch
+      cannot be resolved within a single 360° path.
+    confinement_as_phase_obstruction: >
+      Confinement is the topological consequence of the phase mismatch.
+      The quark cannot close alone because π ≠ 2π. It is under constant
+      merge tension toward a configuration that can close — but the only
+      configuration that resolves the mismatch is one that accumulates 2π
+      jointly. This is the Praestology derivation of confinement: not a
+      force between quarks, but a shared phase-closure requirement that
+      cannot be satisfied by any individual quark configuration.
+
+  proton_coupled_geometric_phase:
+    statement: >
+      The proton's closure condition is NOT the sum of three individual quark
+      geometric phases. The coupled three-rotor system has a joint geometric
+      phase computed over the product configuration space, with inter-rotor
+      coupling terms that modify each rotor's individual phase contribution.
+      The naive sum π + π + π = 3π ≠ 2π fails — and yet the proton closes.
+      The resolution is in the coupling structure, not the individual phases.
+    naive_sum_failure: >
+      Three quarks each contributing π of geometric phase:
+        Φ_naive = π + π + π = 3π  (not 2π — closure not achieved)
+      The naive sum fails because it treats the three rotors as independent.
+      In the coupled system, the phase accumulated by R₁ depends on the
+      orientation of R₂ and R₃. The joint path in configuration space is
+      not a product of three independent paths — it is a correlated path
+      in the three-fold product space with inter-rotor coupling at each step.
+    pseudoscalar_resolution: >
+      The grade-3 pseudoscalar closure I = e₁e₂e₃ = B₁B₂B₃ is the product
+      of the three rotor generators. Its self-duality in Cl(3,0):
+        I² = (e₁e₂e₃)² = −1
+      acts as a 2π phase in the grade-3 sector. This is not three separate
+      π phases summing additively — it is one 2π phase produced by the
+      pseudoscalar product of three mutually orthogonal grade-2 planes.
+      The coupling IS the closure: the orthogonality of the three planes
+      enforces the pseudoscalar product structure, which produces the 2π
+      joint geometric phase that individual quarks cannot each supply.
+    orthogonality_requirement: >
+      The joint geometric phase equals 2π if and only if the three bivector
+      planes are mutually orthogonal. This is not imposed — it is the
+      geometric condition for I² = −1 to hold. Two non-orthogonal planes
+      give I² ≠ −1, and the joint phase deviates from 2π. Three orthogonal
+      planes are the unique configuration achieving joint closure.
+      This is why the proton requires exactly three quarks in mutually
+      orthogonal planes — not as an SU(3) colour postulate but as the
+      geometric condition for joint 2π phase closure in Cl(3,0).
+    two_vs_four_quark_exclusion: >
+      Two quarks: product lives in grade-0 + grade-2 sector. No grade-3
+        pseudoscalar is formed; no joint 2π phase in the closed grade-3
+        sector. Two quarks cannot achieve joint closure.
+        (Mesons require quark-antiquark — chirality cancellation, a
+        distinct mechanism.)
+      Four quarks: a fourth bivector plane in Cl(3,0) is linearly dependent
+        on the three basis bivectors. Adding it introduces redundancy.
+        The joint phase remains 2π (already achieved at three) but the
+        configuration has excess degrees of freedom that dissolve under R5.
+        Four independent quarks cannot form a stable closure beyond three.
+    coupled_calculation_requirement: >
+      The proton closure calculation is a distinct computation from the
+      single-rotor Dzhanibekov calculation. It requires:
+        1. The coupled three-rotor equation of motion with CCR_binding
+           coupling terms in the bivector phase rates
+        2. The joint geometric phase integral over the correlated path
+           in the three-fold product configuration space
+        3. Verification that the pseudoscalar coupling gives exactly 2π
+           joint phase for the mutually orthogonal configuration
+      Summing individual quark phases is not a valid approximation —
+      the coupling IS what produces the closure, not an additive correction.
+    open_derivation: >
+      OPEN: coupled-three-rotor-geometric-phase (priority 2, after the
+      single-rotor Tw = 1/2 calculation). Depends on:
+        euler-to-cl30-translation.yaml,
+        dirac-as-grade-chain-closure.yaml (proton product solution),
+        mass-as-plane-independence.yaml (CCR_binding as coupling term),
+        SIM-005-v2 (proton product GP solve).
 
 # ─────────────────────────────────────────────
 # §7  EPISTEMIC STATUS
