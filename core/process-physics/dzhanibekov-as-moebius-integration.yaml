@@ -256,6 +256,70 @@ calculation_target:
     - "Second order is neutral; third order yields Tw = 1/2: reading confirmed at higher order."
     - "Higher-order terms required in a way the classical problem doesn't exhibit: framework-specific structure."
 
+  third_order_geometric_phase:
+    statement: >
+      The third-order term of the perturbation expansion is expected to
+      carry the geometric phase accumulated over one closure cycle. This
+      is the term that explains why 360° is topologically obstructed
+      and 720° is uniquely selected — independently of energy.
+    argument: >
+      In the classical Tao scaffold:
+        1st order: neutral oscillation — the intermediate axis is a saddle,
+                   not a sink. No preferred direction.
+        2nd order: destabilising quadratic term — merge tendency drives the
+                   configuration away from the intermediate-plane equilibrium.
+                   The classical body tumbles; the framework configuration
+                   accumulates merge tension.
+        3rd order: geometric phase accumulated over one cycle. For a 360°
+                   path, this phase is π (half the full winding). For a
+                   720° path, this phase is 2π (one full winding).
+    topological_obstruction: >
+      The closure condition ⟨G⟩₂|_closure = 0 requires a fixed point:
+      R(θ_close) = +R₀ (self-identity). A 360° path returns with
+      R(2π) = −R₀ — the antipodal point, not the fixed point. This
+      failure is visible at zeroth order (the 360° path is not even an
+      equilibrium) but the third-order geometric phase makes explicit
+      WHY no perturbative stabilisation can fix it: the geometric phase
+      accumulated over a 360° cycle is π, not 2π. An additional 2π of
+      geometric phase requires a second traversal — exactly the 720°
+      double cover. No intermediate path works: 540° would give 3π/2,
+      which also fails self-identity.
+    connection_to_tw: >
+      The geometric phase accumulated over one full 720° cycle being
+      exactly 2π = 4π × (1/2) is precisely the statement Tw = 1/2 in
+      the CWF decomposition. The half-twist is the ratio of the
+      accumulated geometric phase to the full path length (4π). The
+      third-order geometric phase calculation is not a separate result
+      from the Tw = 1/2 derivation — it is the same calculation seen
+      from the phase-winding angle rather than the topological angle.
+    photon_electron_consequence: >
+      The photon is a counter-oriented rotor pair — its net phase
+      cancels, producing zero accumulated geometric phase. This is
+      consistent with it being 360°-like: no geometric phase winding,
+      no topological closure, no fixed-point condition, no mass.
+      The electron is the 720° closure: 2π geometric phase winding,
+      fixed-point condition satisfied, Tw = 1/2, nonzero mass.
+      The third-order term therefore explains in a single calculation:
+        (a) Why 360° cannot close (geometric phase π ≠ 2π)
+        (b) Why 720° is uniquely selected (geometric phase 2π = 4π × Tw)
+        (c) Why the photon is massless (no phase winding, no closure)
+        (d) Why the electron is massive (phase winding fixes Tw = 1/2,
+            which enters Wr_eq = Lk − Tw = 3/2, which enters α⁻¹)
+      All four from the same perturbative expansion at third order.
+    epistemic_status: >
+      STRUCTURAL PREDICTION — the argument is geometrically sound but
+      the explicit third-order calculation in Cl(3,0) terms has not been
+      carried out. The classical geometric phase result (Ashbaugh et al.
+      1991) supports the phase-winding structure; whether the Cl(3,0)
+      translation preserves it at third order is the open computation.
+      If confirmed: the perturbation expansion at orders 1, 2, 3 tells
+      the complete story of vortex stability in the framework.
+    priority: >
+      Compute alongside the second-order Tw = 1/2 check — both are
+      outputs of the same Cl(3,0) perturbation expansion and neither
+      requires additional setup beyond what euler-to-cl30-translation.yaml
+      already provides.
+
 ---
 
 # ─────────────────────────────────────────────
