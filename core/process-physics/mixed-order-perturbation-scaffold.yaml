@@ -1,0 +1,414 @@
+# /core/process-physics/mixed-order-perturbation-scaffold.yaml
+name: "Mixed-Order Perturbation Scaffold: Multi-Rotor Coupling, Off-Diagonal
+       Inertia, and CCR as Hessian Consequence"
+version: "0.2"
+status: "STRUCTURAL SPECIFICATION — expands the closure condition in mixed
+         multivector derivatives; identifies off-diagonal inertia as the
+         mutual-reference source; proposes CCR-n as a function of the
+         Hessian eigenvalues at each depth. The CCR-as-consequence claim is
+         a structural hypothesis with a specific derivation target."
+domain: "Core / Process-Physics"
+
+dependency_map:
+  requires:
+    - "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+    - "core/process-physics/bivector-partial-parameters.yaml"
+    - "core/process-physics/relational-effects-extra-dof.yaml"
+    - "core/process-physics/intrinsic-reference-spin-momentum.yaml"
+    - "core/process-physics/euler-to-cl30-translation.yaml"
+  provides_to:
+    - target: "core/process-physics/iterative-depth-hierarchy.yaml"
+      via: "Hessian eigenvalue structure as the CCR-n determinant at each depth"
+    - target: "core/closure-configuration-ratio.yaml"
+      via: "CCR as a consequence of the mixed-derivative potential structure"
+
+---
+
+# ─────────────────────────────────────────────
+# §1  OPERATOR EXPANSION OF THE CLOSURE CONDITION
+# ─────────────────────────────────────────────
+
+operator_expansion:
+  statement: >
+    The closure condition ⟨G⟩₂|_closure = 0 is expanded around an equilibrium
+    bivector configuration B* using the multivector differential operator
+    ∂_B. The total configuration response is a mixed-order accumulative
+    where each order governs a distinct physical behavior.
+
+  multivector_series: |
+    ⟨G⟩₂ (B* + δB) = ⟨G⟩₂|_B*
+                      + (δB · ∂_B) ⟨G⟩₂|_B*
+                      + ½! (δB · ∂_B)² ⟨G⟩₂|_B*
+                      + ⅙! (δB · ∂_B)³ ⟨G⟩₂|_B*
+                      + ... + 1/n! (δB · ∂_B)ⁿ ⟨G⟩₂|_B* = 0
+
+  order_role_mapping:
+    n_1_linear:
+      order: 1
+      operator: "(δB · ∂_B)"
+      physics: "Neutral linear oscillation around the intermediate-plane equilibrium."
+    n_2_quadratic:
+      order: 2
+      operator: "½! (δB · ∂_B)²"
+      physics: "Intermediate-axis Dzhanibekov instability; supplies the c₂ coefficient (shape-functional of the equilibrium) driving Tw = 1/2 integration."
+    n_3_cubic:
+      order: 3
+      operator: "⅙! (δB · ∂_B)³"
+      physics: "Geometric phase accumulation; distinguishes π (single-plane unclosed) from 2π (720° Möbius closure)."
+    n_cross_mixed:
+      order: "n ≥ 2 (mixed cross-partials)"
+      operator: "∂² / (∂B_i ∂B_j) and higher cross-derivatives"
+      physics: "Inter-plane coupling. Off-diagonal inertia. Source of the relational reference structure."
+
+---
+
+# ─────────────────────────────────────────────
+# §2  MIXED CROSS-DERIVATIVES AS OFF-DIAGONAL INERTIA
+# ─────────────────────────────────────────────
+
+off_diagonal_inertia:
+  statement: >
+    The mixed cross-derivatives of the potential functional are the
+    framework's off-diagonal inertia. In classical rigid-body mechanics,
+    the inertia tensor I_ij has diagonal entries (intrinsic moments) and
+    off-diagonal entries (products of inertia) measuring how rotation
+    about one axis drags another along. The framework's CCR cost functional
+    I_CCR plays the same role on bivector activation space; its mixed
+    second derivatives are the off-diagonal coupling elements.
+
+  formal_identification: |
+    I_CCR[B] — potential functional on bivector activation configurations
+    H_ij = ∂² I_CCR / (∂B_i ∂B_j) |_B*  — Hessian at equilibrium
+
+    Diagonal H_ii  — intrinsic cost of activating plane i alone
+    Off-diagonal H_ij (i ≠ j) — coupling cost between planes i and j
+    Eigenvalues λ_1, ..., λ_n — principal coupling strengths along eigenvectors
+
+  what_this_replaces:
+    prior_sketch: >
+      The earlier draft proposed a new object "S_rel = Grade_2(∂²⟨G⟩₂/(∂B₁∂B₂))"
+      called an "anchor tensor." This was underspecified — the grade-2
+      projection was not derived.
+    corrected_identification: >
+      The mixed cross-derivative is the off-diagonal inertia element of
+      the potential functional. It is a familiar object with an established
+      interpretation, not a new tensor. The "reference" it provides is the
+      classical mechanical coupling effect: rotation about one plane
+      imposes a constraint on the other, and this constraint is what
+      supplies the mutual reference that neither plane alone can define.
+
+  coupling_as_phase_space_restriction:
+    statement: >
+      Coupling between bivector planes does not "break a symmetry." It
+      restricts the phase space available to each plane individually.
+      The restriction is what allows an internal reference to be defined:
+      neither plane can rotate independently of the other, and the
+      constraint provides a "which way" that neither plane alone could
+      provide.
+    uncoupled_case: >
+      Off-diagonal H_ij = 0. No mutual constraint. Each plane rotates
+      independently; no shared reference. Photon-like: phase rate
+      present, chirality sense reference-free.
+    coupled_case: >
+      Off-diagonal H_ij ≠ 0. Planes are mutually constrained. A
+      joint reference is established by the coupling eigenstructure.
+      Electron-like: phase rate and chirality sense both internally
+      referenced.
+
+  connection_to_intrinsic_reference:
+    statement: >
+      This is the algebraic form of the mutual-reference reading in
+      intrinsic-reference-spin-momentum.yaml. The off-diagonal inertia
+      is what provides the reciprocal reference between directional
+      (grade-1) and orientational (grade-2) character. The coupled
+      eigenstructure of the Hessian is the shared frame.
+
+---
+
+# ─────────────────────────────────────────────
+# §3  THE CCR AS HESSIAN CONSEQUENCE
+# ─────────────────────────────────────────────
+
+ccr_as_hessian_functional_consequence:
+  status: "STRUCTURAL HYPOTHESIS — the CCR at each depth is proposed as a
+           functional invariant of the second-variation operator of the
+           potential, not a point-local function of Hessian eigenvalues.
+           This reading is more consistent with the framework's process-
+           first pattern and connects to the Baum-Connes assembly map.
+           The derivation from the existing ratio form (Wr·Ω_rotor)/Ω_embed
+           is open."
+
+  statement: >
+    The CCR at depth n is not a function of eigenvalues evaluated at a
+    single equilibrium configuration. It is a functional invariant of the
+    Hessian as a functional — the second-variation operator of the
+    potential, whose spectrum and index are intrinsic to the potential's
+    second-order structure across configuration space.
+
+  point_vs_functional:
+    point_reading:
+      object: "H[B*] — a matrix at the equilibrium"
+      output: "Eigenvalues λ_1, ..., λ_n at B*"
+      ccr: "f(λ_1, ..., λ_n) — some function of the point values"
+      problem: >
+        The function f is not determined. It becomes a fitting choice
+        (pick f to match CCR). The reading is derivative-level — it
+        treats a snapshot as if it were the structure.
+    functional_reading:
+      object: "H[·] — an operator-valued functional over configuration space"
+      output: "Spectrum, index, and spectral flow of H across the configuration space"
+      ccr: "A specific functional invariant of H[·], evaluated at depth n"
+      advantage: >
+        The invariant is intrinsic. It does not need f to be chosen; it
+        is what the second-variation operator's structure supplies when
+        projected through the assembly map.
+
+  which_invariant:
+    statement: >
+      The natural candidates for the CCR invariant of a self-adjoint
+      operator functional are:
+        - Index of H[·] (for operators with positive and negative spectra)
+        - Spectral flow across configuration space
+        - Determinant line bundle and its holonomy
+        - Resolvent trace evaluated along the closure path
+      The framework's Baum-Connes assembly-map reading suggests the
+      index is the correct one: the assembly map takes the K-theory
+      class of an operator family to the analytic side, and the CCR
+      is what that index evaluates to at depth n.
+
+  connection_to_assembly_map:
+    statement: >
+      The Hessian functional H[·] is a family of self-adjoint operators
+      parameterized by configuration space. Its K-theory class is well-
+      defined (under standard conditions: bounded, Fredholm, with a
+      spectral gap). The Baum-Connes assembly map μ takes this class to
+      the analytic side, where its index is an integer or a rational.
+
+      The CCR at depth n is the index of H[·] under μ, evaluated on the
+      depth-n configuration space:
+
+        CCR^n = μ([H[·]|_{D_n}])
+
+      Under this reading, the CCR is not a ratio of geometric quantities
+      imposed on configurations. It is the index of the second-variation
+      operator's K-theory class — which is why it is depth-indexed, and
+      why it emerges from the potential's second-order structure.
+
+  relationship_to_prior_form:
+    statement: >
+      The existing ratio form (Wr·Ω_rotor)/Ω_embed is not being replaced.
+      It is being identified. The claim is that the ratio, evaluated at
+      the depth-n equilibrium, equals the index of the Hessian functional
+      at that depth. The ratio is what CCR has been computing numerically;
+      the index is what it has been computing structurally. The derivation
+      target is to show the equality.
+    derivation_target: >
+      Show that (Wr·Ω_rotor)/Ω_embed at depth n equals μ([H[·]|_{D_n}]).
+      For the electron: show that 1 (or α) equals the index of the
+      second-variation operator on the single-plane configuration.
+      For the proton: show that CCR_binding equals the index on the
+      three-plane configuration.
+
+  why_this_resolves_the_f_choice:
+    statement: >
+      Under the point reading, the function f was a free choice. Under
+      the functional reading, f is determined: it is the index map. There
+      is no "which f" question — there is only "is the index reading
+      correct?" which is a binary structural claim.
+
+  what_would_confirm:
+    - "The index of H[·] on the single-plane configuration equals the
+       existing CCR¹ (electron's value)."
+    - "The index on the three-plane configuration equals CCR² (proton's
+       CCR_binding)."
+    - "The depth-indexing of the CCR follows from the depth-indexing of
+       the configuration spaces on which H[·] is evaluated."
+
+  what_would_falsify:
+    - "The index is identically 0 or trivial on the relevant configuration
+       spaces — no CCR-like invariant emerges from the assembly map."
+    - "The index is the same at every depth — no depth-indexing follows
+       from the functional structure."
+    - "The index depends on the specific basis choice rather than on the
+       intrinsic K-theory class — no basis-independent invariant exists."
+
+  open:
+    - "Explicit construction of H[·] as an operator functional from the
+       potential I_CCR."
+    - "Verification of the Fredholm and gap conditions required for
+       K-theory classification."
+    - "Computation of the index at depth 1 (electron) and comparison
+       with CCR¹ = 1."
+    - "Computation of the index at depth 2 (proton) and comparison
+       with CCR² = CCR_binding."
+
+  cross_references:
+    - file: "core/process-physics/baum-connes-assembly-map-correspondence.yaml"
+      note: "The assembly map μ is the tool that takes the K-theory class
+             of H[·] to the analytic side; the CCR is the index under μ."
+    - file: "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+      note: "The second-order term is the Hessian functional's quadratic
+             form; the intermediate-axis instability is a spectral
+             property of H[·]."
+    - file: "core/process-physics/euler-to-cl30-translation.yaml"
+      note: "Off-diagonal inertia is the matrix representation of H[·]
+             in a specific basis; the functional reading generalizes."
+
+---
+
+# ─────────────────────────────────────────────
+# §4  DEPTH INDEXING — NOTATION CLARIFICATION
+# ─────────────────────────────────────────────
+
+depth_indexing:
+  statement: >
+    The earlier draft used "depth_1_single_plane", "depth_2_two_plane",
+    "depth_3_three_plane_proton" — a numbering by plane count, which
+    collides with the cascade document's NCH depth indexing (D₁ = rotor,
+    D₂ = pseudoscalar/proton). The collision was confusing.
+
+  cascade_document_indexing:
+    d_1: "Rotor level — electron / photon — one bivector plane"
+    d_2: "Pseudoscalar level — proton / neutron — three orthogonal bivector planes"
+    d_3: "S⁷ embedding — nuclei — higher-dimensional configurations"
+
+  hessian_dimension_indexing:
+    hessian_1: "One active plane. Corresponds to cascade D₁ (electron)."
+    hessian_2: "Two active planes. A configuration that the cascade does not
+                name as a separate depth — could be the electron's internal
+                rotor-pair coupling, or a meson-like configuration, or an
+                intermediate S⁷ state. Needs clarification."
+    hessian_3: "Three active planes. Corresponds to cascade D₂ (proton)."
+
+  recommendation: >
+    Use "hessian_dim = k" for the plane-count indexing to avoid collision
+    with "D_n" (cascade depth). Two-plane configurations need to be
+    identified as either the electron's internal coupling (hessian_dim = 2
+    inside the electron's structure) or a distinct configuration the
+    cascade has not yet named.
+
+---
+
+# ─────────────────────────────────────────────
+# §5  OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+
+  priority_1:
+    - id: "hessian-of-ccr-at-equilibrium"
+      description: >
+        Compute the Hessian of I_CCR at the electron equilibrium (B*) from
+        the GP solve or equivalent. Extract the eigenvalue λ₁^electron.
+      depends_on: ["SIM-004-v2", "ccr-electron-explicit"]
+      priority: 1
+
+    - id: "ccr-form-from-eigenvalues-electron"
+      description: >
+        Identify which function f₁ of λ₁^electron recovers the existing
+        CCR form (Wr·Ω_rotor)/Ω_embed at the electron. If a natural
+        function exists, the CCR-as-consequence hypothesis is supported
+        at the electron level.
+      depends_on: ["hessian-of-ccr-at-equilibrium"]
+      priority: 1
+
+    - id: "three-plane-hessian-structure"
+      description: >
+        Compute the 3×3 Hessian for the proton's three orthogonal planes.
+        Determine the ordering of eigenvalues (which is intermediate) and
+        whether the off-diagonal structure matches the mutual-reference
+        predictions.
+      depends_on: ["SIM-005-v2", "mass-as-plane-independence.yaml"]
+      priority: 1
+
+  priority_2:
+    - id: "ccr-binding-from-three-plane-eigenvalues"
+      description: >
+        Show that CCR² (the proton's binding CCR) equals a specific function
+        of the three-plane Hessian eigenvalues. Recovers the CCR_binding
+        from closure-types-nesting.yaml as a derived quantity.
+      depends_on: ["three-plane-hessian-structure"]
+      priority: 2
+
+    - id: "intermediate-axis-as-middle-eigenvalue"
+      description: >
+        Show that the Dzhanibekov intermediate axis is the middle eigenvalue
+        of the Hessian, and that the second-order instability follows from
+        the eigenvalue ordering.
+      depends_on: ["three-plane-hessian-structure"]
+      priority: 2
+
+    - id: "two-plane-configuration-identification"
+      description: >
+        Clarify what hessian_dim = 2 corresponds to. Options: the electron's
+        internal rotor-pair coupling, a meson-like configuration, or an
+        intermediate S⁷ state. The identification affects the higher-depth
+        predictions.
+      priority: 2
+
+  priority_3:
+    - id: "ccr-family-from-hessian-eigenvalue-functions"
+      description: >
+        Extend the CCR-as-consequence reading across the full depth
+        hierarchy: CCR⁰ = φ⁻¹, CCR¹ = α, CCR² = CCR_binding. Determine
+        whether all three are eigenvalue functions of the depth-appropriate
+        Hessian, and whether φ⁻¹ arises as the 0-dimensional case (the
+        scalar-potential Hessian at D₋₁ → D₀).
+      depends_on: ["ccr-form-from-eigenvalues-electron",
+                   "ccr-binding-from-three-plane-eigenvalues",
+                   "core/d-minus-one-pre-vector-level.yaml"]
+      priority: 3
+
+---
+
+# ─────────────────────────────────────────────
+# §6  EPISTEMIC STATUS
+# ─────────────────────────────────────────────
+
+epistemic_status:
+
+  established:
+    - "The closure condition ⟨G⟩₂ = 0 can be expanded in multivector derivatives."
+    - "Order 2 (quadratic) and order 3 (cubic) carry the Dzhanibekov instability and geometric phase, as in dzhanibekov-as-moebius-integration.yaml."
+    - "Mixed cross-derivatives of the potential functional are the framework's off-diagonal inertia."
+    - "The classical inertia tensor has the same structure: diagonal entries (moments) and off-diagonal entries (products)."
+
+  structural_hypothesis:
+    - "Coupling between bivector planes is the source of the mutual-reference structure (algebraic form of intrinsic-reference-spin-momentum.yaml)."
+    - "The CCR at each depth is a function of the Hessian eigenvalues at that depth."
+    - "The intermediate-axis instability follows from the ordering of eigenvalues."
+
+  derivation_target:
+    - "Show that (Wr·Ω_rotor)/Ω_embed equals a specific function of the Hessian eigenvalues."
+    - "Extend the identification to the three-plane proton case and to higher depths."
+
+  open:
+    - "Fredholm condition for the Hessian functional: the Baum-Connes assembly
+       map requires H[·] to be Fredholm (compact resolvent, spectral gap at the
+       closure configuration). The logarithmic saturation term Λln(1+κ|ψ|²)
+       softens the spectrum but whether it opens a sufficient spectral gap is
+       unverified. Must be checked before the index reading is valid."
+    - "Explicit Hessian at the electron equilibrium." 
+    - "Correct eigenvalue function f₁ (or f_n at higher depths)."
+    - "Identification of the two-plane configuration."
+    - "Whether CCR⁰ = φ⁻¹ emerges as the 0-dimensional (scalar) case of the same structure."
+
+---
+
+cross_references:
+  - file: "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+    note: "Order-2 and order-3 roles; the mixed-order scaffold extends the two-tier reading to cross-derivative coupling"
+  - file: "core/process-physics/euler-to-cl30-translation.yaml"
+    note: "Off-diagonal inertia is the classical object this file identifies with mixed cross-derivatives"
+  - file: "core/process-physics/intrinsic-reference-spin-momentum.yaml"
+    note: "Mutual reference reading; off-diagonal coupling is its algebraic form"
+  - file: "core/process-physics/bivector-partial-parameters.yaml"
+    note: "Bivector activation space on which the Hessian is defined"
+  - file: "core/process-physics/relational-effects-extra-dof.yaml"
+    note: "Gradient-driven coupling; consistent with the off-diagonal reading"
+  - file: "core/process-physics/iterative-depth-hierarchy.yaml"
+    note: "Depth indexing — cross-reference for notation alignment"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR as Hessian consequence — potential derivation of the existing ratio form"
+  - file: "core/d-minus-one-pre-vector-level.yaml"
+    note: "Possible 0-dimensional case; CCR⁰ = φ⁻¹ as scalar-Hessian eigenvalue function"
