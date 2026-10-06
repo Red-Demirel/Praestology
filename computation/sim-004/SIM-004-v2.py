@@ -14,8 +14,12 @@ where:
   Wr_eq     = 3/2          topologically fixed (CWF: Lk=2, Tw=1/2)
   f_closure = f_geom · f_eq  two-factor decomposition
 
-  f_geom = 1/π             analytic — PIT line integral of |[B1,B2]|
-                            over t ∈ [0,4π]. No free parameters.
+  f_geom = 8/(3π)          Haar-weighted PIT integral of |[B1,B2]|·sin²(t/2)
+                            over t ∈ [0,4π], normalised by path length 2π.
+                            Prior flat value was 1/π; Haar weight adds factor 8/3.
+                            Dual reading: sin²(t/2) is both the Spin(3) Haar
+                            measure AND the R5 firing probability on path.
+                            Effective pulse threshold: π·f(Amplitude,Π_eff).
 
   f_eq   = ξ / R_core      equilibrium correction factor — ratio of
                             healing length to vortex core radius.
@@ -48,7 +52,8 @@ Topological anchors (no free parameters after SPEC-011)
   Tw    = 1/2     algebraic, Möbius half-twist
   Wr_eq = 3/2     CWF invariant (Lk=2, Tw=1/2)
   t ∈ [0,4π]     720° double cover
-  f_geom = 1/π   analytic PIT integral (derived below)
+  f_geom = 8/(3π) Haar-weighted PIT integral (derived in Section A)
+              flat value 1/π also computed for comparison
 
 Open items
 ----------
@@ -109,28 +114,105 @@ def bivector_commutator_norm(t):
     In Cl(3,0): [B1,B2] = 2sin(θ)·B3 where θ(t) = t/2
     (half-twist per full cycle — algebraic from Tw=1/2).
 
-    |[B1,B2](t)| = 2|sin(t/2)| — but the 2 cancels in the
-    normalisation by 4π, so the normalised integrand is |sin(t/2)|.
-
-    Analytic integral:
-      ∫_0^{4π} |sin(t/2)| dt = 4   (two half-periods, each = 2)
-      f_geom = 4 / (4π) = 1/π      exact, no numerical error
+    |[B1,B2](t)| = 2|sin(t/2)| — the 2 cancels in normalisation,
+    so the normalised integrand is |sin(t/2)|.
     """
     return np.abs(np.sin(t / 2.0))
 
 
+def haar_weight(t):
+    """
+    Haar measure weight on the 720° path through Spin(3) ≅ SU(2) ≅ S³.
+
+    The standard Haar measure on S³ (unit sphere, total volume 2π²)
+    in the angle parametrisation θ = t/2 is:
+
+      dμ_Haar = sin²(θ) dθ = sin²(t/2) · (dt/2)
+
+    Physical reading (dual interpretation — both are correct):
+
+    Geometric reading:
+      sin²(t/2) is the Haar weight on SU(2). The 720° path traverses
+      Spin(3) once; Spin(3) double-covers SO(3) (vol 2π² vs π²).
+      The double-cover is structural — between Spin and SO, not between
+      the path and the group. The factor of 2 in Vol(Spin)/Vol(SO) = 2
+      enters Ω_rotor via this weight, not via a doubled path domain.
+
+    Effective pulse threshold reading:
+      sin²(t/2) is the R5 firing probability as a function of phase
+      along the 720° path. The effective pulse threshold is:
+        Threshold(t) = π · f(Amplitude, Π_eff)
+      where sin²(t/2) = f(A, Π_eff) evaluated along the path.
+      The Haar weight IS the R5 firing coupling — the geometry of the
+      rotor group sets the phase scale for viability threshold crossings.
+      These are not two different objects; they are two descriptions
+      of the same coupling at different levels of abstraction.
+
+    The two readings are unified: the Haar-weighted integral computes
+    the threshold-crossing rate of the commutator pulse along the 720°
+    path, normalised by the path length in the Haar metric.
+    """
+    return np.sin(t / 2.0) ** 2
+
+
 def compute_f_geom(n_points=8000):
     """
-    f_geom = (1/4π) ∫_0^{4π} |[B1,B2](t)| dt = 1/π (analytic).
+    f_geom — Haar-weighted commutator integral along the 720° Möbius path.
 
-    Numerical integration provided as verification only.
-    The analytic value is used in all subsequent computations.
+    Two computations:
+
+    1. Flat (prior): f_geom_flat = (1/4π) ∫ |sin(t/2)| dt = 1/π
+       Does not account for the Haar measure on Spin(3).
+       Valid if the embedding is flat — i.e., if the path lives in
+       a flat space rather than S³.
+
+    2. Haar-weighted: f_geom_Haar = ∫ |sin(t/2)| · sin²(t/2) dt
+                                   / ∫ sin²(t/2) dt
+       Normalised by the path length in the Haar metric (= 2π).
+       Accounts for the fact that the rotor path lives in Spin(3) ≅ S³
+       with the standard round metric.
+
+    Analytic results:
+      Numerator:   ∫₀^{4π} |sin(t/2)| · sin²(t/2) dt = 16/3
+        (via u = t/2: 2∫₀^{2π} |sin u| sin²u du = 4∫₀^π sin³u du
+         = 4·[−cosu + cos³u/3]₀^π = 4·4/3 = 16/3)
+
+      Denominator: ∫₀^{4π} sin²(t/2) dt = 2π
+        (via u = t/2: 2∫₀^{2π} sin²u du = 2π)
+
+      f_geom_Haar = (16/3) / (2π) = 8/(3π)
+
+    Note on the double-cover (Spin(3) vs SO(3)):
+      Vol(Spin(3)) = Vol(S³) = 2π²
+      Vol(SO(3))   = Vol(S³)/2 = π²
+      The 720° path traverses Spin(3) once.
+      Ω_embed = 2π² (Spin(3)) is the correct embedding volume.
+      The factor of 2 between Spin and SO enters through the Haar
+      weight (sin²(t/2) already encodes this), not through doubling
+      the integration domain. Whether Ω_rotor is the path length
+      in Haar metric (2π) or the full Spin(3) volume (2π²) determines
+      a further π factor — this is what the CCR derivation must settle.
+
+    Returns: f_numerical_flat, f_analytic_flat,
+             f_numerical_haar, f_analytic_haar
     """
-    t          = np.linspace(0.0, 4.0 * np.pi, n_points, endpoint=False)
-    dt         = t[1] - t[0]
-    f_numerical = np.sum(bivector_commutator_norm(t)) * dt / (4.0 * np.pi)
-    f_analytic  = 1.0 / np.pi
-    return f_numerical, f_analytic
+    t  = np.linspace(0.0, 4.0 * np.pi, n_points, endpoint=False)
+    dt = t[1] - t[0]
+
+    comm = bivector_commutator_norm(t)
+    haar = haar_weight(t)
+
+    # Flat (prior result)
+    f_flat_num  = np.sum(comm) * dt / (4.0 * np.pi)
+    f_flat_anal = 1.0 / np.pi
+
+    # Haar-weighted: normalised by path length in Haar metric
+    numerator   = np.sum(comm * haar) * dt        # ∫ |[B1,B2]| · sin²(t/2) dt
+    denominator = np.sum(haar) * dt               # ∫ sin²(t/2) dt  ≈ 2π
+    f_haar_num  = numerator / denominator
+    f_haar_anal = 8.0 / (3.0 * np.pi)            # 16/3 / 2π = 8/(3π)
+
+    return f_flat_num, f_flat_anal, f_haar_num, f_haar_anal
 
 
 def compute_writhe_numerical(b1, b2, b3, subsample=150):
@@ -385,11 +467,38 @@ def diagnostics(f_geom, f_eq, params):
     f_eq_for_geom = 1.0 / (WR_EQ * f_geom * ALPHA_INV_GEOMETRIC)
     f_eq_for_meas = 1.0 / (WR_EQ * f_geom * ALPHA_INV_CODATA)
 
-    print(f"\n    f_geom = 1/π = {f_geom:.8f}  (analytic, exact)")
-    print(f"    f_eq (current GP)       = {f_eq:.6f}")
-    print(f"    f_eq needed (geometric) = {f_eq_for_geom:.6f}")
-    print(f"    f_eq needed (CODATA)    = {f_eq_for_meas:.6f}")
-    print(f"    Ratio (needed/current)  = {f_eq_for_geom/f_eq:.4f}")
+    f_flat = 1.0 / np.pi
+    f_haar = 8.0 / (3.0 * np.pi)
+
+    print(f"\n    f_geom comparison (Haar vs flat measure):")
+    print(f"      f_geom_flat = 1/π    = {f_flat:.8f}  (no Haar weight)")
+    print(f"      f_geom_Haar = 8/(3π) = {f_haar:.8f}  (Haar weight sin²(t/2))")
+    print(f"      Ratio Haar/flat      = {f_haar/f_flat:.6f}  (= 8/3)")
+    print(f"    f_geom (active)        = {f_geom:.8f}")
+    print(f"    f_eq   (current GP)    = {f_eq:.8f}")
+    print()
+    print(f"    f_eq targets with FLAT measure (f_geom = 1/π):")
+    f_eq_flat_geom = 1.0 / (WR_EQ * f_flat * ALPHA_INV_GEOMETRIC)
+    f_eq_flat_meas = 1.0 / (WR_EQ * f_flat * ALPHA_INV_CODATA)
+    print(f"      geometric target: {f_eq_flat_geom:.8f}")
+    print(f"      CODATA target:    {f_eq_flat_meas:.8f}")
+    print()
+    print(f"    f_eq targets with HAAR measure (f_geom = 8/(3π)):")
+    f_eq_haar_geom = 1.0 / (WR_EQ * f_haar * ALPHA_INV_GEOMETRIC)
+    f_eq_haar_meas = 1.0 / (WR_EQ * f_haar * ALPHA_INV_CODATA)
+    print(f"      geometric target: {f_eq_haar_geom:.8f}")
+    print(f"      CODATA target:    {f_eq_haar_meas:.8f}")
+    print(f"    Haar shifts f_eq target by factor 3/8 = {3/8:.6f}")
+    print(f"    (smaller f_eq needed — Haar weight does more work)")
+    print()
+    print(f"    Ratio (f_eq needed / current) = {f_eq_for_geom/f_eq:.4f}")
+    print()
+    print(f"    Effective pulse threshold dual reading:")
+    print(f"      sin²(t/2) = Haar weight = R5 firing probability on path")
+    print(f"      Threshold(t) = π · f(Amplitude, Π_eff) = π · sin²(t/2)")
+    print(f"      The geometry of Spin(3) sets the R5 phase threshold scale.")
+    print(f"      Open: derive f(A,Π_eff) from master equation R5 firing rate.")
+    print(f"      Open: haar-normalisation-choice (Ω_rotor = 2π vs 2π²?)")
 
     print(f"\n    Converged GP parameters:")
     for k, v in params.items():
@@ -454,13 +563,42 @@ def run():
 
     # A: centreline and f_geom
     print("\n[A] Möbius centreline + commutator integral")
-    b1, b2, b3, t = mobius_centreline(4000)
-    wr_num         = compute_writhe_numerical(b1, b2, b3)
-    f_num, f_geom  = compute_f_geom()
+    b1, b2, b3, t  = mobius_centreline(4000)
+    wr_num          = compute_writhe_numerical(b1, b2, b3)
+    f_flat_num, f_flat_anal, f_haar_num, f_haar_anal = compute_f_geom()
     print(f"    Wr numerical (Gauss) = {wr_num:.4f}  "
           f"(target {WR_EQ:.4f})")
-    print(f"    f_geom numerical     = {f_num:.8f}")
-    print(f"    f_geom analytic      = 1/π = {f_geom:.8f}  ← used")
+    print()
+    print(f"    Flat measure (prior):")
+    print(f"      f_geom_flat numerical = {f_flat_num:.8f}")
+    print(f"      f_geom_flat analytic  = 1/π = {f_flat_anal:.8f}")
+    print()
+    print(f"    Haar-weighted measure (Spin(3) ≅ S³, weight sin²(t/2)):")
+    print(f"      f_geom_Haar numerical = {f_haar_num:.8f}")
+    print(f"      f_geom_Haar analytic  = 8/(3π) = {f_haar_anal:.8f}")
+    print(f"      Ratio Haar/flat       = {f_haar_anal/f_flat_anal:.6f}  "
+          f"(= 8/3 ≈ 2.667)")
+    print()
+    print(f"    Dual interpretation of sin²(t/2) weight:")
+    print(f"      Geometric:  Haar measure on Spin(3) — rotor group geometry")
+    print(f"      Dynamical:  R5 firing probability along 720° path")
+    print(f"                  Effective pulse threshold = π · f(A, Π_eff)")
+    print(f"                  sin²(t/2) = f(A,Π_eff) evaluated on path")
+    print(f"      Both readings are the same coupling at different levels.")
+    print()
+    print(f"    Double-cover note:")
+    print(f"      Vol(Spin(3)) = 2π² = {2*np.pi**2:.6f}")
+    print(f"      Vol(SO(3))   = π²  = {np.pi**2:.6f}  (Spin/SO ratio = 2)")
+    print(f"      Path length in Haar metric = 2π = {2*np.pi:.6f}")
+    print(f"      The factor of 2 (Spin vs SO) is encoded in sin²(t/2),")
+    print(f"      not in doubling the integration domain [0,4π].")
+    print(f"      Whether Ω_rotor = path length (2π) or Spin(3) volume (2π²)")
+    print(f"      determines a further π factor — open: haar-normalisation-choice")
+    print()
+
+    # Use Haar-weighted f_geom as primary (with flat retained for comparison)
+    f_geom = f_haar_anal
+    print(f"    Using f_geom = f_geom_Haar = 8/(3π) = {f_geom:.8f}")
 
     # B: self-consistent GP
     psi_fn, params = self_consistent_solve(verbose=True)
