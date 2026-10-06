@@ -1,12 +1,13 @@
 # /core/process-physics/mixed-order-perturbation-scaffold.yaml
-name: "Mixed-Order Perturbation Scaffold: Multi-Rotor Coupling, Off-Diagonal
-       Inertia, and CCR as Hessian Consequence"
-version: "0.2"
-status: "STRUCTURAL SPECIFICATION — expands the closure condition in mixed
-         multivector derivatives; identifies off-diagonal inertia as the
-         mutual-reference source; proposes CCR-n as a function of the
-         Hessian eigenvalues at each depth. The CCR-as-consequence claim is
-         a structural hypothesis with a specific derivation target."
+name: "Mixed-Order Perturbation Scaffold: Gradient-Axis Coupling, Disbalance
+       Resolution, and CCR as Coupling Functional Consequence"
+version: "0.5"
+status: "STRUCTURAL SPECIFICATION v0.4 — corrects the Hessian language:
+         the coupling structure is between gradient-axes (first-order objects),
+         not second partial derivatives of a scalar potential. The system
+         resolves disbalances between gradient-axes, not minimizes a potential.
+         Hessian matrix language replaced with coupling-functional language
+         throughout. CCR-as-consequence reading retained and sharpened."
 domain: "Core / Process-Physics"
 
 dependency_map:
@@ -66,68 +67,251 @@ operator_expansion:
 # §2  MIXED CROSS-DERIVATIVES AS OFF-DIAGONAL INERTIA
 # ─────────────────────────────────────────────
 
-off_diagonal_inertia:
-  statement: >
-    The mixed cross-derivatives of the potential functional are the
-    framework's off-diagonal inertia. In classical rigid-body mechanics,
-    the inertia tensor I_ij has diagonal entries (intrinsic moments) and
-    off-diagonal entries (products of inertia) measuring how rotation
-    about one axis drags another along. The framework's CCR cost functional
-    I_CCR plays the same role on bivector activation space; its mixed
-    second derivatives are the off-diagonal coupling elements.
+gradient_axis_coupling:
+  correction_note: >
+    The prior draft used "off-diagonal inertia" and "Hessian matrix" language,
+    importing classical optimization assumptions that don't belong in the
+    framework. The coupling structure is between gradient-axes — first-order
+    objects in the potential space — not second partial derivatives of a scalar
+    potential. The system resolves disbalances between gradient-axes; it does
+    not minimize a potential.
+
+  what_gradient_axes_are: >
+    A gradient-axis is a direction in bivector activation space along which
+    the process exerts R3 tension — an unresolved directional pull. It is a
+    first-order object. Two gradient-axes are coupled when the R3 tension
+    along one constrains the available R4 resolutions along the other.
+    The coupling is not a second derivative; it is a mutual constraint
+    between two first-order tensions.
 
   formal_identification: |
-    I_CCR[B] — potential functional on bivector activation configurations
-    H_ij = ∂² I_CCR / (∂B_i ∂B_j) |_B*  — Hessian at equilibrium
+    G_i  — gradient-axis i: direction of R3 tension in bivector space
+    C_ij — coupling strength between gradient-axes i and j:
+            how much tension along G_i constrains resolution along G_j
+    C_ii — intrinsic resolution cost of axis i alone
+    C_ij (i ≠ j) — mutual constraint between axes i and j
 
-    Diagonal H_ii  — intrinsic cost of activating plane i alone
-    Off-diagonal H_ij (i ≠ j) — coupling cost between planes i and j
-    Eigenvalues λ_1, ..., λ_n — principal coupling strengths along eigenvectors
+    The coupling structure C[·] is a functional on gradient-axis pairs,
+    not a matrix of second derivatives. Its diagonal entries are intrinsic
+    resolution costs; its off-diagonal entries are mutual constraints.
+
+  dynamics: >
+    The system is not minimizing a potential. It is resolving disbalances
+    between gradient-axes. The process runs from tension (R3) through
+    commitment (R4) toward resolution. The "equilibrium" is not where
+    gradients vanish but where disbalances are mutually resolved — where
+    neither axis can drive further change without re-engaging the other.
+    Resonance: disbalances resolved, mutual restraint achieved.
+    Dissonance: disbalances unresolved, instability or incomplete closure.
 
   what_this_replaces:
-    prior_sketch: >
-      The earlier draft proposed a new object "S_rel = Grade_2(∂²⟨G⟩₂/(∂B₁∂B₂))"
-      called an "anchor tensor." This was underspecified — the grade-2
-      projection was not derived.
-    corrected_identification: >
-      The mixed cross-derivative is the off-diagonal inertia element of
-      the potential functional. It is a familiar object with an established
-      interpretation, not a new tensor. The "reference" it provides is the
-      classical mechanical coupling effect: rotation about one plane
-      imposes a constraint on the other, and this constraint is what
-      supplies the mutual reference that neither plane alone can define.
+    prior_hessian_language: >
+      H_ij = ∂²I_CCR/(∂B_i∂B_j) — literal second partial derivatives at
+      an equilibrium point. This imports: (a) a background coordinate space
+      in which B_i are independent, (b) a potential-minimization picture,
+      (c) the equilibrium as a gradient-vanishing point. None of these hold.
+    corrected_language: >
+      C_ij — coupling strength between gradient-axes, derived from the
+      topology of the closure path and the R3 tension structure. Not a
+      matrix entry but a relational quantity between two process directions.
 
-  coupling_as_phase_space_restriction:
-    statement: >
-      Coupling between bivector planes does not "break a symmetry." It
-      restricts the phase space available to each plane individually.
-      The restriction is what allows an internal reference to be defined:
-      neither plane can rotate independently of the other, and the
-      constraint provides a "which way" that neither plane alone could
-      provide.
-    uncoupled_case: >
-      Off-diagonal H_ij = 0. No mutual constraint. Each plane rotates
-      independently; no shared reference. Photon-like: phase rate
-      present, chirality sense reference-free.
-    coupled_case: >
-      Off-diagonal H_ij ≠ 0. Planes are mutually constrained. A
-      joint reference is established by the coupling eigenstructure.
-      Electron-like: phase rate and chirality sense both internally
-      referenced.
+  uncoupled_case: >
+    C_ij = 0 for i ≠ j. No mutual constraint. Each gradient-axis resolves
+    independently; no shared reference. Photon-like: phase rate present,
+    chirality sense reference-free. Single-axis tension has no second axis
+    to constrain it — it propagates rather than closes.
 
-  connection_to_intrinsic_reference:
-    statement: >
-      This is the algebraic form of the mutual-reference reading in
-      intrinsic-reference-spin-momentum.yaml. The off-diagonal inertia
-      is what provides the reciprocal reference between directional
-      (grade-1) and orientational (grade-2) character. The coupled
-      eigenstructure of the Hessian is the shared frame.
+  coupled_case: >
+    C_ij ≠ 0. Gradient-axes are mutually constraining. A joint reference
+    is established by the coupling structure. Electron-like: phase rate and
+    chirality sense both internally referenced. The mutual constraint is
+    what makes closure possible — neither axis can deviate without the
+    other compensating.
+
+  dzhanibekov_connection: >
+    The intermediate-axis instability is not a second derivative going
+    negative. It is a disbalance between two gradient-axes that cannot
+    mutually resolve: the intermediate axis cannot settle because any small
+    perturbation toward either neighboring axis is not opposed by the other.
+    The instability is the absence of mutual restraint — C_ij fails to
+    stabilise. The Möbius closure is the configuration where C_ij IS
+    mutually stabilising: the two gradient-axes constrain each other such
+    that neither can deviate without the other compensating.
+
+  mutual_reference_connection: >
+    An initial impulse (one gradient-axis alone) is unstable — it needs
+    a second axis to achieve stability. This is the algebraic form of
+    the mutual-reference structure in intrinsic-reference-spin-momentum.yaml:
+    neither grade-1 nor grade-2 can be stable alone; they need each other
+    as reciprocal references. The coupling functional C[·] is that structure
+    made explicit.
 
 ---
 
 # ─────────────────────────────────────────────
 # §3  THE CCR AS HESSIAN CONSEQUENCE
 # ─────────────────────────────────────────────
+
+
+# ─────────────────────────────────────────────
+# §3b  FREDHOLM vs K-THEORY/ASSEMBLY MAP
+# ─────────────────────────────────────────────
+
+fredholm_vs_assembly_map:
+  statement: >
+    The CCR-as-functional-consequence reading operates at two distinct
+    levels. Conflating them produces confusion about what is being computed
+    and what has been established. The Fredholm level is more significant
+    within the vector-multispace for specific closure computations; the
+    K-theory/assembly level is more powerful for general depth-n classification.
+    Both are needed; neither replaces the other.
+
+  terminology_bridge:
+    statement: >
+      Two distinct uses of "Hessian" appear in this file. They are NOT
+      the same object and the distinction matters:
+    hessian_matrix_point_local: >
+      H_ij = ∂²I_CCR/(∂B_i∂B_j) at a specific equilibrium point.
+      This is what §2 (gradient_axis_coupling) CORRECTS: it imports a
+      background coordinate space, a potential-minimization picture, and
+      the equilibrium as a gradient-vanishing point. REPLACED by the
+      coupling functional C[·] in §2.
+    hessian_functional_operator_theoretic: >
+      The second variation δ²S[ψ] of the action functional S — a
+      self-adjoint operator on the function space of configurations.
+      This is the object used in §3b/3c. It is intrinsically defined
+      without a coordinate background: the second variation is a
+      coordinate-free object determined by the action functional's
+      geometry. The gradient-axis correction in §2 does NOT apply here
+      because this object makes no reference to a coordinate matrix.
+      It IS the mathematically rigorous form of what §2 is pointing at:
+      the coupling structure as an operator, not a matrix.
+    why_both_appear: >
+      §2 corrects the naive (matrix, point-local) reading.
+      §3b/3c uses the rigorous (operator, functional) reading.
+      The Hessian functional H[·] in §3b IS the operator-theoretic form
+      of the coupling functional C[·] in §2 — they are the same physical
+      object at different levels of mathematical precision. C[·] and H[·] are the same physical structure at two levels
+      of mathematical precision. Whether they are literally the same operator is the derivation target: show that the
+      gradient-axis coupling functional equals the second variation of the action functional.
+
+  fredholm_level:
+    what_it_is: >
+      The Fredholm index of the specific closure operator T acting directly
+      in the Cl(3,0) multivector space. Concrete, computable from the closure
+      condition. Lives at the level of the individual closure computation.
+    operator: >
+      T = ∇(·)Ie₃ − μ(·)  (dirac-as-grade-chain-closure.yaml)
+      T acts on multivector-valued functions over bivector parameter space.
+    index_definition: >
+      Index(T) = dim(ker T) − dim(coker T)
+      ker T: configurations where all gradient-axis tensions are resolved
+             (Tψ = 0 with the appropriate boundary condition)
+      coker T: zero modes of the adjoint T† — over-determined cases
+    electron_computation:
+      preconditions:
+        status: "OPEN — must be verified before Index(T) claims are valid"
+        items:
+          - id: "fredholm-at-equilibrium"
+            statement: >
+              T is Fredholm at B* (the electron equilibrium configuration):
+              compact resolvent, spectral gap opened by the logarithmic
+              saturation term Λln(1+κ|ψ|²), finite-dimensional kernel.
+              Requires the GP equilibrium shape from SIM-004-v2.
+          - id: "ker-dimension-720"
+            statement: >
+              ker T restricted to the 720° boundary condition is exactly
+              one-dimensional — the Möbius fixed point is unique, not one
+              of a family of solutions. This must be shown, not assumed.
+          - id: "coker-dimension-zero"
+            statement: >
+              ker T† (the adjoint) is zero-dimensional — no zero modes
+              of the adjoint at the equilibrium. Equivalently, the equation
+              T†φ = 0 has no non-trivial solution at B*.
+          - id: "coupling-symmetry-at-equilibrium"
+            statement: >
+              Whether the gradient-axis coupling C_ij is symmetric at
+              equilibrium (C_ij = C_ji). Symmetry would imply T is
+              self-adjoint at B*, which simplifies the cokernel calculation
+              (coker T = ker T for self-adjoint Fredholm operators).
+              Physical argument for symmetry: the equilibrium is a mutual
+              resolution, so the constraint should be symmetric by
+              construction. But this should be derived. See open_derivations.
+      720_closure:
+        derived_consequence: >
+          IF preconditions (a)(b)(c) are verified THEN:
+            Index(T) = dim(ker T) − dim(coker T) = 1 − 0 = 1
+          Interpretation (when derived): the closure is non-degenerate
+          and unique. The Fredholm index = 1 is then the concrete
+          expression of CCR¹ = 1 — the reference unit condition —
+          and connects to Tw = 1/2 via the CWF decomposition.
+        derivation_chain: >
+          Preconditions verified → Index(T) = 1
+              → CCR¹ = 1 (reference unit condition confirmed)
+              → Tw = 1/2 (from CWF: Lk = Wr + Tw, Lk=2, Wr=3/2)
+              → Wr_eq = 3/2 and Tw = 1/2 both derived from operator theory
+        current_status: "EXPECTED but not yet derived"
+      360_truncation:
+        derived_consequence: >
+          IF T restricted to [0,2π] is verified to have no self-consistent
+          solution (the phase mismatch π ≠ 2π) THEN:
+            Index(T)|_{[0,2π]} = 0 or undefined
+          Interpretation (when derived): incomplete closure, no stable
+          resolution alone. Fredholm-level expression of confinement.
+        current_status: "STRUCTURALLY PREDICTED from phase mismatch argument;
+                         operator-level verification open"
+    why_more_significant_in_vector_multispace: >
+      The Fredholm index is the concrete level — it is what the closure
+      condition IS, expressed as an operator on the multivector space.
+      The gradient-axis coupling structure C[·] is the data that
+      determines whether T is Fredholm (finite-dimensional kernel) and
+      what its index is. Computing Index(T) for the electron closure
+      directly gives Tw = 1/2 as a consequence (via the CWF decomposition)
+      without requiring the abstract K-theory machinery.
+    fredholm_condition: >
+      T must be Fredholm: compact resolvent, finite-dimensional kernel and
+      cokernel, spectral gap at the closure configuration. The logarithmic
+      saturation term Λln(1+κ|ψ|²) is expected to open the spectral gap
+      by bounding the operator norm — but this must be verified from the
+      GP equilibrium (open: fredholm-condition-verification).
+
+  k_theory_assembly_level:
+    what_it_is: >
+      The Baum-Connes assembly map µ applied to a family of Fredholm
+      operators parameterized by configuration space. Abstract, classifies
+      all closures at a given depth in terms of K-theory classes. Lives
+      at the level of configuration space as a whole.
+    operator_family: >
+      {T_B : B ∈ configuration space} — a family of closure operators
+      parameterized by the bivector configuration B. The K-theory class
+      of this family in K₀(C*(configuration space)) is what µ maps to
+      an analytic index.
+    what_it_gives: >
+      The assembly map µ gives the general CCR_n at depth n as a
+      K-theory invariant. It classifies all possible closures at depth n
+      and their CCR costs without computing each individually. More
+      powerful for proving the depth recursion D_{n+1} = Fix(Φ_n(D_n))
+      holds at all depths simultaneously.
+    why_less_immediate: >
+      The K-theory class requires the operator family to be well-behaved
+      across all of configuration space, not just at the equilibrium.
+      This is a stronger condition than Fredholm at a single point.
+      For the specific computation of Tw = 1/2 and f_eq, the Fredholm
+      level is sufficient and more tractable.
+
+  relationship: >
+    The Fredholm index of T at the equilibrium configuration is the
+    evaluation of the K-theory class at that configuration. The assembly
+    map is the machinery that gives the class; the Fredholm index is
+    what you read off when you evaluate it. For the electron:
+
+      K-theory class of {T_B} under µ → analytic index = CCR¹ = 1
+      Evaluation at B = B* (electron equilibrium) → Index(T_{B*}) = 1
+
+    Both give the same number. The Fredholm computation is the local
+    version of what the assembly map computes globally.
+
+  source: "fredholm-mapping-to-quantum-observables.md (additive integration block)"
 
 ccr_as_hessian_functional_consequence:
   status: "STRUCTURAL HYPOTHESIS — the CCR at each depth is proposed as a
@@ -178,13 +362,18 @@ ccr_as_hessian_functional_consequence:
 
   connection_to_assembly_map:
     statement: >
-      The Hessian functional H[·] is a family of self-adjoint operators
+      The coupling functional C[·] is a family of self-adjoint operators
       parameterized by configuration space. Its K-theory class is well-
-      defined (under standard conditions: bounded, Fredholm, with a
+      defined under standard Fredholm conditions (bounded, compact resolvent,
       spectral gap). The Baum-Connes assembly map μ takes this class to
       the analytic side, where its index is an integer or a rational.
 
-      The CCR at depth n is the index of H[·] under μ, evaluated on the
+      For the specific electron closure computation, the Fredholm index of
+      T = ∇(·)Ie₃ − μ(·) at B* is more tractable than the full assembly
+      map — see §3b (fredholm_vs_assembly_map). The assembly map is the
+      general framework; the Fredholm index is its concrete evaluation.
+
+      The CCR at depth n is the index of C[·] under μ, evaluated on the
       depth-n configuration space:
 
         CCR^n = μ([H[·]|_{D_n}])
@@ -383,7 +572,50 @@ epistemic_status:
     - "Extend the identification to the three-plane proton case and to higher depths."
 
   open:
-    - "Fredholm condition for the Hessian functional: the Baum-Connes assembly
+    - id: "gradient-axis-coupling-symmetry-at-equilibrium"
+      description: >
+        Determine whether the gradient-axis coupling C_ij is symmetric at
+        the equilibrium configuration B*: does C_ij = C_ji hold?
+        Symmetry would imply the closure operator T is self-adjoint at B*,
+        which simplifies the Fredholm index calculation (coker T = ker T
+        for self-adjoint Fredholm operators, so Index(T) = 0 always for
+        self-adjoint T — meaning T must be non-self-adjoint for Index(T)=1).
+        Asymmetry (C_ij ≠ C_ji) means T is not self-adjoint at B*, which
+        is required for the index to be non-zero. Physical argument: the
+        equilibrium is a mutual resolution of gradient-axis tensions; the
+        constraint that axis i places on axis j should equal the constraint
+        j places on i by the symmetry of mutual resolution. But if this
+        implies self-adjointness and hence Index(T) = 0, the argument
+        breaks the Fredholm derivation. Resolution: either (a) the coupling
+        is asymmetric at equilibrium (breaking the naive symmetry argument),
+        or (b) the correct operator is not T but a non-self-adjoint
+        modification, or (c) the index is computed differently.
+        This must be resolved before the Fredholm derivation is complete.
+      depends_on: ["GP equilibrium shape B*", "gradient_axis_coupling §2"]
+      priority: 1
+      note: >
+        This open item may be the most important one: if T is self-adjoint,
+        Index(T) = 0 and the Fredholm derivation of CCR¹ = 1 fails. The
+        non-self-adjoint character of T (from the R(ψ) term in the master
+        equation — already flagged in dirac-as-grade-chain-closure.yaml
+        as "non-Hermitian") may be exactly what resolves this. The
+        closure operator T = ∇(·)Ie₃ − μ(·) is non-self-adjoint because
+        Ie₃ is not Hermitian in the standard sense — it is a chiral
+        projection. The coupling C_ij is then generically asymmetric, and
+        the Fredholm index is well-defined and non-zero.
+
+    - id: "fredholm-condition-verification"
+      description: >
+        Verify that the closure operator T = ∇(·)Ie₃ − μ(·) is Fredholm
+        at the electron equilibrium configuration B*. Requires: compact
+        resolvent (no continuous spectrum at zero), finite-dimensional kernel
+        (unique stable solution), spectral gap (logarithmic saturation term
+        Λln(1+κ|ψ|²) opens the gap). The Fredholm index = 1 for the 720°
+        closure must be confirmed before it can be used as the concrete
+        derivation of Index(T) = CCR¹ = 1.
+      depends_on: ["SIM-004-v2", "GP equilibrium shape"]
+      priority: 1
+    - "Fredholm condition for the coupling functional C[·]: the Baum-Connes assembly
        map requires H[·] to be Fredholm (compact resolvent, spectral gap at the
        closure configuration). The logarithmic saturation term Λln(1+κ|ψ|²)
        softens the spectrum but whether it opens a sufficient spectral gap is
