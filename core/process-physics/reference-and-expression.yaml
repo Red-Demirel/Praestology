@@ -423,3 +423,173 @@ cross_references:
     note: "Part VII electron pre-R5 default; reference-free momentum/position connects to localization at commitment"
   - file: "core/process-physics/gravitational-adjustment-in-vector-multispace.yaml"
     note: "§7 unanchored rotor produces no coherent signal — the reference-free state as the reason"
+
+# ─────────────────────────────────────────────────────────────
+# §8  REFERENCE STATE MODEL AND EXTENDED SENSE TABLE
+# ─────────────────────────────────────────────────────────────
+
+reference_state_model:
+  name: "Three-State Reference Model"
+  statement: >
+    The reference_state of a configuration describes where it sits
+    in the process from grade expression to committed reference.
+    Three states, each corresponding to one R-rule tier:
+  states:
+    available:
+      definition: "Prerequisites present — grade-1 and grade-2 both expressed"
+      rule: "R3 — tension between directions is active; the ingredients exist"
+      physical: "The bivector planes B₁, B₂ are present but not yet coupled"
+    enabled:
+      definition: "Mutual coupling active — the two grades constrain each other"
+      rule: "R4 — commitment begins; the coupling is running but not yet stable"
+      physical: "The off-diagonal coupling C_ij ≠ 0; the planes interact"
+    established:
+      definition: "Frame definite — the coupling has produced a committed reference"
+      rule: "R5 — the stable fixed point is reached; chirality sense is locked"
+      physical: "The closure condition ⟨G⟩₂ = 0 is satisfied; Tw = 1/2 realised"
+  rule_alignment: "available → R3 / enabled → R4 / established → R5"
+  examples:
+    photon:
+      state: "available, NOT enabled"
+      reason: >
+        Counter-orientation cancels the coupling: C_ij = 0 for the
+        counter-oriented pair. Grade-1 and grade-2 are both expressed
+        (available) but the coupling does not activate (not enabled).
+        No mutual constraint → no reference → massless, reference-free.
+    quark:
+      state: "available, PARTIALLY enabled, NOT established"
+      reason: >
+        The 360° truncation activates partial coupling (enabled partially)
+        but the phase mismatch (π instead of 2π) prevents the fixed point
+        from being reached. The closure condition cannot be satisfied
+        independently. Reference is incomplete — confinement follows.
+    electron_wave:
+      state: "available, enabled, NOT established"
+      reason: >
+        The 720° path activates full mutual coupling (enabled) but R5
+        has not fired — the topology is in the pre-R5 wave state. The
+        reference is available and the coupling is running but the
+        committed chirality sense has not been locked. This is the
+        wave-like, field-effective state (f_geom = 1/π or 8/(3π) Haar).
+    electron_particle:
+      state: "available, enabled, established"
+      reason: >
+        R5 has fired. The closure condition is satisfied, Tw = 1/2 is
+        realised, chirality sense is locked. The reference is committed.
+        This is the post-R5 state with definite spin, definite mass,
+        definite chirality.
+    neutrino:
+      state: "available, partially enabled, not established (free propagation)"
+      reason: >
+        Partial inward closure — the coupling is active but the geometry
+        is not the full Möbius 720° structure. In free propagation the
+        neutrino sits in the R3/R4 regime (not established). R5 fires
+        only in a 3rd-body interaction. The mass eigenstates are the
+        three partially-enabled attractor basins; the flavour eigenstates
+        are superpositions of these.
+
+extended_reference_sense_table:
+  statement: >
+    The following table extends the sense taxonomy from §1. Senses 1–4
+    are intra-topology (properties of a single configuration). Senses 5–6
+    are inter-topology (properties of the relation between configurations
+    or between a configuration and the full substrate). All senses are
+    consistent; no two are synonymous.
+  senses:
+    - sense: 1
+      name: "Intrinsic reference / orientation standard"
+      description: "The co-oriented pair generates a self-contained chirality sense"
+      where: "intrinsic-reference-spin-momentum.yaml — the primary subject"
+      rule_level: "R5 (established state)"
+
+    - sense: 2
+      name: "Reference unit / calibration value"
+      description: "CCR¹ = 1 as the normalisation against which other CCR values are measured"
+      where: "parameter-variable-cascade.md, dirac-as-grade-chain-closure.yaml"
+      rule_level: "Metatheoretic — not an R-rule level but a framework convention"
+      note: "Unrelated to senses 1, 3, 4, 5, 6. Use 'reference unit' not 'reference' alone."
+
+    - sense: 3
+      name: "Mutual reference / reciprocal stability"
+      description: "Grade-1 and grade-2 need each other; neither stable alone"
+      where: "gradient_axis_coupling in mixed-order-perturbation-scaffold.yaml"
+      rule_level: "R3/R4 boundary (available → enabled transition)"
+
+    - sense: 4
+      name: "Reference-obtaining / cancelled / incomplete"
+      description: >
+        The configuration's outcome under sense 3 mutual coupling:
+          reference-obtaining  = coupling produces committed reference (electron)
+          reference-cancelled  = coupling cancels (photon, counter-orientation)
+          reference-incomplete = coupling is truncated (quark, 360° mismatch)
+      where: "reference-and-expression.yaml §4, reference_state_model above"
+      rule_level: "R5 (established) / absent (cancelled) / R4 partial (incomplete)"
+
+    - sense: 5
+      name: "Relational reference / joint field"
+      description: >
+        The reference that exists only in the relation between two
+        committed topologies — not in either alone. The shared Π_eff
+        landscape is this joint field: the gravitational reference
+        for each topology is constituted by all others.
+        Mach's principle is the statement that inertial reference
+        (sense 1, the orientation standard) is ultimately grounded
+        in sense 5 (the joint field of all committed matter).
+      where: >
+        commitment-depletion-duality.yaml → shared_landscape_anchoring_coupling,
+        gravity-framing-note.yaml → machs_principle
+      rule_level: "R4/R5 inter-topology — the shared landscape is a committed field"
+      note: >
+        Sense 5 is sense 3 elevated from the intra-topology to the
+        inter-topology level. The mutual coupling within a configuration
+        (sense 3) has its analog between configurations (sense 5).
+        Both involve the same structural requirement: neither topology
+        can define its reference alone; each is defined relationally.
+
+    - sense: 6
+      name: "Reflexive reference / self-model coupled to environment"
+      description: >
+        A localised node achieving sufficient global coherence that it
+        can model its own uncommitted potential before R5 fires — the
+        system models itself modeling the environment. The reflexive
+        character is what makes subjective experience possible in the
+        framework: the topology's R3 tension state is itself represented
+        within the topology's committed structure.
+      where: >
+        dilemma-driven-cognition.yaml, humanity-as-resolution-engine.yaml,
+        consciousness domain (CCR threshold Ξ — open)
+      rule_level: "R3 experienced from within — the pre-R5 state is the content"
+      continuity_note: >
+        Reflexivity is implicit at every depth: each closure feeds back
+        into the substrate that enables the next closure. What changes
+        at high recursive depth is that the reflexivity becomes explicit —
+        the topology models its own modeling process. Sense 6 is not a
+        new property discontinuously introduced at the consciousness level;
+        it is the continuation of the same recursive structure that runs
+        from D₋₁ through all depths, reaching the point where the process
+        can represent itself.
+      epistemic_status: >
+        HYPOTHESIS — the CCR threshold Ξ for consciousness is not yet
+        derived. The structural continuity argument (reflexivity at all
+        depths becoming explicit at high depth) is established; the
+        specific depth at which sense 6 becomes operative is open.
+        The framework predicts consciousness is not discontinuous with
+        physics but a quantitative threshold on the same recursive process.
+
+  cross_file_disambiguation:
+    rule: >
+      When "reference" appears without a sense number, the context should
+      make the sense unambiguous. If it does not, use the sense name:
+        "intrinsic reference" (sense 1)
+        "reference unit" (sense 2) — never just "reference" for this
+        "mutual reference" (sense 3)
+        "reference-obtaining" (sense 4) — hyphenated, from reference-and-expression.yaml
+        "relational reference" (sense 5)
+        "reflexive reference" (sense 6)
+    most_likely_confusion: >
+      Senses 1 and 4 are the most likely to blur. Sense 1 describes
+      WHAT the intrinsic reference IS (the co-oriented pair's chirality
+      standard). Sense 4 describes the OUTCOME (whether that standard
+      was successfully established). The reference_state_model above
+      (available / enabled / established) maps the path from sense 3
+      through sense 4 to sense 1.
