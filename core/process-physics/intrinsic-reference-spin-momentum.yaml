@@ -1,0 +1,208 @@
+# /core/process-physics/intrinsic-reference-spin-momentum.yaml
+name: "Intrinsic Reference via Mutual Spin-Momentum Coupling"
+version: "0.1"
+status: "STRUCTURAL CLARIFICATION — mutual reference between directional and orientational character as the origin of Möbius / double-cover structure; assignments provisionally locked"
+domain: "Core / Process-Physics"
+
+description: >
+  Spin/chirality and momentum (directional character) are both relational
+  quantities. Neither possesses a fully intrinsic, reference-free meaning
+  in isolation. When the two are allowed to serve as mutual references
+  for each other, a self-contained (intrinsic) reference structure becomes
+  possible. The consistent topological closure of that mutual reference
+  is double-valued and yields the Möbius / 720° character. This file
+  formalizes the initial vector-reference assignment and its consequences
+  for grade interpretation.
+
+dependency_map:
+  requires:
+    - "core/process-physics/dimensionality-from-indifference.yaml"
+    - "core/process-physics/geometric-algebra-bridge.yaml"
+    - "core/process-physics/ga-grades-as-process-stages.yaml"
+    - "core/closure-configuration-ratio.yaml"
+  provides_to:
+    - target: "core/process-physics/vortex-stability.yaml"
+      via: "Möbius character as necessary consequence of mutual reference"
+    - target: "core/process-physics/gravitational-adjustment-in-vector-multispace.yaml"
+      via: "Grade-1 / grade-2 mutual coupling underlying relational adjustment"
+
+terminology_note:
+  statement: >
+    The word "reference" in this file is used in SENSE 1 and SENSE 4
+    from the extended sense table in reference-and-expression.yaml §8:
+
+      Sense 1 (intrinsic reference): the co-oriented rotor pair generates
+        a self-contained chirality standard without needing an external frame.
+        This is the PRIMARY subject of this file.
+
+      Sense 4 (reference-obtaining): the electron configuration successfully
+        reaches the established state — it IS reference-obtaining.
+        The photon is reference-cancelled; the quark is reference-incomplete.
+
+    Explicitly NOT the sense used here:
+      Sense 2 (reference unit, CCR¹=1): unrelated — this is a calibration
+        convention, not an orientation standard.
+      Sense 3 (mutual reference): related but operating at a different level.
+        The mutual coupling between grade-1 and grade-2 is what ENABLES
+        sense 1 to be obtained. Sense 3 is the mechanism; sense 1 is the result.
+        See reference_state_model in reference-and-expression.yaml §8:
+          available (R3) → enabled (R4) → established (R5) = sense 1 achieved.
+      Sense 5 (relational reference): inter-topology, not intra-topology.
+        Gravity and shared Π_eff landscape — not the subject here.
+      Sense 6 (reflexive reference): consciousness — not the subject here.
+
+    Where to look for adjacent concepts:
+      reference-and-expression.yaml — full taxonomy of expression vs reference
+      reference-and-expression.yaml §8 — the three-state model and sense table
+      mixed-order-perturbation-scaffold.yaml — gradient-axis coupling (sense 3
+        in operator form)
+      variational-problem-mobius-equilibrium.yaml — why reference-obtaining
+        configurations have a unique stable variational fixed point
+
+---
+
+# ─────────────────────────────────────────────
+# §1  THE REFERENCE PROBLEM
+# ─────────────────────────────────────────────
+reference_problem:
+
+  statement: >
+    Both momentum (directional / translational character) and spin
+    (orientational / chiral character) require a reference in order to
+    be physically meaningful. Absolute momentum without a frame is
+    empty; absolute spin without an axis or orientational relation is
+    likewise empty.
+
+  momentum:
+    algebraic_home: "Primarily grade-1 (vector) character"
+    reference_need: "A direction is only defined relative to other directions or to an orientational structure."
+
+  spin_chirality:
+    algebraic_home: "Primarily grade-2 (bivector / rotor) character"
+    reference_need: "An oriented rotation is only defined relative to a reference direction or plane."
+
+  consequence: >
+    Treating either quantity as fully intrinsic and reference-free
+    introduces a hidden absolute structure that the relational ontology
+    does not permit.
+
+---
+
+# ─────────────────────────────────────────────
+# §2  MUTUAL REFERENCE AS SOLUTION
+# ─────────────────────────────────────────────
+mutual_reference:
+
+  statement: >
+    Directional character (momentum / grade-1) and orientational character
+    (spin / chirality / grade-2) can serve as reciprocal references for
+    each other. Each supplies what the other lacks, producing a closed
+    reference structure that does not rely on an external absolute frame.
+
+  mechanism:
+    - "Grade-1 supplies a reference direction against which grade-2 orientation is defined."
+    - "Grade-2 supplies an oriented rotational sense that acts back on the grade-1 direction."
+    - "The two are no longer independent assignments; they form a coupled reference pair."
+
+  intrinsic_character: >
+    Once the mutual reference is in place, the combined structure carries
+    its own orientational and directional meaning. The reference is
+    intrinsic to the coupled system rather than imposed from outside.
+
+---
+
+# ─────────────────────────────────────────────
+# §3  TOPOLOGICAL CONSEQUENCE: MÖBIUS / DOUBLE COVER
+# ─────────────────────────────────────────────
+moebius_consequence:
+
+  statement: >
+    The consistent closure of a system in which direction and orientation
+    serve as mutual references is double-valued. A single 360° cycle
+    reverses the relative reference; a full 720° cycle is required to
+    restore the original mutual configuration. This is the Möbius /
+    spinor double-cover character.
+
+  algebraic_expression: >
+    In Cl(3,0) the rotor group double-covers the rotation group:
+    a rotor R and its negative −R generate the same rotation on vectors,
+    yet they are distinct as orientation references. The mutual
+    grade-1 / grade-2 reference makes this double-valuedness physically
+    obligatory rather than optional.
+
+  process_reading: >
+    A stable, directed, chiral anchoring must close under its own
+    mutual reference. The only topological closure that satisfies
+    this requirement without external orientation data is the
+    Möbius-type (720°) closure.
+
+  status: "STRUCTURAL — follows from the mutual-reference requirement once grade-1 and grade-2 are coupled"
+
+---
+
+# ─────────────────────────────────────────────
+# §4  INITIAL VECTOR-REFERENCE ASSIGNMENT
+# ─────────────────────────────────────────────
+initial_assignment:
+
+  status: "PROVISIONAL LOCK — consistent with mutual-reference principle; subject to audit against Hestenes / Dirac conventions"
+
+  grade_1_vector:
+    primary_role: "Directional / translational character (momentum-like)"
+    reference_function: "Provides the axis or direction against which orientation is measured"
+    notes: >
+      Not an absolute momentum vector in a pre-existing space; a directed
+      element defined within the relational continuum.
+
+  grade_2_bivector:
+    primary_role: "Orientational / chiral character (spin-like)"
+    reference_function: "Provides the oriented rotational sense that acts back on directional elements"
+    notes: >
+      Closely aligned with standard GA usage (Hestenes et al.) for spin
+      and rotation planes; here additionally charged with serving as
+      reciprocal reference for grade-1.
+
+  mutual_coupling:
+    statement: >
+      The physically meaningful spin and momentum assignments are not
+      the isolated grade elements but the coupled pair in which each
+      continuously references the other. The Möbius closure is the
+      topological signature of that coupling.
+
+  what_remains_open:
+    - "Exact dynamical form of the mutual coupling term in the master equation"
+    - "Whether additional grades participate in the reference structure at deeper commitment levels"
+    - "Full comparison with Dirac-algebra conventions for spinors and momentum operators"
+
+---
+
+# ─────────────────────────────────────────────
+# §5  EPISTEMIC STATUS
+# ─────────────────────────────────────────────
+epistemic_status:
+
+  established:
+    - "Momentum and spin are both relational quantities requiring reference"
+    - "Mutual reference between directional and orientational character is possible within Cl(3,0)"
+    - "Such mutual reference naturally produces double-cover / Möbius topology"
+
+  structural_hypothesis:
+    - "The Möbius character of stable chiral closures originates in this mutual reference requirement"
+    - "Grade-1 and grade-2 constitute the minimal mutual-reference pair for directed chiral anchoring"
+
+  open:
+    - "Explicit derivation of the 720° closure from the mutual-reference dynamics alone"
+    - "Precise mapping to, or justified departure from, Hestenes and Dirac assignments"
+    - "Consequences for the gravitational adjustment sector (grade-1 leading component)"
+
+---
+
+cross_references:
+  - file: "core/process-physics/dimensionality-from-indifference.yaml"
+    note: "Cost-termination at grade-3 supplies the volumetric closure within which the mutual reference operates"
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "Grade definitions and rotor conventions"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR cost of the resulting Möbius closure"
+  - file: "core/process-physics/gravitational-adjustment-in-vector-multispace.yaml"
+    note: "Grade-1 leading component of relational adjustment is consistent with directional character in the mutual-reference pair"
