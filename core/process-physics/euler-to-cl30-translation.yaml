@@ -1,35 +1,33 @@
 # /core/process-physics/euler-to-cl30-translation.yaml
-name: "Euler → Cl(3,0): Rigid-Body Rotation as Bivector Dynamics"
-version: "0.1"
-status: "TECHNICAL TRANSLATION — the classical Euler equations for rigid-body
-         rotation are expressed in Cl(3,0) form, with framework-specific
-         replacements for the inertia tensor (CCR cost functional),
-         time (configuration-transition index), and the principal-axis
-         structure (bivector planes). GA rigid-body mechanics is
-         well-established (Hestenes, Lasenby, Doran, Gull); the
-         framework-specific replacements are not yet derived. The
-         intermediate-axis theorem is stated in GA form; the electron's
-         stability calculation is deferred to the target file."
+name: "Euler → Cl(3,0): Rigid-Body Dynamics with Explicit Level Distinction"
+version: "0.2"  # with additions: depth-0 RCR, reference-state connection
+status: "TECHNICAL TRANSLATION — v0.2 states the process/derivative level
+         distinction explicitly and identifies the level-mixing in the
+         current CCR formula. The classical Euler equations are the
+         derivative-level projection of the process-level Cl(3,0)
+         dynamics. The Jacobi elliptic solutions live at the derivative
+         level. RCR is process-level; CCR as currently written mixes
+         levels and needs restatement."
 domain: "Core / Process-Physics"
 
 description: >
-  Classical rigid-body mechanics is the derived-reality description of
-  a process-level phenomenon: the dynamics of an orientational configu-
-  ration in three-dimensional space. The Euler equations state that
-  dynamics in a particular coordinate frame (the principal-axis frame),
-  with an inertia tensor summarizing the body's resistance to angular
-  acceleration. They work, but they take the coordinate frame, the
-  inertia tensor, and time as given.
+  The classical Euler equations describe rigid-body rotation in three-
+  dimensional Euclidean space with a linear inertia tensor. This is a
+  derivative-level description: Euclidean space is the integral of
+  process-level transitions, and the inertia tensor is the projected
+  form of the process-level coupling functional. The translation to
+  Cl(3,0) must respect this level distinction — the process-level
+  dynamics lives in the phase configuration space C_Φ; the Euler
+  equations are what remains after projection to the integrated space.
 
-  Geometric algebra formulates the same dynamics without these imports:
-  angular velocity is a bivector, angular momentum is a bivector, the
-  inertia tensor is a symmetric linear map on bivectors, and the
-  equation of motion is a single commutator relation. The principal
-  axes emerge as eigenvectors of the inertia map, not as a pre-existing
-  frame. The framework extends this further: replacing the classical
-  inertia tensor with the CCR cost functional, and time with the
-  configuration-transition index, produces a version of the same
-  dynamics that lives entirely within the process-level commitments.
+  v0.2 corrects a level-mixing that had crept into the framework's
+  handling of the CCR formula. The CCR as written combines Wr (a
+  derivative-level invariant, defined in projected Euclidean space)
+  with Ω_rotor and Ω_embed (process-level volumes in C_Φ). The mixing
+  has worked numerically but doesn't state which level the CCR belongs
+  to. This file states the levels, gives the process-level dynamics
+  directly in Cl(3,0), and identifies the projection that recovers
+  the classical Euler form.
 
 dependency_map:
   requires:
@@ -38,56 +36,70 @@ dependency_map:
     - "core/process-physics/geometric-algebra-bridge.yaml"
     - "core/process-physics/mass-as-plane-independence.yaml"
     - "core/process-physics/bivector-partial-parameters.yaml"
+    - "core/process-physics/mixed-order-perturbation-scaffold.yaml"
+    - "core/process-physics/gravitational-adjustment-in-vector-multispace.yaml"
   provides_to:
     - target: "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
-      via: "The Euler → Cl(3,0) translation prerequisite"
-    - target: "core/process-physics/mass-as-plane-independence.yaml"
-      via: "CCR cost functional as the inertia tensor analogue"
+      via: "The level-distinguished translation that the perturbation scaffold presupposes"
+    - target: "core/closure-configuration-ratio.yaml"
+      via: "Restatement of CCR with explicit level identification"
 
 ---
 
 # ─────────────────────────────────────────────
-# §1  SCOPE AND STANCE
+# §1  THE LEVEL DISTINCTION
 # ─────────────────────────────────────────────
 
-scope:
+level_distinction:
 
   statement: >
-    The classical Euler equations are a correct description of rigid-body
-    rotation at the derivative level. The GA reformulation is not a
-    correction of that description — it is the same dynamics expressed
-    without the derivative-level imports (principal-axis frame, scalar
-    inertia tensor, time parameter). The framework-specific replacements
-    go further: they substitute process-level quantities for the
-    derivative-level ones, producing a version of the dynamics that is
-    consistent with the framework's other commitments.
+    Two levels are distinguished throughout the framework. Confusing
+    them produces formulas that work numerically while being
+    structurally under-specified. The levels must be stated explicitly
+    whenever a quantity is defined.
 
-  what_this_file_does:
-    - "States the classical Euler equations."
-    - "Translates them into Cl(3,0) form using standard GA rigid-body mechanics."
-    - "Replaces the inertia tensor with the CCR cost functional, time with the configuration-transition index, and the principal-axis frame with bivector eigenstructure."
-    - "States the intermediate-axis theorem in GA form."
-    - "Identifies the target: the electron's second-order stability calculation."
+  process_level:
+    domain: "Phase configuration space C_Φ = Cl(3,0)"
+    primitive_objects:
+      - "The multivector field ψ (grades 0 through 3)"
+      - "The local process rate Π_eff"
+      - "The bivector activation B in the bivector parameter space"
+      - "The coupling functional C[·] between gradient-axes"
+    time_parameter: "τ — the configuration-transition index (not spatial time)"
+    what_lives_here:
+      - "The closure condition ⟨G⟩₂ = 0"
+      - "The process-level trajectory of the closure"
+      - "RCR — the process-level reference configuration ratio"
 
-  what_this_file_does_not_do:
-    - "Derive the CCR cost functional's linearity or nonlinearity."
-    - "Carry out the electron's stability calculation (deferred to the target file)."
-    - "Prove the correspondence between the classical and framework-specific forms — only state it."
+  derivative_level:
+    domain: "Integrated (projected) space — Euclidean 3D + coordinate time"
+    primitive_objects:
+      - "Position x ∈ ℝ³"
+      - "Velocity v, angular velocity ω ∈ ℝ³"
+      - "The inertia tensor I as a 3×3 matrix"
+    time_parameter: "t — coordinate time (derivative reading of τ)"
+    what_lives_here:
+      - "The classical Euler equations"
+      - "The Jacobi elliptic solutions (sn, cn, dn)"
+      - "Writhe Wr of the projected centreline"
+      - "Observable quantities: mass, spin, energy in coordinate form"
 
-  stance: >
-    The GA form is more foundational than the Euler form because it does
-    not import a coordinate frame or an inertia tensor as primitives.
-    Improvements to the derived reality — corrections, refinements,
-    new predictions — follow from the more foundational form. The
-    framework claims that the classical Euler equations are recovered
-    as a limit of the GA form; the framework-specific replacements
-    give the corrected version in regimes where the classical
-    assumptions (linear inertia, fixed frame) do not hold.
+  integration_statement: >
+    Euclidean space is the integral of process-level transitions.
+    Coordinate time is the integral of configuration transitions.
+    The classical Euler equations are what the process-level Cl(3,0)
+    dynamics looks like after this integration.
+
+  consequence_for_formulas: >
+    A formula that mixes quantities from both levels without stating
+    the conversion is derivative-level in effect but process-level in
+    intent. The CCR formula as currently written is such a formula.
+    This file restates the dynamics with the levels separated.
 
 ---
 
 # ─────────────────────────────────────────────
-# §2  CLASSICAL EULER IN COMPONENT FORM
+# §2  CLASSICAL EULER IN EUCLIDEAN SPACE (DERIVATIVE LEVEL)
 # ─────────────────────────────────────────────
 
 classical_euler:
@@ -102,396 +114,497 @@ classical_euler:
       I₂ dω₂/dt = (I₃ − I₁) ω₃ ω₁
       I₃ dω₃/dt = (I₁ − I₂) ω₁ ω₂
 
-  structure:
-    - "Three coupled first-order ODEs — nonlinear (quadratic) in ω."
-    - "The nonlinear terms are the origin of the intermediate-axis instability."
-    - "Principal-axis frame is assumed to pre-exist; the inertia tensor is diagonal in this frame."
+  level_identification: >
+    DERIVATIVE LEVEL. Each symbol is a projected quantity:
+      ω_i     — the components of angular velocity in the integrated frame
+      I_i     — the principal moments, projections of the coupling functional
+      t       — coordinate time, the integral of configuration transitions
+    The equations describe how the projected components evolve. They do
+    not describe the process-level bivector dynamics directly.
 
-  what_is_imported:
-    - "The principal-axis frame ê₁, ê₂, ê₃."
-    - "The inertia tensor as a diagonal matrix I = diag(I₁, I₂, I₃)."
-    - "Time as the independent variable t."
-    - "The three-dimensional spatial container in which the body rotates."
+  what_this_equations_presuppose:
+    - "A three-dimensional Euclidean frame with a fixed origin"
+    - "An orthonormal triad ê₁, ê₂, ê₃ that rotates with the body"
+    - "A linear inertia tensor diag(I₁, I₂, I₃)"
+    - "Coordinate time t as the independent variable"
+    - "The integration from process-level to Euclidean has already been performed"
+
+  intermediate_axis_theorem:
+    statement: >
+      If I₁ < I₂ < I₃, rotation about ê₂ (the intermediate axis) is
+      unstable. Perturbations grow exponentially and the body tumbles.
+    level_identification: >
+      DERIVATIVE LEVEL. The theorem is about the projected motion. It
+      reflects the process-level structure but is not the same statement.
+
+  jacobi_elliptic_solutions:
+    statement: >
+      The exact solutions of the Euler equations for rotation near the
+      intermediate axis are Jacobi elliptic functions:
+        ω₁(t) ∝ sn(u, k) cn(u, k)
+        ω₂(t) ∝ dn(u, k)
+        ω₃(t) ∝ sn(u, k)
+      with elliptic modulus k determined by the ratio of principal
+      moments and the initial conditions.
+    level_identification: >
+      DERIVATIVE LEVEL. These are solutions of the projected equations.
+      They describe how the projected components evolve in coordinate
+      time. They do NOT describe the process-level bivector dynamics;
+      they are what that dynamics looks like after integration and
+      projection.
+
+  why_this_matters_for_sim_004_v3: >
+    SIM-004-v3 parameterizes the trajectory with sn/cn/dn directly and
+    computes RCR from that trajectory. If RCR is process-level (as
+    stated in the v3 file), then it cannot be computed from the
+    derivative-level Jacobi elliptic solutions without an explicit
+    conversion. Either RCR is actually derivative-level (and should be
+    renamed), or the trajectory must be computed at the process level
+    (from the Cl(3,0) equation, not from the classical solutions).
 
 ---
 
 # ─────────────────────────────────────────────
-# §3  GA FORM OF THE SAME DYNAMICS
+# §3  PROCESS-LEVEL DYNAMICS IN Cl(3,0)
 # ─────────────────────────────────────────────
 
-ga_form:
+process_level_dynamics:
 
   statement: >
-    In Cl(3,0), a rotor R describes the body's orientation. The angular
-    velocity is a bivector Ω, defined by the kinematic relation between
-    R and its rate of change. The angular momentum is a bivector L. The
-    inertia tensor is a symmetric linear map I: ⋀²V → ⋀²V. The equation
-    of motion is a single commutator relation.
-
-  kinematic_relation:
-    body_frame: "Ṙ = ½ Ω R  (Ω is the body-frame angular velocity bivector)"
-    inertial_frame: "Ṙ = −½ R Ω_inertial  (relation between frames)"
-    note: >
-      The two forms differ by how Ω is attached to R. For the classical
-      Euler problem, the body-frame form is standard.
+    The process-level dynamics of a rotating closure is expressed
+    directly in Cl(3,0) without projecting to Euclidean space. The
+    angular velocity is a bivector; the coupling is a functional;
+    the equation of motion is a bivector commutator relation. All
+    quantities live in C_Φ.
 
   angular_velocity_bivector:
-    expression: "Ω = Ω₁ B₁ + Ω₂ B₂ + Ω₃ B₃"
-    basis: "B₁ = e₂e₃, B₂ = e₃e₁, B₃ = e₁e₂ — the bivector basis of Cl(3,0)"
-    components: "Ωᵢ are the body-frame components of angular velocity"
-    note: >
-      The bivector Ω is the GA representation of the classical angular
-      velocity vector. It differs from the vector by a duality
-      transformation (multiplication by the pseudoscalar I or its inverse,
-      depending on convention). The bivector form is more natural for
-      rigid-body mechanics because it composes multiplicatively (rotors)
-      rather than additively (vectors).
+    expression: "Ω = Ω₁ e₂₃ + Ω₂ e₃₁ + Ω₃ e₁₂"
+    domain: "Λ²(Cl(3,0)) — the bivector subspace"
+    parameter_note: >
+      Ω is a single geometric object, not three independent scalars.
+      Its components (Ω₁, Ω₂, Ω₃) are coordinates in a chosen bivector
+      basis, but the object itself is basis-independent.
 
-  inertia_tensor:
-    definition: >
-      A symmetric linear map I: ⋀²V → ⋀²V taking angular velocity
-      bivectors to angular momentum bivectors. In a principal-axis
-      frame, it acts as:
-        I(Bᵢ) = Iᵢ Bᵢ
-      for the principal bivectors Bᵢ, where Iᵢ are the principal moments.
-    symmetric: "I(A)·B = A·I(B) for all bivectors A, B (the defining property of a symmetric map)"
-    positive_definite: "I(B)·B > 0 for B ≠ 0 (any real inertia tensor)"
-    eigenstructure: >
-      The principal axes are the eigenvectors of I. The principal moments
-      are the corresponding eigenvalues. There are generically three
-      (since ⋀²V is 3-dimensional in Cl(3,0)), and the intermediate-axis
-      theorem is a statement about the eigenvalue ordering.
-
-  angular_momentum:
-    expression: "L = I(Ω)"
-    components: "L = L₁ B₁ + L₂ B₂ + L₃ B₃ with Lᵢ = Iᵢ Ωᵢ in the principal frame"
+  coupling_functional:
+    expression: "L = C[Ω]"
+    domain: "A functional from bivectors to bivectors"
+    parameter_note: >
+      C[·] is the framework's replacement for the classical inertia
+      tensor. Whether C[·] is linear in Ω is an open question
+      (euler-to-cl30-translation v0.1, open item). If linear, its
+      matrix representation gives the projected inertia tensor. If
+      nonlinear, the classical Euler form is recovered only
+      approximately, and the exact dynamics is different.
 
   equation_of_motion:
     body_frame: "dL/dτ + Ω × L = 0"
     commutator_form: "dL/dτ = L × Ω = ½(LΩ − ΩL)"
-    note: >
-      The symbol × denotes the commutator product on bivectors:
-      A × B = ½(AB − BA). For bivectors in Cl(3,0), the commutator
-      product is itself a bivector, and it satisfies the same
-      antisymmetry and Jacobi identity as the vector cross product.
-      The classical cross-product structure emerges as the bivector
-      commutator in GA.
+    time_parameter: "τ — the configuration-transition index"
+    level_identification: >
+      PROCESS LEVEL. The equation lives in C_Φ. The time parameter τ
+      is the transition index, not coordinate time. The angular
+      velocity and momentum are bivectors, not vectors.
 
-  derivation_of_classical_from_ga:
+  bivector_commutator:
     statement: >
-      In the principal-axis frame, if L = Σ Lᵢ Bᵢ and Ω = Σ Ωᵢ Bᵢ,
-      the commutator L × Ω = Σᵢⱼ Lᵢ Ωⱼ (Bᵢ × Bⱼ). Using Bᵢ × Bⱼ = εᵢⱼₖ Bₖ
-      (the standard bivector commutator structure in Cl(3,0)), the
-      equation becomes:
-        dLₖ/dτ = −Σᵢⱼ εᵢⱼₖ Lᵢ Ωⱼ
-      With Lᵢ = Iᵢ Ωᵢ and the identification of the spatial components,
-      this recovers the classical Euler equations exactly. The GA form
-      is not a new dynamics — it is the classical dynamics without the
-      derivative-level imports.
+      For bivectors in Cl(3,0), the commutator product satisfies the
+      same algebraic relations as the vector cross product:
+        e₂₃ × e₂₃ = 0
+        e₂₃ × e₃₁ = e₁₂     (cyclic)
+        e₃₁ × e₁₂ = e₂₃
+        e₁₂ × e₂₃ = e₃₁
+    consequence: >
+      When Ω and L are expanded in the bivector basis, the bivector
+      commutator equation produces component equations that have the
+      same structure as the classical Euler equations. But this is a
+      consequence of the bivector algebra, not of importing the
+      classical equations.
 
----
-
-# ─────────────────────────────────────────────
-# §4  FRAMEWORK-SPECIFIC REPLACEMENTS
-# ─────────────────────────────────────────────
-
-framework_replacements:
-
-  inertia_tensor_replacement:
-    classical: "I: ⋀²V → ⋀²V — symmetric linear map, fixed for a rigid body"
-    framework: "I_CCR: bivector plane ↦ CCR cost of activating that plane"
-    what_changes:
-      - "The classical inertia tensor is fixed; the CCR cost functional may vary with configuration."
-      - "The classical map is linear by construction; whether I_CCR is linear in bivector activation is open."
-      - "The classical eigenvalues are the principal moments; the framework's eigenvalues (if linear) would be the principal CCR costs."
-    what_stays: >
-      If I_CCR is linear (or if its linearization around the equilibrium
-      is well-defined), the classical analysis applies: eigenvectors give
-      the principal planes, eigenvalues give the CCR costs, and the
-      intermediate-axis theorem follows from the eigenvalue ordering.
-    status: "OPEN — linearity of I_CCR not yet established"
-
-  time_replacement:
-    classical: "t — the independent time parameter"
-    framework: "τ — the configuration-transition index"
-    what_changes:
-      - "Classical time is fundamental; framework τ is derivative (ga-dynamic-theory.yaml)."
-      - "The rate d/dτ is a rate per transition, not per unit of coordinate time."
-      - "Frequency, period, and rate are all derivative-level readings of the underlying transition index."
-    what_stays: >
-      The equation of motion dL/dτ + Ω × L = 0 has the same form.
-      The interpretation of τ changes; the algebra does not.
-
-  frame_replacement:
-    classical: "Principal-axis frame ê₁, ê₂, ê₃ — pre-existing, chosen by the analyst"
-    framework: "Bivector eigenstructure B₁, B₂, B₃ of I_CCR — emergent from the inertia map"
-    what_changes:
-      - "The classical frame is chosen; the framework's eigenstructure is intrinsic to the map."
-      - "The 'intermediate axis' is not chosen by the analyst; it is the middle eigenvalue of I_CCR."
-      - "The three bivector planes are structurally distinguished (B₁ = e₂e₃, etc.) but the analysis does not depend on the labels — only on the eigenvalue ordering."
-
-  angular_velocity_replacement:
-    classical: "ωᵢ — components of angular velocity vector"
-    framework: "Ωᵢ — bivector phase-rate components of the rotor"
-    note: >
-      The bivector phase rate is the rate at which the committed
-      configuration traverses its Möbius path. It is measured in
-      transitions per cycle rather than radians per unit time. In the
-      void limit, the two coincide; in commitment-dense environments,
-      the framework's rate differs from the classical rate by the
-      Π_eff factor.
-
----
-
-# ─────────────────────────────────────────────
-# §5  INTERMEDIATE-AXIS THEOREM IN GA FORM
-# ─────────────────────────────────────────────
-
-intermediate_axis_theorem:
-
-  classical_statement: >
-    A rigid body rotating about its intermediate principal axis is
-    unstable: perturbations grow exponentially, and the body tumbles.
-
-  ga_statement: >
-    Consider I: ⋀²V → ⋀²V with principal eigenvalues I₁ < I₂ < I₃.
-    Perturb the equilibrium Ω = Ω₂ B₂ by δΩ. The linearized equation of
-    motion has a neutral (oscillatory) linear term and a quadratic term
-    whose sign determines stability. For I₂ intermediate between I₁ and
-    I₃, the quadratic term is destabilizing.
-
-  ga_derivation_sketch:
-    linearization: >
-      Write Ω = Ω₂ B₂ + δΩ. Substitute into dL/dτ = L × Ω (with L = I(Ω)).
-      The linearization of the right-hand side around the equilibrium
-      gives a linear map on δΩ whose eigenvalues determine the linear
-      stability.
-    neutral_linear_term: >
-      For the intermediate axis (I₂ between I₁ and I₃), the linear map
-      has purely imaginary eigenvalues — the linear term oscillates.
-      This is the intermediate-axis theorem's linear part.
-    quadratic_term: >
-      The second-order term in δΩ is where the instability lives. Its
-      coefficient is proportional to (I₁ − I₃) and has a sign that
-      reinforces the perturbation rather than opposing it.
-
-  framework_specific_form:
+  projection_to_euclidean:
     statement: >
-      Under the replacement I → I_CCR, the intermediate-axis theorem
-      becomes: a configuration whose equilibrium bivector plane has
-      intermediate CCR cost is unstable to merge toward the plane of
-      lower cost. The classical instability is the derivative-level
-      shadow of the merge tendency (mass-as-plane-independence.yaml
-      #structural_principle).
+      The projection to Euclidean space consists of two steps:
+      (a) Fix a bivector basis (e₂₃, e₃₁, e₁₂) — this is the choice of
+          Euclidean triad, related by duality
+      (b) Replace the transition-index rate d/dτ with the coordinate-
+          time rate d/dt — this is the integration from configuration
+          transitions to coordinate time
+      After these steps, the process-level equation becomes the classical
+      Euler equations.
 
-    which_plane_is_intermediate:
-      numerical_reading: >
-        The middle of the three CCR costs. Faithful to the classical
-        problem (which is genuinely about numerical ordering).
-      structural_reading: >
-        The plane e₂e₃ by grade-position (the middle of the three
-        bivector planes in the canonical basis ordering). Faithful to
-        the framework's grade commitments.
-      status: "OPEN — the framework may adopt either; the choice determines
-               which plane is the unstable one."
+    step_a_basis_choice: >
+      The choice of bivector basis is a gauge-like freedom. Different
+      choices give different projected component equations, all related
+      by the corresponding change of frame. The physical content is
+      the bivector equation, not any particular coordinate representation.
 
----
+    step_b_time_integration: >
+      The transition index τ is not coordinate time t. The relationship
+      is d/dτ = (dτ/dt)^(-1) d/dt. In uniform-rate conditions (constant
+      dτ/dt), the two are proportional and the classical form follows
+      directly. In non-uniform conditions (varying transition rate),
+      the projected dynamics acquires additional terms. This is where
+      the process-level description differs from the classical one.
 
-# ─────────────────────────────────────────────
-# §6  WHAT THE GA FORM IMPROVES
-# ─────────────────────────────────────────────
-
-improvements:
-
-  - improvement: "No principal-axis frame is imported"
-    what_it_replaces: "The analyst's arbitrary choice of body frame"
-    consequence: >
-      The principal axes emerge as eigenvectors of I (or I_CCR). No
-      arbitrary frame choice enters the derivation. This matters when
-      the inertia tensor is not fixed — for configurations that
-      reconfigure, the eigenstructure evolves, and the GA form handles
-      this naturally.
-
-  - improvement: "Inertia tensor can be nonlinear"
-    what_it_replaces: "The classical assumption of a fixed linear map"
-    consequence: >
-      If I_CCR is nonlinear (which the framework's CCR cost functional
-      may be), the classical derivation must be replaced by the
-      perturbative expansion of the nonlinear map. The GA form is
-      the right starting point for this extension.
-
-  - improvement: "Time is not fundamental"
-    what_it_replaces: "The classical dt parameter"
-    consequence: >
-      The equation is a relation between configuration-transition rates,
-      not between coordinate-time rates. This is consistent with the
-      framework's reading of time as an index. The classical form is
-      recovered in the limit where transitions are uniform.
-
-  - improvement: "Rotors compose multiplicatively"
-    what_it_replaces: "The additive vector form of angular velocity"
-    consequence: >
-      Multiple rotations compose as rotor products, not as vector
-      additions. This avoids the non-commutativity artefacts that
-      appear in vector-based treatments of the classical problem. It
-      is also the natural language for the Möbius closure structure,
-      where the 720° double-cover is a property of rotors rather than
-      vectors.
-
-  - improvement: "Bivector commutator unifies with the framework's other algebras"
-    what_it_replaces: "The vector cross product as an isolated structure"
-    consequence: >
-      The commutator L × Ω = ½(LΩ − ΩL) is the same algebraic
-      structure that appears in the framework's other bivector
-      dynamics — the electromagnetic field tensor, the spin bivector,
-      the phase-gradient coupling. The framework's translation is not
-      a foreign structure imported from classical mechanics; it is the
-      same algebraic form as its other process-level dynamics.
+  what_this_demonstrates: >
+    The classical Euler equations are not fundamental. They are what
+    the process-level bivector dynamics looks like after (a) choosing
+    a bivector basis and (b) integrating configuration transitions to
+    coordinate time. The integration step is where the level
+    distinction has real content — non-uniform transition rates
+    produce corrections that the classical form does not capture.
 
 ---
 
 # ─────────────────────────────────────────────
-# §7  THE TARGET: ELECTRON STABILITY CALCULATION
+# §4  THE JACOBI ELLIPTIC SOLUTIONS AT THE DERIVATIVE LEVEL
 # ─────────────────────────────────────────────
 
-target:
+jacobi_elliptic_at_derivative_level:
 
   statement: >
-    With the translation in place, the electron's stability calculation
-    from dzhanibekov-as-moebius-integration.yaml becomes well-posed:
-    identify the equilibrium bivector configuration of the electron
-    (co-oriented pair in a single plane), perturb it by a bivector
-    perturbation δB, expand the closure condition to second order, and
-    check whether the quadratic coefficient corresponds to the half-
-    twist Tw = 1/2.
+    The Jacobi elliptic solutions to the Euler equations are derivative-
+    level. They solve the projected equations under the assumption of
+    linear inertia and uniform transition rate. They are exact at that
+    level and only at that level.
 
-  prerequisites:
-    - "The CCR cost functional I_CCR must be defined (at least locally, near the equilibrium)."
-    - "The electron's equilibrium bivector B* must be identified (from the GP solve at ccr-electron-explicit)."
-    - "The closure condition (from vortex-stability.yaml) must be expressible as a constraint on the perturbed rotor."
+  derivation_chain:
+    - step: "Start with the classical Euler equations (derivative level)"
+    - step: "Apply the standard reduction to the intermediate-axis case"
+    - step: "Solve the resulting first-order system"
+    - step: "Result: ω_i(t) in terms of Jacobi elliptic functions sn, cn, dn"
+    - step: "Modulus k determined by principal moment ratios"
 
-  calculation_steps:
-    - "Write Ω = Ω* + δΩ where Ω* is the equilibrium bivector phase rate."
-    - "Write L = I_CCR(Ω) — nonlinear if I_CCR is nonlinear."
-    - "Substitute into dL/dτ + Ω × L = 0 and expand to second order in δΩ."
-    - "Extract the quadratic coefficient."
-    - "Express the coefficient in the CWF decomposition Lk = Wr + Tw."
-    - "Check whether the coefficient corresponds to Tw = 1/2."
+  what_they_capture:
+    - "The dwell-and-flip structure of intermediate-axis rotation"
+    - "The exponential-instability growth near the flip"
+    - "The periodicity of the tumbling"
 
-  what_the_calculation_would_show:
-    if_matches:
-      - "Tw = 1/2 is derived from the intermediate-axis instability."
-      - "The Möbius closure is the integrated form of the tumbling."
-      - "The reading in dzhanibekov-as-moebius-integration.yaml §1 is confirmed."
-    if_does_not_match:
-      - "Either the reading is wrong, or Tw = 1/2 is derived at higher order."
-      - "The three-plane extension (proton) may have a different structure."
-      - "The classical analogy is directional but not exact."
+  what_they_do_not_capture:
+    - "The process-level bivector trajectory in C_Φ"
+    - "Corrections from non-linear coupling functional C[·]"
+    - "Corrections from non-uniform transition rate"
+    - "Multi-plane coupling effects (the cross-derivative terms)"
 
----
-
-# ─────────────────────────────────────────────
-# §8  OPEN QUESTIONS
-# ─────────────────────────────────────────────
-
-open_questions:
-
-  - id: "linearity-of-ccr-inertia"
-    question: >
-      Is the CCR cost functional linear in bivector activation? If yes,
-      the classical derivation applies directly. If no, the perturbative
-      expansion must be re-derived for the nonlinear case.
-    status: "OPEN — prerequisite for the target calculation."
-
-  - id: "ccr-inertia-from-gp"
-    question: >
-      Can the CCR cost functional be derived from the GP equation's
-      second variation around the equilibrium? The classical inertia
-      tensor comes from an integral over the body (∫ ρ r² dV); the
-      CCR cost functional should have an analogous derivation.
-    status: "OPEN — connects to ccr-electron-explicit."
-
-  - id: "which-plane-is-intermediate"
-    question: >
-      Numerical reading (middle CCR cost) or structural reading
-      (middle bivector by grade-position)?
-    status: "OPEN — affects the choice of equilibrium configuration."
-
-  - id: "role-of-the-viability-condition"
-    question: >
-      Does the R5 viability condition enter the second-order expansion
-      as a constraint (limiting admissible perturbations), or does it
-      only select which configurations are physically realized?
-    status: "OPEN — connects to vortex-stability.yaml Part III."
-
-  - id: "extension-to-three-plane-proton"
-    question: >
-      The proton has three orthogonal planes; the classical rigid body
-      has three axes. Does the intermediate-axis analysis extend
-      naturally, or does the grade-3 closure impose additional structure?
-    status: "OPEN — connects to mass-as-plane-independence.yaml
-               §proton_forced_independence."
+  consequence_for_sim_004_v3: >
+    SIM-004-v3's use of sn/cn/dn to parameterize the trajectory is
+    derivative-level. If RCR is meant to be process-level, it cannot
+    be computed from these solutions without an explicit conversion
+    factor. Either the trajectory must be computed at the process
+    level (from §3), or RCR must be redefined as derivative-level.
 
 ---
 
 # ─────────────────────────────────────────────
-# §9  EPISTEMIC STATUS
+# §5  RCR VS CCR — LEVEL IDENTIFICATION
+# ─────────────────────────────────────────────
+
+rcr_vs_ccr:
+
+  statement: >
+    RCR (Reference Configuration Ratio) and CCR (Closure Configuration
+    Ratio) are distinct quantities, and the distinction is precisely
+    that they live at different levels. This has not been stated
+    explicitly, which is the source of the current trouble.
+
+  rcr_definition:
+    expression: "RCR = ⟨‖dB/dτ‖_flip⟩ / ⟨‖dB/dτ‖_dwell⟩"
+    level: "PROCESS LEVEL"
+    meaning: >
+      The ratio of the peak rate of bivector change (during the flip
+      phase) to the mean rate during the dwell phase. Both rates are
+      computed in the bivector parameter space, using the configuration-
+      transition index τ. No projection to Euclidean space is involved.
+    connection_to_reference_state_model: >
+      In the three-state model (reference-and-expression.yaml §8):
+        dwell phase: the configuration is in the enabled state —
+          the coupling is active but the reference is not yet established.
+          R4 is running; B is exploring but not committed.
+        flip phase: the transition between dwell orientations —
+          this is the R4→R5 boundary where the commitment cost is highest.
+          ‖dB/dτ‖ peaks here because the bivector rate is maximal at the
+          moment of potential R5 firing.
+        RCR: the ratio of the R5-boundary rate to the R4-dwell rate.
+          This is a purely process-level measure of how sharply the
+          reference-establishing event (R5) is distinguished from the
+          pre-established exploration (R4).
+    why_reference_not_closure: >
+      The term "Reference Configuration Ratio" is preferred over
+      "Closure Configuration Ratio" for exactly the reason the
+      reference-and-expression.yaml taxonomy identifies: "closure"
+      imports a topological assumption (something closes in Euclidean
+      space) while "reference" stays at the process level (a reference
+      is established in C_Φ). The flip event is the reference-
+      establishing event, not a topological closure in projected space.
+
+  rcr_depth_zero_note:
+    statement: >
+      The flip/dwell definition of RCR applies from depth-1 (D₀→D₁)
+      upward — it requires at least two bivector planes to produce the
+      Dzhanibekov flip/dwell structure. At depth-0 (D₋₁→D₀), there is
+      no flip/dwell cycle; only the scalar-to-vector transition governed
+      by the φ⁻¹ retention eigenvalue. The process-level invariant at
+      depth-0 is therefore CCR⁰ = φ⁻¹ (from d-minus-one-pre-vector-level.yaml),
+      not a flip/dwell ratio.
+    consequence: >
+      The RCR definition must be stated depth-specifically:
+        depth-0:  RCR⁰ = φ⁻¹   (retention eigenvalue of scalar→vector transition)
+        depth-1+: RCR_n = ⟨‖dB/dτ‖_flip⟩ / ⟨‖dB/dτ‖_dwell⟩   (flip/dwell ratio)
+      The depth-0 case is already established in d-minus-one-pre-vector-level.yaml.
+      The depth-1+ case is the new process-level definition introduced here.
+      Whether CCR⁰ = RCR⁰ = φ⁻¹ confirms the level conversion is trivially 1
+      at depth-0, or whether it is a coincidence, is an open question.
+
+  ccr_definition_current:
+    expression: "CCR = (Wr · Ω_rotor) / Ω_embed"
+    level: "MIXED — the diagnosis"
+    terms_analysis:
+      Wr: >
+        DERIVATIVE LEVEL. Writhe is defined for a curve in projected
+        Euclidean space. It is a topological invariant of the projected
+        centreline.
+      Ω_rotor: >
+        PROCESS LEVEL. Phase-space volume traversed per closure cycle,
+        living in the bivector parameter space.
+      Ω_embed: >
+        PROCESS LEVEL. Full orientational phase space of the embedding
+        field, again in C_Φ.
+    diagnosis: >
+      The CCR formula combines one derivative-level invariant (Wr) with
+      two process-level volumes (Ω_rotor, Ω_embed). It works numerically
+      because the electron's equilibrium is a case where the level
+      conversion happens to be ≈ 1. But the formula does not state
+      which level the CCR belongs to, and at other depths the level
+      conversion may not be trivial.
+
+  level_conversion_question:
+    question: >
+      Is there a level-conversion factor between RCR (process-level) and
+      CCR (as currently written)? If yes, what is it? If it is ≈ 1 at
+      the electron equilibrium, why?
+    potential_answers:
+      answer_a_trivial: >
+        The conversion is exactly 1 at all depths. Then RCR = CCR
+        numerically and the level mixing is benign. This would need
+        proof.
+      answer_b_electron_specific: >
+        The conversion is ≈ 1 at the electron equilibrium specifically,
+        because the single-plane configuration minimizes the level
+        difference. At higher depths (proton, nucleus), the conversion
+        becomes non-trivial. Testable once the depth-2 computation is
+        possible.
+      answer_c_nontrivial: >
+        The conversion is non-trivial even at the electron. Then the
+        current CCR formula has been absorbing a hidden factor, and
+        the correct formula for α involves RCR with an explicit
+        conversion.
+    status: "OPEN — cannot be resolved without the process-level dynamics (§3)"
+
+  consequence_for_alpha:
+    candidate_restatements:
+      - form: "α = derivative-level readout of RCR"
+        meaning: >
+          α is what RCR looks like after projecting to Euclidean space
+          at the equilibrium. The projection factor is the conversion.
+      - form: "α = RCR · (level conversion)"
+        meaning: >
+          Explicit statement of the conversion factor. Recoverable
+          from the process-level dynamics once it's derived.
+      - form: "α = CCR (unchanged)"
+        meaning: >
+          The current formula is correct; the level-mixing is
+          superficial and the conversion is trivially 1. This is
+          what the framework has implicitly assumed.
+    which_one_is_correct: "OPEN — depends on the process-level dynamics derivation"
+
+---
+
+# ─────────────────────────────────────────────
+# §6  CORRECTIONS REQUIRED FOR SIM-004-v3
+# ─────────────────────────────────────────────
+
+sim_004_v3_corrections:
+
+  correction_1_jacobi_elliptic_level:
+    issue: >
+      The v3 file parameterizes the trajectory with sn/cn/dn Jacobi
+      elliptic solutions, which are derivative-level.
+    correction: >
+      Either (a) compute the trajectory at the process level from §3
+      and use the projected component ratios only for verification, or
+      (b) restate RCR as derivative-level and acknowledge that the
+      Jacobi solutions are the correct parameterization.
+    priority: "Prerequisite — the choice determines what RCR means"
+
+  correction_2_rcr_ccr_relationship:
+    issue: >
+      The v3 file transitions from CCR to RCR without stating the
+      level relationship between them.
+    correction: >
+      State whether RCR is intended to replace CCR numerically (implying
+      they are equal), to reformulate CCR at the process level (implying
+      the current CCR was derivative-level all along), or to introduce
+      a new quantity that enters the α formula alongside CCR.
+    priority: "Prerequisite — determines the form of the α formula"
+
+  correction_3_omega_flip_term:
+    issue: >
+      The GP radial solver in v3 includes a term −Ω_flip² ψ in the
+      effective potential, where Ω_flip is the commutator intensity.
+      If Ω_flip is derivative-level (computed from Jacobi elliptic
+      solutions), then the term is derivative-level; if process-level,
+      it must be computed from §3.
+    correction: >
+      State the level of Ω_flip and its relationship to the process-
+      level bivector dynamics.
+    priority: "Dependent on correction 1"
+
+  correction_4_boundary_conditions:
+    issue: >
+      The v3 GP solver uses the classical boundary conditions
+      ψ(0) = 0, ψ(r→∞) = 1. These are derivative-level conditions
+      (r is a Euclidean radial coordinate).
+    correction: >
+      If the GP solve is at the process level, the radial coordinate
+      is the bivector norm deviation, and the boundary conditions
+      should reflect the process-level geometry. Alternatively, if
+      the GP solve is derivative-level (as in SIM-004-v2), the
+      boundary conditions are correct as stated — but then the
+      trajectory is derivative-level too.
+    priority: "Consistency check"
+
+  recommendation: >
+    Pause SIM-004-v3 before running. Resolve corrections 1 and 2
+    first. They determine what the simulation is computing. The
+    remaining corrections follow from the answers.
+
+---
+
+# ─────────────────────────────────────────────
+# §7  OPEN DERIVATIONS
+# ─────────────────────────────────────────────
+
+open_derivations:
+
+  priority_1:
+    - id: "process-level-bivector-dynamics"
+      description: >
+        Derive the process-level equation of motion for the bivector Ω
+        in Cl(3,0) with the coupling functional C[·]. The equation
+        dL/dτ + Ω × L = 0 with L = C[Ω] is the starting point; the
+        content is in the specific form of C[·].
+      depends_on: ["mixed-order-perturbation-scaffold.yaml",
+                   "mass-as-plane-independence.yaml"]
+      priority: 1
+
+    - id: "linearity-of-coupling-functional"
+      description: >
+        Determine whether C[·] is linear in bivector activation. If
+        linear, the classical Jacobi elliptic solutions apply and RCR
+        can be computed from them. If nonlinear, the trajectory must
+        be computed numerically from the process-level equation.
+      depends_on: ["process-level-bivector-dynamics"]
+      priority: 1
+
+    - id: "level-conversion-factor"
+      description: >
+        Derive the conversion factor between RCR (process-level) and
+        CCR (as currently written). Show whether it is trivially 1,
+        approximately 1 at the electron equilibrium, or non-trivial.
+      depends_on: ["process-level-bivector-dynamics",
+                   "ccr-electron-explicit"]
+      priority: 1
+
+  priority_2:
+    - id: "projection-from-process-to-euclidean"
+      description: >
+        Explicitly carry out the projection from C_Φ to Euclidean space.
+        Show that the process-level bivector equation reduces to the
+        classical Euler equations in the uniform-transition limit.
+        Quantify the corrections from non-uniform transition rates.
+      depends_on: ["process-level-bivector-dynamics"]
+      priority: 2
+
+    - id: "rcr-from-process-trajectory"
+      description: >
+        Compute RCR directly from the process-level bivector trajectory
+        (from §3). Compare with RCR computed from the derivative-level
+        Jacobi elliptic solutions. The difference quantifies the level
+        effect.
+      depends_on: ["process-level-bivector-dynamics",
+                   "linearity-of-coupling-functional"]
+      priority: 2
+
+  priority_3:
+    - id: "sim-004-v3-revision"
+      description: >
+        Revise SIM-004-v3 with the level distinction explicit. Either
+        commit to process-level computation or commit to derivative-
+        level with the level conversion stated.
+      depends_on: ["level-conversion-factor",
+                   "rcr-from-process-trajectory"]
+      priority: 3
+
+---
+
+# ─────────────────────────────────────────────
+# §8  EPISTEMIC STATUS
 # ─────────────────────────────────────────────
 
 epistemic_status:
 
-  established_ga_standard:
-    - "Angular velocity, angular momentum, and inertia tensor in Cl(3,0) have the forms stated (Hestenes, Lasenby, Doran, Gull)."
-    - "The equation of motion is dL/dτ + Ω × L = 0, where × is the bivector commutator."
-    - "The classical Euler equations are recovered in the principal-axis frame."
-    - "The intermediate-axis theorem has the stated linear/quadratic structure."
+  established:
+    - "The classical Euler equations are derivative-level (in projected Euclidean space with coordinate time)."
+    - "The Jacobi elliptic solutions are derivative-level solutions of those equations."
+    - "The process-level dynamics lives in C_Φ with the bivector commutator equation."
+    - "The bivector commutator in Cl(3,0) has the same algebraic structure as the vector cross product."
+    - "Euclidean space is the integral of process-level transitions (per the framework's general reading)."
 
-  framework_specific:
-    - "The inertia tensor is replaced by the CCR cost functional I_CCR."
-    - "Time is replaced by the configuration-transition index τ."
-    - "The principal-axis frame is replaced by the bivector eigenstructure of I_CCR."
+  level_mixing_diagnosed:
+    - "CCR as currently written combines Wr (derivative) with Ω_rotor and Ω_embed (process)."
+    - "The mixing has worked numerically because the level conversion at the electron equilibrium appears to be ≈ 1."
+    - "The mixing is not stated explicitly anywhere in the framework, which is the source of the current trouble."
+
+  structural_reading:
+    - "RCR (as revised in SIM-004-v3) is process-level — lives entirely in C_Φ."
+    - "The correct α formula involves either RCR with an explicit conversion or CCR with the level question resolved."
 
   open:
-    - "Linearity of I_CCR."
-    - "Derivation of I_CCR from GP (or equivalent)."
-    - "Which bivector plane is the intermediate one."
-    - "Role of the R5 viability condition."
-    - "Extension to three-plane configurations (proton)."
+    - "The explicit form of the coupling functional C[·] and its linearity."
+    - "The process-level bivector trajectory for the electron closure."
+    - "The level-conversion factor between RCR and CCR."
+    - "Whether the current CCR formula is a derivative-level projection or a level-mixed approximation."
 
-  what_this_file_accomplishes:
-    - "States the classical Euler equations."
-    - "Translates them into Cl(3,0) form."
-    - "Identifies the framework-specific replacements."
-    - "States the intermediate-axis theorem in GA form."
-    - "Sets up the electron stability calculation as the target."
-
-  what_this_file_does_not_accomplish:
-    - "Deriving the framework-specific replacements from first principles."
-    - "Carrying out the electron stability calculation."
-    - "Proving the correspondence at higher orders."
+  what_would_resolve:
+    - "Deriving the process-level dynamics in §3 explicitly (open item priority 1)."
+    - "Comparing RCR computed at the process level with RCR computed from Jacobi elliptic solutions."
+    - "Showing whether the level conversion is trivially 1, ≈1 only at the electron, or non-trivial throughout."
 
 ---
 
 cross_references:
   - file: "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
-    note: "The reading this file supplies the prerequisite translation for"
+    note: "The two-tier perturbation reading; this file supplies the level distinction that the reading presupposes"
+  - file: "core/process-physics/mixed-order-perturbation-scaffold.yaml"
+    note: "The gradient-axis coupling functional C[·]; this file places it explicitly at the process level"
   - file: "core/process-physics/ga-dynamic-theory.yaml"
-    note: "Time as configuration-transition index; rotor dynamics; basis for the τ replacement"
+    note: "Time as configuration-transition index; basis for the τ vs t distinction"
   - file: "core/process-physics/geometric-algebra-bridge.yaml"
     note: "Cl(3,0) conventions; bivector basis; commutator structure"
   - file: "core/process-physics/mass-as-plane-independence.yaml"
-    note: "CCR cost functional as the inertia tensor analogue; merge tendency"
-  - file: "core/process-physics/bivector-partial-parameters.yaml"
-    note: "Bivector parameter space; partial activation; basis for CCR cost functional"
+    note: "Plane-independence cost; the coupling functional in the intermediate-axis setting"
+  - file: "core/process-physics/gravitational-adjustment-in-vector-multispace.yaml"
+    note: "Grade-1/grade-2 coupling; the process-level account of the same bivector dynamics"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR definition; the level-mixing diagnosed in this file requires a restatement there"
+  - file: "core/d-minus-one-pre-vector-level.yaml"
+    note: "The 0-dimensional case; φ⁻¹ as a process-level invariant"
+  - file: "issues/SIM-004-v3.md"
+    note: "The simulation specification whose level needs to be stated"
 
 external_references:
   - reference: "Hestenes, D. (1986). 'New Foundations for Classical Mechanics.' Reidel."
-    note: "Chapters 3–5 give the GA formulation of rigid-body mechanics used here"
-  - reference: "Lasenby, A., Doran, C., Gull, S. (1998). 'Gravity, gauge theories and geometric algebra.' Phil. Trans. R. Soc. Lond. A 356, 487–582."
-    note: "GA rotors, inertia tensor as a bivector map, the Euler equation in GA form"
+    note: "GA formulation of rigid-body mechanics; bivector angular velocity and the commutator equation"
   - reference: "Doran, C., Lasenby, A. (2003). 'Geometric Algebra for Physicists.' Cambridge University Press."
-    note: "Chapter 3 gives the rigid-body formulation; Chapter 8 covers the relativistic extension"
-  - reference: "Tao, T. (2011). 'The tennis-racket problem.' MathOverflow."
-    note: "The second-order perturbation scaffold that the electron stability calculation applies"
+    note: "Chapter 3 for the rigid-body formulation; the bivector commutator equation in Cl(3,0)"
   - reference: "Ashbaugh, M. S., Chicone, C. C., Cushman, R. H. (1991). 'The twisting tennis racket.' Journal of Dynamics and Differential Equations 3(1), 67–85."
-    note: "Detailed classical treatment; geometric phase interpretation relevant to the temporal → spatial mapping"
+    note: "Detailed classical treatment; the Jacobi elliptic solutions and the geometric phase interpretation"
