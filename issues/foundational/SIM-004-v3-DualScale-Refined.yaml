@@ -1,0 +1,400 @@
+# /issues/foundational/SIM-004-v3-DualScale-Refined.yaml
+sim_version: "SIM-004-v3-DualScale-Refined"
+title: "Dual-Aspect Closure Architecture: Envelope (CCR) and Operative (RCR)
+        as Two Readings of One Process"
+description: >
+  Refines the dual-scale reading with two structural corrections:
+  (1) the two aspects are two-way coupled — neither precedes or determines
+  the other; and (2) there is no ontological difference between the
+  "spaces" — CCR and RCR are two readings of the same underlying closure
+  process. The α formula combines both because a closure IS both aspects.
+  Terminology: "envelope" and "operative" replace the earlier
+  "constitutive" and "dynamic"/"generative". "Enactive" is reserved for
+  future use in the framework's consciousness domain.
+
+theoretical_foundations:
+
+  single_underlying_process:
+    statement: >
+      There is one process: the closure of a bivector configuration
+      within Cl(3,0). The dual-aspect reading does not posit two
+      processes or two spaces. It identifies two readings of the same
+      process:
+
+        Envelope reading (CCR):
+          What the closure is — the topological envelope that defines
+          its boundary and volumetric capacity.
+
+        Operative reading (RCR):
+          What the closure does — the bivector phase transport along
+          its trajectory, including dwells and flips.
+
+      The two are not separate domains that interact. They are two
+      observations of one structure, each complete on its own terms,
+      each presupposing the other.
+
+    alignment_with_rule_tiers: >
+      The two-aspect reading aligns with the framework's two-tier
+      rule structure (depth-0-as-process.yaml):
+        R1–R3 (constitutive rules)   ↔  envelope aspect
+        R4–R5 (operative rules)      ↔  operative aspect
+      R1–R3 define what the phase configuration is; R4–R5 define how
+      commitment operates. The closure inherits both — the envelope
+      aspect is its constitutive structure, the operative aspect is
+      its active commitment dynamic. The naming is not coincidental;
+      it reflects the same two-tier reading at the level of the
+      closure itself.
+
+    consequence: >
+      The "coupling" between envelope and operative is not interaction
+      between distinct systems. It is the internal consistency of the
+      single process: the phase transport and the envelope must
+      co-determine each other, because they are the same closure
+      seen in two ways.
+
+  why_not_two_spaces:
+    statement: >
+      The phrase "phase configuration space" and the phrase "Euclidean
+      space" both refer to the same substrate. The difference is not
+      ontological but perspectival: the native reading (in Spin(3))
+      and the integrated reading (in ℝ³) are two descriptions of the
+      same closure. Neither is more fundamental; neither is primary;
+      each is what the other looks like from a particular vantage.
+
+    structural_precedent: >
+      This matches the framework's treatment of other dual readings:
+        - Inertia and gravity as two readings of one anchoring event
+          (commitment-depletion-duality.yaml)
+        - Reference and expression as two aspects of one configuration
+          (reference-and-expression.yaml)
+        - Process and derivative as two descriptions of one reality
+          (derivative-reality-clarification.yaml)
+      The dual-aspect closure reading is another instance of the same
+      pattern: one structure, two readings, neither reducible to the
+      other.
+
+    consequence_for_vocabulary: >
+      "Levels" and "domains" imply separation. The refined reading
+      uses "aspects." CCR and RCR are aspects of one closure, not
+      levels of a hierarchy or domains of a system.
+
+structural_aspects:
+
+  envelope_aspect:
+    concept: "Closure Configuration Ratio (CCR)"
+    aspect: "What the closure is — topological envelope"
+    mathematical_representation: >
+      Global scalar profile plus Gross-Pitaevskii radial equilibrium.
+      The radial profile determines the volumetric structure of the
+      closure — where it holds, how it is bounded, what its core
+      radius and healing length are.
+    governing_relation: "f_eq(CCR) = ξ / R_core"
+    reads_as: >
+      The topological envelope of the committed phase space. Its
+      invariants (writhe Wr, phase-space ratios) characterize what
+      the closure is at rest.
+    note_on_envelope_term: >
+      "Envelope" is chosen to capture three things simultaneously:
+        - boundary condition (where the closure ends)
+        - spatial capacity (how much phase space it holds)
+        - volumetric limit (its topological size)
+      It is not a "container." It is the topological envelope of the
+      committed phase space — the shape that the closure's commitment
+      carves out of the available configuration space.
+    note_on_Wr_invariance: >
+      The writhe Wr = 3/2 is a topological invariant of the closure.
+      It is the same value whether computed from the native Spin(3)
+      trajectory or from the projected Euclidean centreline. Wr
+      belongs to the envelope aspect, but it is invariant under the
+      change of reading — a property of the closure, not of any
+      particular description.
+
+  operative_aspect:
+    concept: "Reference Configuration Ratio (RCR)"
+    aspect: "What the closure does — operative phase transport"
+    mathematical_representation: >
+      Intrinsic rotor derivatives and Lie bracket commutators in
+      Spin(3). The bivector phase velocity Ω(t) = R†(dR/dt) governs
+      how the closure's orientation evolves through its cycle,
+      including dwell phases and flip phases.
+    governing_relation: "Ω(t) = R† · (dR/dt) in Cl(3,0)"
+    path_character: "Jacobi elliptic dwell-and-flip with modulus k"
+    reads_as: >
+      The operative motion of the closure. Its invariants (RCR, the
+      barrier Ω_flip) characterize what the closure does over its
+      cycle.
+    note_on_operative_term: >
+      "Operative" is chosen over "dynamic" (which has a passive
+      connotation — something that merely moves) and over
+      "generative" (which carries a production/direction connotation
+      that would suggest the operative aspect produces the envelope).
+      "Operative" is procedural without being productive: it names
+      the operation of the closure — its phase transport, its R5
+      firing dynamics, its trajectory — without implying that the
+      operation produces the structure. This aligns with the
+      framework's existing use of "operative" for R4–R5.
+    note_on_native_vs_projected: >
+      The operative aspect is most naturally computed in the native
+      Spin(3) algebra. Its projection to Euclidean coordinates
+      recovers the classical Jacobi elliptic solutions of rigid-body
+      mechanics. The projected form is what we see; the native form
+      is what the closure does — same event, two descriptions.
+
+reserved_terms:
+
+  enactive:
+    status: "RESERVED — not used for the closure reading"
+    rationale: >
+      "Enactive" was considered as an alternative to "operative" but
+      is reserved for future use. The framework's consciousness
+      domain will likely need a term that captures the active,
+      participatory character of high-Ξ recursive systems —
+      systems that not only operate but act, in the sense that their
+      operation constitutes their world. "Enactive" carries this
+      connotation in cognitive science (enactivism), and reserving
+      it avoids overloading the closure reading with a term that
+      will be needed later at a different depth.
+    note_for_future: >
+      When the consciousness domain develops its own terminology,
+      "enactive" should be considered as the term for the
+      participatory-operation reading at high Ξ. It should not be
+      used earlier, or it will lose the specificity it needs for
+      that domain.
+
+two_way_coupling:
+
+  statement: >
+    The two aspects co-determine each other. Neither precedes the
+    other. Neither determines the other from outside. They are
+    mutually constituting — the envelope and the operative transport
+    are what each becomes when read in the other aspect.
+
+  the_composition_point:
+    term: "Barrier term Ω_flip²"
+    role: >
+      The barrier is where the two aspects coincide. It is not
+      produced by the operative aspect and consumed by the envelope
+      aspect, nor vice versa. It is the joint expression of the
+      closure's structure: the point at which the envelope fails to
+      support the operative transport, which is the same fact as
+      the transport exceeding what the envelope can contain.
+
+  the_gp_equation_with_barrier:
+    governing_equation: |
+      d²ψ/dr² + (1/r) dψ/dr − (1/r² + Ω_flip²) ψ
+        + g · ψ · ln(1 + κ ψ²) = 0
+    reading: >
+      The Ω_flip² term is not an externally imposed potential. It is
+      the envelope reading of the operative transport — what the
+      envelope looks like when the closure's motion is folded into
+      the radial structure. Conversely, the shape ψ(r) that solves
+      this equation is the operative reading of the envelope — what
+      the transport looks like when the closure's shape is folded
+      into the trajectory.
+
+  forward_reading:
+    description: "Operative → Envelope"
+    chain: >
+      The operative transport rate Ω_flip sets the effective barrier
+      in the radial equation. Larger Ω_flip → stronger centripetal
+      barrier → smaller core radius R_core → larger f_eq.
+    physical_meaning: >
+      A closure that transports quickly has a sharper envelope. This
+      is the operative aspect expressing itself in the envelope
+      structure.
+
+  backward_reading:
+    description: "Envelope → Operative"
+    chain: >
+      The equilibrium shape ψ(r) determines which bivector
+      trajectories are admissible. A narrower core supports faster
+      transport (smaller available phase space forces higher phase
+      velocity); a broader core supports slower transport.
+    physical_meaning: >
+      A closure that holds a wide envelope has more room to transport
+      slowly. This is the envelope aspect expressing itself in the
+      operative transport.
+
+  mutual_consistency:
+    statement: >
+      The two readings are not independent. For any physical closure,
+      the envelope and the transport must be mutually consistent:
+      the shape that the transport requires must equal the shape that
+      the transport produces. This consistency is what fixes the
+      equilibrium.
+    mathematical_form: >
+      The GP equation with the barrier term is exactly the
+      self-consistency condition. Its solution is the closure where
+      the two readings agree.
+
+integration_rule:
+
+  coordinate_free_rule: >
+    Operative derivative calculations remain in the native rotor
+    algebra Spin(3) without premature projection into flat ℝ³
+    coordinates. This preserves the native reading of the closure
+    and prevents importing assumptions from the projected reading
+    before they are earned.
+
+  projection_is_derivative_reading:
+    statement: >
+      Projection to ℝ³ is a reading, not a reduction. The projected
+      quantities are what the native quantities look like in
+      Euclidean coordinates. They are correct at that reading and
+      only at that reading.
+
+  when_to_project:
+    rule: >
+      Project only when comparing against observation (which is
+      derivative-level), or when deriving the classical limit that
+      serves as a consistency check. Do not project during the
+      native computation.
+
+fine_structure_invariant:
+
+  formula: "α⁻¹ = 1 / (Wr_eq · f_geom(RCR) · f_eq(CCR))"
+
+  reading: >
+    The α formula combines the two aspects because a closure IS both
+    aspects. It does not mix levels — it states what a closure is:
+
+      Wr_eq       — envelope invariant (topological, reading-invariant)
+      f_geom(RCR) — operative contribution (from the transport)
+      f_eq(CCR)   — envelope contribution (from the shape)
+
+    The formula is symmetric: it does not privilege either aspect.
+    Both must be computed for the same closure; neither is primary.
+
+  no_level_conversion_needed: >
+    Because there is no ontological difference between the two
+    aspects' spaces, no conversion factor is required between RCR
+    and CCR. The earlier worry about level-mixing was a worry about
+    two ontologically distinct levels. The refined reading removes
+    that worry: the aspects are two readings of one process, and the
+    formula simply combines their contributions.
+
+  what_the_formula_does_not_claim: >
+    The formula does not claim that RCR = CCR, or that one is a
+    function of the other. They are distinct invariants — one
+    operative, one envelope — that jointly characterize the
+    closure. Their combination is the fine-structure constant
+    because α is what a closure of this type looks like when its
+    envelope and operative aspects are both projected onto the EM
+    sector.
+
+engine_implementation:
+
+  envelope_solver:
+    module: "Envelope_Solver (CCR)"
+    task: >
+      Solve the non-linear Gross-Pitaevskii radial profile using the
+      barrier term provided by the operative solver. Compute
+      f_eq = ξ/R_core.
+    inputs: ["Ω_flip from Operative_Solver", "g, κ from substrate parameters"]
+    outputs: ["ψ(r) radial profile", "R_core", "ξ", "f_eq"]
+
+  operative_solver:
+    module: "Operative_Solver (RCR)"
+    task: >
+      Compute the bivector phase transport along the 720° Spin(3)
+      manifold. Extract the barrier value Ω_flip from the trajectory.
+      Compute RCR and f_geom.
+    inputs: ["bivector equilibrium B*", "trajectory parameterization"]
+    outputs: ["Ω_flip", "RCR", "f_geom"]
+
+  unified_evaluator:
+    module: "Unified_Invariant_Evaluator"
+    task: >
+      Combine the two aspects' outputs into the fine-structure
+      invariant:
+        α⁻¹ = 1 / (Wr_eq · f_geom(RCR) · f_eq(CCR))
+      The combination is symmetric in the two aspects; no aspect
+      takes priority.
+    inputs: ["Wr_eq", "f_geom", "f_eq"]
+    outputs: ["α⁻¹_predicted"]
+
+  iteration_rule:
+    statement: >
+      The two solvers are mutually coupled. The envelope solver needs
+      Ω_flip from the operative solver; the operative solver needs
+      the admissible trajectory set from the envelope solver. Run
+      self-consistently until the barrier value stabilizes.
+    convergence_target: "Ω_flip where the two aspects agree"
+
+what_this_corrects_from_v3:
+
+  correction_1_two_way_coupling:
+    prior: "One-way: RCR → Ω_flip → GP → f_eq"
+    corrected: >
+      Two-way: the barrier Ω_flip and the envelope ψ(r) are the same
+      structure read in two aspects. Neither produces the other;
+      they must satisfy mutual consistency.
+
+  correction_2_no_level_conversion:
+    prior: >
+      Level-mixing concern: CCR combines derivative and process
+      quantities without stating the conversion.
+    corrected: >
+      No level conversion is needed because there is no ontological
+      difference between the aspects. The formula combines two
+      aspects of one process. The mixing worry dissolves.
+
+  correction_3_jacobi_elliptic_reading:
+    prior: "Jacobi elliptic solutions used directly in the trajectory parameterization."
+    corrected: >
+      Jacobi elliptic solutions are the projected (Euclidean)
+      reading of the native Spin(3) trajectory. Compute in the
+      native algebra; project only for comparison with classical
+      mechanics and observation.
+
+  correction_4_aspect_naming:
+    prior: >
+      "process-level" for RCR, "depth-level" for CCR — both implied
+      a hierarchical separation.
+    corrected: >
+      "operative aspect" for RCR, "envelope aspect" for CCR. The
+      naming reflects two readings of one process, and "operative"
+      aligns with the framework's existing use for R4–R5.
+
+epistemic_status:
+
+  established:
+    - "A closure has both envelope (topological structure) and operative (phase transport) aspects."
+    - "The α formula combines them because it characterizes the closure as a whole."
+    - "Wr_eq = 3/2 is an envelope invariant, invariant under reading."
+    - "The GP equation with the barrier term is the self-consistency condition between the two aspects."
+    - "The two-aspect reading aligns with the two-tier rule structure (R1–R3 / R4–R5)."
+
+  structural_reading:
+    - "There is no ontological difference between the two aspects' spaces — they are two readings of one process."
+    - "The coupling between aspects is two-way; neither is primary."
+    - "The barrier term Ω_flip² is the composition point, not an RCR output consumed by CCR."
+
+  reserved:
+    - "Enactive — reserved for future use in the consciousness domain."
+
+  open:
+    - "The explicit form of the native Spin(3) trajectory (before projection to Jacobi elliptic)."
+    - "The self-consistent fixed point of the two-solver iteration."
+    - "Whether the α⁻¹ formula evaluates to 137.036 with no free parameters."
+    - "The classical limit: how the two-aspect reading reduces to rigid-body mechanics when the aspects are decoupled."
+
+cross_references:
+  - file: "issues/SIM-004-v3-DualScale.yaml"
+    note: "The prior version; this refined variant corrects the one-way coupling and the level-mixing diagnosis"
+  - file: "core/depth-0-as-process.yaml"
+    note: "Two-tier rule structure (R1–R3 constitutive / R4–R5 operative); the aspect naming aligns with this reading"
+  - file: "core/process-physics/euler-to-cl30-translation.yaml"
+    note: "The level distinction; this file reads the distinction as perspectival rather than ontological"
+  - file: "core/process-physics/commitment-depletion-duality.yaml"
+    note: "Structural precedent for the two-readings reading"
+  - file: "core/process-physics/reference-and-expression.yaml"
+    note: "Structural precedent for aspect vs level"
+  - file: "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+    note: "The intermediate-axis saddle; the barrier term Ω_flip is its operative counterpart"
+  - file: "core/process-physics/ga-dynamic-theory.yaml"
+    note: "Native algebra conventions; Spin(3) rotor dynamics"
+  - file: "core/process-physics/geometric-algebra-bridge.yaml"
+    note: "Cl(3,0) grade structure; bivector commutator"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR definition; now read as the envelope aspect"
