@@ -1,5 +1,5 @@
 """
-SIM-004-v3-DualScale
+SIM-004-v3-DualScale-Corrected
 Dual-aspect closure architecture for α⁻¹ derivation.
 
 CORRECTIONS APPLIED:
@@ -107,12 +107,21 @@ def operative_solver(k, n_points=2000):
     return omega_flip, RCR, f_geom, period_720
 
 # ── Section B: Envelope solver (CCR / GP radial) ────────────────────────────
+
 def envelope_solver(omega_flip, kappa, g=1.0, r_max=12.0, n_nodes=500):
     """
     Envelope aspect: GP radial profile with Ω_flip² centrifugal barrier.
-    CORRECTION: kappa is now explicitly passed and used to compute mu = g*ln(1+kappa).
+    CORRECTION: Asymptotic boundary condition ψ_inf is computed from the
+    GP equation's equilibrium condition, not hardcoded to 1.
     """
     mu = g * np.log(1.0 + kappa)
+    
+    # CORRECTION: Compute asymptotic ψ from the GP equilibrium condition
+    # At large r: -Ω_flip²·ψ + g·ψ·ln(1+κ·ψ²) - μ·ψ = 0
+    # Solving: ψ_inf = sqrt(((1+κ)·exp(Ω_flip²/g) - 1) / κ)
+    psi_inf = np.sqrt((np.exp(omega_flip**2 / g) * (1.0 + kappa) - 1.0) / kappa)
+    psi_inf = max(psi_inf, 1e-6)  # numerical safety
+    
     r = np.linspace(1e-4, r_max, n_nodes)
     
     def ode(r, y):
@@ -126,16 +135,21 @@ def envelope_solver(omega_flip, kappa, g=1.0, r_max=12.0, n_nodes=500):
         return [dp, d2p]
     
     def bc(ya, yb):
-        return [ya[0], yb[0] - 1.0]
+        # CORRECTION: Outer boundary is ψ_inf, not 1
+        return [ya[0], yb[0] - psi_inf]
     
-    y0 = np.vstack([np.tanh(r), 1.0/np.cosh(r)**2])
+    # Initial guess scaled to ψ_inf
+    y0 = np.vstack([psi_inf * np.tanh(r), 
+                    psi_inf / np.cosh(r)**2])
     sol = solve_bvp(ode, bc, r, y0, tol=1e-8, max_nodes=5000)
     
     if sol.success:
-        psi_fn = interp1d(sol.x, sol.y[0], fill_value=(0.0, 1.0), bounds_error=False)
+        psi_fn = interp1d(sol.x, sol.y[0], 
+                          fill_value=(0.0, psi_inf), bounds_error=False)
     else:
-        psi_fn = interp1d(r, np.tanh(r), fill_value=(0.0, 1.0), bounds_error=False)
-        
+        psi_fn = interp1d(r, psi_inf * np.tanh(r), 
+                          fill_value=(0.0, psi_inf), bounds_error=False)
+    
     # Shape functionals from equilibrium profile
     r_dense = np.linspace(1e-4, r_max, 2000)
     psi_vals = psi_fn(r_dense)
@@ -144,20 +158,21 @@ def envelope_solver(omega_flip, kappa, g=1.0, r_max=12.0, n_nodes=500):
     n_sat = float(np.max(rho_vals))
     n_sat = max(n_sat, 1e-6)
     
-    # CORRECTION: kappa_new is derived directly from the equilibrium n_sat
+    # kappa_new from the actual asymptotic density
     kappa_new = 1.0 / n_sat
     
     xi = 1.0 / np.sqrt(2.0 * g * n_sat)
     
-    # Core radius: r where ψ first reaches 1/√e ≈ 0.607
-    threshold = 1.0 / np.sqrt(np.e)
+    # CORRECTION: R_core threshold scaled to ψ_inf
+    # Physical meaning: r where density reaches 1/e of asymptotic value
+    threshold = psi_inf / np.sqrt(np.e)
     cross = np.where(psi_vals >= threshold)[0]
     R_core = float(r_dense[cross[0]]) if len(cross) > 0 else xi
     R_core = max(R_core, 1e-10)
     
     f_eq = xi / R_core
     
-    return f_eq, xi, R_core, n_sat, kappa_new, sol.success
+    return f_eq, xi, R_core, n_sat, kappa_new, psi_inf, sol.success
 
 # ── Section C: Self-consistent iteration ────────────────────────────────────
 def self_consistent_dual(k_init=0.90, kappa_init=1.0, max_outer=25, max_inner=15,
