@@ -1,6 +1,46 @@
 /core/phase-configuration-space-as-vsa.yaml
 name: "Phase Configuration Space as Vector Symbolic Architecture"
-version: "0.1"
+
+# /core/phase-configuration-space-as-vsa.yaml
+# ─────────────────────────────────────────────────────────────
+# FORMALLY DEPRECATED
+# ─────────────────────────────────────────────────────────────
+
+name: "Phase Configuration Space as Vector Symbolic Architecture"
+version: "0.1-DEPRECATED"
+status: "DEPRECATED — superseded by vector-multispace-character.yaml"
+
+deprecation_notice:
+  replaced_by: "core/vector-multispace-character.yaml"
+  reason: >
+    This file treated the VSA comparison as the canonical definition
+    of C_Φ. That inverts the correct epistemic order: VSA is a
+    derivative comparative reading, not a foundational claim.
+    vector-multispace-character.yaml defines C_Φ as a relational
+    binding network directly from Cl(3,0) algebra and the R1–R5
+    rules — no comparison required.
+  what_is_preserved: >
+    The VSA comparison (R4 as binding, R_diss as unbinding,
+    resonance as similarity, depth hierarchy as hierarchical
+    composition) is retained as a section in
+    core/vector-multispace-character.yaml §3 → vsa_comparison_and_guardrail.
+    The boundarylessness guardrail is preserved there verbatim.
+    The external VSA references (Plate 2003, Gayler 2003, Schlegel 2021)
+    are retained in the same section.
+  what_is_not_preserved: >
+    The epistemic_status.established list claiming "The phase
+    configuration space has the structure of a VSA" — this was
+    wrong in kind (a structural hypothesis labelled as established)
+    and wrong in priority (a comparison labelled as a definition).
+  migration_path: >
+    Any file cross-referencing phase-configuration-space-as-vsa.yaml
+    should update its reference to point to
+    vector-multispace-character.yaml instead.
+    The VSA framing can be cited as:
+      core/vector-multispace-character.yaml §3 → vsa_comparison_and_guardrail
+
+
+prior version: "0.1"
 status: "STRUCTURAL HYPOTHESIS — the phase configuration space C_Φ has the structure
 of a Vector Symbolic Architecture (VSA), explaining why the framework's
 mechanisms (R1-R5, depth hierarchy, CCR, resonance) follow universal
