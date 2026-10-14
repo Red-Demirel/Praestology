@@ -1,0 +1,422 @@
+# /core/vector-multispace-character.yaml
+name: "Vector-Multispace: Relational Binding Architecture"
+version: "0.2"
+status: "CANONICAL DEFINITION — the authoritative foundational definition
+         of the phase configuration space C_Φ = Cl(3,0) as a relational
+         binding network. Supersedes phase-configuration-space-as-vsa.yaml
+         (formally deprecated). Establishes non-geometric character, resolves
+         metric projection error in SIM-004, positions relative to Hypergraph
+         and VSA architectures."
+domain: "Core"
+updated: "2026-10-13"
+
+description: >
+  The phase configuration space C_Φ = Cl(3,0) is not a geometric container
+  in which particles move. It is a relational binding network — a structure
+  of reference connections whose topology determines what configurations
+  are viable and at what commitment depth. This file establishes that
+  character explicitly, draws the analogy and distinction to Hypergraph
+  architectures, and identifies the consequences for simulation
+  (specifically SIM-004) and for the depth cascade.
+
+dependency_map:
+  requires:
+    - "core/d-minus-one-pre-vector-level.yaml"
+    - "core/process-physics/reference-and-expression.yaml"
+    - "core/closure-configuration-ratio.yaml"
+    - "core/process-physics/parameter-cascade.yaml"
+  provides_to:
+    - target: "issues/foundational/test-spec-electron-ccr-gp-equilibrium-v2.yaml"
+      via: "Replaces metric r with binding-depth as the primary variable in GP solve"
+    - target: "core/process-physics/operator-expansion-and-qm-equivalence.yaml"
+      via: "Cluster accumulation as the correct reading of operator expansion sequence"
+
+---
+
+# ─────────────────────────────────────────────
+# §1  WHAT THE VECTOR-MULTISPACE IS NOT
+# ─────────────────────────────────────────────
+
+what_it_is_not:
+  not_a_geometric_space: >
+    C_Φ = Cl(3,0) is not a metric space. It has no distances, no
+    coordinates, no background geometry. Projecting a radial coordinate r
+    onto it — as in the GP radial solver — is a category error: r is a
+    derivative-level construct, a projection of binding depth onto a
+    continuous coordinate, not a fundamental variable of the multispace.
+
+  not_a_container: >
+    The multispace does not contain particles the way a box contains gas.
+    Configurations do not sit at positions within C_Φ. They ARE
+    configurations of C_Φ — specific activation patterns of its
+    grade structure.
+
+  not_static: >
+    C_Φ does not pre-exist as a fixed arena. It is constituted by the
+    reference bindings that form within it. The D₋₁ → D₀ transition is
+    not "vectors appearing in a space" — it is the first reference
+    bindings establishing the structure that will be called space.
+
+  correction_for_simulation: >
+    SIM-004's use of radial coordinate r as the primary variable mixes
+    the vector-multispace (operative aspect) with effective space
+    (envelope aspect). This produces the divergence observed in v3:
+    the k↔κ heuristic attempts to bridge two categorially distinct
+    descriptions. The correct approach treats binding depth as the
+    primary variable and derives r as a secondary projection where needed.
+
+---
+
+# ─────────────────────────────────────────────
+# §2  WHAT THE VECTOR-MULTISPACE IS
+# ─────────────────────────────────────────────
+
+what_it_is:
+  relational_binding_network: >
+    C_Φ is a network of potential reference bindings. A binding is the
+    establishment of a reference connection between two or more
+    configuration points — expressed as an outer product (wedge product)
+    in Cl(3,0). The grade of a multivector element encodes how many
+    reference bindings it involves:
+
+      Grade 0 (scalar):    No binding — uncommitted potential.
+                           Pre-reference, isotropic.
+      Grade 1 (vector):    First binding — a single directed reference.
+                           Establishes "this direction" without yet
+                           defining a plane or volume.
+      Grade 2 (bivector):  Two-binding cluster — a reference plane.
+                           Defines orientation, rotation, chirality.
+      Grade 3 (pseudoscalar): Three-binding cluster — a reference volume.
+                           Full spatial commitment, locked orientation.
+
+  grade_as_binding_depth: >
+    Grade is binding depth, not spatial dimension. A grade-2 bivector
+    is not "two-dimensional" — it has two reference bindings active
+    simultaneously, defining a relational plane in the binding network.
+    This is why the D₀ → D₁ transition (vector → bivector) is the
+    appearance of the first closed cluster, not movement in space.
+
+  cluster_accumulation: >
+    Configurations accumulate by adding reference bindings — each new
+    binding adds a grade component and deepens the cluster. The depth
+    cascade D₋₁ → D₀ → D₁ → D₂ → D₃ is the sequence of cluster
+    formations as bindings accumulate:
+
+      D₋₁:  No bindings — isotropic scalar potential.
+      D₀:   First bindings — grade-1 vector basis established.
+             Three independent reference directions available.
+      D₁:   First closed cluster — grade-2 bivector (electron/photon).
+             Two bindings form a closed loop: the 720° Möbius rotor.
+             Chirality, spin, first mass appear here.
+      D₂:   Extended cluster — grade-3 pseudoscalar (proton/neutron).
+             Three bindings close into a volume lock.
+             Strong coupling, colour neutrality here.
+      D₃+:  Multi-cluster binding — several D₂ clusters connected
+             via S⁷ Hopf structure (nuclei, magic numbers).
+
+  binding_valence: >
+    Each configuration point has a binding valence — how many reference
+    connections it participates in simultaneously. The saturation term
+    Λ·ln(1 + κ|ψ|²) in the master equation encodes the maximum binding
+    valence: the substrate cannot support more than a finite number of
+    simultaneous reference connections at any configuration point.
+    This is not a free parameter — it is a shape-functional of the
+    equilibrium cluster (saturation-parameters-as-shape-functionals.yaml).
+
+---
+
+# ─────────────────────────────────────────────
+# §3  COMPARISON TO HYPERGRAPH ARCHITECTURE
+# ─────────────────────────────────────────────
+
+hypergraph_comparison:
+  overview: >
+    Wolfram's Hypergraph Rewriting (HGR) and the vector-multispace share
+    a relational, non-metric foundation. Both treat structure as emerging
+    from discrete connection rules rather than from a pre-existing
+    geometric background. The comparison is productive but the
+    differences are significant.
+
+  structural_parallels:
+    nodes: >
+      HGR: abstract nodes without intrinsic properties.
+      Multispace: configuration points in C_Φ — grade-0 scalar activations.
+      Correspondence: both are contentless until connected.
+
+    hyperedges: >
+      HGR: hyperedges connect arbitrary numbers of nodes simultaneously.
+      Multispace: outer products (wedge products) connect grade-1 vectors
+      into bivectors and trivectors simultaneously.
+      Correspondence: both allow multi-node binding in a single operation.
+
+    rewriting_rules: >
+      HGR: local rewriting rules transform hypergraph topology.
+      Multispace: R1–R5 viability rules transform configuration topology
+      via the viability operator R(ψ).
+      Correspondence: both generate structure through iterative rule application.
+
+    emergent_geometry: >
+      HGR: spatial geometry emerges from the statistical structure of
+      large hypergraphs.
+      Multispace: 3D effective space emerges as the derivative-level
+      projection of the Cl(3,0) binding network (derivative-reality-clarification).
+      Correspondence: neither takes geometry as primitive.
+
+    causal_structure: >
+      HGR: causal graphs track which rewriting events depend on which.
+      Multispace: the depth cascade D₋₁ → D₃ tracks which binding events
+      depend on prior bindings (dependency_map in each domain file).
+      Correspondence: both have explicit causal/dependency structure.
+
+  key_differences:
+    grade_structure: >
+      HGR has no intrinsic grade structure — all hyperedges are equivalent
+      in type. The multispace has grade as a fundamental distinction:
+      grade-1, grade-2, grade-3 bindings are categorially different,
+      not just quantitatively different. This grade structure is what
+      produces distinct particle types (electron vs proton vs photon)
+      rather than an undifferentiated network.
+
+    chirality: >
+      HGR does not natively encode chirality — left and right are
+      equivalent in an abstract hypergraph. The multispace has native
+      chirality from the oriented outer product: B = v₁ ∧ v₂ ≠ v₂ ∧ v₁.
+      This is why the electron has definite handedness and why parity
+      violation is structural rather than added by hand.
+
+    algebraic_closure: >
+      HGR rewriting rules are discrete and combinatorial. The multispace
+      has a full algebraic structure (Clifford algebra) that constrains
+      which binding configurations are self-consistent. The closure
+      condition ⟨G⟩₂|_closure = 0 is an algebraic constraint with no
+      direct HGR equivalent.
+
+    saturation: >
+      HGR has no intrinsic saturation mechanism — nodes can accumulate
+      arbitrary numbers of hyperedges. The multispace has intrinsic
+      saturation from Λ·ln(1 + κ|ψ|²) — the maximum binding valence
+      is set by the equilibrium cluster shape. This is what prevents
+      singularities and produces finite particle masses.
+
+    continuous_limit: >
+      HGR recovers continuous physics only in large-n statistical limits.
+      The multispace has both discrete (D₋₁ → D₃ cluster formation) and
+      continuous (master equation, GP dynamics) descriptions that are
+      complementary aspects of the same process — not a limit.
+
+  synthesis: >
+    The vector-multispace can be read as a structured hypergraph:
+    nodes are configuration points, hyperedges are grade-specific
+    outer products, rewriting rules are R1–R5 viability selection,
+    and the grade structure provides the type system that plain HGR
+    lacks. The multispace is a typed, chirality-aware, algebraically
+    closed hypergraph with intrinsic saturation.
+
+    Conversely, HGR provides a useful intuition for the discrete
+    aspects of the depth cascade and for visualising cluster
+    accumulation — particularly for the D₂ → D₃ transition where
+    the Steiner enumeration on S⁷ has a natural hypergraph reading.
+
+  vsa_comparison_and_guardrail:
+    statement: >
+      The phase configuration space C_Φ also shares structural
+      features with Vector Symbolic Architectures (VSA) — high-
+      dimensional binding systems used in cognitive science and
+      neural network research. The VSA operations (binding, unbinding,
+      similarity, hierarchical composition) map onto R4, R_diss,
+      resonance/dissonance, and the depth hierarchy respectively.
+      This is a useful comparative lens.
+    guardrail: >
+      The framework must not be interpreted as claiming "reality is
+      a hyperdimensional vector database." The mechanism is
+      fundamentally different:
+        VSA achieves capacity via statistical near-orthogonality in
+        a fixed high-dimensional space — a computational trick within
+        a pre-existing container.
+        C_Φ achieves capacity via grade-structured topological closure
+        emerging from dimensionally indifferent R1 potential — there
+        is no pre-existing container; boundaries are created by the
+        R4/R5 commitment process itself.
+      VSA is a descriptive mirror of the rule-set, not the substrate.
+      The comparison is heuristic; this file is the canonical definition.
+    canonical_note: >
+      phase-configuration-space-as-vsa.yaml is formally deprecated in
+      favour of this file. The VSA framing belongs as a comparative
+      reading, not a co-equal definition. See deprecation notice in
+      that file.
+    vsa_references:
+      - "Plate, T.A. (2003). Holographic Reduced Representations. IEEE Trans. Neural Networks."
+      - "Gayler, R.W. (2003). Vector Symbolic Architectures: A New Framework for Connectionist Models of Cognition."
+      - "Schlegel, K. et al. (2021). A Comparison of Vector Symbolic Architectures."
+
+---
+
+# ─────────────────────────────────────────────
+# §4  CLUSTER ACCUMULATION — THE DEPTH HIERARCHY
+# ─────────────────────────────────────────────
+
+cluster_accumulation:
+  statement: >
+    Particle formation is cluster accumulation in the binding network.
+    Each depth level is a new closed cluster formed by adding reference
+    bindings to the previous level's structure. No new ontological
+    primitives are introduced at any step — only new binding connections.
+
+  rotor_as_first_cluster:
+    statement: >
+      The Möbius rotor at D₁ is the first closed cluster: the minimal
+      configuration of reference bindings that forms a stable loop.
+      Three configuration points {v₁, v₂, v₃} with two binding edges
+      {B₁₂ = v₁∧v₂, B₂₃ = v₂∧v₃} sharing the boundary node v₂.
+      The 720° closure is the condition for loop stability — the cluster
+      must return to its own reference state after two traversals.
+    binding_count: 2
+    grade: "Grade-2 (bivector)"
+    stable_configurations: ["Electron (reference-obtaining)", "Photon (reference-free)"]
+    distinguishing_feature: >
+      Electron: co-oriented rotor pair — internal chirality reference
+      established. Unique stable attractor in the variational problem.
+      Photon: counter-oriented or unoriented — no internal reference.
+      No unique attractor, no rest frame, no mass.
+
+  proton_as_extended_cluster:
+    statement: >
+      The proton at D₂ extends the D₁ cluster by adding a third binding
+      edge, closing all three bivector planes {B₁₂, B₁₃, B₂₃} into a
+      joint pseudoscalar lock I = e₁e₂e₃. Three configuration points
+      are now bound by three simultaneous hyperedges — a complete
+      three-node hypergraph.
+    binding_count: 3
+    grade: "Grade-3 (pseudoscalar)"
+    closure_condition: "F[Q] = Σᵢ<ⱼ ‖BᵢBⱼ + BⱼBᵢ‖² → 0"
+    note: >
+      The closure condition requires all three bivector planes to be
+      mutually orthogonal — this is the algebraic constraint that
+      has no HGR equivalent. It is what makes the proton stable
+      and why three quarks (not two or four) are required.
+
+  meson_as_incomplete_cluster:
+    statement: >
+      A meson (qq̄) is a two-node cluster with two binding edges that
+      cannot close into a stable pseudoscalar — it lacks the third
+      binding edge for full valence saturation. The system oscillates
+      between configurations trying to achieve closure, which drives
+      rapid decay.
+    binding_count: 2
+    grade: "Grade-2 attempt at grade-3 closure"
+    stability: >
+      Unstable — topological binding insufficiency, not force-based
+      confinement. The third binding edge is absent, not suppressed.
+    decay_mechanism: >
+      The two-edge cluster cannot maintain stable reference — it
+      dissociates into configurations that individually satisfy their
+      own closure conditions (pions, photons, leptons).
+
+  nuclear_clusters:
+    statement: >
+      Nuclei are multi-cluster binding at D₃: several D₂ pseudoscalar
+      clusters connected via S⁷ Hopf structure. The magic numbers
+      (2, 8, 20, 28, 50, 82, 126) are the stable multi-cluster
+      configurations under Steiner enumeration on S⁷ — the binding
+      network's own stability criterion.
+    binding_count: "Multiple D₂ clusters"
+    open: "Explicit Steiner enumeration on S⁷ — SIM-006-v1"
+
+---
+
+# ─────────────────────────────────────────────
+# §5  CONSEQUENCES FOR SIMULATION
+# ─────────────────────────────────────────────
+
+simulation_consequences:
+  primary_variable: >
+    The primary variable in the binding network is binding depth d —
+    how many reference connections are active simultaneously in a
+    cluster. This is discrete and dimensionless. The radial coordinate r
+    used in SIM-004's GP solver is a secondary projection: r ≈ d · ξ
+    where ξ is the healing length (the scale at which one binding depth
+    corresponds to one unit of effective-space length).
+
+  f_eq_restatement: >
+    f_eq = ξ / R_core in the metric formulation.
+    In the binding network formulation:
+      f_eq = (active bindings in committed cluster) /
+             (maximum bindings available at this depth)
+           = d_committed / d_max
+    For the electron at D₁: d_committed = 2 (two bivector edges),
+    d_max = 3 (three possible bivector planes in Cl(3,0)).
+    f_eq = 2/3 — dimensionless, geometry-free, directly from the
+    Cl(3,0) structure.
+
+  k_kappa_resolution: >
+    The heuristic k↔κ coupling in SIM-004-v3 fails because it attempts
+    to connect two metric quantities across a categorical boundary.
+    In the binding network formulation, k (elliptic modulus of the
+    Dzhanibekov trajectory) is a property of the operative aspect
+    (binding dynamics), and κ (saturation sharpness) is a property
+    of the envelope aspect (maximum binding valence). Their connection
+    is through the binding valence ratio d_committed/d_max — not
+    through a metric heuristic.
+
+  gp_solver_reframing: >
+    The GP equation is not a differential equation in metric space r.
+    It is a fixed-point condition on the binding valence distribution
+    across the cluster. The "radial profile" ψ(r) is the projection of
+    this distribution onto a continuous coordinate. For the purposes
+    of computing f_eq, the binding valence ratio is sufficient and
+    the full GP solve may be replaceable by a combinatorial fixed-point
+    computation on the Cl(3,0) binding structure.
+
+  open_for_sim004_v4: >
+    SIM-004-v4 should reformulate the envelope aspect as a binding
+    valence fixed-point problem rather than a GP radial ODE.
+    The operative aspect (Jacobi-elliptic trajectory, f_geom) remains
+    valid — it already operates in the bivector parameter space.
+    The connection between the two aspects is through the binding
+    valence ratio, not through a metric coupling.
+
+---
+
+# ─────────────────────────────────────────────
+# §6  EPISTEMIC STATUS
+# ─────────────────────────────────────────────
+
+epistemic_status:
+  established:
+    - "C_Φ = Cl(3,0) is a relational binding network, not a metric space."
+    - "Grade encodes binding depth, not spatial dimension."
+    - "Particle formation is cluster accumulation — each depth level adds binding edges."
+    - "The radial coordinate r is a secondary projection of binding depth."
+    - "The vector-multispace is a typed, chirality-aware, algebraically closed hypergraph."
+
+  structural_hypothesis:
+    - "f_eq = d_committed / d_max — binding valence ratio, geometry-free."
+    - "The k↔κ heuristic in SIM-004-v3 is replaceable by the binding valence ratio."
+    - "The GP radial ODE is the continuous projection of a discrete binding valence problem."
+    - "Magic numbers follow from Steiner enumeration on S⁷ as multi-cluster stability."
+
+  open:
+    - "Explicit formulation of the GP fixed-point as a binding valence problem (SIM-004-v4)."
+    - "Steiner enumeration on S⁷ reproducing magic numbers (SIM-006-v1)."
+    - "Formal proof that f_eq = 2/3 for the electron cluster at D₁."
+    - "Connection between Wolfram HGR causal graph and the Praestology depth cascade."
+
+---
+
+cross_references:
+  - file: "core/d-minus-one-pre-vector-level.yaml"
+    note: "D₋₁ → D₀: first binding edges establishing the grade-1 basis"
+  - file: "core/process-physics/reference-and-expression.yaml"
+    note: "Reference binding as the fundamental operation; expression as output"
+  - file: "core/closure-configuration-ratio.yaml"
+    note: "CCR as binding valence ratio Ω_rotor/Ω_embed"
+  - file: "core/process-physics/parameter-cascade.yaml"
+    note: "Depth cascade as sequential cluster accumulation"
+  - file: "core/process-physics/saturation-parameters-as-shape-functionals.yaml"
+    note: "Maximum binding valence as shape-functional of equilibrium cluster"
+  - file: "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+    note: "Operative aspect: Dzhanibekov flip as binding-edge activation dynamics"
+  - file: "core/derivative-reality-clarification.yaml"
+    note: "Effective space as derivative-level projection of binding network"
+  - file: "core/process-physics/operator-expansion-and-qm-equivalence.yaml"
+    note: "Operator expansion as cluster accumulation sequence"
