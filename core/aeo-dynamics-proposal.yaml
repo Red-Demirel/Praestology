@@ -1,0 +1,424 @@
+# /core/aeo-dynamics-proposal.yaml
+name: "Aeo-dynamics (Æ) — A Proposal for Foundational Process Dynamics"
+version: "0.1"
+status: "RESEARCH PROGRAMME PROPOSAL — states the programme precisely;
+         distinguishes established results from open derivations;
+         not a completed theory but a rigorously bounded target."
+symbol: "Æ"
+etymology: >
+  From Greek αἰών (aiōn): eternal process, cycle, age — the iterative,
+  non-terminal character of the five-rule dynamics. Distinguished from
+  thermodynamics (heat-specific) and fluid-dynamics (flow-specific):
+  Æ is substrate-level, domain-neutral, and prior to both.
+contact: "Red-Demirel/Praestology (GitHub)"
+
+# ─────────────────────────────────────────────
+# §1  THE CORE CLAIM
+# ─────────────────────────────────────────────
+
+core_claim:
+  statement: >
+    Thermodynamics and fluid dynamics are not fundamental theories.
+    They are regime-specific approximations of a single, more parsimonious
+    substrate dynamics — Aeo-dynamics (Æ) — which operates on the phase
+    configuration space C_Φ via five domain-neutral rules. Heat, entropy,
+    pressure, viscosity, and flow are all emergent descriptions of one
+    underlying process: the iterative binding, filtering, and committing
+    of free potential into stable relational structure.
+  what_this_is_not: >
+    Æ is not a renaming of thermodynamics or fluid dynamics.
+    It is not a unification achieved by finding a common parameter.
+    It is not a model fitted to observations.
+    It is a derivation: the substrate from which thermodynamics and
+    fluid dynamics emerge as limiting cases, in the same way that
+    differential geometry is the substrate from which general
+    relativity emerges — not as an application but as a special case.
+  what_this_is: >
+    A five-rule iteration on the Cl(3,0) multivector space C_Φ,
+    governed by one master equation, from which all macroscopic
+    dynamics — thermal, fluid, electromagnetic, gravitational,
+    quantum — are derived as regime-dependent approximations.
+    The five rules are domain-neutral; their domain-specific
+    readings (physics, biology, cognition, ethics) are adaptations,
+    not replacements.
+
+# ─────────────────────────────────────────────
+# §2  THE FIVE RULES (CANONICAL NEUTRAL FORM)
+# ─────────────────────────────────────────────
+
+five_rules:
+  statement: >
+    The five rules of Æ are domain-neutral. They describe the
+    iteration process at the substrate level. Domain-specific
+    language (commitment/Regress in physics; viability/metabolism
+    in biology; attention/selection in cognition) is a derived
+    reading of these five rules, not an independent postulate.
+  rules:
+    R1:
+      name: "Availability"
+      statement: "Gives the open field — ψ ≠ 0"
+      meaning: >
+        The substrate is not empty. There is always available
+        potential from which structure can arise. This is not a
+        postulate about existence; it follows from the logical
+        impossibility of absolute nothingness (a state with no
+        properties, including no property of being empty, is
+        indistinguishable from any state — hence unavoidable
+        availability).
+    R2:
+      name: "Exploration"
+      statement: "Forms candidate references — ∇ψ ≠ 0, distinctions arise"
+      meaning: >
+        Available potential differentiates: not all regions are
+        equivalent. Candidate relational structures form. In the
+        thermodynamic limit, this is the source of fluctuations.
+        In the fluid limit, this is the velocity field.
+    R3:
+      name: "Linking"
+      statement: "Sustains relational structure — relations between distinctions persist"
+      meaning: >
+        Distinctions couple to each other. The relational network
+        is not a snapshot but an ongoing process. In physics: the
+        bivector coupling between grade-1 directions. In thermodynamics:
+        the propagation of thermal fluctuations through a medium.
+    R4:
+      name: "Filtering"
+      statement: "Applies viability and capacity constraints"
+      meaning: >
+        Not all relational configurations persist. R4 filters by
+        two criteria simultaneously: viability (the configuration
+        must be self-consistent under the master equation) and
+        capacity (the local free potential Π_eff sets a ceiling
+        on commitment density — encoded in Λln(1+κ|ψ|²)).
+        In thermodynamics: the second law. In fluid dynamics:
+        incompressibility and viscous dissipation.
+    R5:
+      name: "Committing"
+      statement: "Fixes the surviving configuration — η accumulates"
+      meaning: >
+        Configurations that pass R4 are committed: they become part
+        of the permanent relational history η. This is irreversible
+        in the τ-direction (configuration-transition index). In
+        thermodynamics: irreversibility and entropy production.
+        In fluid dynamics: the fixing of vortex structures.
+
+# ─────────────────────────────────────────────
+# §3  THE MASTER EQUATION
+# ─────────────────────────────────────────────
+
+master_equation:
+  canonical_form: >
+    i ∂ψ/∂t = [−∇² + V + g|ψ|² + R(ψ) + Λln(1+κ|ψ|²)]ψ
+  local_explicit_form: >
+    i(1/Π_eff) ∂ψ/∂t = [−∇·(Π_eff∇) + V + g|ψ|² + R(ψ) + Λln(1+κ|ψ|²)]ψ
+  term_identification:
+    spatial_propagation: "−∇² or −∇·(Π_eff∇) — R3 linking term"
+    committed_structure: "V — accumulated η field"
+    self_reinforcement: "g|ψ|² — R4 viability (self-consistency)"
+    viability_selection: "R(ψ) — R4/R5 operator (non-Hermitian, chiral)"
+    saturation: "Λln(1+κ|ψ|²) — R4 capacity constraint"
+    free_potential_rate: "1/Π_eff prefactor — local time dilation (R5 rate)"
+  status: >
+    The canonical form is established. The local-explicit form is
+    derived from it for non-uniform Π_eff — it is the same equation
+    made spatially honest, not a separate postulate.
+
+# ─────────────────────────────────────────────
+# §4  THE TWO LIMITS: THERMODYNAMICS AND FLUID DYNAMICS
+# ─────────────────────────────────────────────
+
+thermodynamic_limit:
+  condition: "η >> Π_eff locally — high commitment density, large N"
+  statement: >
+    When committed density dominates free potential in a region,
+    individual R5 firing events are negligible relative to the
+    ensemble mean. The system enters the thermodynamic regime.
+  correspondence:
+    entropy: >
+      S ↔ R_diss (Regress dissolution rate) — the return of weakly
+      committed topology to free potential. Entropy increase is the
+      increase in available Π_eff as uncommitted η dissolves.
+      The second law follows: R_diss is irreversible in the τ-direction
+      (committed configurations dissolve but dissolution does not
+      reverse into the same committed configuration spontaneously).
+    temperature: >
+      T ↔ local R5 firing rate — how fast commitments form in a
+      region. High T = fast commitment cycling; low T = slow, stable
+      commitments. Absolute zero = no R5 firing = frozen committed
+      topology (no longer a dynamical system).
+    pressure: >
+      P ↔ ∇η — gradient of committed density. High pressure regions
+      have high η relative to their surroundings; the gradient drives
+      Π_eff flow toward lower η regions.
+    equilibrium: >
+      NOT a dead state. Thermodynamic equilibrium is the Æ fixed
+      point where R4 commitment rate = R_diss dissolution rate.
+      The system is dynamically balanced, not static. This resolves
+      the apparent paradox of equilibrium being "maximum entropy":
+      it is the state where the commitment/dissolution cycle is most
+      evenly distributed — maximum relational connectivity, not
+      maximum disorder.
+    second_law_derivation: >
+      OPEN (priority 1) — explicit derivation that the Æ master
+      equation in the high-η limit gives dS/dτ ≥ 0 for isolated
+      systems. The qualitative argument is established (R_diss is
+      τ-irreversible); the quantitative derivation is required.
+
+fluid_dynamic_limit:
+  condition: "∇Π_eff smooth and slowly varying — continuous free potential gradient"
+  statement: >
+    When the free potential varies smoothly across space, the
+    master equation's kinetic term −∇·(Π_eff∇)ψ governs the
+    propagation of ψ through the Π_eff landscape. In the
+    high-amplitude, slowly-varying limit this gives Navier-Stokes-
+    like equations — not as a separate theory but as the master
+    equation evaluated in this regime.
+  correspondence:
+    velocity_field: >
+      u ↔ ∇Π_eff — the gradient of free potential is the
+      effective flow velocity. Configurations propagate from
+      low to high Π_eff regions (toward available potential).
+    viscosity: >
+      ν ↔ coupling strength between adjacent committed topologies
+      — resistance to relative displacement of committed structures.
+      High viscosity = strong inter-topology coupling; low viscosity
+      = weakly coupled committed structures.
+    incompressibility: >
+      ∇·u = 0 in the incompressible limit ↔ conservation of total
+      η + Π_eff (committed + free potential sum conserved). The
+      fluid is "incompressible" because the total potential
+      (committed + free) is conserved by the master equation.
+    turbulence: >
+      The regime where local R5 firing fluctuations are no longer
+      dominated by the mean ∇Π_eff field. Individual commitment
+      events become significant at the scale of the flow — the
+      transition from laminar (mean-field dominated) to turbulent
+      (fluctuation-dominated) is the Æ transition from the
+      R5-averaged regime to the individual-R5-event regime.
+    ns_derivation: >
+      OPEN (priority 1) — explicit derivation that the master
+      equation in the smooth-∇Π_eff, high-amplitude limit gives
+      the Navier-Stokes equations. Qualitative correspondence
+      established; quantitative derivation required.
+      Note: emergent-classical-fields.yaml already identifies
+      this correspondence; Æ provides the substrate that grounds it.
+
+# ─────────────────────────────────────────────
+# §5  RELATION TO OTHER FRAMEWORKS
+# ─────────────────────────────────────────────
+
+relation_to_other_frameworks:
+
+  wolfram_hypergraph:
+    similarity: >
+      Both Æ and Wolfram's Physics Project derive spacetime and
+      matter from background-free rewriting rules on abstract
+      combinatorial structures. Both claim physical law emerges
+      from the rule-set without additional postulates.
+    key_difference: >
+      Wolfram's hypergraph is chosen to reproduce physics — the
+      rule-set is selected by causal invariance after the fact.
+      Æ derives the rule-set from the logical impossibility of
+      nothingness (R1) via algebraic necessity: the only normed
+      division algebras are ℝ, ℂ, ℍ, 𝕆 (Hurwitz theorem) →
+      the octonions are maximal → their multiplication table is
+      the 7-point Fano plane → the Fano plane IS the hypergraph
+      whose rewriting rules are R1–R5. The rule-set is not chosen;
+      it is forced by algebraic necessity from R1.
+    fano_plane_as_specific_hypergraph: >
+      The Fano plane (7 nodes, 7 hyperedges, each line 3 nodes,
+      each node on 3 lines) is the unique projective plane of
+      order 2. It is simultaneously:
+        — The Wolfram-type hypergraph that Æ instantiates
+        — The octonion multiplication table (Cl(0,7) structure)
+        — The incidence geometry of the three bivector planes
+          B₁, B₂, B₃ and their four products in Cl(3,0)
+      This specificity is what makes Æ a derivation rather than
+      a modelling choice.
+    what_aeo_dynamics_provides_wolfram_lacks: >
+      The derivation of the specific rule-set from necessity.
+      Wolfram has the structural ambition; Æ has the algebraic
+      grounding. The Fano plane is not chosen — it is the unique
+      structure forced by the requirement that the substrate admit
+      a composition algebra (|xy| = |x||y|), which is required
+      for the R3 linking operation to preserve norms across grades.
+
+  standard_thermodynamics:
+    relation: "Limiting case of Æ in the high-η regime (§4 above)"
+    what_aeo_adds: >
+      A derivation of thermodynamic laws from the substrate,
+      rather than their postulation. In particular: the second
+      law as a consequence of R_diss τ-irreversibility, not a
+      separate empirical law. Equilibrium as a dynamic balance,
+      not a static end state.
+
+  standard_fluid_dynamics:
+    relation: "Limiting case of Æ in the smooth-∇Π_eff regime (§4 above)"
+    what_aeo_adds: >
+      A substrate for fluid behaviour that does not require a
+      pre-existing fluid or medium. The "fluid" is the Π_eff
+      field itself — the effective flow of free potential through
+      the committed-density landscape. No fluid molecules required.
+
+  general_relativity:
+    relation: >
+      GR is the large-scale, weak-field limit of the Æ master
+      equation's local-explicit form. The Π_eff field is the
+      gravitational potential (∇²Π_eff = 4πGρ_η in the
+      Newtonian limit). The 1/Π_eff time dilation is GR time
+      dilation without geometric postulates.
+    what_aeo_adds: >
+      Gravity as the price of local anchoring (inertia), derived
+      from the master equation rather than postulated as spacetime
+      curvature. The equivalence principle as a structural
+      consequence, not a foundational postulate.
+
+  quantum_mechanics:
+    relation: >
+      QM's wave function is the pre-R5 ψ field. Superposition is
+      ontological (real unresolved R3/R4 tension). Measurement
+      is R5 commitment. The Born rule and uncertainty principle
+      are properties of the R4 filtering process.
+    what_aeo_adds: >
+      A positive ontology for the wave function (ψ is real, not
+      epistemic) and a physical mechanism for "collapse" (R5
+      commitment, not mysterious projection).
+
+# ─────────────────────────────────────────────
+# §6  WHAT IS ESTABLISHED vs OPEN
+# ─────────────────────────────────────────────
+
+epistemic_status:
+  established:
+    - "R1–R5 neutral formulation as domain-neutral process rules"
+    - "The master equation as the primary law of Æ"
+    - "Thermodynamic correspondence (qualitative): S↔R_diss, T↔R5 rate,
+       P↔∇η, equilibrium as dynamic balance"
+    - "Fluid dynamic correspondence (qualitative): u↔∇Π_eff,
+       incompressibility ↔ total potential conservation"
+    - "Gravitational limit: ∇²Π_eff = 4πGρ_η (derived from master equation)"
+    - "Quantum correspondence: ψ real, R5 as measurement, superposition ontological"
+    - "Fano plane as the specific algebraic hypergraph (Cl(0,7) / octonion
+       multiplication table)"
+
+  open_priority_1:
+    - id: "second-law-from-regress"
+      description: >
+        Explicit quantitative derivation that the master equation in the
+        high-η limit gives dS/dτ ≥ 0 for isolated systems.
+        Requires: formal definition of S in Æ terms, proof of
+        τ-monotonicity from R_diss properties.
+
+    - id: "navier-stokes-from-master-equation"
+      description: >
+        Explicit derivation that the master equation in the smooth-∇Π_eff,
+        high-amplitude limit gives the Navier-Stokes equations.
+        Requires: systematic expansion of −∇·(Π_eff∇)ψ in the
+        slowly-varying Π_eff regime; identification of kinematic
+        viscosity ν in terms of Æ parameters.
+
+    - id: "g-from-ccr"
+      description: >
+        Derivation of Newton's gravitational constant G from the CCR/RCR
+        structure. Currently G is fitted to observation. The Æ programme
+        requires G to be derived from the commitment cost structure,
+        analogous to α being derived from f_closure.
+
+    - id: "tw-half-from-dzhanibekov"
+      description: >
+        Derivation of Tw = 1/2 from the second-order coefficient of the
+        closure condition expanded around the intermediate-plane equilibrium.
+        This closes the foundational topology of Æ from below.
+        See: dzhanibekov-as-moebius-integration.yaml.
+
+  open_priority_2:
+    - id: "fano-plane-as-necessary-hypergraph"
+      description: >
+        Formal proof that the Fano plane is the unique hypergraph forced
+        by the requirement that the Æ substrate admit a composition algebra.
+        The argument via Hurwitz theorem is qualitatively established;
+        the connection to the specific R1–R5 rewriting rules requires
+        formalisation.
+
+    - id: "turbulence-as-r5-fluctuation-regime"
+      description: >
+        Derivation of the turbulence transition (laminar→turbulent) as
+        the Æ transition from mean-field-dominated R5 to fluctuation-
+        dominated R5. Requires: formal definition of the Reynolds number
+        analog in Æ terms.
+
+# ─────────────────────────────────────────────
+# §7  WHY THE NAME AND SYMBOL
+# ─────────────────────────────────────────────
+
+naming:
+  aeo: >
+    From Greek αἰών (aiōn) — eternal process, cycle, age.
+    Chosen for:
+      (a) Domain-neutrality: no physical medium implied
+          (unlike "thermo-" = heat, "fluid" = liquid)
+      (b) Process character: αἰών implies ongoing iteration,
+          not a static state or a single event
+      (c) Scope: the eternal cycle of R1–R5 iteration that
+          runs from the impossibility of nothingness (R1)
+          to the ethical agency of recursive self-reference (R5
+          at high depth) — the full span of the framework
+  symbol: >
+    Æ (Latin ligature of A and E, Unicode U+00C6).
+    Chosen for:
+      (a) Immediate visual distinction from existing symbols
+      (b) The ligature form reflects the binding character of
+          Æ — two characters committed into one form
+      (c) Practical: typeable, LaTeX-available (\AE),
+          distinct from all current physics notation
+  prior_proposal: >
+    First proposed publicly October 2026 in a Praestology community
+    discussion: "For a start, we might discuss if expressions as
+    thermodynamics or fluid-dynamics could be replaced within the
+    concept, as they don't necessarily involve heat or fluids.
+    For example, what would you think if the dynamics involved are
+    expressed as Aeo-dynamics, with Æ as a symbol?"
+    Response: none received. This document is the formal proposal
+    that substantiates the name with a precise derivation programme.
+    A name without a derivation is a label; this document provides
+    the programme that earns the label.
+
+# ─────────────────────────────────────────────
+# §8  CROSS-REFERENCES
+# ─────────────────────────────────────────────
+
+cross_references:
+  foundational:
+    - file: "core/vector-multispace-character.yaml"
+      note: "Canonical definition of C_Φ — the substrate Æ operates on"
+    - file: "core/specifications.yaml"
+      note: "R1–R5 formal definitions; Æ adopts these in neutral form"
+    - file: "core/master-core-equation.yaml"
+      note: "The master equation — the primary law of Æ"
+    - file: "core/d-minus-one-pre-vector-level.yaml"
+      note: "The pre-Æ ground: φ as non-resonant scaling eigenvalue"
+
+  limit_derivations:
+    - file: "core/emergent-classical-fields.yaml"
+      note: "Fluid dynamic correspondence — Æ provides the substrate"
+    - file: "core/gravity-framing-note.yaml"
+      note: "Gravitational limit — inertia as anchoring, gravity as price"
+    - file: "core/commitment-depletion-duality.yaml"
+      note: "Thermodynamic correspondence — R_diss as entropy engine"
+
+  computational:
+    - file: "computation/SIM-004-v3-DualScale-v2.py"
+      note: "The α derivation — the flagship quantitative test of Æ"
+    - file: "core/process-physics/dzhanibekov-as-moebius-integration.yaml"
+      note: "Tw = 1/2 derivation — closes the foundational topology"
+
+  external_convergences:
+    - name: "Wolfram Physics Project"
+      url: "https://www.wolframphysics.org"
+      note: "Same structural ambition — background-free rewriting rules.
+             Æ provides what Wolfram lacks: derivation of the specific
+             rule-set from algebraic necessity (Hurwitz → Fano plane → R1–R5)."
+    - name: "Hurwitz Theorem"
+      note: "The algebraic necessity that forces the octonions as the
+             maximal composition algebra, and hence the Fano plane as
+             the specific Æ hypergraph. Not a modelling choice."
